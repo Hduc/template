@@ -411,6 +411,9 @@
   color: RGBA(33, 37, 41, var(--bg-opacity, 1)) !important;
   background-color: #ced4da !important;
 }
+.text-xs {
+  font-size: 12px !important;
+}
 
 // Breadcrumb
 .breadcrumb-card {

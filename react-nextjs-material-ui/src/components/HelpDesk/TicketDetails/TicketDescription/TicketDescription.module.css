@@ -56,9 +56,6 @@
 .ticketDetailsCard code .blue {
     color: #07a;
 }
-.ticketDetailsCard.component-dark-theme code {
-    background: #15203c;
-}
 .comments-card .comments li {
     border-bottom: 1px solid var(--borderColor);
     margin-bottom: 25px;

@@ -13,7 +13,7 @@ const TeamMembers: React.FC = () => {
           </div>
           <div>
             <span className="block">Team Members</span>
-            <h5 className="mb-0 text-[20px] mt-[2px]">1235</h5>
+            <h5 className="!mb-0 !text-[20px] mt-[2px]">65+</h5>
           </div>
         </div>
         <div className="mt-[14px] flex items-center justify-between">

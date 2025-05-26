@@ -76,7 +76,7 @@ const CustomizedTables: React.FC = () => {
           Customized Tables
         </Typography>
 
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className="customized-tables">
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>

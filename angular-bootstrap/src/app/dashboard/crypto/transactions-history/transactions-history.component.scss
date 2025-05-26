@@ -1,4 +1,4 @@
-.transaction-history-card {
+.transactions-history-card {
     .trezo-card-content {
         .basic-table {
             table {
@@ -135,7 +135,7 @@
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
-    .transaction-history-card {
+    .transactions-history-card {
         .trezo-card-header {
             .trezo-card-subtitle {
                 margin-top: 7px;
@@ -188,7 +188,7 @@
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width : 576px) and (max-width : 767px) {
 
-    .transaction-history-card {
+    .transactions-history-card {
         .trezo-card-header {
             .trezo-card-subtitle {
                 margin-top: 0;
@@ -203,7 +203,7 @@
                                 th {
                                     &:first-child {
                                         padding: {
-                                            left: 1720pxpx;
+                                            left: 20px;
                                         };
                                     }
                                     &:last-child {

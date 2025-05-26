@@ -19,14 +19,14 @@ const PatientDetails: React.FC = () => {
                   height={100}
                 />
                 <div>
-                  <h4 className="text-[20px] mb-[6px]">Walter White</h4>
+                  <h4 className="!text-[20px] !mb-[6px]">Walter White</h4>
                   <span className="block">
                     Patient ID:{" "}
                     <span className="text-black dark:text-white">#P-3214</span>
                   </span>
                 </div>
               </div>
-              <h3 className="text-lg mb-[15px]">Personal Information</h3>
+              <h3 className="!text-lg !mb-[15px]">Personal Information</h3>
               <ul>
                 <li className="mb-[12px] last:mb-0">
                   Occupation:{" "}
@@ -60,7 +60,7 @@ const PatientDetails: React.FC = () => {
               />
               <div>
                 <span className="block">Email</span>
-                <h5 className="mb-0 font-semibold text-md mt-[4px]">
+                <h5 className="!mb-0 !font-semibold !text-md !mt-[4px]">
                   walter32@gmail.com
                 </h5>
               </div>
@@ -76,7 +76,7 @@ const PatientDetails: React.FC = () => {
               />
               <div>
                 <span className="block">Phone No</span>
-                <h5 className="mb-0 font-semibold text-md mt-[4px]">
+                <h5 className="!mb-0 !font-semibold !text-md !mt-[4px]">
                   +1 444 266 5599
                 </h5>
               </div>
@@ -92,7 +92,7 @@ const PatientDetails: React.FC = () => {
               />
               <div>
                 <span className="block">Address</span>
-                <h5 className="mb-0 font-semibold text-md mt-[4px]">
+                <h5 className="!mb-0 !font-semibold !text-md !mt-[4px]">
                   S. Arrowhead Court Branford9
                 </h5>
               </div>
@@ -103,7 +103,7 @@ const PatientDetails: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-content">
-              <h3 className="text-lg mb-[15px] mt-[20px] md:mt-[25px] first:mt-0">
+              <h3 className="!text-lg !mb-[15px] !mt-[20px] md:!mt-[25px] first:!mt-0">
                 Disease History
               </h3>
               <p>
@@ -112,7 +112,7 @@ const PatientDetails: React.FC = () => {
                 lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit
                 tincidunt bibendum donec adipiscing.
               </p>
-              <h3 className="text-lg mb-[15px] mt-[20px] md:mt-[25px] first:mt-0">
+              <h3 className="!text-lg !mb-[15px] !mt-[20px] md:!mt-[25px] first:!mt-0">
                 Key Symptoms
               </h3>
               <ul className="mt-[20px]">
@@ -148,7 +148,7 @@ const PatientDetails: React.FC = () => {
 
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-content">
-              <h3 className="text-lg mb-[15px] mt-[20px] md:mt-[25px] first:mt-0">
+              <h3 className="!text-lg !mb-[15px] !mt-[20px] md:!mt-[25px] first:!mt-0">
                 Note For Patient
               </h3>
               <p>
@@ -157,7 +157,7 @@ const PatientDetails: React.FC = () => {
                 lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit
                 tincidunt bibendum donec adipiscing.
               </p>
-              <h3 className="text-lg mb-[15px] mt-[20px] md:mt-[25px] first:mt-0">
+              <h3 className="!text-lg !mb-[15px] !mt-[20px] md:!mt-[25px] first:!mt-0">
                 Advice:
               </h3>
               <ul className="mt-[20px]">

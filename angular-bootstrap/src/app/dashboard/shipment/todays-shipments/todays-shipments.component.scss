@@ -31,6 +31,21 @@
             };
         }
     }
+    &.component-dark-theme {
+        .trezo-card-header {
+            .trezo-card-subtitle {
+                .info-badge {
+                    border-color: #15203c;
+                    background-color: #15203c;
+                  
+                    &.down {
+                        border-color: #15203c;
+                        background-color: #15203c;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

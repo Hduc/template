@@ -6,12 +6,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">New York</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -47,7 +47,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -56,7 +56,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$18,000</h3>
@@ -104,7 +104,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -120,13 +120,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Harold Cook</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -138,12 +138,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">London</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -179,7 +179,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -188,7 +188,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$220,000</h3>
@@ -236,7 +236,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -252,13 +252,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Debra Sisk</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -270,12 +270,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">France</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -311,7 +311,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -320,7 +320,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$350,000</h3>
@@ -368,7 +368,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -384,13 +384,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Harold Cook</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -402,12 +402,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Australia</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -443,7 +443,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -452,7 +452,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$158,000</h3>
@@ -499,7 +499,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -515,13 +515,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Steven Bryant</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -533,12 +533,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Italy</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -574,7 +574,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -583,7 +583,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$99,000</h3>
@@ -630,7 +630,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -646,13 +646,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Jannie James</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -664,12 +664,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Germany</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -705,7 +705,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -714,7 +714,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$110,000</h3>
@@ -761,7 +761,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -777,13 +777,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Larry Greenberg</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -795,12 +795,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Poland</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -836,7 +836,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -845,7 +845,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$150,500</h3>
@@ -892,7 +892,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -908,13 +908,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Kara Spangler</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -926,12 +926,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Norway</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -967,7 +967,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -976,7 +976,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$120,000</h3>
@@ -1023,7 +1023,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -1039,13 +1039,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Benjamin Dinh</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1057,12 +1057,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Netherland</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -1098,7 +1098,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -1107,7 +1107,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$190,000</h3>
@@ -1154,7 +1154,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -1170,13 +1170,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Jane Wright</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1188,12 +1188,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Spain</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -1229,7 +1229,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -1238,7 +1238,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$155,000</h3>
@@ -1285,7 +1285,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -1301,13 +1301,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Kirk Jensen</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1319,12 +1319,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Hungary</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -1360,7 +1360,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -1369,7 +1369,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$340,000</h3>
@@ -1416,7 +1416,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -1432,13 +1432,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Harold Cook</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1450,12 +1450,12 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-decoration-none"
             >
               <h3 class="mb-0">Potugal</h3>
-            </RouterLink>
+            </NuxtLink>
 
             <div class="dropdown action-opt">
               <button
@@ -1491,7 +1491,7 @@
             </div>
           </div>
 
-          <RouterLink
+          <NuxtLink
             to="/real-estate/property-overview"
             class="text-decoration-none d-block mb-4"
           >
@@ -1500,7 +1500,7 @@
               class="rounded-2"
               alt="property"
             />
-          </RouterLink>
+          </NuxtLink>
 
           <div class="d-flex justify-content-between mb-3">
             <h3 class="mb-0 text-danger">$250,000</h3>
@@ -1547,7 +1547,7 @@
           <div
             class="d-flex flex-wrap gap-2 justify-content-between align-items-center"
           >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="d-flex align-items-center text-decoration-none"
             >
@@ -1563,13 +1563,13 @@
                 <h4 class="mb-0 fs-16 fw-semibold">Judith Brooks</h4>
                 <span class="fs-13 text-body">Owner</span>
               </div>
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/property-overview"
               class="text-primary fs-15 text-decoration-none read"
             >
               View More
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>

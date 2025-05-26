@@ -145,9 +145,9 @@ const Clicks: React.FC = () => {
           <span className="block mb-[5px]">Clicks</span>
 
           <div className="flex items-center">
-            <h6 className="mb-0 text-[20px]">4,500</h6>
+            <h6 className="!mb-0 !text-[20px]">4,500</h6>
 
-            <span className="inline-block font-medium relative text-[10px] ltr:ml-[11px] rtl:mr-[11px] rounded-sm bg-success-100 text-success-600 py-[1.5px] ltr:pl-[25px] rtl:pr-[25px] ltr:pr-[7px] rtl:pl-[7px]">
+            <span className="inline-block font-medium relative text-[10px] ltr:ml-[11px] rtl:mr-[11px] rounded-sm bg-success-100 text-success-600 dark:bg-[#15203c] py-[1.5px] ltr:pl-[25px] rtl:pr-[25px] ltr:pr-[7px] rtl:pl-[7px]">
               <i className="ri-arrow-up-s-fill absolute ltr:left-[2px] rtl:right-[2px] text-[22px] top-1/2 -translate-y-1/2"></i>
               37.5%
             </span>

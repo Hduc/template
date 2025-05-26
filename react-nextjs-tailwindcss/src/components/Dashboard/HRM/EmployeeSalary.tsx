@@ -131,7 +131,7 @@ const EmployeeSalary: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Employee Salary</h5>
+            <h5 className="!mb-0">Employee Salary</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -175,7 +175,7 @@ const EmployeeSalary: React.FC = () => {
             </div>
             <div>
               <span className="block">Total Payroll</span>
-              <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+              <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                 $450,000
               </h5>
             </div>
@@ -205,7 +205,7 @@ const EmployeeSalary: React.FC = () => {
               </div>
               <div>
                 <span className="block">Salary Paid</span>
-                <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+                <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                   $395k
                 </h5>
               </div>
@@ -221,7 +221,7 @@ const EmployeeSalary: React.FC = () => {
               </div>
               <div>
                 <span className="block">Salary Pending</span>
-                <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+                <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                   $60k
                 </h5>
               </div>

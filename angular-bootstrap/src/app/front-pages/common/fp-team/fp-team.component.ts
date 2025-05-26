@@ -16,7 +16,7 @@ export class FpTeamComponent {
 		loop: true,
 		margin: 25,
 		dots: false,
-		autoplay: false,
+		autoplay: true,
 		smartSpeed: 1000,
 		autoplayHoverPause: true,
         navText: [

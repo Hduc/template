@@ -142,7 +142,7 @@ const CustomPaginationActions = () => {
           Custom Pagination Actions
         </Typography>
 
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className="custom-pagination">
           <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
             <TableBody>
               {(rowsPerPage > 0

@@ -17,7 +17,7 @@ export default function Page() {
 
         <div className="pt-[125px] md:pt-[145px] lg:pt-[185px] xl:pt-[195px] text-center">
           <div className="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
-            <h1 className="mb-0 leading-[1.2] text-[32px] md:text-[40px] lg:text-[50px] xl:text-[60px] -tracking-[.5px] md:-tracking-[1px] xl:-tracking-[1.5px]">
+            <h1 className="!mb-0 !leading-[1.2] !text-[32px] md:!text-[40px] lg:!text-[50px] xl:!text-[60px] -tracking-[.5px] md:-tracking-[1px] xl:-tracking-[1.5px]">
               Contact Us
             </h1>
             <div className="absolute bottom-0 -z-[1] ltr:-right-[30px] rtl:-left-[30px] blur-[250px]">

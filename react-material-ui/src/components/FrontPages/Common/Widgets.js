@@ -32,7 +32,7 @@ const Widgets = () => {
             alignItems="center"
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6, xl: 6 }}>
               <div className="fp-widgets-image">
                 <div className="image">
                   <img
@@ -53,7 +53,7 @@ const Widgets = () => {
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6, xl: 6 }}>
               <div className="fp-widgets-content">
                 <h2>
                   Tailor Your Dashboard: Unleash the Power of Customizable

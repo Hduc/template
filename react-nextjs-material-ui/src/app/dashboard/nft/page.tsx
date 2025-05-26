@@ -17,45 +17,45 @@ export default function Page() {
       <ManageYourNFT />
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <EthereumRate />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <ActiveAuctions />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={9}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 9 }}>
           <FeaturedNFTArtworks />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 3 }}>
           <DownloadApp />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <MostPopularSellers />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <WorldwideTopCreators />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }} justifyContent="center">
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 3 }}>
           <TopCollections />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <TopNFTs />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 3 }}>
           <HistoryOfBids />
         </Grid>
       </Grid>

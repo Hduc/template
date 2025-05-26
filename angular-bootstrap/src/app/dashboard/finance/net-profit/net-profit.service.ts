@@ -100,6 +100,9 @@ export class NetProfitService {
                             color: '#F6F7F9'
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     tooltip: {
                         y: {
                             formatter: function(val:any) {

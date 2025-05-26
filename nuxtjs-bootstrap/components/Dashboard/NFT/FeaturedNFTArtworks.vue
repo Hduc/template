@@ -62,7 +62,7 @@
   >
     <SwiperSlide v-for="nft in nftItem" :key="nft.id">
       <div class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card">
-        <RouterLink
+        <NuxtLink
           to="/nft-marketplace/nft-details"
           class="d-block mb-3 text-decoration-none position-relative"
         >
@@ -72,12 +72,12 @@
           >
             Place Bid
           </span>
-        </RouterLink>
+        </NuxtLink>
 
         <div
           class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
         >
-          <RouterLink
+          <NuxtLink
             to="/nft-marketplace/creator-details"
             class="d-flex align-items-center text-decoration-none"
           >
@@ -95,7 +95,7 @@
                 {{ nft.creator.name }}
               </h4>
             </div>
-          </RouterLink>
+          </NuxtLink>
           <img
             src="~/assets/images/verify.svg"
             class="cursor"
@@ -107,7 +107,7 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center">
-          <RouterLink
+          <NuxtLink
             to="/nft-marketplace/nft-details"
             class="d-flex align-items-center text-decoration-none"
           >
@@ -120,7 +120,7 @@
               </span>
               <h4 class="fw-semibold fs-14 mb-0">{{ nft.bid }} ETH</h4>
             </div>
-          </RouterLink>
+          </NuxtLink>
           <button class="bg-transparent p-0 border-0">
             <i
               class="ri-heart-fill fs-20 position-relative top-2"

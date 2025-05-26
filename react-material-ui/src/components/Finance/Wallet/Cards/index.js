@@ -101,7 +101,7 @@ const Cards = () => {
         </Box>
 
         <Grid container columnSpacing={{ xs: 3 }}>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={12}>
+          <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 12 }}>
             <Box
               sx={{
                 mt: { xs: "20px", md: "25px" },
@@ -189,7 +189,7 @@ const Cards = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={12}>
+          <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 12 }}>
             <Box
               sx={{
                 mt: { xs: "20px", md: "25px" },

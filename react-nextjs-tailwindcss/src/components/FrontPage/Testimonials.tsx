@@ -77,7 +77,7 @@ const Testimonials: React.FC = () => {
                 <span className="absolute -bottom-[2.5px] w-[5px] h-[5px] ltr:-right-[3.5px] rtl:-left-[3.5px] bg-purple-600 -rotate-[6.536deg]"></span>
               </span>
             </div>
-            <h2 className="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
+            <h2 className="!mb-0 !text-[24px] md:!text-[28px] lg:!text-[34px] xl:!text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] !leading-[1.2]">
               Inspiring Feedback: What Users Love About Trezo Dashboard
             </h2>
           </div>
@@ -116,7 +116,7 @@ const Testimonials: React.FC = () => {
                     height={50}
                   />
                   <div>
-                    <h5 className="text-[15px] md:text-[16px] mb-[3px] font-semibold">
+                    <h5 className="!text-[15px] md:!text-[16px] !mb-[3px] !font-semibold">
                       {testimonial.name}
                     </h5>
                     <span className="block">{testimonial.role}</span>

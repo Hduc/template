@@ -24,9 +24,6 @@
                 background-color: #FFE1DD;
             }
         }
-        .text-xs {
-            font-size: 12px;
-        }
         .buttons-list {
             gap: 30px;
             margin-top: 20px;
@@ -58,6 +55,19 @@
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .info-badge {
+                border-color: #15203c;
+                background-color: #15203c;
+              
+                &.down {
+                    border-color: #15203c;
+                    background-color: #15203c;
                 }
             }
         }

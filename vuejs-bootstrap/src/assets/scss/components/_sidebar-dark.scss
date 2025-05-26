@@ -40,6 +40,13 @@
       }
       &.open {
         .menu-link {
+          &.menu-toggle {
+            &.active {
+              .menu-icon {
+                color: #fff;
+              }
+            }
+          }
           &.active {
             background-color: $dark-input-bg;
             color: $primary;

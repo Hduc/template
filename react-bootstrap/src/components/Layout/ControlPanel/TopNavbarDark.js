@@ -3,46 +3,81 @@
 import React, { useState, useEffect } from "react";
 
 const TopNavbarDark = () => {
+  // Light/Dark Mode for Header
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     // Retrieve the user's preference from local storage
-    const storedPreference = localStorage.getItem("topNavbarDarkTheme");
-    if (storedPreference === "TopNavbarDark") {
+    const storedPreference = localStorage.getItem("top-navbar-dark-theme");
+    if (storedPreference === "top-navbar-dark") {
       setIsDarkMode(true);
     }
   }, []);
 
   const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
     // Update the user's preference in local storage
-    localStorage.setItem("topNavbarDarkTheme", isDarkMode ? "TopNavbarDark" : "light");
+    localStorage.setItem(
+      "top-navbar-dark-theme",
+      isDarkMode ? "top-navbar-dark" : "light"
+    );
 
-    // Update the class on the top navbar element to apply the selected mode
-    const topNavbarElement = document.querySelector("html");
-    if (isDarkMode) {
-      topNavbarElement.classList.add("dark-top-navbar");
-    } else {
-      topNavbarElement.classList.remove("dark-top-navbar");
+    // Update the class on the .top-navbar-dark element to apply the selected mode
+    const htmlElement = document.querySelector(".header-area");
+    if (htmlElement) {
+      if (isDarkMode) {
+        htmlElement.classList.add("dark");
+      } else {
+        htmlElement.classList.remove("dark");
+      }
     }
   }, [isDarkMode]);
 
   return (
-    <div className="mb-4 pb-2">
-      <h4 className="fs-15 fw-semibold border-bottom pb-2 mb-3">
-        Top Navbar Dark/Light Mode
-      </h4>
-
+    <>
+      <span className="title">Header</span>
       <button
-        className="boxed-style settings-btn" 
+        className={`switch-btn header-btn bg-transparent border-none p-0 ${
+          isDarkMode ? "active" : ""
+        }`}
         onClick={handleToggle}
       >
-        Switch to {isDarkMode ? "Light Mode" : "Dark Mode"}
+        <div className="first">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Light</span>
+          </div>
+        </div>
+
+        <div className="second">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Dark</span>
+          </div>
+        </div>
       </button>
-    </div>
+    </>
   );
 };
 

@@ -56,7 +56,7 @@ const OurTopCourses: React.FC = () => {
       <div className="trezo-card bg-secondary-500 mb-[25px] p-[20px] md:p-[25px] rounded-md relative overflow-hidden z-[2]">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-white">Our Top Courses</h5>
+            <h5 className="!mb-0 !text-white">Our Top Courses</h5>
           </div>
         </div>
 

@@ -1,11 +1,21 @@
-<div class="fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px]" id="navbar" [ngClass]="{'is-sticky': isSticky}">
+<div
+    class="fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px]"
+    id="navbar"
+    [ngClass]="{'is-sticky': isSticky}"
+>
     <div class="container 2xl:max-w-[1320px] mx-auto px-[12px]">
         <div class="flex items-center relative flex-wrap lg:flex-nowrap justify-between lg:justify-start">
             <a routerLink="/" class="inline-block max-w-[130px] ltr:mr-[15px] rtl:ml-[15px]">
                 <img src="images/logo-big.svg" alt="logo" class="inline-block dark:hidden">
                 <img src="images/white-logo-big.svg" alt="logo" class="hidden dark:inline-block">
             </a>
-            <button type="button" class="inline-block relative leading-none lg:hidden" id="navbar-burger-menu" (click)="toggleClass()">
+            <button
+                type="button"
+                id="navbar-burger-menu"
+                (click)="toggleClass()"
+                [class.active]="classApplied"
+                class="inline-block relative leading-none lg:hidden"
+            >
                 <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
                 <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
                 <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
@@ -62,7 +72,11 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-white dark:bg-black mt-[20px] p-[20px] md:p-[30px] w-full hidden lg:!hidden" id="navbar-collapse" [class.active]="classApplied"><!-- For Resposive -->
+            <div
+                id="navbar-collapse"
+                [class.active]="classApplied"
+                class="bg-white dark:bg-black mt-[20px] p-[20px] md:p-[30px] w-full hidden lg:!hidden"
+            ><!-- For Resposive -->
                 <ul class="navbar-nav">
                     <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
                         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">

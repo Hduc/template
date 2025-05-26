@@ -1,0 +1,61 @@
+.back-to-top {
+    right: 40px;
+    width: 40px;
+    bottom: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: var(--whiteColor);
+    transition: var(--transition);
+    background-color: var(--primaryColor);
+
+    &:hover {
+        color: var(--whiteColor);
+        background-color: var(--blackColor);
+    }
+    &.component-rtl {
+        right: auto;
+        left: 40px;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+
+        &.component-rtl {
+            right: auto;
+            left: 20px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .back-to-top {
+        right: 30px;
+        bottom: 30px;
+
+        &.component-rtl {
+            right: auto;
+            left: 30px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

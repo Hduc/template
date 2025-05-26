@@ -15,47 +15,47 @@
 
       <ul class="ps-0 mb-0 list-unstyled d-flex align-items-center">
         <li>
-          <RouterLink to="/my-profile">
+          <NuxtLink to="/my-profile">
             <img
               src="~/assets/images/user-63.jpg"
               style="width: 40px; height: 40px"
               class="rounded-circle border border-1 border-color-white"
               alt="user"
             />
-          </RouterLink>
+          </NuxtLink>
         </li>
         <li class="ms-m-15">
-          <RouterLink to="/my-profile">
+          <NuxtLink to="/my-profile">
             <img
               src="~/assets/images/user-64.jpg"
               style="width: 40px; height: 40px"
               class="rounded-circle border border-1 border-color-white"
               alt="user"
             />
-          </RouterLink>
+          </NuxtLink>
         </li>
         <li class="ms-m-15">
-          <RouterLink to="/my-profile">
+          <NuxtLink to="/my-profile">
             <img
               src="~/assets/images/user-65.jpg"
               style="width: 40px; height: 40px"
               class="rounded-circle border border-1 border-color-white"
               alt="user"
             />
-          </RouterLink>
+          </NuxtLink>
         </li>
         <li class="ms-m-15">
-          <RouterLink to="/my-profile">
+          <NuxtLink to="/my-profile">
             <img
               src="~/assets/images/user-66.jpg"
               style="width: 40px; height: 40px"
               class="rounded-circle border border-1 border-color-white"
               alt="user"
             />
-          </RouterLink>
+          </NuxtLink>
         </li>
         <li class="ms-m-15">
-          <RouterLink
+          <NuxtLink
             to="/users/users-list"
             class="rounded-circle d-block text-center text-decoration-none text-white fs-14 fw-bold border border-1 border-color-white"
             style="
@@ -66,7 +66,7 @@
             "
           >
             59
-          </RouterLink>
+          </NuxtLink>
         </li>
       </ul>
     </div>

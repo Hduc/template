@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer-area {
-  padding: 29px 30px;
+  padding: 18.5px 30px;
 
   span {
     color: #ad63f6;
@@ -29,15 +29,12 @@ export default {
   }
 }
 
-@media only screen and (max-width: 767px) {
+/* Max width 991px */
+@media only screen and (max-width: 991px) {
   .footer-area {
-    padding: 15px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .footer-area {
-    padding: 20px;
+    p {
+      padding: 10px 10px;
+    }
   }
 }
 </style>

@@ -28,27 +28,27 @@ export default function Page() {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <BasicRadialBarChart />
         </Grid>
 
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <MultipleRadialBarChart />
         </Grid>
 
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <CustomAngleCircleRadialBarChart />
         </Grid>
 
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <GradientRadialBarChart />
         </Grid>
 
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <StrockedCircularGaugeRadialBarChart />
         </Grid>
 
-        <Grid item xs={12} sm={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <SemiCircularGaugeRadialBarChart />
         </Grid>
       </Grid>

@@ -1,0 +1,66 @@
+::ng-deep {
+    .rea-latest-transactions-card {
+        .mat-mdc-card-content {
+            .mat-mdc-table {
+                &.mdc-data-table__table {
+                    .mat-mdc-header-row {
+                        .mat-mdc-header-cell {
+                            padding-bottom: 11px;
+                        }
+                    }
+                    .mdc-data-table__content {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 11.5px;
+                                    bottom: 11.5px;
+                                };
+                                .employee-info {
+                                    gap: 10px;
+
+                                    img {
+                                        width: 32px;
+                                    }
+                                    span {
+                                        font-size: var(--fontSize);
+                                    }
+                                }
+                                .trezo-badge {
+                                    border-radius: 30px;
+                                    padding: {
+                                        top: 0;
+                                        bottom: 0;
+                                    };
+                                }
+                                .payment-method-info {
+                                    gap: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-paginator {
+                padding-top: 11px;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

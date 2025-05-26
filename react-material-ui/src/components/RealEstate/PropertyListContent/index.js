@@ -351,7 +351,10 @@ const PropertyListContent = () => {
         justifyContent="center"
       >
         {paginatedProperties.map((property) => (
-          <Grid item xs={12} md={6} lg={6} xl={4} key={property.id}>
+          <Grid
+            size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
+            key={property.id}
+          >
             <Box
               className="bg-white"
               sx={{
@@ -459,7 +462,7 @@ const PropertyListContent = () => {
                   {property.price}
                 </Typography>
 
-                <Typography
+                <Box
                   sx={{
                     fontSize: "12px",
                     py: "1px",
@@ -469,7 +472,7 @@ const PropertyListContent = () => {
                   }}
                 >
                   {property.status}
-                </Typography>
+                </Box>
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
@@ -619,12 +622,12 @@ const PropertyListContent = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
               key={index}
-              className="border text-body"
+              className="border"
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
                 "&:hover": {

@@ -164,7 +164,7 @@ const Reviews: React.FC = () => {
     <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0">Reviews</h5>
+          <h5 className="!mb-0">Reviews</h5>
         </div>
       </div>
 
@@ -269,7 +269,7 @@ const Reviews: React.FC = () => {
         </div>
 
         <div className="pt-[11px] sm:flex sm:items-center justify-between">
-          <p className="mb-0 text-xs">
+          <p className="!mb-0 !text-xs">
             Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of{" "}
             {totalItems} results
           </p>

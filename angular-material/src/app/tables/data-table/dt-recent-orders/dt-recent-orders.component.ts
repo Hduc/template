@@ -1,9 +1,9 @@
+import { NgIf } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { NgIf } from '@angular/common';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
@@ -51,7 +51,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user1.jpg',
             name: 'Sarah Johnson'
         },
-        created: '12 Jun 2024',
+        created: '12 Jun 2025',
         total: '$10,490',
         status: {
             confirmed: false,
@@ -66,7 +66,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user2.jpg',
             name: 'Michael Smith'
         },
-        created: '11 Jun 2024',
+        created: '11 Jun 2025',
         total: '$6,575',
         status: {
             confirmed: true,
@@ -81,7 +81,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user3.jpg',
             name: 'Emily Brown'
         },
-        created: '10 Jun 2024',
+        created: '10 Jun 2025',
         total: '$12,870',
         status: {
             confirmed: false,
@@ -96,7 +96,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user4.jpg',
             name: 'Jason Lee'
         },
-        created: '09 Jun 2024',
+        created: '09 Jun 2025',
         total: '$7,895',
         status: {
             confirmed: false,
@@ -111,7 +111,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user5.jpg',
             name: 'Ashley Davis'
         },
-        created: '08 Jun 2024',
+        created: '08 Jun 2025',
         total: '$4,680',
         status: {
             confirmed: false,
@@ -126,7 +126,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user2.jpg',
             name: 'Michael Smith'
         },
-        created: '11 Jun 2024',
+        created: '11 Jun 2025',
         total: '$6,575',
         status: {
             confirmed: true,
@@ -141,7 +141,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user1.jpg',
             name: 'Sarah Johnson'
         },
-        created: '12 Jun 2024',
+        created: '12 Jun 2025',
         total: '$10,490',
         status: {
             confirmed: false,
@@ -156,7 +156,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user4.jpg',
             name: 'Jason Lee'
         },
-        created: '09 Jun 2024',
+        created: '09 Jun 2025',
         total: '$7,895',
         status: {
             confirmed: false,
@@ -171,7 +171,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user3.jpg',
             name: 'Emily Brown'
         },
-        created: '10 Jun 2024',
+        created: '10 Jun 2025',
         total: '$12,870',
         status: {
             confirmed: true,
@@ -186,7 +186,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user4.jpg',
             name: 'Jason Lee'
         },
-        created: '09 Jun 2024',
+        created: '09 Jun 2025',
         total: '$7,895',
         status: {
             confirmed: true,

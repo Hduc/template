@@ -162,7 +162,6 @@ const clients: Client[] = [
     projects: 34,
     image: "/images/clients/client7.jpg",
   },
-
 ];
 
 const PmClients: React.FC = () => {
@@ -192,7 +191,7 @@ const PmClients: React.FC = () => {
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {paginatedClients.map((client) => (
-          <Grid key={client.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid key={client.id} size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <Box
               className="bg-white"
               sx={{

@@ -33,7 +33,7 @@ const BudgetsEstimates: React.FC = () => {
 
   return (
     <>
-      <h3 className="mb-[20px] md:mb-[25px] text-gray-900 dark:text-gray-400 text-lg">
+      <h3 className="!mb-[20px] md:!mb-[25px] !text-gray-900 dark:!text-gray-400 !text-lg">
         Budgets Estimates
       </h3>
 

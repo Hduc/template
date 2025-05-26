@@ -24,22 +24,22 @@ const Crypto = () => {
         <CryptocurrencyWatchlist />
 
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}>
-          <Grid item xs={12} md={12} lg={8} xl={8}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 8 }}>
             <MarketPriceStatistics />
           </Grid>
 
-          <Grid item xs={12} md={12} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}>
             <Exchange />
           </Grid>
         </Grid>
       </Card>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={7} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 7, xl: 7 }}>
           <TransactionHistory />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={5} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 5, xl: 5 }}>
           <Portfolio />
         </Grid>
       </Grid>

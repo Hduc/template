@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ClipboardComponent {
 
-    copyText: string = '#annual90conference2024'; // Bind this to your input
+    copyText: string = '#annual90conference2025'; // Bind this to your input
     copied: boolean = false; // Tracks if the text is copied
     buttonText: string = 'Copy'; // Button text
     copyToClipboard(input: HTMLInputElement): void {

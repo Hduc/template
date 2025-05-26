@@ -82,10 +82,9 @@
 }
 
 /* dark-theme style */
-.dark-theme .eventInfo ul li span {
+[class="dark-theme"] .eventInfo ul li span {
   color: var(--whiteColor)
 }
-
 
 /* RTL Style */
 [dir="rtl"] .aboutThisEvent ul li {

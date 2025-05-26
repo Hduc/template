@@ -621,7 +621,7 @@ const RecentCustomerRatings: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={3} />
+                    <TableCell className="border-bottom" colSpan={3} />
                   </TableRow>
                 )}
               </TableBody>

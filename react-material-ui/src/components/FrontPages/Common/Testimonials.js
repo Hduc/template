@@ -97,7 +97,7 @@ const Testimonials = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
             {testimonialsData.map((testimonial) => (
-              <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={testimonial.id}>
+              <Grid size={{ xs: 12, sm: 12, md: 6, lg: 4, xl: 4 }} key={testimonial.id}>
                 <div className="fp-single-testimonial-item bg-white border-radius">
                   <div className="ratings">
                     {[...Array(5)].map((_, index) => (

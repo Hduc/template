@@ -16,7 +16,7 @@ const LessonPreviewContent: React.FC = () => {
             />
             Your browser does not support the video tag.
           </video>
-          <h4 className="mt-[20px] md:mt-[25px] mb-[10px] text-lg md:text-xl">
+          <h4 className="!mt-[20px] md:!mt-[25px] !mb-[10px] !text-lg md:!text-xl">
             Introduction to Cybersecurity
           </h4>
           <p>

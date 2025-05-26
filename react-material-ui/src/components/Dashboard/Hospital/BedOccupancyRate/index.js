@@ -183,7 +183,7 @@ const BedOccupancyRate = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Box
               sx={{
                 "& > div:last-child": { mb: 0 },
@@ -331,7 +331,7 @@ const BedOccupancyRate = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <div>
               {isChartLoaded && (
                 <Chart

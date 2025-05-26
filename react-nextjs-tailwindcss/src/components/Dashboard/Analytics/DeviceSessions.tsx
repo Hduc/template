@@ -120,7 +120,7 @@ const DeviceSessions: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Device Sessions</h5>
+            <h5 className="!mb-0">Device Sessions</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -184,13 +184,13 @@ const DeviceSessions: React.FC = () => {
 
                     <div>
                       <span className="block text-xs mb-px">{device.type}</span>
-                      <h6 className="mb-0 text-md font-semibold text-black dark:text-white">
+                      <h6 className="!mb-0 !text-md !font-semibold !text-black dark:!text-white">
                         {device.percentage}
                       </h6>
                     </div>
                     <div>
                       <span className="block text-xs mb-px">Sessions</span>
-                      <h6 className="mb-0 font-semibold">{device.sessions}</h6>
+                      <h6 className="!mb-0 !font-semibold">{device.sessions}</h6>
                     </div>
                   </li>
                 ))}

@@ -5,7 +5,7 @@ import { Card, Carousel } from "react-bootstrap";
 const UncontrolledSlides = () => {
   return (
     <>
-      <Card className="bg-white border-0 rounded-3 mb-4">
+      <Card className="bg-white border-0 rounded-3 mb-4 z-0">
         <Card.Body className="p-4">
           <h4 className="fs-18 mb-4">Uncontrolled Slides</h4>
 

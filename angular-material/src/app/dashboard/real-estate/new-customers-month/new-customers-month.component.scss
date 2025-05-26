@@ -48,6 +48,18 @@
             }
         }
     }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .customers-list {
+                img {
+                    border-color: var(--blackColor);
+                }
+                div {
+                    border-color: var(--blackColor);
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

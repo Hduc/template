@@ -31,7 +31,7 @@
     "vue-echarts": "^7.0.3",
     "vue-router": "^4.3.2",
     "vue3-apexcharts": "^1.7.0",
-    "vue3-carousel-nuxt": "^1.1.1"
+    "vue3-carousel-nuxt": "^1.1.5"
   },
   "devDependencies": {
     "@primevue/nuxt-module": "^4.0.0-rc.2",

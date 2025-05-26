@@ -35,7 +35,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product1.jpg',
             title: 'Smart Band',
-            date: '08 Jun 2024'
+            date: '08 Jun 2025'
         },
         items: 1,
         price: '$80.00',
@@ -46,7 +46,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product2.jpg',
             title: 'Headphone',
-            date: '07 Jun 2024'
+            date: '07 Jun 2025'
         },
         items: 3,
         price: '$150.00',
@@ -57,7 +57,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product3.jpg',
             title: 'iPhone 15 Plus',
-            date: '06 Jun 2024'
+            date: '06 Jun 2025'
         },
         items: 1,
         price: '$750.00',
@@ -68,7 +68,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product4.jpg',
             title: 'Bluetooth Speaker',
-            date: '05 Jun 2024'
+            date: '05 Jun 2025'
         },
         items: 5,
         price: '$15.00',
@@ -79,7 +79,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product5.jpg',
             title: 'Airbuds 2nd Gen',
-            date: '04 Jun 2024'
+            date: '04 Jun 2025'
         },
         items: 2,
         price: '$25.00',

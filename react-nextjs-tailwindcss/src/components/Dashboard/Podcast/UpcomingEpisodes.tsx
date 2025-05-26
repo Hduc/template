@@ -55,7 +55,7 @@ const UpcomingEpisodes: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Upcoming Episodes</h5>
+            <h5 className="!mb-0 !font-semibold">Upcoming Episodes</h5>
           </div>
 
           <Menu
@@ -95,7 +95,7 @@ const UpcomingEpisodes: React.FC = () => {
                 <Image src={episode.icon} alt="icon" width={22} height={22} />
               </div>
 
-              <h6 className="text-base font-medium mb-[5px]">
+              <h6 className="!text-base !font-medium !mb-[5px]">
                 <Link
                   href="#"
                   className="text-gray-700 dark:text-gray-400 transition-all hover:text-primary-500"
@@ -104,7 +104,7 @@ const UpcomingEpisodes: React.FC = () => {
                 </Link>
               </h6>
 
-              <p className="text-xs max-w-[166px] leading-[1.4] mb-[5px]">
+              <p className="!text-xs !max-w-[166px] !leading-[1.4] !mb-[5px]">
                 {episode.author}
               </p>
 

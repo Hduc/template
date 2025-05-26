@@ -1,0 +1,406 @@
+<div class="card-body p-0">
+	<div class="p-4">
+		<div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+			<h3 class="mb-0">Performance of Agents</h3>
+			<select
+				class="form-select month-select form-control p-0 h-auto border-0 w-110"
+				style="background-position: right 0 center;"
+				aria-label="Default select example"
+			>
+				<option selected>Last 30 Days</option>
+				<option value="1">Last 60 Days</option>
+				<option value="2">Last 90 Days</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="default-table-area style-two all-projects">
+		<div class="table-responsive">
+			<table class="table align-middle">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Agent Name</th>
+						<th scope="col">Total Tickets</th>
+						<th scope="col">Open Tickets</th>
+						<th scope="col">Resolved Tickets</th>
+						<th scope="col">Avg. Resolution Time</th>
+						<th scope="col">Satisfaction Rate</th>
+						<th scope="col">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="text-body">#854</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-42.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Oliver Khan</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">230</td>
+						<td class="text-body">20</td>
+						<td class="text-body">75</td>
+						<td class="text-body">2.5 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#605DFF 80%, #ECEEF2 80%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">80%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-body">#853</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-43.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Ava Cooper</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">180</td>
+						<td class="text-body">16</td>
+						<td class="text-body">35</td>
+						<td class="text-body">1.4 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#AD63F6 75%, #ECEEF2 75%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">75%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-body">#852</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-44.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Isabella Evans</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">150</td>
+						<td class="text-body">35</td>
+						<td class="text-body">45</td>
+						<td class="text-body">3.2 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#37D80A 80%, #ECEEF2 80%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">80%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-body">#851</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-45.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Mia Hughes</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">75</td>
+						<td class="text-body">86</td>
+						<td class="text-body">25</td>
+						<td class="text-body">4.5 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#3584FC 75%, #ECEEF2 75%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">75%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-body">#850</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-46.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Noah Mitchell</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">320</td>
+						<td class="text-body">90</td>
+						<td class="text-body">10</td>
+						<td class="text-body">3.8 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#FD5812 80%, #ECEEF2 80%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">80%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-body">#849</td>
+						<td>
+							<a href="/dashboard/agents" class="d-flex align-items-center">
+								<div class="flex-shrink-0">
+									<img src="/assets/images/user-47.jpg" class="wh-34 rounded-circle" alt="user" />
+								</div>
+								<div class="flex-grow-1 ms-2 position-relative top-1">
+									<h6 class="mb-0 fs-14 fw-medium">Sophia Carter</h6>
+								</div>
+							</a>
+						</td>
+						<td class="text-body">120</td>
+						<td class="text-body">55</td>
+						<td class="text-body">20</td>
+						<td class="text-body">5.3 hours</td>
+						<td>
+							<div
+								style=" 
+                                                        position: relative; 
+                                                        width: 50px; 
+                                                        height: 50px; 
+                                                        border-radius: 50%; 
+                                                        display: flex; 
+                                                        align-items: center; 
+                                                        justify-content: center; 
+                                                        background: conic-gradient(#AD63F6 60%, #ECEEF2 60%);"
+							>
+								<div
+									style="
+                                                            position: absolute; 
+                                                            width: 80%; 
+                                                            height: 80%; 
+                                                            background-color: #ffffff; 
+                                                            border-radius: 50%; 
+                                                            display: flex; 
+                                                            align-items: center; 
+                                                            justify-content: center;"
+								>
+									<p class="text-body fw-semibold" style="font-size: 12px;">60%</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-center gap-1">
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-primary">visibility</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-body">edit</i>
+								</button>
+								<button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+									<i class="material-symbols-outlined fs-16 text-danger">delete</i>
+								</button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="p-4 pt-lg-4">
+			<div
+				class="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap"
+			>
+				<span class="fs-12 fw-medium">Showing 6 of 30 Results</span>
+
+				<nav aria-label="Page navigation example">
+					<ul class="pagination mb-0 justify-content-center">
+						<li class="page-item">
+							<a class="page-link icon" href="/dashboard/help-desk" aria-label="Previous">
+								<i class="material-symbols-outlined">keyboard_arrow_left</i>
+							</a>
+						</li>
+						<li class="page-item"><a class="page-link active" href="/dashboard/help-desk">1</a></li>
+						<li class="page-item"><a class="page-link" href="/dashboard/help-desk">2</a></li>
+						<li class="page-item"><a class="page-link" href="/dashboard/help-desk">3</a></li>
+						<li class="page-item"><a class="page-link" href="/dashboard/help-desk">4</a></li>
+						<li class="page-item">
+							<a class="page-link icon" href="/dashboard/help-desk" aria-label="Next">
+								<i class="material-symbols-outlined">keyboard_arrow_right</i>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>

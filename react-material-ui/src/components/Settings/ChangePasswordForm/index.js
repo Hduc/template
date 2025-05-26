@@ -33,7 +33,7 @@ const ChangePasswordForm = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -75,7 +75,7 @@ const ChangePasswordForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -117,7 +117,7 @@ const ChangePasswordForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -159,7 +159,7 @@ const ChangePasswordForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box
                 sx={{
                   display: "flex",

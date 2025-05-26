@@ -59,7 +59,7 @@ const Widgets: React.FC = () => {
             </div>
 
             <div>
-              <h2 className="leading-[1.2] text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] mb-[15px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px]">
+              <h2 className="!leading-[1.2] !text-[24px] md:!text-[28px] lg:!text-[34px] xl:!text-[36px] !mb-[15px] !-tracking-[.5px] md:!-tracking-[.6px] lg:!-tracking-[.8px] xl:!-tracking-[1px]">
                 Tailor Your Dashboard: Unleash the Power of Customizable Widgets
               </h2>
 
@@ -72,7 +72,7 @@ const Widgets: React.FC = () => {
                     <i className="material-symbols-outlined absolute text-primary-600 !text-[17px] md:!text-[18px] lg:!text-[20px] ltr:left-0 rtl:right-0 top-0">
                       done_outline
                     </i>
-                    <h3 className="text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-[8px] md:mb-[10px] font-semibold leading-[1.2]">
+                    <h3 className="!text-[15px] md:!text-[16px] lg:!text-[17px] xl:!text-lg !mb-[8px] md:!mb-[10px] !font-semibold !leading-[1.2]">
                       {widget.title}
                     </h3>
                     <p className="leading-[1.6] md:max-w-[458px]">

@@ -9,7 +9,7 @@ const TotalOrder: React.FC = () => {
         <div className="trezo-card-content">
           <div className="flex justify-between">
             <div>
-              <span className="inline-block px-[8.5px] text-danger-600 border border-danger-300 bg-danger-100 rounded-[100px] text-xs">
+              <span className="inline-block px-[8.5px] text-danger-600 border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#15203c] text-sm rounded-[100px] text-xs">
                 -2.5%
               </span>
             </div>
@@ -23,7 +23,7 @@ const TotalOrder: React.FC = () => {
           <div className="mt-[20px] md:mt-[25px] flex items-end justify-between">
             <div>
               <span className="block mb-[4px]">Total Order</span>
-              <h3 className="mb-0 text-[20px] text-black dark:text-white">
+              <h3 className="!mb-0 !text-[20px] !text-black dark:!text-white">
                 49,120
               </h3>
             </div>

@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { StudentsOverviewService } from './students-overview.service';
 import { NgIf } from '@angular/common';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-students-overview',
@@ -11,6 +12,7 @@ import { NgIf } from '@angular/common';
 export class StudentsOverviewComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private studentsOverviewService: StudentsOverviewService
     ) {}
 

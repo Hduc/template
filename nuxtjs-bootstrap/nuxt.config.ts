@@ -14,13 +14,6 @@ export default defineNuxtConfig({
           href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0",
         },
       ],
-      script: [
-        {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js",
-          type: "text/javascript",
-          defer: true,
-        },
-      ],
     },
   },
 
@@ -36,7 +29,11 @@ export default defineNuxtConfig({
     "/assets/scss/style.css",
   ],
 
-  plugins: ["~/plugins/apexcharts.client.ts", "~/plugins/vue-quill.js"],
+  plugins: [
+    "~/plugins/apexcharts.client.ts",
+    "~/plugins/vue-quill.js",
+    "~/plugins/bootstrap.client.ts",
+  ],
   modules: ["@bootstrap-vue-next/nuxt", "nuxt-swiper", "nuxt-feather-icons"],
 
   vue: {

@@ -2,7 +2,7 @@
 
 "use client";
 
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -62,9 +62,33 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
       setExpanded(newExpanded ? panel : false);
     };
 
+  // Enable the dark sidebar exclusively for the /dashboard/beauty-salon/ page URL.
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Only check or set the theme if we're on the beauty-salon page.
+    if (pathname === "/dashboard/beauty-salon/") {
+      const storedTheme = localStorage.getItem("beautySalonSidebarTheme");
+      if (storedTheme) {
+        setIsDark(storedTheme === "dark-theme");
+      } else {
+        // Default to dark theme and persist it in localStorage
+        setIsDark(true);
+        localStorage.setItem("beautySalonSidebarTheme", "dark-theme");
+      }
+    } else {
+      // For other pages, do not use localStorage for the theme
+      setIsDark(false);
+    }
+  }, [pathname]);
+
   return (
     <>
-      <Box className="leftSidebarDark">
+      <Box
+        className={`leftSidebarDark hide-for-horizontal-nav ${
+          pathname === "/dashboard/beauty-salon/" && isDark ? "dark-theme" : ""
+        }`}
+      >
         <Box className="left-sidebar-menu">
           <Box className="logo">
             <Link href="/dashboard/ecommerce/">
@@ -112,7 +136,7 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                     Dashboard
                   </Typography>
                   <Typography component={"span"} className="trezo-badge">
-                    18
+                    30
                   </Typography>
                 </AccordionSummary>
 
@@ -137,12 +161,6 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                         }`}
                       >
                         CRM
-                        <Typography
-                          component={"span"}
-                          className="trezo-badge style-two"
-                        >
-                          Hot
-                        </Typography>
                       </Link>
                     </li>
 
@@ -166,13 +184,7 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                           pathname === "/dashboard/lms/" ? "active" : ""
                         }`}
                       >
-                        LMS{" "}
-                        <Typography
-                          component={"span"}
-                          className="trezo-badge style-two"
-                        >
-                          Top
-                        </Typography>
+                        LMS
                       </Link>
                     </li>
 
@@ -183,7 +195,13 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                           pathname === "/dashboard/helpdesk/" ? "active" : ""
                         }`}
                       >
-                        HelpDesk
+                        HelpDesk{" "}
+                        <Typography
+                          component={"span"}
+                          className="trezo-badge style-two"
+                        >
+                          Hot
+                        </Typography>
                       </Link>
                     </li>
 
@@ -233,15 +251,51 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
 
                     <li className="sidemenu-item">
                       <Link
+                        href="/dashboard/hrm/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/hrm/" ? "active" : ""
+                        }`}
+                      >
+                        HRM
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/school/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/school/" ? "active" : ""
+                        }`}
+                      >
+                        School
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/call-center/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/call-center/" ? "active" : ""
+                        }`}
+                      >
+                        Call Center{" "}
+                        <Typography
+                          component={"span"}
+                          className="trezo-badge style-two"
+                        >
+                          Popular
+                        </Typography>
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
                         href="/dashboard/marketing/"
                         className={`sidemenu-link ${
                           pathname === "/dashboard/marketing/" ? "active" : ""
                         }`}
                       >
                         Marketing
-                        <Typography component={"span"} className="trezo-badge">
-                          New
-                        </Typography>
                       </Link>
                     </li>
 
@@ -253,9 +307,6 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                         }`}
                       >
                         NFT
-                        <Typography component={"span"} className="trezo-badge">
-                          New
-                        </Typography>
                       </Link>
                     </li>
 
@@ -267,9 +318,6 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                         }`}
                       >
                         SaaS
-                        <Typography component={"span"} className="trezo-badge">
-                          New
-                        </Typography>
                       </Link>
                     </li>
 
@@ -280,9 +328,12 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                           pathname === "/dashboard/real-estate/" ? "active" : ""
                         }`}
                       >
-                        Real Estate
-                        <Typography component={"span"} className="trezo-badge">
-                          New
+                        Real Estate{" "}
+                        <Typography
+                          component={"span"}
+                          className="trezo-badge style-two"
+                        >
+                          Top
                         </Typography>
                       </Link>
                     </li>
@@ -295,9 +346,6 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                         }`}
                       >
                         Shipment
-                        <Typography component={"span"} className="trezo-badge">
-                          New
-                        </Typography>
                       </Link>
                     </li>
 
@@ -309,6 +357,100 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                         }`}
                       >
                         Finance
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/pos-system/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/pos-system/" ? "active" : ""
+                        }`}
+                      >
+                        POS System
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/podcast/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/podcast/" ? "active" : ""
+                        }`}
+                      >
+                        Podcast
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/social-media/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/social-media/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Social Media
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/doctor/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/doctor/" ? "active" : ""
+                        }`}
+                      >
+                        Doctor
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/beauty-salon/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/beauty-salon/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Beauty Salon
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/store-analytics/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/store-analytics/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Store Analytics
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/restaurante/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/restaurante/" ? "active" : ""
+                        }`}
+                      >
+                        Restaurante
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/hotel/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/hotel/" ? "active" : ""
+                        }`}
+                      >
+                        Hotel
                         <Typography component={"span"} className="trezo-badge">
                           New
                         </Typography>
@@ -317,12 +459,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
 
                     <li className="sidemenu-item">
                       <Link
-                        href="/dashboard/hrm/"
+                        href="/dashboard/real-estate-agent/"
                         className={`sidemenu-link ${
-                          pathname === "/dashboard/hrm/" ? "active" : ""
+                          pathname === "/dashboard/real-estate-agent/"
+                            ? "active"
+                            : ""
                         }`}
                       >
-                        HRM
+                        Real Estate Agent
                         <Typography component={"span"} className="trezo-badge">
                           New
                         </Typography>
@@ -331,12 +475,12 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
 
                     <li className="sidemenu-item">
                       <Link
-                        href="/dashboard/school/"
+                        href="/dashboard/credit-card/"
                         className={`sidemenu-link ${
-                          pathname === "/dashboard/school/" ? "active" : ""
+                          pathname === "/dashboard/credit-card/" ? "active" : ""
                         }`}
                       >
-                        School
+                        Credit Card
                         <Typography component={"span"} className="trezo-badge">
                           New
                         </Typography>
@@ -345,12 +489,30 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
 
                     <li className="sidemenu-item">
                       <Link
-                        href="/dashboard/call-center/"
+                        href="/dashboard/crypto-trader/"
                         className={`sidemenu-link ${
-                          pathname === "/dashboard/call-center/" ? "active" : ""
+                          pathname === "/dashboard/crypto-trader/"
+                            ? "active"
+                            : ""
                         }`}
                       >
-                        Call Center
+                        Crypto Trader
+                        <Typography component={"span"} className="trezo-badge">
+                          New
+                        </Typography>
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/dashboard/crypto-performance/"
+                        className={`sidemenu-link ${
+                          pathname === "/dashboard/crypto-performance/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Crypto Perf.
                         <Typography component={"span"} className="trezo-badge">
                           New
                         </Typography>
@@ -444,7 +606,7 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                   textTransform: "uppercase",
                 }}
               >
-                APPS
+                APPS & PAGES
               </Typography>
 
               <Link
@@ -684,18 +846,7 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
                   </ul>
                 </AccordionDetails>
               </Accordion>
-
-              <Typography
-                className="sub-title"
-                sx={{
-                  display: "block",
-                  fontWeight: "500",
-                  textTransform: "uppercase",
-                }}
-              >
-                PAGES
-              </Typography>
-
+ 
               <Accordion
                 expanded={expanded === "panel5"}
                 onChange={handleChange("panel5")}
@@ -1286,8 +1437,8 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel9d-content"
-                  id="panel9d-header"
+                  aria-controls="panel10d-content"
+                  id="panel10d-header"
                 >
                   <i className="material-symbols-outlined">store</i>
                   <Typography component={"span"} className="title">
@@ -1394,8 +1545,8 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel9d-content"
-                  id="panel9d-header"
+                  aria-controls="panel11d-content"
+                  id="panel11d-header"
                 >
                   <i className="material-symbols-outlined">real_estate_agent</i>
                   <Typography component={"span"} className="title">
@@ -1502,8 +1653,8 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel9d-content"
-                  id="panel9d-header"
+                  aria-controls="panel12d-content"
+                  id="panel12d-header"
                 >
                   <i className="material-symbols-outlined">calculate</i>
                   <Typography component={"span"} className="title">
@@ -1545,8 +1696,303 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel10d-content"
-                  id="panel10d-header"
+                  aria-controls="panel13d-content"
+                  id="panel13d-header"
+                >
+                  <i className="material-symbols-outlined">badge</i>
+                  <Typography component={"span"} className="title">
+                    Doctor
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails className="mat-details">
+                  <ul className="sidebar-sub-menu">
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/patients-list/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/patients-list/" ? "active" : ""
+                        }`}
+                      >
+                        Patients List
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/add-patient/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/add-patient/" ? "active" : ""
+                        }`}
+                      >
+                        Add Patient
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/patient-details/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/patient-details/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Patient Details
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/appointments/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/appointments/" ? "active" : ""
+                        }`}
+                      >
+                        Appointments
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/prescriptions/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/prescriptions/" ? "active" : ""
+                        }`}
+                      >
+                        Prescriptions
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/doctor/write-prescription/"
+                        className={`sidemenu-link ${
+                          pathname === "/doctor/write-prescription/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Write a Prescription
+                      </Link>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel14"}
+                onChange={handleChange("panel14")}
+                className="mat-accordion"
+              >
+                <AccordionSummary
+                  className="mat-summary"
+                  aria-controls="panel14d-content"
+                  id="panel14d-header"
+                >
+                  <i className="material-symbols-outlined">lunch_dining</i>
+                  <Typography component={"span"} className="title">
+                    Restaurant
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails className="mat-details">
+                  <ul className="sidebar-sub-menu">
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/restaurant/menus/"
+                        className={`sidemenu-link ${
+                          pathname === "/restaurant/menus/" ? "active" : ""
+                        }`}
+                      >
+                        Menus
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/restaurant/dish-details/"
+                        className={`sidemenu-link ${
+                          pathname === "/restaurant/dish-details/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Dish Details
+                      </Link>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel15"}
+                onChange={handleChange("panel15")}
+                className="mat-accordion"
+              >
+                <AccordionSummary
+                  className="mat-summary"
+                  aria-controls="panel15d-content"
+                  id="panel15d-header"
+                >
+                  <i className="material-symbols-outlined">hotel</i>
+                  <Typography component={"span"} className="title">
+                    Hotel
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails className="mat-details">
+                  <ul className="sidebar-sub-menu">
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/hotel/rooms-list/"
+                        className={`sidemenu-link ${
+                          pathname === "/hotel/rooms-list/" ? "active" : ""
+                        }`}
+                      >
+                        Rooms List
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/hotel/room-details/"
+                        className={`sidemenu-link ${
+                          pathname === "/hotel/room-details/" ? "active" : ""
+                        }`}
+                      >
+                        Room Details
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/hotel/guests-list/"
+                        className={`sidemenu-link ${
+                          pathname === "/hotel/guests-list/" ? "active" : ""
+                        }`}
+                      >
+                        Guests List
+                      </Link>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel16"}
+                onChange={handleChange("panel16")}
+                className="mat-accordion"
+              >
+                <AccordionSummary
+                  className="mat-summary"
+                  aria-controls="panel16d-content"
+                  id="panel16d-header"
+                >
+                  <i className="material-symbols-outlined">location_away</i>
+                  <Typography component={"span"} className="title">
+                    Real Estate Agent
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails className="mat-details">
+                  <ul className="sidebar-sub-menu">
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/real-estate-agent/properties/"
+                        className={`sidemenu-link ${
+                          pathname === "/real-estate-agent/properties/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Properties
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/real-estate-agent/property-details/"
+                        className={`sidemenu-link ${
+                          pathname === "/real-estate-agent/property-details/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Property Details
+                      </Link>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel17"}
+                onChange={handleChange("panel17")}
+                className="mat-accordion"
+              >
+                <AccordionSummary
+                  className="mat-summary"
+                  aria-controls="panel17d-content"
+                  id="panel17d-header"
+                >
+                  <i className="material-symbols-outlined">paid</i>
+                  <Typography component={"span"} className="title">
+                    Crypto Trader
+                  </Typography>
+                </AccordionSummary>
+
+                <AccordionDetails className="mat-details">
+                  <ul className="sidebar-sub-menu">
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/crypto-trader/transactions/"
+                        className={`sidemenu-link ${
+                          pathname === "/crypto-trader/transactions/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Transactions
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/crypto-trader/gainers-losers/"
+                        className={`sidemenu-link ${
+                          pathname === "/crypto-trader/gainers-losers/"
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        Gainers & Losers
+                      </Link>
+                    </li>
+
+                    <li className="sidemenu-item">
+                      <Link
+                        href="/crypto-trader/wallet/"
+                        className={`sidemenu-link ${
+                          pathname === "/crypto-trader/wallet/" ? "active" : ""
+                        }`}
+                      >
+                        Wallet
+                      </Link>
+                    </li>
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel18"}
+                onChange={handleChange("panel18")}
+                className="mat-accordion"
+              >
+                <AccordionSummary
+                  className="mat-summary"
+                  aria-controls="panel18d-content"
+                  id="panel18d-header"
                 >
                   <i className="material-symbols-outlined">local_activity</i>
                   <Typography component={"span"} className="title">
@@ -1617,14 +2063,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel14"}
-                onChange={handleChange("panel14")}
+                expanded={expanded === "panel19"}
+                onChange={handleChange("panel19")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel11d-content"
-                  id="panel11d-header"
+                  aria-controls="panel19d-content"
+                  id="panel19d-header"
                 >
                   <i className="material-symbols-outlined">share</i>
                   <Typography component={"span"} className="title">
@@ -1660,14 +2106,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel15"}
-                onChange={handleChange("panel15")}
+                expanded={expanded === "panel20"}
+                onChange={handleChange("panel20")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel12d-content"
-                  id="panel12d-header"
+                  aria-controls="panel20d-content"
+                  id="panel20d-header"
                 >
                   <i className="material-symbols-outlined">content_paste</i>
                   <Typography component={"span"} className="title">
@@ -1725,14 +2171,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel16"}
-                onChange={handleChange("panel16")}
+                expanded={expanded === "panel21"}
+                onChange={handleChange("panel21")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel13d-content"
-                  id="panel13d-header"
+                  aria-controls="panel21d-content"
+                  id="panel21d-header"
                 >
                   <i className="material-symbols-outlined">person</i>
                   <Typography component={"span"} className="title">
@@ -1779,14 +2225,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel17"}
-                onChange={handleChange("panel17")}
+                expanded={expanded === "panel22"}
+                onChange={handleChange("panel22")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel14d-content"
-                  id="panel14d-header"
+                  aria-controls="panel22d-content"
+                  id="panel22d-header"
                 >
                   <i className="material-symbols-outlined">account_box</i>
                   <Typography component={"span"} className="title">
@@ -1856,14 +2302,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Typography>
 
               <Accordion
-                expanded={expanded === "panel18"}
-                onChange={handleChange("panel18")}
+                expanded={expanded === "panel23"}
+                onChange={handleChange("panel23")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel15d-content"
-                  id="panel15d-header"
+                  aria-controls="panel23d-content"
+                  id="panel23d-header"
                 >
                   <i className="material-symbols-outlined">emoji_emotions</i>
                   <Typography component={"span"} className="title">
@@ -1901,14 +2347,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel19"}
-                onChange={handleChange("panel19")}
+                expanded={expanded === "panel24"}
+                onChange={handleChange("panel24")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel16d-content"
-                  id="panel16d-header"
+                  aria-controls="panel24d-content"
+                  id="panel24d-header"
                 >
                   <i className="material-symbols-outlined">qr_code_scanner</i>
                   <Typography component={"span"} className="title">
@@ -2285,14 +2731,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel20"}
-                onChange={handleChange("panel20")}
+                expanded={expanded === "panel25"}
+                onChange={handleChange("panel25")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel17d-content"
-                  id="panel17d-header"
+                  aria-controls="panel25d-content"
+                  id="panel25d-header"
                 >
                   <i className="material-symbols-outlined">table_chart</i>
                   <Typography component={"span"} className="title">
@@ -2328,14 +2774,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel21"}
-                onChange={handleChange("panel21")}
+                expanded={expanded === "panel26"}
+                onChange={handleChange("panel26")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel18d-content"
-                  id="panel18d-header"
+                  aria-controls="panel26d-content"
+                  id="panel26d-header"
                 >
                   <i className="material-symbols-outlined">forum</i>
                   <Typography component={"span"} className="title">
@@ -2395,14 +2841,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel22"}
-                onChange={handleChange("panel22")}
+                expanded={expanded === "panel27"}
+                onChange={handleChange("panel27")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel19d-content"
-                  id="panel19d-header"
+                  aria-controls="panel27d-content"
+                  id="panel27d-header"
                 >
                   <i className="material-symbols-outlined">pie_chart</i>
                   <Typography component={"span"} className="title">
@@ -2515,14 +2961,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel23"}
-                onChange={handleChange("panel23")}
+                expanded={expanded === "panel28"}
+                onChange={handleChange("panel28")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel20d-content"
-                  id="panel20d-header"
+                  aria-controls="panel28d-content"
+                  id="panel28d-header"
                 >
                   <i className="material-symbols-outlined">lock_open</i>
                   <Typography component={"span"} className="title">
@@ -2623,14 +3069,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel24"}
-                onChange={handleChange("panel24")}
+                expanded={expanded === "panel29"}
+                onChange={handleChange("panel29")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel21d-content"
-                  id="panel21d-header"
+                  aria-controls="panel29d-content"
+                  id="panel29d-header"
                 >
                   <i className="material-symbols-outlined">content_copy</i>
                   <Typography component={"span"} className="title">
@@ -2732,14 +3178,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Accordion>
 
               <Accordion
-                expanded={expanded === "panel25"}
-                onChange={handleChange("panel25")}
+                expanded={expanded === "panel30"}
+                onChange={handleChange("panel30")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel22d-content"
-                  id="panel22d-header"
+                  aria-controls="panel30d-content"
+                  id="panel30d-header"
                 >
                   <i className="material-symbols-outlined">error</i>
                   <Typography component={"span"} className="title">
@@ -2846,14 +3292,14 @@ const LeftSidebarMenu: React.FC<LeftSidebarProps> = ({ toggleActive }) => {
               </Link>
 
               <Accordion
-                expanded={expanded === "panel26"}
-                onChange={handleChange("panel26")}
+                expanded={expanded === "panel31"}
+                onChange={handleChange("panel31")}
                 className="mat-accordion"
               >
                 <AccordionSummary
                   className="mat-summary"
-                  aria-controls="panel23d-content"
-                  id="panel23d-header"
+                  aria-controls="panel31d-content"
+                  id="panel31d-header"
                 >
                   <i className="material-symbols-outlined">settings</i>
                   <Typography component={"span"} className="title">

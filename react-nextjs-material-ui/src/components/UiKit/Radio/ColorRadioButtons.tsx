@@ -43,10 +43,45 @@ const ColorRadioButtons: React.FC = () => {
         </Typography>
 
         <Box>
-          <Radio {...controlProps("a")} />
-          <Radio {...controlProps("b")} color="secondary" />
-          <Radio {...controlProps("c")} color="success" />
-          <Radio {...controlProps("d")} color="default" />
+          <Radio
+            {...controlProps("a")}
+            sx={{
+              color: "primary.500",
+              "&.Mui-checked": {
+                color: "primary.main",
+              },
+            }}
+          />
+          <Radio
+            {...controlProps("b")}
+            color="secondary"
+            sx={{
+              color: "secondary.500",
+              "&.Mui-checked": {
+                color: "secondary.main",
+              },
+            }}
+          />
+          <Radio
+            {...controlProps("c")}
+            color="success"
+            sx={{
+              color: "success.500",
+              "&.Mui-checked": {
+                color: "success.main",
+              },
+            }}
+          />
+          <Radio
+            {...controlProps("d")}
+            sx={{
+              color: "primary.500",
+              "&.Mui-checked": {
+                color: "primary.main",
+              },
+            }}
+            color="default"
+          />
           <Radio
             {...controlProps("e")}
             sx={{

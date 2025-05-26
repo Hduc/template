@@ -20,6 +20,10 @@
                     color: var(--primaryColor);
                 }
             }
+            .logo {
+                margin-right: 23px;
+                display: none;
+            }
             .search-box {
                 width: 260px;
                 
@@ -453,6 +457,9 @@
                 }
             }
         }
+        app-navbar {
+            display: none;
+        }
         &.active, &.hide-sidebar {
             left: 125px;
         }
@@ -525,6 +532,12 @@
     
             .header-left-side {
                 .burger-menu {
+                    margin: {
+                        right: 0;
+                        left: 23px;
+                    };
+                }
+                .logo {
                     margin: {
                         right: 0;
                         left: 23px;
@@ -704,6 +717,83 @@
                 }
             }
         }
+        .with-navbar {
+            .header-area {
+                .header-left-side {
+                    .logo {
+                        display: none;
+    
+                        &.white-logo {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .body-bg-color {
+        .header-area {
+            box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--borderColor);
+        
+            &.sticky {
+                box-shadow: rgba(149, 157, 165, 0.12) 0px 8px 24px;
+            }
+        }
+        &.dark-theme {
+            .header-area {
+                box-shadow: 0px 3px 4px 0px rgba(255, 255, 255, 0.05);
+            }
+        }
+    }
+    .with-navbar {
+        .header-area {
+            left: 0 !important;
+            right: 0 !important;
+            
+            .header-left-side {
+                .burger-menu {
+                    display: none;
+                }
+                .logo {
+                    display: inline-block;
+
+                    &.white-logo {
+                        display: none;
+                    }
+                }
+            }
+            .inner-area {
+                max-width: 1295px;
+                margin: {
+                    left: auto;
+                    right: auto;
+                };
+            }
+            &::before {
+                left: 0;
+                right: 0;
+                top: 70px;
+                content: '';
+                height: 1px;
+                position: absolute;
+                background: var(--borderColor);
+            }
+            app-navbar {
+                display: block;
+            }
+            &.dark-header {
+                .header-left-side {
+                    .logo {
+                        display: none;
+    
+                        &.white-logo {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -720,6 +810,9 @@
                 justify-content: center;
 
                 .burger-menu {
+                    margin-right: 13px;
+                }
+                .logo {
                     margin-right: 13px;
                 }
                 .search-box {
@@ -951,6 +1044,12 @@
                             left: 13px;
                         };
                     }
+                    .logo {
+                        margin: {
+                            right: 0;
+                            left: 13px;
+                        };
+                    }
                     .search-box {
                         button {
                             right: auto;
@@ -1071,6 +1170,27 @@
                 }
             }
         }
+        .with-navbar {
+            .header-area {
+                left: 15px !important;
+                right: 15px !important;
+            
+                .header-left-side {
+                    .burger-menu {
+                        display: block;
+                    }
+                    .logo {
+                        display: none !important;
+                    }
+                }
+                &::before {
+                    display: none;
+                }
+                .inner-area {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 
 }
@@ -1088,6 +1208,9 @@
         
             .header-left-side {
                 .burger-menu {
+                    margin-right: 18px;
+                }
+                .logo {
                     margin-right: 18px;
                 }
                 .search-box {
@@ -1142,6 +1265,12 @@
                             left: 18px;
                         };
                     }
+                    .logo {
+                        margin: {
+                            right: 0;
+                            left: 18px;
+                        };
+                    }
                     .connected-apps-menu {
                         margin: {
                             left: 0;
@@ -1181,6 +1310,24 @@
                         right: 25px;
                         left: 25px;
                     }
+                }
+            }
+        }
+        .with-navbar {
+            .header-area {
+                .header-left-side {
+                    .burger-menu {
+                        display: block;
+                    }
+                    .logo {
+                        display: none !important;
+                    }
+                }
+                &::before {
+                    display: none;
+                }
+                .inner-area {
+                    max-width: 100%;
                 }
             }
         }
@@ -1230,6 +1377,13 @@
                 }
             }
         }
+        .with-navbar {
+            .header-area {
+                .inner-area {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 
 }
@@ -1270,9 +1424,28 @@
                 }
             }
         }
+        .with-navbar {
+            .header-area {
+                .inner-area {
+                    max-width: 100%;
+                }
+            }
+        }
     }
 
 }
 
 /* Min width 1600px */
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+
+    ::ng-deep {
+        .with-navbar {
+            .header-area {
+                .inner-area {
+                    max-width: 1545px;
+                }
+            }
+        }
+    }
+
+}

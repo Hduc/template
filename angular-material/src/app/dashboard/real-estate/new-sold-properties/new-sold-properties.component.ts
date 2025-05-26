@@ -52,7 +52,7 @@ export class NewSoldPropertiesComponent {
                     { name: "New Property", data: [450, 480, 500, 520, 540] },
                     { name: "Sold Property", data: [300, 350, 400, 420, 480] }
                 ];
-                this.categories = ['2020', '2021', '2022', '2023', '2024'];
+                this.categories = ['2021', '2022', '2023', '2024', '2025'];
                 break;
         }
         // Call the service to load the chart with updated data

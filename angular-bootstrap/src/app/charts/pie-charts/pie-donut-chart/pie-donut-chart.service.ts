@@ -26,7 +26,7 @@ export class PieDonutChartService {
                         type: "donut"
                     },
                     labels: [
-                        "Completed", "New Order", "Pending"
+                        "Completed", "New", "Pending"
                     ],
                     colors: [
                         "#37D80A", "#605DFF", "#AD63F6"

@@ -1,0 +1,34 @@
+<mat-card
+    class="quick-transfer-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Quick Transfer
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <div class="form-group">
+                <label class="form-label text-xs d-block">
+                    Card Number
+                </label>
+                <input type="text" class="form-control fw-semibold bg-transparent" value="**** **** **** 1580">
+            </div>
+            <div class="form-group position-relative">
+                <label class="form-label text-xs d-block">
+                    Transfer Amount
+                </label>
+                <input type="text" class="form-control fw-semibold bg-transparent" value="$1,580">
+                <button type="button" class="p-0 borader-radius transition" mat-button>
+                    <i class="material-symbols-outlined">
+                        send_money
+                    </i>
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

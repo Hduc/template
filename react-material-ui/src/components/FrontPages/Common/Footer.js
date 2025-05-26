@@ -73,7 +73,7 @@ const Footer = () => {
       >
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
           {/* Logo and Description */}
-          <Grid item xs={12} sm={6} md={6} lg={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
             <div className="single-footer-widget">
               <Link to="/" className="logo">
                 <img
@@ -108,7 +108,7 @@ const Footer = () => {
 
           {/* Footer Sections */}
           {footerData.sections.map((section, index) => (
-            <Grid key={index} item xs={12} sm={6} md={6} lg={3}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 6, lg: 3, xl: 3 }}>
               <div className="single-footer-widget">
                 <h3>{section.title}</h3>
                 <ul className="custom-links">

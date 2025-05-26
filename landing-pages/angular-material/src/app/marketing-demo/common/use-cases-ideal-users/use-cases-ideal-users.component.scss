@@ -1,0 +1,140 @@
+.marketing-section-title {
+    margin-bottom: 40px;
+}
+.use-cases-ideal-users-card {
+    background: linear-gradient(0deg, #FFF8F1 0%, #F7F9FF 100%);
+    border-radius: 15px;
+    padding: 70px 60px;
+    margin-top: 25px;
+
+    .icon {
+        padding-left: 22px;
+        margin-bottom: 87px;
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 55px;
+            content: '';
+            z-index: -1;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            background: #fff5ed;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+}
+.component-dark {
+    .use-cases-ideal-users-card {
+        background: #1a1919;
+    
+        .icon {
+            &::before {
+                background: #000000;
+            }
+        }
+    }
+}
+.component-rtl {
+    .use-cases-ideal-users-card {
+        .icon {
+            padding: {
+                left: 0;
+                right: 22px;
+            };
+            &::before {
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .marketing-section-title {
+        margin-bottom: 10px;
+    }
+    .use-cases-ideal-users-card {
+        padding: 30px 20px;
+    
+        .icon {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+    .component-rtl {
+        .use-cases-ideal-users-card {
+            .icon {
+                padding: {
+                    left: 0;
+                    right: 20px;
+                };
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .marketing-section-title {
+        margin-bottom: 20px;
+    }
+    .use-cases-ideal-users-card {
+        padding: 50px 25px;
+    
+        .icon {
+            margin-bottom: 50px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .marketing-section-title {
+        margin-bottom: 30px;
+    }
+    .use-cases-ideal-users-card {
+        padding: 70px 30px;
+    
+        .icon {
+            margin-bottom: 70px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+    }
+    
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .use-cases-ideal-users-card {
+        padding: 70px 40px;
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -113,7 +113,7 @@ const SalesThisMonth: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <span className="block">Sales This Month</span>
-          <h3 className="text-2xl mt-px mb-[5px]">$64.5K</h3>
+          <h3 className="!text-2xl !mt-px !mb-[5px]">$64.5K</h3>
           <span className="inline-block text-xs px-[9px] text-danger-700 border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
             -1.4%
           </span>
@@ -124,7 +124,7 @@ const SalesThisMonth: React.FC = () => {
                 options={options}
                 series={series}
                 type="line"
-                height={100}
+                height={114}
                 width={"100%"}
               />
             )}

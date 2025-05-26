@@ -1,12 +1,13 @@
 "use client";
 
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   return (
     <>
       <div className="banner-area bg-img pb-0" id="home">
-        <div className="container position-relative z-1">
+        <Container className="position-relative z-1">
           <div className="banner-content text-center pb-75">
             <h1 className="fs-60 mb-3 pb-md-3">
               Insights On-the-Go: Access Your Dashboard Anywhere, Anytime
@@ -67,7 +68,7 @@ const HeroBanner = () => {
             width={658}
             height={656}
           />
-        </div>
+        </Container>
       </div>
     </>
   );

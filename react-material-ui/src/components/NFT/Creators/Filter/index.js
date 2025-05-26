@@ -55,7 +55,7 @@ const Filter = () => {
 
         <Box component="form" noValidate>
           <Grid container alignItems="center" spacing={2}>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <TextField
                 autoComplete="search"
                 name="search"
@@ -70,7 +70,7 @@ const Filter = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Location</InputLabel>
                 <Select
@@ -89,7 +89,7 @@ const Filter = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">
                   File Quantity
@@ -110,7 +110,7 @@ const Filter = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Featured</InputLabel>
                 <Select

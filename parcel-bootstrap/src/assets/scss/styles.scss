@@ -9,7 +9,9 @@
 @import "../css/rangeslider.css";
 @import "../css/quill.snow.css";
 @import "../css/google-icon.css";
+@import "../css/jsvectormap.min.css";
 @import "../css/remixicon.css";
+@import "../css/lightpick.css";
 @import "../css/swiper-bundle.min.css";
 @import "../css/fullcalendar.main.css";
 
@@ -29,14 +31,17 @@
 @import "./components/calendar";
 @import "./components/chat";
 @import "./components/timeline";
-@import "./components/priceing";
+@import "./components/pricing";
 @import "./components/products";
 @import "./components/rtl";
 @import "./components/dark-mode";
 @import "./components/sidebar-dark";
 @import "./components/header-dark";
 @import "./components/footer-dark";
-@import "./components/card-style";
-@import "./components/card-bg-style";
 @import "./components/fluid-boxed-style";
 @import "./components/landing-page";
+@import "./components/analytics";
+@import "./components/nft";
+@import "./components/marketing";
+@import "./components/navbar";
+@import "./components/theme-settings";

@@ -24,7 +24,7 @@ export class RecentEarningsService {
                     series: series,
                     chart: {
                         type: "bar",
-                        height: 388,
+                        height: 385,
                         stacked: true,
                         toolbar: {
                             show: false

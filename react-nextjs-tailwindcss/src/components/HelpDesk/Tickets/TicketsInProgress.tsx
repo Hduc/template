@@ -118,7 +118,7 @@ const TicketsInProgress: React.FC = () => {
         <div className="trezo-card-content">
           <span className="block">Tickets In Progress</span>
 
-          <h5 className="mb-0 text-[20px] mt-[2px]">1.35k</h5>
+          <h5 className="!mb-0 !text-[20px] mt-[2px]">1.35k</h5>
 
           <div className="-mt-[14px] -mb-[15px]">
             {isChartLoaded && (

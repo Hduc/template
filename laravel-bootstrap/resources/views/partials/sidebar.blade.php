@@ -18,7 +18,7 @@
                 <a href="javascript:void(0);" class="menu-link menu-toggle active">
                     <span class="material-symbols-outlined menu-icon">dashboard</span>
                     <span class="title">Dashboard</span>
-                    <span class="count">18</span>
+                    <span class="count">20</span>
                 </a>
         
                 <ul class="menu-sub">
@@ -120,6 +120,24 @@
                     <li class="menu-item mb-0">
                         <a href="/call-center" class="menu-link {{ Request::is('call-center') ? 'active' : '' }}">
                             Call Center 
+                            <span class="hot tag">New</span>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-0">
+                        <a href="/pos-system" class="menu-link {{ Request::is('call-center') ? 'active' : '' }}">
+                            POS System 
+                            <span class="hot tag">New</span>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-0">
+                        <a href="/pos-system" class="menu-link {{ Request::is('pos-system') ? 'active' : '' }}">
+                            POS System 
+                            <span class="hot tag">New</span>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-0">
+                        <a href="/podcast" class="menu-link {{ Request::is('podcast') ? 'active' : '' }}">
+                            Podcast 
                             <span class="hot tag">New</span>
                         </a>
                     </li>
@@ -945,6 +963,7 @@
                             Check & Radio
                         </a>
                     </li>
+                    
                     <li class="menu-item">
                         <a href="/select" class="menu-link {{ Request::is('select') ? 'active' : '' }}">
                             Select

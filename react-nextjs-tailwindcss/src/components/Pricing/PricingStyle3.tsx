@@ -53,7 +53,7 @@ const PricingStyle3: React.FC = () => {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Pricing Style - 3</h5>
+        <h5 className="!mb-0">Pricing Style - 3</h5>
       </div>
 
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md text-center">

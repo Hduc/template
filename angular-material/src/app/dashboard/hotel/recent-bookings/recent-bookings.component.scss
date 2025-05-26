@@ -1,0 +1,380 @@
+.recent-bookings-card {
+    .mat-mdc-card-content {
+        .bookings-list {
+            margin-top: 25px;
+            height: 512px;
+
+            .room-item {
+                gap: 15px;
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid var(--borderColor);
+
+                .image {
+                    border-radius: 4px;
+                    width: 80px;
+
+                    img {
+                        border-radius: 4px;
+                        margin-bottom: -3px;
+                    }
+                }
+                .content {
+                    h6 {
+                        margin-bottom: 7px;
+                        font-size: var(--fontSize);
+                    }
+                    .trezo-badge {
+                        margin-top: 11px;
+                    }
+                }
+                .link-btn {
+                    right: 0;
+                    top: 50%;
+                    padding: 0;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    position: absolute;
+                    color: var(--bodyColor);
+                    background-color: #ECEEF2;
+                    transform: translateY(-50%);
+                }
+                &:first-child {
+                    margin-top: 0;
+                    padding-top: 0;
+                    border-top-width: 0;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .bookings-list {
+                .room-item {
+                    .link-btn {
+                        background-color: var(--borderColor);
+                    }
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .mat-mdc-card-content {
+            .bookings-list {
+                .room-item {
+                    direction: rtl;
+
+                    .link-btn {
+                        right: auto;
+                        left: 0;
+
+                        i {
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .recent-bookings-card {
+        .mat-mdc-card-header {
+            .card-header-menu {
+                pointer-events: none;
+                
+                .mdc-button__label {
+                    padding-right: 22px !important;
+
+                    &::before {
+                        margin-top: -1px;
+                        content: "\eb21" !important;
+                    }
+                }
+            }
+        }
+        .mat-mdc-card-content {
+            .mat-calendar {
+                .mat-calendar-header {
+                    padding: 0;
+                    margin-bottom: 18px;
+
+                    .mat-calendar-controls {
+                        margin: 0;
+                        justify-content: space-between;
+
+                        .mat-calendar-period-button {
+                            order: 2;
+                            margin: 0;
+                            padding: 0;
+                            height: auto;
+                            min-width: auto;
+                            display: inline-block;
+                            color: var(--blackColor);
+
+                            .mdc-button__label {
+                                display: block;
+                                padding-right: 15px;
+
+                                svg {
+                                    top: 50%;
+                                    right: 0;
+                                    position: absolute;
+                                    fill: var(--bodyColor);
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            &:hover {
+                                .mat-mdc-button-persistent-ripple {
+                                    &::before {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .mat-calendar-previous-button, .mat-calendar-next-button {
+                            background-color: #E6EFF2;
+                            color: var(--blackColor);
+                            justify-content: center;
+                            align-items: center;
+                            display: flex;
+                            height: 30px;
+                            width: 30px;
+                            padding: 0;
+                            order: 1;
+
+                            &::after, &::after {
+                                margin: 11px;
+                            }
+                        }
+                        .mat-calendar-next-button {
+                            order: 3;
+                        }
+                        .mat-calendar-spacer {
+                            display: none;
+                        }
+                    }
+                }
+                .mat-calendar-content {
+                    padding: 0;
+                    margin: {
+                        left: 0;
+                        right: 0;
+                    };
+                    .mat-calendar-table-header {
+                        th {
+                            font-size: 12px;
+                            padding: 0 0 10px;
+                            color: var(--bodyColor);
+                        }
+                        .mat-calendar-table-header-divider {
+                            padding: 0;
+                        }
+                    }
+                    .mat-calendar-body {
+                        min-width: auto;
+
+                        .mat-calendar-body-label {
+                            opacity: 0;
+                            padding: 0 !important;
+                            color: var(--blackColor);
+                        }
+                        .mat-calendar-body-cell-container {
+                            background-color: transparent;
+                            padding: 6px 0 3px !important;
+                            width: auto !important;
+                            line-height: initial;
+                            border-radius: 7px;
+                            text-align: center;
+                            position: relative;
+                            height: auto;
+                            z-index: 1;
+
+                            &::before {
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: -1;
+                                content: '';
+                                margin: 1.5px;
+                                border-radius: 7px;
+                                position: absolute;
+                                background-color: #E6EFF2;
+                            }
+                        }
+                        .mat-calendar-body-cell {
+                            padding: 0;
+                            width: 40px;
+                            height: 40px;
+                            font-size: 13px;
+                            border-radius: 50%;
+                            position: relative;
+                            margin: {
+                                left: auto;
+                                right: auto;
+                            };
+                        }
+                        .mat-calendar-body-cell-content {
+                            color: var(--blackColor);
+                            font-weight: 500;
+                        }
+                    }
+                    .mat-calendar-body-today {
+                        &:not(.mat-calendar-body-selected) {
+                            &:not(.mat-calendar-body-comparison-identical) {
+                                color: var(--whiteColor);
+                                border-color: var(--primaryColor);
+                                background-color: var(--primaryColor);
+                            }
+                        }
+                    }
+                }
+            }
+            .bookings-list {
+                margin-right: -25px;
+
+                .ng-scroll-content {
+                    padding: 0;
+                    padding-right: 25px;
+                    --_track-y-thickness: 4px;
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-header {
+                .card-header-menu {
+                    .mdc-button__label {
+                        padding: {
+                            left: 22px !important;
+                            right: 0 !important;
+                        };
+                    }
+                }
+            }
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    .mat-calendar-header {
+                        .mat-calendar-controls {
+                            .mat-calendar-next-button {
+                                svg {
+                                    transform: scaleX(-1);
+                                }
+                            }
+                            .mat-calendar-previous-button {
+                                svg {
+                                    transform: scaleX(-1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.component-dark-theme {
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    .mat-calendar-header {
+                        .mat-calendar-controls {
+                            .mat-calendar-period-button {
+                                color: var(--whiteColor);
+                            }
+                            .mat-calendar-previous-button, .mat-calendar-next-button {
+                                color: var(--whiteColor);
+                                background-color: var(--borderColor);
+                            }
+                        }
+                    }
+                    .mat-calendar-content {
+                        .mat-calendar-table-header {
+                            th {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        .mat-calendar-body {
+                            .mat-calendar-body-label {
+                                color: var(--whiteColor);
+                            }
+                            .mat-calendar-body-cell-container {
+                                &::before {
+                                    background-color: var(--borderColor);
+                                }
+                            }
+                            .mat-calendar-body-cell-content {
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .recent-bookings-card {
+        .mat-mdc-card-content {
+            .bookings-list {
+                margin-top: 17px;
+                height: 450px;
+    
+                .room-item {
+                    margin-top: 13px;
+                    padding-top: 13px;
+    
+                    .image {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .recent-bookings-card {
+            .mat-mdc-card-content {
+                .bookings-list {
+                    margin-right: -17px;
+                    
+                    .ng-scroll-content {
+                        padding-right: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    ::ng-deep {
+        .recent-bookings-card {
+            .mat-mdc-card-content {
+                .bookings-list {
+                    margin-right: -20px;
+                    
+                    .ng-scroll-content {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

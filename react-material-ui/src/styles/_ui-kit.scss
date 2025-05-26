@@ -53,6 +53,12 @@
         width: 10px;
         height: 10px;
         margin-right: 6px;
+
+        &::before {
+            font-size: 13px;
+            position: relative;
+            top: -4px;
+        }
     }
     .apexcharts-text {
         font-family: var(--fontFamily) !important;

@@ -22,9 +22,6 @@
                 }
             }
         }
-        .text-xs {
-            font-size: 12px;
-        }
         .chart {
             max-width: 310px;
             margin: {
@@ -33,6 +30,21 @@
                 right: auto;
                 bottom: -38px;
             };
+        }
+    }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .inner {
+                .info-badge {
+                    border-color: #15203c;
+                    background-color: #15203c;
+                  
+                    &.down {
+                        border-color: #15203c;
+                        background-color: #15203c;
+                    }
+                }
+            }
         }
     }
 }

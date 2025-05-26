@@ -396,7 +396,7 @@ const Doing = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -423,7 +423,7 @@ const Doing = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -450,7 +450,7 @@ const Doing = () => {
                     ></textarea>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="label"
@@ -494,7 +494,7 @@ const Doing = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -511,17 +511,17 @@ const Doing = () => {
                       <DatePicker
                         sx={{
                           width: "100%",
-
                           "& fieldset": {
-                            border: "1px solid #D5D9E2",
+                            border: "1px solid rgba(0, 0, 0, 0.23)",
                             borderRadius: "7px",
                           },
                         }}
+                        className="input-date-picker"
                       />
                     </LocalizationProvider>
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
@@ -532,7 +532,7 @@ const Doing = () => {
                     >
                       <Button
                         onClick={handleCloseModal}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -540,6 +540,7 @@ const Doing = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

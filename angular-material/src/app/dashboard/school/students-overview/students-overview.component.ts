@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { StudentsOverviewService } from './students-overview.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-students-overview',
@@ -13,6 +14,7 @@ import { StudentsOverviewService } from './students-overview.service';
 export class StudentsOverviewComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private studentsOverviewService: StudentsOverviewService
     ) {}
 

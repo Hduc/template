@@ -132,11 +132,6 @@ export default defineComponent({
     padding-top: 0;
   }
 }
-.main-content-container {
-  //max-width: 1120px;
-  //margin: auto;
-  //width: 100%;
-}
 
 @media only screen and (max-width: 767px) {
   .main-content {

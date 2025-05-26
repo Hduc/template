@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -16,14 +16,15 @@ import {
   Paper,
   IconButton,
   TableHead,
+  Tabs,
   Button,
+  Tab,
 } from "@mui/material";
 import Link from "next/link";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import AddIcon from "@mui/icons-material/Add";
-import NavList from "./NavList";
 
 interface TablePaginationActionsProps {
   count: number;
@@ -98,7 +99,7 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
 }
 
 function createData(
-  orderID: string,
+  productId: string,
   productImage: string,
   productName: string,
   date: string,
@@ -112,7 +113,7 @@ function createData(
   detailsLink: string
 ) {
   return {
-    orderID,
+    productId,
     productImage,
     productName,
     date,
@@ -408,9 +409,300 @@ const rows = [
     "Draft",
     "/ecommerce/products-list/details/"
   ),
-].sort((b, a) => (a.orderID < b.orderID ? -1 : 1));
+].sort((b, a) => (a.productId < b.productId ? -1 : 1));
+
+const ProductsTable = ({ data }: { data: typeof rows }) => {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+
+  const handleChangePage = (_event: any, newPage: number) => setPage(newPage);
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
+  return (
+    <TableContainer
+      component={Paper}
+      sx={{
+        boxShadow: "none",
+        borderRadius: "7px",
+      }}
+      className="rmui-table border"
+    >
+      <Table sx={{ minWidth: 1250 }} aria-label="Table">
+        <TableHead className="bg-f6f7f9">
+          <TableRow>
+            {[
+              "ID",
+              "Product",
+              "Category",
+              "Price",
+              "Order",
+              "Stock",
+              "Amount",
+              "Rating",
+              "Status",
+              "Action",
+            ].map((header) => (
+              <TableCell
+                key={header}
+                sx={{
+                  fontWeight: "500",
+                  padding: "10px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {header}
+              </TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+
+        <TableBody>
+          {(rowsPerPage > 0
+            ? data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+            : data
+          ).map((row) => (
+            <TableRow key={row.productId}>
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="border-bottom"
+              >
+                {row.productId}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="border-bottom"
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "13px",
+                  }}
+                >
+                  <Box sx={{ flexShrink: "0" }}>
+                    <Image
+                      src={row.productImage}
+                      alt="Product"
+                      width={40}
+                      height={40}
+                      style={{ borderRadius: "7px" }}
+                    />
+                  </Box>
+
+                  <Box>
+                    <Link href={row.detailsLink}>
+                      <Typography
+                        sx={{
+                          fontSize: "15px",
+                          fontWeight: "500",
+                        }}
+                        className="text-black"
+                      >
+                        {row.productName}
+                      </Typography>
+                    </Link>
+
+                    <Typography
+                      sx={{
+                        fontSize: "13px",
+                      }}
+                      className="text-body"
+                    >
+                      {row.date}
+                    </Typography>
+                  </Box>
+                </Box>
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.category}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.price}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.order}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.stock}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.amount}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                  fontSize: "14px",
+                }}
+                className="text-black border-bottom"
+              >
+                {row.rating}
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  borderBottom: "1px solid #eceef2",
+                  padding: "14px 20px",
+                }}
+                className="border-bottom"
+              >
+                <div className={`trezo-badge ${row.status}`}>{row.status}</div>
+              </TableCell>
+
+              <TableCell
+                sx={{
+                  padding: "14px 20px",
+                }}
+                className="border-bottom"
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <Link href={row.detailsLink}>
+                    <IconButton
+                      aria-label="view"
+                      color="primary"
+                      sx={{ padding: "5px" }}
+                    >
+                      <i
+                        className="material-symbols-outlined"
+                        style={{ fontSize: "16px" }}
+                      >
+                        visibility
+                      </i>
+                    </IconButton>
+                  </Link>
+
+                  <IconButton
+                    aria-label="edit"
+                    color="secondary"
+                    sx={{ padding: "5px" }}
+                  >
+                    <i
+                      className="material-symbols-outlined"
+                      style={{ fontSize: "16px" }}
+                    >
+                      edit
+                    </i>
+                  </IconButton>
+
+                  <IconButton
+                    aria-label="delete"
+                    color="error"
+                    sx={{ padding: "5px" }}
+                  >
+                    <i
+                      className="material-symbols-outlined"
+                      style={{ fontSize: "16px" }}
+                    >
+                      delete
+                    </i>
+                  </IconButton>
+                </Box>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+
+        <TableFooter>
+          <TableRow>
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+              colSpan={10}
+              count={data.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              slotProps={{
+                select: {
+                  inputProps: {
+                    "aria-label": "rows per page",
+                  },
+                  native: true,
+                },
+              }}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+              ActionsComponent={TablePaginationActions}
+              sx={{
+                border: "none",
+              }}
+            />
+          </TableRow>
+        </TableFooter>
+      </Table>
+    </TableContainer>
+  );
+};
 
 const ProductsList: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredRows = rows
+    .filter((row) => {
+      if (activeTab === 1) {
+        return row.status === "Published";
+      } else if (activeTab === 2) {
+        return row.status === "Draft";
+      }
+      return true;
+    })
+    .filter((row) =>
+      row.productId.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.productName.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
   // Table
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -444,7 +736,45 @@ const ProductsList: React.FC = () => {
         }}
         className="rmui-card"
       >
-        <NavList />
+        {/* Nav  */}
+        <Tabs
+          value={activeTab}
+          onChange={(_e, index) => setActiveTab(index)}
+          sx={{
+            minHeight: "auto",
+            mb: "25px",
+            
+
+            "& .MuiTabs-flexContainer": {
+              gap: "20px",
+              flexWrap: "wrap",
+
+              "& button": {
+                flexWrap: "wrap",
+                textTransform: "capitalize",
+                padding: { xs: "10px 15px", sm: "12px 30px", md: "14px 48px" },
+                fontSize: { xs: "14px", md: "16px" },
+                maxWidth: "auto",
+                minHeight: "auto",
+                background: "#f6f7f9",
+                borderRadius: "7px",
+                color: "#3a4252 !important",
+
+                "&.Mui-selected": {
+                  color: "#fff !important",
+                  backgroundColor: "primary.main",
+                },
+              },
+            },
+            "& .MuiTabs-indicator": {
+              display: "none",
+            },
+          }}
+        >
+          <Tab label="All Products" />
+          <Tab label="Published Products" />
+          <Tab label="Draft Products" />
+        </Tabs>
 
         <Box>
           <Box
@@ -457,7 +787,7 @@ const ProductsList: React.FC = () => {
           >
             <Box
               component="form"
-              className='t-search-form'
+              className="t-search-form"
               sx={{
                 width: "265px",
               }}
@@ -467,8 +797,10 @@ const ProductsList: React.FC = () => {
               </label>
               <input
                 type="text"
-                className='t-input'
-                placeholder="Search product here....."
+                className="t-input"
+                placeholder="Search product here..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </Box>
 
@@ -489,367 +821,9 @@ const ProductsList: React.FC = () => {
               </Button>
             </Link>
           </Box>
-
-          {/* Table */}
-          <TableContainer
-            component={Paper}
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-            }}
-            className="rmui-table border"
-          >
-            <Table sx={{ minWidth: 1250 }} aria-label="Table">
-              <TableHead className="bg-f6f7f9">
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    ID
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Product
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Category
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Price
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Order
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Stock
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Amount
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Rating
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Status
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    Action
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-
-              <TableBody>
-                {(rowsPerPage > 0
-                  ? rows.slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
-                  : rows
-                ).map((row) => (
-                  <TableRow key={row.orderID}>
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
-                      {row.orderID}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "13px",
-                        }}
-                      >
-                        <Box sx={{ flexShrink: "0" }}>
-                          <Image
-                            src={row.productImage}
-                            alt="Product"
-                            width={40}
-                            height={40}
-                            style={{ borderRadius: "7px" }}
-                          />
-                        </Box>
-
-                        <Box>
-                          <Link href={row.detailsLink}>
-                            <Typography
-                              sx={{
-                                fontSize: "15px",
-                                fontWeight: "500",
-                              }}
-                              className="text-black"
-                            >
-                              {row.productName}
-                            </Typography>
-                          </Link>
-
-                          <Typography
-                            sx={{
-                              fontSize: "13px",
-                            }}
-                            className="text-body"
-                          >
-                            {row.date}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.category}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.price}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.order}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.stock}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.amount}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
-                      {row.rating}
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        borderBottom: "1px solid #eceef2",
-                        padding: "14px 20px",
-                      }}
-                      className="border-bottom"
-                    >
-                      <div className={`trezo-badge ${row.status}`}>
-                        {row.status}
-                      </div>
-                    </TableCell>
-
-                    <TableCell
-                      sx={{
-                        padding: "14px 20px",
-                      }}
-                      className="border-bottom"
-                    >
-                      <Box
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Link href={row.detailsLink}>
-                          <IconButton
-                            aria-label="view"
-                            color="primary"
-                            sx={{ padding: "5px" }}
-                          >
-                            <i
-                              className="material-symbols-outlined"
-                              style={{ fontSize: "16px" }}
-                            >
-                              visibility
-                            </i>
-                          </IconButton>
-                        </Link>
-
-                        <IconButton
-                          aria-label="edit"
-                          color="secondary"
-                          sx={{ padding: "5px" }}
-                        >
-                          <i
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "16px" }}
-                          >
-                            edit
-                          </i>
-                        </IconButton>
-
-                        <IconButton
-                          aria-label="delete"
-                          color="error"
-                          sx={{ padding: "5px" }}
-                        >
-                          <i
-                            className="material-symbols-outlined"
-                            style={{ fontSize: "16px" }}
-                          >
-                            delete
-                          </i>
-                        </IconButton>
-                      </Box>
-                    </TableCell>
-                  </TableRow>
-                ))}
-                {emptyRows > 0 && (
-                  <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={10} />
-                  </TableRow>
-                )}
-              </TableBody>
-
-              <TableFooter>
-                <TableRow>
-                  <TablePagination
-                    rowsPerPageOptions={[
-                      5,
-                      10,
-                      25,
-                      { label: "All", value: -1 },
-                    ]}
-                    colSpan={10}
-                    count={rows.length}
-                    rowsPerPage={rowsPerPage}
-                    page={page}
-                    slotProps={{
-                      select: {
-                        inputProps: {
-                          "aria-label": "rows per page",
-                        },
-                        native: true,
-                      },
-                    }}
-                    onPageChange={handleChangePage}
-                    onRowsPerPageChange={handleChangeRowsPerPage}
-                    ActionsComponent={TablePaginationActions}
-                    sx={{
-                      border: "none",
-                    }}
-                  />
-                </TableRow>
-              </TableFooter>
-            </Table>
-          </TableContainer>
         </Box>
+
+        <ProductsTable data={filteredRows} />
       </Card>
     </>
   );

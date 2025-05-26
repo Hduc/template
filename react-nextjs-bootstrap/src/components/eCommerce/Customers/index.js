@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, Form, Table, Button, Offcanvas } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
+import { Card, Form, Table, Button } from "react-bootstrap";
 import Image from "next/image";
 
 const customersData = [
@@ -117,6 +115,116 @@ const customersData = [
     totalOrders: 55,
     status: "deactive",
   },
+  {
+    id: "#JAN-844",
+    customerImg: "/images/user-16.jpg",
+    customerName: "Sophia Martinez",
+    email: "sophia@trezo.com",
+    phone: "+1 555-854-7854",
+    lastLogin: "20 Dec 2023",
+    totalSpend: "$5,890.00",
+    totalOrders: 89,
+    status: "active",
+  },
+  {
+    id: "#JAN-843",
+    customerImg: "/images/user-17.jpg",
+    customerName: "Matthew Collins",
+    email: "matthew@trezo.com",
+    phone: "+1 555-326-4875",
+    lastLogin: "21 Nov 2023",
+    totalSpend: "$3,420.00",
+    totalOrders: 121,
+    status: "active",
+  },
+  {
+    id: "#JAN-842",
+    customerImg: "/images/user-18.jpg",
+    customerName: "Isabella Henderson",
+    email: "isabella@trezo.com",
+    phone: "+1 555-624-9587",
+    lastLogin: "22 Oct 2023",
+    totalSpend: "$7,550.00",
+    totalOrders: 154,
+    status: "deactive",
+  },
+  {
+    id: "#JAN-841",
+    customerImg: "/images/user-19.jpg",
+    customerName: "Ethan Ramirez",
+    email: "ethan@trezo.com",
+    phone: "+1 555-157-4578",
+    lastLogin: "23 Sep 2023",
+    totalSpend: "$1,900.00",
+    totalOrders: 78,
+    status: "active",
+  },
+  {
+    id: "#JAN-840",
+    customerImg: "/images/user-20.jpg",
+    customerName: "Ava Nelson",
+    email: "ava@trezo.com",
+    phone: "+1 555-874-9521",
+    lastLogin: "24 Aug 2023",
+    totalSpend: "$2,980.00",
+    totalOrders: 64,
+    status: "active",
+  },
+  {
+    id: "#JAN-839",
+    customerImg: "/images/user-21.jpg",
+    customerName: "William Scott",
+    email: "william@trezo.com",
+    phone: "+1 555-124-8974",
+    lastLogin: "25 Jul 2023",
+    totalSpend: "$9,720.00",
+    totalOrders: 200,
+    status: "active",
+  },
+  {
+    id: "#JAN-838",
+    customerImg: "/images/user-22.jpg",
+    customerName: "Grace Wright",
+    email: "grace@trezo.com",
+    phone: "+1 555-647-1236",
+    lastLogin: "26 Jun 2023",
+    totalSpend: "$4,680.00",
+    totalOrders: 48,
+    status: "deactive",
+  },
+  {
+    id: "#JAN-837",
+    customerImg: "/images/user-23.jpg",
+    customerName: "Benjamin Lee",
+    email: "benjamin@trezo.com",
+    phone: "+1 555-384-1274",
+    lastLogin: "27 May 2023",
+    totalSpend: "$6,120.00",
+    totalOrders: 134,
+    status: "active",
+  },
+  {
+    id: "#JAN-836",
+    customerImg: "/images/user-24.jpg",
+    customerName: "Emily Foster",
+    email: "emily@trezo.com",
+    phone: "+1 555-574-8693",
+    lastLogin: "28 Apr 2023",
+    totalSpend: "$8,200.00",
+    totalOrders: 172,
+    status: "active",
+  },
+  {
+    id: "#JAN-835",
+    customerImg: "/images/user-25.jpg",
+    customerName: "Daniel Harris",
+    email: "daniel@trezo.com",
+    phone: "+1 555-931-5872",
+    lastLogin: "29 Mar 2023",
+    totalSpend: "$7,420.00",
+    totalOrders: 95,
+    status: "deactive",
+  },
 ];
 
 const Customers = () => {
@@ -126,13 +234,47 @@ const Customers = () => {
     setShowModal(!isShowModal);
   };
 
+  // Table
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Filter customers based on search term
+  const filteredCustomers = customersData.filter((customer) =>
+    Object.values(customer).some((value) =>
+      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  // Pagination logic
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentCustomers = filteredCustomers.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-0">
           <div className="p-4">
             <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
-              <SearchForm />
+              <Form className="position-relative table-src-form me-0">
+                <Form.Control
+                  type="text"
+                  placeholder="Search here"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+
+                <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                  search
+                </span>
+              </Form>
 
               <div className="text-end">
                 <button
@@ -175,87 +317,143 @@ const Customers = () => {
                 </thead>
 
                 <tbody>
-                  {customersData &&
-                    customersData.slice(0, 10).map((defaultValue, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <Form>
-                            <Form.Check
-                              type="checkbox"
-                              id="default-checkbox"
-                              label={defaultValue.id}
-                              className="fw-medium fs-14"
+                  {currentCustomers.map((customer, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <Form>
+                          <Form.Check
+                            type="checkbox"
+                            id="default-checkbox"
+                            label={customer.id}
+                            className="fw-medium fs-14"
+                          />
+                        </Form>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <div className="flex-shrink-0">
+                            <Image
+                              src={customer.customerImg}
+                              className="wh-34 rounded-circle"
+                              alt="user"
+                              width={34}
+                              height={34}
                             />
-                          </Form>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center">
-                            <div className="flex-shrink-0">
-                              <Image
-                                src={defaultValue.customerImg}
-                                className="wh-34 rounded-circle"
-                                alt="user"
-                                width={34}
-                                height={34}
-                              />
-                            </div>
-                            <div className="flex-grow-1 ms-2 position-relative top-1">
-                              <h6 className="mb-0 fs-14 fw-medium">
-                                {defaultValue.customerName}
-                              </h6>
-                            </div>
                           </div>
-                        </td>
-
-                        <td className="text-body">{defaultValue.email}</td>
-
-                        <td>{defaultValue.phone}</td>
-
-                        <td className="text-body">{defaultValue.lastLogin}</td>
-
-                        <td className="text-body">{defaultValue.totalSpend}</td>
-
-                        <td className="text-body">
-                          {defaultValue.totalOrders}
-                        </td>
-
-                        <td>
-                          <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${defaultValue.status}`}
-                          >
-                            {defaultValue.status}
-                          </span>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
+                          <div className="flex-grow-1 ms-2 position-relative top-1">
+                            <h6 className="mb-0 fs-14 fw-medium">
+                              {customer.customerName}
+                            </h6>
                           </div>
-                        </td>
-                      </tr>
-                    ))}
+                        </div>
+                      </td>
+
+                      <td className="text-body">{customer.email}</td>
+
+                      <td>{customer.phone}</td>
+
+                      <td className="text-body">{customer.lastLogin}</td>
+
+                      <td className="text-body">{customer.totalSpend}</td>
+
+                      <td className="text-body">{customer.totalOrders}</td>
+
+                      <td>
+                        <span
+                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${customer.status}`}
+                        >
+                          {customer.status}
+                        </span>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing {indexOfFirstItem + 1} to{" "}
+                    {Math.min(indexOfLastItem, filteredCustomers.length)} of{" "}
+                    {filteredCustomers.length} Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage - 1)}
+                          disabled={currentPage === 1}
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+
+                      {Array.from(
+                        {
+                          length: Math.ceil(
+                            filteredCustomers.length / itemsPerPage
+                          ),
+                        },
+                        (_, i) => (
+                          <li key={i} className="page-item">
+                            <button
+                              className={`page-link ${
+                                currentPage === i + 1 ? "active" : ""
+                              }`}
+                              onClick={() => paginate(i + 1)}
+                            >
+                              {i + 1}
+                            </button>
+                          </li>
+                        )
+                      )}
+
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage + 1)}
+                          disabled={
+                            currentPage ===
+                            Math.ceil(filteredCustomers.length / itemsPerPage)
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

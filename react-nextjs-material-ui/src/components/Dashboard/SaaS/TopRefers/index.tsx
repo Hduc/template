@@ -69,7 +69,7 @@ const TopRefers: React.FC = () => {
           }}
           className="text-black"
         >
-          Channels
+          Top Refers
         </Typography>
 
         <Link
@@ -99,6 +99,7 @@ const TopRefers: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              gap: "20px",
               pb: "15px",
               mb: "14px",
             }}

@@ -125,17 +125,17 @@ const TotalOrders: React.FC = () => {
     <>
       <div className="relative rounded-md p-[20px] md:p-[25px] !pb-[65px] mb-[25px] border border-gray-100 dark:border-[#172036]">
         <div className="flex items-center">
-          <div className="bg-purple-100 text-white text-center relative z-[1] ltr:mr-[15px] rtl:ml-[15px] rounded-[5px] text-[25px] w-[55px] h-[55px]">
+          <div className="bg-purple-100 dark:bg-[#15203c] text-white text-center relative z-[1] ltr:mr-[15px] rtl:ml-[15px] rounded-[5px] text-[25px] w-[55px] h-[55px]">
             <span className="inset-0 -z-[1] m-[8px] absolute rounded-[5px] bg-purple-500"></span>
             <i className="ri-shopping-bag-3-line absolute left-0 right-0 top-1/2 -translate-y-1/2"></i>
           </div>
           <div>
-            <h6 className="text-lg md:text-xl mb-[2px] font-medium">1,250</h6>
+            <h6 className="!text-lg !md:text-xl !mb-[2px] !font-medium">1,250</h6>
             <span className="block">Total Orders</span>
           </div>
         </div>
         <div className="mt-[25px] md:mt-[45px] flex items-center">
-          <span className="font-medium inline-block relative text-xs rounded-full border border-success-300 text-success-700 bg-success-100 py-[2px] ltr:pl-[20px] rtl:pr-[20px] ltr:pr-[10px] rtl:pl-[10px]">
+          <span className="font-medium inline-block relative text-xs rounded-full border border-success-300 text-success-700 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] py-[2px] ltr:pl-[20px] rtl:pr-[20px] ltr:pr-[10px] rtl:pl-[10px]">
             <i className="ri-arrow-up-fill absolute top-1/2 -translate-y-1/2 text-base -mt-px ltr:left-[6px] rtl:right-[6px]"></i>
             8%
           </span>

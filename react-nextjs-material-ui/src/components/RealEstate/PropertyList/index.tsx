@@ -321,7 +321,7 @@ const PropertyList: React.FC = () => {
           borderRadius: "7px",
           mb: "25px",
           padding: { xs: "18px", sm: "20px", lg: "25px" },
-          display: {xs: 'block', sm: 'flex'},
+          display: { xs: "block", sm: "flex" },
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -370,7 +370,10 @@ const PropertyList: React.FC = () => {
         justifyContent="center"
       >
         {paginatedProperties.map((property) => (
-          <Grid item xs={12} md={6} lg={6} xl={4} key={property.id}>
+          <Grid
+            size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}
+            key={property.id}
+          >
             <Box
               className="bg-white"
               sx={{
@@ -478,7 +481,7 @@ const PropertyList: React.FC = () => {
                   {property.price}
                 </Typography>
 
-                <Typography
+                <Box
                   sx={{
                     fontSize: "12px",
                     py: "1px",
@@ -488,7 +491,7 @@ const PropertyList: React.FC = () => {
                   }}
                 >
                   {property.status}
-                </Typography>
+                </Box>
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>

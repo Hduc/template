@@ -120,14 +120,14 @@ const TotalOrders: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <span className="block">Total Orders</span>
-              <span className="inline-block px-[8.3px] py-[1px] text-orange-700 border border-orange-200 bg-danger-100 text-sm ltr:ml-[10px] rtl:mr-[10px] rounded-[100px]">
+              <span className="inline-block px-[8.3px] py-[1px] text-orange-700 border border-orange-200 bg-danger-100 dark:bg-[#15203c] dark:border-[#172036] text-sm ltr:ml-[10px] rtl:mr-[10px] rounded-[100px]">
                 -7.6%
               </span>
             </div>
             <span className="block text-sm">Last 7 days</span>
           </div>
 
-          <h5 className="text-[18px] md:text-[20px] mb-0 mt-[4px]">$72,458</h5>
+          <h5 className="!text-lg md:!text-[20px] !mb-0 !mt-[5px]">$72,458</h5>
 
           <div className="mx-auto max-w-[150px] -mt-[10px] -mb-[10px] md:-mt-[25px] md:-mb-[16px]">
             {isChartLoaded && (
@@ -150,7 +150,7 @@ const TotalOrders: React.FC = () => {
             
             <li className="text-sm ltr:pl-[30px] rtl:pr-[30px] flex justify-between relative mb-[4px] last:mb-0">
               <span className="inline-block bg-primary-200 ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2 w-[20px] h-[5px] rounded-md"></span>
-              <span className="block">Pending payment</span>
+              <span className="block">Pending</span>
               <span className="block">38%</span>
             </li>
           </ul>

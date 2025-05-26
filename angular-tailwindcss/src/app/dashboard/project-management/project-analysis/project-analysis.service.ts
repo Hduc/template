@@ -72,9 +72,9 @@ export class ProjectAnalysisService {
                         // max: 150,
                         min: 0,
                         labels: {
-                            // formatter: (val) => {
-                            //     return '$' + val + 'k'
-                            // },
+                            formatter: (val:any) => {
+                                return '$' + val + 'k'
+                            },
                             style: {
                                 colors: "#64748B",
                                 fontSize: "12px"

@@ -3,6 +3,10 @@
 [dir="rtl"] {
     text-align: right;
 
+    .text-right {
+        text-align: left !important;
+    }
+
     .ms-1 {
         margin-left: 0 !important;
         margin-right: 0.25rem !important;
@@ -54,6 +58,10 @@
     .ms-xxl-3 {
         margin-left: 0 !important;
         margin-right: 1rem !important;
+    }
+    .ms-10 {
+        margin-left: 0;
+        margin-right: 10px;
     }
     .ps-1 {
         padding-left: 0 !important;

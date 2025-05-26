@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { Card, Typography, CircularProgress, Box } from "@mui/material";
+import { Card, Typography, CircularProgress, Box, Button } from "@mui/material";
 import { green } from "@mui/material/colors";
-import Button from "@mui/material/Button";
 import Fab from "@mui/material/Fab";
 import CheckIcon from "@mui/icons-material/Check";
 import SaveIcon from "@mui/icons-material/Save";

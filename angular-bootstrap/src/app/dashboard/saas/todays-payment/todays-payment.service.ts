@@ -22,7 +22,7 @@ export class TodaysPaymentService {
                     series,
                     chart: {
                         type: "area",
-                        height: 337,
+                        height: 333,
                         zoom: {
                             enabled: false
                         },

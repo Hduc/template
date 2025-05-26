@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import { Grid, Card, Box, Typography } from "@mui/material";
-import CustomDropdown from "./CustomDropdown"; 
+import CustomDropdown from "./CustomDropdown";
 
 const LeadsBySource = () => {
   // Chart
@@ -114,7 +114,6 @@ const LeadsBySource = () => {
         <Box
           sx={{
             marginTop: "-15px",
-            marginBottom: "-15px",
           }}
         >
           {isChartLoaded && (
@@ -128,8 +127,8 @@ const LeadsBySource = () => {
           )}
         </Box>
 
-        <Grid container spacing={3} sx={{ mt: "0" }}>
-          <Grid item xs={4}>
+        <Grid container spacing={3} sx={{ mt: "8px" }}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -166,7 +165,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -203,7 +202,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -240,7 +239,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -277,7 +276,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -314,7 +313,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"

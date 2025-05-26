@@ -3,6 +3,7 @@ import { isPlatformBrowser, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NgxEditorModule, Editor, Toolbar } from 'ngx-editor';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-e-edit-product',
@@ -24,7 +25,10 @@ export class EEditProductComponent {
         ['align_left', 'align_center', 'align_right', 'align_justify'],
     ];
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+    constructor(
+        public themeService: CustomizerSettingsService,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {}
 
     ngOnInit(): void {
         if (isPlatformBrowser(this.platformId)) {
@@ -38,8 +42,5 @@ export class EEditProductComponent {
             this.editor.destroy();
         }
     }
-
-    // File Uploader
-    public multiple: boolean = true;
 
 }

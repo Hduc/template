@@ -431,7 +431,7 @@ const Agents: React.FC = () => {
           borderRadius: "7px",
           mb: "25px",
           padding: { xs: "18px", sm: "20px", lg: "25px" },
-          display: {xs: 'block', sm: 'flex'},
+          display: { xs: "block", sm: "flex" },
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -480,7 +480,7 @@ const Agents: React.FC = () => {
         justifyContent="center"
       >
         {paginatedAgents.map((agent) => (
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={agent.id}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }} key={agent.id}>
             <Box
               className="bg-white"
               sx={{

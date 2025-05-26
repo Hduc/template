@@ -54,7 +54,7 @@ const LeadsBySource: React.FC = () => {
         colors: "#64748B",
       },
       markers: {
-        shape: 'diamond',
+        shape: "diamond",
         offsetX: -2,
         offsetY: -0.5,
       },
@@ -157,7 +157,7 @@ const LeadsBySource: React.FC = () => {
         </Box>
 
         <Grid container spacing={3} sx={{ mt: "0" }}>
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -194,7 +194,7 @@ const LeadsBySource: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -231,7 +231,7 @@ const LeadsBySource: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -268,7 +268,7 @@ const LeadsBySource: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -305,7 +305,7 @@ const LeadsBySource: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -342,7 +342,7 @@ const LeadsBySource: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"

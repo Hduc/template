@@ -38,6 +38,6 @@ const moment = _rollupMoment || _moment;
 export class DptuMomentJsDatesComponent {
 
     // Datepicker takes `Moment` objects instead of `Date` objects.
-    date = new FormControl(moment([2024, 0, 1]));
+    date = new FormControl(moment([2025, 0, 1]));
 
 }

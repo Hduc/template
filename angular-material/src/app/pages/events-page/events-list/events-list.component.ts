@@ -50,9 +50,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-258',
         event: {
             img: 'images/events/event1.jpg',
-            title: 'Annual Conference 2024'
+            title: 'Annual Conference 2025'
         },
-        dateAndTime: '01 Dec 2024 09:00 AM',
+        dateAndTime: '01 Dec 2025 09:00 AM',
         location: 'Convention Center',
         organizer: 'ABC Corporation',
         status: {
@@ -70,9 +70,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-648',
         event: {
             img: 'images/events/event2.jpg',
-            title: 'Leadership Summit 2024'
+            title: 'Leadership Summit 2025'
         },
-        dateAndTime: '10 Dec 2024 03:00 AM',
+        dateAndTime: '10 Dec 2025 03:00 AM',
         location: 'Online',
         organizer: 'Marketing Pros',
         status: {
@@ -92,7 +92,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event3.jpg',
             title: 'Product Launch Webinar'
         },
-        dateAndTime: '15 Dec 2024 06:00 PM',
+        dateAndTime: '15 Dec 2025 06:00 PM',
         location: 'City Sky Lounge',
         organizer: 'Tech Solutions Inc.',
         status: {
@@ -112,7 +112,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event4.jpg',
             title: 'AI in Healthcare Symposium'
         },
-        dateAndTime: '20 Dec 2024 09:00 AM',
+        dateAndTime: '20 Dec 2025 09:00 AM',
         location: 'Training Center',
         organizer: 'Startup Hub',
         status: {
@@ -130,9 +130,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-439',
         event: {
             img: 'images/events/event5.jpg',
-            title: 'Tech Summit 2024'
+            title: 'Tech Summit 2025'
         },
-        dateAndTime: '25 Dec 2024 02:30 PM',
+        dateAndTime: '25 Dec 2025 02:30 PM',
         location: 'Tech Park Auditorium',
         organizer: 'Community Foundation',
         status: {
@@ -152,7 +152,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event6.jpg',
             title: 'Startup Pitch Day'
         },
-        dateAndTime: '30 Dec 2024 11:00 AM',
+        dateAndTime: '30 Dec 2025 11:00 AM',
         location: 'Grand Hotel Ballroom',
         organizer: 'FutureTech Solutions',
         status: {
@@ -172,7 +172,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event7.jpg',
             title: 'Workshop: Digital Marketing'
         },
-        dateAndTime: '01 Jan 2024 07:00 AM',
+        dateAndTime: '01 Jan 2025 07:00 AM',
         location: 'Innovation Hub',
         organizer: 'Leadership Institute',
         status: {
@@ -192,7 +192,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event8.jpg',
             title: 'Charity Gala Dinner'
         },
-        dateAndTime: '10 Jan 2024 03:00PM',
+        dateAndTime: '10 Jan 2025 03:00PM',
         location: 'Medical Center',
         organizer: 'XYZ Innovations',
         status: {
@@ -212,7 +212,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event9.jpg',
             title: 'Web Development Seminar'
         },
-        dateAndTime: '20 Jan 2024 01:00 PM',
+        dateAndTime: '20 Jan 2025 01:00 PM',
         location: 'Corporate HQ',
         organizer: 'DTech Institute',
         status: {
@@ -232,7 +232,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event10.jpg',
             title: 'Networking Mixer'
         },
-        dateAndTime: '30 Jan 2024 10:00 AM',
+        dateAndTime: '30 Jan 2025 10:00 AM',
         location: 'Online',
         organizer: 'ABC Corporation',
         status: {
@@ -252,7 +252,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event10.jpg',
             title: 'Networking Mixer'
         },
-        dateAndTime: '30 Jan 2024 10:00 AM',
+        dateAndTime: '30 Jan 2025 10:00 AM',
         location: 'Online',
         organizer: 'ABC Corporation',
         status: {
@@ -272,7 +272,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event9.jpg',
             title: 'Web Development Seminar'
         },
-        dateAndTime: '20 Jan 2024 01:00 PM',
+        dateAndTime: '20 Jan 2025 01:00 PM',
         location: 'Corporate HQ',
         organizer: 'DTech Institute',
         status: {
@@ -292,7 +292,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event8.jpg',
             title: 'Charity Gala Dinner'
         },
-        dateAndTime: '10 Jan 2024 03:00PM',
+        dateAndTime: '10 Jan 2025 03:00PM',
         location: 'Medical Center',
         organizer: 'XYZ Innovations',
         status: {
@@ -312,7 +312,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event7.jpg',
             title: 'Workshop: Digital Marketing'
         },
-        dateAndTime: '01 Jan 2024 07:00 AM',
+        dateAndTime: '01 Jan 2025 07:00 AM',
         location: 'Innovation Hub',
         organizer: 'Leadership Institute',
         status: {
@@ -332,7 +332,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event6.jpg',
             title: 'Startup Pitch Day'
         },
-        dateAndTime: '30 Dec 2024 11:00 AM',
+        dateAndTime: '30 Dec 2025 11:00 AM',
         location: 'Grand Hotel Ballroom',
         organizer: 'FutureTech Solutions',
         status: {
@@ -350,9 +350,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-439',
         event: {
             img: 'images/events/event5.jpg',
-            title: 'Tech Summit 2024'
+            title: 'Tech Summit 2025'
         },
-        dateAndTime: '25 Dec 2024 02:30 PM',
+        dateAndTime: '25 Dec 2025 02:30 PM',
         location: 'Tech Park Auditorium',
         organizer: 'Community Foundation',
         status: {
@@ -372,7 +372,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event4.jpg',
             title: 'AI in Healthcare Symposium'
         },
-        dateAndTime: '20 Dec 2024 09:00 AM',
+        dateAndTime: '20 Dec 2025 09:00 AM',
         location: 'Training Center',
         organizer: 'Startup Hub',
         status: {
@@ -392,7 +392,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/events/event3.jpg',
             title: 'Product Launch Webinar'
         },
-        dateAndTime: '15 Dec 2024 06:00 PM',
+        dateAndTime: '15 Dec 2025 06:00 PM',
         location: 'City Sky Lounge',
         organizer: 'Tech Solutions Inc.',
         status: {
@@ -410,9 +410,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-648',
         event: {
             img: 'images/events/event2.jpg',
-            title: 'Leadership Summit 2024'
+            title: 'Leadership Summit 2025'
         },
-        dateAndTime: '10 Dec 2024 03:00 AM',
+        dateAndTime: '10 Dec 2025 03:00 AM',
         location: 'Online',
         organizer: 'Marketing Pros',
         status: {
@@ -430,9 +430,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
         eventID: '#JAN-258',
         event: {
             img: 'images/events/event1.jpg',
-            title: 'Annual Conference 2024'
+            title: 'Annual Conference 2025'
         },
-        dateAndTime: '01 Dec 2024 09:00 AM',
+        dateAndTime: '01 Dec 2025 09:00 AM',
         location: 'Convention Center',
         organizer: 'ABC Corporation',
         status: {

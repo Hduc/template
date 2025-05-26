@@ -11,9 +11,14 @@ import "./styles/left-sidebar-menu.css";
 import "./styles/top-navbar.css";
 import "./styles/crypto-dashboard.css";
 import "./styles/chat.css";
+import "./styles/horizontal-navbar.css";
+
+// globals Styles
 import "./styles/globals.css";
+
 // globals dark Mode CSS
 import "./styles/dark.css";
+
 // globals RTL Mode CSS
 import "./styles/rtl.css"; 
 

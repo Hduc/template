@@ -11,7 +11,7 @@ const Remixicon = () => {
 
         <ul className="breadcrumb">
           <li>
-            <Link to="/dashboard/ecommerce/">
+            <Link to="/dashboard/ecommerce">
               <i className="material-symbols-outlined">home</i>
               Dashboard
             </Link>
@@ -44,7 +44,7 @@ const Remixicon = () => {
       </Card>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -63,7 +63,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -82,7 +82,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -101,7 +101,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -120,7 +120,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -142,7 +142,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -164,7 +164,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -183,7 +183,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -202,7 +202,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -221,7 +221,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -240,7 +240,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -259,7 +259,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -278,7 +278,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -300,7 +300,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -319,7 +319,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -338,7 +338,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -357,7 +357,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -376,7 +376,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -395,7 +395,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -414,7 +414,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -433,7 +433,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -452,7 +452,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -471,7 +471,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -490,7 +490,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -509,7 +509,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -528,7 +528,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -547,7 +547,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -566,7 +566,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -585,7 +585,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -604,7 +604,7 @@ const Remixicon = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -630,7 +630,7 @@ const Remixicon = () => {
           mb: "25px",
         }}
       >
-        <Link href="https://remixicon.com/" target="_blank" rel="noreferrer">
+        <a href="https://remixicon.com/" target="_blank" rel="noreferrer">
           <Button
             type="button"
             variant="contained"
@@ -646,7 +646,7 @@ const Remixicon = () => {
           >
             View All Icons
           </Button>
-        </Link>
+        </a>
       </Box>
     </>
   );

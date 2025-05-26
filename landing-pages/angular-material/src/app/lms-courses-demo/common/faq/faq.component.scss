@@ -1,0 +1,190 @@
+.faq-accordion {
+    .accordion-item {
+        margin-bottom: 15px;
+        border-radius: 25px;
+        border: 1px solid #d5d9e2;
+        background-color: var(--whiteColor);
+
+        .accordion-button {
+            font-size: 20px;
+            text-align: start;
+            color: var(--blackColor);
+            padding: 31.5px 55px 31.5px 30px;
+
+            i {
+                top: 50%;
+                right: 30px;
+                font-size: 25px;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+            &.open {
+                i {
+                    &::before {
+                        content: "\ea78";
+                    }
+                }
+            }
+        }
+        .accordion-collapse {
+            padding: 0 30px 28px;
+            margin-top: -12px;
+            display: none;
+
+            p {
+                font-size: 16px;
+            }
+            &.open {
+                display: block;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.component-dark {
+    .faq-accordion {
+        .accordion-item {
+            border-color: rgba(255, 255, 255, 0.10);
+            background-color: #0a0e19;
+    
+            .accordion-button {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+.component-rtl {
+    .faq-accordion {
+        .accordion-item {
+            .accordion-button {
+                padding: {
+                    left: 55px;
+                    right: 30px;
+                };
+                i {
+                    right: auto;
+                    left: 30px;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-accordion {
+        margin-top: 25px;
+
+        .accordion-item {
+            .accordion-button {
+                font-size: 16px;
+                padding: 20px 40px 20px 20px;
+    
+                i {
+                    right: 20px;
+                    font-size: 20px;
+                }
+            }
+            .accordion-collapse {
+                padding: 0 20px 20px;
+                margin-top: -10px;
+    
+                p {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .component-rtl {
+        .faq-accordion {
+            .accordion-item {
+                .accordion-button {
+                    padding: {
+                        left: 40px;
+                        right: 20px;
+                    };
+                    i {
+                        left: 20px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .faq-accordion {
+        margin-top: 25px;
+
+        .accordion-item {
+            .accordion-button {
+                font-size: 18px;
+                padding: 25px 50px 25px 25px;
+    
+                i {
+                    right: 25px;
+                    font-size: 22px;
+                }
+            }
+            .accordion-collapse {
+                padding: 0 25px 25px;
+                margin-top: -12px;
+    
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .component-rtl {
+        .faq-accordion {
+            .accordion-item {
+                .accordion-button {
+                    padding: {
+                        left: 50px;
+                        right: 25px;
+                    };
+                    i {
+                        left: 25px;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .faq-accordion {
+        .accordion-item {
+            .accordion-button {
+                font-size: 19px;
+            }
+            .accordion-collapse {
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

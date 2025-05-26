@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LeftSidebar from "./components/Layout/LeftSidebar";
 import Footer from "./components/Layout/Footer";
-import TopNavbar from "./components/Layout/TopNavbar";
-import ControlPanel from "./components/Layout/ControlPanel";
+import TopNavbar from "./components/Layout/TopNavbar"; 
 import ScrollToTop from "./components/Layout/ScrollToTop";
 
 // Front Pages
@@ -32,6 +31,18 @@ import Finance from "./pages/dashboard/Finance";
 import HRM from "./pages/dashboard/HRM";
 import School from "./pages/dashboard/School";
 import CallCenter from "./pages/dashboard/CallCenter";
+import PosSystem from "./pages/dashboard/PosSystem";
+import Podcast from "./pages/dashboard/Podcast";
+import SocialMedia from "./pages/dashboard/SocialMedia";
+import Doctor from "./pages/dashboard/Doctor";
+import BeautySalon from "./pages/dashboard/BeautySalon";
+import StoreAnalytics from "./pages/dashboard/StoreAnalytics";
+import Restaurant from "./pages/dashboard/Restaurant";
+import Hotel from "./pages/dashboard/Hotel";
+import RealEstateAgent from "./pages/dashboard/RealEstateAgent";
+import CreditCard from "./pages/dashboard/CreditCard";
+import CryptoTrader from "./pages/dashboard/CryptoTrader";
+import CryptoPerformance from "./pages/dashboard/CryptoPerformance";
 
 // Apps
 import ToDoList from "./pages/apps/ToDoList";
@@ -133,6 +144,32 @@ import ReCustomers from "./pages/real-estate/ReCustomers";
 // Finance
 import Wallet from "./pages/finance/Wallet";
 import Transactions from "./pages/finance/Transactions";
+
+// Doctor
+import PatientsList from "./pages/doctor/PatientsList";
+import AddPatient from "./pages/doctor/AddPatient";
+import PatientDetails from "./pages/doctor/PatientDetails";
+import Appointments from "./pages/doctor/Appointments";
+import Prescriptions from "./pages/doctor/Prescriptions";
+import WritePrescription from "./pages/doctor/WritePrescription";
+
+// Restaurant
+import Menus from "./pages/restaurant/Menus";
+import DishDetails from "./pages/restaurant/DishDetails";
+
+// Hotel
+import RoomsList from "./pages/hotel/RoomsList"; 
+import RoomDetails from "./pages/hotel/RoomDetails"; 
+import GuestsList from "./pages/hotel/GuestsList"; 
+
+// Real Estate Agent
+import Properties from "./pages/real-estate-agent/Properties"; 
+import ReaPropertyDetails from "./pages/real-estate-agent/ReaPropertyDetails"; 
+
+// Crypto Trader
+import CtTransactions from "./pages/crypto-trader/CtTransactions"; 
+import GainersLosers from "./pages/crypto-trader/GainersLosers"; 
+import CtWallet from "./pages/crypto-trader/CtWallet"; 
 
 // Events
 import Events from "./pages/events";
@@ -319,6 +356,18 @@ const App = () => {
               <Route path="/dashboard/hrm" element={<HRM />} />
               <Route path="/dashboard/school" element={<School />} />
               <Route path="/dashboard/call-center" element={<CallCenter />} />
+              <Route path="/dashboard/pos-system" element={<PosSystem />} />
+              <Route path="/dashboard/podcast" element={<Podcast />} />
+              <Route path="/dashboard/social-media" element={<SocialMedia />} />
+              <Route path="/dashboard/doctor" element={<Doctor />} />
+              <Route path="/dashboard/beauty-salon" element={<BeautySalon />} />
+              <Route path="/dashboard/store-analytics" element={<StoreAnalytics />} />
+              <Route path="/dashboard/restaurant" element={<Restaurant />} />
+              <Route path="/dashboard/hotel" element={<Hotel />} />
+              <Route path="/dashboard/real-estate-agent" element={<RealEstateAgent />} />
+              <Route path="/dashboard/credit-card" element={<CreditCard />} />
+              <Route path="/dashboard/crypto-trader" element={<CryptoTrader />} />
+              <Route path="/dashboard/crypto-performance" element={<CryptoPerformance />} />
 
               {/* Apps */}
               <Route path="/apps/to-do-list" element={<ToDoList />} />
@@ -494,6 +543,32 @@ const App = () => {
               <Route path="/finance/wallet" element={<Wallet />} />
               <Route path="/finance/transactions" element={<Transactions />} />
 
+              {/* Doctor */}
+              <Route path="/doctor/patients-list" element={<PatientsList />} />
+              <Route path="/doctor/add-patient" element={<AddPatient />} />
+              <Route path="/doctor/patient-details" element={<PatientDetails />} />
+              <Route path="/doctor/appointments" element={<Appointments />} />
+              <Route path="/doctor/prescriptions" element={<Prescriptions />} />
+              <Route path="/doctor/write-prescription" element={<WritePrescription />} />
+              
+              {/* Restaurant */}
+              <Route path="/restaurant/menus" element={<Menus />} />
+              <Route path="/restaurant/dish-details" element={<DishDetails />} />
+
+              {/* Hotel */}
+              <Route path="/hotel/rooms-list" element={<RoomsList />} />
+              <Route path="/hotel/room-details" element={<RoomDetails />} />
+              <Route path="/hotel/guests-list" element={<GuestsList />} />
+
+              {/* Real Estate Agent */}
+              <Route path="/real-estate-agent/properties" element={<Properties />} />
+              <Route path="/real-estate-agent/property-details" element={<ReaPropertyDetails />} />
+
+              {/* Crypto Trader */}
+              <Route path="/crypto-trader/transactions" element={<CtTransactions />} />
+              <Route path="/crypto-trader/gainers-losers" element={<GainersLosers />} />
+              <Route path="/crypto-trader/wallet" element={<CtWallet />} />
+
               {/* Events */}
               <Route path="/events" element={<Events />} />
               <Route path="/events/events-list" element={<EventsList />} />
@@ -644,10 +719,7 @@ const App = () => {
             {!isAuthPage && <Footer />}
           </div>
         </Router>
-      </div>
-
-      {/* ControlPanel */}
-      <ControlPanel />
+      </div> 
     </>
   );
 };

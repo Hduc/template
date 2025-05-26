@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ReRevenueService } from './re-revenue.service';
 import { MatCardModule } from '@angular/material/card';
+import { ReRevenueService } from './re-revenue.service';
 
 @Component({
     selector: 'app-re-revenue',

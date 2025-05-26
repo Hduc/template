@@ -9,7 +9,7 @@ const AdvancedTimeline: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Advanced Timeline</h5>
+            <h5 className="!mb-0">Advanced Timeline</h5>
           </div>
         </div>
 
@@ -25,7 +25,7 @@ const AdvancedTimeline: React.FC = () => {
               </div>
 
               <div className="rounded-md relative bg-[#ecf0ff] dark:bg-[#15203c] md:w-[45%] p-[15px] md:p-[20px]">
-                <h6 className="text-primary-500 text-base mb-[12px] font-medium">
+                <h6 className="!text-primary-500 !text-base !mb-[12px] !font-medium">
                   Weekly Stand-Up Meetings:
                 </h6>
                 <p className="leading-[1.5]">
@@ -90,7 +90,7 @@ const AdvancedTimeline: React.FC = () => {
               </div>
 
               <div className="rounded-md relative bg-[#ecf0ff] dark:bg-[#15203c] md:w-[45%] p-[15px] md:p-[20px] ltr:ml-auto rtl:mr-auto">
-                <h6 className="text-primary-500 text-base mb-[12px] font-medium">
+                <h6 className="!text-primary-500 !text-base !mb-[12px] !font-medium">
                   Project Kickoff Session:
                 </h6>
                 <p className="leading-[1.5]">
@@ -113,7 +113,7 @@ const AdvancedTimeline: React.FC = () => {
               </div>
 
               <div className="rounded-md relative bg-[#ecf0ff] dark:bg-[#15203c] md:w-[45%] p-[15px] md:p-[20px]">
-                <h6 className="text-primary-500 text-base mb-[12px] font-medium">
+                <h6 className="!text-primary-500 !text-base !mb-[12px] !font-medium">
                   Team Building Workshop:
                 </h6>
                 <p className="leading-[1.5]">
@@ -169,7 +169,7 @@ const AdvancedTimeline: React.FC = () => {
               </div>
 
               <div className="rounded-md relative bg-[#ecf0ff] dark:bg-[#15203c] md:w-[45%] p-[15px] md:p-[20px] ltr:ml-auto rtl:mr-auto">
-                <h6 className="text-primary-500 text-base mb-[12px] font-medium">
+                <h6 className="!text-primary-500 !text-base !mb-[12px] !font-medium">
                   Lunch & Learning Session:
                 </h6>
                 <p className="leading-[1.5]">

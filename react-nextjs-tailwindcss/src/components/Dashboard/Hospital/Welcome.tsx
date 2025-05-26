@@ -10,7 +10,7 @@ const Welcome: React.FC = () => {
         <div className="trezo-card-content">
           <div className="sm:grid sm:grid-cols-5 gap-[25px]">
             <div className="sm:col-span-3">
-              <h3 className="text-[20px] mb-[2px] text-white">
+              <h3 className="!text-[20px] !mb-[2px] !text-white">
                 Hi, <span className="text-orange-100">Dr. Olivia!</span>
               </h3>
 

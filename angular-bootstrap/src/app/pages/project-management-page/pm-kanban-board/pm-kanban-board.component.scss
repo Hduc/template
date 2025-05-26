@@ -111,6 +111,11 @@
             }
         }
     }
+    &.card-without-border-radius {
+        .trezo-card-content {
+            border-radius: 0 !important;
+        }
+    }
 }
 
 /* Max width 767px */

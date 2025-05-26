@@ -1,0 +1,288 @@
+<div
+    class="bg-white"
+    [class.component-dark]="toggleService.isLandingDark()"
+>
+
+    <app-page-banner
+        [pageTitle]="'Checkout'"
+    />
+
+</div>
+
+<!-- Checkout -->
+<div
+    class="checkout-area ptb-180"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="coupon-code-box fw-medium">
+            <span class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    web_asset
+                </i>
+                Have a coupon? <a routerLink=".">Click here to enter your code</a>
+            </span>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="billing-details-info">
+                    <h3 class="fw-medium">
+                        Billing details
+                    </h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    First Name *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>First name</mat-label>
+                                    <input matInput placeholder="Ex. John">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Last Name *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>Last name</mat-label>
+                                    <input matInput placeholder="Ex. David">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Company Name ( Optional )
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>Company name ( optional )</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Country / Region *
+                                </label>
+                                <mat-form-field class="form-select">
+                                    <mat-label>Select</mat-label>
+                                    <mat-select>
+                                        <mat-option value="1">
+                                            United States (US)
+                                        </mat-option>
+                                        <mat-option value="2">
+                                            United Kingdom (UK)
+                                        </mat-option>
+                                        <mat-option value="3">
+                                            Canada (CA)
+                                        </mat-option>
+                                        <mat-option value="4">
+                                            Australia (AU)
+                                        </mat-option>
+                                        <mat-option value="5">
+                                            Germany (DE)
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Street Address *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>House number and street name</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Town / City *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>Town / city</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    State *
+                                </label>
+                                <mat-form-field class="form-select">
+                                    <mat-label>Select</mat-label>
+                                    <mat-select>
+                                        <mat-option value="1">
+                                            California
+                                        </mat-option>
+                                        <mat-option value="2">
+                                            New York
+                                        </mat-option>
+                                        <mat-option value="3">
+                                            Texas
+                                        </mat-option>
+                                        <mat-option value="4">
+                                            Florida
+                                        </mat-option>
+                                        <mat-option value="5">
+                                            Illinois
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    ZIP Code *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>ZIP code</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Phone *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>Phone no</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="d-block fw-medium">
+                                    Email Address *
+                                </label>
+                                <mat-form-field class="form-control">
+                                    <mat-label>Email address</mat-label>
+                                    <input matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <h3 class="fw-medium">
+                        Additional information
+                    </h3>
+                    <div class="form-group mb-0">
+                        <label class="d-block fw-medium">
+                            Order Notes (Optional)
+                        </label>
+                        <mat-form-field class="form-control">
+                            <mat-label>Type here...</mat-label>
+                            <textarea matInput></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="your-order-info">
+                    <h3 class="fw-medium">
+                        Your order
+                    </h3>
+                    <div class="table-responsive">
+                        <table class="table w-full">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="fw-medium shadow-none">
+                                        Products
+                                    </th>
+                                    <th scope="col" class="fw-medium shadow-none">
+                                        Subtotal
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="shadow-none bg-transparent">
+                                        Digital Marketing Mastery
+                                    </td>
+                                    <td class="shadow-none bg-transparent fw-medium">
+                                        $49
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="shadow-none bg-transparent">
+                                        Mobile App Development
+                                    </td>
+                                    <td class="shadow-none bg-transparent fw-medium">
+                                        $69
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="price fw-medium shadow-none bg-transparent">
+                                        Subtotal
+                                    </td>
+                                    <td class="price fw-medium shadow-none bg-transparent">
+                                        $118
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="price fw-medium shadow-none bg-transparent">
+                                        Total
+                                    </td>
+                                    <td class="price fw-medium shadow-none bg-transparent">
+                                        $118
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="payment-method">
+                        <h4 class="fw-medium">
+                            Payment Method
+                        </h4>
+                        <div class="method-type d-flex align-items-center">
+                            <div class="item text-center position-relative">
+                                <i class="material-symbols-outlined">
+                                    paid
+                                </i>
+                                <span class="d-block">
+                                    Cash
+                                </span>
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="cashType">
+                            </div>
+                            <div class="item text-center position-relative">
+                                <i class="material-symbols-outlined">
+                                    credit_card
+                                </i>
+                                <span class="d-block">
+                                    Card
+                                </span>
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="cardType" checked>
+                            </div>
+                            <div class="item text-center position-relative">
+                                <i class="material-symbols-outlined">
+                                    wallet
+                                </i>
+                                <span class="d-block">
+                                    E-Wallet
+                                </span>
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="eWalletType">
+                            </div>
+                        </div>
+                        <button type="button" class="lms-default-btn d-block w-full" mat-button>
+                            Place Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Checkout -->

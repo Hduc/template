@@ -50,11 +50,11 @@ export default function Page() {
       </Row>
 
       <Row>
-        <Col md={12} lg={12} xl={8}>
+        <Col md={12} lg={12} xl={12} xxl={8}>
           <ToDoList />
         </Col>
 
-        <Col md={12} lg={12} xl={4}>
+        <Col md={12} lg={12} xl={12} xxl={4}>
           <TasksOverview />
         </Col>
       </Row>

@@ -79,6 +79,15 @@ def school(request):
 def call_center(request):
     return render(request, 'call-center.html', {})
 
+def pos_system(request):
+    return render(request, 'pos-system.html', {})
+
+def podcast(request):
+    return render(request, 'podcast.html', {})
+
+def social_media(request):
+    return render(request, 'social-media.html', {})
+
 def calendar(request):
     return render(request, 'calendar.html', {})
 
@@ -471,6 +480,9 @@ def toasts(request):
 
 def check_radio(request):
     return render(request, 'check-radio.html', {})
+
+def sweet_alarts(request):
+    return render(request, 'sweet-alarts.html', {})
 
 def select(request):
     return render(request, 'select.html', {})

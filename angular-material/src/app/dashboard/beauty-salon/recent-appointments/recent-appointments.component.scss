@@ -1,0 +1,606 @@
+.recent-appointments-card {
+    .mat-mdc-card-content {
+        .appointments-list {
+            height: 292px;
+            margin-left: -25px;
+
+            .appointment-item {
+                padding: 21px 20px;
+                background-color: #DDE4FF;
+                margin: {
+                    top: 20px;
+                    left: 25px;
+                };
+                .icon {
+                    top: 50%;
+                    left: -39px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+                .info {
+                    .title {
+                        margin-top: 8px;
+                    }
+                }
+                .status {
+                    .trezo-badge {
+                        border-radius: 30px;
+                        padding: {
+                            top: 1.5px;
+                            bottom: 1.5px;
+                        };
+                    }
+                }
+                .user-info {
+                    margin-top: 20px;
+                    
+                    .user {
+                        gap: 8px;
+    
+                        img {
+                            width: 35px;
+                            margin-bottom: -3px;
+                            border: 1px solid var(--whiteColor);
+                        }
+                        span {
+                            font-size: 13px;
+    
+                            &.text-xs {
+                                margin-bottom: 1px;
+                            }
+                        }
+                    }
+                }
+                &:first-child {
+                    margin-top: 0;
+
+                    &::before {
+                        margin-top: 0;
+                    }
+                }
+                &::before {
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    content: '';
+                    left: -28px;
+                    margin-top: -20px;
+                    position: absolute;
+                    background: var(--borderColor);
+                }
+                &:nth-child(2), &:nth-child(4), &:nth-child(6) {
+                    background-color: #F3E8FF;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .appointments-list {
+                .appointment-item {
+                    background-color: var(--borderColor) !important;
+    
+                    .user-info {
+                        .user {
+                            img {
+                                border-color: var(--blackColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .mat-mdc-card-content {
+            .appointments-list {
+                margin: {
+                    left: 0;
+                    right: -25px;
+                };
+                .appointment-item {
+                    direction: rtl;
+                    margin: {
+                        right: 25px;
+                        left: 0;
+                    };
+                    .icon {
+                        left: auto;
+                        right: -39px;
+                    }
+                    &::before {
+                        left: auto;
+                        right: -27.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .recent-appointments-card {
+        .mat-mdc-card-header {
+            .card-header-menu {
+                pointer-events: none;
+                
+                .mdc-button__label {
+                    padding-right: 22px !important;
+
+                    &::before {
+                        margin-top: -1px;
+                        content: "\eb21" !important;
+                    }
+                }
+            }
+        }
+        .mat-mdc-card-content {
+            .mat-calendar {
+                margin-right: 25px;
+
+                .mat-calendar-header {
+                    padding: 0;
+                    margin-bottom: 15px;
+                    display: none !important;
+
+                    .mat-calendar-controls {
+                        margin: 0;
+                        justify-content: space-between;
+
+                        .mat-calendar-period-button {
+                            order: 2;
+                            margin: 0;
+                            padding: 0;
+                            height: auto;
+                            min-width: auto;
+                            display: inline-block;
+                            color: var(--blackColor);
+
+                            .mdc-button__label {
+                                display: block;
+                                padding-right: 15px;
+
+                                svg {
+                                    top: 50%;
+                                    right: 0;
+                                    position: absolute;
+                                    fill: var(--bodyColor);
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            &:hover {
+                                .mat-mdc-button-persistent-ripple {
+                                    &::before {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .mat-calendar-previous-button, .mat-calendar-next-button {
+                            background-color: #E6EFF2;
+                            color: var(--blackColor);
+                            justify-content: center;
+                            align-items: center;
+                            display: flex;
+                            height: 30px;
+                            width: 30px;
+                            padding: 0;
+                            order: 1;
+
+                            &::after, &::after {
+                                margin: 11px;
+                            }
+                        }
+                        .mat-calendar-next-button {
+                            order: 3;
+                        }
+                        .mat-calendar-spacer {
+                            display: none;
+                        }
+                    }
+                }
+                .mat-calendar-content {
+                    padding: 0;
+                    margin: {
+                        left: 0;
+                        right: 0;
+                    };
+                    .mat-calendar-table-header {
+                        th {
+                            font-size: 12px;
+                            padding: 0 0 8px;
+                            color: var(--bodyColor);
+                        }
+                        .mat-calendar-table-header-divider {
+                            padding: 0;
+                        }
+                    }
+                    .mat-calendar-body {
+                        min-width: auto;
+
+                        .mat-calendar-body-label {
+                            opacity: 0;
+                            padding: 0 !important;
+                            color: var(--blackColor);
+                        }
+                        .mat-calendar-body-cell-container {
+                            padding: 7.1px 0 4.21px !important;
+                            background-color: transparent;
+                            width: auto !important;
+                            line-height: initial;
+                            border-radius: 7px;
+                            text-align: center;
+                            position: relative;
+                            height: auto;
+                            z-index: 1;
+
+                            &::before {
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: -1;
+                                content: '';
+                                margin: 1.5px;
+                                border-radius: 7px;
+                                position: absolute;
+                                background-color: #E6EFF2;
+                            }
+                        }
+                        .mat-calendar-body-cell {
+                            padding: 0;
+                            width: 35px;
+                            height: 35px;
+                            font-size: 13px;
+                            border-radius: 50%;
+                            position: relative;
+                            margin: {
+                                left: auto;
+                                right: auto;
+                            };
+                        }
+                        .mat-calendar-body-cell-content {
+                            color: var(--blackColor);
+                            font-weight: 500;
+                        }
+                    }
+                    .mat-calendar-body-today {
+                        &:not(.mat-calendar-body-selected) {
+                            &:not(.mat-calendar-body-comparison-identical) {
+                                color: var(--whiteColor);
+                                border-color: var(--primaryColor);
+                                background-color: var(--primaryColor);
+                            }
+                        }
+                    }
+                }
+            }
+            .appointments-list {
+                margin-right: -28px;
+                
+                .ng-scrollbar {
+                    margin-left: -3px;
+                }
+                .ng-scroll-content {
+                    padding: 0;
+                    --_track-y-thickness: 3px;
+                    padding: {
+                        right: 25px;
+                        left: 13px;
+                    };
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-header {
+                .card-header-menu {
+                    .mdc-button__label {
+                        padding: {
+                            left: 22px !important;
+                            right: 0 !important;
+                        };
+                    }
+                }
+            }
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    margin: {
+                        right: 0;
+                        left: 25px;
+                    };
+                    .mat-calendar-header {
+                        .mat-calendar-controls {
+                            .mat-calendar-next-button {
+                                svg {
+                                    transform: scaleX(-1);
+                                }
+                            }
+                            .mat-calendar-previous-button {
+                                svg {
+                                    transform: scaleX(-1);
+                                }
+                            }
+                        }
+                    }
+                }
+                .appointments-list {
+                    margin: {
+                        right: 0;
+                        left: -28px !important;
+                    };
+                    .ng-scroll-content {
+                        padding: {
+                            right: 13px;
+                            left: 25px;
+                        };
+                        .ng-scrollbar-sticky {
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        &.component-dark-theme {
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    .mat-calendar-header {
+                        .mat-calendar-controls {
+                            .mat-calendar-period-button {
+                                color: var(--whiteColor);
+                            }
+                            .mat-calendar-previous-button, .mat-calendar-next-button {
+                                color: var(--whiteColor);
+                                background-color: var(--borderColor);
+                            }
+                        }
+                    }
+                    .mat-calendar-content {
+                        .mat-calendar-table-header {
+                            th {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        .mat-calendar-body {
+                            .mat-calendar-body-label {
+                                color: var(--whiteColor);
+                            }
+                            .mat-calendar-body-cell-container {
+                                &::before {
+                                    background-color: var(--borderColor);
+                                }
+                            }
+                            .mat-calendar-body-cell-content {
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .recent-appointments-card {
+        .mat-mdc-card-content {
+            .appointments-list {
+                margin-left: 0;
+    
+                .appointment-item {
+                    padding: 17px;
+                    margin: {
+                        top: 17px;
+                        left: 17px;
+                    };
+                    .icon {
+                        left: -28px;
+                    }
+                    .info {
+                        .title {
+                            margin-top: 4px;
+                        }
+                    }
+                    .user-info {
+                        margin-top: 0;
+                        
+                        .user {
+                            margin-top: 10px;
+                        }
+                    }
+                    &::before {
+                        left: -17px;
+                        margin-top: -17px;
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-content {
+                .appointments-list {
+                    margin-right: 0;
+        
+                    .appointment-item {
+                        margin: {
+                            right: 17px;
+                            left: 0;
+                        };
+                        .icon {
+                            left: auto;
+                            right: -28px;
+                        }
+                        &::before {
+                            left: auto;
+                            right: -17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .recent-appointments-card {
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    margin: {
+                        right: 0;
+                        bottom: 17px;
+                    };
+                }
+                .appointments-list {
+                    margin-right: -17px;
+    
+                    .ng-scroll-content {
+                        padding-right: 17px;
+                    }
+                }
+            }
+            &.component-rtl-enabled {
+                .mat-mdc-card-content {
+                    .mat-calendar {
+                        margin-left: 0;
+                    }
+                    .appointments-list {
+                        margin: {
+                            right: 0;
+                            left: -17px !important;
+                        };
+                        .ng-scroll-content {
+                            padding: {
+                                right: 0;
+                                left: 17px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .recent-appointments-card {
+        .mat-mdc-card-content {
+            .appointments-list {
+                .appointment-item {
+                    padding: 20px;
+                    margin: {
+                        top: 20px;
+                        left: 20px;
+                    };
+                    .icon {
+                        left: -31px;
+                    }
+                    &::before {
+                        left: -20px;
+                        margin-top: -20px;
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-content {
+                .appointments-list {
+                    .appointment-item {
+                        margin: {
+                            right: 20px;
+                            left: 0;
+                        };
+                        .icon {
+                            left: auto;
+                            right: -31px;
+                        }
+                        &::before {
+                            left: auto;
+                            right: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .recent-appointments-card {
+            .mat-mdc-card-content {
+                .mat-calendar {
+                    margin-bottom: 20px;
+                }
+                .appointments-list {
+                    margin-right: -20px;
+    
+                    .ng-scroll-content {
+                        padding-right: 20px;
+                    }
+                }
+            }
+            &.component-rtl-enabled {
+                .mat-mdc-card-content {
+                    .appointments-list {
+                        margin: {
+                            right: 0;
+                            left: -20px !important;
+                        };
+                        .ng-scroll-content {
+                            padding: {
+                                right: 0;
+                                left: 20px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .recent-appointments-card {
+        .mat-mdc-card-content {
+            .appointments-list {
+                .appointment-item {
+                    .user-info {
+                        margin-top: 0;
+                        
+                        .user {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .recent-appointments-card {
+        .mat-mdc-card-content {
+            .appointments-list {
+                .appointment-item {
+                    .user-info {
+                        margin-top: 0;
+                        
+                        .user {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

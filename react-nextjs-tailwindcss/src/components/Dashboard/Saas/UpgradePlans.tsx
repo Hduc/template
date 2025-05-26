@@ -13,7 +13,7 @@ const UpgradePlans: React.FC = () => {
         }}
       >
         <div className="trezo-card-content md:py-[30px] mx-auto md:max-w-[209px]">
-          <h3 className="text-white text-lg md:text-xl leading-[1.3] mb-[16px]">
+          <h3 className="!text-white !text-lg md:!text-xl !leading-[1.3] !mb-[16px]">
             Have A Team More Than 10 Members?
           </h3>
 

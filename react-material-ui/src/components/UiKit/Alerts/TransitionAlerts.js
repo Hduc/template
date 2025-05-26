@@ -49,7 +49,7 @@ const TransitionAlerts = () => {
                   <CloseIcon fontSize="inherit" />
                 </IconButton>
               }
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, color: "success.main" }}
             >
               Click the close icon to see the Collapse transition in action!
             </Alert>

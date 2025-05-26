@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -24,7 +24,7 @@ import Link from "next/link";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"; 
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 interface TablePaginationActionsProps {
   count: number;
@@ -396,6 +396,14 @@ const Courses: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    row.courseName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -417,7 +425,7 @@ const Courses: React.FC = () => {
         >
           <Box
             component="form"
-            className='t-search-form'
+            className="t-search-form"
             sx={{
               width: { sm: "265px" },
             }}
@@ -427,8 +435,10 @@ const Courses: React.FC = () => {
             </label>
             <input
               type="text"
-              className='t-input'
+              className="t-input"
               placeholder="Search course here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -578,7 +588,7 @@ const Courses: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -755,7 +765,7 @@ const Courses: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={9} />
+                    <TableCell className="border-bottom" colSpan={9} />
                   </TableRow>
                 )}
               </TableBody>

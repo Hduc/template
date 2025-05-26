@@ -53,7 +53,7 @@ const PricingStyle2: React.FC = () => {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Pricing Style - 2</h5>
+        <h5 className="!mb-0">Pricing Style - 2</h5>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px] mb-[25px]">

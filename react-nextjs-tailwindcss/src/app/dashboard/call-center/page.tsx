@@ -29,7 +29,7 @@ export default function Page() {
         <CallCenterGeography />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
         <div className="lg:col-span-1">
           <AgentAvgEarnings />
         </div>

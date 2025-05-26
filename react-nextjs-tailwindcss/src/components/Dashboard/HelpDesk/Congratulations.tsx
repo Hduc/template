@@ -9,13 +9,13 @@ const Congratulations: React.FC = () => {
     <>
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative">
-          <h5 className="font-semibold mb-[2px]">
+          <h5 className="!font-semibold !mb-[2px]">
             Congratulations, <span className="text-primary-500">Olivia!</span>
           </h5>
 
           <p className="mb-[14px]">Best agent of the month</p>
 
-          <h6 className="text-secondary-500 text-[20px] mb-[1px]">1.5k+</h6>
+          <h6 className="!text-secondary-500 !text-[20px] !mb-[1px]">1.5k+</h6>
 
           <span className="block">Ticket Solved</span>
 

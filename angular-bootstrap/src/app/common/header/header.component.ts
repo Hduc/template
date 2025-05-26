@@ -4,10 +4,11 @@ import { ToggleService } from './toggle.service';
 import { NgClass, NgIf, isPlatformBrowser } from '@angular/common';
 import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
 import { filter } from 'rxjs/operators';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, NgClass, NgIf],
+    imports: [RouterLink, NgClass, NgIf, NavbarComponent],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })

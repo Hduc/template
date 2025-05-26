@@ -40,6 +40,9 @@ export class PerformanceOverviewService {
                         strokeDashArray: 7,
                         borderColor: "#ECEEF2"
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         tickAmount: 4,
                         min: xaxisRange.min,

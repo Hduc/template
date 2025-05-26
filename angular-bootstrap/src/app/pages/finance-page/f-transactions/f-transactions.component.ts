@@ -1,7 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
-import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-f-transactions',
@@ -10,10 +9,6 @@ import { CustomizerSettingsService } from '../../../customizer-settings/customiz
     styleUrl: './f-transactions.component.scss'
 })
 export class FTransactionsComponent {
-
-    constructor(
-        public themeService: CustomizerSettingsService
-    ) {}
 
     // Popup Trigger
     classApplied = false;

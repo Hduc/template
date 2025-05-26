@@ -85,8 +85,8 @@ const SalesByLocations = () => {
             </Dropdown>
           </div>
 
-          <div className="text-center" style={{ marginBottom: '36px' }}>
-            <img src='/images/vector-map.png' alt="vector-map" />
+          <div className="text-center" style={{ marginBottom: "36px" }}>
+            <img src="/images/vector-map.png" alt="vector-map" />
           </div>
 
           <ul className="ps-0 mb-0 list-unstyled sales_by_locations">

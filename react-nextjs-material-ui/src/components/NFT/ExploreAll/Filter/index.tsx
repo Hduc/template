@@ -57,7 +57,7 @@ const Filter: React.FC = () => {
 
         <Box component="form" noValidate>
           <Grid container alignItems="center" spacing={2}>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <TextField
                 autoComplete="search"
                 name="search"
@@ -72,7 +72,7 @@ const Filter: React.FC = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Category</InputLabel>
                 <Select
@@ -91,7 +91,7 @@ const Filter: React.FC = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">File Type</InputLabel>
                 <Select
@@ -110,7 +110,7 @@ const Filter: React.FC = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">
                   Sales Type
@@ -131,9 +131,9 @@ const Filter: React.FC = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Grid container alignItems="center" spacing={2}>
-                <Grid item xs={12} md={12} lg={8}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 8 }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -159,7 +159,7 @@ const Filter: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={4}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4 }}>
                   <Box
                     sx={{
                       display: "flex",

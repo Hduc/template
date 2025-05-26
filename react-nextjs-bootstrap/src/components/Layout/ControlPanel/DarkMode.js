@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 const DarkMode = () => {
-  // Light/Dark Mode
+  // Light/Dark Mode state
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -11,45 +11,59 @@ const DarkMode = () => {
     const storedPreference = localStorage.getItem("theme");
     if (storedPreference === "dark") {
       setIsDarkMode(true);
+      document.documentElement.classList.add("dark"); // Apply dark mode class on load
     }
   }, []);
 
   const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    localStorage.setItem("theme", newMode ? "dark" : "light");
+
+    // Apply/remove the "dark" class dynamically
+    document.documentElement.classList.toggle("dark", newMode);
   };
-
-  useEffect(() => {
-    // Update the user's preference in local storage
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-
-    // Update the class on the <html> element to apply the selected mode
-    const htmlElement = document.querySelector("html");
-    if (isDarkMode) {
-      htmlElement.classList.add("dark");
-    } else {
-      htmlElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
 
   return (
     <>
-      <div className="mb-4 pb-2">
-        <h4 className="fs-15 fw-semibold border-bottom pb-2 mb-3">
-          Dark/Light Mode
-        </h4>
+      <span className="title">Light/Dark Mode</span>
 
-        <button
-          onClick={handleToggle}
-          variant="contained"
-          sx={{
-            textTransform: "capitalize",
-            fontSize: '13px'
-          }}
-          className="header-light-dark settings-btn header-dark-btn"
-        >
-          Switch to {isDarkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-      </div>
+      <button
+        className="switch-btn light-dark-btn bg-transparent border-none"
+        onClick={handleToggle}
+      >
+        <div className="first">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Light</span>
+          </div>
+        </div>
+
+        <div className="second">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Dark</span>
+          </div>
+        </div>
+      </button>
     </>
   );
 };

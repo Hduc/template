@@ -1,7 +1,7 @@
 <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div class="trezo-card-title">
-            <h5 class="mb-0 font-semibold">
+            <h5 class="!mb-0 !font-semibold">
                 Agent Avg. Earnings
             </h5>
         </div>
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="trezo-card-content">
-        <div class="flex items-center gap-[30px]">
+        <div class="agent-avg-earnings-buttons flex items-center gap-[30px]">
             <button type="button" class="inline-block rounded-[4px] transition-all hover:bg-primary-500 hover:text-white w-[34px] h-[28px]" (click)="onTimeframeChange('This Day')" [ngClass]="{'active': activeTimeframe === 'This Day'}">
                 1d
             </button>
@@ -59,7 +59,7 @@
                     <img src="images/icons/money.svg" alt="money">
                 </div>
                 <div>
-                    <h5 class="mb-px text-2xl leading-none font-semibold">
+                    <h5 class="!mb-px !text-2xl !leading-none !font-semibold">
                         $2,534
                     </h5>
                     <span class="block">

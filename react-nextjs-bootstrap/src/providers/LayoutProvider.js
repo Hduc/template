@@ -14,6 +14,7 @@ const LayoutProvider = ({ children }) => {
   const toogleActive = () => {
     setActive(!active);
   };
+  
   return (
     <>
       <div className={`main-wrapper-content ${active && "active"}`}>

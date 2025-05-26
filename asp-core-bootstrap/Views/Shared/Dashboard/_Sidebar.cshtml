@@ -21,7 +21,7 @@
                     class="menu-link menu-toggle @(Context.Request.Path.StartsWithSegments("/dashboard") ? "active" : "")">
                     <span class="material-symbols-outlined menu-icon">dashboard</span>
                     <span class="title">Dashboard</span>
-                    <span class="count">18</span>
+                    <span class="count">20</span>
                 </a>
 
                 <ul class="menu-sub">
@@ -144,6 +144,20 @@
                         <a href="/dashboard/call_center"
                             class="menu-link @(Context.Request.Path == "/dashboard/call_center" ? "active" : "")">
                             Call Center
+                            <span class="hot tag">New</span>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-0">
+                        <a href="/dashboard/pos_system"
+                            class="menu-link @(Context.Request.Path == "/dashboard/pos_system" ? "active" : "")">
+                            POS System
+                            <span class="hot tag">New</span>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-0">
+                        <a href="/dashboard/podcast"
+                            class="menu-link @(Context.Request.Path == "/dashboard/podcast" ? "active" : "")">
+                            Podcast
                             <span class="hot tag">New</span>
                         </a>
                     </li>
@@ -1130,6 +1144,11 @@
                     <li class="menu-item">
                         <a href="check-radio" class="menu-link">
                             Check & Radio
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="sweet-alerts" class="menu-link">
+                            Sweet Alerts
                         </a>
                     </li>
                     <li class="menu-item">

@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Reports
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -21,7 +21,7 @@
     </ol>
 </div>
 
-<div class="xl:grid xl:grid-cols-3 gap-[25px]">
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-[25px] mb-[25px]">
     <div class="xl:col-span-1">
 
         <!-- New Tickets vs Solved Tickets -->
@@ -35,19 +35,14 @@
 
     </div>
 </div>
-<div class="lg:grid lg:grid-cols-2 gap-x-[25px]">
-    <div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] mb-[25px]">
 
-        <!-- Customer Satisfaction -->
-        <app-customer-satisfaction />
+    <!-- Customer Satisfaction -->
+    <app-customer-satisfaction />
 
-    </div>
-    <div>
-
-        <!-- Response Time -->
-        <app-response-time />
+    <!-- Response Time -->
+    <app-response-time />
         
-    </div>
 </div>
 
 <!-- Reports -->

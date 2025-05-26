@@ -18,7 +18,7 @@ export class OurTopCoursesComponent {
 		loop: true,
 		margin: 25,
 		dots: true,
-		autoplay: false,
+		autoplay: true,
 		smartSpeed: 500,
         animateIn: 'fadeIn',
 		animateOut: 'fadeOut',

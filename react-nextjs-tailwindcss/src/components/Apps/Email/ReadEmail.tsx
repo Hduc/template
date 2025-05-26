@@ -18,7 +18,7 @@ const ReadEmail: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[15px] md:pb-[19px]">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-md font-semibold">Sales Review Meeting</h5>
+            <h5 className="!mb-0 !text-md !font-semibold">Sales Review Meeting</h5>
           </div>
 
           <div className="trezo-card-subtitle flex items-center gap-[10px] md:gap-[15px] mt-[12px] sm:mt-0">
@@ -120,17 +120,17 @@ const ReadEmail: React.FC = () => {
               Hi Smith,
             </span>
 
-            <p className="mb-[20px] last:mb-0">
+            <p className="!mb-[20px] last:!mb-0">
               Great, I&apos;ll go ahead and send out the calendar invite shortly.
             </p>
 
-            <p className="mb-[20px] last:mb-0">
+            <p className="!mb-[20px] last:!mb-0">
               Regarding the agenda, I think your suggestions are spot on. I&apos;ll
               add them to the agenda and circulate it to everyone before the
               meeting so they can come prepared.
             </p>
 
-            <p className="mb-[20px] last:mb-0">
+            <p className="!mb-[20px] last:!mb-0">
               In addition to our current initiatives, I believe it would be
               advantageous to have a concise yet comprehensive update on any new
               products or promotions that are scheduled to launch in the next
@@ -138,7 +138,7 @@ const ReadEmail: React.FC = () => {
               assist in aligning our strategies with upcoming opportunities.
             </p>
 
-            <p className="mb-[20px] last:mb-0">
+            <p className="!mb-[20px] last:!mb-0">
               Let me know if you think that&apos;s a valuable addition to the agenda.
             </p>
 
@@ -152,7 +152,7 @@ const ReadEmail: React.FC = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-100 mt-[20px] md:mt-[25px] pt-[20px] md:pt-[25px] md:ltr:pl-[57px] md:rtl:pr-[57px]">
+          <div className="border-t border-gray-100 mt-[20px] md:mt-[25px] pt-[20px] md:pt-[25px] md:ltr:pl-[57px] md:rtl:pr-[57px] dark:border-[#15203c]">
             <button
               className="inline-block font-semibold md:text-md py-[7px] px-[25px] border border-primary-500 ltr:mr-[15px] rtl:ml-[15px] transition-all rounded-md text-white bg-primary-500 hover:bg-primary-400 hover:border-primary-400"
               type="submit"

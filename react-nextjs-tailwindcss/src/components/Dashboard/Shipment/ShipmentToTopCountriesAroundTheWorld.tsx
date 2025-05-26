@@ -50,7 +50,7 @@ const ShipmentToTopCountriesAroundTheWorld: React.FC = () => {
       }}
     >
       <div className="trezo-card-content">
-        <h5 className="text-white mb-[5px] mx-auto max-w-[250px] leading-[1.5]">
+        <h5 className="!text-white !mb-[5px] !mx-auto !max-w-[250px] !leading-[1.5]">
           Shipment to top countries around the world
         </h5>
 

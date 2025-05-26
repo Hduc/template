@@ -363,7 +363,7 @@ const ReviewsTable: React.FC = () => {
 
                   <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                     <span
-                      className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs ${
+                      className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs dark:bg-[#15203c] ${
                         review.status === "Published"
                           ? "bg-danger-50 text-danger-500"
                           : "bg-primary-50 text-primary-500"
@@ -412,7 +412,7 @@ const ReviewsTable: React.FC = () => {
 
         {/* Pagination */}
         <div className="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
-          <p className="mb-0 text-sm">
+          <p className="!mb-0 !text-sm">
             Showing {reviewsPerPage} of {reviews.length} reviews
           </p>
 

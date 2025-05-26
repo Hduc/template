@@ -335,103 +335,46 @@ const Courses: React.FC = () => {
           >
             <Table sx={{ minWidth: 1200 }} aria-label="Courses Table">
               <TableHead className="bg-primary-50">
-                <TableRow>
-                  <TableCell
-                    sx={{
+                <TableRow
+                  sx={{
+                    "& th": {
                       fontWeight: "500",
                       padding: "10px 24px",
                       fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    ID
-                  </TableCell>
+                    },
+                  }}
+                >
+                  <TableCell className="text-black border-bottom">ID</TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Course Name
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Category
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Instructor
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Enrolled
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Start Date
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     End Date
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Price
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Action
                   </TableCell>
                 </TableRow>
@@ -445,44 +388,26 @@ const Courses: React.FC = () => {
                     )
                   : rows
                 ).map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell
-                      sx={{
+                  <TableRow
+                    key={row.id}
+                    sx={{
+                      "& td": {
                         padding: "15px 20px",
                         fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
-                      {row.id}
-                    </TableCell>
+                      },
+                    }}
+                  >
+                    <TableCell className="border-bottom">{row.id}</TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.courseName}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       {row.category}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       <Box
                         sx={{
                           display: "flex",
@@ -512,50 +437,21 @@ const Courses: React.FC = () => {
                       </Box>
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       {row.enrolled}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       {row.startDate}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       {row.endDate}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                      }}
-                      className="border-bottom"
-                    >
-                      {row.price}
-                    </TableCell>
+                    <TableCell className="border-bottom">{row.price}</TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       <Box
                         sx={{
                           display: "flex",

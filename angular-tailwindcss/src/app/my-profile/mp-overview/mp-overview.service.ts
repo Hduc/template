@@ -24,7 +24,7 @@ export class MpOverviewService {
                     series: series,
                     chart: {
                         type: "bar",
-                        height: 400,
+                        height: 415,
                         toolbar: {
                             show: true
                         }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg fixed-top" id="navbar">
-        <div className="container">
+        <Container>
           <Link className="navbar-brand me-xl-5 me-3" to="/">
             <img
               src="/images/landing/logo.svg"
@@ -153,7 +154,7 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </nav>
     </>
   );

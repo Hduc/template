@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { Grid, Button, Box, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const LogoutContent = () => {
   return (
@@ -25,7 +24,7 @@ const LogoutContent = () => {
             alignItems="center"
             columnSpacing={{ xs: 1, sm: 2, md: 4, lg: 3 }}
           >
-            <Grid item xs={12} md={6} lg={6} xl={7}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 7 }}>
               <Box
                 sx={{
                   display: { xs: "none", md: "block" },
@@ -43,7 +42,7 @@ const LogoutContent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={5}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 5 }}>
               <Box
                 className="form-content"
                 sx={{
@@ -121,7 +120,7 @@ const LogoutContent = () => {
                   </Typography>
                 </Box>
 
-                <Link to="/authentication/sign-in">
+                <a href="/authentication/sign-in/">
                   <Button
                     type="submit"
                     variant="contained"
@@ -139,7 +138,7 @@ const LogoutContent = () => {
                     <i className="material-symbols-outlined mr-5">autorenew</i>
                     Sign In
                   </Button>
-                </Link>
+                </a>
               </Box>
             </Grid>
           </Grid>

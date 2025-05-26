@@ -16,11 +16,11 @@ const Sales = () => {
         <Stats />
 
         <Row>
-          <Col xs={12} sm={12} lg={7} xl={8}>
+          <Col xs={12} sm={12} lg={7} xl={7} xxl={8}>
             <RecentEarnings />
           </Col>
 
-          <Col xs={12} sm={12} lg={5} xl={4}>
+          <Col xs={12} sm={12} lg={5} xl={5} xxl={4}>
             <SalesByLocations />
           </Col>
         </Row>

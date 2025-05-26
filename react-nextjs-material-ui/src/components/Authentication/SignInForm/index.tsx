@@ -33,7 +33,7 @@ const SignInForm: React.FC = () => {
             alignItems="center"
             columnSpacing={{ xs: 1, sm: 2, md: 4, lg: 3 }}
           >
-            <Grid item xs={12} md={6} lg={6} xl={7}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 7 }}>
               <Box
                 sx={{
                   display: { xs: "none", md: "block" },
@@ -51,7 +51,7 @@ const SignInForm: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={5}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 5 }}>
               <Box
                 className="form-content"
                 sx={{
@@ -197,6 +197,10 @@ const SignInForm: React.FC = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -235,6 +239,10 @@ const SignInForm: React.FC = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -255,7 +263,7 @@ const SignInForm: React.FC = () => {
                   <Box mb="20px">
                     <Button
                       type="submit"
-                      variant="contained"
+                      variant="contained" 
                       sx={{
                         textTransform: "capitalize",
                         borderRadius: "6px",
@@ -265,6 +273,13 @@ const SignInForm: React.FC = () => {
                         color: "#fff !important",
                         boxShadow: "none",
                         width: "100%",
+
+                        // Disabled state styles
+                        "&.Mui-disabled": {
+                          backgroundColor: "#000", // Light gray background
+                          color: "#9e9e9e !important", // Darker gray text
+                          cursor: "not-allowed",
+                        },
                       }}
                     >
                       <i className="material-symbols-outlined mr-5">login</i>

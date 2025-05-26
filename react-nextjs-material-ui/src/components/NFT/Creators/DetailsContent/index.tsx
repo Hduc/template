@@ -12,7 +12,7 @@ const DetailsContent: React.FC = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <Card
             sx={{
               position: "relative",
@@ -218,7 +218,7 @@ const DetailsContent: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <Content />
         </Grid>
       </Grid>

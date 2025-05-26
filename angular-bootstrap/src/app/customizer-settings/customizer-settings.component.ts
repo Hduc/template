@@ -52,6 +52,11 @@ export class CustomizerSettingsComponent {
         this.themeService.toggleCardBorderedTheme();
     }
 
+    // Navbar
+    toggleNavbarTheme() {
+        this.themeService.toggleNavbarTheme();
+    }
+
     // Card Without Border Radius
     toggleCardWithoutBorderRadiusTheme() {
         this.themeService.toggleCardWithoutBorderRadiusTheme();
@@ -65,6 +70,11 @@ export class CustomizerSettingsComponent {
     // RTL Mode
     toggleRTLEnabledTheme() {
         this.themeService.toggleRTLEnabledTheme();
+    }
+
+    // Body Bg Color
+    toggleBodyBGTheme() {
+        this.themeService.toggleBodyBGTheme();
     }
 
     // Settings Button Toggle

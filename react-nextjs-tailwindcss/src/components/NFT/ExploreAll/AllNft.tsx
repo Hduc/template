@@ -268,7 +268,7 @@ const AllNft: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Filter</h5>
+            <h5 className="!mb-0">Filter</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -491,7 +491,7 @@ const AllNft: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">
+            <p className="!mb-0">
               Showing {indexOfFirstNft + 1} to{" "}
               {Math.min(indexOfLastNft, nfts.length)} of {nfts.length} results
             </p>

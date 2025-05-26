@@ -1,0 +1,615 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Menus
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 p-0">
+        <li class="breadcrumb-item d-inline-block position-relative">
+            <a routerLink="/dashboard" class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    home
+                </i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Restaurant
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Menus
+        </li>
+    </ol>
+</div>
+
+<!-- Menus -->
+<mat-card
+    class="menus-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <button class="add-btn" type="button" mat-button type="button" (click)="toggleClass()">
+                <i class="material-symbols-outlined">
+                    add
+                </i>
+                Add New Dish
+            </button>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <form class="search-box position-relative">
+                <label>
+                    <i class="material-symbols-outlined">
+                        search
+                    </i>
+                </label>
+                <input type="text" class="input-search" placeholder="Search menu here....." (keyup)="applyFilter($event)" #input>
+            </form>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-five">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Checkbox Column -->
+                    <ng-container matColumnDef="select">
+                        <th mat-header-cell *matHeaderCellDef>
+                            <mat-checkbox
+                                (change)="$event ? toggleAllRows() : null"
+                                [checked]="selection.hasValue() && isAllSelected()"
+                                [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                [aria-label]="checkboxLabel()"
+                            >
+                            </mat-checkbox>
+                        </th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-checkbox
+                                (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)"
+                                [aria-label]="checkboxLabel(row)"
+                            >
+                            </mat-checkbox>
+                        </td>
+                    </ng-container>
+
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>
+                            ID
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-semibold">
+                            {{element.id}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Item Column -->
+                    <ng-container matColumnDef="item">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Item
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="customer-info d-flex align-items-center">
+                                <div class="img">
+                                    <img [src]="element.item.img" class="rounded-circle" alt="dish-image">
+                                </div>
+                                <a routerLink="/dashboard/restaurant-page/dish-details" class="d-block fw-semibold">
+                                    {{element.item.name}}
+                                </a>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Price Column -->
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Price
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-semibold">
+                            ${{element.price}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Ingredients Column -->
+                    <ng-container matColumnDef="ingredients">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Ingredients
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-semibold">
+                            {{element.ingredients}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="dot-menu p-0 d-inline-block border-radius-0">
+                                <i class="{{element.action}}"></i>
+                            </button>
+                            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                                    <li>
+                                        <a routerLink="/dashboard/restaurant-page/dish-details" mat-menu-item>
+                                            View
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item type="button" (click)="toggleClass2()">
+                                            Edit
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item>
+                                            Delete
+                                        </button>
+                                    </li>
+                                </ul>
+                            </mat-menu>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    </tr>
+
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Add New Popup -->
+<div
+    class="add-new-popup"
+    [class.active]="classApplied"
+>
+    <div class="popup-dialog">
+        <mat-card class="border-radius w-100 d-block bg-white border-0 shadow-none">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mb-0">
+                        Add New Dish
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                    >
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Dish Code
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Dish code
+                                </mat-label>
+                                <input matInput placeholder="E.g. #3215">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Name
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Name
+                                </mat-label>
+                                <input matInput placeholder="E.g. Parsley Chicken">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Price
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Price
+                                </mat-label>
+                                <input matInput placeholder="E.g. $12.50">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Calories
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Calories
+                                </mat-label>
+                                <input matInput placeholder="E.g. 3215 Kcal">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Carbs
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Carbs
+                                </mat-label>
+                                <input matInput placeholder="E.g. 525 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Protein
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Protein
+                                </mat-label>
+                                <input matInput placeholder="E.g. 125 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Fibres
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Fibres
+                                </mat-label>
+                                <input matInput placeholder="E.g. 15 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Fat
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Fat
+                                </mat-label>
+                                <input matInput placeholder="E.g. 25 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Vitamins
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Vitamins
+                                </mat-label>
+                                <input matInput placeholder="E.g. 13 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Sugar
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Sugar
+                                </mat-label>
+                                <input matInput placeholder="E.g. 214 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Minerals
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Minerals
+                                </mat-label>
+                                <input matInput placeholder="E.g. 5 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Ingredients Details
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Ingredients Details
+                                </mat-label>
+                                <input matInput placeholder="E.g. pan-seared chicken, lemon zest, garlic butter, parsley">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Order In Queue
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Order In Queue
+                                </mat-label>
+                                <input matInput placeholder="E.g. 17">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Upload Item Images
+                            </label>
+                            <file-upload class="file-uploader"></file-upload>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                        color="warn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        mat-button
+                        color="primary"
+                    >
+                        <i class="material-symbols-outlined">
+                            add
+                        </i>
+                        Add Dish
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<!-- Edit Popup -->
+<div
+    class="add-new-popup"
+    [class.active]="classApplied2"
+>
+    <div class="popup-dialog">
+        <mat-card class="border-radius w-100 d-block bg-white border-0 shadow-none">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mb-0">
+                        Edit Dish
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button
+                        mat-button
+                        (click)="toggleClass2()"
+                    >
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Dish Code
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Dish code
+                                </mat-label>
+                                <input matInput value="#3215">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Name
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Name
+                                </mat-label>
+                                <input matInput value="Parsley Chicken">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Price
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Price
+                                </mat-label>
+                                <input matInput value="$12.50">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Calories
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Calories
+                                </mat-label>
+                                <input matInput value="3215 Kcal">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Carbs
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Carbs
+                                </mat-label>
+                                <input matInput value="525 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Protein
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Protein
+                                </mat-label>
+                                <input matInput value="125 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Fibres
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Fibres
+                                </mat-label>
+                                <input matInput value="15 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Fat
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Fat
+                                </mat-label>
+                                <input matInput value="25 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Vitamins
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Vitamins
+                                </mat-label>
+                                <input matInput value="13 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Sugar
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Sugar
+                                </mat-label>
+                                <input matInput value="214 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Minerals
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Minerals
+                                </mat-label>
+                                <input matInput value="5 gm">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Ingredients Details
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Ingredients Details
+                                </mat-label>
+                                <input matInput value="pan-seared chicken, lemon zest, garlic butter, parsley">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Order In Queue
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Order In Queue
+                                </mat-label>
+                                <input matInput value="17">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Upload Item Images
+                            </label>
+                            <file-upload class="file-uploader"></file-upload>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button
+                        mat-button
+                        (click)="toggleClass2()"
+                        color="warn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        mat-button
+                        color="primary"
+                    >
+                        <i class="material-symbols-outlined">
+                            add
+                        </i>
+                        Save
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

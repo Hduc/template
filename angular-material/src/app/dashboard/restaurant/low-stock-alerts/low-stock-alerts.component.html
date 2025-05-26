@@ -1,0 +1,98 @@
+<mat-card class="low-stock-alerts-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Low Stock Alerts
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="dot-menu style-two p-0 d-inline-block border-radius-0">
+                <i class="ri-more-2-fill"></i>
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                    <li>
+                        <button mat-menu-item>
+                            This Day
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Week
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Month
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Year
+                        </button>
+                    </li>
+                </ul>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="p-0 m-0 list-unstyled">
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Thai Bean Soup
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    1
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Banana Shake
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    3
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Chicken Tandoori
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    5
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Thai Chicken Masala
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    5
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Chicken Club Sandwich
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    6
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Shrimp Fried Rice
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    2
+                </span>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <a routerLink="." class="d-block fw-semibold">
+                    Grilled Salmon
+                </a>
+                <span class="d-block text-danger fw-bold">
+                    4
+                </span>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

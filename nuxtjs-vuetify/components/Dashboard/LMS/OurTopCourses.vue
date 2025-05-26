@@ -6,7 +6,7 @@
       <h5 class="mb-0 text-white">Our Top Courses</h5>
     </div>
     <div class="top-courses-card-content">
-      <CCarousel v-bind="settings" :autoplay="5000" :wrap-around="true">
+      <CCarousel v-bind="config">
         <CSlide v-for="slide in items" :key="slide.id">
           <div class="d-flex align-items-center">
             <div class="image border-radius flex-shrink-1">
@@ -55,7 +55,7 @@
   </v-card>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 
 import image1 from "~/assets/images/courses/course1.jpg";
@@ -64,12 +64,16 @@ import image3 from "~/assets/images/courses/course3.jpg";
 
 export default defineComponent({
   name: "OurTopCourses",
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "start",
-    },
-    items: [
+      gap: 3,
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+    };
+
+    const items = [
       {
         id: 1,
         image: image1,
@@ -81,7 +85,7 @@ export default defineComponent({
         time: "25h 50m",
       },
       {
-        id: 1,
+        id: 2,
         image: image2,
         title: "HTML Developer",
         price: "49.99",
@@ -91,7 +95,7 @@ export default defineComponent({
         time: "35h 40m",
       },
       {
-        id: 1,
+        id: 3,
         image: image3,
         title: "Basic Angular",
         price: "55.99",
@@ -100,8 +104,13 @@ export default defineComponent({
         lectures: "48",
         time: "29h 30m",
       },
-    ],
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>
 

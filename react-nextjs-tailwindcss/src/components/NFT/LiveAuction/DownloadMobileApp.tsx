@@ -13,7 +13,7 @@ const DownloadMobileApp: React.FC = () => {
         }}
       >
         <div className="trezo-card-content py-px relative z-[1] mx-auto md:max-w-[245px]">
-          <h3 className="text-lg dark:text-black md:text-[20px] leading-[1.2] mb-[15px] md:mb-[20px]">
+          <h3 className="!text-lg dark:!text-black md:!text-[20px] !leading-[1.2] !mb-[15px] md:!mb-[20px]">
             <span className="font-normal">Have You Tried Our</span> New Mobile
             App?
           </h3>

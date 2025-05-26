@@ -23,7 +23,7 @@ const TotalDiscount: React.FC = () => {
       >
         <div className="trezo-card-header py-[15px] px-[20px] md:px-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-white text-md font-medium">Total Discount</h5>
+            <h5 className="!mb-0 !text-white !text-md !font-medium">Total Discount</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -57,7 +57,7 @@ const TotalDiscount: React.FC = () => {
 
         <div className="trezo-card-content bg-white dark:bg-[#15203c] rounded-[4px] p-[20px] md:p-[25px] border-t border-gray-100 dark:border-[#172036]">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold mb-0 text-[22px] md:text-xl">
+            <h3 className="!font-semibold !mb-0 !text-[22px] md:!text-xl">
             $5,200
             </h3>
             <div className="flex items-center justify-center w-[51px] h-[51px] bg-orange-100 dark:bg-dark rounded-full">

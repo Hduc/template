@@ -20,6 +20,7 @@
       <span class="middle-bar"></span>
       <span class="bottom-bar"></span>
     </div>
+
     <div class="virtual-scroll">
       <div class="sidebar-inner">
         <div class="sidebar-menu">
@@ -30,7 +31,7 @@
                 <div class="title-header d-flex align-items-center ga-2">
                   <span class="material-symbols-outlined">dashboard</span>
                   <span class="title">Dashboard</span>
-                  <span class="badge rounded-circle">20</span>
+                  <span class="badge rounded-circle">30</span>
                   <i class="arrow-right ri-arrow-right-s-line"></i>
                 </div>
               </template>
@@ -143,6 +144,50 @@
                   <li class="sidemenu-item">
                     <NuxtLink to="/dashboard/pos-system" class="sidemenu-link">
                       POS System
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/dashboard/podcast" class="sidemenu-link">
+                      Podcast
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/dashboard/social-media"
+                      class="sidemenu-link"
+                    >
+                      Social Media
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/dashboard/doctor" class="sidemenu-link">
+                      Doctor
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/dashboard/beauty-salon"
+                      class="sidemenu-link"
+                    >
+                      Beauty Salon
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/dashboard/store-analysis"
+                      class="sidemenu-link"
+                    >
+                      Store Analysis
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/dashboard/restaurant" class="sidemenu-link">
+                      Restaurant
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/dashboard/hotel" class="sidemenu-link">
+                      Hotel
                       <span
                         class="trezo-badge d-inline-block position-relative"
                       >
@@ -151,8 +196,48 @@
                     </NuxtLink>
                   </li>
                   <li class="sidemenu-item">
-                    <NuxtLink to="/dashboard/podcast" class="sidemenu-link">
-                      Podcast
+                    <NuxtLink
+                      to="/dashboard/real-estate-agent"
+                      class="sidemenu-link"
+                    >
+                      Real Estate Agent
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/dashboard/credit-card" class="sidemenu-link">
+                      Credit Card
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/dashboard/crypto-trader"
+                      class="sidemenu-link"
+                    >
+                      Crypto Trader
+
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/dashboard/crypto-performance"
+                      class="sidemenu-link"
+                    >
+                      Crypto Perf
                       <span
                         class="trezo-badge d-inline-block position-relative"
                       >
@@ -808,6 +893,180 @@
                   <li class="sidemenu-item">
                     <NuxtLink to="/finance/transaction" class="sidemenu-link">
                       Transaction
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">badge</span>
+                  <span class="title">Doctor</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/doctor/patients-list" class="sidemenu-link">
+                      Patients List
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/doctor/add-patient" class="sidemenu-link">
+                      Add Patient
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/doctor/patient-details"
+                      class="sidemenu-link"
+                    >
+                      Patient Details
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/doctor/appointments" class="sidemenu-link">
+                      Appointments
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/doctor/prescriptions" class="sidemenu-link">
+                      Prescriptions
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/doctor/write-prescription"
+                      class="sidemenu-link"
+                    >
+                      Write a Prescription
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">lunch_dining</span>
+                  <span class="title">Restaurant</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/restaurant/menus" class="sidemenu-link">
+                      Menus
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/restaurant/dish-details"
+                      class="sidemenu-link"
+                    >
+                      Dish Details
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">hotel</span>
+                  <span class="title">Hotel</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/hotel/rooms-list" class="sidemenu-link">
+                      Rooms List
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/hotel/room-details" class="sidemenu-link">
+                      Room Details
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink to="/hotel/guests-list" class="sidemenu-link">
+                      Guests List
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">location_away</span>
+                  <span class="title">Real Estate Agent</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/real-estate-agent/properties"
+                      class="sidemenu-link"
+                    >
+                      Properties
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/real-estate-agent/property-details"
+                      class="sidemenu-link"
+                    >
+                      Property Details
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">paid</span>
+                  <span class="title">Crypto Trader</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/crypto-trader/transactions"
+                      class="sidemenu-link"
+                    >
+                      Transactions
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/crypto-trader/gainers-losers"
+                      class="sidemenu-link"
+                    >
+                      Gainers & Losers
+                    </NuxtLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <NuxtLink
+                      to="/crypto-trader/wallet-crypto"
+                      class="sidemenu-link"
+                    >
+                      Wallet
                     </NuxtLink>
                   </li>
                 </ul>

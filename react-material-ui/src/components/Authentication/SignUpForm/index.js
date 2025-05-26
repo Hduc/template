@@ -8,7 +8,7 @@ import {
   Typography,
   FormControl,
   TextField,
-} from "@mui/material"; 
+} from "@mui/material";
 import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
@@ -32,7 +32,7 @@ const SignUpForm = () => {
             alignItems="center"
             columnSpacing={{ xs: 1, sm: 2, md: 4, lg: 3 }}
           >
-            <Grid item xs={12} md={6} lg={6} xl={7}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 7 }}>
               <Box
                 sx={{
                   display: { xs: "none", md: "block" },
@@ -50,7 +50,7 @@ const SignUpForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={5}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 5 }}>
               <Box
                 className="form-content"
                 sx={{
@@ -196,6 +196,10 @@ const SignUpForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -233,6 +237,10 @@ const SignUpForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -271,6 +279,10 @@ const SignUpForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>

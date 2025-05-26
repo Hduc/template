@@ -64,11 +64,11 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
         onClick={handleBackButtonClick}
         disabled={page === 0}
         aria-label="previous page"
-        sx={{
-          border: "1px solid #eee",
+        sx={{ 
           borderRadius: "4px",
           padding: "6px",
         }}
+        className="border"
       >
         {theme.direction === "rtl" ? (
           <KeyboardArrowRight />
@@ -82,10 +82,10 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         aria-label="next page"
         sx={{
-          border: "1px solid #eee",
           borderRadius: "4px",
           padding: "6px",
         }}
+        className="border"
       >
         {theme.direction === "rtl" ? (
           <KeyboardArrowLeft />
@@ -631,7 +631,7 @@ const PerformanceOfAgents: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={8} />
+                    <TableCell className="border-bottom" colSpan={8} />
                   </TableRow>
                 )}
               </TableBody>

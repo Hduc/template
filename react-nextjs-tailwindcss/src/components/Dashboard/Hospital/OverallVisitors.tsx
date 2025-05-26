@@ -127,9 +127,9 @@ const OverallVisitors: React.FC = () => {
         <div className="trezo-card-content pb-[81px]">
           <span className="block">Overall Visitors</span>
 
-          <h3 className="mb-0 flex items-center font-medium text-xl mt-[11px]">
+          <h3 className="!mb-0 !flex !items-center !font-medium !text-xl !mt-[11px]">
             45,745
-            <span className="relative font-medium text-xs inline-block text-success-700 bg-success-100 border border-success-300 py-[1.5px] ltr:pl-[22px] rtl:pr-[22px] ltr:pr-[10px] rtl:pl-[10px] rounded-full ltr:ml-[10px] rtl:mr-[10px]">
+            <span className="relative font-medium text-xs inline-block text-success-700 bg-success-100 dark:bg-[#15203c] border border-success-300 dark:border-[#15203c] py-[1.5px] ltr:pl-[22px] rtl:pr-[22px] ltr:pr-[10px] rtl:pl-[10px] rounded-full ltr:ml-[10px] rtl:mr-[10px]">
               <i className="ri-arrow-up-fill absolute ltr:left-[6px] rtl:right-[6px] text-base top-1/2 -translate-y-1/2 mt-px"></i>
               7%
             </span>

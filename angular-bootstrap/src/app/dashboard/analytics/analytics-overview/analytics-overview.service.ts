@@ -49,6 +49,9 @@ export class AnalyticsOverviewService {
                         show: true,
                         colors: ["transparent"]
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         categories: initialData.categories,
                         axisTicks: {

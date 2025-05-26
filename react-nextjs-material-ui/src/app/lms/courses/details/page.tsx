@@ -1,6 +1,6 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import NextLink from 'next/link';      
+import NextLink from "next/link";
 import Courses from "@/components/LMS/CoursesDetails/Course";
 import TablesOfContent from "@/components/LMS/CoursesDetails/TablesOfContent";
 import CourseInstructor from "@/components/LMS/CoursesDetails/CourseInstructor";
@@ -32,11 +32,11 @@ export default function Page() {
       <TablesOfContent />
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <CourseInstructor />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <EnrolledStudents />
         </Grid>
       </Grid>

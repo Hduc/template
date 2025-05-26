@@ -21,10 +21,6 @@
                     --mdc-linear-progress-track-height: 5px;
                     width: 150px;
                     gap: 12px;
-
-                    .percentage {
-                        font-size: 12px;
-                    }
                 }
                 &:last-child {
                     border-bottom: 1px solid var(--borderColor);
@@ -58,7 +54,17 @@
 }
 
 /* Min width 576px to Max width 767px */
-@media only screen and (min-width : 576px) and (max-width : 767px) {}
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .worldwide-top-creators-card {
+        .mat-mdc-card-content {
+            ul {
+                margin-top: 20px;
+            }
+        }
+    }
+
+}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {}

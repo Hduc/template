@@ -293,6 +293,15 @@ const ToDoList: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter(
+    (row) =>
+      row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.ticketTitle.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Modal
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -360,14 +369,16 @@ const ToDoList: React.FC = () => {
               gap: "10px",
             }}
           >
-            <form className='t-search-form'>
+            <form className="t-search-form">
               <label>
                 <i className="material-symbols-outlined">search</i>
               </label>
               <input
                 type="text"
-                className='t-input'
-                placeholder="Search here....."
+                className="t-input"
+                placeholder="Search here..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </form>
 
@@ -499,7 +510,7 @@ const ToDoList: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -637,7 +648,7 @@ const ToDoList: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={8} />
+                    <TableCell className="border-bottom" colSpan={8} />
                   </TableRow>
                 )}
               </TableBody>
@@ -722,7 +733,7 @@ const ToDoList: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -749,7 +760,7 @@ const ToDoList: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -783,7 +794,7 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -800,17 +811,17 @@ const ToDoList: React.FC = () => {
                       <DatePicker
                         sx={{
                           width: "100%",
-
                           "& fieldset": {
-                            border: "1px solid #D5D9E2",
+                            border: "1px solid rgba(0, 0, 0, 0.23)",
                             borderRadius: "7px",
                           },
                         }}
+                        className="input-date-picker"
                       />
                     </LocalizationProvider>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -841,7 +852,7 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -873,18 +884,18 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -892,6 +903,7 @@ const ToDoList: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

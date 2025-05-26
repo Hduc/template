@@ -1,10 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import styles from "../ChooseLanguage/ChooseLanguage.module.css";
-import { IconButton, Button, Typography, Tooltip, Menu } from "@mui/material";
+import React, { useState } from "react"; 
+import {
+  Box,
+  IconButton,
+  Button,
+  Typography,
+  Tooltip,
+  Menu,
+} from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import TranslateIcon from "@mui/icons-material/Translate"; 
+import TranslateIcon from "@mui/icons-material/Translate";
 
 const ChooseLanguage = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -84,67 +90,122 @@ const ChooseLanguage = () => {
           Choose Language
         </Typography>
 
-        <ul className={styles.langList}>
-          <li>
-            <Button variant="text">
-              <img
-                src="/images/flags/usa.svg"
-                alt="usa"
-                width={30}
-                height={30}
-              />
-              English
-            </Button>
-          </li>
+        <Box>
+          <Button
+            variant="text"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "10px",
+              textTransform: "capitalize",
+              fontSize: "14px",
+              width: "100%",
+              borderStyle: "dashed !important",
+              padding: "10px 20px",
+            }}
+            className="text-black border-top"
+          >
+            <img src="/images/flags/usa.svg" alt="usa" width={30} height={30} />
+            English
+          </Button>
 
-          <li>
-            <Button variant="text">
-              <img
-                src="/images/flags/canada.svg"
-                alt="canada"
-                width={30}
-                height={30}
-              />
-              Canada
-            </Button>
-          </li>
+          <Button
+            variant="text"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "10px",
+              textTransform: "capitalize",
+              fontSize: "14px",
+              width: "100%",
+              borderStyle: "dashed !important",
+              padding: "10px 20px",
+            }}
+            className="text-black border-top"
+          >
+            <img
+              src="/images/flags/canada.svg"
+              alt="canada"
+              width={30}
+              height={30}
+            />
+            Canada
+          </Button>
 
-          <li>
-            <Button variant="text">
-              <img
-                src="/images/flags/germany.svg"
-                alt="germany"
-                width={30}
-                height={30}
-              />
-              Germany
-            </Button>
-          </li>
+          <Button
+            variant="text"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "10px",
+              textTransform: "capitalize",
+              fontSize: "14px",
+              width: "100%",
+              borderStyle: "dashed !important",
+              padding: "10px 20px",
+            }}
+            className="text-black border-top"
+          >
+            <img
+              src="/images/flags/germany.svg"
+              alt="germany"
+              width={30}
+              height={30}
+            />
+            Germany
+          </Button>
 
-          <li>
-            <Button variant="text">
-              <img
-                src="/images/flags/portugal.svg"
-                alt="portugal"
-                width={30}
-                height={30}
-              />
-              Portugal
-            </Button>
-          </li>
+          <Button
+            variant="text"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "10px",
+              textTransform: "capitalize",
+              fontSize: "14px",
+              width: "100%",
+              borderStyle: "dashed !important",
+              padding: "10px 20px",
+            }}
+            className="text-black border-top"
+          >
+            <img
+              src="/images/flags/portugal.svg"
+              alt="portugal"
+              width={30}
+              height={30}
+            />
+            Portugal
+          </Button>
 
-          <li>
-            <Button variant="text">
-              <img
-                src="/images/flags/spain.svg"
-                alt="spain"
-                width={30}
-                height={30}
-              />
-              Spain
-            </Button>
-          </li>
-        </ul>
+          <Button
+            variant="text"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              gap: "10px",
+              textTransform: "capitalize",
+              fontSize: "14px",
+              width: "100%",
+              borderStyle: "dashed !important",
+              padding: "10px 20px",
+            }}
+            className="text-black border-top"
+          >
+            <img
+              src="/images/flags/spain.svg"
+              alt="spain"
+              width={30}
+              height={30}
+            />
+            Spain
+          </Button>
+        </Box>
       </Menu>
     </>
   );

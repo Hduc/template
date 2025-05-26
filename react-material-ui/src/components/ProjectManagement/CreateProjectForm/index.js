@@ -17,6 +17,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "../../Forms/FileUpload";
 
 const CreateProjectForm = () => {
   const [priorityStatus, setPriorityStatus] = useState("");
@@ -45,6 +46,12 @@ const CreateProjectForm = () => {
     setProjectTags(event.target.value);
   };
 
+  // File Upload
+  const handleFileSelect = (files) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Box component="form">
@@ -62,7 +69,7 @@ const CreateProjectForm = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -96,13 +103,17 @@ const CreateProjectForm = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -136,13 +147,17 @@ const CreateProjectForm = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -159,17 +174,17 @@ const CreateProjectForm = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -186,17 +201,17 @@ const CreateProjectForm = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"
@@ -215,7 +230,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -249,13 +264,17 @@ const CreateProjectForm = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <Typography
                   component="label"
@@ -294,7 +313,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <Typography
                   component="label"
@@ -335,7 +354,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <Typography
                   component="label"
@@ -375,7 +394,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <Typography
                   component="label"
@@ -416,7 +435,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <Typography
                   component="label"
@@ -457,7 +476,7 @@ const CreateProjectForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -470,27 +489,10 @@ const CreateProjectForm = () => {
                 Project Preview Image
               </Typography>
 
-              <TextField
-                autoComplete="projectPreviewImage"
-                name="projectPreviewImage"
-                required
-                fullWidth
-                id="projectPreviewImage"
-                type="file"
-                autoFocus
-                // inputProps={{
-                //   multiple: true,
-                // }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -503,27 +505,10 @@ const CreateProjectForm = () => {
                 Attached File
               </Typography>
 
-              <TextField
-                autoComplete="attachedFile"
-                name="attachedFile"
-                required
-                fullWidth
-                id="attachedFile"
-                type="file"
-                autoFocus
-                // inputProps={{
-                //   multiple: true,
-                // }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box
                 sx={{
                   display: "flex",

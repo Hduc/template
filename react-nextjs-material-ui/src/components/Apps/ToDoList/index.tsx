@@ -177,7 +177,7 @@ function createData(
   };
 }
 
-const rows = [
+const initialRows = [
   createData(
     "#850",
     "Network Infrastructure",
@@ -317,12 +317,16 @@ const rows = [
 
 const ToDoList: React.FC = () => {
   // Table
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  const filteredRows = initialRows.filter(
+    (row) =>
+      row.ticketTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.assignedTo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.id.includes(searchTerm)
+  );
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
@@ -387,14 +391,16 @@ const ToDoList: React.FC = () => {
             mb: "25px",
           }}
         >
-          <form className='t-search-form'>
+          <form className="t-search-form">
             <label>
               <i className="material-symbols-outlined">search</i>
             </label>
             <input
               type="text"
-              className='t-input'
+              className="t-input"
               placeholder="Search task here..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
           </form>
 
@@ -524,11 +530,11 @@ const ToDoList: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
-                  : rows
+                  : filteredRows
                 ).map((row) => (
                   <TableRow key={row.id}>
                     <TableCell
@@ -659,11 +665,6 @@ const ToDoList: React.FC = () => {
                     </TableCell>
                   </TableRow>
                 ))}
-                {emptyRows > 0 && (
-                  <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={8} />
-                  </TableRow>
-                )}
               </TableBody>
 
               <TableFooter>
@@ -676,7 +677,7 @@ const ToDoList: React.FC = () => {
                       { label: "All", value: -1 },
                     ]}
                     colSpan={8}
-                    count={rows.length}
+                    count={filteredRows.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     slotProps={{
@@ -746,7 +747,7 @@ const ToDoList: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -773,7 +774,7 @@ const ToDoList: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -807,7 +808,7 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -824,17 +825,17 @@ const ToDoList: React.FC = () => {
                       <DatePicker
                         sx={{
                           width: "100%",
-
                           "& fieldset": {
-                            border: "1px solid #D5D9E2",
+                            border: "1px solid rgba(0, 0, 0, 0.23)",
                             borderRadius: "7px",
                           },
                         }}
+                        className="input-date-picker"
                       />
                     </LocalizationProvider>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -865,7 +866,7 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -897,18 +898,18 @@ const ToDoList: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -916,6 +917,7 @@ const ToDoList: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

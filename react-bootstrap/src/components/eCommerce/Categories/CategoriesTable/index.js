@@ -87,7 +87,7 @@ const categoriesData = [
 ];
 
 const CategoriesTable = () => {
-  const itemsPerPage = 5; // Number of items per page
+  const itemsPerPage = 7; // Number of items per page
   const [currentPage, setCurrentPage] = useState(1); // Current page state
   const [searchQuery, setSearchQuery] = useState(""); // Search query state
 
@@ -249,7 +249,7 @@ const CategoriesTable = () => {
               </span>
 
               <nav>
-                <ul className="pagination">
+                <ul className="pagination m-0">
                   <li
                     className={`page-item ${
                       currentPage === 1 ? "disabled" : ""

@@ -116,7 +116,7 @@ const IncomeSource: React.FC = () => {
       >
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-white">Income Source</h5>
+            <h5 className="!mb-0 !text-white">Income Source</h5>
           </div>
           <div className="trezo-card-subtitle">
             <span className="block text-white">Last 30 days</span>

@@ -66,7 +66,7 @@ const ClientTestimonials: React.FC = () => {
 
   return (
     <>
-      <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[18px]">
+      <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[18px]">
         Client Testimonials
       </h3>
 

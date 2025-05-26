@@ -31,28 +31,28 @@ const PositionedSnackbar = () => {
         </Button>
       </Box>
       <Grid container justifyContent="center">
-        <Grid item xs={6}>
+        <Grid size={{ sm: 6 }}>
           <Button
             onClick={handleClick({ vertical: "top", horizontal: "left" })}
           >
             Top-Left
           </Button>
         </Grid>
-        <Grid item xs={6} textAlign="right">
+        <Grid size={{ xs: 6 }} textAlign="right">
           <Button
             onClick={handleClick({ vertical: "top", horizontal: "right" })}
           >
             Top-Right
           </Button>
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={{ sm: 6 }}>
           <Button
             onClick={handleClick({ vertical: "bottom", horizontal: "left" })}
           >
             Bottom-Left
           </Button>
         </Grid>
-        <Grid item xs={6} textAlign="right">
+        <Grid size={{ xs: 6 }} textAlign="right">
           <Button
             onClick={handleClick({ vertical: "bottom", horizontal: "right" })}
           >

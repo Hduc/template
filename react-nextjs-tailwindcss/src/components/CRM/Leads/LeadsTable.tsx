@@ -509,7 +509,7 @@ const LeadsTable: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {indexOfFirstItem + 1} to{" "}
               {Math.min(indexOfLastItem, leads.length)} of {leads.length}{" "}
               results
@@ -582,7 +582,7 @@ const LeadsTable: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                 <div className="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0">Add New Lead</h5>
+                    <h5 className="!mb-0">Add New Lead</h5>
                   </div>
                   <div className="trezo-card-subtitle">
                     <button

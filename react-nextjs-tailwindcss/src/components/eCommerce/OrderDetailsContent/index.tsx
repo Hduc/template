@@ -12,7 +12,7 @@ const OrderDetailsContent: React.FC = () => {
           <div className="trezo-card bg-primary-500 mb-[25px] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-header mb-[5px] md:mb-[25px] sm:flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0 text-white">Tracking ID: 000346798254</h5>
+                <h5 className="!mb-0 !text-white">Tracking ID: 000346798254</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -71,7 +71,7 @@ const OrderDetailsContent: React.FC = () => {
         <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div className="trezo-card-title">
-              <h5 className="mb-0">Billing Details</h5>
+              <h5 className="!mb-0">Billing Details</h5>
             </div>
           </div>
 
@@ -108,7 +108,7 @@ const OrderDetailsContent: React.FC = () => {
         <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div className="trezo-card-title">
-              <h5 className="mb-0">Shipping Details</h5>
+              <h5 className="!mb-0">Shipping Details</h5>
             </div>
           </div>
 
@@ -145,7 +145,7 @@ const OrderDetailsContent: React.FC = () => {
         <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div className="trezo-card-title">
-              <h5 className="mb-0">Delivery Details</h5>
+              <h5 className="!mb-0">Delivery Details</h5>
             </div>
           </div>
 

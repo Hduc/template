@@ -58,7 +58,7 @@ const NoticeBoard: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Notice Board</h5>
+            <h5 className="!mb-0 !font-semibold">Notice Board</h5>
           </div>
           <div className="trezo-card-subtitle">
             <button
@@ -87,7 +87,7 @@ const NoticeBoard: React.FC = () => {
                   height={22}
                 />
               </div>
-              <h6 className="text-base font-medium mb-[4px]">
+              <h6 className="!text-base !font-medium !mb-[4px]">
                 <a
                   href="#"
                   className="text-gray-700 dark:text-gray-400 transition-all hover:text-primary-500"
@@ -95,7 +95,7 @@ const NoticeBoard: React.FC = () => {
                   {notice.title}
                 </a>
               </h6>
-              <p className="text-xs max-w-[166px] leading-[1.4] mb-[4px]">
+              <p className="!text-xs !max-w-[166px] !leading-[1.4] !mb-[4px]">
                 {notice.description}
               </p>
               <span className="block relative text-primary-500 text-xs ltr:pl-[16px] rtl:pr-[16px]">

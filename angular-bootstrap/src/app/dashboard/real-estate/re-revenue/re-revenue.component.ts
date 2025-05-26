@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ReRevenueService } from './re-revenue.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-re-revenue',
@@ -10,6 +11,7 @@ import { ReRevenueService } from './re-revenue.service';
 export class ReRevenueComponent {
 
 	constructor(
+		public themeService: CustomizerSettingsService,
 		private reRevenueService: ReRevenueService
 	) {}
 

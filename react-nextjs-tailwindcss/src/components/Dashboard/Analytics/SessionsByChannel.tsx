@@ -96,7 +96,7 @@ const SessionsByChannel: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Sessions by Channel</h5>
+            <h5 className="!mb-0">Sessions by Channel</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -148,7 +148,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-secondary-500 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Email
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 976
               </h6>
             </li>
@@ -157,7 +157,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-success-500 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Organic Search
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 651
               </h6>
             </li>
@@ -166,7 +166,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-purple-500 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Direct Browse
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 818
               </h6>
             </li>
@@ -175,7 +175,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-secondary-300 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Paid Search
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 459
               </h6>
             </li>
@@ -184,7 +184,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-primary-500 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Social
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 320
               </h6>
             </li>
@@ -193,7 +193,7 @@ const SessionsByChannel: React.FC = () => {
                 <span className="block bg-orange-500 w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm relative -top-[1px]"></span>
                 Referral
               </span>
-              <h6 className="mb-0 leading-none font-medium text-lg ltr:ml-[19px] rtl:mr-[19px]">
+              <h6 className="!mb-0 !leading-none !font-medium !text-lg ltr:!ml-[19px] rtl:!mr-[19px]">
                 209
               </h6>
             </li>

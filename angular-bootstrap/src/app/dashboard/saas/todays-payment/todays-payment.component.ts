@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { TodaysPaymentService } from './todays-payment.service';
 import { NgIf } from '@angular/common';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-todays-payment',
@@ -14,6 +15,7 @@ export class TodaysPaymentComponent {
     chartData: { [key: string]: { series: any[]; categories: string[] } };
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private todaysPaymentService: TodaysPaymentService
     ) {
         this.chartData = {
@@ -40,7 +42,7 @@ export class TodaysPaymentComponent {
             },
             Yearly: {
                 series: [{ name: 'Payment', data: [500, 550, 600, 650, 700] }],
-                categories: ['2020', '2021', '2022', '2023', '2024']
+                categories: ['2021', '2022', '2023', '2024', '2025']
             }
         };
     }

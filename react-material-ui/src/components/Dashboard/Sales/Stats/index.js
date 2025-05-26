@@ -85,19 +85,19 @@ const Stats = () => {
             container
             columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 2 }}
           >
-            <Grid item xs={12} md={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 3 }}>
               <TotalSales />
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 3 }}>
               <TotalOrders />
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 3 }}>
               <TotalProfit />
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, md: 6, lg: 6, xl: 3 }}>
               <TotalRevenue />
             </Grid>
           </Grid>

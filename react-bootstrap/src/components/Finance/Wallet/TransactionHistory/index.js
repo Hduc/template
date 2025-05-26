@@ -79,7 +79,7 @@ const TransactionHistory = () => {
 
   const [selectedTransactions, setSelectedTransactions] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 6;
+  const rowsPerPage = 7;
 
   // Calculate total pages
   const totalPages = Math.ceil(transactions.length / rowsPerPage);
@@ -209,8 +209,7 @@ const TransactionHistory = () => {
                               edit
                             </i>
                           </button>
-                          <button
-                            onClick={() => deleteTransaction(transaction.id)}
+                          <button 
                             className="ps-0 border-0 bg-transparent lh-1"
                           >
                             <i className="material-symbols-outlined fs-16 text-danger">

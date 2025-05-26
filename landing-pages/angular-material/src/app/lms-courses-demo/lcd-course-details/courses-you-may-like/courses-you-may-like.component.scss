@@ -1,0 +1,10 @@
+@use "../../common/courses/courses.component.scss";
+
+.course-item {
+    border: 1px solid #d5d9e2;
+}
+.component-dark {
+    .course-item {
+        border-color: rgba(255, 255, 255, 0.10);
+    }
+}

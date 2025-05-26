@@ -133,7 +133,7 @@ const TicketDetailsContent: React.FC = () => {
         <div className="lg:col-span-2">
           <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-content">
-              <h6 className="text-[15px] [&:not(:first-child)]:mt-[20px]">
+              <h6 className="!text-[15px] [&:not(:first-child)]:!mt-[20px]">
                 Ticket Description
               </h6>
               <p>
@@ -149,7 +149,7 @@ const TicketDetailsContent: React.FC = () => {
                 Lorem Ipsum.
               </p>
 
-              <h6 className="text-[15px] [&:not(:first-child)]:mt-[20px]">
+              <h6 className="!text-[15px] [&:not(:first-child)]:!mt-[20px]">
                 Network Infrastructure for Trezo
               </h6>
 
@@ -171,7 +171,7 @@ const TicketDetailsContent: React.FC = () => {
                 </li>
               </ul>
 
-              <h6 className="text-[15px] [&:not(:first-child)]:mt-[20px]">
+              <h6 className="!text-[15px] [&:not(:first-child)]:!mt-[20px]">
                 Here is the Code:
               </h6>
 
@@ -221,7 +221,7 @@ const TicketDetailsContent: React.FC = () => {
                     but also the leap into electronic typesetting, remaining
                     essentially unchanged.
                   </p>
-                  <h6 className="text-[15px] mb-[12px]">Screenshots</h6>
+                  <h6 className="!text-[15px] !mb-[12px]">Screenshots</h6>
                   <div className="-mb-[15px]">
                     <Image
                       src="/images/courses/course1.jpg"
@@ -261,7 +261,7 @@ const TicketDetailsContent: React.FC = () => {
                     including versions of Lorem Ipsum.
                   </p>
 
-                  <h6 className="text-[15px] mb-[12px]">Screenshots</h6>
+                  <h6 className="!text-[15px] !mb-[12px]">Screenshots</h6>
                   <div className="-mb-[15px]">
                     <Image
                       src="/images/products/product1.jpg"

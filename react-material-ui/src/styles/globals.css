@@ -55,6 +55,26 @@
   right: 20px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.po-right-10 {
+  right: 10px;
+}
+
+.po-right-3 {
+  right: 3px;
+}
+
+.-right-10 {
+  right: -10px;
+}
+
 .po-left-32 {
   left: 32%;
 }
@@ -69,6 +89,10 @@
 
 .-po-right-80 {
   right: -80px;
+}
+
+.po-left-15 {
+  left: 15px;
 }
 
 [dir=rtl] .left-0 {
@@ -98,6 +122,22 @@
 [dir=rtl] .-po-right-80 {
   right: auto;
   left: -80px;
+}
+[dir=rtl] .po-left-15 {
+  left: auto;
+  right: 15px;
+}
+[dir=rtl] .po-right-10 {
+  right: auto;
+  left: 10px;
+}
+[dir=rtl] .po-right-3 {
+  right: auto;
+  left: 3px;
+}
+[dir=rtl] .-right-10 {
+  right: auto;
+  left: -10px;
 }
 
 .bg-white {
@@ -364,10 +404,6 @@
   color: #b1bbc8;
 }
 
-.border-color-primary {
-  border-color: var(--primaryColor) !important;
-}
-
 .border {
   border: 1px solid #edeff5 !important;
 }
@@ -390,6 +426,10 @@
 
 .border-none {
   border: none !important;
+}
+
+.border-color-primary {
+  border-color: var(--primaryColor) !important;
 }
 
 .border-radius {
@@ -1066,6 +1106,11 @@
   height: 10px;
   margin-right: 6px;
 }
+.apexcharts-canvas .apexcharts-tooltip-marker::before {
+  font-size: 13px;
+  position: relative;
+  top: -4px;
+}
 .apexcharts-canvas .apexcharts-text {
   font-family: var(--fontFamily) !important;
 }
@@ -1117,7 +1162,8 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
+  overflow-y: auto !important;
 }
 
 img {
@@ -1519,6 +1565,10 @@ table tfoot tr p {
   padding: 0 !important;
 }
 
+.main-wrapper-content.with-horizontal-navbar .main-content:has(div.auth-main-wrapper) {
+  padding: 0 !important;
+}
+
 .full-calendar-box .fc .fc-toolbar-title {
   font-size: 18px;
 }
@@ -1536,7 +1586,7 @@ table tfoot tr p {
   border: 1px solid var(--borderColor);
 }
 
-.uc-content .MuiGrid-item:nth-last-child(1) .border-bottom, .uc-content .MuiGrid-item:nth-last-child(2) .border-bottom {
+.uc-content .uc-grid:nth-last-child(1) .border-bottom, .uc-content .uc-grid:nth-last-child(2) .border-bottom {
   border-bottom: none !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
@@ -1548,13 +1598,10 @@ table tfoot tr p {
 .date-time-picker-box .MuiStack-root .MuiFormControl-root {
   min-width: 200px;
 }
-.date-time-picker-box .MuiStack-root .MuiFormControl-root .MuiInputBase-input {
-  padding: 5px 14px;
+.date-time-picker-box .MuiStack-root .MuiFormControl-root .MuiPickersSectionList-root {
+  padding: 10px 0;
   height: auto;
   font-size: 12px;
-}
-.date-time-picker-box .MuiStack-root .MuiFormControl-root .MuiButtonBase-root {
-  padding: 4px;
 }
 
 .campaign-goal label .MuiTypography-root {
@@ -1778,4 +1825,183 @@ table tfoot tr p {
     margin-top: 15px;
     margin-bottom: 15px;
   }
+}
+.most-popular-tabs .tab-btn {
+  background-color: #eceef2;
+  color: var(--bodyColor);
+}
+.most-popular-tabs .tab-btn.active {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+.dark-theme .tab-btn {
+  background-color: #000;
+  color: var(--whiteColor);
+}
+
+.mastering-digital-marketing-slide .swiper-pagination {
+  text-align: right;
+  top: 0;
+  right: 0;
+  height: 30px;
+}
+.mastering-digital-marketing-slide .swiper-pagination .swiper-pagination-bullet {
+  background-color: #8695AA;
+  width: 10px;
+  height: 3px;
+  border-radius: 4px;
+  transition: var(--transition);
+  opacity: 1;
+}
+.mastering-digital-marketing-slide .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--borderColor);
+  width: 30px;
+}
+
+/* RTL Style */
+[dir=rtl] .mastering-digital-marketing-slide .swiper-pagination {
+  text-align: left;
+  right: auto;
+  left: 0;
+}
+
+.text-000 {
+  color: #000 !important;
+}
+
+.bsts-products-slide .swiper-button-prev, .bsts-products-slide .swiper-button-next {
+  background-color: var(--primaryColor);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.bsts-products-slide .swiper-button-prev::after, .bsts-products-slide .swiper-button-next::after {
+  font-size: 18px;
+}
+.bsts-products-slide .swiper-button-prev.swiper-button-disabled, .bsts-products-slide .swiper-button-next.swiper-button-disabled {
+  cursor: auto;
+  pointer-events: auto;
+}
+
+.ra-calendar {
+  width: 100%;
+  border: none;
+}
+.ra-calendar .react-calendar__navigation {
+  display: none;
+}
+.ra-calendar .react-calendar__month-view__weekdays {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+.ra-calendar .react-calendar__month-view__weekdays abbr {
+  text-decoration: initial;
+}
+.ra-calendar .react-calendar__month-view__days .react-calendar__tile {
+  background-color: #E6EFF2;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  height: 50px;
+  font-size: 16px;
+}
+.ra-calendar .react-calendar__month-view__days .react-calendar__tile.react-calendar__tile--active {
+  background-color: var(--primaryColor);
+}
+
+.dark-theme .ra-calendar {
+  background-color: #000;
+}
+.dark-theme .ra-calendar .react-calendar__month-view__days .react-calendar__tile {
+  background-color: #000;
+  border: 2px solid #333;
+}
+.dark-theme .ra-calendar .react-calendar__month-view__days .react-calendar__tile.react-calendar__tile--active {
+  background-color: var(--primaryColor);
+  color: #fff !important;
+}
+.dark-theme .ra-calendar .react-calendar__month-view__days .react-calendar__tile.react-calendar__tile--active abbr {
+  color: #fff !important;
+}
+
+.bs-rs-appointments {
+  padding-left: 11px;
+  padding-right: 5px;
+}
+.bs-rs-appointments .bs-rs-appointments-list {
+  border-left: 1px dashed #D5D9E2;
+  padding-left: 37px;
+}
+.bs-rs-appointments .bs-rs-appointments-list .verifyIcon {
+  left: -37px !important;
+}
+
+[dir=rtl] .bs-rs-appointments {
+  padding-left: 5px;
+  padding-right: 11px;
+}
+[dir=rtl] .bs-rs-appointments .bs-rs-appointments-list {
+  padding-left: 0;
+  padding-right: 37px;
+  border-left: none;
+  border-right: 1px dashed #D5D9E2;
+}
+[dir=rtl] .bs-rs-appointments .bs-rs-appointments-list .verifyIcon {
+  left: auto !important;
+  right: -60px !important;
+}
+
+.prescriptions-white-logo {
+  display: none;
+}
+
+.dark-theme .prescriptions-logo {
+  display: none;
+}
+.dark-theme .prescriptions-white-logo {
+  display: block;
+}
+.dark-theme .bar-code {
+  filter: invert(1);
+}
+
+.upload-file-paper {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.hotel-popular-rooms .swiper-pagination {
+  position: initial;
+  margin-top: 15px;
+}
+.hotel-popular-rooms .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 30px;
+}
+.hotel-popular-rooms .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+  width: 20px;
+}
+
+.rea-my-featured-listings .swiper-pagination {
+  position: initial;
+  margin-top: 10px;
+}
+.rea-my-featured-listings .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 30px;
+}
+.rea-my-featured-listings .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--dangerColor);
+  width: 20px;
+}
+
+.rea-client-ratings .swiper-pagination {
+  position: initial;
+  margin-top: 15px;
+}
+.rea-client-ratings .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 30px;
+}
+.rea-client-ratings .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--dangerColor);
+  width: 20px;
 }/*# sourceMappingURL=globals.css.map */

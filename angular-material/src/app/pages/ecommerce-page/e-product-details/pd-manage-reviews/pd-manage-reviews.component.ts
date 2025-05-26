@@ -63,7 +63,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -103,7 +103,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -143,7 +143,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -183,7 +183,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -223,7 +223,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -263,7 +263,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -303,7 +303,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -343,7 +343,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -383,7 +383,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {
@@ -423,7 +423,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             review: `This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.`
         },
         date: {
-            date: '17 Dec 2024',
+            date: '17 Dec 2025',
             time: '08:30 PM'
         },
         status: {

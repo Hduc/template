@@ -270,7 +270,12 @@
             </mat-card>
         </div>
     </div>
-    <mat-card class="mb-25 border-radius d-block bg-transparent p-0 border-0 shadow-none">
+    <mat-card
+        class="mb-25 border-radius d-block bg-transparent p-0 border-0 shadow-none"
+        [class.component-body-bg-color]="themeService.isBodyBG()"
+        [class.component-card-borderd]="themeService.isCardBordered()"
+        [class.component-card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+    >
         <mat-card-content>
             <div class="form-btn-box">
                 <button type="button" mat-button color="warn">

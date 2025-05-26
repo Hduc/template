@@ -175,6 +175,14 @@
                 }
             }
         }
+        &.card-with-box-shadow {
+            &.shadow-none {
+                box-shadow: unset !important;
+            }
+        }
+        &.component-body-bg-color {
+            box-shadow: unset !important;
+        }
     }
     .cryptocurrency-types-menu {
         &.mat-mdc-menu-panel {

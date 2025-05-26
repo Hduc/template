@@ -2,6 +2,8 @@
     class="crypto-exchange-card mb-25 border-radius d-block border-0 shadow-none"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
     [class.component-dark-theme]="themeService.isDark()"
+    [class.card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+    [class.component-body-bg-color]="themeService.isBodyBG()"
 >
     <mat-card-header>
         <mat-card-title>

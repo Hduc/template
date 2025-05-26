@@ -59,6 +59,21 @@
         .bg-primary-50, .bg-orange-50, .bg-success-50, .bg-purple-50 {
             background-color: #15203c !important;
         }
+        .trezo-card-content {
+            .box {
+                .info {
+                    .info-badge {
+                        border-color: #0C1427;
+                        background-color: #0C1427;
+            
+                        &.down {
+                            border-color: #0C1427;
+                            background-color: #0C1427;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.component-rtl-enabled {
         .trezo-card-content {

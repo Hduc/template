@@ -32,11 +32,11 @@ const ComingSoonContent = () => {
             alignItems="center"
             columnSpacing={{ xs: 1, sm: 2, md: 4, lg: 3 }}
           >
-            <Grid item xs={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <Countdown endDate="" />
             </Grid>
 
-            <Grid item xs={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <Box
                 className="form-content"
                 sx={{
@@ -120,6 +120,10 @@ const ComingSoonContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>

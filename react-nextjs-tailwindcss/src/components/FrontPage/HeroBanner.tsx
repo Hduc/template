@@ -10,7 +10,7 @@ const HeroBanner: React.FC = () => {
       <div className="pt-[125px] md:pt-[145px] lg:pt-[185px]">
         <div className="container 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
           <div className="text-center mx-auto xl:max-w-[935px] mb-[30px] md:mb-[45px] lg:mb-[60px]">
-            <h1 className="text-[32px] md:text-[40px] lg:text-[50px] xl:text-[60px] mb-[13px] md:mb-[22px] lg:mb-[25px] xl:mb-[30px] -tracking-[.5px] md:-tracking-[1px] xl:-tracking-[1.5px] leading-[1.2]">
+            <h1 className="!text-[32px] md:!text-[40px] lg:!text-[50px] xl:!text-[60px] !mb-[13px] md:!mb-[22px] lg:!mb-[25px] xl:!mb-[30px] -tracking-[.5px] md:-tracking-[1px] xl:-tracking-[1.5px] !leading-[1.2]">
               Insights On-the-Go: Access Your Dashboard Anywhere, Anytime
             </h1>
 

@@ -148,7 +148,7 @@ const InboundCalls: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-px font-semibold">Inbound Calls</h5>
+            <h5 className="!mb-px !font-semibold">Inbound Calls</h5>
             <p className="text-xs">Overview of incoming call volume</p>
           </div>
 
@@ -208,7 +208,7 @@ const InboundCalls: React.FC = () => {
                 />
               </div>
               <div>
-                <h5 className="mb-px text-xl md:text-2xl leading-none font-semibold">
+                <h5 className="!mb-px !text-xl md:!text-2xl !leading-none !font-semibold">
                   1,235
                 </h5>
                 <span className="block">Past 24 hours</span>

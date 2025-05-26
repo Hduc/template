@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import styles from "../Notifications/Notifications.module.css";
+import React, { useState } from "react"; 
 import {
   IconButton,
   Button,
@@ -10,8 +9,8 @@ import {
   Menu,
   Badge,
   Box,
-  Link
-} from "@mui/material"; 
+  Link,
+} from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 const Notifications = () => {
@@ -88,129 +87,163 @@ const Notifications = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <div className={styles.header}>
-          <Typography variant="h4">
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "5px",
+            padding: "12px 20px",
+          }}
+        >
+          <Typography variant="h4" sx={{ fontWeight: "600", fontSize: "14px" }}>
             Notifications <span className="text-body">(03)</span>
           </Typography>
-          <Button variant="text">clear all</Button>
-        </div>
 
-        <div className={styles.notification}>
-          <div className={styles.notificationList}>
-            <div className={styles.icon}>
-              <i className="material-symbols-outlined">sms</i>
-            </div>
+          <Button
+            variant="text"
+            sx={{
+              textTransform: "capitalize",
+              fontSize: "12px",
+              fontWeight: "500",
+              minWidth: "auto",
+            }}
+          >
+            clear all
+          </Button>
+        </Box>
 
+        <Box>
+          <Link href="/notifications" className="text-body">
             <Box
-              component="span"
-              sx={{ display: "block", mb: "4px" }}
-              className="text-black"
-            >
-              You have requested to{" "}
-              <strong style={{ fontWeight: "600" }}>withdrawal</strong>
-            </Box>
-
-            <Box component="span" sx={{ display: "block" }}>
-              2 hrs ago
-            </Box>
-
-            <Link
-              href="/notifications"
-              style={{
-                display: "block",
-                left: "0",
-                top: "0",
-                bottom: "0",
-                zIndex: "1",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
+              className="border-top"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: "10px", sm: "15px" },
+                padding: "12px 20px",
               }}
-            ></Link>
-          </div>
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "100%",
+                  bgcolor: "#f1f1f1",
+                  fontSize: "20px",
+                  color: "primary.main",
+                }}
+                className="for-dark-secondary-bg"
+              >
+                <i className="material-symbols-outlined">sms</i>
+              </Box>
 
-          <div className={styles.notificationList}>
-            <div className={styles.icon}>
-              <i className="material-symbols-outlined">person</i>
-            </div>
+              <Box>
+                <Typography sx={{ mb: "4px" }} className="text-black">
+                  You have requested to{" "}
+                  <strong style={{ fontWeight: "600" }}>withdrawal</strong>
+                </Typography>
 
+                <Typography>2 hrs ago</Typography>
+              </Box>
+            </Box>
+          </Link>
+
+          <Link href="/notifications" className="text-body">
             <Box
-              component="span"
-              sx={{ display: "block", mb: "4px" }}
-              className="text-black"
-            >
-              <strong style={{ fontWeight: "600" }}>A new user</strong> added in
-              Trezo
-            </Box>
-
-            <Box component="span" sx={{ display: "block" }}>
-              3 hrs ago
-            </Box>
-
-            <Link
-              href="/notifications"
-              style={{
-                display: "block",
-                left: "0",
-                top: "0",
-                bottom: "0",
-                zIndex: "1",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
+              className="border-top"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: "10px", sm: "15px" },
+                padding: "12px 20px",
               }}
-            ></Link>
-          </div>
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "100%",
+                  bgcolor: "#f1f1f1",
+                  fontSize: "20px",
+                  color: "primary.main",
+                }}
+                className="for-dark-secondary-bg"
+              >
+                <i className="material-symbols-outlined">person</i>
+              </Box>
 
-          <div className={styles.notificationList}>
-            <div className={styles.icon}>
-              <i className="material-symbols-outlined">mark_email_unread</i>
-            </div>
+              <Box>
+                <Typography sx={{ mb: "4px" }} className="text-black">
+                  <strong style={{ fontWeight: "600" }}>A new user</strong>{" "}
+                  added in Trezo
+                </Typography>
 
+                <Typography>3 hrs ago</Typography>
+              </Box>
+            </Box>
+          </Link>
+
+          <Link href="/notifications" className="text-body">
             <Box
-              component="span"
-              sx={{ display: "block", mb: "4px" }}
-              className="text-black"
-            >
-              You have requested to{" "}
-              <strong style={{ fontWeight: "600" }}>withdrawal</strong>
-            </Box>
-
-            <Box component="span" sx={{ display: "block" }}>
-              1 day ago
-            </Box>
-
-            <Link
-              href="/notifications"
-              style={{
-                display: "block",
-                left: "0",
-                top: "0",
-                bottom: "0",
-                zIndex: "1",
-                position: "absolute",
-                width: "100%",
-                height: "100%",
+              className="border-top"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: { xs: "10px", sm: "15px" },
+                padding: "12px 20px",
               }}
-            ></Link>
-          </div>
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "100%",
+                  bgcolor: "#f1f1f1",
+                  fontSize: "20px",
+                  color: "primary.main",
+                }}
+                className="for-dark-secondary-bg"
+              >
+                <i className="material-symbols-outlined">mark_email_unread</i>
+              </Box>
 
-          <Typography component="div" textAlign="center">
+              <Box>
+                <Typography sx={{ mb: "4px" }} className="text-black">
+                  You have requested to{" "}
+                  <strong style={{ fontWeight: "600" }}>withdrawal</strong>
+                </Typography>
+
+                <Typography>1 day ago</Typography>
+              </Box>
+            </Box>
+          </Link>
+
+          <Box className="border-top" textAlign="center">
             <Link
-              href="#"
+              href="/notifications/"
               style={{
                 fontWeight: "500",
                 marginTop: "15px",
                 marginBottom: "10px",
                 display: "inline-block",
                 textDecoration: "none",
-                color: 'primary.main'
+                color: "primary.main",
               }}
             >
               See All Notifications
             </Link>
-          </Typography>
-        </div>
+          </Box>
+        </Box>
       </Menu>
     </>
   );

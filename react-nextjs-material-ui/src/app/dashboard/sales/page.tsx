@@ -26,22 +26,22 @@ export default function Page() {
         <Stats />
 
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
             <RecentEarnings />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
             <SalesByLocations />
           </Grid>
         </Grid>
       </Card>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <TransactionHistory />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <RecentOrders />
         </Grid>
       </Grid>
@@ -51,15 +51,15 @@ export default function Page() {
         columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 4 }}>
           <RealTimeSales />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 4 }}>
           <SalesOverview />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 4 }}>
           <GrossEarnings />
         </Grid>
       </Grid>

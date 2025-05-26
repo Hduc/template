@@ -61,7 +61,10 @@ const TestimonialsStyle7 = () => {
           spacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
           {testimonials.map((testimonial) => (
-            <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={testimonial.id}>
+            <Grid
+              size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }}
+              key={testimonial.id}
+            >
               <Box
                 className="testimonial-item"
                 sx={{
@@ -109,13 +112,15 @@ const TestimonialsStyle7 = () => {
                         mt: "10px",
                       }}
                     >
-                      {[...Array(Math.floor(testimonial.rating))].map((_, index) => (
-                        <i
-                          key={index}
-                          className="ri-star-fill mr-1"
-                          style={{ marginRight: "4px" }}
-                        ></i>
-                      ))}
+                      {[...Array(Math.floor(testimonial.rating))].map(
+                        (_, index) => (
+                          <i
+                            key={index}
+                            className="ri-star-fill mr-1"
+                            style={{ marginRight: "4px" }}
+                          ></i>
+                        )
+                      )}
                       {testimonial.rating % 1 !== 0 && (
                         <i
                           className="ri-star-half-fill mr-1"

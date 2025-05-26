@@ -225,6 +225,39 @@ import { ReCustomersComponent } from './pages/real-estate-page/re-customers/re-c
 import { FinancePageComponent } from './pages/finance-page/finance-page.component';
 import { FWalletComponent } from './pages/finance-page/f-wallet/f-wallet.component';
 import { FTransactionsComponent } from './pages/finance-page/f-transactions/f-transactions.component';
+import { PodcastComponent } from './dashboard/podcast/podcast.component';
+import { PosSystemComponent } from './dashboard/pos-system/pos-system.component';
+import { SocialMediaComponent } from './dashboard/social-media/social-media.component';
+import { DoctorComponent } from './dashboard/doctor/doctor.component';
+import { BeautySalonComponent } from './dashboard/beauty-salon/beauty-salon.component';
+import { StoreAnalysisComponent } from './dashboard/store-analysis/store-analysis.component';
+import { RestaurantComponent } from './dashboard/restaurant/restaurant.component';
+import { RestaurantPageComponent } from './pages/restaurant-page/restaurant-page.component';
+import { RMenusComponent } from './pages/restaurant-page/r-menus/r-menus.component';
+import { RDishDetailsComponent } from './pages/restaurant-page/r-dish-details/r-dish-details.component';
+import { DoctorPageComponent } from './pages/doctor-page/doctor-page.component';
+import { DPatientsListComponent } from './pages/doctor-page/d-patients-list/d-patients-list.component';
+import { DAddPatientComponent } from './pages/doctor-page/d-add-patient/d-add-patient.component';
+import { DPatientDetailsComponent } from './pages/doctor-page/d-patient-details/d-patient-details.component';
+import { DAppointmentsComponent } from './pages/doctor-page/d-appointments/d-appointments.component';
+import { DPrescriptionsComponent } from './pages/doctor-page/d-prescriptions/d-prescriptions.component';
+import { DWritePrescriptionComponent } from './pages/doctor-page/d-write-prescription/d-write-prescription.component';
+import { HotelComponent } from './dashboard/hotel/hotel.component';
+import { RealEstateAgentComponent } from './dashboard/real-estate-agent/real-estate-agent.component';
+import { CreditCardComponent } from './dashboard/credit-card/credit-card.component';
+import { CryptoTraderComponent } from './dashboard/crypto-trader/crypto-trader.component';
+import { CryptoPerformanceComponent } from './dashboard/crypto-performance/crypto-performance.component';
+import { CryptoTraderPageComponent } from './pages/crypto-trader-page/crypto-trader-page.component';
+import { CtTransactionsComponent } from './pages/crypto-trader-page/ct-transactions/ct-transactions.component';
+import { CtGainersLosersComponent } from './pages/crypto-trader-page/ct-gainers-losers/ct-gainers-losers.component';
+import { CtWalletComponent } from './pages/crypto-trader-page/ct-wallet/ct-wallet.component';
+import { HotelPageComponent } from './pages/hotel-page/hotel-page.component';
+import { HpRoomsListComponent } from './pages/hotel-page/hp-rooms-list/hp-rooms-list.component';
+import { HpGuestsListComponent } from './pages/hotel-page/hp-guests-list/hp-guests-list.component';
+import { HpRoomDetailsComponent } from './pages/hotel-page/hp-room-details/hp-room-details.component';
+import { RealEstateAgentPageComponent } from './pages/real-estate-agent-page/real-estate-agent-page.component';
+import { ReapPropertiesComponent } from './pages/real-estate-agent-page/reap-properties/reap-properties.component';
+import { ReapPropertyDetailsComponent } from './pages/real-estate-agent-page/reap-property-details/reap-property-details.component';
 
 export const routes: Routes = [
     {
@@ -260,118 +293,130 @@ export const routes: Routes = [
             {path: 'real-estate', component: RealEstateComponent},
             {path: 'shipment', component: ShipmentComponent},
             {path: 'finance', component: FinanceComponent},
-            // {
-            //     path: 'apps',
-            //     component: AppsComponent,
-            //     children: [
-            //         {path: '', component: ToDoListComponent},
-            //         {path: 'calendar', component: CalendarComponent},
-            //         {path: 'contacts', component: ContactsComponent},
-            //         {path: 'chat', component: ChatComponent},
-            //         {
-            //             path: 'email',
-            //             component: EmailComponent,
-            //             children: [
-            //                 {
-            //                     path: '',
-            //                     component: InboxComponent,
-            //                     children: [
-            //                         {path: '', component: PrimaryEmailsComponent},
-            //                         {path: 'promotions', component: PromotionsEmailsComponent}
-            //                     ]
-            //                 },
-            //                 {path: 'compose', component: ComposeComponent},
-            //                 {path: 'read', component: ReadComponent}
-            //             ]
-            //         },
-            //         {path: 'kanban-board', component: KanbanBoardComponent},
-            //         {
-            //             path: 'file-manager',
-            //             component: FileManagerComponent,
-            //             children: [
-            //                 {path: '', component: MyDriveComponent},
-            //                 {path: 'assets', component: AssetsComponent},
-            //                 {path: 'projects', component: ProjectsComponent},
-            //                 {path: 'personal', component: PersonalComponent},
-            //                 {path: 'applications', component: ApplicationsComponent},
-            //                 {path: 'documents', component: DocumentsComponent},
-            //                 {path: 'media', component: MediaComponent},
-            //                 {path: 'recents', component: RecentsComponent},
-            //                 {path: 'important', component: ImportantComponent}
-            //             ]
-            //         }
-            //     ]
-            // },
-            // {
-            //     path: 'ecommerce-page',
-            //     component: EcommercePageComponent,
-            //     children: [
-            //         {path: '', component: EProductsGridComponent},
-            //         {path: 'products-list', component: EProductsListComponent},
-            //         {path: 'product-details', component: EProductDetailsComponent},
-            //         {path: 'create-product', component: ECreateProductComponent},
-            //         {path: 'edit-product', component: EEditProductComponent},
-            //         {path: 'orders', component: EOrdersComponent},
-            //         {path: 'order-details', component: EOrderDetailsComponent},
-            //         {path: 'create-order', component: ECreateOrderComponent},
-            //         {path: 'order-tracking', component: EOrderTrackingComponent},
-            //         {path: 'customers', component: ECustomersComponent},
-            //         {path: 'customer-details', component: ECustomerDetailsComponent},
-            //         {path: 'cart', component: ECartComponent},
-            //         {path: 'checkout', component: ECheckoutComponent},
-            //         {path: 'sellers', component: ESellersComponent},
-            //         {path: 'seller-details', component: ESellerDetailsComponent},
-            //         {path: 'create-seller', component: ECreateSellerComponent},
-            //         {path: 'categories', component: ECategoriesComponent},
-            //         {path: 'reviews', component: EReviewsComponent},
-            //         {path: 'refunds', component: ERefundsComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'crm-page',
-            //     component: CrmPageComponent,
-            //     children: [
-            //         {path: '', component: CContactsComponent},
-            //         {path: 'customers', component: CCustomersComponent},
-            //         {path: 'leads', component: CLeadsComponent},
-            //         {path: 'deals', component: CDealsComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'project-management-page',
-            //     component: ProjectManagementPageComponent,
-            //     children: [
-            //         {path: '', component: PmProjectOverviewComponent},
-            //         {path: 'projects-list', component: PmProjectsListComponent},
-            //         {path: 'create-project', component: PmCreateProjectComponent},
-            //         {path: 'clients', component: PmClientsComponent},
-            //         {path: 'teams', component: PmTeamsComponent},
-            //         {path: 'kanban-board', component: PmKanbanBoardComponent},
-            //         {path: 'users', component: PmUsersComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'lms-page',
-            //     component: LmsPageComponent,
-            //     children: [
-            //         {path: '', component: LCoursesComponent},
-            //         {path: 'course-details', component: LCourseDetailsComponent},
-            //         {path: 'create-course', component: LCreateCourseComponent},
-            //         {path: 'edit-course', component: LEditCourseComponent},
-            //         {path: 'instructors', component: LInstructorsComponent},
-            //         {path: 'lesson-preview', component: LLessonPreviewComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'helpdesk-page',
-            //     component: HelpdeskPageComponent,
-            //     children: [
-            //         {path: '', component: HdTicketsComponent},
-            //         {path: 'ticket-details', component: HdTicketDetailsComponent},
-            //         {path: 'agents', component: HdAgentsComponent},
-            //         {path: 'reports', component: HdReportsComponent}
-            //     ]
-            // },
+            {path: 'pos-system', component: PosSystemComponent},
+            {path: 'podcast', component: PodcastComponent},
+            {path: 'social-media', component: SocialMediaComponent},
+            {path: 'doctor', component: DoctorComponent},
+            {path: 'beauty-salon', component: BeautySalonComponent},
+            {path: 'store-analysis', component: StoreAnalysisComponent},
+            {path: 'restaurant', component: RestaurantComponent},
+            {path: 'hotel', component: HotelComponent},
+            {path: 'real-estate-agent', component: RealEstateAgentComponent},
+            {path: 'credit-card', component: CreditCardComponent},
+            {path: 'crypto-trader', component: CryptoTraderComponent},
+            {path: 'crypto-performance', component: CryptoPerformanceComponent},
+            {
+                path: 'apps',
+                component: AppsComponent,
+                children: [
+                    {path: '', component: ToDoListComponent},
+                    {path: 'calendar', component: CalendarComponent},
+                    {path: 'contacts', component: ContactsComponent},
+                    {path: 'chat', component: ChatComponent},
+                    {
+                        path: 'email',
+                        component: EmailComponent,
+                        children: [
+                            {
+                                path: '',
+                                component: InboxComponent,
+                                children: [
+                                    {path: '', component: PrimaryEmailsComponent},
+                                    {path: 'promotions', component: PromotionsEmailsComponent}
+                                ]
+                            },
+                            {path: 'compose', component: ComposeComponent},
+                            {path: 'read', component: ReadComponent}
+                        ]
+                    },
+                    {path: 'kanban-board', component: KanbanBoardComponent},
+                    {
+                        path: 'file-manager',
+                        component: FileManagerComponent,
+                        children: [
+                            {path: '', component: MyDriveComponent},
+                            {path: 'assets', component: AssetsComponent},
+                            {path: 'projects', component: ProjectsComponent},
+                            {path: 'personal', component: PersonalComponent},
+                            {path: 'applications', component: ApplicationsComponent},
+                            {path: 'documents', component: DocumentsComponent},
+                            {path: 'media', component: MediaComponent},
+                            {path: 'recents', component: RecentsComponent},
+                            {path: 'important', component: ImportantComponent}
+                        ]
+                    }
+                ]
+            },
+            {
+                path: 'ecommerce-page',
+                component: EcommercePageComponent,
+                children: [
+                    {path: '', component: EProductsGridComponent},
+                    {path: 'products-list', component: EProductsListComponent},
+                    {path: 'product-details', component: EProductDetailsComponent},
+                    {path: 'create-product', component: ECreateProductComponent},
+                    {path: 'edit-product', component: EEditProductComponent},
+                    {path: 'orders', component: EOrdersComponent},
+                    {path: 'order-details', component: EOrderDetailsComponent},
+                    {path: 'create-order', component: ECreateOrderComponent},
+                    {path: 'order-tracking', component: EOrderTrackingComponent},
+                    {path: 'customers', component: ECustomersComponent},
+                    {path: 'customer-details', component: ECustomerDetailsComponent},
+                    {path: 'cart', component: ECartComponent},
+                    {path: 'checkout', component: ECheckoutComponent},
+                    {path: 'sellers', component: ESellersComponent},
+                    {path: 'seller-details', component: ESellerDetailsComponent},
+                    {path: 'create-seller', component: ECreateSellerComponent},
+                    {path: 'categories', component: ECategoriesComponent},
+                    {path: 'reviews', component: EReviewsComponent},
+                    {path: 'refunds', component: ERefundsComponent}
+                ]
+            },
+            {
+                path: 'crm-page',
+                component: CrmPageComponent,
+                children: [
+                    {path: '', component: CContactsComponent},
+                    {path: 'customers', component: CCustomersComponent},
+                    {path: 'leads', component: CLeadsComponent},
+                    {path: 'deals', component: CDealsComponent}
+                ]
+            },
+            {
+                path: 'project-management-page',
+                component: ProjectManagementPageComponent,
+                children: [
+                    {path: '', component: PmProjectOverviewComponent},
+                    {path: 'projects-list', component: PmProjectsListComponent},
+                    {path: 'create-project', component: PmCreateProjectComponent},
+                    {path: 'clients', component: PmClientsComponent},
+                    {path: 'teams', component: PmTeamsComponent},
+                    {path: 'kanban-board', component: PmKanbanBoardComponent},
+                    {path: 'users', component: PmUsersComponent}
+                ]
+            },
+            {
+                path: 'lms-page',
+                component: LmsPageComponent,
+                children: [
+                    {path: '', component: LCoursesComponent},
+                    {path: 'course-details', component: LCourseDetailsComponent},
+                    {path: 'create-course', component: LCreateCourseComponent},
+                    {path: 'edit-course', component: LEditCourseComponent},
+                    {path: 'instructors', component: LInstructorsComponent},
+                    {path: 'lesson-preview', component: LLessonPreviewComponent}
+                ]
+            },
+            {
+                path: 'helpdesk-page',
+                component: HelpdeskPageComponent,
+                children: [
+                    {path: '', component: HdTicketsComponent},
+                    {path: 'ticket-details', component: HdTicketDetailsComponent},
+                    {path: 'agents', component: HdAgentsComponent},
+                    {path: 'reports', component: HdReportsComponent}
+                ]
+            },
             {
                 path: 'nft-marketplace-page',
                 component: NftMarketplacePageComponent,
@@ -407,182 +452,228 @@ export const routes: Routes = [
                     {path: 'transactions', component: FTransactionsComponent},
                 ]
             },
-            // {
-            //     path: 'events',
-            //     component: EventsPageComponent,
-            //     children: [
-            //         {path: '', component: EventsGridComponent},
-            //         {path: 'events-list', component: EventsListComponent},
-            //         {path: 'event-details', component: EventDetailsComponent},
-            //         {path: 'create-an-event', component: CreateAnEventComponent},
-            //         {path: 'edit-an-event', component: EditAnEventComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'social',
-            //     component: SocialPageComponent,
-            //     children: [
-            //         {
-            //             path: '',
-            //             component: ProfileComponent,
-            //             children: [
-            //                 {path: '', component: TimelineComponent},
-            //                 {path: 'about', component: AboutComponent},
-            //                 {path: 'activity', component: ActivityComponent}
-            //             ]
-            //         },
-            //         {path: 'settings', component: ProfileSettingsComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'invoices',
-            //     component: InvoicesPageComponent,
-            //     children: [
-            //         {path: '', component: InvoicesComponent},
-            //         {path: 'invoice-details', component: InvoiceDetailsComponent},
-            //         {path: 'create-invoice', component: CreateInvoiceComponent},
-            //         {path: 'edit-invoice', component: EditInvoiceComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'users',
-            //     component: UsersPageComponent,
-            //     children: [
-            //         {path: '', component: TeamMembersComponent},
-            //         {path: 'users-list', component: UsersListComponent},
-            //         {path: 'add-user', component: AddUserComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'profile',
-            //     component: ProfilePageComponent,
-            //     children: [
-            //         {path: '', component: PUserProfileComponent},
-            //         {path: 'teams', component: PTeamsComponent},
-            //         {path: 'projects', component: PProjectsComponent}
-            //     ]
-            // },
-            // {path: 'starter', component: StarterComponent},
-            // {
-            //     path: 'icons',
-            //     component: IconsComponent,
-            //     children: [
-            //         {path: '', component: MaterialSymbolsComponent},
-            //         {path: 'remixicon', component: RemixiconComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'ui-kit',
-            //     component: UiElementsComponent,
-            //     children: [
-            //         {path: '', component: AlertsComponent},
-            //         {path: 'avatars', component: AvatarsComponent},
-            //         {path: 'accordion', component: AccordionComponent},
-            //         {path: 'badges', component: BadgesComponent},
-            //         {path: 'buttons', component: ButtonsComponent},
-            //         {path: 'button-group', component: ButtonGroupComponent},
-            //         {path: 'breadcrumb', component: BreadcrumbComponent},
-            //         {path: 'borders', component: BordersComponent},
-            //         {path: 'card', component: CardComponent},
-            //         {path: 'carousel', component: CarouselComponent},
-            //         {path: 'close-button', component: CloseButtonComponent},
-            //         {path: 'colored-links', component: ColoredLinksComponent},
-            //         {path: 'color-picker', component: ColorPickerComponent},
-            //         {path: 'color-background', component: ColorBackgroundComponent},
-            //         {path: 'dropdowns', component: DropdownsComponent},
-            //         {path: 'figures', component: FiguresComponent},
-            //         {path: 'images', component: ImagesComponent},
-            //         {path: 'list-group', component: ListGroupComponent},
-            //         {path: 'text', component: TextComponent},
-            //         {path: 'modal', component: ModalComponent},
-            //         {path: 'navs-tabs', component: NavsTabsComponent},
-            //         {path: 'offcanvas', component: OffcanvasComponent},
-            //         {path: 'pagination', component: PaginationComponent},
-            //         {path: 'progress', component: ProgressComponent},
-            //         {path: 'shadows', component: ShadowsComponent},
-            //         {path: 'ratio', component: RatioComponent},
-            //         {path: 'spinners', component: SpinnersComponent},
-            //         {path: 'stacks', component: StacksComponent},
-            //         {path: 'table', component: TableComponent},
-            //         {path: 'toasts', component: ToastsComponent},
-            //         {path: 'typography', component: TypographyComponent},
-            //         {path: 'videos', component: VideosComponent},
-            //         {path: 'utilities', component: UtilitiesComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'charts',
-            //     component: ChartsComponent,
-            //     children: [
-            //         {path: '', component: LineChartsComponent},
-            //         {path: 'area', component: AreaChartsComponent},
-            //         {path: 'column', component: ColumnChartsComponent},
-            //         {path: 'mixed', component: MixedChartsComponent},
-            //         {path: 'radialbar', component: RadialbarChartsComponent},
-            //         {path: 'radar', component: RadarChartsComponent},
-            //         {path: 'pie', component: PieChartsComponent},
-            //         {path: 'polar', component: PolarChartsComponent},
-            //         {path: 'more', component: MoreChartsComponent}
-            //     ]
-            // },
-            // {
-            //     path: 'tables', component: TablesComponent
-            // },
-            // {
-            //     path: 'forms',
-            //     component: FormsComponent,
-            //     children: [
-            //         {path: '', component: FormControlsComponent},
-            //         {path: 'select', component: SelectComponent},
-            //         {path: 'checks-radios', component: ChecksRadiosComponent},
-            //         {path: 'range', component: RangeComponent},
-            //         {path: 'input-group', component: InputGroupComponent},
-            //         {path: 'floating-labels', component: FloatingLabelsComponent},
-            //         {path: 'layout', component: LayoutComponent},
-            //         {path: 'elements', component: ElementsComponent},
-            //         {path: 'editors', component: EditorsComponent},
-            //         {path: 'file-uploader', component: FileUploaderComponent},
-            //     ]
-            // },
-            // {path: 'timeline', component: TimelinePageComponent},
-            // {path: 'pricing', component: PricingPageComponent},
-            // {path: 'faq', component: FaqPageComponent},
-            // {path: 'gallery', component: GalleryPageComponent},
-            // {path: 'testimonials', component: TestimonialsPageComponent},
-            // {path: 'search', component: SearchPageComponent},
-            // {path: 'blank-page', component: BlankPageComponent},
-            // {path: 'internal-error', component: InternalErrorComponent},
-            // {path: 'widgets', component: WidgetsComponent},
-            // {path: 'maps', component: MapsPageComponent},
-            // {path: 'notifications', component: NotificationsPageComponent},
-            // {path: 'members', component: MembersPageComponent},
-            // {path: 'my-profile', component: MyProfileComponent},
-            // {
-            //     path: 'settings',
-            //     component: SettingsComponent,
-            //     children: [
-            //         {path: '', component: AccountSettingsComponent},
-            //         {path: 'change-password', component: ChangePasswordComponent},
-            //         {path: 'connections', component: ConnectionsComponent},
-            //         {path: 'privacy-policy', component: PrivacyPolicyComponent},
-            //         {path: 'terms-conditions', component: TermsConditionsComponent}
-            //     ]
-            // }
+            {
+                path: 'doctor-page',
+                component: DoctorPageComponent,
+                children: [
+                    {path: '', component: DPatientsListComponent},
+                    {path: 'add-patient', component: DAddPatientComponent},
+                    {path: 'patient-details', component: DPatientDetailsComponent},
+                    {path: 'appointments', component: DAppointmentsComponent},
+                    {path: 'prescriptions', component: DPrescriptionsComponent},
+                    {path: 'write-prescription', component: DWritePrescriptionComponent},
+                ]
+            },
+            {
+                path: 'restaurant-page',
+                component: RestaurantPageComponent,
+                children: [
+                    {path: '', component: RMenusComponent},
+                    {path: 'dish-details', component: RDishDetailsComponent},
+                ]
+            },
+            {
+                path: 'hotel-page',
+                component: HotelPageComponent,
+                children: [
+                    {path: '', component: HpRoomsListComponent},
+                    {path: 'room-details', component: HpRoomDetailsComponent},
+                    {path: 'guests-list', component: HpGuestsListComponent}
+                ]
+            },
+            {
+                path: 'real-estate-agent-page',
+                component: RealEstateAgentPageComponent,
+                children: [
+                    {path: '', component: ReapPropertiesComponent},
+                    {path: 'property-details', component: ReapPropertyDetailsComponent}
+                ]
+            },
+            {
+                path: 'crypto-trader-page',
+                component: CryptoTraderPageComponent,
+                children: [
+                    {path: '', component: CtTransactionsComponent},
+                    {path: 'gainers-losers', component: CtGainersLosersComponent},
+                    {path: 'wallet', component: CtWalletComponent}
+                ]
+            },
+            {
+                path: 'events',
+                component: EventsPageComponent,
+                children: [
+                    {path: '', component: EventsGridComponent},
+                    {path: 'events-list', component: EventsListComponent},
+                    {path: 'event-details', component: EventDetailsComponent},
+                    {path: 'create-an-event', component: CreateAnEventComponent},
+                    {path: 'edit-an-event', component: EditAnEventComponent}
+                ]
+            },
+            {
+                path: 'social',
+                component: SocialPageComponent,
+                children: [
+                    {
+                        path: '',
+                        component: ProfileComponent,
+                        children: [
+                            {path: '', component: TimelineComponent},
+                            {path: 'about', component: AboutComponent},
+                            {path: 'activity', component: ActivityComponent}
+                        ]
+                    },
+                    {path: 'settings', component: ProfileSettingsComponent}
+                ]
+            },
+            {
+                path: 'invoices',
+                component: InvoicesPageComponent,
+                children: [
+                    {path: '', component: InvoicesComponent},
+                    {path: 'invoice-details', component: InvoiceDetailsComponent},
+                    {path: 'create-invoice', component: CreateInvoiceComponent},
+                    {path: 'edit-invoice', component: EditInvoiceComponent}
+                ]
+            },
+            {
+                path: 'users',
+                component: UsersPageComponent,
+                children: [
+                    {path: '', component: TeamMembersComponent},
+                    {path: 'users-list', component: UsersListComponent},
+                    {path: 'add-user', component: AddUserComponent}
+                ]
+            },
+            {
+                path: 'profile',
+                component: ProfilePageComponent,
+                children: [
+                    {path: '', component: PUserProfileComponent},
+                    {path: 'teams', component: PTeamsComponent},
+                    {path: 'projects', component: PProjectsComponent}
+                ]
+            },
+            {path: 'starter', component: StarterComponent},
+            {
+                path: 'icons',
+                component: IconsComponent,
+                children: [
+                    {path: '', component: MaterialSymbolsComponent},
+                    {path: 'remixicon', component: RemixiconComponent}
+                ]
+            },
+            {
+                path: 'ui-kit',
+                component: UiElementsComponent,
+                children: [
+                    {path: '', component: AlertsComponent},
+                    {path: 'avatars', component: AvatarsComponent},
+                    {path: 'accordion', component: AccordionComponent},
+                    {path: 'badges', component: BadgesComponent},
+                    {path: 'buttons', component: ButtonsComponent},
+                    {path: 'button-group', component: ButtonGroupComponent},
+                    {path: 'breadcrumb', component: BreadcrumbComponent},
+                    {path: 'borders', component: BordersComponent},
+                    {path: 'card', component: CardComponent},
+                    {path: 'carousel', component: CarouselComponent},
+                    {path: 'close-button', component: CloseButtonComponent},
+                    {path: 'colored-links', component: ColoredLinksComponent},
+                    {path: 'color-picker', component: ColorPickerComponent},
+                    {path: 'color-background', component: ColorBackgroundComponent},
+                    {path: 'dropdowns', component: DropdownsComponent},
+                    {path: 'figures', component: FiguresComponent},
+                    {path: 'images', component: ImagesComponent},
+                    {path: 'list-group', component: ListGroupComponent},
+                    {path: 'text', component: TextComponent},
+                    {path: 'modal', component: ModalComponent},
+                    {path: 'navs-tabs', component: NavsTabsComponent},
+                    {path: 'offcanvas', component: OffcanvasComponent},
+                    {path: 'pagination', component: PaginationComponent},
+                    {path: 'progress', component: ProgressComponent},
+                    {path: 'shadows', component: ShadowsComponent},
+                    {path: 'ratio', component: RatioComponent},
+                    {path: 'spinners', component: SpinnersComponent},
+                    {path: 'stacks', component: StacksComponent},
+                    {path: 'table', component: TableComponent},
+                    {path: 'toasts', component: ToastsComponent},
+                    {path: 'typography', component: TypographyComponent},
+                    {path: 'videos', component: VideosComponent},
+                    {path: 'utilities', component: UtilitiesComponent}
+                ]
+            },
+            {
+                path: 'charts',
+                component: ChartsComponent,
+                children: [
+                    {path: '', component: LineChartsComponent},
+                    {path: 'area', component: AreaChartsComponent},
+                    {path: 'column', component: ColumnChartsComponent},
+                    {path: 'mixed', component: MixedChartsComponent},
+                    {path: 'radialbar', component: RadialbarChartsComponent},
+                    {path: 'radar', component: RadarChartsComponent},
+                    {path: 'pie', component: PieChartsComponent},
+                    {path: 'polar', component: PolarChartsComponent},
+                    {path: 'more', component: MoreChartsComponent}
+                ]
+            },
+            {
+                path: 'tables', component: TablesComponent
+            },
+            {
+                path: 'forms',
+                component: FormsComponent,
+                children: [
+                    {path: '', component: FormControlsComponent},
+                    {path: 'select', component: SelectComponent},
+                    {path: 'checks-radios', component: ChecksRadiosComponent},
+                    {path: 'range', component: RangeComponent},
+                    {path: 'input-group', component: InputGroupComponent},
+                    {path: 'floating-labels', component: FloatingLabelsComponent},
+                    {path: 'layout', component: LayoutComponent},
+                    {path: 'elements', component: ElementsComponent},
+                    {path: 'editors', component: EditorsComponent},
+                    {path: 'file-uploader', component: FileUploaderComponent},
+                ]
+            },
+            {path: 'timeline', component: TimelinePageComponent},
+            {path: 'pricing', component: PricingPageComponent},
+            {path: 'faq', component: FaqPageComponent},
+            {path: 'gallery', component: GalleryPageComponent},
+            {path: 'testimonials', component: TestimonialsPageComponent},
+            {path: 'search', component: SearchPageComponent},
+            {path: 'blank-page', component: BlankPageComponent},
+            {path: 'internal-error', component: InternalErrorComponent},
+            {path: 'widgets', component: WidgetsComponent},
+            {path: 'maps', component: MapsPageComponent},
+            {path: 'notifications', component: NotificationsPageComponent},
+            {path: 'members', component: MembersPageComponent},
+            {path: 'my-profile', component: MyProfileComponent},
+            {
+                path: 'settings',
+                component: SettingsComponent,
+                children: [
+                    {path: '', component: AccountSettingsComponent},
+                    {path: 'change-password', component: ChangePasswordComponent},
+                    {path: 'connections', component: ConnectionsComponent},
+                    {path: 'privacy-policy', component: PrivacyPolicyComponent},
+                    {path: 'terms-conditions', component: TermsConditionsComponent}
+                ]
+            }
         ]
     },
-    // {
-    //     path: 'authentication',
-    //     component: AuthenticationComponent,
-    //     children: [
-    //         {path: '', component: SignInComponent},
-    //         {path: 'sign-up', component: SignUpComponent},
-    //         {path: 'forgot-password', component: ForgotPasswordComponent},
-    //         {path: 'reset-password', component: ResetPasswordComponent},
-    //         {path: 'confirm-email', component: ConfirmEmailComponent},
-    //         {path: 'lock-screen', component: LockScreenComponent},
-    //         {path: 'logout', component: LogoutComponent}
-    //     ]
-    // },
+    {
+        path: 'authentication',
+        component: AuthenticationComponent,
+        children: [
+            {path: '', component: SignInComponent},
+            {path: 'sign-up', component: SignUpComponent},
+            {path: 'forgot-password', component: ForgotPasswordComponent},
+            {path: 'reset-password', component: ResetPasswordComponent},
+            {path: 'confirm-email', component: ConfirmEmailComponent},
+            {path: 'lock-screen', component: LockScreenComponent},
+            {path: 'logout', component: LogoutComponent}
+        ]
+    },
     {path: 'coming-soon', component: ComingSoonComponent},
     // Here add new pages component
 

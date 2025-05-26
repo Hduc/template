@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-total-courses',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
     templateUrl: './total-courses.component.html',
     styleUrl: './total-courses.component.scss'
 })
-export class TotalCoursesComponent {}
+export class TotalCoursesComponent {
+
+    constructor(
+        public themeService: CustomizerSettingsService
+    ) {}
+
+}

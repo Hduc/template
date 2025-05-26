@@ -165,6 +165,13 @@
         }
     }
 }
+.component-card-without-border-radius {
+    .trezo-card-content {
+        img {
+            border-radius: 0 !important;
+        }
+    }
+}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {

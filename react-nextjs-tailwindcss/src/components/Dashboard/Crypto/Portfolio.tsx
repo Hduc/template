@@ -76,7 +76,7 @@ const Portfolio: React.FC = () => {
       >
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-white">Portfolio</h5>
+            <h5 className="!mb-0 !text-white">Portfolio</h5>
           </div>
         </div>
 
@@ -90,7 +90,7 @@ const Portfolio: React.FC = () => {
             />
             <div className="ltr:ml-[10px] rtl:mr-[10px]">
               <span className="block uppercase text-white">Total balance</span>
-              <h4 className="mb-0 text-white font-semibold mt-[6px] text-[18px] md:text-[20px]">
+              <h4 className="!mb-0 !text-white !font-semibold !mt-[6px] !text-[18px] md:!text-[20px]">
                 {totalBalance}
                 <span className="font-medium relative text-base ltr:ml-[3px] rtl:mr-[3px] ltr:pl-[25px] rtl:pr-[25px] text-success-100">
                   <i className="material-symbols-outlined absolute !text-[20px] ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">

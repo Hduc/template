@@ -45,7 +45,7 @@ export default function Page() {
       </Card>
       
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -66,7 +66,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -88,7 +88,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -110,7 +110,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -132,7 +132,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -154,7 +154,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -176,7 +176,7 @@ export default function Page() {
           </Card>
         </Grid>
  
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -198,7 +198,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -220,7 +220,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -242,7 +242,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -264,7 +264,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -286,7 +286,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -308,7 +308,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -330,7 +330,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -352,7 +352,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -374,7 +374,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -396,7 +396,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -418,7 +418,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -440,7 +440,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -462,7 +462,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -484,7 +484,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -506,7 +506,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -528,7 +528,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -550,7 +550,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -572,7 +572,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -594,7 +594,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -616,7 +616,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -638,7 +638,7 @@ export default function Page() {
           </Card>
         </Grid>
         
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -660,7 +660,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -682,7 +682,7 @@ export default function Page() {
           </Card>
         </Grid>
 
-        <Grid item xs={6} sm={4} md={3} lg={3} xl={2}>
+        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 3, xl: 2 }}>
           <Card
             sx={{
               boxShadow: "none",

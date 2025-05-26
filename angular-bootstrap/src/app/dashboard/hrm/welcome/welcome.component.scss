@@ -29,11 +29,24 @@
             }
         }
     }
-    &.component-card-borderd {
+    &.component-card-borderd, &.component-body-bg-color {
         border-width: 0 !important;
     }
-    &.component-card-with-box-shadow {
+    &.component-card-with-box-shadow, &.component-body-bg-color {
         box-shadow: unset !important;
+    }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .buttons-list {
+                button {
+                    background-color: #15203c;
+    
+                    &:nth-child(2) {
+                        background-color: #15203c;
+                    }
+                }
+            }
+        }
     }
 }
 

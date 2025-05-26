@@ -1,0 +1,63 @@
+<div
+    class="navbar-area"
+    [ngClass]="{'is-sticky': isSticky}"
+    [class.component-dark]="toggleService.isLandingDark()"
+>
+    <div class="container">
+        <nav
+            class="navbar navbar-expand-lg position-relative d-flex align-items-center flex-wrap justify-content-between"
+            [ngClass]="{'is-sticky': isSticky}"
+        >
+            <a class="navbar-brand d-block lh-1" routerLink="/marketing-demo">
+                <img src="images/marketing/logo.svg" alt="logo">
+                <img src="images/marketing/white-logo.svg" alt="logo" class="d-none">
+            </a>
+            <button
+                class="navbar-toggler p-0 d-inline-block rounded-0"
+                [class.active]="classApplied"
+                (click)="toggleClass()"
+                type="button"
+                mat-button
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div
+                class="collapse navbar-collapse align-items-center flex-grow-1 flex-basis-full"
+                [class.active]="classApplied"
+            >
+                <ul class="navbar-nav p-0 m-0 d-flex mx-auto p-0 list-unstyled flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link d-block" routerLink="/marketing-demo" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-block" routerLink="/marketing-demo/features" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Features
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-block" routerLink="/marketing-demo/pricing" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Pricing
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-block" routerLink="/marketing-demo/blog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+                <div class="other-options d-flex align-items-center">
+                    <a href="https://trezo-twcss.envytheme.com/sign-in.html" class="link-btn d-inline-block rounded-0 p-0" mat-button target="_blank">
+                        Login
+                    </a>
+                    <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="marketing-default-btn" mat-button>
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

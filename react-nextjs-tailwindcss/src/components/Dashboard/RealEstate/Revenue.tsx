@@ -215,9 +215,9 @@ const Revenue: React.FC = () => {
             <div className="flex items-center gap-[15px]">
               <div>
                 <span className="block mb-[4px]">Revenue</span>
-                <h3 className="mb-0 text-[20px]">$194,712</h3>
+                <h3 className="!mb-0 !text-[20px]">$194,712</h3>
               </div>
-              <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+              <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
                 +60%
               </span>
             </div>

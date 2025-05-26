@@ -127,7 +127,7 @@ const ProductsGrid: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-medium">Filter</h5>
+            <h5 className="!mb-0 !font-medium">Filter</h5>
           </div>
 
           <div className="trezo-card-subtitle mt-[15px] sm:mt-0 sm:flex items-center gap-[20px]">
@@ -229,7 +229,7 @@ const ProductsGrid: React.FC = () => {
             </div>
 
             <div className="mt-[19px]">
-              <h6 className="text-md font-normal">
+              <h6 className="!text-md !font-normal">
                 <Link
                   href={product.viewLink}
                   className="transition-all hover:text-primary-500"
@@ -273,7 +273,7 @@ const ProductsGrid: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">
+            <p className="!mb-0">
               {" "}
               Showing{" "}
               {Math.min(

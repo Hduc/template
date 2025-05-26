@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Dropdown, Card, Form, Offcanvas } from "react-bootstrap";
+import { Dropdown, Card, Form } from "react-bootstrap";
 import Image from "next/image";
 
 const ToDo = () => {

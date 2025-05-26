@@ -19,13 +19,13 @@ const Stats: React.FC = () => {
                 />
                 <div>
                   <span className="block">Total Students</span>
-                  <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+                  <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                     12,560
                   </h5>
                 </div>
               </div>
               <div className="mt-[15px] md:mt-[42px] flex items-center gap-[7px]">
-                <div className="bg-success-100 text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-[18px]">
+                <div className="bg-success-100 dark:bg-[#15203c] text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-lg">
                   <i className="ri-arrow-right-up-line"></i>
                 </div>
                 <div className="text-gray-600 dark:text-gray-400">
@@ -47,13 +47,13 @@ const Stats: React.FC = () => {
                 />
                 <div>
                   <span className="block">Total Teachers</span>
-                  <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+                  <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                     780
                   </h5>
                 </div>
               </div>
               <div className="mt-[15px] md:mt-[42px] flex items-center gap-[7px]">
-                <div className="bg-danger-100 text-danger-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-[18px]">
+                <div className="bg-danger-100 dark:bg-[#15203c] text-danger-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-[18px]">
                   <i className="ri-arrow-right-down-line"></i>
                 </div>
                 <div className="text-gray-600 dark:text-gray-400">
@@ -75,13 +75,13 @@ const Stats: React.FC = () => {
                 />
                 <div>
                   <span className="block">Attendance Today</span>
-                  <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+                  <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                     1,425
                   </h5>
                 </div>
               </div>
               <div className="mt-[15px] md:mt-[42px] flex items-center gap-[7px]">
-                <div className="bg-success-100 text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-[18px]">
+                <div className="bg-success-100 dark:bg-[#15203c] text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-lg">
                   <i className="ri-arrow-right-up-line"></i>
                 </div>
                 <div className="text-gray-600 dark:text-gray-400">

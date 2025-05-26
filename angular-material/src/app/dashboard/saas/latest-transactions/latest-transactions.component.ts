@@ -1,11 +1,11 @@
+import { NgIf } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
-import { NgIf } from '@angular/common';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-latest-transactions',

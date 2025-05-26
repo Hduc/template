@@ -68,10 +68,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="~/assets/images/user-1.jpg"
                       class="wh-30 rounded-circle"
@@ -80,7 +77,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">David Farrior</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Toys</td>
                 <td class="text-danger">$50,000</td>
@@ -144,10 +141,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="~/assets/images/user-2.jpg"
                       class="wh-30 rounded-circle"
@@ -156,7 +150,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Leslie Yawn</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Sports</td>
                 <td class="text-danger">$1,20,000</td>
@@ -220,10 +214,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="~/assets/images/user-3.jpg"
                       class="wh-30 rounded-circle"
@@ -232,7 +223,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Willie Wood</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Fashion</td>
                 <td class="text-danger">$50,000</td>
@@ -296,10 +287,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="~/assets/images/user-4.jpg"
                       class="wh-30 rounded-circle"
@@ -308,7 +296,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Jill Caldera</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Food</td>
                 <td class="text-danger">$80,000</td>
@@ -371,10 +359,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="~/assets/images/user-5.jpg"
                       class="wh-30 rounded-circle"
@@ -383,7 +368,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Bill Mitchell</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Electronics</td>
                 <td class="text-danger">$1,50,000</td>

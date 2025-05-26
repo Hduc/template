@@ -32,6 +32,17 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .content {
+                li {
+                    .icon {
+                        background-color: #15203c !important;
+                    }
+                }
+            }
+        }
+    }
     &.component-rtl-enabled {
         .trezo-card-content {
             .content {

@@ -24,11 +24,11 @@ const Stats = () => {
           container
           columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 2 }} 
         >
-          <Grid item xs={12} sm={6} lg={4} className={styles.gridItem}>
+          <Grid size={{ xs: 12, sm: 6, lg: 4 }} className={styles.gridItem}>
             <WebsiteVisits />
           </Grid>
 
-          <Grid item xs={12} sm={6} lg={4} className={styles.gridItem}>
+          <Grid size={{ xs: 12, sm: 6, lg: 4 }} className={styles.gridItem}>
             <NewRegisters />
           </Grid> 
         </Grid>

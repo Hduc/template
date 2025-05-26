@@ -147,7 +147,7 @@ const GrossRevenue: React.FC = () => {
             <div>
               <span className="block mb-[7px]">Gross Revenue</span>
               <div className="flex items-center gap-[10px]">
-                <h3 className="leading-none text-xl md:text-2xl lg:text-3xl mb-0">
+                <h3 className="!leading-none !text-xl md:!text-2xl lg:!text-3xl !mb-0">
                   $1,528
                 </h3>
                 <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
@@ -193,7 +193,7 @@ const GrossRevenue: React.FC = () => {
                 options={options}
                 series={series}
                 type="line"
-                height={347}
+                height={350}
                 width={"100%"}
               />
             )}

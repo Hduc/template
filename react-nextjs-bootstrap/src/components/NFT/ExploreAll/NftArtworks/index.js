@@ -1,6 +1,6 @@
 "use client";
 
-import { Row, Col, Button, Form, Card } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

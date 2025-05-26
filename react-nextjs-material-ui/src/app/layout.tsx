@@ -3,7 +3,6 @@ import "swiper/css/bundle";
 import 'remixicon/fonts/remixicon.css';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
-import 'remixicon/fonts/remixicon.css';
 import 'react-clock/dist/Clock.css';
 import '../../node_modules/boxicons/css/boxicons.min.css';
 import '../../styles/front-pages.css';
@@ -12,7 +11,9 @@ import "../../styles/left-sidebar-menu.css";
 import "../../styles/top-navbar.css";
 import "../../styles/crypto-dashboard.css";
 import "../../styles/chat.css";
+import "../../styles/horizontal-navbar.css";
 import "../../styles/globals.css";
+
 // globals dark Mode CSS
 import "../../styles/dark.css";
 // globals RTL Mode CSS

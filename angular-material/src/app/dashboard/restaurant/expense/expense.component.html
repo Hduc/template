@@ -1,0 +1,22 @@
+<mat-card
+    class="expense-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <span class="d-block">
+            Expense
+        </span>
+        <h3>
+            $132K
+        </h3>
+        <span class="trezo-badge rejected">
+            -1.2%
+        </span>
+        <span class="text-xs d-block">
+            vs previous 30 days
+        </span>
+        <div class="chart">
+            <div id="restaurant_expense_chart"></div>
+        </div>
+    </mat-card-content>
+</mat-card>

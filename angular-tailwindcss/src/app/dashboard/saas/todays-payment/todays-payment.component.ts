@@ -40,7 +40,7 @@ export class TodaysPaymentComponent {
             },
             Yearly: {
                 series: [{ name: 'Payment', data: [500, 550, 600, 650, 700] }],
-                categories: ['2020', '2021', '2022', '2023', '2024']
+                categories: ['2021', '2022', '2023', '2024', '2025']
             }
         };
     }

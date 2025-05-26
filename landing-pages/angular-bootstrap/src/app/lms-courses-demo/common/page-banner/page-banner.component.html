@@ -1,0 +1,21 @@
+<div
+    class="page-banner-area text-center"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <h1 class="fw-bold">
+            {{ pageTitle }}
+        </h1>
+        <ul class="breadcrumb m-0 list-unstyled d-inline-block">
+            <li class="d-inline-block position-relative">
+                <a routerLink="/lms-courses-demo">
+                    Home
+                </a>
+            </li>
+            <li class="d-inline-block position-relative">
+                {{ pageTitle }}
+            </li>
+        </ul>
+    </div>
+</div>

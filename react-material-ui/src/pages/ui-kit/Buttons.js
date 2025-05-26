@@ -35,49 +35,49 @@ const Buttons = () => {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <BasicButton />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <TextButton />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <ContainedButton />
 
           <FloatingActionButtons />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <ColorButton />
 
           <FloatingActionButtonSize />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <ButtonSizes />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <ButtonsWithIconsAndLabel />
 
           <IconButtons />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <IconButtonColors />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <CustomizedButtons />
         </Grid>
  
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <ComplexButtons />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
           <LoadingButtons />
         </Grid>
       </Grid> 

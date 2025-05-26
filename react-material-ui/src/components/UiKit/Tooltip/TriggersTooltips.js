@@ -39,22 +39,22 @@ const TriggersTooltips = () => {
         </Typography>
 
         <Grid container justifyContent="center">
-          <Grid item>
+          <Grid>
             <Tooltip disableFocusListener title="Add">
               <Button>Hover or touch</Button>
             </Tooltip>
           </Grid>
-          <Grid item>
+          <Grid>
             <Tooltip disableHoverListener title="Add">
               <Button>Focus or touch</Button>
             </Tooltip>
           </Grid>
-          <Grid item>
+          <Grid>
             <Tooltip disableFocusListener disableTouchListener title="Add">
               <Button>Hover</Button>
             </Tooltip>
           </Grid>
-          <Grid item>
+          <Grid>
             <ClickAwayListener onClickAway={handleTooltipClose}>
               <div>
                 <Tooltip

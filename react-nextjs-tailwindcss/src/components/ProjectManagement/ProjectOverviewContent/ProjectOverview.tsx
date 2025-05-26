@@ -9,7 +9,7 @@ const ProjectOverview: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Project Overview</h5>
+            <h5 className="!mb-0">Project Overview</h5>
           </div>
         </div>
 
@@ -25,12 +25,12 @@ const ProjectOverview: React.FC = () => {
                   </div>
                   <div>
                     <span className="block">Total Hours</span>
-                    <h5 className="mb-0 text-[20px] mt-[2px]">102</h5>
+                    <h5 className="!mb-0 !text-[20px] mt-[2px]">102</h5>
                   </div>
                 </div>
                 <div className="mt-[15px] sm:mt-[25px] flex items-center justify-between">
                   <span className="block text-sm">Hours this week</span>
-                  <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 rounded-xl">
+                  <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-xl">
                     +10%
                   </span>
                 </div>
@@ -47,12 +47,12 @@ const ProjectOverview: React.FC = () => {
                   </div>
                   <div>
                     <span className="block">Total Cup of Coffee</span>
-                    <h5 className="mb-0 text-[20px] mt-[2px]">89</h5>
+                    <h5 className="!mb-0 !text-[20px] mt-[2px]">89</h5>
                   </div>
                 </div>
                 <div className="mt-[15px] sm:mt-[25px] flex items-center justify-between">
                   <span className="block text-sm">Coffee this week</span>
-                  <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 rounded-xl">
+                  <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-xl">
                     +5.75%
                   </span>
                 </div>
@@ -69,12 +69,12 @@ const ProjectOverview: React.FC = () => {
                   </div>
                   <div>
                     <span className="block">Total Days</span>
-                    <h5 className="mb-0 text-[20px] mt-[2px]">54</h5>
+                    <h5 className="!mb-0 !text-[20px] mt-[2px]">54</h5>
                   </div>
                 </div>
                 <div className="mt-[15px] sm:mt-[25px] flex items-center justify-between">
                   <span className="block text-sm">Days this week</span>
-                  <span className="inline-block text-sm text-danger-700 py-[1px] px-[8.3px] border border-danger-300 bg-danger-100 rounded-xl">
+                  <span className="inline-block text-sm text-danger-700 py-[1px] px-[8.3px] border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#172036] rounded-xl">
                     -15%
                   </span>
                 </div>
@@ -89,7 +89,7 @@ const ProjectOverview: React.FC = () => {
                   </div>
                   <div>
                     <span className="block">Team Members</span>
-                    <h5 className="mb-0 text-[20px] mt-[2px]">55+</h5>
+                    <h5 className="!mb-0 !text-[20px] mt-[2px]">55+</h5>
                   </div>
                 </div>
                 

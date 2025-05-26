@@ -36,26 +36,26 @@ const ProjectManagement = () => {
 
       <AllProjects />
  
-      <Row>
-        <Col xs={12} lg={12} xl={4} xxl={4}>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={12} xl={6} xxl={4}>
           <ProjectAnalysis />
         </Col>
 
-        <Col xs={12} lg={12} xl={4} xxl={4}>
+        <Col xs={12} lg={12} xl={6} xxl={4}>
           <TeamMembers />
         </Col>
 
-        <Col xs={12} lg={12} xl={4} xxl={4}>
+        <Col xs={12} lg={12} xl={6} xxl={4}>
           <WorkingSchedule />
         </Col>
       </Row>
  
       <Row>
-        <Col xs={12} lg={8} xl={8}>
+        <Col xs={12} lg={8} xl={12} xxl={8}>
           <ToDoList />
         </Col>
 
-        <Col xs={12} lg={4} xl={4}>
+        <Col xs={12} lg={4} xl={12} xxl={4}>
           <TasksOverview />
         </Col>
       </Row>

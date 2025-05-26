@@ -8,7 +8,7 @@ const UpgradeYourPlan: React.FC = () => {
     <>
       <div className="trezo-card text-center bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content py-[5px]">
-          <h3 className="font-medium mb-[10px] text-lg md:text-xl">
+          <h3 className="!font-medium !mb-[10px] !text-lg md:!text-xl">
             Upgrade Your Plan!
           </h3>
 

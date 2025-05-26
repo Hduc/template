@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
 
 const dealsData = [
   {
@@ -120,7 +118,13 @@ const DealsTable = () => {
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-0">
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 p-4">
-            <SearchForm />
+            <Form className="position-relative table-src-form me-0">
+              <Form.Control type="text" placeholder="Search here" />
+
+              <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                search
+              </span>
+            </Form>
 
             <div className="text-end">
               <button
@@ -219,7 +223,38 @@ const DealsTable = () => {
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing 5 of 30 Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button className="page-link icon">
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+                      <li className="page-item">
+                        <button className="page-link active">1</button>
+                      </li>
+                      <li className="page-item">
+                        <button className="page-link">2</button>
+                      </li>
+                      <li className="page-item">
+                        <button className="page-link icon">
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

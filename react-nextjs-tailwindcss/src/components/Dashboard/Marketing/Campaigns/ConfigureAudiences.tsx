@@ -21,7 +21,7 @@ const ConfigureAudiences: React.FC = () => {
 
   return (
     <>
-      <h3 className="mb-[20px] md:mb-[25px] lg:mb-[33px] text-gray-900 dark:text-gray-400 text-lg">
+      <h3 className="!mb-[20px] md:!mb-[25px] lg:!mb-[33px] !text-gray-900 dark:!text-gray-400 !text-lg">
         Configure Audiences
       </h3>
 

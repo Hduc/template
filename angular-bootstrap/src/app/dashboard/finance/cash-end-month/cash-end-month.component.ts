@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CashEndMonthService } from './cash-end-month.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-cash-end-month',
@@ -10,6 +11,7 @@ import { CashEndMonthService } from './cash-end-month.service';
 export class CashEndMonthComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private cashEndMonthService: CashEndMonthService
     ) {}
 

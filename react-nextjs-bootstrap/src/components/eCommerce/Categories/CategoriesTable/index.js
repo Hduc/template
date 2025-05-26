@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, Form, Table, Button, Offcanvas } from "react-bootstrap";
+import { Card, Form, Table, Button } from "react-bootstrap";
 import Image from "next/image";
-import Pagination from "./Pagination";
-import SearchForm from "./SearchForm";
 
 const categoriesData = [
   {
@@ -12,7 +10,7 @@ const categoriesData = [
     name: "Watch",
     totalProducts: 54,
     slug: "watch",
-    description: "What is lorem ipsum?",
+    description: "Timepieces for every occasion.",
     status: "active",
   },
   {
@@ -20,7 +18,7 @@ const categoriesData = [
     name: "Headphone",
     totalProducts: 13,
     slug: "headphone",
-    description: "Why do we use it?",
+    description: "High-quality audio devices.",
     status: "active",
   },
   {
@@ -28,7 +26,7 @@ const categoriesData = [
     name: "Mobile",
     totalProducts: 42,
     slug: "mobile",
-    description: "Where does it come from?",
+    description: "Latest smartphones and accessories.",
     status: "deactive",
   },
   {
@@ -36,7 +34,7 @@ const categoriesData = [
     name: "Speaker",
     totalProducts: 32,
     slug: "speaker",
-    description: "Where can I get some?",
+    description: "Portable and home speakers.",
     status: "active",
   },
   {
@@ -44,12 +42,85 @@ const categoriesData = [
     name: "Electronics",
     totalProducts: 100,
     slug: "electronics",
-    description: "Contrary to popular belief",
+    description: "Wide range of electronic gadgets.",
+    status: "active",
+  },
+  {
+    image: "/images/product-6.jpg",
+    name: "Fashion",
+    totalProducts: 80,
+    slug: "fashion",
+    description: "Trendy apparel and accessories.",
+    status: "active",
+  },
+  {
+    image: "/images/product-7.jpg",
+    name: "Furniture",
+    totalProducts: 25,
+    slug: "furniture",
+    description: "Modern and classic furniture pieces.",
+    status: "active",
+  },
+  {
+    image: "/images/product-8.jpg",
+    name: "Beauty",
+    totalProducts: 60,
+    slug: "beauty",
+    description: "Skincare and cosmetic products.",
+    status: "active",
+  },
+  {
+    image: "/images/product-9.jpg",
+    name: "Sports",
+    totalProducts: 45,
+    slug: "sports",
+    description: "Equipment and apparel for sports.",
+    status: "active",
+  },
+  {
+    image: "/images/product-10.jpg",
+    name: "Books",
+    totalProducts: 70,
+    slug: "books",
+    description: "Wide range of literature and educational materials.",
     status: "active",
   },
 ];
 
 const CategoriesTable = () => {
+  // Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(5);
+
+  // Search State
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filter categories based on search
+  const filteredCategories = categoriesData.filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Calculate pagination values
+  const totalItems = filteredCategories.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+  const currentItems = filteredCategories.slice(startIndex, endIndex);
+
+  // Pagination handlers
+  const handlePrevious = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1); // Reset to first page on search
+  };
+
   // Modal
   const [isShowModal, setShowModal] = useState("false");
   const handleToggleShowModal = () => {
@@ -61,7 +132,18 @@ const CategoriesTable = () => {
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-4">
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-lg-4 mb-3">
-            <SearchForm />
+            <Form className="position-relative table-src-form me-0">
+              <Form.Control
+                type="text"
+                placeholder="Search here"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+
+              <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                search
+              </span>
+            </Form>
 
             <button
               className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
@@ -99,8 +181,8 @@ const CategoriesTable = () => {
                 </thead>
 
                 <tbody>
-                  {categoriesData &&
-                    categoriesData.slice(0, 10).map((defaultValue, i) => (
+                  {currentItems.length > 0 ? (
+                    currentItems.map((item, i) => (
                       <tr key={i}>
                         <td>
                           <Form>
@@ -114,7 +196,7 @@ const CategoriesTable = () => {
 
                         <td>
                           <Image
-                            src={defaultValue.image}
+                            src={item.image}
                             className="wh-40 rounded-100"
                             alt="product-1"
                             width={40}
@@ -122,19 +204,19 @@ const CategoriesTable = () => {
                           />
                         </td>
 
-                        <td>{defaultValue.name}</td>
+                        <td>{item.name}</td>
 
-                        <td>{defaultValue.totalProducts}</td>
+                        <td>{item.totalProducts}</td>
 
-                        <td>{defaultValue.slug}</td>
+                        <td>{item.slug}</td>
 
-                        <td>{defaultValue.description}</td>
+                        <td>{item.description}</td>
 
                         <td>
                           <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${defaultValue.status}`}
+                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${item.status}`}
                           >
-                            {defaultValue.status}
+                            {item.status}
                           </span>
                         </td>
 
@@ -160,13 +242,73 @@ const CategoriesTable = () => {
                           </div>
                         </td>
                       </tr>
-                    ))}
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="8" className="text-center">
+                        No results found
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </Table>
             </div>
 
             {/* Pagination */}
-            <Pagination />
+            <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+              <span className="fs-13 fw-medium">
+                Showing {startIndex + 1} - {endIndex} of {totalItems} items
+              </span>
+
+              <div className="d-flex align-items-center">
+                <nav aria-label="Page navigation example">
+                  <ul className="pagination mb-0 justify-content-center">
+                    <li className="page-item">
+                      <button
+                        className={`page-link icon ${
+                          currentPage === 1 ? "disabled" : ""
+                        }`}
+                        onClick={handlePrevious}
+                        disabled={currentPage === 1}
+                      >
+                        <span className="material-symbols-outlined">
+                          keyboard_arrow_left
+                        </span>
+                      </button>
+                    </li>
+
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                      (num) => (
+                        <li key={num} className="page-item">
+                          <button
+                            className={`page-link ${
+                              currentPage === num ? "active" : ""
+                            }`}
+                            onClick={() => setCurrentPage(num)}
+                          >
+                            {num}
+                          </button>
+                        </li>
+                      )
+                    )}
+
+                    <li className="page-item">
+                      <button
+                        className={`page-link icon ${
+                          currentPage === totalPages ? "disabled" : ""
+                        }`}
+                        onClick={handleNext}
+                        disabled={currentPage === totalPages}
+                      >
+                        <span className="material-symbols-outlined">
+                          keyboard_arrow_right
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
           </div>
         </Card.Body>
       </Card>

@@ -90,7 +90,7 @@
             </tr>
           </tbody>
         </v-table>
-        <CommonPaginationTwo items="5" />
+        <PaginationTwo items="5" />
       </div>
     </div>
   </v-card>
@@ -98,6 +98,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import PaginationTwo from "@/components/Common/PaginationTwo.vue";
 
 interface Item {
   id: string;
@@ -128,6 +129,9 @@ interface Item {
 
 export default defineComponent({
   name: "ManageReviews",
+  components: {
+    PaginationTwo,
+  },
   setup() {
     const items = ref<Item[]>([
       {

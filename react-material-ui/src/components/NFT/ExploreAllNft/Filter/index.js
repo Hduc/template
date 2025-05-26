@@ -59,7 +59,7 @@ const Filter = () => {
 
         <Box component="form" noValidate>
           <Grid container alignItems="center" spacing={2}>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <TextField
                 autoComplete="search"
                 name="search"
@@ -74,7 +74,7 @@ const Filter = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Category</InputLabel>
                 <Select
@@ -93,7 +93,7 @@ const Filter = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">File Type</InputLabel>
                 <Select
@@ -112,7 +112,7 @@ const Filter = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3, xl: 3 }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">
                   Sales Type
@@ -133,9 +133,9 @@ const Filter = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Grid container alignItems="center" spacing={2}>
-                <Grid item xs={12} md={12} lg={8}>
+                <Grid size={{ xs: 12, md: 12, lg: 8 }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -161,7 +161,7 @@ const Filter = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={4}>
+                <Grid size={{ xs: 12, md: 12, lg: 4 }}>
                   <Box
                     sx={{
                       display: "flex",

@@ -89,7 +89,7 @@ const LeadsBySource: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Leads by Source</h5>
+            <h5 className="!mb-0">Leads by Source</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -143,42 +143,42 @@ const LeadsBySource: React.FC = () => {
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-primary-500 d-block"></span>
                 Organic
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">320</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">320</h6>
             </li>
             <li>
               <span className="flex items-center text-sm mb-[7px]">
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-secondary-500 d-block"></span>
                 Paid
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">60</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">60</h6>
             </li>
             <li>
               <span className="flex items-center text-sm mb-[7px]">
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-purple-500 d-block"></span>
                 Direct
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">30</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">30</h6>
             </li>
             <li>
               <span className="flex items-center text-sm mb-[7px]">
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-info-500 d-block"></span>
                 Social
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">160</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">160</h6>
             </li>
             <li>
               <span className="flex items-center text-sm mb-[7px]">
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-success-500 d-block"></span>
                 Referrals
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">279</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">279</h6>
             </li>
             <li>
               <span className="flex items-center text-sm mb-[7px]">
                 <span className="w-[11px] h-[11px] ltr:mr-[8px] rtl:ml-[8px] rounded-sm bg-danger-500 d-block"></span>
                 Others
               </span>
-              <h6 className="mb-0 leading-none text-[18px] font-medium">19</h6>
+              <h6 className="!mb-0 !leading-none !text-lg !font-medium">19</h6>
             </li>
           </ul>
         </div>

@@ -1,9 +1,7 @@
 <template>
-  <div class="main-content-container overflow-hidden">
-    <PageTitle pageTitle="Add User" subTitle="Users" />
+  <PageTitle pageTitle="Add User" subTitle="Users" />
 
-    <AddUser />
-  </div>
+  <AddUser />
 </template>
 
 <script lang="ts">

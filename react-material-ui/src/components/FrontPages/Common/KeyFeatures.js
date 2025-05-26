@@ -72,7 +72,7 @@ const KeyFeatures = () => {
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
           {features.map((feature, index) => (
-            <Grid key={index} item xs={12} sm={6} md={6} lg={4} xl={4}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 6, lg: 4 }}>
               <Box className="fp-single-key-feature-box">
                 <div
                   className="icon"

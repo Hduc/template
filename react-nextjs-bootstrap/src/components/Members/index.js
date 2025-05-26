@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useState } from "react";
 import { Card, Table } from "react-bootstrap";
 import Image from "next/image";
-import Pagination from "./Pagination";
 
 const membersData = [
   {
@@ -126,20 +126,143 @@ const membersData = [
     lastActive: "10 Dec 2024 06:03 PM",
   },
   {
-    id: "#JAN-845",
+    id: "#JAN-844",
     member: {
-      img: "/images/user-15.jpg",
-      name: "Nathaniel Hulsey",
+      img: "/images/user-16.jpg",
+      name: "Elena Rodriguez",
     },
-    email: "nathaniel@trezo.com",
-    phone: "+1 555-225-4488",
-    location: "Chicago",
-    joiningDate: "19 Jan 2024",
-    lastActive: "10 Dec 2024 06:03 PM",
+    email: "elena@trezo.com",
+    phone: "+1 555-789-1234",
+    location: "New York",
+    joiningDate: "20 Dec 2023",
+    lastActive: "11 Dec 2024 07:45 AM",
+  },
+  {
+    id: "#JAN-843",
+    member: {
+      img: "/images/user-17.jpg",
+      name: "Michael Stone",
+    },
+    email: "michael@trezo.com",
+    phone: "+1 555-321-6547",
+    location: "Boston",
+    joiningDate: "21 Nov 2023",
+    lastActive: "12 Dec 2024 03:22 PM",
+  },
+  {
+    id: "#JAN-842",
+    member: {
+      img: "/images/user-18.jpg",
+      name: "Sophia Martinez",
+    },
+    email: "sophia@trezo.com",
+    phone: "+1 555-654-3210",
+    location: "Miami",
+    joiningDate: "22 Oct 2023",
+    lastActive: "13 Dec 2024 11:11 AM",
+  },
+  {
+    id: "#JAN-841",
+    member: {
+      img: "/images/user-19.jpg",
+      name: "Daniel White",
+    },
+    email: "daniel@trezo.com",
+    phone: "+1 555-987-3210",
+    location: "Seattle",
+    joiningDate: "23 Sep 2023",
+    lastActive: "14 Dec 2024 09:09 PM",
+  },
+  {
+    id: "#JAN-840",
+    member: {
+      img: "/images/user-20.jpg",
+      name: "Isabella Brown",
+    },
+    email: "isabella@trezo.com",
+    phone: "+1 555-123-7890",
+    location: "Austin",
+    joiningDate: "24 Aug 2023",
+    lastActive: "15 Dec 2024 10:10 AM",
+  },
+  {
+    id: "#JAN-839",
+    member: {
+      img: "/images/user-21.jpg",
+      name: "James Garcia",
+    },
+    email: "james@trezo.com",
+    phone: "+1 555-456-1230",
+    location: "Denver",
+    joiningDate: "25 Jul 2023",
+    lastActive: "16 Dec 2024 12:12 PM",
+  },
+  {
+    id: "#JAN-838",
+    member: {
+      img: "/images/user-22.jpg",
+      name: "Charlotte Davis",
+    },
+    email: "charlotte@trezo.com",
+    phone: "+1 555-789-4560",
+    location: "Phoenix",
+    joiningDate: "26 Jun 2023",
+    lastActive: "17 Dec 2024 02:02 PM",
+  },
+  {
+    id: "#JAN-837",
+    member: {
+      img: "/images/user-23.jpg",
+      name: "Benjamin Martinez",
+    },
+    email: "benjamin@trezo.com",
+    phone: "+1 555-321-7890",
+    location: "Houston",
+    joiningDate: "27 May 2023",
+    lastActive: "18 Dec 2024 04:04 PM",
+  },
+  {
+    id: "#JAN-836",
+    member: {
+      img: "/images/user-24.jpg",
+      name: "Amelia Johnson",
+    },
+    email: "amelia@trezo.com",
+    phone: "+1 555-654-7890",
+    location: "Atlanta",
+    joiningDate: "28 Apr 2023",
+    lastActive: "19 Dec 2024 06:06 PM",
+  },
+  {
+    id: "#JAN-835",
+    member: {
+      img: "/images/user-25.jpg",
+      name: "Lucas Smith",
+    },
+    email: "lucas@trezo.com",
+    phone: "+1 555-987-6540",
+    location: "Dallas",
+    joiningDate: "29 Mar 2023",
+    lastActive: "20 Dec 2024 08:08 PM",
   },
 ];
 
 const Members = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(membersData.length / itemsPerPage);
+
+  const handlePageChange = (newPage) => {
+    if (newPage > 0 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
+
+  const displayedMembers = membersData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -161,67 +284,112 @@ const Members = () => {
                 </thead>
 
                 <tbody>
-                  {membersData &&
-                    membersData.slice(0, 10).map((value, i) => (
-                      <tr key={i}>
-                        <td>{value.id}</td>
+                  {displayedMembers.map((member, i) => (
+                    <tr key={i}>
+                      <td>{member.id}</td>
 
-                        <td>
-                          <div className="d-flex align-items-center">
-                            <Image
-                              src={value.member.img}
-                              className="wh-40 rounded-circle"
-                              alt="user"
-                              width={40}
-                              height={40}
-                            />
-                            <div className="ms-2">
-                              <h6 className="fw-medium fs-14 mb-0">
-                                {value.member.name}
-                              </h6>
-                            </div>
+                      <td>
+                        <div className="d-flex align-items-center gap-2">
+                          <Image
+                            src={member.member.img}
+                            className="wh-40 rounded-circle"
+                            alt="user"
+                            width={40}
+                            height={40}
+                          />
+                          <div>
+                            <h6 className="fw-medium fs-14 mb-0">
+                              {member.member.name}
+                            </h6>
                           </div>
-                        </td>
+                        </div>
+                      </td>
 
-                        <td>{value.email}</td>
+                      <td>{member.email}</td>
 
-                        <td>{value.phone}</td>
+                      <td>{member.phone}</td>
 
-                        <td>{value.location}</td>
+                      <td>{member.location}</td>
 
-                        <td>{value.joiningDate}</td>
+                      <td>{member.joiningDate}</td>
 
-                        <td>{value.lastActive}</td>
+                      <td>{member.lastActive}</td>
 
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
 
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
 
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </div>
 
             {/* Pagination */}
-            <Pagination />
+            <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap p-4">
+              <span className="fs-12 fw-medium">
+                Showing {displayedMembers.length} of {membersData.length}{" "}
+                Results
+              </span>
+
+              <nav aria-label="Page navigation example">
+                <ul className="pagination mb-0 justify-content-center">
+                  <li className="page-item">
+                    <button
+                      className="page-link icon"
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage === 1}
+                    >
+                      <span className="material-symbols-outlined">
+                        keyboard_arrow_left
+                      </span>
+                    </button>
+                  </li>
+
+                  {[...Array(totalPages)].map((_, index) => (
+                    <li className="page-item" key={index}>
+                      <button
+                        className={`page-link ${
+                          currentPage === index + 1 ? "active" : ""
+                        }`}
+                        onClick={() => handlePageChange(index + 1)}
+                      >
+                        {index + 1}
+                      </button>
+                    </li>
+                  ))}
+
+                  <li className="page-item">
+                    <button
+                      className="page-link icon"
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage === totalPages}
+                    >
+                      <span className="material-symbols-outlined">
+                        keyboard_arrow_right
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </Card.Body>
       </Card>

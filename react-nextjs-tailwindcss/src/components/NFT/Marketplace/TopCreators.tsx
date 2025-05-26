@@ -73,7 +73,7 @@ const TopCreators: React.FC = () => {
       <div className="trezo-card mb-[25px]">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Top Creators</h5>
+            <h5 className="!mb-0">Top Creators</h5>
           </div>
           <div className="trezo-card-subtitle">
             <Link
@@ -125,7 +125,7 @@ const TopCreators: React.FC = () => {
                       />
                     </div>
 
-                    <h3 className="text-md font-semibold mb-[8px]">
+                    <h3 className="!text-md !font-semibold !mb-[8px]">
                       {creator.name}
                     </h3>
 

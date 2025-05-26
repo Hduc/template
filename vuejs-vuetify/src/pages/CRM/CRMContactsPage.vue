@@ -1,9 +1,7 @@
 <template>
-  <div class="main-content-container overflow-hidden">
-    <PageTitle pageTitle="Contacts" subTitle="CRM" />
+  <PageTitle pageTitle="Contacts" subTitle="CRM" />
 
-    <Contacts />
-  </div>
+  <Contacts />
 </template>
 
 <script lang="ts">

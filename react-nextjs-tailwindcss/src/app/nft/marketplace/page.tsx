@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Marketplace</h5>
+        <h5 className="!mb-0">Marketplace</h5>
 
         <ol className="breadcrumb mt-[12px] md:mt-0">
           <li className="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -40,7 +40,7 @@ export default function Page() {
       >
         <div className="trezo-card-content md:py-[33px] md:px-[15px] lg:flex justify-between items-center">
           <div>
-            <h3 className="text-white text-xl md:text-2xl mb-[5px]">
+            <h3 className="!text-white !text-xl md:!text-2xl !mb-[5px]">
               Manage Your NFT From One Place
             </h3>
             <p className="text-gray-300">

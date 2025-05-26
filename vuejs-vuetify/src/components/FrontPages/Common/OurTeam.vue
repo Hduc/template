@@ -12,12 +12,7 @@
         </h2>
       </div>
       <div class="team-slides">
-        <Carousel
-          v-bind="settings"
-          :autoplay="3000"
-          :wrap-around="true"
-          :breakpoints="breakpoints"
-        >
+        <Carousel v-bind="config">
           <Slide v-for="slide in items" :key="slide.id">
             <div class="single-team-member">
               <div class="image border-radius">
@@ -71,10 +66,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
+import "vue3-carousel/carousel.css";
 
 export default defineComponent({
   name: "OurTeam",
@@ -83,12 +78,37 @@ export default defineComponent({
     Slide,
     Navigation,
   },
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "center",
-    },
-    items: [
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+      breakpoints: {
+        0: {
+          itemsToShow: 1,
+          snapAlign: "start",
+        },
+        515: {
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+        695: {
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+        935: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+        1200: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+      },
+    };
+
+    const items = [
       {
         id: 1,
         image: require("@/assets/images/front-pages/team1.jpg"),
@@ -181,30 +201,13 @@ export default defineComponent({
           },
         ],
       },
-    ],
-    breakpoints: {
-      0: {
-        itemsToShow: 1,
-        snapAlign: "start",
-      },
-      515: {
-        itemsToShow: 2,
-        snapAlign: "start",
-      },
-      695: {
-        itemsToShow: 2,
-        snapAlign: "start",
-      },
-      935: {
-        itemsToShow: 3,
-        snapAlign: "center",
-      },
-      1200: {
-        itemsToShow: 3,
-        snapAlign: "center",
-      },
-    },
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>
 

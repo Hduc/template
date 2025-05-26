@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { RouterLink } from '@angular/router';
 import { SteplineLineChartService } from './stepline-line-chart.service';
 
 @Component({

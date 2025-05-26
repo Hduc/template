@@ -45,7 +45,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Sarah Johnson'
         },
         property: 'Industrial',
-        date: '30 Apr 2024',
+        date: '30 Apr 2025',
         price: '$500,000',
         status: {
             completed: true,
@@ -67,7 +67,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Michael Smith'
         },
         property: 'Office',
-        date: '29 Apr 2024',
+        date: '29 Apr 2025',
         price: '$1,200,000',
         status: {
             completed: false,
@@ -89,7 +89,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Emily Brown'
         },
         property: 'Multi-Family',
-        date: '28 Apr 2024',
+        date: '28 Apr 2025',
         price: '$350,000',
         status: {
             completed: false,
@@ -111,7 +111,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Jason Lee'
         },
         property: 'Residential',
-        date: '27 Apr 2024',
+        date: '27 Apr 2025',
         price: '$220,000',
         status: {
             completed: true,
@@ -133,7 +133,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ashley Davis'
         },
         property: 'Commercial',
-        date: '26 Apr 2024',
+        date: '26 Apr 2025',
         price: '$1,500,000',
         status: {
             completed: false,
@@ -155,7 +155,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ashley Davis'
         },
         property: 'Commercial',
-        date: '26 Apr 2024',
+        date: '26 Apr 2025',
         price: '$1,500,000',
         status: {
             completed: false,
@@ -177,7 +177,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Jason Lee'
         },
         property: 'Residential',
-        date: '27 Apr 2024',
+        date: '27 Apr 2025',
         price: '$220,000',
         status: {
             completed: true,
@@ -199,7 +199,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Michael Smith'
         },
         property: 'Office',
-        date: '29 Apr 2024',
+        date: '29 Apr 2025',
         price: '$1,200,000',
         status: {
             completed: false,
@@ -221,7 +221,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Emily Brown'
         },
         property: 'Multi-Family',
-        date: '28 Apr 2024',
+        date: '28 Apr 2025',
         price: '$350,000',
         status: {
             completed: false,
@@ -243,7 +243,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Sarah Johnson'
         },
         property: 'Industrial',
-        date: '30 Apr 2024',
+        date: '30 Apr 2025',
         price: '$500,000',
         status: {
             completed: true,

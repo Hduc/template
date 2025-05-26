@@ -44,7 +44,7 @@ const TestimonialsStyle1: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Testimonials Style - 1</h5>
+            <h5 className="!mb-0">Testimonials Style - 1</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -61,7 +61,7 @@ const TestimonialsStyle1: React.FC = () => {
                   alt={testimonial.name}
                   className="rounded-full"
                 />
-                <h5 className="mt-[15px] mb-[7px]">{testimonial.name}</h5>
+                <h5 className="!mt-[15px] !mb-[7px]">{testimonial.name}</h5>
 
                 <span className="block">{testimonial.role}</span>
 

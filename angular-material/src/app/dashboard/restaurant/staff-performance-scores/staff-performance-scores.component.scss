@@ -1,0 +1,230 @@
+::ng-deep {
+    .staff-performance-scores-card {
+        .mat-mdc-card-content {
+            margin-bottom: -10px;
+            
+            .mat-mdc-table {
+                &.mdc-data-table__table {
+                    .mat-mdc-header-row {
+                        .mat-mdc-header-cell {
+                            font-weight: 600;
+                            color: var(--bodyColor);
+                            background-color: transparent;
+                            padding: {
+                                bottom: 10px;
+                                top: 0;
+                            };
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                            &:last-child {
+                                text-align: end;
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                    .mdc-data-table__content {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 10px;
+                                    bottom: 10px;
+                                };
+                                border: {
+                                    left-width: 0;
+                                    right-width: 0;
+                                };
+                                .employee-info {
+                                    gap: 10px;
+
+                                    .img {
+                                        width: 30px;
+                                    }
+                                    span {
+                                        font-size: var(--fontSize);
+                                    }
+                                }
+                                &:first-child {
+                                    padding-left: 0;
+                                }
+                                &:last-child {
+                                    padding-right: 0;
+                                    text-align: end;
+                                }
+                            }
+                            &:first-child {
+                                .mat-mdc-cell {
+                                    padding-top: 0;
+                                    border-top-width: 0;
+                                }
+                            }
+                            &:last-child {
+                                .mat-mdc-cell {
+                                    border-bottom-width: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-content {
+                .mat-mdc-table {
+                    &.mdc-data-table__table {
+                        .mat-mdc-header-row {
+                            .mat-mdc-header-cell {
+                                &:first-child {
+                                    padding: {
+                                        left: 20px;
+                                        right: 0;
+                                    };
+                                }
+                                &:last-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                        }
+                        .mdc-data-table__content {
+                            .mat-mdc-row {
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            left: 20px;
+                                            right: 0;
+                                        };
+                                    }
+                                    &:last-child {
+                                        padding: {
+                                            right: 20px;
+                                            left: 0;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    ::ng-deep {
+        .staff-performance-scores-card {
+            &.component-rtl-enabled {
+                .mat-mdc-card-content {
+                    .mat-mdc-table {
+                        &.mdc-data-table__table {
+                            .mat-mdc-header-row {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            left: 17px;
+                                            right: 0;
+                                        };
+                                    }
+                                    &:last-child {
+                                        padding: {
+                                            right: 17px;
+                                            left: 0;
+                                        };
+                                    }
+                                }
+                            }
+                            .mdc-data-table__content {
+                                .mat-mdc-row {
+                                    .mat-mdc-cell {
+                                        &:first-child {
+                                            padding: {
+                                                left: 17px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            padding: {
+                                                right: 17px;
+                                                left: 0;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    ::ng-deep {
+        .staff-performance-scores-card {
+            &.component-rtl-enabled {
+                .mat-mdc-card-content {
+                    .mat-mdc-table {
+                        &.mdc-data-table__table {
+                            .mat-mdc-header-row {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            left: 20px;
+                                            right: 0;
+                                        };
+                                    }
+                                    &:last-child {
+                                        padding: {
+                                            right: 20px;
+                                            left: 0;
+                                        };
+                                    }
+                                }
+                            }
+                            .mdc-data-table__content {
+                                .mat-mdc-row {
+                                    .mat-mdc-cell {
+                                        &:first-child {
+                                            padding: {
+                                                left: 20px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            padding: {
+                                                right: 20px;
+                                                left: 0;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

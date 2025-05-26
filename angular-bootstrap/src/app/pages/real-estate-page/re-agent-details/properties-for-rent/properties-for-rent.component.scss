@@ -16,9 +16,6 @@
                 background-color: #FFE1DD;
             }
         }
-        .text-xs {
-            font-size: 12px;
-        }
         .sub-title {
             margin-top: 75px;   
         }
@@ -37,6 +34,19 @@
             .chart {
                 right: auto;
                 left: -70px;
+            }
+        }
+    }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .info-badge {
+                border-color: #15203c;
+                background-color: #15203c;
+                
+                &.down {
+                    border-color: #15203c;
+                    background-color: #15203c;
+                }
             }
         }
     }

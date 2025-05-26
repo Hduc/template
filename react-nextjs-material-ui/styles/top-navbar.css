@@ -6,6 +6,9 @@
 .top-navbar.sticky {
   box-shadow: rgba(149, 157, 165, 0.1215686275) 0 8px 24px;
 }
+.top-navbar .logos {
+  display: none;
+}
 
 .dark-theme .top-navbar {
   background-color: var(--darkCardBg);

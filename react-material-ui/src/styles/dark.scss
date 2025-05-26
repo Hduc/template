@@ -7,6 +7,31 @@
   --darkSecondaryColor: #15203c; 
 }
 
+.th-toggle-mode {
+  cursor: pointer;
+  i {
+    font-size: 22px;
+    color: #FE7A36;
+  }
+  .ri-moon-line {
+    display: none;
+  }
+  &.active {
+    .ri-sun-line {
+      display: none;
+    }
+    .ri-moon-line {
+      display: block;
+    }
+  }
+}
+.common-dark-mode {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 50;
+}
+
 .dark-theme {
   background-color: var(--darkBodyBg);
 
@@ -64,7 +89,7 @@
   .bg-grey-100 {
     background-color: #333 !important;
   }
-
+   
   // Border
   .border {
     border: 1px solid var(--darkBorder) !important;
@@ -169,7 +194,6 @@
     border: 1px solid var(--darkBorder);
   }
  
-   
   // rmui-card
   .rmui-card, .MuiCard-root {
     background-color: var(--darkCardBg) !important;
@@ -185,6 +209,10 @@
   
   .MuiDivider-root {
     border-color: var(--darkBorder);
+  }
+
+  .table-bg-transparent {
+    background-color: transparent !important;
   }
 
   // apexcharts
@@ -328,13 +356,7 @@
       border: 1px solid var(--darkBorder);
     }
   }
-
-  .rmui-chat-sidebar-tab {
-    button {
-      color: var(--darkBodyColor) !important;
-    }
-  }
-
+ 
   // pd-description
   .pd-description {
     ul {
@@ -450,17 +472,18 @@
       }
     }
   }
-
   .apexcharts-radialbar-hollow {
     fill: var(--darkBodyBg);
   }
-
   .crc-for-dark {
     background-color: var(--darkBodyBg);
   }
-
   .for-dark-bg {
     background-color: var(--darkBodyBg);
+    background-image: none !important;
+  }
+  .for-dark-secondary-bg {
+    background-color: var(--darkSecondaryColor);
   }
 
   .tsm-charts, .otd-charts, .c-of-m, .eb-chart {
@@ -472,5 +495,149 @@
   }
   code {
     background-color: #000 !important;
+  }
+
+  .input-date-picker {
+    fieldset {
+      border-color: var(--darkBorder) !important;
+    }
+  }
+
+  // Hotel Dashboard
+  .hotel-popular-rooms {
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: #444;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--primaryColor); 
+        }
+      }
+    }
+  }
+  // End Hotel Dashboard
+
+  // Real Estate Agent Dashboard
+  .rea-my-featured-listings {
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: #444;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--dangerColor); 
+        }
+      }
+    }
+  }
+  .text-black-for-dark {
+    color: var(--blackColor) !important;
+  }
+  .rea-client-ratings {
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: #444;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: var(--dangerColor); 
+        }
+      }
+    }
+  }
+  // End Real Estate Agent Dashboard
+
+  // Crypto Performance Dashboard
+  .for-dark-bg-162243 {
+    background-color: #162243 !important;
+  }
+  // End Crypto Performance Dashboard
+
+  // upload-file-paper
+  .upload-file-paper {
+    border-color: var(--darkBorder) !important;
+  }
+
+  .rmui-ws-calendar {
+    .MuiDayCalendar-header {
+      .MuiTypography-root {
+        color: #fff;
+      }
+    }
+  }
+
+  // rmui-table
+  .rmui-table {
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      border-radius: 10px; 
+    }
+    &::-webkit-scrollbar-track {
+      background: #000; 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #15203c; 
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #15203c;
+      cursor: pointer;
+    }
+  }
+
+  // data-grid-table
+  .data-grid-table {
+    .MuiDataGrid-row--borderBottom {
+      background-color: var(--darkSecondaryColor) !important; 
+    
+      .MuiDataGrid-columnHeader {
+        background-color: var(--darkSecondaryColor) !important; 
+      }
+    }
+    .MuiDataGrid-cell, .MuiDataGrid-filler, .css-1tdeh38, .MuiDataGrid-withBorderColor {
+      border-color: var(--darkBorder) !important;
+    }
+    .MuiSvgIcon-root {
+      fill: rgb(140 140 140 / 60%);
+    }
+
+    .MuiDataGrid-row {
+      &:hover {
+        background-color: #000 !important;
+      }
+      &.Mui-selected {
+        background-color: #000 !important;
+      }
+    }
+  }
+  // sorting-selecting-table
+  .sorting-selecting-table {
+    .MuiTableSortLabel-root {
+      &:hover {
+        color: #fff !important;
+      }
+    }
+    .MuiTableCell-head {
+      background-color: #000;
+    }
+    .MuiTableCell-root {
+      border-color: var(--darkBorder) !important;
+    }
+  }
+
+  // customized-tables
+  .customized-tables {
+    .MuiTableCell-root {
+      border-color: var(--darkBorder) !important;
+    }
+  }
+
+  // custom-pagination
+  .custom-pagination {
+    .MuiTableCell-root {
+      border-color: var(--darkBorder) !important;
+    }
   }
 }

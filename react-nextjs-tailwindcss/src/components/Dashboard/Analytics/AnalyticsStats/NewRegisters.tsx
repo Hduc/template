@@ -110,7 +110,7 @@ const NewRegisters: React.FC = () => {
       <div className="relative md:ltr:pl-[25px] md:ltr:first:pl-0 md:rtl:pr-[25px] md:rtl:first:pr-0 md:ltr:-mr-[25px] md:rtl:-ml-[25px] md:ltr:first:mr-0 md:rtl:first:ml-0 mt-[20px] sm:mt-0 first:mt-0">
         <span className="block">New Registers</span>
 
-        <h5 className="mb-0 mt-[3px] text-[20px]">35.3k</h5>
+        <h5 className="!mb-0 !mt-[3px] !text-[20px]">35.3k</h5>
 
         <div className="absolute -top-[28px] ltr:-right-[9px] rtl:-left-[9px] max-w-[120px]">
           {isChartLoaded && (
@@ -125,7 +125,7 @@ const NewRegisters: React.FC = () => {
         </div>
 
         <div className="mt-[12px] flex items-center justify-between">
-          <span className="inline-block text-xs text-success-700 px-[9px] border border-success-300 bg-success-100 rounded-xl">
+          <span className="inline-block text-xs text-success-700 px-[9px] border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-xl">
             +15% Increase
           </span>
           <span className="block text-xs">Last 7 days</span>

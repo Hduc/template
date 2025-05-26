@@ -118,14 +118,14 @@ const TotalCustomers: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <span className="block">Total Customers</span>
-              <span className="inline-block px-[8.3px] py-[1px] text-success-700 border border-success-300 bg-success-100 text-sm ltr:ml-[10px] rtl:mr-[10px] rounded-[100px]">
+              <span className="inline-block px-[8.3px] py-[1px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] text-sm ltr:ml-[10px] rtl:mr-[10px] rounded-[100px]">
                 +5.4
               </span>
             </div>
             <span className="block text-sm">Last 7 days</span>
           </div>
 
-          <h5 className="text-[18px] md:text-[20px] mb-0 mt-[4px]">1,528</h5>
+          <h5 className="!text-lg md:!text-[20px] !mb-0 !mt-[5px]">1,528</h5>
 
           <div className="mx-auto max-w-[300px] -mt-[33px] -mb-[32px]">
             {isChartLoaded && (

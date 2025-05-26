@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -440,6 +440,14 @@ const ReviewsTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    row.reviewerName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -472,7 +480,9 @@ const ReviewsTable: React.FC = () => {
             <input
               type="text"
               className='t-input'
-              placeholder="Search here....."
+              placeholder="Search here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -578,7 +588,7 @@ const ReviewsTable: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
@@ -688,7 +698,7 @@ const ReviewsTable: React.FC = () => {
                     }}
                     className="border-bottom"
                   >
-                    ${row.date}
+                    {row.date}
                     <Typography
                       sx={{
                         fontSize: "13px",
@@ -775,7 +785,7 @@ const ReviewsTable: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={6} />
+                  <TableCell className="border-bottom" colSpan={6} />
                 </TableRow>
               )}
             </TableBody>

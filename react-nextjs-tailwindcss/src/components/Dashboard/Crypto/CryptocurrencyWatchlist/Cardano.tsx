@@ -143,7 +143,7 @@ const Cardano: React.FC = () => {
                 (ADA)
               </span>
             </span>
-            <h4 className="mb-0 mt-[6px] text-[18px] md:text-[20px] font-semibold">
+            <h4 className="!mb-0 !mt-[6px] !text-[18px] md:!text-[20px] !font-semibold">
               $0.38
               <span className="relative font-medium text-base text-danger-700 -top-px ltr:ml-[2px] rtl:mr-[2px] ltr:pl-[24px] rtl:pr-[24px]">
                 <i className="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-[20px] top-1/2 -translate-y-1/2">

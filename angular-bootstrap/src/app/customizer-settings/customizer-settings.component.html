@@ -1,7 +1,8 @@
+<!-- Theme Settings -->
 <div
     [ngClass]="{'active': isToggled}"
-    [class.component-dark-theme]="themeService.isDark()"
     class="settings-sidebar bg-white transition"
+    [class.component-dark-theme]="themeService.isDark()"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
 >
     <div class="settings-header bg-primary d-flex align-items-center justify-content-between">
@@ -104,6 +105,92 @@
                         <div class="dot-checkbox position-relative"></div>
                         <span class="d-block fw-semibold">
                             Dark
+                        </span>
+                    </div>
+                </div>
+            </button>
+            <div class="border-top"></div>
+            <span class="title d-block text-black fw-semibold">
+                Horizontal Layout
+            </span>
+            <button
+                class="switch-btn horizontal-layout-btn bg-transparent border-none p-0"
+                (click)="toggleNavbarTheme()"
+                [class.active]="themeService.isNavbar()"
+            >
+                <div class="first">
+                    <div class="box position-relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sub-title d-flex align-items-center">
+                        <div class="dot-checkbox position-relative"></div>
+                        <span class="d-block fw-semibold">
+                            Sidebar
+                        </span>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="box position-relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sub-title d-flex align-items-center">
+                        <div class="dot-checkbox position-relative"></div>
+                        <span class="d-block fw-semibold">
+                            Navbar
+                        </span>
+                    </div>
+                </div>
+            </button>
+            <div class="border-top"></div>
+            <span class="title d-block text-black fw-semibold">
+                Body BG Color
+            </span>
+            <button
+                class="switch-btn body-bg-color-btn bg-transparent border-none p-0"
+                (click)="toggleBodyBGTheme()"
+                [class.active]="themeService.isBodyBG()"
+            >
+                <div class="first">
+                    <div class="box position-relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sub-title d-flex align-items-center">
+                        <div class="dot-checkbox position-relative"></div>
+                        <span class="d-block fw-semibold">
+                            BG Gray
+                        </span>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="box position-relative">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="sub-title d-flex align-items-center">
+                        <div class="dot-checkbox position-relative"></div>
+                        <span class="d-block fw-semibold">
+                            BG White
                         </span>
                     </div>
                 </div>
@@ -461,3 +548,13 @@
         </div>
     </ng-scrollbar>
 </div>
+
+<!-- Buy Now -->
+<a
+    href="https://1.envato.market/EKkx2K"
+    target="_blank"
+    class="buy-now-btn btn btn-primary"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    Buy Now
+</a>

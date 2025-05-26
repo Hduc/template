@@ -333,7 +333,7 @@ const MyTasks: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={4} />
+                    <TableCell className="border-bottom" colSpan={4} />
                   </TableRow>
                 )}
               </TableBody>

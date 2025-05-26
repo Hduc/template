@@ -1,4 +1,7 @@
-<mat-card class="accounts-receivable-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+<mat-card
+    class="accounts-receivable-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
     <mat-card-content>
         <div class="info d-flex justify-content-between">
             <div>
@@ -16,7 +19,7 @@
             </div>
         </div>
         <div class="gap-10 d-flex align-items-center">
-            <span class="info-badge down d-inline-block">
+            <span class="trezo-badge down with-border">
                 -5.8%
             </span>
             <span class="d-block text-xs">

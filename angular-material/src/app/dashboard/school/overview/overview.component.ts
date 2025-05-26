@@ -21,7 +21,7 @@ export class OverviewComponent {
     formatDate(): string {
         const today = new Date();
         const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' };
-        return today.toLocaleDateString('en-US', options); // Format: "December 10, 2024"
+        return today.toLocaleDateString('en-US', options); // Format: "December 10, 2025"
     }
 
 }

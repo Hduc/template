@@ -5,4 +5,5 @@ import * as bootstrap from 'bootstrap';
 import "./data-table";
 import "./prism";
 import "./simplebar.min";
-import "./apexcharts-custom";
+import "./custom/apexcharts";
+import "./custom/echarts";

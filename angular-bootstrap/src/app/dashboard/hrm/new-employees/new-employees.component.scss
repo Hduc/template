@@ -48,6 +48,19 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .info {
+                .trezo-badge {
+                    background-color: #15203c;
+    
+                    &.down {
+                        background-color: #15203c;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

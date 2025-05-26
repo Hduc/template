@@ -73,6 +73,9 @@ export class GrossEarningsService {
                     colors: [
                         '#9135E8'
                     ],
+                    fill: {
+                        opacity: 1
+                    },
                     yaxis: {
                         show: false,
                         labels: {

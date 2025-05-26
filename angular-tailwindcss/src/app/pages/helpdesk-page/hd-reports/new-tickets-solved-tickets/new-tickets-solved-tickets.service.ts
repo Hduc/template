@@ -21,7 +21,7 @@ export class NewTicketsSolvedTicketsService {
                     series: series,
                     chart: {
                         type: "area",
-                        height: 370,
+                        height: 369,
                         zoom: {
                             enabled: false
                         },

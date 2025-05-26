@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Button from "@mui/material/Button";
-import { Box, Typography } from "@mui/material";
 
 const RTLMode: React.FC = () => {
   const [dirAttribute, setDirAttribute] = useState<string>("ltr");
 
   useEffect(() => {
+    // Check localStorage for saved direction
     const storedDirAttribute = localStorage.getItem("dirAttribute");
     if (storedDirAttribute) {
       setDirAttribute(storedDirAttribute);
@@ -24,33 +23,46 @@ const RTLMode: React.FC = () => {
 
   return (
     <>
-      <Box sx={{ mb: "30px" }}>
-        <Typography
-          component="h2"
-          sx={{
-            fontSize: "16px",
-            fontWeight: 500,
-            mb: "15px",
-            pb: "5px",
-          }}
-          className="text-black border-bottom"
-        >
-          RTL/LTR Mode
-        </Typography>
+      <span className="title">LTR/RTL Mode</span>
 
-        <Button
-          variant="contained"
-          sx={{
-            textTransform: "capitalize",
-            fontSize: "13px",
-            boxShadow: "none",
-            color: "#fff !important",
-          }}
-          onClick={handleButtonClick}
-        >
-          Switch to RTL/LTR
-        </Button>
-      </Box>
+      <button
+        className={`switch-btn ltr-rtl-btn bg-transparent border-none ${
+          dirAttribute === "rtl" ? "active" : ""
+        }`}
+        onClick={handleButtonClick}
+      >
+        <div className="first">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>LTR</span>
+          </div>
+        </div>
+
+        <div className="second">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>RTL</span>
+          </div>
+        </div>
+      </button>
     </>
   );
 };

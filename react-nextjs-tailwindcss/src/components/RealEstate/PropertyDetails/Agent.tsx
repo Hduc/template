@@ -31,7 +31,7 @@ const Agent: React.FC = () => {
             height={167}
           />
 
-          <h3 className="text-md mb-[3px]">Harold Cook</h3>
+          <h3 className="!text-md !mb-[3px]">Harold Cook</h3>
 
           <span className="block">Owner</span>
 

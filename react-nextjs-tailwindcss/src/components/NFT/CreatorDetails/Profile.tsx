@@ -17,7 +17,7 @@ const Profile: React.FC = () => {
               height={65}
             />
             <div>
-              <h3 className="text-lg md:text-xl mb-[4px]">Angela Carter</h3>
+              <h3 className="!text-lg md:!text-xl !mb-[4px]">Angela Carter</h3>
               <span className="block text-xs">ID: 35246</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Profile: React.FC = () => {
             </div>
           </div>
 
-          <h3 className="text-lg mt-[20px] md:mt-[25px] mb-[10px]">
+          <h3 className="!text-lg !mt-[20px] md:!mt-[25px] !mb-[10px]">
             Description
           </h3>
           <p>

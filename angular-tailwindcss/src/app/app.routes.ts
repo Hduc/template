@@ -1,4 +1,20 @@
 import { Routes } from '@angular/router';
+import { FrontPagesComponent } from './front-pages/front-pages.component';
+import { HomeComponent } from './front-pages/home/home.component';
+import { FeaturesComponent } from './front-pages/features/features.component';
+import { TeamComponent } from './front-pages/team/team.component';
+import { FaqComponent } from './front-pages/faq/faq.component';
+import { ContactComponent } from './front-pages/contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
+import { SignInComponent } from './authentication/sign-in/sign-in.component';
+import { SignUpComponent } from './authentication/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './authentication/reset-password/reset-password.component';
+import { ConfirmEmailComponent } from './authentication/confirm-email/confirm-email.component';
+import { LockScreenComponent } from './authentication/lock-screen/lock-screen.component';
+import { LogoutComponent } from './authentication/logout/logout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EcommerceComponent } from './dashboard/ecommerce/ecommerce.component';
 import { CrmComponent } from './dashboard/crm/crm.component';
@@ -9,6 +25,22 @@ import { AnalyticsComponent } from './dashboard/analytics/analytics.component';
 import { CryptoComponent } from './dashboard/crypto/crypto.component';
 import { SalesComponent } from './dashboard/sales/sales.component';
 import { HospitalComponent } from './dashboard/hospital/hospital.component';
+import { HrmComponent } from './dashboard/hrm/hrm.component';
+import { SchoolComponent } from './dashboard/school/school.component';
+import { CallCenterComponent } from './dashboard/call-center/call-center.component';
+import { MarketingComponent } from './dashboard/marketing/marketing.component';
+import { NftComponent } from './dashboard/nft/nft.component';
+import { SaasComponent } from './dashboard/saas/saas.component';
+import { RealEstateComponent } from './dashboard/real-estate/real-estate.component';
+import { ShipmentComponent } from './dashboard/shipment/shipment.component';
+import { FinanceComponent } from './dashboard/finance/finance.component';
+import { PosSystemComponent } from './dashboard/pos-system/pos-system.component';
+import { PodcastComponent } from './dashboard/podcast/podcast.component';
+import { SocialMediaComponent } from './dashboard/social-media/social-media.component';
+import { DoctorComponent } from './dashboard/doctor/doctor.component';
+import { BeautySalonComponent } from './dashboard/beauty-salon/beauty-salon.component';
+import { StoreAnalysisComponent } from './dashboard/store-analysis/store-analysis.component';
+import { RestaurantComponent } from './dashboard/restaurant/restaurant.component';
 import { AppsComponent } from './apps/apps.component';
 import { ToDoListComponent } from './apps/to-do-list/to-do-list.component';
 import { CalendarComponent } from './apps/calendar/calendar.component';
@@ -29,16 +61,8 @@ import { PersonalComponent } from './apps/file-manager/personal/personal.compone
 import { ApplicationsComponent } from './apps/file-manager/applications/applications.component';
 import { DocumentsComponent } from './apps/file-manager/documents/documents.component';
 import { MediaComponent } from './apps/file-manager/media/media.component';
-import { RecentsComponent } from './apps/file-manager/recents/recents.component';
 import { ImportantComponent } from './apps/file-manager/important/important.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
-import { SignInComponent } from './authentication/sign-in/sign-in.component';
-import { SignUpComponent } from './authentication/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './authentication/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './authentication/reset-password/reset-password.component';
-import { ConfirmEmailComponent } from './authentication/confirm-email/confirm-email.component';
-import { LockScreenComponent } from './authentication/lock-screen/lock-screen.component';
-import { LogoutComponent } from './authentication/logout/logout.component';
+import { RecentsComponent } from './apps/file-manager/recents/recents.component';
 import { EcommercePageComponent } from './pages/ecommerce-page/ecommerce-page.component';
 import { EProductsGridComponent } from './pages/ecommerce-page/e-products-grid/e-products-grid.component';
 import { EProductsListComponent } from './pages/ecommerce-page/e-products-list/e-products-list.component';
@@ -84,6 +108,36 @@ import { HdTicketsComponent } from './pages/helpdesk-page/hd-tickets/hd-tickets.
 import { HdTicketDetailsComponent } from './pages/helpdesk-page/hd-ticket-details/hd-ticket-details.component';
 import { HdAgentsComponent } from './pages/helpdesk-page/hd-agents/hd-agents.component';
 import { HdReportsComponent } from './pages/helpdesk-page/hd-reports/hd-reports.component';
+import { NftMarketplacePageComponent } from './pages/nft-marketplace-page/nft-marketplace-page.component';
+import { NmMarketplaceComponent } from './pages/nft-marketplace-page/nm-marketplace/nm-marketplace.component';
+import { NmExploreAllComponent } from './pages/nft-marketplace-page/nm-explore-all/nm-explore-all.component';
+import { NmLiveAuctionComponent } from './pages/nft-marketplace-page/nm-live-auction/nm-live-auction.component';
+import { NmNftDetailsComponent } from './pages/nft-marketplace-page/nm-nft-details/nm-nft-details.component';
+import { NmCreatorsComponent } from './pages/nft-marketplace-page/nm-creators/nm-creators.component';
+import { NmCreatorDetailsComponent } from './pages/nft-marketplace-page/nm-creator-details/nm-creator-details.component';
+import { NmWalletConnectComponent } from './pages/nft-marketplace-page/nm-wallet-connect/nm-wallet-connect.component';
+import { NmCreateNftComponent } from './pages/nft-marketplace-page/nm-create-nft/nm-create-nft.component';
+import { RealEstatePageComponent } from './pages/real-estate-page/real-estate-page.component';
+import { RePropertyListComponent } from './pages/real-estate-page/re-property-list/re-property-list.component';
+import { RePropertyDetailsComponent } from './pages/real-estate-page/re-property-details/re-property-details.component';
+import { ReAddPropertyComponent } from './pages/real-estate-page/re-add-property/re-add-property.component';
+import { ReAgentsComponent } from './pages/real-estate-page/re-agents/re-agents.component';
+import { ReAgentDetailsComponent } from './pages/real-estate-page/re-agent-details/re-agent-details.component';
+import { ReAddAgentComponent } from './pages/real-estate-page/re-add-agent/re-add-agent.component';
+import { ReCustomersComponent } from './pages/real-estate-page/re-customers/re-customers.component';
+import { FinancePageComponent } from './pages/finance-page/finance-page.component';
+import { FWalletComponent } from './pages/finance-page/f-wallet/f-wallet.component';
+import { FTransactionsComponent } from './pages/finance-page/f-transactions/f-transactions.component';
+import { DoctorPageComponent } from './pages/doctor-page/doctor-page.component';
+import { DPatientsListComponent } from './pages/doctor-page/d-patients-list/d-patients-list.component';
+import { DAddPatientComponent } from './pages/doctor-page/d-add-patient/d-add-patient.component';
+import { DPatientDetailsComponent } from './pages/doctor-page/d-patient-details/d-patient-details.component';
+import { DAppointmentsComponent } from './pages/doctor-page/d-appointments/d-appointments.component';
+import { DPrescriptionsComponent } from './pages/doctor-page/d-prescriptions/d-prescriptions.component';
+import { DWritePrescriptionComponent } from './pages/doctor-page/d-write-prescription/d-write-prescription.component';
+import { RestaurantPageComponent } from './pages/restaurant-page/restaurant-page.component';
+import { RMenusComponent } from './pages/restaurant-page/r-menus/r-menus.component';
+import { RDishDetailsComponent } from './pages/restaurant-page/r-dish-details/r-dish-details.component';
 import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { EventsGridComponent } from './pages/events-page/events-grid/events-grid.component';
 import { EventsListComponent } from './pages/events-page/events-list/events-list.component';
@@ -102,7 +156,6 @@ import { InvoiceDetailsComponent } from './pages/invoices-page/invoice-details/i
 import { CreateInvoiceComponent } from './pages/invoices-page/create-invoice/create-invoice.component';
 import { EditInvoiceComponent } from './pages/invoices-page/edit-invoice/edit-invoice.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
-import { TeamMembersComponent } from './pages/users-page/team-members/team-members.component';
 import { UsersListComponent } from './pages/users-page/users-list/users-list.component';
 import { AddUserComponent } from './pages/users-page/add-user/add-user.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
@@ -113,27 +166,24 @@ import { StarterComponent } from './starter/starter.component';
 import { IconsComponent } from './icons/icons.component';
 import { MaterialSymbolsComponent } from './icons/material-symbols/material-symbols.component';
 import { RemixiconComponent } from './icons/remixicon/remixicon.component';
-import { TimelinePageComponent } from './pages/timeline-page/timeline-page.component';
-import { PricingPageComponent } from './pages/pricing-page/pricing-page.component';
-import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component';
-import { SearchPageComponent } from './pages/search-page/search-page.component';
-import { BlankPageComponent } from './pages/blank-page/blank-page.component';
-import { InternalErrorComponent } from './common/internal-error/internal-error.component';
-import { MapsPageComponent } from './pages/maps-page/maps-page.component';
-import { NotificationsPageComponent } from './pages/notifications-page/notifications-page.component';
-import { MembersPageComponent } from './pages/members-page/members-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ComingSoonComponent } from './coming-soon/coming-soon.component';
-import { FaqPageComponent } from './pages/faq-page/faq-page.component';
-import { GalleryPageComponent } from './pages/gallery-page/gallery-page.component';
-import { MyProfileComponent } from './my-profile/my-profile.component';
-import { SettingsComponent } from './settings/settings.component';
-import { AccountSettingsComponent } from './settings/account-settings/account-settings.component';
-import { ChangePasswordComponent } from './settings/change-password/change-password.component';
-import { ConnectionsComponent } from './settings/connections/connections.component';
-import { PrivacyPolicyComponent } from './settings/privacy-policy/privacy-policy.component';
-import { TermsConditionsComponent } from './settings/terms-conditions/terms-conditions.component';
-import { WidgetsComponent } from './widgets/widgets.component';
+import { UiElementsComponent } from './ui-elements/ui-elements.component';
+import { AlertsComponent } from './ui-elements/alerts/alerts.component';
+import { AvatarsComponent } from './ui-elements/avatars/avatars.component';
+import { AccordionComponent } from './ui-elements/accordion/accordion.component';
+import { BadgesComponent } from './ui-elements/badges/badges.component';
+import { ButtonsComponent } from './ui-elements/buttons/buttons.component';
+import { BreadcrumbComponent } from './ui-elements/breadcrumb/breadcrumb.component';
+import { ClipboardComponent } from './ui-elements/clipboard/clipboard.component';
+import { DropdownsComponent } from './ui-elements/dropdowns/dropdowns.component';
+import { ImagesComponent } from './ui-elements/images/images.component';
+import { ModalComponent } from './ui-elements/modal/modal.component';
+import { PaginationComponent } from './ui-elements/pagination/pagination.component';
+import { TooltipsComponent } from './ui-elements/tooltips/tooltips.component';
+import { PopoverComponent } from './ui-elements/popover/popover.component';
+import { ProgressComponent } from './ui-elements/progress/progress.component';
+import { TabsComponent } from './ui-elements/tabs/tabs.component';
+import { TypographyComponent } from './ui-elements/typography/typography.component';
+import { VideosComponent } from './ui-elements/videos/videos.component';
 import { ChartsComponent } from './charts/charts.component';
 import { LineChartsComponent } from './charts/line-charts/line-charts.component';
 import { AreaChartsComponent } from './charts/area-charts/area-charts.component';
@@ -144,65 +194,48 @@ import { RadarChartsComponent } from './charts/radar-charts/radar-charts.compone
 import { PieChartsComponent } from './charts/pie-charts/pie-charts.component';
 import { PolarChartsComponent } from './charts/polar-charts/polar-charts.component';
 import { MoreChartsComponent } from './charts/more-charts/more-charts.component';
+import { TablesComponent } from './tables/tables.component';
 import { FormsComponent } from './forms/forms.component';
 import { InputSelectComponent } from './forms/input-select/input-select.component';
 import { CheckboxesRadiosComponent } from './forms/checkboxes-radios/checkboxes-radios.component';
 import { RichTextEditorComponent } from './forms/rich-text-editor/rich-text-editor.component';
 import { FileUploaderComponent } from './forms/file-uploader/file-uploader.component';
-import { TablesComponent } from './tables/tables.component';
-import { UiElementsComponent } from './ui-elements/ui-elements.component';
-import { AlertsComponent } from './ui-elements/alerts/alerts.component';
-import { AvatarsComponent } from './ui-elements/avatars/avatars.component';
-import { AccordionComponent } from './ui-elements/accordion/accordion.component';
-import { BadgesComponent } from './ui-elements/badges/badges.component';
-import { ButtonsComponent } from './ui-elements/buttons/buttons.component';
-import { BreadcrumbComponent } from './ui-elements/breadcrumb/breadcrumb.component';
-import { DropdownsComponent } from './ui-elements/dropdowns/dropdowns.component';
-import { ImagesComponent } from './ui-elements/images/images.component';
-import { ModalComponent } from './ui-elements/modal/modal.component';
-import { PaginationComponent } from './ui-elements/pagination/pagination.component';
-import { ProgressComponent } from './ui-elements/progress/progress.component';
-import { TypographyComponent } from './ui-elements/typography/typography.component';
-import { VideosComponent } from './ui-elements/videos/videos.component';
-import { FrontPagesComponent } from './front-pages/front-pages.component';
-import { HomeComponent } from './front-pages/home/home.component';
-import { FeaturesComponent } from './front-pages/features/features.component';
-import { TeamComponent } from './front-pages/team/team.component';
-import { FaqComponent } from './front-pages/faq/faq.component';
-import { ContactComponent } from './front-pages/contact/contact.component';
-import { ClipboardComponent } from './ui-elements/clipboard/clipboard.component';
-import { PopoverComponent } from './ui-elements/popover/popover.component';
-import { TooltipsComponent } from './ui-elements/tooltips/tooltips.component';
-import { TabsComponent } from './ui-elements/tabs/tabs.component';
-import { HrmComponent } from './dashboard/hrm/hrm.component';
-import { SchoolComponent } from './dashboard/school/school.component';
-import { CallCenterComponent } from './dashboard/call-center/call-center.component';
-import { MarketingComponent } from './dashboard/marketing/marketing.component';
-import { NftComponent } from './dashboard/nft/nft.component';
-import { SaasComponent } from './dashboard/saas/saas.component';
-import { RealEstateComponent } from './dashboard/real-estate/real-estate.component';
-import { ShipmentComponent } from './dashboard/shipment/shipment.component';
-import { FinanceComponent } from './dashboard/finance/finance.component';
-import { FinancePageComponent } from './pages/finance-page/finance-page.component';
-import { FWalletComponent } from './pages/finance-page/f-wallet/f-wallet.component';
-import { FTransactionsComponent } from './pages/finance-page/f-transactions/f-transactions.component';
-import { RealEstatePageComponent } from './pages/real-estate-page/real-estate-page.component';
-import { RePropertyListComponent } from './pages/real-estate-page/re-property-list/re-property-list.component';
-import { RePropertyDetailsComponent } from './pages/real-estate-page/re-property-details/re-property-details.component';
-import { ReAddPropertyComponent } from './pages/real-estate-page/re-add-property/re-add-property.component';
-import { ReAgentsComponent } from './pages/real-estate-page/re-agents/re-agents.component';
-import { ReAgentDetailsComponent } from './pages/real-estate-page/re-agent-details/re-agent-details.component';
-import { ReAddAgentComponent } from './pages/real-estate-page/re-add-agent/re-add-agent.component';
-import { ReCustomersComponent } from './pages/real-estate-page/re-customers/re-customers.component';
-import { NftMarketplacePageComponent } from './pages/nft-marketplace-page/nft-marketplace-page.component';
-import { NmMarketplaceComponent } from './pages/nft-marketplace-page/nm-marketplace/nm-marketplace.component';
-import { NmExploreAllComponent } from './pages/nft-marketplace-page/nm-explore-all/nm-explore-all.component';
-import { NmLiveAuctionComponent } from './pages/nft-marketplace-page/nm-live-auction/nm-live-auction.component';
-import { NmNftDetailsComponent } from './pages/nft-marketplace-page/nm-nft-details/nm-nft-details.component';
-import { NmCreatorsComponent } from './pages/nft-marketplace-page/nm-creators/nm-creators.component';
-import { NmWalletConnectComponent } from './pages/nft-marketplace-page/nm-wallet-connect/nm-wallet-connect.component';
-import { NmCreateNftComponent } from './pages/nft-marketplace-page/nm-create-nft/nm-create-nft.component';
-import { NmCreatorDetailsComponent } from './pages/nft-marketplace-page/nm-creator-details/nm-creator-details.component';
+import { TimelinePageComponent } from './pages/timeline-page/timeline-page.component';
+import { PricingPageComponent } from './pages/pricing-page/pricing-page.component';
+import { FaqPageComponent } from './pages/faq-page/faq-page.component';
+import { GalleryPageComponent } from './pages/gallery-page/gallery-page.component';
+import { TestimonialsPageComponent } from './pages/testimonials-page/testimonials-page.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { BlankPageComponent } from './pages/blank-page/blank-page.component';
+import { InternalErrorComponent } from './common/internal-error/internal-error.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { MapsPageComponent } from './pages/maps-page/maps-page.component';
+import { NotificationsPageComponent } from './pages/notifications-page/notifications-page.component';
+import { MembersPageComponent } from './pages/members-page/members-page.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { SettingsComponent } from './settings/settings.component';
+import { AccountSettingsComponent } from './settings/account-settings/account-settings.component';
+import { ChangePasswordComponent } from './settings/change-password/change-password.component';
+import { ConnectionsComponent } from './settings/connections/connections.component';
+import { PrivacyPolicyComponent } from './settings/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './settings/terms-conditions/terms-conditions.component';
+import { TeamMembersComponent } from './pages/users-page/team-members/team-members.component';
+import { HotelComponent } from './dashboard/hotel/hotel.component';
+import { RealEstateAgentComponent } from './dashboard/real-estate-agent/real-estate-agent.component';
+import { CreditCardComponent } from './dashboard/credit-card/credit-card.component';
+import { CryptoTraderComponent } from './dashboard/crypto-trader/crypto-trader.component';
+import { CryptoPerformanceComponent } from './dashboard/crypto-performance/crypto-performance.component';
+import { HotelPageComponent } from './pages/hotel-page/hotel-page.component';
+import { HpRoomsListComponent } from './pages/hotel-page/hp-rooms-list/hp-rooms-list.component';
+import { HpRoomDetailsComponent } from './pages/hotel-page/hp-room-details/hp-room-details.component';
+import { HpGuestsListComponent } from './pages/hotel-page/hp-guests-list/hp-guests-list.component';
+import { RealEstateAgentPageComponent } from './pages/real-estate-agent-page/real-estate-agent-page.component';
+import { ReapPropertiesComponent } from './pages/real-estate-agent-page/reap-properties/reap-properties.component';
+import { ReapPropertyDetailsComponent } from './pages/real-estate-agent-page/reap-property-details/reap-property-details.component';
+import { CryptoTraderPageComponent } from './pages/crypto-trader-page/crypto-trader-page.component';
+import { CtTransactionsComponent } from './pages/crypto-trader-page/ct-transactions/ct-transactions.component';
+import { CtGainersLosersComponent } from './pages/crypto-trader-page/ct-gainers-losers/ct-gainers-losers.component';
+import { CtWalletComponent } from './pages/crypto-trader-page/ct-wallet/ct-wallet.component';
 
 export const routes: Routes = [
     {
@@ -238,6 +271,18 @@ export const routes: Routes = [
             {path: 'real-estate', component: RealEstateComponent},
             {path: 'shipment', component: ShipmentComponent},
             {path: 'finance', component: FinanceComponent},
+            {path: 'pos-system', component: PosSystemComponent},
+            {path: 'podcast', component: PodcastComponent},
+            {path: 'social-media', component: SocialMediaComponent},
+            {path: 'doctor', component: DoctorComponent},
+            {path: 'beauty-salon', component: BeautySalonComponent},
+            {path: 'store-analysis', component: StoreAnalysisComponent},
+            {path: 'restaurant', component: RestaurantComponent},
+            {path: 'hotel', component: HotelComponent},
+            {path: 'real-estate-agent', component: RealEstateAgentComponent},
+            {path: 'credit-card', component: CreditCardComponent},
+            {path: 'crypto-trader', component: CryptoTraderComponent},
+            {path: 'crypto-performance', component: CryptoPerformanceComponent},
             {
                 path: 'apps',
                 component: AppsComponent,
@@ -382,7 +427,53 @@ export const routes: Routes = [
                 component: FinancePageComponent,
                 children: [
                     {path: '', component: FWalletComponent},
-                    {path: 'transactions', component: FTransactionsComponent},
+                    {path: 'transactions', component: FTransactionsComponent}
+                ]
+            },
+            {
+                path: 'doctor-page',
+                component: DoctorPageComponent,
+                children: [
+                    {path: '', component: DPatientsListComponent},
+                    {path: 'add-patient', component: DAddPatientComponent},
+                    {path: 'patient-details', component: DPatientDetailsComponent},
+                    {path: 'appointments', component: DAppointmentsComponent},
+                    {path: 'prescriptions', component: DPrescriptionsComponent},
+                    {path: 'write-prescription', component: DWritePrescriptionComponent}
+                ]
+            },
+            {
+                path: 'restaurant-page',
+                component: RestaurantPageComponent,
+                children: [
+                    {path: '', component: RMenusComponent},
+                    {path: 'dish-details', component: RDishDetailsComponent}
+                ]
+            },
+            {
+                path: 'hotel-page',
+                component: HotelPageComponent,
+                children: [
+                    {path: '', component: HpRoomsListComponent},
+                    {path: 'room-details', component: HpRoomDetailsComponent},
+                    {path: 'guests-list', component: HpGuestsListComponent}
+                ]
+            },
+            {
+                path: 'real-estate-agent-page',
+                component: RealEstateAgentPageComponent,
+                children: [
+                    {path: '', component: ReapPropertiesComponent},
+                    {path: 'property-details', component: ReapPropertyDetailsComponent}
+                ]
+            },
+            {
+                path: 'crypto-trader-page',
+                component: CryptoTraderPageComponent,
+                children: [
+                    {path: '', component: CtTransactionsComponent},
+                    {path: 'gainers-losers', component: CtGainersLosersComponent},
+                    {path: 'wallet', component: CtWalletComponent}
                 ]
             },
             {
@@ -487,9 +578,7 @@ export const routes: Routes = [
                     {path: 'more', component: MoreChartsComponent}
                 ]
             },
-            {
-                path: 'tables', component: TablesComponent
-            },
+            {path: 'tables', component: TablesComponent},
             {
                 path: 'forms',
                 component: FormsComponent,

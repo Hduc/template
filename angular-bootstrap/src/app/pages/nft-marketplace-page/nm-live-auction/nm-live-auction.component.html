@@ -29,6 +29,11 @@
         <div
             class="row"
             [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+            [class.component-card-borderd]="themeService.isCardBordered()"
+            [class.component-card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+            [class.component-card-without-border-radius]="themeService.isCardWithoutBorderRadius()"
+            [class.component-body-bg-color]="themeService.isBodyBG()"
+            [class.component-dark-theme]="themeService.isDark()"
         >
             <div class="col-lg-4 col-sm-6">
                 <div class="nft-item mb-25 bg-white border-radius">

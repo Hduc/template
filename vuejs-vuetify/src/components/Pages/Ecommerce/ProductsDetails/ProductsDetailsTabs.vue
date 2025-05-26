@@ -9,27 +9,39 @@
     <v-card-text>
       <v-tabs-window v-model="tab">
         <v-tabs-window-item value="one">
-          <PagesEcommerceProductsDetailsDescription />
+          <Description />
         </v-tabs-window-item>
         <v-tabs-window-item value="two">
-          <PagesEcommerceProductsDetailsSpecifications />
+          <Specifications />
         </v-tabs-window-item>
         <v-tabs-window-item value="three">
-          <PagesEcommerceProductsDetailsOverallReviews />
-          <PagesEcommerceProductsDetailsManageReviews />
+          <OverallReviews />
+          <ManageReviews />
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card-text>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import Description from "./Description.vue";
+import Specifications from "./Specifications.vue";
+import OverallReviews from "./OverallReviews.vue";
+import ManageReviews from "./ManageReviews.vue";
+
+export default defineComponent({
   name: "ProductsDetailsTabs",
+  components: {
+    Description,
+    Specifications,
+    OverallReviews,
+    ManageReviews,
+  },
   data: () => ({
     tab: null,
   }),
-};
+});
 </script>
 
 <style lang="scss" scoped>

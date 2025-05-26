@@ -1,14 +1,17 @@
-<div class="todays-payment-card trezo-card mb-25 border-radius d-block border-0 shadow-none">
+<div
+    class="todays-payment-card trezo-card mb-25 border-radius d-block border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
     <div class="trezo-card-header d-flex align-items-center justify-content-between">
         <div class="trezo-card-title">
-            <span class="d-block">
+            <span class="title d-block">
                 Today’s Payment
             </span>
             <div class="revenue d-flex align-items-center">
                 <h3 class="mb-0 lh-1">
                     $1,528
                 </h3>
-                <span class="info-badge d-inline-block">
+                <span class="trezo-badge with-border finished border-radius">
                     +5.4%
                 </span>
             </div>

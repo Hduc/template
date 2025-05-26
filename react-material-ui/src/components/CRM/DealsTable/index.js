@@ -605,6 +605,13 @@ const DealsTable = () => {
                     onPageChange={handleChangePage}
                     onRowsPerPageChange={handleChangeRowsPerPage}
                     ActionsComponent={TablePaginationActions}
+                    sx={{
+                      border: "none",
+                      ".MuiToolbar-root": {
+                        minHeight: "auto",
+                        marginTop: "15px",
+                      },
+                    }}
                   />
                 </TableRow>
               </TableFooter>

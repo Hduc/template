@@ -28,7 +28,7 @@ export class ProjectRoadmapService {
                     ],
                     chart: {
                         type: "bar",
-                        height: 320,
+                        height: 326,
                         toolbar: {
                             show: false
                         }

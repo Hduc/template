@@ -76,7 +76,7 @@ const TopCreators = () => {
           justifyContent="center"
         >
           {creatorsData.map((creator) => (
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={3} key={creator.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }} key={creator.id}>
               <Box className="bg-white" sx={{ borderRadius: "7px", p: "10px" }}>
                 <img
                   src={creator.backgroundImage}

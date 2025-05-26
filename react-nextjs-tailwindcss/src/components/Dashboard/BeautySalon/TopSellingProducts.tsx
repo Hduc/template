@@ -89,7 +89,7 @@ const TopSellingProducts: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Top Selling Products</h5>
+            <h5 className="!mb-0">Top Selling Products</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -161,7 +161,7 @@ const TopSellingProducts: React.FC = () => {
                 ></Link>
                 <div className="flex justify-between mt-[15px]">
                   <div>
-                    <h6 className="text-base font-semibold mb-[4px]">
+                    <h6 className="!text-base !font-semibold !mb-[4px]">
                       <Link
                         href={product.href}
                         className="text-black dark:text-white transition-all hover:text-primary-500"

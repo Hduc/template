@@ -173,7 +173,7 @@ const CustomerRatings: React.FC = () => {
     <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0">Customer Ratings</h5>
+          <h5 className="!mb-0">Customer Ratings</h5>
         </div>
         <div className="trezo-card-subtitle">
           <Menu as="div" className="trezo-card-dropdown relative">
@@ -306,12 +306,12 @@ const CustomerRatings: React.FC = () => {
         </div>
 
         <div className="pt-[11px] sm:flex sm:items-center justify-between">
-          <p className="mb-0 text-xs">
+          <p className="!mb-0 !text-xs">
             Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of{" "}
             {totalItems} results
           </p>
           <ol className="mt-[10px] sm:mt-0 flex items-center">
-            <li className="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+            <li className="inline-block mx-[2px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -331,7 +331,7 @@ const CustomerRatings: React.FC = () => {
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <li
                 key={page}
-                className="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0"
+                className="inline-block mx-[2px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0"
               >
                 <button
                   onClick={() => handlePageChange(page)}
@@ -346,7 +346,7 @@ const CustomerRatings: React.FC = () => {
               </li>
             ))}
 
-            <li className="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+            <li className="inline-block mx-[2px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}

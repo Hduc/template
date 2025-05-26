@@ -90,6 +90,9 @@ export class RentalIncomeService {
                             color: '#DDE4FF'
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     tooltip: {
                         y: {
                             formatter: function(val:any) {

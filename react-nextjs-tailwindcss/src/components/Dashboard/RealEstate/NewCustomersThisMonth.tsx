@@ -58,7 +58,7 @@ const NewCustomersThisMonth: React.FC = () => {
             New customers this month
           </span>
 
-          <h3 className="mb-[20px] text-[20px] text-white">
+          <h3 className="!mb-[20px] !text-[20px] !text-white">
             {newCustomersCount}
           </h3>
 

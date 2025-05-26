@@ -1,0 +1,10 @@
+.bg-gradient-color {
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    &.component-dark {
+        background-image: unset !important;
+    }
+}

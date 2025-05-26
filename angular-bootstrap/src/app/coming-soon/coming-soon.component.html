@@ -11,8 +11,45 @@
             >
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
-                        <div class="coming-soon-timer text-center border-radius">
-                            <img src="images/coming-soon.jpg" class="border-radius" alt="coming-soon-image">
+                        <div
+                            class="coming-soon-timer text-center border-radius position-relative z-1"
+                            style="background-image: url(images/coming-soon.jpg);"
+                        >
+                            <h4 class="fw-light text-white">
+                                TIME LEFT UNTIL LAUNCHING
+                            </h4>
+                            <div class="countdown-container">
+                                <div class="countdown-value lh-1 text-warning fw-bold">
+                                    {{ countdown.days }}
+                                </div>
+                                <div class="countdown-label fw-light lh-1">
+                                    Days
+                                </div>
+                                <div class="countdown-item position-relative d-inline-block">
+                                    <div class="countdown-value lh-1 text-warning fw-bold">
+                                        {{ countdown.hours }}
+                                    </div>
+                                    <div class="countdown-label fw-light lh-1">
+                                        Hours
+                                    </div>
+                                </div>
+                                <div class="countdown-item position-relative d-inline-block">
+                                    <div class="countdown-value lh-1 text-warning fw-bold">
+                                        {{ countdown.minutes }}
+                                    </div>
+                                    <div class="countdown-label fw-light lh-1">
+                                        Minutes
+                                    </div>
+                                </div>
+                                <div class="countdown-item position-relative d-inline-block">
+                                    <div class="countdown-value lh-1 text-warning fw-bold">
+                                        {{ countdown.seconds }}
+                                    </div>
+                                    <div class="countdown-label fw-light lh-1">
+                                        Seconds
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">

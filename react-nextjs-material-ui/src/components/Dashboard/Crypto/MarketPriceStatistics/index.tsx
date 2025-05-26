@@ -10,9 +10,9 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Button
 } from "@mui/material";
 import Image from "next/image";
-import Button from "@mui/material/Button";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 

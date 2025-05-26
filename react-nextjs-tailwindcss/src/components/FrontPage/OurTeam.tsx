@@ -93,7 +93,7 @@ const OurTeam: React.FC = () => {
               <span className="absolute -bottom-[2.5px] w-[5px] h-[5px] ltr:-right-[3.5px] rtl:-left-[3.5px] bg-purple-600 -rotate-[6.536deg]"></span>
             </span>
           </div>
-          <h2 className="mb-0 text-[24px] md:text-[28px] lg:text-[34px] xl:text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] leading-[1.2]">
+          <h2 className="!mb-0 !text-[24px] md:!text-[28px] lg:!text-[34px] xl:!text-[36px] -tracking-[.5px] md:-tracking-[.6px] lg:-tracking-[.8px] xl:-tracking-[1px] !leading-[1.2]">
             Introducing Our Exceptional Team. Meet the Minds Driving Our Success
           </h2>
         </div>
@@ -133,7 +133,7 @@ const OurTeam: React.FC = () => {
                 
                 <div className="p-[20px] md:p-[25px] lg:p-[30px] rounded-[7px] flex items-center justify-between bg-white/[.26] dark:bg-black/[.54] border border-white/[.24] dark:border-black/[.24] backdrop-blur-[3.5999999046325684px]">
                   <div>
-                    <h3 className="font-semibold mb-[5px] text-[16px] md:text-[18px] leading-[1.2]">
+                    <h3 className="!font-semibold !mb-[5px] !text-[16px] md:!text-lg !leading-[1.2]">
                       {member.name}
                     </h3>
                     <span className="block">{member.role}</span>

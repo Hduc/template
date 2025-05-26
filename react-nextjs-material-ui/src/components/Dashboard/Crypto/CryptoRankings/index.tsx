@@ -616,7 +616,7 @@ const CryptoRankings: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={8} />
+                  <TableCell className="border-bottom" colSpan={8} />
                 </TableRow>
               )}
             </TableBody>

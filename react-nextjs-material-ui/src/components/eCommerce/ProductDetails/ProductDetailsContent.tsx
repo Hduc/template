@@ -33,11 +33,11 @@ const ProductDetailsContent: React.FC = () => {
             maxWidth: { lg: "1070px" },
           }}
         >
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
             <ProductImg />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
             <Box className="product-details-content">
               <Box
                 sx={{

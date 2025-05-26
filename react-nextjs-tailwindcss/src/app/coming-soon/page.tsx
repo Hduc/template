@@ -74,7 +74,7 @@ export default function Page() {
                   />
 
                   <div className="my-[17px] md:my-[25px]">
-                    <h1 className="font-semibold text-[22px] md:text-xl lg:text-2xl 2xl:text-4xl mb-[5px] md:mb-[12px]">
+                    <h1 className="!font-semibold !text-[22px] md:!text-xl lg:!text-2xl 2xl:!text-4xl !mb-[5px] md:!mb-[12px]">
                       We&apos;re working on launching soon, stay tuned!
                     </h1>
                     <p className="font-medium leading-[1.5] lg:text-md">

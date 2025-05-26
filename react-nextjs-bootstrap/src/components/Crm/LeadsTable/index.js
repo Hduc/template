@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
 import Image from "next/image";
 
 const leadsData = [
@@ -117,6 +115,116 @@ const leadsData = [
     leadSource: "Pinterest",
     status: "inProgress",
   },
+  {
+    id: "#844",
+    customerImg: "/images/user-16.jpg",
+    customerName: "Sophia Turner",
+    email: "sophia@trezo.com",
+    phone: "+1 555-334-5678",
+    createdDate: "9 Jun 2024",
+    company: "Creative Agency",
+    leadSource: "Organic",
+    status: "pending",
+  },
+  {
+    id: "#843",
+    customerImg: "/images/user-17.jpg",
+    customerName: "Daniel Gray",
+    email: "daniel@trezo.com",
+    phone: "+1 555-232-7654",
+    createdDate: "8 Jun 2024",
+    company: "Tech Enterprises",
+    leadSource: "Social",
+    status: "rejected",
+  },
+  {
+    id: "#842",
+    customerImg: "/images/user-18.jpg",
+    customerName: "Charlotte Wells",
+    email: "charlotte@trezo.com",
+    phone: "+1 555-765-4321",
+    createdDate: "7 Jun 2024",
+    company: "NextGen Solutions",
+    leadSource: "Website",
+    status: "confirmed",
+  },
+  {
+    id: "#841",
+    customerImg: "/images/user-19.jpg",
+    customerName: "George Wood",
+    email: "george@trezo.com",
+    phone: "+1 555-543-6789",
+    createdDate: "6 Jun 2024",
+    company: "Prime Ventures",
+    leadSource: "Paid",
+    status: "inProgress",
+  },
+  {
+    id: "#840",
+    customerImg: "/images/user-20.jpg",
+    customerName: "Isabella Shaw",
+    email: "isabella@trezo.com",
+    phone: "+1 555-876-1234",
+    createdDate: "5 Jun 2024",
+    company: "Creative Tech",
+    leadSource: "Others",
+    status: "pending",
+  },
+  {
+    id: "#839",
+    customerImg: "/images/user-21.jpg",
+    customerName: "Matthew Collins",
+    email: "matthew@trezo.com",
+    phone: "+1 555-223-4557",
+    createdDate: "4 Jun 2024",
+    company: "Blue Sky Ventures",
+    leadSource: "Instagram",
+    status: "rejected",
+  },
+  {
+    id: "#838",
+    customerImg: "/images/user-22.jpg",
+    customerName: "Liam White",
+    email: "liam@trezo.com",
+    phone: "+1 555-876-4455",
+    createdDate: "3 Jun 2024",
+    company: "Innovative Solutions",
+    leadSource: "LinkedIn",
+    status: "confirmed",
+  },
+  {
+    id: "#837",
+    customerImg: "/images/user-23.jpg",
+    customerName: "Mason Green",
+    email: "mason@trezo.com",
+    phone: "+1 555-324-8877",
+    createdDate: "2 Jun 2024",
+    company: "Global Innovations",
+    leadSource: "Facebook",
+    status: "inProgress",
+  },
+  {
+    id: "#836",
+    customerImg: "/images/user-24.jpg",
+    customerName: "Ava Ross",
+    email: "ava@trezo.com",
+    phone: "+1 555-876-9088",
+    createdDate: "1 Jun 2024",
+    company: "Solutions Co.",
+    leadSource: "Organic",
+    status: "pending",
+  },
+  {
+    id: "#835",
+    customerImg: "/images/user-25.jpg",
+    customerName: "Ethan Miller",
+    email: "ethan@trezo.com",
+    phone: "+1 555-678-1234",
+    createdDate: "31 May 2024",
+    company: "Tech Group",
+    leadSource: "X",
+    status: "rejected",
+  },
 ];
 
 const LeadsTable = () => {
@@ -126,12 +234,43 @@ const LeadsTable = () => {
     setShowModal(!isShowModal);
   };
 
+  // Table
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Filter leads based on search term
+  const filteredLeads = leadsData.filter((lead) =>
+    Object.values(lead).some((value) =>
+      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  // Pagination logic
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentLeads = filteredLeads.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-0">
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 p-4">
-            <SearchForm />
+            <Form className="position-relative table-src-form me-0">
+              <Form.Control
+                type="text"
+                placeholder="Search here"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+
+              <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                search
+              </span>
+            </Form>
 
             <div className="text-end">
               <button
@@ -172,86 +311,142 @@ const LeadsTable = () => {
                 </thead>
 
                 <tbody>
-                  {leadsData &&
-                    leadsData.slice(0, 10).map((defaultValue, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <Form>
-                            <Form.Check
-                              type="checkbox"
-                              id={defaultValue.id}
-                              label={defaultValue.id}
+                  {currentLeads.map((lead, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <Form>
+                          <Form.Check
+                            type="checkbox"
+                            id={lead.id}
+                            label={lead.id}
+                          />
+                        </Form>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <div className="flex-shrink-0">
+                            <Image
+                              src={lead.customerImg}
+                              className="wh-34 rounded-circle"
+                              alt="user"
+                              width={34}
+                              height={34}
                             />
-                          </Form>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center">
-                            <div className="flex-shrink-0">
-                              <Image
-                                src={defaultValue.customerImg}
-                                className="wh-34 rounded-circle"
-                                alt="user"
-                                width={34}
-                                height={34}
-                              />
-                            </div>
-                            <div className="flex-grow-1 ms-2 position-relative top-1">
-                              <h6 className="mb-0 fs-14 fw-medium">
-                                {defaultValue.customerName}
-                              </h6>
-                            </div>
                           </div>
-                        </td>
-
-                        <td className="text-body">{defaultValue.email}</td>
-
-                        <td>{defaultValue.phone}</td>
-
-                        <td className="text-body">
-                          {defaultValue.createdDate}
-                        </td>
-
-                        <td className="text-body">{defaultValue.company}</td>
-
-                        <td className="text-body">{defaultValue.leadSource}</td>
-
-                        <td>
-                          <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${defaultValue.status}`}
-                          >
-                            {defaultValue.status}
-                          </span>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
+                          <div className="flex-grow-1 ms-2 position-relative top-1">
+                            <h6 className="mb-0 fs-14 fw-medium">
+                              {lead.customerName}
+                            </h6>
                           </div>
-                        </td>
-                      </tr>
-                    ))}
+                        </div>
+                      </td>
+
+                      <td className="text-body">{lead.email}</td>
+
+                      <td>{lead.phone}</td>
+
+                      <td className="text-body">{lead.createdDate}</td>
+
+                      <td className="text-body">{lead.company}</td>
+
+                      <td className="text-body">{lead.leadSource}</td>
+
+                      <td>
+                        <span
+                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${lead.status}`}
+                        >
+                          {lead.status}
+                        </span>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing {indexOfFirstItem + 1} to{" "}
+                    {Math.min(indexOfLastItem, filteredLeads.length)} of{" "}
+                    {filteredLeads.length} Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage - 1)}
+                          disabled={currentPage === 1}
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+
+                      {Array.from(
+                        {
+                          length: Math.ceil(
+                            filteredLeads.length / itemsPerPage
+                          ),
+                        },
+                        (_, i) => (
+                          <li key={i} className="page-item">
+                            <button
+                              className={`page-link ${
+                                currentPage === i + 1 ? "active" : ""
+                              }`}
+                              onClick={() => paginate(i + 1)}
+                            >
+                              {i + 1}
+                            </button>
+                          </li>
+                        )
+                      )}
+
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage + 1)}
+                          disabled={
+                            currentPage ===
+                            Math.ceil(filteredLeads.length / itemsPerPage)
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

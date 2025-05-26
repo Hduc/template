@@ -9,7 +9,7 @@ const TotalCourses: React.FC = () => {
         <div className="trezo-card-content">
           <span className="block">Total Courses</span>
 
-          <h5 className="text-[20px] mt-[3px] mb-0">45.6k</h5>
+          <h5 className="!text-[20px] !mt-[3px] !mb-0">45.6k</h5>
 
           <div className="flex items-center justify-center mx-auto text-secondary-500 bg-secondary-100 dark:bg-[#15203c] w-[77px] h-[77px] my-[15px] rounded-full">
             <i className="material-symbols-outlined !text-[32px]">

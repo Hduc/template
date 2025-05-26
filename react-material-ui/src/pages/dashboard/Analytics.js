@@ -21,13 +21,13 @@ const Analytics = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <AnalyticsOverview />
 
           <Stats />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <RealtimeActiveUsers />
         </Grid>
       </Grid>
@@ -37,11 +37,11 @@ const Analytics = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <BrowserUsedByUsers />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <DeviceSessions />
         </Grid>
       </Grid>
@@ -51,15 +51,15 @@ const Analytics = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <Clicks />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <Impressions />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <Sessions />
         </Grid>
       </Grid>
@@ -69,11 +69,11 @@ const Analytics = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <SessionsByChannel />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <ClicksByKeywords />
         </Grid>
       </Grid>
@@ -83,11 +83,11 @@ const Analytics = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <TopBrowsingPagesToday />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <UsersByCountry />
         </Grid>
       </Grid>

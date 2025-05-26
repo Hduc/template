@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-total-enrolled:not(1)',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
     templateUrl: './total-enrolled.component.html',
     styleUrl: './total-enrolled.component.scss'
 })
-export class TotalEnrolledComponent {}
+export class TotalEnrolledComponent {
+
+    constructor(
+        public themeService: CustomizerSettingsService
+    ) {}
+
+}

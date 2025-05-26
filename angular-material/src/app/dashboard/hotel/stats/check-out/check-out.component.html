@@ -1,0 +1,22 @@
+<mat-card
+    class="check-out-card border-radius d-block bg-purple-100 border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-content class="d-flex d-md-block align-items-center justify-content-between">
+        <div>
+            <span class="d-block">
+                Check Out
+            </span>
+            <h1 class="lh-1">
+                315
+            </h1>
+            <span class="trezo-badge down with-border">
+                -1.4%
+            </span>
+        </div>
+        <div class="icon bg-white rounded-circle d-flex align-items-center justify-content-end">
+            <img src="images/icons/point.svg" alt="point">
+        </div>
+    </mat-card-content>
+</mat-card>

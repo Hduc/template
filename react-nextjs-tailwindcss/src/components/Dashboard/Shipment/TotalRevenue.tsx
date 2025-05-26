@@ -14,7 +14,7 @@ const TotalRevenue: React.FC = () => {
         <div className="trezo-card-content">
           <div className="flex justify-between">
             <div>
-              <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+              <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
                 +30%
               </span>
             </div>
@@ -34,7 +34,7 @@ const TotalRevenue: React.FC = () => {
               <span className="block mb-[4px] text-gray-300">
                 Total Revenue
               </span>
-              <h3 className="mb-0 text-[20px] text-white">$99,590</h3>
+              <h3 className="!mb-0 !text-[20px] !text-white">$99,590</h3>
             </div>
 
             <div className="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-white bg-success-500">

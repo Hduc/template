@@ -27,7 +27,7 @@ import Preloader from "./components/Layouts/Preloader.vue";
 import LeftSidebar from "./components/Layouts/LeftSidebar/index.vue";
 import TopHeader from "./components/Layouts/TopHeader/index.vue";
 import MainFooter from "./components/Layouts/MainFooter.vue";
-import SettingsSidebar from "./components/Layouts/SettingsSidebar.vue";
+import SettingsSidebar from "./components/Layouts/SettingsSidebar/index.vue";
 
 export default defineComponent({
   name: "App",

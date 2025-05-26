@@ -171,6 +171,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, onUnmounted } from "vue";
+import feather from "feather-icons";
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
@@ -253,6 +254,7 @@ export default defineComponent({
     };
 
     onMounted(() => {
+      feather.replace();
       if (audio.value) {
         audio.value.addEventListener("timeupdate", updateProgress);
         audio.value.addEventListener("loadedmetadata", onAudioLoaded);

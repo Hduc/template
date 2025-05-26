@@ -8,7 +8,7 @@ const CustomerVisits: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Customer Visits</h5>
+            <h5 className="!mb-0">Customer Visits</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -20,7 +20,7 @@ const CustomerVisits: React.FC = () => {
               <span className="block max-w-[70px] leading-[1.4] mt-[6px] mb-[4px]">
                 Walk-In Customers
               </span>
-              <h3 className="text-2xl mb-[7px]">1.5K</h3>
+              <h3 className="!text-2xl !mb-[7px]">1.5K</h3>
               <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                 +7%
               </span>
@@ -33,7 +33,7 @@ const CustomerVisits: React.FC = () => {
               <span className="block max-w-[70px] leading-[1.4] mt-[6px] mb-[4px]">
                 Repeat Customers
               </span>
-              <h3 className="text-2xl mb-[7px]">2.1K</h3>
+              <h3 className="!text-2xl !mb-[7px]">2.1K</h3>
               <span className="inline-block text-xs px-[9px] text-danger-700 border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                 -1.4%
               </span>

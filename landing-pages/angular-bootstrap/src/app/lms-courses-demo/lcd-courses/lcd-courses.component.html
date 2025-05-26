@@ -1,0 +1,412 @@
+<app-page-banner
+    [pageTitle]="'Courses'"
+/>
+
+<!-- Courses -->
+<div
+    class="courses-area pt-180 pb-155 bg-f6f5f3"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="category-links">
+            <a routerLink="." class="d-inline-block fw-medium active">
+                Business & Management
+            </a>
+            <a routerLink="." class="d-inline-block fw-medium">
+                Technology & Coding
+            </a>
+            <a routerLink="." class="d-inline-block fw-medium">
+                Creative Arts & Design
+            </a>
+            <a routerLink="." class="d-inline-block fw-medium">
+                Personal Development
+            </a>
+            <a routerLink="." class="d-inline-block fw-medium">
+                Health & Wellness
+            </a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course2.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Data Science with Python
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="d-block position-relative">
+                                4.7 (980 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $69
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                38 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                6,300+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course3.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Graphic Design Masterclass
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                            <span class="d-block position-relative">
+                                4.9 (10,200 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $99
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                52 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                10,200+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course4.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Mindfulness & Stress Management
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="d-block position-relative">
+                                4.0 (750 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $79
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                20 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                4,00+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course5.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Mobile App Development
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="d-block position-relative">
+                                4.8 (1,120 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $49
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                40 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                7,800+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course6.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Introduction Machine Learning
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                            <span class="d-block position-relative">
+                                4.6 (2,340 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $72
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                50 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                14,500+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course7.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Digital Marketing Mastery
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="d-block position-relative">
+                                4.7 (1,980 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $34
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                35 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                11,00+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course8.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Video Editing - Adobe Premiere Pro
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="d-block position-relative">
+                                4.9 (870 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $69
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                28 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                4,900+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course9.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Financial Planning & Investing
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                            <span class="d-block position-relative">
+                                4.5 (1,310 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $79
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                32 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                6,800+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course10.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Excel for Data Analysis
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="d-block position-relative">
+                                4.6 (9,200 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $39
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                30 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                2,100+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Courses -->
+
+<app-how-it-works />
+
+<app-cta />
+
+<div class="pt-180">
+
+    <app-pricing />
+
+</div>

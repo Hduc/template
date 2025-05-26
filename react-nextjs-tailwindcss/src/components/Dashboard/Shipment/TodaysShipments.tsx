@@ -96,10 +96,10 @@ const TodaysShipments: React.FC = () => {
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
             <span className="block mb-[4px]">Todays Shipments</span>
-            <h5 className="mb-0 md:text-[20px]">9,120 Ton</h5>
+            <h5 className="!mb-0 md:!text-[20px]">9,120 Ton</h5>
           </div>
           <div className="trezo-card-subtitle">
-            <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+            <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
               +5%
             </span>
           </div>

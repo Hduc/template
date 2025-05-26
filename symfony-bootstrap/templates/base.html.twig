@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Trezo - Symfony & Bootstrap 5 Admin Dashboard Template{% endblock %}</title>
+
+        {# CSS Files #}
+        {# <link rel="stylesheet" href="{{ asset('build/app.css') }}"> #}
+        
+        {% include 'partials/_styles.html.twig' %}
+        {% block stylesheets %}{% endblock %}
+            {{ encore_entry_link_tags('app') }}
+    </head>
+
+    <body data-bs-spy="scroll"
+		data-bs-target="#navbar-example2"
+		data-bs-root-margin="0px 0px -40%"
+		data-bs-smooth-scroll="true"
+		class="scrollspy-example"
+		tabindex="0">
+
+        {% include 'partials/_preloader.html.twig' %}
+        {# Conditionally include Navbar if NOT login or register #}
+        {% if app.request.attributes.get('_route') not in ['login_page', 'register_page', 'forget_password_page'] %}
+            {% include 'partials/frontend/_navbar.html.twig' %}
+        {% endif %}
+        
+
+        {% block body %}{% endblock %}
+
+        {# Conditionally include Footer if NOT login or register #}
+        {% if app.request.attributes.get('_route') not in ['login_page', 'register_page', 'forget_password_page'] %}
+            {% include 'partials/frontend/_footer.html.twig' %}
+        {% endif %}
+
+
+        {# JavaScript Files #}
+        {# <script src="{{ asset('build/app.js') }}"></script> #}
+        {% include 'partials/_scripts.html.twig' %}
+        
+        {% block javascripts %}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
+    </body>
+</html>

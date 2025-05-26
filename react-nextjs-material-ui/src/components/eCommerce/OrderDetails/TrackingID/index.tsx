@@ -13,7 +13,7 @@ const TrackingID: React.FC = () => {
 
         <div className={styles.numbers}>
           <div className={styles.box}>
-            <div className="rounded-circle bg-primary text-center transition text-white fw-semibold">
+            <div className="rounded-circle bg-primary text-center transition text-white">
               01
             </div>
             <span className="text-white">Order Placed</span>

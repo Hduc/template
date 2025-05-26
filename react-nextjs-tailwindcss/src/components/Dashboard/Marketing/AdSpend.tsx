@@ -11,7 +11,7 @@ const AdSpend: React.FC = () => {
           <div className="flex items-center justify-between mb-[10px]">
             <div>
               <span className="block mb-[6px]">Ad Spend</span>
-              <h3 className="leading-none text-xl md:text-2xl lg:text-3xl mb-0">
+              <h3 className="!leading-none !text-xl md:!text-2xl lg:!text-3xl !mb-0">
                 $1,528
               </h3>
             </div>
@@ -23,7 +23,7 @@ const AdSpend: React.FC = () => {
               height={60}
             />
           </div>
-          <span className="inline-block px-[9px] text-success-700 border border-success-300 bg-success-100 text-sm rounded-[100px]">
+          <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-[100px]">
             +5.4%
           </span>
           <span className="block text-xs mt-[10px]">vs previous 30 days</span>

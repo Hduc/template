@@ -19,7 +19,7 @@ const Welcome: React.FC = () => {
                 <span className="block text-primary-200 font-medium mb-[4px]">
                   Hello Olivia ✋
                 </span>
-                <h1 className="text-white text-2xl mb-0 font-normal">
+                <h1 className="!text-white !text-2xl !mb-0 !font-normal">
                   Welcome To Trezo –{" "}
                   <strong className="font-black">Your Store</strong>
                 </h1>

@@ -124,8 +124,8 @@ const Revenue: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative">
           <span className="block mb-[5px]">Revenue</span>
-          <h3 className="leading-none text-lg md:text-xl mb-[8px]">$1.2M</h3>
-          <span className="inline-block text-xs px-[9px] text-orange-700 border border-orange-300 bg-orange-100 t rounded-[100px]">
+          <h3 className="!leading-none !text-lg md:!text-xl !mb-[8px]">$1.2M</h3>
+          <span className="inline-block text-xs px-[9px] text-orange-700 border border-orange-300 bg-orange-100 dark:bg-[#15203c] dark:border-[#172036] rounded-[100px]">
             -3.2%
           </span>
           <div className="absolute max-w-[125px] mt-[10px] ltr:-right-[10px] rtl:-left-[10px] top-1/2 -translate-y-1/2">

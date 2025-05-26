@@ -111,7 +111,7 @@ const GrossEarnings: React.FC = () => {
 
             <div className="ltr:ml-[10px] rtl:mr-[10px]">
               <span className="block uppercase">Gross Earnings</span>
-              <h4 className="mb-0 text-[20px] mt-[6px] font-semibold">
+              <h4 className="!mb-0 !text-[20px] !mt-[6px] !font-semibold">
                 $78,350.00
                 <span className="text-success-600 text-base font-medium -top-px relative ltr:ml-[2px] rtl:mr-[2px] ltr:pl-[25px] rtl:pr-[25px]">
                   <i className="material-symbols-outlined !text-[20px] absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2">
@@ -138,11 +138,11 @@ const GrossEarnings: React.FC = () => {
           <div className="flex justify-between pt-[17px] border-t border-purple-200 dark:border-[#172036]">
             <div>
               <span className="block text-xs">Total Balance</span>
-              <h6 className="mb-0 font-medium text-lg mt-[5px]">$3,42,890</h6>
+              <h6 className="!mb-0 !font-medium !text-lg !mt-[5px]">$3,42,890</h6>
             </div>
             <div>
               <span className="block text-xs">Withdrawals</span>
-              <h6 className="mb-0 font-medium text-lg mt-[5px]">$2,35,425</h6>
+              <h6 className="!mb-0 !font-medium !text-lg !mt-[5px]">$2,35,425</h6>
             </div>
           </div>
         </div>

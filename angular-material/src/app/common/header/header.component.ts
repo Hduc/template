@@ -1,15 +1,16 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
-import { RouterLink, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { ToggleService } from './toggle.service';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
-import { ToggleService } from './toggle.service';
+import { NavbarComponent } from './navbar/navbar.component';
 import { NgClass, isPlatformBrowser } from '@angular/common';
+import { RouterLink, NavigationEnd, Router } from '@angular/router';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
-import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, MatButtonModule, MatMenuModule, NgClass],
+    imports: [RouterLink, MatButtonModule, MatMenuModule, NgClass, NavbarComponent],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss'
 })

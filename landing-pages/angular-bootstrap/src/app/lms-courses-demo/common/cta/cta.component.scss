@@ -1,0 +1,127 @@
+.cta-inner-area {
+    padding: 30px 110px;
+    border-radius: 25px;
+    background-color: #f0eedf;
+
+    .cta-content {
+        h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+    }
+    .cta-image {
+        text-align: end;
+    }
+    .shape1 {
+        top: 50px;
+        right: 30px;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape2 {
+        right: 50%;
+        z-index: -1;
+        bottom: 90px;
+        position: absolute;
+    }
+    &.component-dark {
+        background-color: #0a0e19;
+    }
+    &.component-rtl {
+        .shape1 {
+            left: 30px;
+            right: auto;
+            transform: scaleX(-1);
+        }
+        .shape2 {
+            transform: scaleX(-1);
+            right: auto;
+            left: 50%;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .cta-inner-area {
+        padding: 70px 20px;
+        border-radius: 25px;
+        background-color: #f0eedf;
+    
+        .cta-content {
+            text-align: center;
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+                letter-spacing: normal;
+            }
+        }
+        .cta-image {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .shape1, .shape2 {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .cta-inner-area {
+        padding: 90px 30px;
+    
+        .cta-content {
+            text-align: center;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 25px;
+            }
+        }
+        .cta-image {
+            text-align: center;
+            margin-top: 35px;
+        }
+        .shape1, .shape2 {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .cta-inner-area {
+        padding: 30px 50px;
+    
+        .cta-content {
+            h2 {
+                font-size: 38px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .cta-inner-area {
+        padding: 30px 90px;
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -105,7 +105,7 @@ const TotalOrders: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative">
           <span className="block">Total Orders</span>
-          <h3 className="-tracking-[0.5px] mb-[4px] mt-px text-3xl">1250</h3>
+          <h3 className="!-tracking-[0.5px] !mb-[4px] !mt-px !text-3xl">1250</h3>
           <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
             +5.4%
           </span>

@@ -69,6 +69,9 @@ export class RevenueService {
                         // max: 100,
                         min: 0,
                         labels: {
+                            formatter: (val:any) => {
+                                return '$' + val + 'K'
+                            },
                             style: {
                                 colors: "#64748B",
                                 fontSize: "12px"
@@ -100,6 +103,13 @@ export class RevenueService {
                             offsetX: -2,
                             offsetY: -.5,
                             shape: 'diamond'
+                        }
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function(val:any) {
+                                return "$" + val + "k";
+                            }
                         }
                     }
                 };

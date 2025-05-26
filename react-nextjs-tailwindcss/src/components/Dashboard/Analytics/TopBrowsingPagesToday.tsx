@@ -159,7 +159,7 @@ const TopBrowsingPagesToday: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Top Browsing Pages Today</h5>
+            <h5 className="!mb-0">Top Browsing Pages Today</h5>
           </div>
           <div className="trezo-card-subtitle mt-[15px] sm:mt-0">
             <form className="relative sm:w-[265px]">
@@ -235,7 +235,7 @@ const TopBrowsingPagesToday: React.FC = () => {
           </div>
 
           <div className="pt-[10px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {getCurrentPageData().length} of {pageData.length} results
             </p>
 
@@ -262,7 +262,7 @@ const TopBrowsingPagesToday: React.FC = () => {
                     className={`w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border hover:bg-primary-500 hover:text-white hover:border-primary-500 dark:border-[#172036] ${
                       currentPage === i + 1
                         ? "bg-primary-500 border-primary-500 text-white"
-                        : "  "
+                        : "border-gray-100"
                     }`}
                   >
                     {i + 1}

@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
 import Image from "next/image";
 
 const contactsData = [
@@ -117,6 +115,116 @@ const contactsData = [
     leadScore: 29,
     status: "active",
   },
+  {
+    id: "#844",
+    userImg: "/images/user-16.jpg",
+    userName: "James Carter",
+    email: "james@trezo.com",
+    phone: "+1 555-777-1234",
+    lastContacted: "09 Jun 2024",
+    company: "Carter Inc.",
+    leadScore: 42,
+    status: "active",
+  },
+  {
+    id: "#843",
+    userImg: "/images/user-17.jpg",
+    userName: "Sarah Johnson",
+    email: "sarah@trezo.com",
+    phone: "+1 555-888-5678",
+    lastContacted: "08 Jun 2024",
+    company: "Johnson & Co.",
+    leadScore: 37,
+    status: "deactive",
+  },
+  {
+    id: "#842",
+    userImg: "/images/user-18.jpg",
+    userName: "Michael Evans",
+    email: "michael@trezo.com",
+    phone: "+1 555-999-6789",
+    lastContacted: "07 Jun 2024",
+    company: "Evans Solutions",
+    leadScore: 28,
+    status: "active",
+  },
+  {
+    id: "#841",
+    userImg: "/images/user-19.jpg",
+    userName: "Jessica Lee",
+    email: "jessica@trezo.com",
+    phone: "+1 555-444-4321",
+    lastContacted: "06 Jun 2024",
+    company: "Lee Technologies",
+    leadScore: 33,
+    status: "active",
+  },
+  {
+    id: "#840",
+    userImg: "/images/user-20.jpg",
+    userName: "David Wright",
+    email: "david@trezo.com",
+    phone: "+1 555-333-7890",
+    lastContacted: "05 Jun 2024",
+    company: "Wright Innovations",
+    leadScore: 31,
+    status: "deactive",
+  },
+  {
+    id: "#839",
+    userImg: "/images/user-21.jpg",
+    userName: "Sophia Martinez",
+    email: "sophia@trezo.com",
+    phone: "+1 555-666-9876",
+    lastContacted: "04 Jun 2024",
+    company: "Martinez Ventures",
+    leadScore: 45,
+    status: "active",
+  },
+  {
+    id: "#838",
+    userImg: "/images/user-22.jpg",
+    userName: "Daniel Foster",
+    email: "daniel@trezo.com",
+    phone: "+1 555-222-3456",
+    lastContacted: "03 Jun 2024",
+    company: "Foster & Partners",
+    leadScore: 26,
+    status: "active",
+  },
+  {
+    id: "#837",
+    userImg: "/images/user-23.jpg",
+    userName: "Emily Adams",
+    email: "emily@trezo.com",
+    phone: "+1 555-111-6543",
+    lastContacted: "02 Jun 2024",
+    company: "Adams Group",
+    leadScore: 30,
+    status: "deactive",
+  },
+  {
+    id: "#836",
+    userImg: "/images/user-24.jpg",
+    userName: "Matthew White",
+    email: "matthew@trezo.com",
+    phone: "+1 555-777-1234",
+    lastContacted: "01 Jun 2024",
+    company: "White Tech",
+    leadScore: 39,
+    status: "active",
+  },
+  {
+    id: "#835",
+    userImg: "/images/user-25.jpg",
+    userName: "Olivia Brown",
+    email: "olivia@trezo.com",
+    phone: "+1 555-666-7890",
+    lastContacted: "30 May 2024",
+    company: "Brown Solutions",
+    leadScore: 22,
+    status: "active",
+  },
 ];
 
 const Contacts = () => {
@@ -126,13 +234,47 @@ const Contacts = () => {
     setShowModal(!isShowModal);
   };
 
+  // Table
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  // Filter contacts based on search term
+  const filteredContacts = contactsData.filter((contact) =>
+    Object.values(contact).some((value) =>
+      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  // Pagination logic
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentContacts = filteredContacts.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-0">
           <div className="p-4">
             <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
-              <SearchForm />
+              <Form className="position-relative table-src-form me-0">
+                <Form.Control
+                  type="text"
+                  placeholder="Search here"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+
+                <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                  search
+                </span>
+              </Form>
 
               <div className="text-end">
                 <button
@@ -174,86 +316,142 @@ const Contacts = () => {
                 </thead>
 
                 <tbody>
-                  {contactsData &&
-                    contactsData.slice(0, 10).map((defaultValue, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <Form>
-                            <Form.Check
-                              type="checkbox"
-                              id={defaultValue.id}
-                              label={defaultValue.id}
+                  {currentContacts.map((contact, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <Form>
+                          <Form.Check
+                            type="checkbox"
+                            id={contact.id}
+                            label={contact.id}
+                          />
+                        </Form>
+                      </td>
+
+                      <td>
+                        <div href="#" className="d-flex align-items-center">
+                          <div className="flex-shrink-0">
+                            <Image
+                              src={contact.userImg}
+                              className="wh-34 rounded-circle"
+                              alt="user"
+                              width={34}
+                              height={34}
                             />
-                          </Form>
-                        </td>
-
-                        <td>
-                          <div href="#" className="d-flex align-items-center">
-                            <div className="flex-shrink-0">
-                              <Image
-                                src={defaultValue.userImg}
-                                className="wh-34 rounded-circle"
-                                alt="user"
-                                width={34}
-                                height={34}
-                              />
-                            </div>
-                            <div className="flex-grow-1 ms-2 position-relative top-1">
-                              <h6 className="mb-0 fs-14 fw-medium">
-                                {defaultValue.userName}
-                              </h6>
-                            </div>
                           </div>
-                        </td>
-
-                        <td className="text-body">{defaultValue.email}</td>
-
-                        <td>{defaultValue.phone}</td>
-
-                        <td className="text-body">
-                          {defaultValue.lastContacted}
-                        </td>
-
-                        <td className="text-body">{defaultValue.company}</td>
-
-                        <td className="text-body">{defaultValue.leadScore}</td>
-
-                        <td>
-                          <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${defaultValue.status}`}
-                          >
-                            {defaultValue.status}
-                          </span>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
+                          <div className="flex-grow-1 ms-2 position-relative top-1">
+                            <h6 className="mb-0 fs-14 fw-medium">
+                              {contact.userName}
+                            </h6>
                           </div>
-                        </td>
-                      </tr>
-                    ))}
+                        </div>
+                      </td>
+
+                      <td className="text-body">{contact.email}</td>
+
+                      <td>{contact.phone}</td>
+
+                      <td className="text-body">{contact.lastContacted}</td>
+
+                      <td className="text-body">{contact.company}</td>
+
+                      <td className="text-body">{contact.leadScore}</td>
+
+                      <td>
+                        <span
+                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${contact.status}`}
+                        >
+                          {contact.status}
+                        </span>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing {indexOfFirstItem + 1} to{" "}
+                    {Math.min(indexOfLastItem, filteredContacts.length)} of{" "}
+                    {filteredContacts.length} Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage - 1)}
+                          disabled={currentPage === 1}
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+
+                      {Array.from(
+                        {
+                          length: Math.ceil(
+                            filteredContacts.length / itemsPerPage
+                          ),
+                        },
+                        (_, i) => (
+                          <li key={i} className="page-item">
+                            <button
+                              className={`page-link ${
+                                currentPage === i + 1 ? "active" : ""
+                              }`}
+                              onClick={() => paginate(i + 1)}
+                            >
+                              {i + 1}
+                            </button>
+                          </li>
+                        )
+                      )}
+
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => paginate(currentPage + 1)}
+                          disabled={
+                            currentPage ===
+                            Math.ceil(filteredContacts.length / itemsPerPage)
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

@@ -50,7 +50,7 @@ const CreateNFTForm: React.FC = () => {
                         <i className="ri-file-upload-line"></i>
                       </div>
                       <div>
-                        <p className="leading-[1.5] mb-[3px]">
+                        <p className="!leading-[1.5] !mb-[3px]">
                           <strong className="text-black dark:text-white">
                             Click to upload
                           </strong>{" "}

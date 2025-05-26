@@ -323,7 +323,7 @@ const ClientsList: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">
+            <p className="!mb-0">
               Showing {indexOfFirstClient + 1} to {indexOfLastClient} of{" "}
               {clients.length} results
             </p>

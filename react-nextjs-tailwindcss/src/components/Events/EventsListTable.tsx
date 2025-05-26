@@ -342,7 +342,7 @@ const EventsListTable: React.FC = () => {
 
                     <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                       <span
-                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs ${
+                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs dark:bg-[#15203c] ${
                           statusColors[event.status]
                         }`}
                       >
@@ -414,7 +414,7 @@ const EventsListTable: React.FC = () => {
           </div>
 
           <div className="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {indexOfFirstItem + 1} to{" "}
               {Math.min(indexOfLastItem, eventData.length)} of{" "}
               {eventData.length} results

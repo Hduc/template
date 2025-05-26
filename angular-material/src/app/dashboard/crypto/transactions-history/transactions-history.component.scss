@@ -1,5 +1,5 @@
 ::ng-deep {
-    .transaction-history-card {
+    .transactions-history-card {
         .mat-mdc-card-content {
             .mat-mdc-table {
                 &.mdc-data-table__table {
@@ -143,7 +143,7 @@
 @media only screen and (max-width : 767px) {
 
     ::ng-deep {
-        .transaction-history-card {
+        .transactions-history-card {
             .mat-mdc-card-header {
                 .mat-mdc-card-header-text {
                     display: block;
@@ -199,7 +199,7 @@
 @media only screen and (min-width : 576px) and (max-width : 767px) {
 
     ::ng-deep {
-        .transaction-history-card {
+        .transactions-history-card {
             .mat-mdc-card-header {
                 .mat-mdc-card-header-text {
                     display: flex;

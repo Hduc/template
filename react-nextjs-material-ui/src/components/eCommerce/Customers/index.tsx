@@ -371,10 +371,17 @@ const Customers: React.FC = () => {
   // Table
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  // Filter rows based on search term
+  const filteredRows = rows.filter((row) =>
+    row.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    row.customerName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredRows.length) : 0;
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
@@ -418,7 +425,7 @@ const Customers: React.FC = () => {
           >
             <Box
               component="form"
-              className='t-search-form'
+              className="t-search-form"
               sx={{
                 width: "265px",
               }}
@@ -428,8 +435,10 @@ const Customers: React.FC = () => {
               </label>
               <input
                 type="text"
-                className='t-input'
-                placeholder="Search customers here....."
+                className="t-input"
+                placeholder="Search customers here..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </Box>
 
@@ -568,11 +577,11 @@ const Customers: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
-                  : rows
+                  : filteredRows
                 ).map((row) => (
                   <TableRow key={row.id}>
                     <TableCell
@@ -743,7 +752,7 @@ const Customers: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={9} />
+                    <TableCell className="border-bottom" colSpan={9} />
                   </TableRow>
                 )}
               </TableBody>
@@ -758,7 +767,7 @@ const Customers: React.FC = () => {
                       { label: "All", value: -1 },
                     ]}
                     colSpan={9}
-                    count={rows.length}
+                    count={filteredRows.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     slotProps={{

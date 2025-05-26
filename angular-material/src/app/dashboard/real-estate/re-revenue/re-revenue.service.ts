@@ -37,7 +37,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2018',
+                                    x: '2020',
                                     y: 4432,
                                     goals: [
                                         {
@@ -49,7 +49,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2020',
+                                    x: '2021',
                                     y: 5423,
                                     goals: [
                                         {
@@ -61,7 +61,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2021',
+                                    x: '2022',
                                     y: 6653,
                                     goals: [
                                         {
@@ -73,7 +73,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2022',
+                                    x: '2023',
                                     y: 8133,
                                     goals: [
                                         {
@@ -87,7 +87,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2023',
+                                    x: '2024',
                                     y: 7132,
                                     goals: [
                                         {
@@ -99,7 +99,7 @@ export class ReRevenueService {
                                     ]
                                 },
                                 {
-                                    x: '2024',
+                                    x: '2025',
                                     y: 7332,
                                     goals: [
                                         {

@@ -15,7 +15,7 @@ const UpgradePlan: React.FC = () => {
         <div className="trezo-card-content">
           <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-[15px]">
             <div className="text-center ltr:sm:text-left rtl:sm:text-right">
-              <h3 className=" text-white font-semibold max-w-[250px] leading-[1.5] text-lg md:text-[20px] mb-0">
+              <h3 className=" !text-white !font-semibold !max-w-[250px] !leading-[1.5] !text-lg md:!text-[20px] !mb-0">
                 Upgrade Plan To Manage 20K+ Patients
               </h3>
             </div>

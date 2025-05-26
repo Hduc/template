@@ -27,6 +27,9 @@ body {
         size: var(--fontSize);
         family: var(--fontFamily);
     };
+    &.body-bg-color {
+        background-color: var(--whiteColor);
+    }
 }
 a {
     transition: var(--transition);

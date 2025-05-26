@@ -10,8 +10,9 @@
             <input type="text" class="form-control" placeholder="Search here" />
             <i
               class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y"
-              >search</i
             >
+              search
+            </i>
           </form>
           <select
             class="form-select month-select form-control w-135 bg-border-color border-color bg-transparent"

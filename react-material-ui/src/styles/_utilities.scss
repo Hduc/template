@@ -27,6 +27,24 @@
 	right: 20px;
 }
 
+// New
+.ml-auto {
+	margin-left: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.po-right-10 {
+	right: 10px;
+}
+.po-right-3 {
+	right: 3px;
+}
+.-right-10 {
+	right: -10px;
+}
+// End New
+
 .po-left-32 {
 	left: 32%;
 }
@@ -38,6 +56,9 @@
 }
 .-po-right-80 {
 	right: -80px;
+}
+.po-left-15 {
+	left: 15px;
 }
 
 // RTL Style
@@ -70,6 +91,25 @@
 		right: auto;
 		left: -80px;
 	}
+	.po-left-15 {
+		left: auto;
+		right: 15px;
+	}
+
+	// New
+	.po-right-10 {
+		right: auto;
+		left: 10px;
+	}
+	.po-right-3 {
+		right: auto;
+		left: 3px;
+	}
+	.-right-10 {
+		right: auto;
+		left: -10px;
+	}
+	// End New
 }
 
 // BG Color
@@ -275,9 +315,6 @@
 }
 
 // Border
-.border-color-primary {
-	border-color: var(--primaryColor) !important;
-}
 .border {
 	border: 1px solid #edeff5 !important;
 }
@@ -295,6 +332,9 @@
 }
 .border-none {
 	border: none !important;
+}
+.border-color-primary {
+	border-color: var(--primaryColor) !important;
 }
 
 // Border Radius

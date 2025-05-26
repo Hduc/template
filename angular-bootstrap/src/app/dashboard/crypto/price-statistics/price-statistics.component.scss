@@ -299,6 +299,12 @@
             }
         }
     }
+    &.component-body-bg-color {
+        box-shadow: unset !important;
+    }
+    &.component-card-with-box-shadow {
+        box-shadow: unset !important;
+    }
 }
 
 /* Max width 767px */

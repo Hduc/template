@@ -82,6 +82,14 @@ public class DashboardController(ILogger<DashboardController> logger) : Controll
     {
         return View();
     }
+    public IActionResult POS_System()
+    {
+        return View();
+    }
+    public IActionResult Podcast()
+    {
+        return View();
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

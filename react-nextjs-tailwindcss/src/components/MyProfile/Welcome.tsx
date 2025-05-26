@@ -14,7 +14,7 @@ const Welcome: React.FC = () => {
       >
         <div className="trezo-card-content relative sm:ltr:pr-[250px] sm:rtl:pl-[250px]">
           <div className="md:py-[25px]">
-            <h5 className="mb-[5px] md:mb-px font-semibold text-white">
+            <h5 className="!mb-[5px] md:!mb-px !font-semibold !text-white">
               Welcome Back, <span className="text-orange-100">Olivia!</span>
             </h5>
 

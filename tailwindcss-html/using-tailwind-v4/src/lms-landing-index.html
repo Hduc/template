@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/apexcharts.css">
+        <link rel="stylesheet" href="assets/css/simplebar.css">
+        <link rel="stylesheet" href="assets/css/prism.css">
+        <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/quill.snow.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body class="!bg-[#fffef8] dark:!bg-dark">
+
+        <!-- Sidebar Settings -->
+        <div class="sidebar-settings fixed top-1/2 -translate-y-1/2 ltr:right-0 rtl:left-0 bg-white dark:bg-[#0a0e19] ltr:rounded-l-[10px] rtl:rounded-r-[10px] border border-gray-100 dark:border-[#202c4b] ltr:border-r-0 rtl:border-l-0 shadow-md z-[9] p-[10px] md:p-[15px]">
+            <button type="button" class="light-dark-toggle leading-none transition-all text-black dark:text-white font-medium flex items-center gap-[10px]" id="light-dark-toggle">
+                Light/Dark:
+                <i class="material-symbols-outlined !text-[20px] md:!text-[22px] text-[#fe7a36]">
+                    light_mode
+                </i>
+            </button>
+            <button type="button" class="rtl-mode-toggle flex items-center text-black dark:text-white font-medium mt-[10px] gap-[10px]" id="rtl-mode-toggle">
+                LTR/RTL:
+                <span class="inline-block relative rounded-full w-[35px] h-[20px] bg-gray-50 dark:bg-[#0a0e19]">
+                    <span class="inline-block transition-all absolute h-[12px] w-[12px] bg-black dark:bg-white rounded-full top-1/2 -translate-y-1/2"></span>
+                </span>
+            </button>
+        </div>
+        <!-- End Sidebar Settings -->
+
+        <!-- Navbar -->
+        <div class="lms-navbar fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px] md:py-[30px]" id="navbar">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1400px] 2xl:max-w-[1705px] mx-auto px-[12px]">
+                <div class="flex items-center relative flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a href="lms-landing-index.html" class="inline-block w-[150px] ltr:mr-[15px] rtl:ml-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/logo.svg" alt="logo" class="inline-block dark:hidden">
+                        <img src="assets/images/landing-pages/lms-courses/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                    </a>
+                    <button type="button" class="inline-block relative leading-none lg:hidden" id="navbar-burger-menu">
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                    </button>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto"><!-- For Big Devices -->
+                        <ul class="flex mx-auto flex-row gap-[30px] xl:gap-[50px]">
+                            <li>
+                                <a href="lms-landing-index.html" class="font-medium text-primary-600 dark:text-primary-600 transition-all hover:text-primary-600 text-[15px] xl:text-md">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lms-landing-why-choose-us.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600 text-[15px] xl:text-md">
+                                    Why Choose Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lms-landing-courses.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600 text-[15px] xl:text-md">
+                                    Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lms-landing-how-it-works.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600 text-[15px] xl:text-md">
+                                    How It Works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lms-landing-pricing.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600 text-[15px] xl:text-md">
+                                    Pricing
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[25px] xl:gap-[30px]">
+                            <a href="lms-landing-checkout.html" class="inline-block relative text-gray-700 dark:text-gray-100 transition-all hover:text-primary-500 ltr:pr-[6px] rtl:pl-[6px]">
+                                <i class="material-symbols-outlined">
+                                    shopping_cart
+                                </i>
+                                <span class="flex items-center justify-center absolute top-0 ltr:right-0 rtl:left-0 font-semibold bg-danger-500 rounded-full text-[8px] text-white w-[14px] h-[14px]">
+                                    01
+                                </span>
+                            </a>
+                            <a href="index.html" class="inline-block text-purple-600 lg:text-[15px] xl:text-[16px] py-[11px] px-[17px] rounded-md transition-all font-medium border border-purple-600 hover:text-white hover:bg-purple-500 hover:border-purple-500">
+                                <span class="inline-block relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[29px] rtl:md:pr-[29px]">
+                                    <i class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] md:!text-[24px]">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] border border-gray-200 dark:border-[#202c4b] mt-[20px] p-[20px] md:p-[30px] w-full hidden lg:!hidden" id="navbar-collapse"><!-- For Responsive -->
+                        <ul>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="lms-landing-index.html" class="font-medium text-primary-600 dark:text-primary-600 transition-all hover:text-primary-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="lms-landing-why-choose-us.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Why Choose Us
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="lms-landing-courses.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Courses
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="lms-landing-how-it-works.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    How It Works
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="lms-landing-pricing.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Pricing
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex items-center gap-[20px] mt-[15px]">
+                            <a href="lms-landing-checkout.html" class="inline-block relative text-gray-700 dark:text-gray-100 transition-all hover:text-primary-500 ltr:pr-[6px] rtl:pl-[6px]">
+                                <i class="material-symbols-outlined !text-[22px]">
+                                    shopping_cart
+                                </i>
+                                <span class="flex items-center justify-center absolute top-0 ltr:right-0 rtl:left-0 font-semibold bg-danger-500 rounded-full text-[8px] text-white w-[14px] h-[14px]">
+                                    01
+                                </span>
+                            </a>
+                            <a href="index.html" class="inline-block text-purple-600 lg:text-[15px] xl:text-[16px] py-[9px] md:py-[11px] px-[17px] rounded-md transition-all font-medium border border-purple-600 hover:text-white hover:bg-purple-500 hover:border-purple-500">
+                                <span class="inline-block relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[29px] rtl:md:pr-[29px]">
+                                    <i class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] md:!text-[24px]">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Banner -->
+        <div class="pt-[125px] md:pt-[160px] lg:pt-[185px] xl:pt-[145px] relative z-[1]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1400px] 2xl:max-w-[1705px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-[25px] items-center">
+                    <div class="ltr:md:pr-[100px] rtl:md:pl-[100px] ltr:2xl:pr-[150px] rtl:2xl:pl-[150px] relative xl:-top-[40px] 2xl:-top-[50px]">
+                        <div class="md:text-[15px] lg:text-md py-[5px] px-[17px] md:px-[19px] inline-block bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-300">
+                            <span class="block relative ltr:pl-[27px] rtl:pr-[27px] ltr:md:pl-[32px] rtl:md:pr-[32px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-[20px] md:!text-[22px] text-danger-500">
+                                    book_ribbon
+                                </i>
+                                Learn anytime, Anywhere
+                            </span>
+                        </div>
+                        <h1 class="!text-[30px] md:!text-[45px] lg:!text-[55px] 2xl:!text-[60px] mt-[15px] !mb-[15px] md:!mb-[20px] lg:!mb-[22px] -tracking-[1px] lg:-tracking-[1.5px] !leading-[1.2] !text-gray-800 dark:!text-gray-100">
+                            Unlock Your <span class="text-purple-600 font-semibold italic">Potential</span> with Online Learning
+                        </h1>
+                        <p class="md:text-[15px] lg:text-lg 2xl:max-w-[630px] !leading-[1.6]">
+                            Discover expertly designed courses, flexible learning paths, and a community that supports your goals — all in one powerful platform.
+                        </p>
+                        <div class="mt-[20px] md:mt-[30px] lg:mt-[45px]">
+                            <a href="lms-landing-courses.html" class="inline-block py-[10px] md:py-[12px] px-[17px] md:px-[20px] bg-primary-600 hover:bg-primary-500 text-white md:text-[15px] lg:text-md font-medium rounded-md transition-all">
+                                <span class="block relative ltr:pl-[30px] rtl:pr-[30px] ltr:md:pl-[34px] rtl:md:pr-[34px]">
+                                    <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-[22px] md:!text-[24px]">
+                                        school
+                                    </i>
+                                    Explore Courses
+                                </span>
+                            </a>
+                            <a href="lms-landing-why-choose-us.html" class="inline-block relative text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium transition-all hover:text-primary-500 ltr:pr-[20px] rtl:pl-[20px] ltr:md:pr-[25px] rtl:md:pl-[25px] ltr:ml-[15px] rtl:mr-[15px] ltr:md:ml-[25px] rtl:md:mr-[25px] ltr:lg:ml-[40px] rtl:lg:mr-[40px]">
+                                Learn More <i class="ri-arrow-right-line absolute top-1/2 -translate-y-1/2 ltr:-right-[4px] rtl:-left-[4px] text-[18px] md:text-[22px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-[25px] md:mt-[35px] xl:mt-0 ltr:xl:-ml-[100px] rtl:xl:-mr-[100px] ltr:2xl:-ml-[150px] rtl:2xl:-mr-[150px]">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-[25px] lg:gap-[35px]">
+                            <div>
+                                <div class="relative lg:top-[40px] 2xl:top-[70px] ltr:2xl:ml-[60px] rtl:2xl:mr-[60px]">
+                                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] border border-gray-200 dark:border-[#202c4b] p-[20px] md:p-[25px] lg:p-[30px] 2xl:p-[35px]">
+                                        <a href="lms-landing-course-details.html" class="d-block rounded-[10px]">
+                                            <img src="assets/images/landing-pages/lms-courses/courses/course1.jpg" alt="course-image" class="rounded-[10px] inline-block">
+                                        </a>
+                                        <h3 class="!text-[18px] md:!text-[19px] lg:!text-[20px] !font-semibold mt-[18px] md:mt-[22px] lg:mt-[28px] !mb-[15px]">
+                                            <a href="lms-landing-course-details.html" class="text-gray-700 dark:text-gray-100 transition-all hover:text-primary-500">
+                                                Full-Stack Web Development
+                                            </a>
+                                        </h3>
+                                        <div class="flex items-center gap-[8px]">
+                                            <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] relative -top-px">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-half-fill"></i>
+                                            </div>
+                                            <span class="block lg:text-md leading-none">
+                                                4.8 (1,240 ratings)
+                                            </span>
+                                        </div>
+                                        <div class="mt-[20px] lg:mt-[25px] text-primary-600 leading-none text-md md:text-[20px] font-semibold">
+                                            $79
+                                        </div>
+                                        <ul class="flex items-center gap-[15px] lg:gap-[20px] 2xl:gap-[25px] md:text-[15px] 2xl:text-md mt-[15px] md:mt-[20px] lg:mt-[22px]">
+                                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                                    book_ribbon
+                                                </i>
+                                                45 Lessons
+                                            </li>
+                                            <li class="relative inline-block">
+                                                <div class="w-[1px] h-[19px] bg-gray-200 dark:bg-[#202c4b]"></div>
+                                            </li>
+                                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                                    group
+                                                </i>
+                                                8,500+ Enrolled
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="absolute -top-[20px] lg:-top-[24px] ltr:left-[105px] rtl:right-[105px] -rotate-[8.906deg] py-[4px] px-[18px] md:px-[21px] inline-block md:text-[15px] lg:text-md text-gray-900 dark:text-gray-100 rounded-[100px] bg-secondary-200 dark:bg-[#202c4b]">
+                                        Featured
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ltr:text-right rtl:text-left">
+                                <img src="assets/images/landing-pages/lms-courses/woman.png" class="inline-block" alt="banner-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute top-0 ltr:right-[7px] rtl:left-[7px] -z-[1] hidden 2xl:block">
+                <img src="assets/images/landing-pages/lms-courses/shapes/shape1.png" alt="shape1">
+            </div>
+        </div>
+        <!-- End Banner -->
+        
+        <!-- Learners & Organizations -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1400px] 2xl:max-w-[1705px] mx-auto px-[12px]">
+            <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[25px] py-[70px] md:py-[90px] lg:py-[110px] xl:py-[120px] px-[20px] md:px-[50px] lg:px-[70px]">
+                <span class="block text-[16px] md:text-[18px] lg:text-[20px] font-medium text-center text-gray-700 dark:text-gray-100 mb-[30px] md:mb-[40px] lg:mb-[50px]">
+                    Trusted by Learners & Organizations Worldwide
+                </span>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 xl:flex gap-[20px] md:gap-[25px] items-center justify-between">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo1.svg" alt="learners-organizations-image" class="inline-block">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo2.svg" alt="learners-organizations-image" class="inline-block">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo3.svg" alt="learners-organizations-image" class="inline-block">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo4.svg" alt="learners-organizations-image" class="inline-block">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo5.svg" alt="learners-organizations-image" class="inline-block">
+                    <img src="assets/images/landing-pages/lms-courses/learners-organizations/lo6.svg" alt="learners-organizations-image" class="inline-block">
+                </div>
+            </div>
+        </div>
+        <!-- End Learners & Organizations -->
+        
+        <!-- Why Choose Us -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
+                    <div class="xl:max-w-[521px]">
+                        <img src="assets/images/landing-pages/lms-courses/why-choose-us.jpg" class="inline-block rounded-[25px]" alt="why-choose-us-image">
+                    </div>
+                    <div>
+                        <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                            <div class="flex items-center gap-[8px] md:gap-[10px]">
+                                <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                                Why Choose Us
+                            </div>
+                        </div>
+                        <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl md:-tracking-[1px] mt-[15px] !mb-[25px] md:!mb-[30px] xl:!mb-[40px] !text-gray-800 dark:!text-gray-100">
+                            Why Our LMS Stands Out
+                        </h2>
+                        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[15px] px-[20px] md:px-[30px] py-[20px] md:py-[22px] mb-[20px] md:mb-[23px] last:mb-0 ltr:md:mr-[45px] rtl:md:ml-[45px]">
+                            <div class="relative ltr:md:pl-[65px] rtl:md:pr-[65px]">
+                                <i class="material-symbols-outlined md:absolute md:top-1/2 md:-translate-y-1/2 ltr:left-0 rtl:right-0 !text-[40px] md:!text-[46px] text-primary-600">
+                                    collections_bookmark
+                                </i>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !my-[10px] md:!mb-[5px] md:!mt-0">
+                                    Diverse Course Catalog
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    From tech to creative arts, access 1000+ expert-led courses.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[15px] px-[20px] md:px-[30px] py-[20px] md:py-[22px] mb-[20px] md:mb-[23px] last:mb-0 ltr:md:ml-[45px] rtl:md:mr-[45px]">
+                            <div class="relative ltr:md:pl-[65px] rtl:md:pr-[65px]">
+                                <i class="material-symbols-outlined md:absolute md:top-1/2 md:-translate-y-1/2 ltr:left-0 rtl:right-0 !text-[40px] md:!text-[46px] text-primary-600">
+                                    monitoring
+                                </i>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !my-[10px] md:!mb-[5px] md:!mt-0">
+                                    Progress Tracking
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Interactive dashboards and real-time analytics to track your learning.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[15px] px-[20px] md:px-[30px] py-[20px] md:py-[22px] mb-[20px] md:mb-[23px] last:mb-0 ltr:md:mr-[45px] rtl:md:ml-[45px]">
+                            <div class="relative ltr:md:pl-[65px] rtl:md:pr-[65px]">
+                                <i class="material-symbols-outlined md:absolute md:top-1/2 md:-translate-y-1/2 ltr:left-0 rtl:right-0 !text-[40px] md:!text-[46px] text-primary-600">
+                                    school
+                                </i>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !my-[10px] md:!mb-[5px] md:!mt-0">
+                                    Expert Instructors
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Learn from certified professionals and industry leaders.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[15px] px-[20px] md:px-[30px] py-[20px] md:py-[22px] mb-[20px] md:mb-[23px] last:mb-0 ltr:md:ml-[45px] rtl:md:mr-[45px]">
+                            <div class="relative ltr:md:pl-[65px] rtl:md:pr-[65px]">
+                                <i class="material-symbols-outlined md:absolute md:top-1/2 md:-translate-y-1/2 ltr:left-0 rtl:right-0 !text-[40px] md:!text-[46px] text-primary-600">
+                                    devices
+                                </i>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !my-[10px] md:!mb-[5px] md:!mt-0">
+                                    Anytime, Anywhere Access
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Mobile-friendly platform for learning on the go.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[15px] px-[20px] md:px-[30px] py-[20px] md:py-[22px] mb-[20px] md:mb-[23px] last:mb-0 ltr:md:mr-[45px] rtl:md:ml-[45px]">
+                            <div class="relative ltr:md:pl-[65px] rtl:md:pr-[65px]">
+                                <i class="material-symbols-outlined md:absolute md:top-1/2 md:-translate-y-1/2 ltr:left-0 rtl:right-0 !text-[40px] md:!text-[46px] text-primary-600">
+                                    workspace_premium
+                                </i>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !my-[10px] md:!mb-[5px] md:!mt-0">
+                                    Certificates & Badges
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Showcase your achievements with professional certification.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Why Choose Us -->
+        
+        <!-- Courses -->
+        <div class="bg-[#f6f5f3] dark:bg-[#0e1321] py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="text-center mx-auto md:max-w-[500px] mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">
+                    <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                        <div class="flex items-center gap-[8px] md:gap-[10px]">
+                            <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                            Popular Courses
+                        </div>
+                    </div>
+                    <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl -tracking-[1px] mt-[15px] !mb-0 !text-gray-800 dark:!text-gray-100">
+                        Top-Rated Courses to Kickstart Your Journey
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] 2xl:p-[35px]">
+                        <a href="lms-landing-course-details.html" class="d-block rounded-[10px]">
+                            <img src="assets/images/landing-pages/lms-courses/courses/course2.jpg" alt="course-image" class="rounded-[10px] inline-block">
+                        </a>
+                        <h3 class="!text-[18px] md:!text-[19px] lg:!text-[20px] !font-semibold mt-[18px] md:mt-[22px] lg:mt-[28px] !mb-[15px]">
+                            <a href="lms-landing-course-details.html" class="text-gray-800 dark:text-gray-100 transition-all hover:text-primary-500">
+                                Data Science with Python
+                            </a>
+                        </h3>
+                        <div class="flex items-center gap-[8px]">
+                            <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] relative -top-px">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <span class="block lg:text-md leading-none">
+                                4.7 (980 ratings)
+                            </span>
+                        </div>
+                        <div class="mt-[20px] lg:mt-[25px] text-primary-600 leading-none text-md md:text-[20px] font-semibold">
+                            $69
+                        </div>
+                        <ul class="flex items-center gap-[15px] lg:gap-[20px] 2xl:gap-[25px] md:text-[15px] xl:text-md mt-[15px] md:mt-[20px] lg:mt-[22px]">
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    book_ribbon
+                                </i>
+                                38 Lessons
+                            </li>
+                            <li class="relative inline-block">
+                                <div class="w-[1px] h-[19px] bg-gray-200 dark:bg-[#202c4b]"></div>
+                            </li>
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    group
+                                </i>
+                                6,300+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] 2xl:p-[35px]">
+                        <a href="lms-landing-course-details.html" class="d-block rounded-[10px]">
+                            <img src="assets/images/landing-pages/lms-courses/courses/course3.jpg" alt="course-image" class="rounded-[10px] inline-block">
+                        </a>
+                        <h3 class="!text-[18px] md:!text-[19px] lg:!text-[20px] !font-semibold mt-[18px] md:mt-[22px] lg:mt-[28px] !mb-[15px]">
+                            <a href="lms-landing-course-details.html" class="text-gray-800 dark:text-gray-100 transition-all hover:text-primary-500">
+                                Graphic Design Masterclass
+                            </a>
+                        </h3>
+                        <div class="flex items-center gap-[8px]">
+                            <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] relative -top-px">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-fill"></i>
+                            </div>
+                            <span class="block lg:text-md leading-none">
+                                4.9 (10,200 ratings)
+                            </span>
+                        </div>
+                        <div class="mt-[20px] lg:mt-[25px] text-primary-600 leading-none text-md md:text-[20px] font-semibold">
+                            $99
+                        </div>
+                        <ul class="flex items-center gap-[15px] lg:gap-[20px] 2xl:gap-[25px] md:text-[15px] xl:text-md mt-[15px] md:mt-[20px] lg:mt-[22px]">
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    book_ribbon
+                                </i>
+                                52 Lessons
+                            </li>
+                            <li class="relative inline-block">
+                                <div class="w-[1px] h-[19px] bg-gray-200 dark:bg-[#202c4b]"></div>
+                            </li>
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    group
+                                </i>
+                                10,200+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] p-[20px] md:p-[25px] lg:p-[30px] 2xl:p-[35px]">
+                        <a href="lms-landing-course-details.html" class="d-block rounded-[10px]">
+                            <img src="assets/images/landing-pages/lms-courses/courses/course4.jpg" alt="course-image" class="rounded-[10px] inline-block">
+                        </a>
+                        <h3 class="!text-[18px] md:!text-[19px] lg:!text-[20px] !font-semibold mt-[18px] md:mt-[22px] lg:mt-[28px] !mb-[15px]">
+                            <a href="lms-landing-course-details.html" class="text-gray-800 dark:text-gray-100 transition-all hover:text-primary-500">
+                                Mindfulness & Stress Management
+                            </a>
+                        </h3>
+                        <div class="flex items-center gap-[8px]">
+                            <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] relative -top-px">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <span class="block lg:text-md leading-none">
+                                4.0 (750 ratings)
+                            </span>
+                        </div>
+                        <div class="mt-[20px] lg:mt-[25px] text-primary-600 leading-none text-md md:text-[20px] font-semibold">
+                            $79
+                        </div>
+                        <ul class="flex items-center gap-[15px] lg:gap-[20px] 2xl:gap-[25px] md:text-[15px] xl:text-md mt-[15px] md:mt-[20px] lg:mt-[22px]">
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    book_ribbon
+                                </i>
+                                20 Lessons
+                            </li>
+                            <li class="relative inline-block">
+                                <div class="w-[1px] h-[19px] bg-gray-200 dark:bg-[#202c4b]"></div>
+                            </li>
+                            <li class="relative inline-block ltr:pl-[25px] rtl:pr-[25px] ltr:lg:pl-[32px] rtl:lg:pr-[32px] text-gray-700 dark:text-gray-200">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-lg lg:!text-xl">
+                                    group
+                                </i>
+                                4,00+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-[35px] md:mt-[50px] lg:mt-[70px]">
+                    <a href="lms-landing-courses.html" class="inline-block py-[10px] md:py-[12px] px-[17px] md:px-[20px] bg-primary-600 hover:bg-primary-500 text-white md:text-[15px] lg:text-md font-medium rounded-md transition-all">
+                        <span class="block relative ltr:pl-[30px] rtl:pr-[30px] ltr:md:pl-[34px] rtl:md:pr-[34px]">
+                            <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-[22px] md:!text-[24px]">
+                                school
+                            </i>
+                            Browse All Courses
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Courses -->
+        
+        <!-- How It Works -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
+                    <div>
+                        <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                            <div class="flex items-center gap-[8px] md:gap-[10px]">
+                                <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                                How It Works
+                            </div>
+                        </div>
+                        <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl md:-tracking-[1px] mt-[15px] !mb-[25px] md:!mb-[30px] lg:!mb-[50px] xl:!mb-[80px] !text-gray-800 dark:!text-gray-100">
+                            Learning Made Simple
+                        </h2>
+                        <div class="flex items-center gap-[20px] pb-[15px] md:pb-[20px] mb-[15px] md:mb-[20px] border-b border-gray-100 dark:border-[#202c4b] last:mb-0 last:pb-0 last:border-b-0 ltr:md:mr-[105px] rtl:md:ml-[105px]">
+                            <div class="leading-none font-semibold text-[48px] italic -tracking-[1px] text-primary-300">
+                                1.
+                            </div>
+                            <div>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !mb-[5px]">
+                                    Sign Up Free
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Create your account in seconds.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[20px] pb-[15px] md:pb-[20px] mb-[15px] md:mb-[20px] border-b border-gray-100 dark:border-[#202c4b] last:mb-0 last:pb-0 last:border-b-0 ltr:md:ml-[35px] rtl:md:mr-[35px] ltr:md:mr-[70px] rtl:md:ml-[70px]">
+                            <div class="leading-none font-semibold text-[48px] italic -tracking-[1px] text-primary-300">
+                                2.
+                            </div>
+                            <div>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !mb-[5px]">
+                                    Choose Your Course
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Pick from hundreds of topics.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[20px] pb-[15px] md:pb-[20px] mb-[15px] md:mb-[20px] border-b border-gray-100 dark:border-[#202c4b] last:mb-0 last:pb-0 last:border-b-0 ltr:md:ml-[70px] rtl:md:mr-[70px] ltr:md:mr-[35px] rtl:md:ml-[35px]">
+                            <div class="leading-none font-semibold text-[48px] italic -tracking-[1px] text-primary-300">
+                                3.
+                            </div>
+                            <div>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !mb-[5px]">
+                                    Start Learning
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Watch lessons, take quizzes, and track progress.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[20px] pb-[15px] md:pb-[20px] mb-[15px] md:mb-[20px] border-b border-gray-100 dark:border-[#202c4b] last:mb-0 last:pb-0 last:border-b-0 ltr:md:ml-[105px] rtl:md:mr-[105px]">
+                            <div class="leading-none font-semibold text-[48px] italic -tracking-[1px] text-primary-300">
+                                4.
+                            </div>
+                            <div>
+                                <h3 class="!text-gray-700 dark:!text-gray-100 !text-[18px] md:!text-[20px] !mb-[5px]">
+                                    Get Certified
+                                </h3>
+                                <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                    Earn credentials and grow your resume.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:max-w-[521px] ltr:ml-auto rtl:mr-auto">
+                        <img src="assets/images/landing-pages/lms-courses/how-it-works.jpg" class="inline-block rounded-[25px]" alt="how-it-works-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End How It Works -->
+        
+        <!-- Testimonials -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+            <div class="text-center mx-auto md:max-w-[500px] mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">
+                <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                    <div class="flex items-center gap-[8px] md:gap-[10px]">
+                        <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                        Student Testimonials
+                    </div>
+                </div>
+                <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl -tracking-[1px] mt-[15px] !mb-0 !text-gray-800 dark:!text-gray-100">
+                    What Our Learners Say
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+                <div class="bg-[#f0eedf] dark:bg-[#0a0e19] relative z-[1] rounded-[25px] p-[20px] md:p-[30px] lg:p-[40px]">
+                    <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] mb-[15px] md:mb-[20px]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium !leading-[1.6]">
+                        This platform changed my life! The Web Development course was incredibly comprehensive, and the support team was always there when I needed help. I landed a job just weeks after finishing!
+                    </p>
+                    <div class="flex items-center mt-[20px] md:mt-[25px] gap-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/users/user1.jpg" class="rounded-full border-[3px] border-white w-[48px]" alt="user-image">
+                        <div>
+                            <h5 class="!text-md !mb-[5px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                Maria Johnson
+                            </h5>
+                            <span class="block text-xs">
+                                Web Developer at TechVerse
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[20px] md:bottom-[30px] lg:bottom-[40px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] ltr:lg:right-[40px] rtl:lg:left-[40px] leading-none text-[50px] text-dark opacity-[.10]">
+                        <i class="ri-double-quotes-l"></i>
+                    </div>
+                </div>
+                <div class="bg-[#f0eedf] dark:bg-[#0a0e19] relative z-[1] rounded-[25px] p-[20px] md:p-[30px] lg:p-[40px]">
+                    <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] mb-[15px] md:mb-[20px]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium !leading-[1.6]">
+                        Loved every bit of the Graphic Design Masterclass! The instructor was amazing, and the course content was well-structured. I use what I learned every day at work.
+                    </p>
+                    <div class="flex items-center mt-[20px] md:mt-[25px] gap-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/users/user2.jpg" class="rounded-full border-[3px] border-white w-[48px]" alt="user-image">
+                        <div>
+                            <h5 class="!text-md !mb-[5px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                Jessica Lee
+                            </h5>
+                            <span class="block text-xs">
+                                Graphic Designer at CreativeHive
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[20px] md:bottom-[30px] lg:bottom-[40px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] ltr:lg:right-[40px] rtl:lg:left-[40px] leading-none text-[50px] text-dark opacity-[.10]">
+                        <i class="ri-double-quotes-l"></i>
+                    </div>
+                </div>
+                <div class="bg-[#f0eedf] dark:bg-[#0a0e19] relative z-[1] rounded-[25px] p-[20px] md:p-[30px] lg:p-[40px]">
+                    <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] mb-[15px] md:mb-[20px]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium !leading-[1.6]">
+                        The Mindfulness course helped me not only in my personal life but also improved how I teach my clients. The guided sessions are pure gold. I use what I learned every day at work.
+                    </p>
+                    <div class="flex items-center mt-[20px] md:mt-[25px] gap-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/users/user3.jpg" class="rounded-full border-[3px] border-white w-[48px]" alt="user-image">
+                        <div>
+                            <h5 class="!text-md !mb-[5px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                Carlos Mendes
+                            </h5>
+                            <span class="block text-xs">
+                                Mental Wellness Coach
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[20px] md:bottom-[30px] lg:bottom-[40px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] ltr:lg:right-[40px] rtl:lg:left-[40px] leading-none text-[50px] text-dark opacity-[.10]">
+                        <i class="ri-double-quotes-l"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[25px] mt-[25px]">
+                <div class="bg-[#f0eedf] dark:bg-[#0a0e19] relative z-[1] rounded-[25px] p-[20px] md:p-[30px] lg:p-[40px]">
+                    <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] mb-[15px] md:mb-[20px]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium !leading-[1.6]">
+                        Enrolling in the Full-Stack Web Development course was one of the best decisions I’ve ever made. The platform’s structure made learning easy and enjoyable — from interactive video lessons to real-time quizzes. What truly impressed me was the depth of content and how up-to-date it was with modern technologies.
+                    </p>
+                    <div class="flex items-center mt-[20px] md:mt-[25px] gap-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/users/user4.jpg" class="rounded-full border-[3px] border-white w-[48px]" alt="user-image">
+                        <div>
+                            <h5 class="!text-md !mb-[5px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                Elena Petrova
+                            </h5>
+                            <span class="block text-xs">
+                                HR Manager at SkillBridge Corp.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[20px] md:bottom-[30px] lg:bottom-[40px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] ltr:lg:right-[40px] rtl:lg:left-[40px] leading-none text-[50px] text-dark opacity-[.10]">
+                        <i class="ri-double-quotes-l"></i>
+                    </div>
+                </div>
+                <div class="bg-[#f0eedf] dark:bg-[#0a0e19] relative z-[1] rounded-[25px] p-[20px] md:p-[30px] lg:p-[40px]">
+                    <div class="flex items-center text-orange-400 leading-none lg:text-md gap-[2px] mb-[15px] md:mb-[20px]">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-200 md:text-[15px] lg:text-md font-medium !leading-[1.6]">
+                        As someone looking to switch careers, I was hesitant at first. But the Data Science and Analytics course exceeded all my expectations. It took me from beginner-level Python to advanced data manipulation and visualization. The capstone project gave me something tangible to show in my portfolio.
+                    </p>
+                    <div class="flex items-center mt-[20px] md:mt-[25px] gap-[15px]">
+                        <img src="assets/images/landing-pages/lms-courses/users/user5.jpg" class="rounded-full border-[3px] border-white w-[48px]" alt="user-image">
+                        <div>
+                            <h5 class="!text-md !mb-[5px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                Lucas Moretti
+                            </h5>
+                            <span class="block text-xs">
+                                Entrepreneur & Startup Mentor
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-[20px] md:bottom-[30px] lg:bottom-[40px] ltr:right-[20px] rtl:left-[20px] ltr:md:right-[30px] rtl:md:left-[30px] ltr:lg:right-[40px] rtl:lg:left-[40px] leading-none text-[50px] text-dark opacity-[.10]">
+                        <i class="ri-double-quotes-l"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonials -->
+        
+        <!-- Pricing -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
+                    <div class="lg:max-w-[475px]">
+                        <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                            <div class="flex items-center gap-[8px] md:gap-[10px]">
+                                <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                                Pricing Plans
+                            </div>
+                        </div>
+                        <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl md:-tracking-[1px] mt-[15px] !mb-[20px] md:!mb-[25px] lg:!mb-[12px] !text-gray-800 dark:!text-gray-100">
+                            Flexible Plans for Every Learner
+                        </h2>
+                        <div class="max-w-[436px] ltr:text-right rtl:text-left mb-[50px] hidden lg:block">
+                            <img src="assets/images/landing-pages/lms-courses/shapes/shape2.png" class="inline-block" alt="shape2">
+                        </div>
+                        <a href="index.html" class="inline-block py-[10px] md:py-[12px] px-[17px] md:px-[20px] bg-primary-600 hover:bg-primary-500 text-white md:text-[15px] lg:text-md font-medium rounded-md transition-all">
+                            <span class="block relative ltr:pl-[30px] rtl:pr-[30px] ltr:md:pl-[34px] rtl:md:pr-[34px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-[22px] md:!text-[24px]">
+                                    school
+                                </i>
+                                Start Free Trial
+                            </span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-[25px] md:gap-[40px]">
+                        <div class="bg-white dark:bg-[#0a0e19] rounded-[25px] border border-gray-200 dark:border-[#202c4b] text-center px-[20px] py-[30px] md:py-[55px] md:mt-[70px] md:mb-[70px] first:mb-0 last:mt-0">
+                            <div class="leading-none text-gray-700 dark:text-gray-100 text-3xl md:text-5xl">
+                                $0<span class="text-base md:text-[15px] lg:text-md font-normal text-gray-500 dark:text-gray-400">/monthly</span>
+                            </div>
+                            <span class="block text-md md:text-lg font-medium text-primary-500 mt-[20px] mb-[20px] md:mb-[30px]">
+                                Free Plan
+                            </span>
+                            <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                Access to limited courses
+                            </p>
+                            <a href="index.html" class="inline-block text-purple-600 lg:text-[15px] xl:text-[16px] py-[11px] px-[17px] rounded-md transition-all font-medium border border-purple-600 hover:text-white hover:bg-purple-500 hover:border-purple-500 mt-[10px] md:mt-[25px]">
+                                <span class="inline-block relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[29px] rtl:md:pr-[29px]">
+                                    <i class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] md:!text-[24px]">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                        </div>
+                        <div class="bg-white dark:bg-[#0a0e19] rounded-[25px] border border-gray-200 dark:border-[#202c4b] text-center px-[20px] py-[30px] md:py-[55px] md:mt-[70px] md:mb-[70px] first:mb-0 last:mt-0">
+                            <div class="leading-none text-gray-700 dark:text-gray-100 text-3xl md:text-5xl">
+                                $29<span class="text-base md:text-[15px] lg:text-md font-normal text-gray-500 dark:text-gray-400">/monthly</span>
+                            </div>
+                            <span class="block text-md md:text-lg font-medium text-primary-500 mt-[20px] mb-[20px] md:mb-[30px]">
+                                Pro Plan
+                            </span>
+                            <p class="md:text-[15px] lg:text-md !leading-[1.6]">
+                                Unlimited access to all courses
+                            </p>
+                            <a href="index.html" class="inline-block text-purple-600 lg:text-[15px] xl:text-[16px] py-[11px] px-[17px] rounded-md transition-all font-medium border border-purple-600 hover:text-white hover:bg-purple-500 hover:border-purple-500 mt-[10px] md:mt-[25px]">
+                                <span class="inline-block relative ltr:pl-[25px] rtl:pr-[25px] ltr:md:pl-[29px] rtl:md:pr-[29px]">
+                                    <i class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 !text-[20px] md:!text-[24px]">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing -->
+        
+        <!-- CTA -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+            <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[25px] py-[70px] md:py-[30px] px-[20px] md:px-[30px] lg:px-[60px] xl:px-[110px] relative z-[1]">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-[25px]">
+                    <div class="text-center ltr:md:text-left rtl:md:text-right">
+                        <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl md:-tracking-[1px] !mb-[20px] md:!mb-[25px] xl:!mb-[40px] !text-gray-800 dark:!text-gray-100">
+                            Join Thousands of Learners Advancing Their Careers
+                        </h2>
+                        <a href="lms-landing-courses.html" class="inline-block py-[10px] md:py-[12px] px-[17px] md:px-[20px] bg-primary-600 hover:bg-primary-500 text-white md:text-[15px] lg:text-md font-medium rounded-md transition-all">
+                            <span class="block relative ltr:pl-[30px] rtl:pr-[30px] ltr:md:pl-[34px] rtl:md:pr-[34px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0 !text-[22px] md:!text-[24px]">
+                                    school
+                                </i>
+                                Start Learning Now
+                            </span>
+                        </a>
+                    </div>
+                    <div class="ltr:text-right rtl:text-left">
+                        <img src="assets/images/landing-pages/lms-courses/learning.png" class="inline-block" alt="learning-image">
+                    </div>
+                </div>
+                <div class="absolute -z-[1] ltr:right-[30px] rtl:left-[30px] top-[50px] hidden md:block">
+                    <img src="assets/images/landing-pages/lms-courses/shapes/shape3.png" alt="shape3">
+                </div>
+                <div class="absolute -z-[1] ltr:right-[43%] rtl:left-[43%] bottom-[90px] hidden md:block">
+                    <img src="assets/images/landing-pages/lms-courses/shapes/shape4.png" alt="shape4">
+                </div>
+            </div>
+        </div>
+        <!-- End CTA -->
+        
+        <!-- FAQ -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="text-center mx-auto md:max-w-[485px] mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">
+                    <div class="md:text-[15px] lg:text-md py-[4px] px-[17px] md:px-[18px] bg-[#ffef99] dark:bg-[#0a0e19] rounded-[100px] text-gray-900 dark:text-gray-200 inline-block">
+                        <div class="flex items-center gap-[8px] md:gap-[10px]">
+                            <img src="assets/images/landing-pages/lms-courses/ico.svg"alt="ico">
+                            FAQ’s
+                        </div>
+                    </div>
+                    <h2 class="!text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl -tracking-[1px] mt-[15px] !mb-0 !text-gray-800 dark:!text-gray-100">
+                        Got Questions? We’ve Got Answers
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
+                    <div class="text-center">
+                        <img src="assets/images/landing-pages/lms-courses/faq.png" class="inline-block" alt="faq-image">
+                    </div>
+                    <div class="toc-accordion" id="tablesOfContentAccordion">
+                        <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-gray-200 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 mb-[15px] last:mb-0">
+                            <button class="toc-accordion-button open text-[16px] md:text-lg lg:text-[20px] py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                                Can I learn at my own pace?
+                                <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                            </button>
+                            <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]" style="display: block;">
+                                <p class="text-gray-500 dark:text-gray-400 !leading-[1.6] md:text-[15px] lg:text-md">
+                                    Absolutely! Our platform is fully self-paced.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-gray-200 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 mb-[15px] last:mb-0">
+                            <button class="toc-accordion-button text-[16px] md:text-lg lg:text-[20px] py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                                Are certificates recognized?
+                                <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                            </button>
+                            <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                                <p class="text-gray-500 dark:text-gray-400 !leading-[1.6] md:text-[15px] lg:text-md">
+                                    Absolutely! Our platform is fully self-paced.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-gray-200 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 mb-[15px] last:mb-0">
+                            <button class="toc-accordion-button text-[16px] md:text-lg lg:text-[20px] py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                                Do I need any prior knowledge?
+                                <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                            </button>
+                            <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                                <p class="text-gray-500 dark:text-gray-400 !leading-[1.6] md:text-[15px] lg:text-md">
+                                    Absolutely! Our platform is fully self-paced.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End FAQ -->
+        
+        <!-- Footer -->
+        <div class="bg-[#f0eedf] dark:bg-[#0a0e19] rounded-[25px] py-[70px] md:py-[90px] lg:py-[110px] xl:py-[135px] mx-auto xl:max-w-[1400px] 2xl:max-w-[1680px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
+                    <div class="ltr:xl:-mr-[35px] rtl:xl:-ml-[35px]">
+                        <a href="lms-landing-index.html" class="inline-block max-w-[132px] mb-[20px] md:mb-[23px]">
+                            <img src="assets/images/landing-pages/lms-courses/logo.svg" alt="logo" class="inline-block dark:hidden">
+                            <img src="assets/images/landing-pages/lms-courses/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                        </a>
+                        <p class="!leading-[1.6]">
+                            Empowering learners worldwide with expert-led online courses, flexible learning paths, and career-boosting certifications — anytime, anywhere.
+                        </p>
+                        <div class="mt-[20px] md:mt-[35px]">
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-dribbble-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Popular Categories
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Web Development
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Data Science
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Analysis & Reporting
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Business & Marketing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Pricing Plans
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-primary-600">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[80px] rtl:xl:pr-[80px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Get in Touch
+                        </h3>
+                        <ul>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Email:
+                                <a href="mailto:support@trezo.com" class="text-primary-500 hover:text-primary-800 transition-all">
+                                    support@trezo.com
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Phone:
+                                <a href="tell:+1(555)123-4567" class="text-primary-500 hover:text-primary-800 transition-all">
+                                    +1 (555) 123-4567
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Location:
+                                <span class="font-semibold">
+                                    123 Learning Ave, Knowledge City, USA
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-[25px] md:py-[30px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:gap-[25px]">
+                    <div class="text-center ltr:lg:text-left rtl:lg:text-right">
+                        <p class="!leading-[1.6]">
+                            © <span class="text-purple-500">Trezo</span> is Proudly Owned by <a href="https://envytheme.com/" target="_blank" class="text-primary-500 transition-all hover:underline">EnvyTheme</a>
+                        </p>
+                    </div>
+                    <div class="text-center lg:flex items-center justify-end gap-[15px]">
+                        <a href="#" class="transition-all hover:text-primary-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Terms of Service
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-primary-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Privacy Policy
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-primary-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+        
+        <!-- Back To Top -->
+        <button id="backToTopBtn" class="fixed bottom-[20px] right-[20px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[40px] xl:right-[40px] z-[9] flex items-center justify-center w-[40px] h-[40px] bg-primary-500 hover:bg-primary-700 text-white rounded-full transition-all text-[20px]" type="button">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!-- End Back To Top -->
+         
+        <!-- Links Of JS File -->
+        <script src="assets/js/apexcharts.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/prism.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/fullcalendar.min.js"></script>
+        <script src="assets/js/jsvectormap.min.js"></script>
+        <script src="assets/js/world-merc.js"></script>
+        <script src="assets/js/quill.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

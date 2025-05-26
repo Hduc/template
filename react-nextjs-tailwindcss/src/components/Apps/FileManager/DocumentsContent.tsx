@@ -119,7 +119,7 @@ const DocumentsContent: React.FC = () => {
               width={56}
               height={56} 
             />
-            <h6 className="my-[18px] text-[15px]">{card.title}</h6>
+            <h6 className="!my-[18px] !text-[15px]">{card.title}</h6>
             <div className="flex justify-center items-center gap-[12px]">
               {card.actions.map((action, actionIndex) => (
                 <button

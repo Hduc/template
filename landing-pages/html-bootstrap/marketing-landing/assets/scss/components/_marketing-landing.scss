@@ -1,0 +1,1475 @@
+/* Marketing Landing Area Style
+============================================*/
+
+/* Banner Area Style
+============================================*/
+.banner-area-marketing {
+    padding-top: 175px;
+    padding-bottom: 140px;
+}
+.banner-content-marketing {
+    .title {
+        display: inline-block;
+        padding: 5px 14px;
+        border-radius: 50px;
+        margin-bottom: 5px;
+        i {
+            font-size: 18px;
+            position: relative;
+            top: 1px;
+        }
+        span {
+            color: $primary;
+        }
+    }
+    h2 {
+        font-size: 72px;
+        letter-spacing: -1.5px;
+        font-weight: 500;
+        line-height: 120% !important;
+        color: $secondary-50;
+        margin-bottom: 25px;
+        span {
+            font-style: italic;
+            color: $danger-50;
+        }
+    }
+    p {
+        line-height: 1.8;
+        font-size: 16px;
+    }
+    .banner-btn {
+        margin-top: 50px;
+        .btn {
+            transition: $transition;
+            &:hover {
+                background-color: $danger-50 !important;
+                border-color: $danger-50 !important;
+            }
+        }
+    }
+}
+.banner-img-marketing {
+    .flying-laptop {
+        max-width: 265px;
+        position: absolute;
+        top: 80px;
+        left: -111px;
+    }
+}
+.perspective-grid {
+    position: absolute;
+    top: 91px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+/* Customers & Growing Area Style
+============================================*/
+.customers-info {
+    background: linear-gradient(0deg, #FFF8F1 0%, #F7F9FF 100%);
+    padding: 85px 20px;
+    text-align: center;
+    border-radius: 15px;
+    ul {
+        margin-bottom: 15px;
+        li {
+            margin-right: -14px;
+            img {
+                width: 46px;
+                height: 46px;
+                border: 3px solid $white;
+                border-radius: 50px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    span {
+        color: $secondary-60;
+    }
+}
+.growing-info {
+    background: linear-gradient(0deg, #FFF8F1 0%, #F7F9FF 100%);
+    padding: 85px 50px;
+    border-radius: 15px;
+    span {
+        display: block;
+        margin-bottom: 30px;
+        color: $secondary-60;
+    }
+}
+
+/* About Us Area Style
+============================================*/
+.about-us-marketing-img {
+    max-width: 520px;
+    img {
+        border-radius: 15px;
+    }
+    .total-revenue {
+        margin: 35px;
+        max-width: 325px;
+        border-radius: 10px;
+    }
+}
+.about-us-content-marketing {
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+    .dec {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .marketing-counter-single-item {
+        border-left: 1px solid $danger-50;
+        padding-left: 20px;
+        h1 {
+            font-weight: 500;
+            margin-bottom: 0;
+            font-size: 36px;
+        }
+    }
+    .dec2 {
+        font-size: 16px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        color: $secondary-50;
+        margin-top: 40px;
+    }
+    .row {
+        --bs-gutter-y: 40px;
+    }
+}
+
+/* Why Trezo Area Style
+============================================*/
+.why-trezo-marketing-single-item {
+    padding: 70px 60px;
+    border-radius: 15px;
+    .icon {
+        margin-bottom: 90px; 
+        position: relative;
+        z-index: 1;
+        padding-left: 22px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 55px;
+            height: 55px;
+            background-color: $danger-100;
+            border-radius: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: -1;
+        }
+    }   
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    .why-trezo-marketing-content {
+        max-width: 291px;
+    }
+}
+
+/* Dashboard Showcase Area Style
+============================================*/
+.dashboard-showcase-marketing-content {
+    h2 {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+    .dec {
+        margin-bottom: 30px;
+    }
+    .dec2 {
+        font-size: 16px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        margin-top: 40px;
+    }
+    .dashboard-showcase-wrap {
+        margin: 30px 0;
+        .info-list {
+            i {
+                font-size: 18px;
+                width: 29px;
+                height: 29px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $success-60;
+                color: $white;
+                border-radius: 50px;
+            }
+            span {
+                font-size: 18px;
+                font-weight: 500;
+                color: $secondary-60;
+            }
+        }
+        .row {
+            --bs-gutter-y: 15px;
+        }
+    }
+}
+.dashboard-showcase-marketing-img {
+    max-width: 521px;
+    img {
+        border-radius: 25px;
+    }
+}
+
+/* Testimonials Area Style
+============================================*/
+.testimonials-single-item-marketing {
+    background: linear-gradient(180deg, #FFF 0%, #EEF6FF 100%);
+    border-radius: 15px;
+    padding: 60px 50px;
+    &.bg-2 {
+        background: linear-gradient(180deg, #FFF 0%, #FAF5FF 100%);
+    }
+    &.bg-3 {
+        background: linear-gradient(180deg, #FFF 0%, #EEFFE5 100%);
+    }
+    &.bg-4 {
+        background: linear-gradient(180deg, #FFF 0%, #FFE4E4 100%);
+    }
+    .user {
+        width: 42px;
+        height: 42px;
+        border-radius: 50px;
+    }
+    .mb-25 {
+        margin-bottom: 30px;
+    }
+    .mt-50 {
+        margin-top: 50px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 500;
+        color: $secondary-50;
+        line-height: 155%; 
+        letter-spacing: 0.1px;
+    }
+    .marketing-play {
+        background-color: #ffaa72;
+        i {
+            left: 3px;
+            top: 2px;
+            position: relative;
+        }
+        &:hover {
+            background-color: #fe7a36;
+        }
+    }
+}
+
+/* Pricing Plans Area Style
+============================================*/
+.pricing-plans-marketing-single-item {
+    border-radius: 25px;
+    background: linear-gradient(180deg, #FAF5FF 0%, #EEF6FF 100%);
+    padding: 65px 55px;
+    .trial {
+        color: $danger-50;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 155%;
+        display: block;
+        margin-bottom: 15px;
+    }
+    h1 {
+        color: $secondary;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+        sub {
+            font-size: 16px;
+            font-weight: 400;
+            bottom: 0;
+        }
+    }
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+    .pricing-content {
+        margin-top: 30px;
+        ul {
+            margin-top: 20px;
+            margin-bottom: 0;
+            li {
+                margin-bottom: 14px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                img {
+                    width: 22px;
+                }
+                span {
+                    font-size: 16px;
+                    color: $secondary-60;
+                }
+            }
+        }
+    }
+    .landing-page-btn {
+        transition: $transition;
+        padding: 10.5px 17px;
+        &:hover {
+            background-color: $danger !important;
+            border-color: $danger !important;
+        }
+        &.active {
+            background-color: $danger-50 !important;
+            border-color: $danger-50 !important;
+            color: $white;
+            &:hover {
+                background-color: $danger !important;
+                border-color: $danger !important;
+                color: $white;
+            }
+        }
+    }
+    &.active {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background: linear-gradient(180deg, #FFF5ED 0%, #FAF5FF 100%);
+    }
+    &.bg-3 {
+        background: linear-gradient(180deg, #EEF6FF 0%, #EEFFE5 100%);
+    }
+    &.bg-white {
+        background: $white !important;
+    }
+}
+
+/* Blog Area Style
+============================================*/
+.blog-marketing-single-item {
+    img {
+        border-radius: 25px;
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        transition: $transition;
+        margin-bottom: 20px;
+    }
+    .blog-marketing-content {
+        padding: 25px;
+        padding-bottom: 0;
+    }
+    &:hover {
+        h3 {
+            color: $danger;
+        }
+    }
+}
+
+/* Footer Area Style
+============================================*/
+.with-marketing-footer {
+    .footer-single-item-marketing {
+        .social-link {
+            li {
+                a {
+                    color: $danger-50;
+                    &:hover {
+                        color: $danger-40;
+                    }
+                }  
+            } 
+        }
+        .import-link {
+            li {
+                a {
+                    &:hover {
+                        color: $danger-50;
+                    }
+                }  
+            } 
+        }
+        .info-link {
+            li {
+                a {
+                    color: $danger-50;
+                    &:hover {
+                        color: $danger-40;
+                    }
+                }  
+            } 
+        }
+    }
+}
+.with-marketing-copyright {
+    .terms-info {
+        li {
+            a {
+                &:hover {
+                    color: $danger-50;
+                }
+            }
+        }
+    }
+}
+
+/* Users Marketing Area Style
+============================================*/
+.users-marketing-single-item {
+    border-radius: 15px;
+    background: linear-gradient(0deg, #FFF8F1 0%, #F7F9FF 100%);
+    padding: 50px 47px;
+    height: 450px;
+    .icon {
+        margin-bottom: 75px; 
+        position: relative;
+        z-index: 1;
+        padding-left: 22px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 55px;
+            height: 55px;
+            background-color: $danger-100;
+            border-radius: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            z-index: -1;
+        }
+    } 
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 135%;
+        writing-mode: sideways-lr;
+        margin: 0 13px;
+        transition: $transition;
+        height: 211px;
+    } 
+    p {
+        max-width: 291px;
+        margin-top: 30px;
+        opacity: 0;
+        transition: $transition;
+    }
+    .users-marketing-content {
+        position: relative;
+        left: 19px;
+        transition: $transition;
+    }
+    &:hover {
+        .users-marketing-content {
+            left: 0;
+        }
+        .icon {
+            margin-bottom: 145px;
+        }
+        h3 {
+            writing-mode: unset;
+            margin: 0;
+            height: 100%;
+        }
+        p {
+            opacity: 1;
+        }
+    }
+}
+.hover-accordion-wrap {
+    overflow: hidden;
+    display: flex;
+    gap: 24px;
+    .col-lg-25 {
+        transition: $transition;
+        width: 25%;
+        display: table-cell;
+    }
+    &:hover {
+        .col-lg-25 {
+            width: 20%;
+            &:hover {
+                width: 40%;
+            }
+        }
+    }
+}
+
+/* FAQ Area Style
+============================================*/
+.faq-wrapper-marketing {
+    max-width: 850px;
+    margin: auto;
+    &.accordion {
+        .accordion-item {
+            border-radius: 25px;
+            background: linear-gradient(180deg, rgba(255, 239, 225, 0.5) 0%, #FFFFFF 100%);
+            border: 1px solid #ffe8d4 !important;
+            padding: 0;
+            .accordion-header {
+                .accordion-button {
+                    border-radius: 7px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background-color: transparent !important;
+                    padding: 30px;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &::after {
+                        background-image: url(../images/icons/down.svg);
+                    }
+                    &:not(.collapsed) {
+                        box-shadow: none;
+                        &::after {
+                            background-image: url(../images/icons/down.svg);
+                        }
+                    }
+                }
+            }
+            .accordion-body {
+                padding: 30px;
+                padding-top: 1px;
+            }
+        }
+    }
+}
+
+/* Footer Area Style
+============================================*/
+.footer-single-item-marketing {
+    .logo {
+        margin-bottom: 30px;
+        display: inline-block;
+        margin-bottom: 23px;
+    }
+    .social-link {
+        margin-top: 35px;
+        li {
+            a {
+                text-decoration: none;
+                color: $primary;
+                i {
+                    font-size: 20px;
+                }
+                &:hover {
+                    color: $primary-div;
+                }
+            }
+        }
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+    .import-link {
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+    }
+    .info-link {
+        li {
+            margin-bottom: 10px;
+            span {
+                font-size: 16px;
+            }
+            a {
+                font-size: 16px;
+                color: $primary;
+                text-decoration: none;
+            }
+            p {
+                font-weight: 600;
+                font-size: 16px;
+                span {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &.pl-130 {
+        padding-left: 130px;
+    }
+    &.pl-80 {
+        padding-left: 80px;
+    }
+    .dec {
+        margin-right: -40px;
+    }
+}
+.copyright-area-marketing {
+    padding: 25px 0;
+}
+.terms-info {
+    line-height: 1;
+    gap: 30px;
+    li {
+        position: relative;
+        a {
+            text-decoration: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -15px;
+            width: 1px;
+            height: 100%;
+            background-color: $border-color;
+        }
+        &:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+
+    .banner-content-marketing {
+        .title {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .banner-btn {
+            margin-top: 25px;
+        }
+    }
+    .banner-img-marketing {
+        .flying-laptop {
+            position: unset;
+            margin-top: 25px;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+    .perspective-grid {
+        top: 70px;
+    }
+    .banner-area-marketing {
+        padding-top: 145px;
+        padding-bottom: 70px;
+    }
+    .customers-info {
+        padding: 30px;
+    }
+    .growing-info {
+        padding: 30px;
+        span {
+            font-size: 14px;
+        }
+    }
+    .about-us-content-marketing {
+        h2 {
+            font-size: 24px;
+        }
+        .marketing-counter-single-item {
+            h1 {
+                font-size: 22px;
+            }
+            span {
+                font-size: 13px;
+            }
+        }
+        .dec2 {
+            font-size: 13px;
+            margin-top: 25px;
+        }
+    }
+    .about-us-marketing-img {
+        max-width: 100%;
+    }
+    .why-trezo-marketing-single-item {
+        padding: 25px;
+        .icon {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .team-workspace {
+            max-width: 150px;
+        }
+    }
+    .testimonials-single-item-marketing {
+        padding: 25px;
+        .mb-25 {
+            margin-bottom: 25px;
+        }
+        .mt-50 {
+            margin-top: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .dashboard-showcase-marketing-content {
+        h2 {
+            font-size: 24px;
+        }
+        .dec2 {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        .dashboard-showcase-wrap {
+            margin: 20px 0;
+            .info-list {
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .dashboard-showcase-marketing-img {
+        max-width: 100%;
+    }
+    .pricing-plans-marketing-single-item {
+        padding: 30px !important;
+        h1 {
+            font-size: 28px;
+        }
+        .trial {
+            font-size: 15px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .pricing-content {
+            ul {
+                li {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-marketing-single-item {
+        .blog-marketing-content {
+            padding: 15px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+    .users-marketing-single-item {
+        padding: 25px;
+        height: auto;
+        .users-marketing-content {
+            left: 0;
+            max-width: 100%;
+        }
+        .icon {
+            margin-bottom: 20px !important;
+        }
+        h3 {
+            font-size: 20px;
+            writing-mode: unset;
+            height: auto;
+            margin: 0;
+        }
+        p {
+            opacity: 1;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+    .hover-accordion-wrap {
+        flex-wrap: wrap;
+        .col-lg-25 {
+            width: 100% !important;
+        }
+    }
+    .faq-wrapper-marketing {
+        &.accordion {
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button {
+                        padding: 20px;
+                        font-size: 16px;
+                    }
+                }
+                .accordion-body {
+                    padding: 20px;
+                    padding-top: 1px;
+                }
+            }
+        }
+    }
+
+    .footer-single-item-marketing {
+        &.pl-80 {
+            padding-left: 0;
+        }
+        &.pl-130 {
+            padding-left: 0;
+        }
+        .dec {
+            margin-right: 0;
+        }
+        h3 {
+            margin-bottom: 15px;
+        }
+        .import-link {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .info-link {
+            li {
+                a {
+                    font-size: 14px;
+                }
+                span {
+                    font-size: 14px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .terms-info {
+        gap: 10px;
+        li {
+            &::before {
+                right: -6px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .why-trezo-marketing-single-item {
+        .why-trezo-marketing-content {
+            max-width: 100%;
+        }
+        .team-workspace {
+            max-width: 100%;
+            position: unset !important;
+            transform: unset !important;
+            margin-top: 25px;
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 992px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .banner-content-marketing {
+        .title {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .banner-btn {
+            margin-top: 25px;
+        }
+    }
+    .banner-img-marketing {
+        .flying-laptop {
+            top: 0;
+            left: 0;
+        }
+    }
+    .perspective-grid {
+        top: 70px;
+    }
+    .banner-area-marketing {
+        padding-top: 145px;
+        padding-bottom: 70px;
+    }
+    .customers-info {
+        padding: 55px 30px;
+    }
+    .growing-info {
+        padding: 55px 30px;
+        span {
+            font-size: 14px;
+        }
+    }
+    .about-us-content-marketing {
+        h2 {
+            font-size: 32px;
+        }
+        .marketing-counter-single-item {
+            h1 {
+                font-size: 28px;
+            }
+        }
+        .dec2 {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    }
+    .about-us-marketing-img {
+        max-width: 100%;
+    }
+    .why-trezo-marketing-single-item {
+        padding: 30px;
+        .icon {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+    .testimonials-single-item-marketing {
+        padding: 30px;
+        .mt-50 {
+            margin-top: 30px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .dashboard-showcase-marketing-content {
+        h2 {
+            font-size: 32px;
+        }
+        .dec2 {
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        .dashboard-showcase-wrap {
+            .info-list {
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .dashboard-showcase-marketing-img {
+        max-width: 100%;
+    }
+    .pricing-plans-marketing-single-item {
+        padding: 30px !important;
+        h1 {
+            font-size: 32px;
+        }
+        .trial {
+            font-size: 16px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .pricing-content {
+            ul {
+                li {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-marketing-single-item {
+        .blog-marketing-content {
+            padding: 15px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+    }
+    .users-marketing-single-item {
+        padding: 25px;
+        height: auto;
+        .users-marketing-content {
+            left: 0;
+            max-width: 100%;
+        }
+        .icon {
+            margin-bottom: 20px !important;
+        }
+        h3 {
+            font-size: 20px;
+            writing-mode: unset;
+            height: auto;
+            margin: 0;
+        }
+        p {
+            opacity: 1;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+    .hover-accordion-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        .col-lg-25 {
+            width: 48% !important;
+        }
+    }
+    .faq-wrapper-marketing {
+        &.accordion {
+            .accordion-item {
+                .accordion-header {
+                    .accordion-button {
+                        padding: 20px;
+                        font-size: 16px;
+                    }
+                }
+                .accordion-body {
+                    padding: 20px;
+                    padding-top: 1px;
+                }
+            }
+        }
+    }
+    .footer-single-item-marketing {
+        &.pl-80 {
+            padding-left: 0;
+        }
+        &.pl-130 {
+            padding-left: 0;
+        }
+        .dec {
+            margin-right: 0;
+        }
+        .import-link {
+            li {
+                a {
+                    font-size: 15px;
+                }
+            }
+        }
+        .info-link {
+            li {
+                a {
+                    font-size: 15px;
+                }
+                span {
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .banner-content-marketing {
+        h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+        .banner-btn {
+            margin-top: 30px;
+        }
+    }
+    .banner-img-marketing {
+        .flying-laptop {
+            top: 0;
+            left: -89px;
+        }
+    }
+    .about-us-content-marketing {
+        h2 {
+            font-size: 35px;
+        }
+        .marketing-counter-single-item {
+            h1 {
+                font-size: 30px;
+            }
+        }
+        .dec2 {
+            font-size: 14px;
+        }
+    }
+    .why-trezo-marketing-single-item {
+        padding: 30px;
+        .icon {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .team-workspace {
+            max-width: 150px;
+        }
+    }
+    .testimonials-single-item-marketing {
+        padding: 30px;
+        .mt-50 {
+            margin-top: 30px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .dashboard-showcase-marketing-content {
+        h2 {
+            font-size: 34px;
+        }
+    }
+    .pricing-plans-marketing-single-item {
+        padding: 30px;
+        &.active {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        h1 {
+            font-size: 35px;
+        }
+        .trial {
+            font-size: 16px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .pricing-content {
+            ul {
+                li {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .blog-marketing-single-item {
+        .blog-marketing-content {
+            padding: 15px;
+        }
+        h3 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+    }
+    .users-marketing-single-item {
+        padding: 35px;
+        height: auto;
+        .users-marketing-content {
+            left: 0;
+        }
+        .icon {
+            margin-bottom: 20px !important;
+        }
+        h3 {
+            font-size: 22px;
+            writing-mode: unset;
+            height: auto;
+            margin: 0;
+        }
+        p {
+            opacity: 1;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    }
+    .hover-accordion-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        .col-lg-25 {
+            width: 48% !important;
+        }
+    }
+    .footer-single-item-marketing {
+        &.pl-80 {
+            padding-left: 0;
+        }
+        &.pl-130 {
+            padding-left: 50px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .banner-content-marketing {
+        h2 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+        .banner-btn {
+            margin-top: 30px;
+        }
+    }
+    .banner-img-marketing {
+        .flying-laptop {
+            top: 0;
+            left: -89px;
+        }
+    }
+    .why-trezo-marketing-single-item {
+        padding: 35px;
+        .team-workspace {
+            max-width: 200px;
+        }
+    }
+    .testimonials-single-item-marketing {
+        padding: 30px;
+        .mt-50 {
+            margin-top: 30px;
+        }
+    }
+    .pricing-plans-marketing-single-item {
+       padding: 50px 40px;
+    }
+    .users-marketing-single-item {
+        .users-marketing-content {
+            left: 6px;
+        }
+        &:hover {
+            .icon {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .footer-single-item-marketing {
+        &.pl-80 {
+            padding-left: 50px;
+        }
+        &.pl-130 {
+            padding-left: 105px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .banner-img-marketing {
+        padding-left: 85px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    .ptb-140 {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+}
+
+/* RTL Area Style
+============================================*/
+.rtl {
+    .banner-img-marketing {
+        .flying-laptop {
+            left: auto;
+            right: -111px;
+        }
+        img {
+            transform: scaleX(-1);
+        }
+    }
+    @media only screen and (min-width: 992px) {
+
+        .banner-img-marketing {
+            padding-left: 0;
+            padding-right: 85px;
+        }
+    
+    }
+    .customers-info {
+        ul {
+            li {
+                margin-right: 0;
+                margin-left: -14px;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .partners-slide2 {
+        direction: ltr;
+    }
+    .about-us-content-marketing {
+        .marketing-counter-single-item {
+            border-right: 1px solid $danger-50;
+            border-left: none;
+            padding-right: 20px;
+            padding-left: 0;
+        }
+    }
+    .why-trezo-marketing-single-item {
+        .icon {
+            padding-left: 0;
+            padding-right: 22px;
+            &::before {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .users-marketing-single-item {
+        .icon {
+            &::before {
+                left: auto;
+                right: 0;
+            }
+        }
+        .users-marketing-content {
+            left: auto;
+            right: 30px;
+        }
+    }
+}
+
+/* Dark Mode Area Style
+============================================*/ 
+[data-theme=dark] {
+    .banner-area-marketing {
+        background: transparent !important;
+    }
+    .banner-content-marketing {
+        .title {
+            &.bg-card-text-c {
+                background-color: #0a0e19 !important;
+            }
+        }
+        h2 {
+            color: $white;
+        }
+    }
+    .customers-info {
+        background: $dark-card-bg;
+        span {
+            color: $white;
+        }
+        ul {
+            li {
+                img {
+                    border-color: $dark-border;
+                }
+            }
+        }
+    }
+    .growing-info {
+        background: $dark-card-bg;
+        span {
+            color: $white;
+        }
+    }
+    .why-trezo-marketing-area {
+        background-image: unset !important;
+    }
+    .why-trezo-marketing-single-item {
+        .icon {
+            &::before {
+                background-color: $dark-border;
+            }
+        }
+    }
+    .testimonials-marketing-area {
+        background-image: unset !important;
+    }
+    .testimonials-single-item-marketing {
+        background: $dark-card-bg !important;
+    }
+    .dashboard-showcase-marketing-content {
+        .dashboard-showcase-wrap {
+            .info-list {
+                span {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .pricing-plans-marketing-single-item {
+        background: $dark-card-bg !important;
+        h1 {
+            color: $white;
+        }
+        .pricing-content {
+            ul {
+                li {
+                    img {
+                        filter: brightness(100);
+                    }
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &.bg-white {
+            background: $dark-card-bg !important;
+        }
+    }
+    .users-marketing-single-item {
+        background: $dark-card-bg !important;
+        .icon {
+            &::before {
+                background-color: $dark-border;
+            }
+        }
+    }
+    .faq-wrapper-marketing.accordion .accordion-item {
+        background: $dark-card-bg !important;
+        border-color: $dark-border !important;
+    }
+    .pricing-plans-marketing-area {
+        background: transparent !important;
+    }
+    .blog-marketing-area {
+        background: transparent !important;
+    }
+    .footer-area-marketing {
+        background: #0a0e19 !important;
+    }
+}

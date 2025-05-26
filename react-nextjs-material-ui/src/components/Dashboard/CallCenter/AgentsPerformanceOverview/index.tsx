@@ -149,7 +149,7 @@ const AgentsPerformanceOverview: React.FC = () => {
             </Typography>
 
             <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-              <Grid item xs={12} sm={12} md={5}>
+              <Grid size={{ xs: 12, sm: 12, md: 5 }}>
                 <Box
                   sx={{ display: "flex", alignItems: "center", gap: "10px" }}
                 >
@@ -196,7 +196,7 @@ const AgentsPerformanceOverview: React.FC = () => {
                 </Box>
               </Grid>
 
-              <Grid item xs={12} sm={12} md={7}>
+              <Grid size={{ xs: 12, sm: 12, md: 7 }}>
                 <Box sx={{ mt: { xs: "10px", md: "0" } }}>
                   <Box
                     sx={{

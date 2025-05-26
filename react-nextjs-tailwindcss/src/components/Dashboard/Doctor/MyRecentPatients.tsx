@@ -153,7 +153,7 @@ const MyRecentPatients: React.FC = () => {
     <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0">My Recent Patients</h5>
+          <h5 className="!mb-0">My Recent Patients</h5>
         </div>
 
         <div className="trezo-card-subtitle">
@@ -318,7 +318,7 @@ const MyRecentPatients: React.FC = () => {
 
         {/* Pagination */}
         <div className="pt-[9px] sm:flex sm:items-center justify-between">
-          <p className="mb-0 text-xs">
+          <p className="!mb-0 !text-xs">
             Showing {indexOfFirstPatient + 1} to{" "}
             {Math.min(indexOfLastPatient, allPatients.length)} of{" "}
             {allPatients.length} results

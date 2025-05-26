@@ -152,8 +152,8 @@ const LeadsBySource = () => {
           )}
         </Box>
 
-        <Grid container spacing={3} sx={{ mt: "0" }}>
-          <Grid item xs={4}>
+        <Grid container spacing={3} sx={{ mt: "20px" }}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -190,7 +190,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -227,7 +227,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -264,7 +264,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -301,7 +301,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"
@@ -338,7 +338,7 @@ const LeadsBySource = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid size={{ xs: 4 }}>
             <Box>
               <Typography
                 component="span"

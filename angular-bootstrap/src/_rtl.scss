@@ -24,6 +24,12 @@
                         left: -2px;
                         right: 0;
                     };
+                    &.style-two {
+                        margin: {
+                            right: 0;
+                            left: -7px;
+                        };
+                    }
                 }
                 .menu-btn {
                     span {

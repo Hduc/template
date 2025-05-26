@@ -146,14 +146,14 @@ const DeviceSessions = () => {
         alignItems="center"
       >
         {/* Chart */}
-        <Grid item xs={12} md={5}>
+        <Grid size={{ xs: 12, md: 5 }}>
           {isChartLoaded && (
             <Chart options={options} series={series} type="pie" height={400} />
           )}
         </Grid>
 
         {/* Details */}
-        <Grid item xs={12} md={7}>
+        <Grid size={{ xs: 12, md: 7 }}>
           <Box className={styles.content}>
             {deviceData.map((device) => (
               <Box

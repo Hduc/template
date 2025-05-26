@@ -11,6 +11,66 @@ import {
 } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
+interface Transaction {
+  icon: string;
+  name: string;
+  date: string;
+  amount: string;
+  colorVariant: string; // e.g., "primary", "error", "purple", "secondary", "success"
+}
+
+const transactions: Transaction[] = [
+  {
+    icon: "credit_card",
+    name: "Master Card",
+    date: "16 Jun 2024 - 7:12 pm",
+    amount: "+1,520",
+    colorVariant: "primary",
+  },
+  {
+    icon: "redeem",
+    name: "Paypal",
+    date: "15 Jun 2024 - 1:42 am",
+    amount: "-2,250",
+    colorVariant: "error",
+  },
+  {
+    icon: "account_balance",
+    name: "Wise",
+    date: "14 Jun 2024 - 4:21 pm",
+    amount: "+3,560",
+    colorVariant: "purple",
+  },
+  {
+    icon: "currency_ruble",
+    name: "Payoneer",
+    date: "13 Jun 2024 - 2:42 am",
+    amount: "+6,500",
+    colorVariant: "secondary",
+  },
+  {
+    icon: "credit_score",
+    name: "Credit Card",
+    date: "12 Jun 2024 - 3:20 pm",
+    amount: "-4,320",
+    colorVariant: "success",
+  },
+  {
+    icon: "account_balance",
+    name: "Wise",
+    date: "14 Jun 2024 - 4:21 pm",
+    amount: "+3,560",
+    colorVariant: "purple",
+  },
+  {
+    icon: "redeem",
+    name: "Paypal",
+    date: "15 Jun 2024 - 1:42 am",
+    amount: "-2,250",
+    colorVariant: "error",
+  },
+];
+
 const TransactionHistory: React.FC = () => {
   // Dropdown
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -96,401 +156,73 @@ const TransactionHistory: React.FC = () => {
         </Box>
 
         <Box>
-          {/* Master Card */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
+          {transactions.slice(0, 7).map((transaction, index) => (
             <Box
+              key={index}
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: "12px",
+                justifyContent: "space-between",
+                marginTop: "26px",
               }}
             >
               <Box
-                className="text-primary"
-                sx={{
-                  bgcolor: 'primary.100',
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
-              >
-                <i className="material-symbols-outlined">credit_card</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Master Card
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  16 Jun 2024 - 7:12 pm
-                </Typography>
-              </Box>
-            </Box>
-
-            <Typography component="span" className="text-success">
-              +1,520
-            </Typography>
-          </Box>
-
-          {/* Paypal */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="text-danger"
-                sx={{
-                  bgcolor: 'error.100',
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
-              >
-                <i className="material-symbols-outlined">redeem</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Paypal
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  15 Jun 2024 - 1:42 am
-                </Typography>
-              </Box>
-            </Box>
-
-            <Typography component="span" className="text-danger">
-              -2,250
-            </Typography>
-          </Box>
-
-          {/* Wise */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="text-purple bg-purple-100"
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
+                  gap: "12px",
                 }}
               >
-                <i className="material-symbols-outlined">account_balance</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
+                <Box
                   sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
+                    bgcolor: `${transaction.colorVariant}.100`,
+                    color: `${transaction.colorVariant}.main`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRadius: "100px",
+                    width: "41px",
+                    height: "41px",
                   }}
                 >
-                  Wise
-                </Typography>
+                  <i className="material-symbols-outlined">
+                    {transaction.icon}
+                  </i>
+                </Box>
 
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  14 Jun 2024 - 4:21 pm
-                </Typography>
+                <Box>
+                  <Typography
+                    className="text-black"
+                    component="div"
+                    sx={{
+                      fontWeight: "500",
+                      fontSize: "16px",
+                    }}
+                  >
+                    {transaction.name}
+                  </Typography>
+
+                  <Typography
+                    component="span"
+                    sx={{ fontSize: "13px", display: "block" }}
+                  >
+                    {transaction.date}
+                  </Typography>
+                </Box>
               </Box>
-            </Box>
 
-            <Typography component="span" className="text-success">
-              +3,560
-            </Typography>
-          </Box>
-
-          {/* Payoneer */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="bg-secondary-100 text-secondary"
-                sx={{ 
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
+              <Typography
+                component="span"
+                className={
+                  transaction.amount.startsWith("+")
+                    ? "text-success"
+                    : "text-danger"
+                }
               >
-                <i className="material-symbols-outlined">currency_ruble</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Payoneer
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  13 Jun 2024 - 2:42 am
-                </Typography>
-              </Box>
+                {transaction.amount}
+              </Typography>
             </Box>
-
-            <Typography component="span" className="text-success">
-              +6,500
-            </Typography>
-          </Box>
-
-          {/* Credit Card */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="text-success"
-                sx={{
-                  bgcolor: 'success.100',
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
-              >
-                <i className="material-symbols-outlined">credit_score</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Credit Card
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  12 Jun 2024 - 3:20 pm
-                </Typography>
-              </Box>
-            </Box>
-
-            <Typography component="span" className="text-danger">
-              -4,320
-            </Typography>
-          </Box>
-
-          {/* Wise */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="text-purple bg-purple-100"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
-              >
-                <i className="material-symbols-outlined">account_balance</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Wise
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  14 Jun 2024 - 4:21 pm
-                </Typography>
-              </Box>
-            </Box>
-
-            <Typography component="span" className="text-success">
-              +3,560
-            </Typography>
-          </Box>
-          
-          {/* Paypal */}
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: "26px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <Box
-                className="text-danger"
-                sx={{
-                  bgcolor: 'error.100',
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: "100px",
-                  width: "41px",
-                  height: "41px",
-                }}
-              >
-                <i className="material-symbols-outlined">redeem</i>
-              </Box>
-
-              <Box>
-                <Typography
-                  className="text-black"
-                  component="div"
-                  sx={{
-                    fontWeight: "500",
-                    fontSize: "16px",
-                  }}
-                >
-                  Paypal
-                </Typography>
-
-                <Typography
-                  component="span"
-                  sx={{ fontSize: "13px", display: "block" }}
-                >
-                  15 Jun 2024 - 1:42 am
-                </Typography>
-              </Box>
-            </Box>
-
-            <Typography component="span" className="text-danger">
-              -2,250
-            </Typography>
-          </Box>
+          ))}
         </Box>
       </Card>
     </>

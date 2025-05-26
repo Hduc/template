@@ -363,7 +363,7 @@ const MarketPriceStatistics: React.FC = () => {
       <div className="trezo-card border border-gray-100 dark:border-[#172036] mb-[25px] pt-[15px] pb-[20px] md:pb-[25px] px-[20px] md:px-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between border-b border-gray-100 dark:border-[#172036] px-[20px] md:px-[25px] pb-[15px] -mx-[20px] md:-mx-[25px]">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Market Price Statistics</h5>
+            <h5 className="!mb-0">Market Price Statistics</h5>
           </div>
           <div className="trezo-card-subtitle sm:flex items-center gap-[25px]">
             <div className="my-[15px] sm:my-0">
@@ -461,7 +461,7 @@ const MarketPriceStatistics: React.FC = () => {
                     (BTC)
                   </span>
                 </span>
-                <h4 className="mb-0 mt-[6px] text-[18px] md:text-[20px] font-semibold">
+                <h4 className="!mb-0 !mt-[6px] !text-[18px] md:!text-[20px] !font-semibold">
                   $27,500
                   <span className="relative font-medium text-base text-success-700 -top-px ltr:ml-[2px] rtl:mr-[2px] ltr:pl-[24px] rtl:pr-[24px]">
                     <i className="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-[20px] top-1/2 -translate-y-1/2">

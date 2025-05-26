@@ -38,7 +38,7 @@ const Photos = () => {
 
         <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}>
           {photoData.map((photo, index) => (
-            <Grid item xs={4} md={4} lg={4} xl={4} key={index}>
+            <Grid size={{ xs: 4, sm: 4, md: 4, lg: 4, xl: 4 }} key={index}>
               <a href={photo.link} target="_blank" rel="noreferrer">
                 <img
                   src={photo.src}

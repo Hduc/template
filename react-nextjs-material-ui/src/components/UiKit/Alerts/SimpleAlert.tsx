@@ -31,7 +31,7 @@ const SimpleAlert: React.FC = () => {
         <Alert
           icon={<CheckIcon fontSize="inherit" />}
           severity="success"
-          sx={{ fontSize: "14px" }}
+          sx={{ fontSize: "14px", color: "success.main" }}
         >
           Here is a gentle confirmation that your action was successful.
         </Alert>

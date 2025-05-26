@@ -100,7 +100,7 @@ const TasksOverview: React.FC = () => {
               options={options}
               series={series}
               type="pie"
-              height={376}
+              height={388}
               width={"100%"}
             />
           )}

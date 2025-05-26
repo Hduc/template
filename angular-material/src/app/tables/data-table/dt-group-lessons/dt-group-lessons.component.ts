@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
@@ -50,7 +50,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Digital Marketing',
-            date: '15 March 2024'
+            date: '15 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -68,7 +68,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Web Development',
-            date: '10 March 2024'
+            date: '10 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -86,7 +86,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'UX/UI Design',
-            date: '05 March 2024'
+            date: '05 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -104,7 +104,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Content Writer',
-            date: '02 March 2024'
+            date: '02 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -122,7 +122,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Content Writer',
-            date: '02 March 2024'
+            date: '02 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -140,7 +140,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'UX/UI Design',
-            date: '05 March 2024'
+            date: '05 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -158,7 +158,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Web Development',
-            date: '10 March 2024'
+            date: '10 March 2025'
         },
         link: 'arrow_outward'
     },
@@ -176,7 +176,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
                 }
             ],
             name: 'Digital Marketing',
-            date: '15 March 2024'
+            date: '15 March 2025'
         },
         link: 'arrow_outward'
     }

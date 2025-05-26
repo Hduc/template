@@ -1,0 +1,153 @@
+<mat-card
+    class="my-recent-patients-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                My Recent Patients
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="card-header-menu bg-gray border-none d-inline-block border-radius">
+                This Week
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                    <li>
+                        <button mat-menu-item>
+                            This Day
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Week
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Month
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Year
+                        </button>
+                    </li>
+                </ul>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-five">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>
+                            ID
+                        </th>
+                        <td class="fw-semibold text-body" mat-cell *matCellDef="let element">
+                            {{element.id}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Patient Name Column -->
+                    <ng-container matColumnDef="patientName">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Patient Name
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="employee-info d-flex align-items-center">
+                                <div class="img rounded-circle">
+                                    <img [src]="element.patientName.img" class="rounded-circle" alt="user-image">
+                                </div>
+                                <div>
+                                    <span class="d-block text-black fw-semibold">
+                                        {{element.patientName.name}}
+                                    </span>
+                                    <span class="d-block text-body">
+                                        {{element.patientName.email}}
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Disease Column -->
+                    <ng-container matColumnDef="disease">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Disease
+                        </th>
+                        <td class="fw-semibold text-body" mat-cell *matCellDef="let element">
+                            {{element.disease}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Payment Status Column -->
+                    <ng-container matColumnDef="paymentStatus">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Payment Status
+                        </th>
+                        <td class="fw-semibold text-body" mat-cell *matCellDef="let element">
+                            {{element.paymentStatus}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Status
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class="trezo-badge inProgress" *ngIf="element.status.completed">
+                                Completed
+                            </span>
+                            <span class="trezo-badge pPending" *ngIf="element.status.pending">
+                                Pending
+                            </span>
+                            <span class="trezo-badge rejected" *ngIf="element.status.failed">
+                                Failed
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="dot-menu p-0 d-inline-block border-radius-0">
+                                <i class="{{element.action}}"></i>
+                            </button>
+                            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                                    <li>
+                                        <button mat-menu-item>
+                                            View
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item>
+                                            Edit
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item>
+                                            Delete
+                                        </button>
+                                    </li>
+                                </ul>
+                            </mat-menu>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

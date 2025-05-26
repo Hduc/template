@@ -8,11 +8,11 @@ const AboutMe: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] pb-[20px] md:pb-[25px] flex items-center justify-between border-b border-gray-100 dark:border-[#172036]">
           <div className="trezo-card-title">
-            <h5 className="mb-0">About Me</h5>
+            <h5 className="!mb-0">About Me</h5>
           </div>
         </div>
         <div className="trezo-card-content">
-          <h6 className="text-md mb-[11px] [&:not(:first-child)]:mt-[20px] md:[&:not(:first-child)]:mt-[25px]">
+          <h6 className="!text-md !mb-[11px] [&:not(:first-child)]:!mt-[20px] md:[&:not(:first-child)]:!mt-[25px]">
             Introduction
           </h6>
           <p>
@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
             to becoming a recognized name in the realm of user experience and
             interface design.
           </p>
-          <h6 className="text-md mb-[11px] [&:not(:first-child)]:mt-[20px] md:[&:not(:first-child)]:mt-[25px]">
+          <h6 className="!text-md !mb-[11px] [&:not(:first-child)]:!mt-[20px] md:[&:not(:first-child)]:!mt-[25px]">
             Professional Beginnings
           </h6>
           <p>
@@ -37,7 +37,7 @@ const AboutMe: React.FC = () => {
             complexities of design processes and solidified Alice commitment
             to enhancing user experiences.
           </p>
-          <h6 className="text-md mb-[11px] [&:not(:first-child)]:mt-[20px] md:[&:not(:first-child)]:mt-[25px]">
+          <h6 className="!text-md !mb-[11px] [&:not(:first-child)]:!mt-[20px] md:[&:not(:first-child)]:!mt-[25px]">
             Expertise in UX/UI Design
           </h6>
           <p>

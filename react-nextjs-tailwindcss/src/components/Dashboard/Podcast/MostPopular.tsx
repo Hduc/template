@@ -379,7 +379,7 @@ const MostPopular: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[23px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Most Popular</h5>
+            <h5 className="!mb-0 !font-semibold">Most Popular</h5>
           </div>
           <div className="trezo-card-subtitle">
             <Link
@@ -435,7 +435,7 @@ const MostPopular: React.FC = () => {
                   </div>
 
                   <div className="mt-[16px]">
-                    <h4 className="font-medium text-base mb-[11px]">
+                    <h4 className="!font-medium !text-base !mb-[11px]">
                       <Link
                         href="#"
                         target="_blank"

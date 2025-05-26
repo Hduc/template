@@ -51,7 +51,7 @@
                                 Joined Since
                             </span>
                             <span class="d-block text-black fw-semibold">
-                                23 June 2024
+                                23 June 2025
                             </span>
                         </div>
                     </div>
@@ -126,64 +126,66 @@
                     </li>
                 </ul>
                 <div class="table-responsive">
-                    <table mat-table [dataSource]="filteredData">
-                
-                        <!-- Item Column -->
-                        <ng-container matColumnDef="item">
-                            <!-- <th mat-header-cell *matHeaderCellDef>
-                                Item
-                            </th> -->
-                            <td mat-cell *matCellDef="let element">
-                                <div class="employee-info d-flex align-items-center">
-                                    <div class="img border-radius">
-                                        <img [src]="element.item.img" class="border-radius" alt="user-image">
+                    <div class="table-style-five">
+                        <table mat-table [dataSource]="filteredData">
+                    
+                            <!-- Item Column -->
+                            <ng-container matColumnDef="item">
+                                <!-- <th mat-header-cell *matHeaderCellDef>
+                                    Item
+                                </th> -->
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="employee-info d-flex align-items-center">
+                                        <div class="img border-radius">
+                                            <img [src]="element.item.img" class="border-radius" alt="user-image">
+                                        </div>
+                                        <div>
+                                            <span class="d-block text-black fw-semibold">
+                                                {{element.item.name}}
+                                            </span>
+                                            <span class="d-block text-body">
+                                                by {{element.item.author}}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <span class="d-block text-black fw-semibold">
-                                            {{element.item.name}}
-                                        </span>
-                                        <span class="d-block text-body">
-                                            by {{element.item.author}}
-                                        </span>
-                                    </div>
-                                </div>
-                            </td>
-                        </ng-container>
-        
-                        <!-- Open price Column -->
-                        <ng-container matColumnDef="openPrice">
-                            <!-- <th mat-header-cell *matHeaderCellDef>
-                                Open price
-                            </th> -->
-                            <td class="fw-semibold" mat-cell *matCellDef="let element">
-                                {{element.openPrice}}
-                            </td>
-                        </ng-container>
-        
-                        <!-- Your Offer Column -->
-                        <ng-container matColumnDef="yourOffer">
-                            <!-- <th mat-header-cell *matHeaderCellDef>
-                                Your Offer
-                            </th> -->
-                            <td class="fw-semibold" mat-cell *matCellDef="let element">
-                                {{element.yourOffer}}
-                            </td>
-                        </ng-container>
-        
-                        <!-- Time Left Column -->
-                        <ng-container matColumnDef="timeLeft">
-                            <!-- <th mat-header-cell *matHeaderCellDef>
-                                Time Left
-                            </th> -->
-                            <td class="fw-semibold" mat-cell *matCellDef="let element">
-                                {{element.timeLeft}}
-                            </td>
-                        </ng-container>
-        
-                        <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                        
-                    </table>
+                                </td>
+                            </ng-container>
+            
+                            <!-- Open price Column -->
+                            <ng-container matColumnDef="openPrice">
+                                <!-- <th mat-header-cell *matHeaderCellDef>
+                                    Open price
+                                </th> -->
+                                <td class="fw-semibold" mat-cell *matCellDef="let element">
+                                    {{element.openPrice}}
+                                </td>
+                            </ng-container>
+            
+                            <!-- Your Offer Column -->
+                            <ng-container matColumnDef="yourOffer">
+                                <!-- <th mat-header-cell *matHeaderCellDef>
+                                    Your Offer
+                                </th> -->
+                                <td class="fw-semibold" mat-cell *matCellDef="let element">
+                                    {{element.yourOffer}}
+                                </td>
+                            </ng-container>
+            
+                            <!-- Time Left Column -->
+                            <ng-container matColumnDef="timeLeft">
+                                <!-- <th mat-header-cell *matHeaderCellDef>
+                                    Time Left
+                                </th> -->
+                                <td class="fw-semibold" mat-cell *matCellDef="let element">
+                                    {{element.timeLeft}}
+                                </td>
+                            </ng-container>
+            
+                            <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            
+                        </table>
+                    </div>
                 </div>
             </mat-card-content>
         </mat-card>

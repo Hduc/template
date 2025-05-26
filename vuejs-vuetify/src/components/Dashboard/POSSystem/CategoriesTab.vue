@@ -81,7 +81,7 @@
       </v-row>
 
       <div
-        class="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap ga-2 showing-wrap custom-shadow for-dark-rounded-bg rounded-3 border bg-white px-4 mb-4 mt-4"
+        class="d-flex justify-content-center justify-content-between align-items-center text-center flex-wrap ga-2 showing-wrap custom-shadow for-dark-rounded-bg rounded-3 border bg-white px-4 mb-4 mt-4"
         style="padding-top: 11px; padding-bottom: 11px"
       >
         <span class="fs-12 fw-medium">Showing 9 of 30 Results</span>

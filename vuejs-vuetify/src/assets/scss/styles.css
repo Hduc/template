@@ -529,6 +529,549 @@ button {
   visibility: visible !important;
 }
 
+.settings-box {
+  width: 140px;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #f1f0f3;
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.settings-box span:nth-child(1) {
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 0 5px;
+}
+.settings-box span:nth-child(2) {
+  right: 0;
+  bottom: 0;
+  width: 96px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 5px 0;
+}
+.settings-box span:nth-child(3) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 5px 0 0 5px;
+}
+.settings-box span:nth-child(4) {
+  top: 14px;
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background: #d6d2df;
+}
+.settings-box span:nth-child(5) {
+  left: 7px;
+  top: 45px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-box span:nth-child(6) {
+  left: 7px;
+  top: 55px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-box span:nth-child(7) {
+  left: 7px;
+  top: 65px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-box span:nth-child(8) {
+  top: 35px;
+  left: 46px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box span:nth-child(9) {
+  top: 35px;
+  left: 78px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box span:nth-child(10) {
+  top: 35px;
+  left: 110px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box span:nth-child(11) {
+  top: 55px;
+  left: 46px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box span:nth-child(12) {
+  top: 55px;
+  left: 78px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box span:nth-child(13) {
+  top: 55px;
+  left: 110px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-box.for-rtl span:nth-child(1) {
+  left: 0;
+  right: auto;
+  border-radius: 5px 0;
+}
+.settings-box.for-rtl span:nth-child(2) {
+  left: 0;
+  right: auto;
+  border-radius: 0 5px;
+}
+.settings-box.for-rtl span:nth-child(3) {
+  right: 0;
+  left: auto;
+  border-radius: 0 5px 5px 0;
+}
+.settings-box.for-rtl span:nth-child(4) {
+  left: auto;
+  right: 7px;
+}
+.settings-box.for-rtl span:nth-child(5) {
+  left: auto;
+  right: 7px;
+}
+.settings-box.for-rtl span:nth-child(6) {
+  left: auto;
+  right: 7px;
+}
+.settings-box.for-rtl span:nth-child(7) {
+  left: auto;
+  right: 7px;
+}
+
+.settings-box-wrap .active-wrap2 .settings-box {
+  border-color: var(--primaryColor);
+}
+.settings-box-wrap .settings-btn {
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  opacity: 0;
+}
+.settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box span:nth-child(3) {
+  background: #333333;
+}
+.settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box span:nth-child(4) {
+  background: #848289;
+}
+.settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box span:nth-child(5) {
+  background: #848289;
+}
+.settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box span:nth-child(6) {
+  background: #848289;
+}
+.settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box span:nth-child(7) {
+  background: #848289;
+}
+.settings-box-wrap.for-header-dark .active-wrap1 .settings-box span:nth-child(1) {
+  background: #333333;
+}
+.settings-box-wrap.for-footer-dark .active-wrap1 .settings-box span:nth-child(2) {
+  background: #333333;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.rtl-enabled .settings-box-wrap {
+  direction: ltr !important;
+}
+.rtl-enabled .settings-box-wrap .switch-for-rtl .end-0 {
+  right: 0 !important;
+}
+.rtl-enabled .settings-box-wrap .switch-for-rtl .start-0 {
+  left: 0 !important;
+}
+.rtl-enabled .settings-box-wrap.for-rtl-mode .active-wrap2 .settings-box {
+  border-color: #f1f0f3;
+}
+.rtl-enabled .settings-box-wrap.for-rtl-mode .active-wrap1 .settings-box {
+  border-color: var(--primaryColor);
+}
+
+.with-navbar .settings-box-wrap.for-navbar-mode .active-wrap2 .settings-box {
+  border-color: #f1f0f3;
+}
+.with-navbar .settings-box-wrap.for-navbar-mode .active-wrap1 .settings-box {
+  border-color: var(--primaryColor);
+}
+
+.sidebar-dark .settings-box-wrap.for-sidebar-dark .active-wrap2 .settings-box {
+  border-color: #f1f0f3;
+}
+.sidebar-dark .settings-box-wrap.for-sidebar-dark .active-wrap1 .settings-box {
+  border-color: var(--primaryColor);
+}
+.sidebar-dark .sidebar-area.bg-white {
+  background-color: #0c1427 !important;
+}
+.sidebar-dark .sidebar-area .text-black {
+  color: var(--whiteColor) !important;
+}
+.sidebar-dark .sidebar-area .logo {
+  border-bottom: 1px solid var(--bodyColor);
+}
+.sidebar-dark .sidebar-area .logo.bg-white {
+  background-color: #0c1427 !important;
+}
+.sidebar-dark .sidebar-area .burger-menu span {
+  background: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .virtual-scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.sidebar-dark .sidebar-area .virtual-scroll::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+.sidebar-dark .sidebar-area .virtual-scroll::-webkit-scrollbar:horizontal {
+  height: 5px;
+}
+.sidebar-dark .sidebar-area .virtual-scroll::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.sidebar-dark .sidebar-area .virtual-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.sidebar-dark .sidebar-area .accordion .sidebar-menu-link {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .sidebar-menu-link.router-link-active, .sidebar-dark .sidebar-area .accordion .sidebar-menu-link:hover {
+  background-color: #15203c;
+  color: var(--primaryColor);
+}
+.sidebar-dark .sidebar-area .accordion .sidebar-menu-link.router-link-active::after, .sidebar-dark .sidebar-area .accordion .sidebar-menu-link:hover::after {
+  border-color: var(--primaryColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
+  background-color: #15203c;
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header .material-symbols-outlined,
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .title-header {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .title-header i.arrow-right {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .title-header:hover {
+  background-color: #15203c;
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .title-header:hover .material-symbols-outlined,
+.sidebar-dark .sidebar-area .accordion .accordion__item .title-header:hover i.arrow-right {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link {
+  color: #c5c5c5;
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active, .sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover {
+  background-color: #15203c;
+  color: var(--primaryColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active::after, .sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after {
+  border-color: var(--primaryColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
+  background-color: #15203c !important;
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header {
+  color: var(--whiteColor) !important;
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover {
+  background-color: #15203c;
+  color: var(--whiteColor);
+}
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover .material-symbols-outlined,
+.sidebar-dark .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover i.arrow-right {
+  color: var(--whiteColor);
+}
+
+.header-dark .text-black {
+  color: var(--whiteColor) !important;
+}
+.header-dark a {
+  color: var(--whiteColor);
+}
+.header-dark .settings-box-wrap.for-header-dark .active-wrap2 .settings-box {
+  border-color: #f1f0f3;
+}
+.header-dark .settings-box-wrap.for-header-dark .active-wrap1 .settings-box {
+  border-color: var(--primaryColor);
+}
+.header-dark .header-area.bg-white {
+  background-color: #0c1427 !important;
+}
+.header-dark .header-area .header-left-side .logo .logo-white {
+  display: block !important;
+}
+.header-dark .header-area .header-left-side .logo .logo-black {
+  display: none;
+}
+.header-dark .header-area .header-left-side .search-box .input-search {
+  background-color: #15203c !important;
+  color: var(--whiteColor) !important;
+  border-color: #15203c !important;
+}
+.header-dark .header-area .header-left-side .search-box .input-search::-moz-placeholder {
+  color: var(--bodyColor) !important;
+}
+.header-dark .header-area .header-left-side .search-box .input-search::placeholder {
+  color: var(--bodyColor) !important;
+}
+.header-dark .header-area .header-right-side li .profile-btn .text-black {
+  color: var(--whiteColor) !important;
+}
+.header-dark .header-area .navbar-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button:hover {
+  color: var(--whiteColor);
+  background-color: #15203c;
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button:hover i {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-button:hover::before {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button {
+  color: var(--whiteColor);
+  background-color: #15203c;
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button i {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button::before {
+  color: var(--whiteColor);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body {
+  background-color: #0c1427;
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover, .header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button.active {
+  background-color: #15203c;
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover, .header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active {
+  background-color: #15203c;
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.header-dark .menu-dropdown.v-list {
+  background: #0a0e19 !important;
+}
+.header-dark .menu-dropdown.v-list .menu-body ul li a {
+  color: var(--whiteColor) !important;
+}
+.header-dark .language-menu-dropdown.v-list {
+  background: #0a0e19 !important;
+}
+.header-dark .language-menu-dropdown.v-list ul li {
+  border-top: 1px dashed #172036;
+}
+.header-dark .language-menu-dropdown.v-list ul li button {
+  color: var(--whiteColor);
+}
+.header-dark .language-menu-dropdown.v-list ul li button:hover {
+  background-color: #172036;
+}
+.header-dark .notification-list.v-list {
+  background: #0a0e19 !important;
+}
+.header-dark .notification-list.v-list ul li {
+  border-top: 1px dashed #172036;
+  border-bottom: 1px dashed #172036;
+}
+.header-dark .notification-list.v-list ul li .time {
+  color: var(--whiteColor);
+}
+.header-dark .profile-menu-dropdown.v-list {
+  background: #0a0e19 !important;
+}
+.header-dark .profile-menu-dropdown.v-list .admin {
+  border-bottom: 1px solid #172036;
+}
+.header-dark .profile-menu-dropdown.v-list .admin span:last-child {
+  color: var(--bodyColor) !important;
+}
+.header-dark .profile-menu-dropdown.v-list .border-top {
+  border-top: 1px solid #172036 !important;
+}
+
+.header-area .navbar-area {
+  display: none;
+}
+.header-area .header-left-side .logo {
+  display: none;
+}
+
+.footer-dark .settings-box-wrap.for-footer-dark .active-wrap2 .settings-box {
+  border-color: #f1f0f3;
+}
+.footer-dark .settings-box-wrap.for-footer-dark .active-wrap1 .settings-box {
+  border-color: var(--primaryColor);
+}
+.footer-dark .footer-area.bg-white {
+  background-color: #0c1427 !important;
+  color: var(--whiteColor) !important;
+}
+.footer-dark .footer-area p {
+  color: var(--bodyColor);
+}
+
+/* Min width 992px */
+@media only screen and (min-width: 992px) {
+  body.with-navbar .header-area {
+    padding: 13px 25px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    top: 0;
+  }
+  body.with-navbar .header-area .header-inner-area {
+    max-width: 1295px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body.with-navbar .header-area .navbar-area {
+    display: block !important;
+  }
+  body.with-navbar .header-left-side .logo {
+    display: block !important;
+    margin-right: 15px;
+  }
+  body.with-navbar .header-left-side .logo .logo-white {
+    display: none;
+  }
+  body.with-navbar .header-left-side .burger-menu {
+    display: none;
+  }
+  body.with-navbar .sidebar-area {
+    display: none;
+  }
+  body.with-navbar .main-content {
+    max-width: 1345px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 165px;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  body.dark-theme .header-left-side .logo {
+    margin-right: 15px;
+  }
+  body.dark-theme .header-left-side .logo .logo-white {
+    display: block !important;
+  }
+  body.dark-theme .header-left-side .logo .logo-black {
+    display: none;
+  }
+}
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+  body.with-navbar .header-area .header-inner-area {
+    max-width: 1550px;
+  }
+  body.with-navbar .main-content {
+    max-width: 1595px;
+  }
+}
 .menu-content.v-list {
   width: 195px;
   height: auto !important;
@@ -564,6 +1107,15 @@ button {
 }
 .menu-content.v-list.dotMenu.two {
   width: 180px;
+}
+
+.v-list-item--density-default.v-list-item--one-line {
+  min-height: auto;
+}
+
+.v-list-item-title {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .v-card {
@@ -1011,7 +1563,8 @@ table {
   height: 0 !important;
 }
 
-.trezo-status-badge {
+.trezo-status-badge,
+.trezo-badge {
   background-color: #ecf0ff;
   color: var(--primaryColor);
   display: inline-block;
@@ -1020,25 +1573,47 @@ table {
   font-weight: 500;
   font-size: 12px;
 }
-.trezo-status-badge.pending {
+.trezo-status-badge.pending,
+.trezo-badge.pending {
   background-color: rgba(255, 193, 7, 0.1490196078);
   color: var(--warningColor);
 }
-.trezo-status-badge.rejected {
+.trezo-status-badge.rejected,
+.trezo-badge.rejected {
   background-color: #ffe1dd;
   color: var(--dangerColor);
 }
-.trezo-status-badge.inProgress, .trezo-status-badge.finished, .trezo-status-badge.shipped, .trezo-status-badge.pFinished {
+.trezo-status-badge.inProgress, .trezo-status-badge.finished, .trezo-status-badge.shipped, .trezo-status-badge.pFinished,
+.trezo-badge.inProgress,
+.trezo-badge.finished,
+.trezo-badge.shipped,
+.trezo-badge.pFinished {
   background-color: #d8ffc8;
   color: var(--successColor);
 }
-.trezo-status-badge.pInProgress, .trezo-status-badge.warning, .trezo-status-badge.deactive, .trezo-status-badge.cancelled {
+.trezo-status-badge.pInProgress, .trezo-status-badge.warning, .trezo-status-badge.deactive, .trezo-status-badge.cancelled,
+.trezo-badge.pInProgress,
+.trezo-badge.warning,
+.trezo-badge.deactive,
+.trezo-badge.cancelled {
   background-color: #ffe8d4;
   color: #ee3e08;
 }
-.trezo-status-badge.pPending {
+.trezo-status-badge.pPending,
+.trezo-badge.pPending {
   background-color: #f3e8ff;
   color: #7c24cc;
+}
+.trezo-status-badge.with-border,
+.trezo-badge.with-border {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 1px;
+  border-style: solid;
+}
+.trezo-status-badge.with-border.border-radius,
+.trezo-badge.with-border.border-radius {
+  border-radius: 30px !important;
 }
 
 .v-input__details {
@@ -1513,6 +2088,50 @@ Swiper Slider Style
 .swiper-pagination-mastering-digital-marketing .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--borderColor);
   width: 30px;
+}
+
+.swiper-pagination-popular-rooms.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: #d6d6d6;
+  opacity: 1;
+  border-radius: 10px;
+  height: 5px;
+}
+.swiper-pagination-popular-rooms.swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+  width: 25px;
+}
+
+.swiper-pagination-my-featured-listings.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: var(--whiteColor);
+  opacity: 1;
+  border-radius: 10px;
+  height: 5px;
+}
+.swiper-pagination-my-featured-listings.swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+  width: 25px;
+}
+
+.swiper-pagination-popular-rooms.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: #d6d6d6;
+  opacity: 1;
+  border-radius: 10px;
+  height: 5px;
+}
+.swiper-pagination-popular-rooms.swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+  width: 25px;
+}
+
+.swiper-pagination-client-ratings.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: #d6d6d6;
+  opacity: 1;
+  border-radius: 10px;
+  height: 5px;
+}
+.swiper-pagination-client-ratings.swiper-pagination-clickable .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--dangerColor);
+  width: 25px;
 }
 
 /* Sales By Locations Area Style
@@ -2148,6 +2767,32 @@ Swiper Slider Style
   opacity: initial !important;
 }
 
+.product-controller .controller-icon {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  font-size: 18px;
+  border-radius: 50px;
+  transition: var(--transition);
+  position: absolute;
+  cursor: pointer;
+  top: 38%;
+  left: -15px;
+  transform: translateY(-38%);
+  z-index: 2;
+}
+.product-controller .controller-icon.next {
+  left: auto;
+  right: -15px;
+}
+.product-controller .controller-icon:hover {
+  background-color: var(--secondaryColor);
+}
+
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
   .create-dialog-box .title {
@@ -2192,33 +2837,166 @@ Swiper Slider Style
     height: 140px;
   }
 }
-.basic-table table,
-.basic-table .table {
-  width: 100%;
-  border-spacing: 0;
+.table-style-two {
+  margin-left: -25px;
+  margin-right: -25px;
 }
+.table-style-two .basic-table .table thead tr,
+.table-style-two .basic-table table thead tr {
+  text-align: left;
+}
+.table-style-two .basic-table .table thead tr th,
+.table-style-two .basic-table table thead tr th {
+  background-color: #ecf0ff;
+}
+.table-style-two .basic-table .table thead tr th .form-check,
+.table-style-two .basic-table table thead tr th .form-check {
+  margin-top: -2px;
+}
+.table-style-two .basic-table .table thead tr th:first-child,
+.table-style-two .basic-table table thead tr th:first-child {
+  border-top-left-radius: 0;
+  padding-left: 25px;
+}
+.table-style-two .basic-table .table thead tr th:last-child,
+.table-style-two .basic-table table thead tr th:last-child {
+  border-top-right-radius: 0;
+  padding-right: 25px;
+}
+.table-style-two .basic-table .table tbody tr td:first-child,
+.table-style-two .basic-table table tbody tr td:first-child {
+  border-left-width: 0 !important;
+  padding-left: 25px;
+}
+.table-style-two .basic-table .table tbody tr td:last-child,
+.table-style-two .basic-table table tbody tr td:last-child {
+  padding-right: 25px;
+  border-right-width: 0 !important;
+}
+.table-style-two .basic-table .table tbody tr:first-child td,
+.table-style-two .basic-table table tbody tr:first-child td {
+  border-top-width: 0;
+}
+.table-style-two .trezo-card-pagination {
+  padding: 15px 25px 0 25px !important;
+}
+
+.table-style-three {
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.table-style-three .basic-table .table thead tr th,
+.table-style-three .basic-table table thead tr th {
+  background-color: transparent !important;
+  color: var(--bodyColor);
+  border-top: 1px solid var(--borderColor);
+  border-bottom: 1px solid var(--borderColor);
+}
+.table-style-three .basic-table .table thead tr th .form-check,
+.table-style-three .basic-table table thead tr th .form-check {
+  margin-top: -2px;
+}
+.table-style-three .basic-table .table thead tr th:first-child,
+.table-style-three .basic-table table thead tr th:first-child {
+  border-top-left-radius: 0 !important;
+  padding-left: 25px;
+}
+.table-style-three .basic-table .table thead tr th:last-child,
+.table-style-three .basic-table table thead tr th:last-child {
+  border-top-right-radius: 0 !important;
+  padding-right: 25px;
+}
+.table-style-three .basic-table .table tbody tr td,
+.table-style-three .basic-table table tbody tr td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.table-style-three .basic-table .table tbody tr td:first-child,
+.table-style-three .basic-table table tbody tr td:first-child {
+  border-left-width: 0 !important;
+  padding-left: 25px;
+}
+.table-style-three .basic-table .table tbody tr td:last-child,
+.table-style-three .basic-table table tbody tr td:last-child {
+  padding-right: 25px;
+  border-right-width: 0 !important;
+}
+.table-style-three .basic-table .table tbody tr:first-child td,
+.table-style-three .basic-table table tbody tr:first-child td {
+  border-top-width: 0;
+}
+.table-style-three .trezo-card-pagination {
+  border-radius: 0 !important;
+  padding: 15px 25px 0 25px !important;
+  border-left-width: 0 !important;
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+}
+.table-style-three .trezo-card-pagination div ol,
+.table-style-three .trezo-card-pagination div ul {
+  margin-left: 10px !important;
+}
+
+.table-style-four .basic-table .table tbody tr td,
+.table-style-four .basic-table table tbody tr td {
+  position: relative;
+  border-width: 0 !important;
+  border-radius: 0 !important;
+  background-color: #f6f7f9;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.table-style-four .basic-table .table tbody tr td::after,
+.table-style-four .basic-table table tbody tr td::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  padding: 5px;
+  display: block;
+  position: absolute;
+  background: var(--whiteColor);
+}
+.table-style-four .basic-table .table tbody tr:last-child td,
+.table-style-four .basic-table table tbody tr:last-child td {
+  padding-bottom: 8px;
+}
+.table-style-four .basic-table .table tbody tr:last-child td::after,
+.table-style-four .basic-table table tbody tr:last-child td::after {
+  display: none;
+}
+
 .basic-table table thead tr th,
 .basic-table .table thead tr th {
-  text-align: start;
-  padding: 15px 20px !important;
+  box-shadow: unset;
+  padding: 11px 20px;
   white-space: nowrap;
+  border-bottom-width: 0;
   color: var(--blackColor);
   background-color: #f6f7f9;
-  line-height: 1.1;
+}
+.basic-table table thead tr th .form-check .form-check-input,
+.basic-table .table thead tr th .form-check .form-check-input {
+  margin-top: 6px;
 }
 .basic-table table thead tr th:first-child,
 .basic-table .table thead tr th:first-child {
-  border-top-left-radius: 7px !important;
+  border-top-left-radius: 7px;
 }
 .basic-table table thead tr th:last-child,
 .basic-table .table thead tr th:last-child {
-  border-top-right-radius: 7px !important;
+  border-top-right-radius: 7px;
 }
 .basic-table table tbody tr td,
 .basic-table .table tbody tr td {
   border-bottom: 1px solid var(--borderColor);
-  padding: 15px 20px !important;
-  line-height: 1.2;
+  background-color: transparent;
+  color: var(--blackColor);
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 15px 20px;
+  text-align: start;
+  box-shadow: unset;
 }
 .basic-table table tbody tr td .product-info .image,
 .basic-table .table tbody tr td .product-info .image {
@@ -2228,7 +3006,6 @@ Swiper Slider Style
 .basic-table table tbody tr td .product-info .image img,
 .basic-table .table tbody tr td .product-info .image img {
   border-radius: 7px;
-  margin-bottom: -5px;
 }
 .basic-table table tbody tr td .product-info .info,
 .basic-table .table tbody tr td .product-info .info {
@@ -2242,20 +3019,364 @@ Swiper Slider Style
 .basic-table .table tbody tr td .product-info .info span {
   font-size: 13px;
 }
-.basic-table table tbody tr td .speaker-info .v-img,
-.basic-table .table tbody tr td .speaker-info .v-img {
+.basic-table table tbody tr td .stock-out,
+.basic-table .table tbody tr td .stock-out {
+  color: #ff6d57;
+}
+.basic-table table tbody tr td .customer-info .img,
+.basic-table .table tbody tr td .customer-info .img {
   width: 40px;
-  height: 40px;
   border-radius: 7px;
 }
-.basic-table table tbody tr td .speaker-info .v-img img,
-.basic-table .table tbody tr td .speaker-info .v-img img {
+.basic-table table tbody tr td .customer-info .img img,
+.basic-table .table tbody tr td .customer-info .img img {
   border-radius: 7px;
-  margin-bottom: -5px;
+}
+.basic-table table tbody tr td .customer-info span,
+.basic-table .table tbody tr td .customer-info span {
+  margin-left: 12px;
+}
+.basic-table table tbody tr td .user-info .image,
+.basic-table .table tbody tr td .user-info .image {
+  width: 44px;
+  height: 44px;
+  margin-right: 12px;
+}
+.basic-table table tbody tr td .user-info .email,
+.basic-table .table tbody tr td .user-info .email {
+  margin-top: 1px;
+}
+.basic-table table tbody tr td .user-info .designation,
+.basic-table .table tbody tr td .user-info .designation {
+  margin-top: 1px;
+}
+.basic-table table tbody tr td .link-btn,
+.basic-table .table tbody tr td .link-btn {
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  color: var(--bodyColor);
+  transition: var(--transition);
+  border: 1px solid var(--borderColor);
+}
+.basic-table table tbody tr td .link-btn i,
+.basic-table .table tbody tr td .link-btn i {
+  left: 0;
+  right: 0;
+  top: 50%;
+  font-size: 18px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.basic-table table tbody tr td .link-btn:hover,
+.basic-table .table tbody tr td .link-btn:hover {
+  color: var(--whiteColor);
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.basic-table table tbody tr td .action-buttons button,
+.basic-table table tbody tr td .action-buttons a,
+.basic-table .table tbody tr td .action-buttons button,
+.basic-table .table tbody tr td .action-buttons a {
+  color: var(--primaryColor);
+  margin-right: 9px;
+}
+.basic-table table tbody tr td .action-buttons button i,
+.basic-table table tbody tr td .action-buttons a i,
+.basic-table .table tbody tr td .action-buttons button i,
+.basic-table .table tbody tr td .action-buttons a i {
+  font-size: 16px;
+  color: var(--primaryColor);
+}
+.basic-table table tbody tr td .action-buttons button:nth-child(2),
+.basic-table table tbody tr td .action-buttons a:nth-child(2),
+.basic-table .table tbody tr td .action-buttons button:nth-child(2),
+.basic-table .table tbody tr td .action-buttons a:nth-child(2) {
+  color: var(--bodyColor);
+}
+.basic-table table tbody tr td .action-buttons button:nth-child(2) i,
+.basic-table table tbody tr td .action-buttons a:nth-child(2) i,
+.basic-table .table tbody tr td .action-buttons button:nth-child(2) i,
+.basic-table .table tbody tr td .action-buttons a:nth-child(2) i {
+  color: var(--bodyColor);
+}
+.basic-table table tbody tr td .action-buttons button:nth-child(3),
+.basic-table table tbody tr td .action-buttons a:nth-child(3),
+.basic-table .table tbody tr td .action-buttons button:nth-child(3),
+.basic-table .table tbody tr td .action-buttons a:nth-child(3) {
+  color: var(--dangerColor);
+}
+.basic-table table tbody tr td .action-buttons button:nth-child(3) i,
+.basic-table table tbody tr td .action-buttons a:nth-child(3) i,
+.basic-table .table tbody tr td .action-buttons button:nth-child(3) i,
+.basic-table .table tbody tr td .action-buttons a:nth-child(3) i {
+  color: var(--dangerColor);
+}
+.basic-table table tbody tr td .action-buttons button:last-child,
+.basic-table table tbody tr td .action-buttons a:last-child,
+.basic-table .table tbody tr td .action-buttons button:last-child,
+.basic-table .table tbody tr td .action-buttons a:last-child {
+  margin-right: 0;
+}
+.basic-table table tbody tr td .project-name,
+.basic-table .table tbody tr td .project-name {
+  color: var(--bodyColor);
+}
+.basic-table table tbody tr td .project-name:hover,
+.basic-table .table tbody tr td .project-name:hover {
+  color: var(--primaryColor);
+}
+.basic-table table tbody tr td .assignees div,
+.basic-table .table tbody tr td .assignees div {
+  width: 34px;
+  height: 34px;
+  font-size: 12px;
+  border-radius: 50%;
+  margin-right: -13px;
+  border: 1px solid var(--whiteColor);
+}
+.basic-table table tbody tr td .assignees div:last-child,
+.basic-table .table tbody tr td .assignees div:last-child {
+  margin-right: 0;
+}
+.basic-table table tbody tr td .ratings,
+.basic-table .table tbody tr td .ratings {
+  font-size: 15px;
+  color: #fe7a36;
+}
+.basic-table table tbody tr td .ratings i,
+.basic-table .table tbody tr td .ratings i {
+  margin-right: 2px;
+}
+.basic-table table tbody tr td .ratings i:last-child,
+.basic-table .table tbody tr td .ratings i:last-child {
+  margin-right: 0;
+}
+.basic-table table tbody tr td .ratings span.text-xs,
+.basic-table .table tbody tr td .ratings span.text-xs {
+  font-size: 12px;
+  margin-left: 2px;
+}
+.basic-table table tbody tr td .group-lesson .users div,
+.basic-table .table tbody tr td .group-lesson .users div {
+  width: 45px;
+  height: 45px;
+  font-size: 12px;
+  margin-right: -21px;
+  border: 2px solid var(--whiteColor);
+}
+.basic-table table tbody tr td .group-lesson .users div:last-child,
+.basic-table .table tbody tr td .group-lesson .users div:last-child {
+  margin-right: 0;
+}
+.basic-table table tbody tr td .group-lesson .info,
+.basic-table .table tbody tr td .group-lesson .info {
+  margin-left: 10px;
+}
+.basic-table table tbody tr td .group-lesson .info .date,
+.basic-table .table tbody tr td .group-lesson .info .date {
+  margin-top: 5px;
+}
+.basic-table table tbody tr td .circle-progress-bar,
+.basic-table .table tbody tr td .circle-progress-bar {
+  width: 40px;
+  height: 40px;
+}
+.basic-table table tbody tr td .circle-progress-bar svg,
+.basic-table .table tbody tr td .circle-progress-bar svg {
+  top: -5px;
+  left: -5px;
+  position: relative;
+}
+.basic-table table tbody tr td .circle-progress-bar .percentage,
+.basic-table .table tbody tr td .circle-progress-bar .percentage {
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+}
+.basic-table table tbody tr td .file-name i,
+.basic-table .table tbody tr td .file-name i {
+  margin-right: 8px;
+  color: #ffb264;
+  font-size: 28px;
+}
+.basic-table table tbody tr td .form-check .form-check-input,
+.basic-table .table tbody tr td .form-check .form-check-input {
+  margin-top: 5px;
+}
+.basic-table table tbody tr td .review .ratings i,
+.basic-table .table tbody tr td .review .ratings i {
+  font-size: 18px;
+  color: #ee8336;
+  margin-right: 2px;
+}
+.basic-table table tbody tr td .review .ratings i:last-child,
+.basic-table .table tbody tr td .review .ratings i:last-child {
+  margin-right: 0;
+}
+.basic-table table tbody tr td .review p,
+.basic-table .table tbody tr td .review p {
+  margin-top: 10px;
+  width: 350px;
+}
+.basic-table table tbody tr td .speaker-info .img,
+.basic-table .table tbody tr td .speaker-info .img {
+  width: 40px;
+  border-radius: 7px;
+}
+.basic-table table tbody tr td .speaker-info .img img,
+.basic-table .table tbody tr td .speaker-info .img img {
+  border-radius: 7px;
 }
 .basic-table table tbody tr td .speaker-info span,
 .basic-table .table tbody tr td .speaker-info span {
   margin-left: 12px;
+}
+.basic-table table tbody tr td .trezo-badge,
+.basic-table .table tbody tr td .trezo-badge {
+  padding: 3px 8px;
+}
+.basic-table table tbody tr td .impressions,
+.basic-table .table tbody tr td .impressions {
+  padding-left: 28px;
+}
+.basic-table table tbody tr td .impressions i,
+.basic-table .table tbody tr td .impressions i {
+  left: 0;
+  top: 50%;
+  font-size: 20px;
+  position: absolute;
+  color: var(--successColor);
+  transform: translateY(-50%);
+}
+.basic-table table tbody tr td .impressions i.down,
+.basic-table .table tbody tr td .impressions i.down {
+  color: var(--dangerColor);
+}
+.basic-table table tbody tr td .clicks,
+.basic-table .table tbody tr td .clicks {
+  padding-left: 28px;
+}
+.basic-table table tbody tr td .clicks i,
+.basic-table .table tbody tr td .clicks i {
+  left: 0;
+  top: 50%;
+  font-size: 20px;
+  position: absolute;
+  color: var(--successColor);
+  transform: translateY(-50%);
+}
+.basic-table table tbody tr td .clicks i.down,
+.basic-table .table tbody tr td .clicks i.down {
+  color: var(--dangerColor);
+}
+.basic-table table tbody tr td .change_24h.up,
+.basic-table table tbody tr td .change_7d.up,
+.basic-table .table tbody tr td .change_24h.up,
+.basic-table .table tbody tr td .change_7d.up {
+  color: #1e8308;
+}
+.basic-table table tbody tr td .change_24h.down,
+.basic-table table tbody tr td .change_7d.down,
+.basic-table .table tbody tr td .change_24h.down,
+.basic-table .table tbody tr td .change_7d.down {
+  color: #ee3e08;
+}
+.basic-table table tbody tr td .employee-info,
+.basic-table .table tbody tr td .employee-info {
+  gap: 12px;
+}
+.basic-table table tbody tr td .employee-info .img,
+.basic-table .table tbody tr td .employee-info .img {
+  width: 40px;
+}
+.basic-table table tbody tr td .employee-info div span:nth-child(2),
+.basic-table .table tbody tr td .employee-info div span:nth-child(2) {
+  margin-top: 1px;
+  font-size: 12px;
+}
+.basic-table table tbody tr td .notice-info,
+.basic-table .table tbody tr td .notice-info {
+  gap: 12px;
+}
+.basic-table table tbody tr td .notice-info .icon,
+.basic-table .table tbody tr td .notice-info .icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--purpleColor);
+}
+.basic-table table tbody tr td .notice-info div p,
+.basic-table .table tbody tr td .notice-info div p {
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 170px;
+  white-space: normal;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+.basic-table table tbody tr td .notice-info div .date,
+.basic-table .table tbody tr td .notice-info div .date {
+  padding-left: 16px;
+  font-size: 12px;
+}
+.basic-table table tbody tr td .notice-info div .date i,
+.basic-table .table tbody tr td .notice-info div .date i {
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.basic-table table tbody tr td .caller-info,
+.basic-table .table tbody tr td .caller-info {
+  gap: 12px;
+}
+.basic-table table tbody tr td .caller-info img,
+.basic-table .table tbody tr td .caller-info img {
+  width: 36px;
+  border-radius: 4px;
+}
+.basic-table table tbody tr td .caller-info div .dot,
+.basic-table .table tbody tr td .caller-info div .dot {
+  transform: translateY(-50%);
+  border-radius: 50%;
+  position: absolute;
+  left: -15px;
+  height: 8px;
+  width: 8px;
+  top: 50%;
+}
+.basic-table table tbody tr td .campaign-info,
+.basic-table .table tbody tr td .campaign-info {
+  padding-left: 13px;
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+}
+.basic-table table tbody tr td .campaign-info span:nth-child(2),
+.basic-table .table tbody tr td .campaign-info span:nth-child(2) {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.basic-table table tbody tr td .campaign-info::before,
+.basic-table .table tbody tr td .campaign-info::before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  content: "";
+  position: absolute;
+  background: var(--orangeColor);
+}
+.basic-table table tbody tr td .socials,
+.basic-table .table tbody tr td .socials {
+  gap: 10px;
+}
+.basic-table table tbody tr td .socials img,
+.basic-table .table tbody tr td .socials img {
+  width: 18px;
 }
 .basic-table table tbody tr td:first-child,
 .basic-table .table tbody tr td:first-child {
@@ -2265,9 +3386,51 @@ Swiper Slider Style
 .basic-table .table tbody tr td:last-child {
   border-right: 1px solid var(--borderColor);
 }
+.basic-table table tbody tr:nth-child(2) td .campaign-info::before, .basic-table table tbody tr:nth-child(7) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(2) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(7) td .campaign-info::before {
+  background: var(--primaryColor);
+}
+.basic-table table tbody tr:nth-child(3) td .campaign-info::before, .basic-table table tbody tr:nth-child(8) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(3) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(8) td .campaign-info::before {
+  background: var(--purpleColor);
+}
+.basic-table table tbody tr:nth-child(4) td .campaign-info::before, .basic-table table tbody tr:nth-child(9) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(4) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(9) td .campaign-info::before {
+  background: var(--secondaryColor);
+}
+.basic-table table tbody tr:nth-child(5) td .campaign-info::before, .basic-table table tbody tr:nth-child(10) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(5) td .campaign-info::before,
+.basic-table .table tbody tr:nth-child(10) td .campaign-info::before {
+  background: var(--successColor);
+}
 .basic-table table tbody tr:first-child td,
 .basic-table .table tbody tr:first-child td {
   border-top: 1px solid var(--borderColor);
+}
+
+.table-responsive {
+  overflow: auto;
+}
+.table-responsive::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.table-responsive::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+.table-responsive::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: var(--primaryColor);
+}
+.table-responsive::-webkit-scrollbar-track {
+  border-radius: 7px;
+  background-color: #f6f7f9;
 }
 
 .form-btn-box button {
@@ -2506,6 +3669,59 @@ Swiper Slider Style
 .hover-scroll-bar:hover::-webkit-scrollbar-thumb:hover {
   background: var(--primaryColor);
   border-radius: 50px;
+}
+
+.scrollbar {
+  overflow: auto;
+  padding-right: 3px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f4;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50px;
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primaryColor);
+  border-radius: 50px;
+}
+
+.risk-exposure-card .trezo-card-content .chart {
+  margin-top: -52px;
+  margin-left: -17px;
+  margin-right: -17px;
+  margin-bottom: -50px;
+}
+.risk-exposure-card .trezo-card-content .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active {
+  padding-bottom: 4px;
+}
+.risk-exposure-card .trezo-card-content .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active .apexcharts-tooltip-marker {
+  display: none;
+}
+
+.risk-stability-indicators-card .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active {
+  padding-bottom: 5px;
+}
+
+.comparative-analysis-card .apexcharts-canvas .apexcharts-tooltip-series-group.apexcharts-active {
+  padding-bottom: 9px;
 }
 
 /* Max width 767px */
@@ -2798,6 +4014,22 @@ table .tbody tr td {
   box-shadow: none !important;
 }
 
+@keyframes upDownMover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes rotateme {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes ripple {
   0%, 35% {
     transform: scale(0);
@@ -2810,6 +4042,22 @@ table .tbody tr td {
   100% {
     opacity: 0;
     transform: scale(4);
+  }
+}
+@keyframes wave-animation {
+  0%, 100% {
+    height: 30px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /* Max width 767px */
@@ -3833,6 +5081,18 @@ table .tbody tr td {
   background-color: #605dff !important;
 }
 
+.bg-primary-70 {
+  background-color: #dde4ff !important;
+}
+
+.bg-card-text-c {
+  background-color: #ffe8d4 !important;
+}
+
+.bg-primary-div-60 {
+  background-color: #f3e8ff !important;
+}
+
 .text-white {
   color: var(--whiteColor) !important;
 }
@@ -4023,7 +5283,8 @@ table .tbody tr td {
   font-weight: 800 !important;
 }
 
-.fw-black {
+.fw-black,
+.fw-900 {
   font-weight: 900 !important;
 }
 
@@ -6156,6 +7417,10 @@ Custom Padding & Margin Area Style
   background-color: #ced4da !important;
 }
 
+.text-xs {
+  font-size: 12px !important;
+}
+
 .breadcrumb-card .breadcrumb .breadcrumb-item {
   font-size: 13px;
   margin-left: 13px;
@@ -7433,16 +8698,6 @@ Custom Padding & Margin Area Style
 .dark-theme .basic-table table tbody tr td,
 .dark-theme .basic-table .table tbody tr td {
   color: var(--whiteColor);
-  border-top: 1px solid var(--borderColor) !important;
-  border-bottom: 1px solid var(--borderColor) !important;
-}
-.dark-theme .basic-table table tbody tr td:first-child,
-.dark-theme .basic-table .table tbody tr td:first-child {
-  border-left: 1px solid var(--borderColor) !important;
-}
-.dark-theme .basic-table table tbody tr td:last-child,
-.dark-theme .basic-table .table tbody tr td:last-child {
-  border-right: 1px solid var(--borderColor) !important;
 }
 .dark-theme .basic-table table tbody tr td .assignees div,
 .dark-theme .basic-table .table tbody tr td .assignees div {
@@ -7618,6 +8873,12 @@ Custom Padding & Margin Area Style
 .dark-theme .trezo-form-group .v-label.v-field-label {
   color: var(--bodyColor) !important;
 }
+.dark-theme .trezo-form-group .v-field__input::-moz-placeholder {
+  color: var(--bodyColor) !important;
+}
+.dark-theme .trezo-form-group .v-field__input::placeholder {
+  color: var(--bodyColor) !important;
+}
 .dark-theme .ql-toolbar.ql-snow,
 .dark-theme .ql-container.ql-snow {
   border: 1px solid var(--borderColor);
@@ -7653,133 +8914,170 @@ Custom Padding & Margin Area Style
 .dark-theme .trezo-status-badge.pPending {
   background-color: #15203c;
 }
-.dark-theme .sidebar-area.bg-white, .dark-theme.dark-theme.bg-white {
+.dark-theme .sidebar-area.bg-white {
   background-color: #0c1427 !important;
 }
-.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar, .dark-theme.dark-theme .virtual-scroll::-webkit-scrollbar {
+.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar:vertical, .dark-theme.dark-theme .virtual-scroll::-webkit-scrollbar:vertical {
+.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar:vertical {
   width: 5px;
 }
-.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar:horizontal, .dark-theme.dark-theme .virtual-scroll::-webkit-scrollbar:horizontal {
+.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar:horizontal {
   height: 5px;
 }
-.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar-thumb, .dark-theme.dark-theme .virtual-scroll::-webkit-scrollbar-thumb {
+.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar-thumb {
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.05);
 }
-.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar-track, .dark-theme.dark-theme .virtual-scroll::-webkit-scrollbar-track {
+.dark-theme .sidebar-area .virtual-scroll::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
 }
-.dark-theme .sidebar-area .accordion .sidebar-menu-link, .dark-theme.dark-theme .accordion .sidebar-menu-link {
+.dark-theme .sidebar-area .accordion .sidebar-menu-link {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .sidebar-menu-link.router-link-active, .dark-theme .sidebar-area .accordion .sidebar-menu-link:hover, .dark-theme.dark-theme .accordion .sidebar-menu-link.router-link-active, .dark-theme.dark-theme .accordion .sidebar-menu-link:hover {
+.dark-theme .sidebar-area .accordion .sidebar-menu-link.router-link-active, .dark-theme .sidebar-area .accordion .sidebar-menu-link:hover {
   background-color: #15203c;
   color: var(--primaryColor);
 }
-.dark-theme .sidebar-area .accordion .sidebar-menu-link.router-link-active::after, .dark-theme .sidebar-area .accordion .sidebar-menu-link:hover::after, .dark-theme.dark-theme .accordion .sidebar-menu-link.router-link-active::after, .dark-theme.dark-theme .accordion .sidebar-menu-link:hover::after {
+.dark-theme .sidebar-area .accordion .sidebar-menu-link.router-link-active::after, .dark-theme .sidebar-area .accordion .sidebar-menu-link:hover::after {
   border-color: var(--primaryColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active, .dark-theme.dark-theme .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
   background-color: #15203c;
 }
 .dark-theme .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header .material-symbols-outlined,
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right, .dark-theme.dark-theme .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header .material-symbols-outlined,
-.dark-theme.dark-theme .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .title-header, .dark-theme.dark-theme .accordion .accordion__item .title-header {
+.dark-theme .sidebar-area .accordion .accordion__item .title-header {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .title-header i.arrow-right, .dark-theme.dark-theme .accordion .accordion__item .title-header i.arrow-right {
+.dark-theme .sidebar-area .accordion .accordion__item .title-header i.arrow-right {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .title-header:hover, .dark-theme.dark-theme .accordion .accordion__item .title-header:hover {
+.dark-theme .sidebar-area .accordion .accordion__item .title-header:hover {
   background-color: #15203c;
   color: var(--whiteColor);
 }
 .dark-theme .sidebar-area .accordion .accordion__item .title-header:hover .material-symbols-outlined,
-.dark-theme .sidebar-area .accordion .accordion__item .title-header:hover i.arrow-right, .dark-theme.dark-theme .accordion .accordion__item .title-header:hover .material-symbols-outlined,
-.dark-theme.dark-theme .accordion .accordion__item .title-header:hover i.arrow-right {
+.dark-theme .sidebar-area .accordion .accordion__item .title-header:hover i.arrow-right {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active, .dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link {
+  color: #c5c5c5;
+}
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active, .dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover {
   background-color: #15203c;
   color: var(--primaryColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active::after, .dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active::after, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link.router-link-active::after, .dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after {
   border-color: var(--primaryColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active {
   background-color: #15203c !important;
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header {
   color: var(--whiteColor) !important;
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header i.arrow-right {
   color: var(--whiteColor);
 }
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover {
   background-color: #15203c;
   color: var(--whiteColor);
 }
 .dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover .material-symbols-outlined,
-.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover i.arrow-right, .dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover .material-symbols-outlined,
-.dark-theme.dark-theme .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover i.arrow-right {
+.dark-theme .sidebar-area .accordion .accordion__item .accordion__content .sidebar-sub-menu .sidemenu-item .accordion .accordion__item .accordion__trigger.accordion__trigger_active .title-header:hover i.arrow-right {
   color: var(--whiteColor);
 }
-.dark-theme .header-area.bg-white, .dark-theme.dark-theme.bg-white {
+.dark-theme .header-area.bg-white {
   background-color: #0c1427 !important;
 }
-.dark-theme .header-area .header-left-side .search-box .input-search, .dark-theme.dark-theme .header-left-side .search-box .input-search {
+.dark-theme .header-area .header-left-side .search-box .input-search {
   background-color: #15203c !important;
   color: var(--whiteColor) !important;
   border-color: #15203c !important;
 }
-.dark-theme .header-area .header-left-side .search-box .input-search::-moz-placeholder, .dark-theme.dark-theme .header-left-side .search-box .input-search::-moz-placeholder {
+.dark-theme .header-area .header-left-side .search-box .input-search::-moz-placeholder {
   color: var(--bodyColor) !important;
 }
-.dark-theme .header-area .header-left-side .search-box .input-search::placeholder, .dark-theme.dark-theme .header-left-side .search-box .input-search::placeholder {
+.dark-theme .header-area .header-left-side .search-box .input-search::placeholder {
   color: var(--bodyColor) !important;
 }
-.dark-theme .header-area .menu-dropdown.v-list, .dark-theme.dark-theme .menu-dropdown.v-list {
-  background: #0a0e19 !important;
+.dark-theme .header-area .navbar-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
-.dark-theme .header-area .menu-dropdown.v-list .menu-body ul li a, .dark-theme.dark-theme .menu-dropdown.v-list .menu-body ul li a {
-  color: var(--whiteColor) !important;
-}
-.dark-theme .header-area .language-menu-dropdown.v-list, .dark-theme.dark-theme .language-menu-dropdown.v-list {
-  background: #0a0e19 !important;
-}
-.dark-theme .header-area .language-menu-dropdown.v-list ul li, .dark-theme.dark-theme .language-menu-dropdown.v-list ul li {
-  border-top: 1px dashed var(--borderColor);
-}
-.dark-theme .header-area .language-menu-dropdown.v-list ul li button, .dark-theme.dark-theme .language-menu-dropdown.v-list ul li button {
+.dark-theme .header-area .navbar-area .accordion .accordion-item {
   color: var(--whiteColor);
 }
-.dark-theme .header-area .notification-list.v-list, .dark-theme.dark-theme .notification-list.v-list {
-  background: #0a0e19 !important;
-}
-.dark-theme .header-area .notification-list.v-list ul li, .dark-theme.dark-theme .notification-list.v-list ul li {
-  border-top: 1px dashed var(--borderColor);
-  border-bottom: 1px dashed var(--borderColor);
-}
-.dark-theme .header-area .notification-list.v-list ul li .time, .dark-theme.dark-theme .notification-list.v-list ul li .time {
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button {
   color: var(--whiteColor);
 }
-.dark-theme .header-area .profile-menu-dropdown.v-list, .dark-theme.dark-theme .profile-menu-dropdown.v-list {
-  background: #0a0e19 !important;
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
 }
-.dark-theme .header-area .profile-menu-dropdown.v-list .admin, .dark-theme.dark-theme .profile-menu-dropdown.v-list .admin {
-  border-bottom: 1px solid var(--borderColor);
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
 }
-.dark-theme .header-area .profile-menu-dropdown.v-list .admin span:last-child, .dark-theme.dark-theme .profile-menu-dropdown.v-list .admin span:last-child {
-  color: var(--bodyColor) !important;
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
 }
-.dark-theme .header-area .profile-menu-dropdown.v-list .border-top, .dark-theme.dark-theme .profile-menu-dropdown.v-list .border-top {
-  border-top: 1px solid var(--borderColor) !important;
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button:hover {
+  color: var(--whiteColor);
+  background-color: #15203c;
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button:hover i {
+  color: var(--whiteColor);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-button:hover::before {
+  color: var(--whiteColor);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button {
+  color: var(--whiteColor);
+  background-color: #15203c;
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button i {
+  color: var(--whiteColor);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item:has(.active) .accordion-button::before {
+  color: var(--whiteColor);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body {
+  background-color: #0c1427;
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover, .dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button.active {
+  background-color: #15203c;
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover, .dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active {
+  background-color: #15203c;
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .header-area .navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three::before {
+  background: rgba(255, 255, 255, 0.08);
 }
 .dark-theme .menu-dropdown.v-list {
   background: #0a0e19 !important;
@@ -7795,6 +9093,9 @@ Custom Padding & Margin Area Style
 }
 .dark-theme .language-menu-dropdown.v-list ul li button {
   color: var(--whiteColor);
+}
+.dark-theme .language-menu-dropdown.v-list ul li button:hover {
+  background-color: #172036;
 }
 .dark-theme .notification-list.v-list {
   background: #0a0e19 !important;
@@ -8454,6 +9755,385 @@ Custom Padding & Margin Area Style
 }
 .dark-theme .call-overview-tabs .card {
   background-color: #0a0e19 !important;
+}
+.dark-theme .for-dark-rounded-bg .card-body {
+  background-color: #172036 !important;
+}
+.dark-theme .for-dark-rounded-bg.bg-white {
+  background-color: #0c1427 !important;
+}
+.dark-theme .categories-tabs .nav-item .nav-link {
+  border-color: #172036 !important;
+  border: double;
+}
+.dark-theme .categories-tabs .nav-item .nav-link.active {
+  border-color: var(--primaryColor) !important;
+}
+.dark-theme .payment-method .btn {
+  background-color: var(--bodyColor) !important;
+  border-color: #172036 !important;
+}
+.dark-theme .payment-method .btn-check:checked + .btn,
+.dark-theme .payment-method .payment-method :not(.btn-check) + .btn:active,
+.dark-theme .payment-method .payment-method .btn:first-child:active,
+.dark-theme .payment-method .payment-method .btn.active,
+.dark-theme .payment-method .payment-method .btn.show {
+  background-color: #172036 !important;
+}
+.dark-theme .doctor-cover-bg::before {
+  background-color: var(--blackColor);
+}
+.dark-theme .doctor-cover-bg .avatar-preview.rounded-circle {
+  border-color: #172036 !important;
+}
+.dark-theme .doctor-filter-img {
+  filter: brightness(100);
+}
+.dark-theme.bg-white .sidebar-area {
+  border-color: #172036 !important;
+}
+.dark-theme.bg-white .footer-area {
+  border-color: #172036 !important;
+}
+.dark-theme .text-black {
+  color: var(--whiteColor) !important;
+}
+.dark-theme .instagram-followers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .instagram-followers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .linkedin-followers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .linkedin-followers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .tiktok-followers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .tiktok-followers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .facebook-followers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .facebook-followers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .x-followers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .x-followers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .youtube-subscribers-card .trezo-card-content .info .info-badge {
+  background-color: #15203c;
+}
+.dark-theme .youtube-subscribers-card .trezo-card-content .info .info-badge.down {
+  background-color: #15203c;
+}
+.dark-theme .suggestions-card .trezo-card-content ul li {
+  border-bottom-color: var(--borderColor);
+}
+.dark-theme .suggestions-card .trezo-card-content ul li .action button {
+  border-color: var(--borderColor);
+}
+.dark-theme .suggestions-card .trezo-card-content ul li .action button:hover {
+  border-color: var(--orangeColor);
+}
+.dark-theme .suggestions-card .trezo-card-content ul li .action button:nth-child(2) {
+  border-color: var(--borderColor);
+}
+.dark-theme .suggestions-card .trezo-card-content ul li .action button:nth-child(2):hover {
+  border-color: var(--primaryColor);
+}
+.dark-theme .recent-instagram-followers-card .trezo-card-content ul li {
+  border-bottom-color: var(--borderColor);
+}
+.dark-theme .recent-instagram-followers-card .trezo-card-content ul li .action .follow-btn {
+  background-color: #15203c;
+}
+.dark-theme .recent-instagram-followers-card .trezo-card-content ul li .action .follow-btn:hover {
+  background-color: var(--primaryColor);
+}
+.dark-theme .recent-instagram-followers-card .trezo-card-content ul li .action .message-btn {
+  background-color: #15203c;
+}
+.dark-theme .recent-instagram-followers-card .trezo-card-content ul li .action .message-btn:hover {
+  background-color: var(--purpleColor);
+}
+.dark-theme .appointments-card .trezo-card-content .title .info-badge {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .appointments-card .trezo-card-content .title .info-badge.down {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .patients-card .trezo-card-content .title .info-badge {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .patients-card .trezo-card-content .title .info-badge.down {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .operations-card .trezo-card-content .title .info-badge {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .operations-card .trezo-card-content .title .info-badge.down {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .earnings-card .trezo-card-content .title .info-badge {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .earnings-card .trezo-card-content .title .info-badge.down {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .new-customers-card .trezo-card-content .customers-list img {
+  border-color: var(--borderColor);
+}
+.dark-theme .new-customers-card .trezo-card-content .customers-list div {
+  border-color: var(--borderColor);
+}
+.dark-theme .new-customers-card .trezo-card-content .customers-list div.bg-black {
+  background-color: var(--blackColor) !important;
+}
+.dark-theme .top-selling-products-card .trezo-card-content .product-item .content .sold div {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .featured-services-card .trezo-card-content ul li .number {
+  background-color: var(--borderColor);
+}
+.dark-theme .recent-appointments-card .trezo-card-content .calendar .header button {
+  background-color: var(--borderColor);
+  color: var(--whiteColor);
+}
+.dark-theme .recent-appointments-card .trezo-card-content .calendar .header button:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.dark-theme .recent-appointments-card .trezo-card-content .calendar .days div {
+  background-color: var(--borderColor);
+}
+.dark-theme .recent-appointments-card .trezo-card-content .calendar .days div:has(.blank-day) {
+  background-color: transparent;
+}
+.dark-theme .recent-appointments-card .trezo-card-content .appointments-list .appointment-item {
+  background-color: var(--borderColor) !important;
+}
+.dark-theme .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .status div {
+  border-color: #0c1427;
+  background-color: #0c1427;
+}
+.dark-theme .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .status div.upcoming {
+  border-color: #0c1427;
+  background-color: #0c1427;
+}
+.dark-theme .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .user-info .user img {
+  border-color: var(--blackColor);
+}
+.dark-theme .bg-primary-100,
+.dark-theme .bg-orange-100,
+.dark-theme .bg-success-100,
+.dark-theme .bg-purple-100 {
+  background-color: #15203c !important;
+}
+.dark-theme .customer-visits-card .trezo-card-content .content .icon {
+  background-color: #15203c;
+}
+.dark-theme .customer-visits-card .trezo-card-content .content .light {
+  background-color: #15203c;
+}
+.dark-theme .sa-gross-revenue-card .trezo-card-header .trezo-card-title .info-badge {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .sa-gross-revenue-card .trezo-card-header .trezo-card-title .info-badge.down {
+  border-color: #15203c;
+  background-color: #15203c;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .calendar .header button {
+  color: var(--whiteColor);
+}
+.dark-theme .add-new-popup .popup-dialog .trezo-card .trezo-card-header {
+  background-color: #15203c;
+}
+.dark-theme .add-new-popup .popup-dialog .trezo-card .trezo-card-header .trezo-card-subtitle button {
+  color: var(--whiteColor);
+}
+.dark-theme .todays-appointments-card .trezo-card-content .appointments-list .appointment-item {
+  background-color: var(--borderColor) !important;
+}
+.dark-theme .todays-appointments-card .trezo-card-content .appointments-list .appointment-item .user img {
+  border-color: var(--blackColor);
+}
+.dark-theme .todays-appointments-card .trezo-card-content .appointments-list .appointment-item .btn.btn-primary {
+  background-color: #0c1427;
+  border-color: #0c1427;
+}
+.dark-theme .todays-appointments-card .trezo-card-content .appointments-list .appointment-item .btn.btn-primary:hover {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.dark-theme .todays-appointments-card .trezo-card-content .appointments-list .appointment-item .shape {
+  opacity: 0.2;
+}
+.dark-theme .prescriptions-card .trezo-card-content .doctor-info .logo {
+  display: none;
+}
+.dark-theme .prescriptions-card .trezo-card-content .doctor-info .logo.d-none {
+  display: inline-block !important;
+}
+.dark-theme .prescriptions-card .trezo-card-content .prescriptions-info img {
+  filter: invert(1);
+}
+.dark-theme .prescriptions-card .trezo-card-content .basic-table .table thead tr th::before {
+  background-color: #0a0e19;
+}
+.dark-theme .prescriptions-card .trezo-card-content .signature .image img {
+  filter: invert(1);
+}
+.dark-theme .write-prescription-card .trezo-card-content .doctor-info .logo {
+  display: none;
+}
+.dark-theme .write-prescription-card .trezo-card-content .doctor-info .logo.d-none {
+  display: inline-block !important;
+}
+.dark-theme .write-prescription-card .trezo-card-content .basic-table .table thead tr th::before {
+  background-color: #0a0e19;
+}
+.dark-theme .bs-welcome-card .trezo-card-content .content p {
+  color: var(--blackColor) !important;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .calendar .header button {
+  background-color: var(--borderColor);
+  color: var(--whiteColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .calendar .header button:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .calendar .days div {
+  background-color: var(--borderColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .calendar .days div:has(.blank-day) {
+  background-color: transparent;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item {
+  background-color: var(--borderColor) !important;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .user img {
+  border-color: var(--blackColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .info .btn.btn-primary {
+  background-color: #0c1427;
+  border-color: #0c1427;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .info .btn.btn-primary:hover {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .info .notification-btn {
+  background-color: #0c1427;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .info .notification-btn:hover {
+  background-color: var(--primaryColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item .shape {
+  opacity: 0.2;
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(2) .info .btn.btn-primary:hover, .dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(5) .info .btn.btn-primary:hover {
+  border-color: var(--secondaryColor);
+  background-color: var(--secondaryColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(2) .info .notification-btn:hover, .dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(5) .info .notification-btn:hover {
+  background-color: var(--secondaryColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(3) .info .btn.btn-primary:hover, .dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(6) .info .btn.btn-primary:hover {
+  border-color: var(--successColor);
+  background-color: var(--successColor);
+}
+.dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(3) .info .notification-btn:hover, .dark-theme .todays-schedule-card .trezo-card-content .events-list .event-item:nth-child(6) .info .notification-btn:hover {
+  background-color: var(--successColor);
+}
+.dark-theme .new-bookings-card.v-card.trezo-card {
+  background-color: #0a0e19 !important;
+}
+.dark-theme .check-in-card.v-card.trezo-card {
+  background-color: #0a0e19 !important;
+}
+.dark-theme .check-out-card.v-card.trezo-card {
+  background-color: #0a0e19 !important;
+}
+.dark-theme .guest-activity-card.component-dark-theme .chart {
+  --borderColor: #ffffff1a;
+}
+.dark-theme .guest-activity-card.component-dark-theme .apexcharts-canvas .apexcharts-text {
+  --bodyColor: #b1bbc8;
+}
+.dark-theme .recent-bookings-card .trezo-card-content .calendar .header button {
+  background-color: var(--borderColor);
+  color: var(--whiteColor);
+}
+.dark-theme .recent-bookings-card .trezo-card-content .calendar .header button:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+.dark-theme .recent-bookings-card .trezo-card-content .calendar .days div {
+  background-color: var(--borderColor);
+}
+.dark-theme .recent-bookings-card .trezo-card-content .calendar .days div:has(.blank-day) {
+  background-color: transparent;
+}
+.dark-theme .recent-bookings-card .trezo-card-content .bookings-list .room-item .link-btn {
+  background-color: var(--borderColor);
+}
+.dark-theme .recent-bookings-card .trezo-card-content .bookings-list .room-item .link-btn:hover {
+  background-color: var(--primaryColor);
+}
+.dark-theme .recent-clients-card .trezo-card-content ul li .image .active-status {
+  border-color: var(--blackColor);
+}
+.dark-theme .my-featured-listings-card.v-card.trezo-card {
+  background-color: #15203c !important;
+}
+.dark-theme .mobile-app-card.v-card.trezo-card {
+  background-color: #15203c !important;
+}
+.dark-theme .client-ratings-card .trezo-card-content .item {
+  background-color: #0a0e19 !important;
+}
+.dark-theme .my-cards-card {
+  background-image: unset !important;
+}
+.dark-theme .total-balance-card.v-card.trezo-card {
+  background: #0c1427 !important;
+}
+.dark-theme .total-balance-card .trezo-card-content .icon {
+  background-color: #15203c;
+}
+.dark-theme .total-expense-card.v-card.trezo-card {
+  background: #0c1427 !important;
+}
+.dark-theme .total-expense-card.v-card.trezo-card .trezo-card-content .icon {
+  background-color: #15203c;
+}
+.dark-theme .daily-limit-card .trezo-card-content.bg-success-50 {
+  background-color: #0a0e19 !important;
+}
+.dark-theme .portfolio-value-card {
+  background-color: #162243;
+}
+.dark-theme .crypto-market-cap-card {
+  background-color: #162243;
 }
 
 .rtl-enabled {
@@ -10732,6 +12412,669 @@ Custom Padding & Margin Area Style
   right: auto !important;
   left: 20px;
 }
+.rtl-enabled .doctor-welcome-card .shape {
+  transform: scaleX(-1);
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .doctor-welcome-card .star {
+  transform: scaleX(-1);
+  right: auto;
+  left: 85px;
+}
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td .action-dropdown-menu .dropdown-menu,
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td .action-dropdown-menu .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .bs-welcome-card .trezo-card-content .content {
+  margin-right: 0;
+  margin-left: -15px;
+}
+.rtl-enabled .bs-welcome-card .trezo-card-content .content::before {
+  right: -15px;
+  left: auto;
+}
+.rtl-enabled .new-customers-card .trezo-card-content .customers-list img {
+  margin-right: 0;
+  margin-left: -20px;
+}
+.rtl-enabled .new-customers-card .trezo-card-content .customers-list img:last-child {
+  margin-left: 0;
+}
+.rtl-enabled .new-customers-card .trezo-card-content .customers-list div {
+  margin-right: 0;
+  margin-left: -20px;
+}
+.rtl-enabled .new-customers-card .trezo-card-content .customers-list div:last-child {
+  margin-left: 0;
+}
+.rtl-enabled .top-selling-products-card .trezo-card-content .product-item {
+  direction: rtl;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content {
+  margin-right: 0;
+  margin-left: -28px !important;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content .calendar {
+  margin-right: 0;
+  margin-left: 25px;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list {
+  margin-left: 0;
+  margin-right: -25px;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item {
+  direction: rtl;
+  margin-right: 25px;
+  margin-left: 0;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .icon {
+  left: auto;
+  right: -39px;
+}
+.rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item::before {
+  left: auto;
+  right: -28px;
+}
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .customer-visits-card .trezo-card-content .content .text-end {
+  text-align: end !important;
+}
+.rtl-enabled .customer-visits-card .trezo-card-content .content .text-end .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .content {
+  margin-right: 0;
+  margin-left: -55px;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .content .stats .item {
+  padding-left: 0;
+  padding-right: 33px;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .content .stats .item i {
+  right: 0;
+  left: auto;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .image {
+  margin-right: auto;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 22px;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .image .shape1 {
+  transform: scaleX(-1);
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .restaurant-welcome-card .trezo-card-content .image .shape2 {
+  transform: scaleX(-1);
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .total-orders-card .trezo-card-content .chart {
+  right: auto;
+  left: -8px;
+}
+.rtl-enabled .pending-orders-card .trezo-card-content .chart {
+  right: auto;
+  left: -8px;
+}
+.rtl-enabled .revenue-card .trezo-card-content .chart {
+  right: auto;
+  left: -15px;
+}
+.rtl-enabled .expense-card .trezo-card-content .chart {
+  right: auto;
+  left: -8px;
+}
+.rtl-enabled .top-selling-items-card .trezo-card-content .item .rating {
+  right: auto;
+  left: 3px;
+}
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td .action-dropdown-menu .dropdown-menu,
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td .action-dropdown-menu .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .patient-details-card .trezo-card-content ul li {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.rtl-enabled .patient-details-card .trezo-card-content ul li::before {
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .todays-schedule-card .trezo-card-content .calendar .header button i {
+  transform: scaleX(-1);
+}
+.rtl-enabled .todays-appointments-card .trezo-card-content .appointments-list {
+  padding-left: 0;
+  padding-right: 40px;
+}
+.rtl-enabled .todays-appointments-card .trezo-card-content .appointments-list .appointment-item .icon {
+  left: auto;
+  right: -40px;
+}
+.rtl-enabled .todays-appointments-card .trezo-card-content .appointments-list::before {
+  right: 12px;
+  left: auto;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 25px;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 25px;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 25px;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 25px;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .note ul {
+  padding-left: 0;
+  padding-right: 17px;
+}
+.rtl-enabled .prescriptions-card .trezo-card-content .signature {
+  padding-right: 0;
+  padding-left: 25px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 25px;
+}
+.rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 25px;
+}
+.rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 25px;
+}
+.rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 25px;
+}
+.rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .todays-schedule-card .trezo-card-content .calendar .header button i {
+  transform: scaleX(-1);
+}
+.rtl-enabled .todays-schedule-card .trezo-card-content .events-list .event-item {
+  direction: rtl;
+}
+.rtl-enabled .todays-schedule-card .trezo-card-content .events-list .event-item .shape {
+  right: auto !important;
+  transform: scaleX(-1);
+  left: 0;
+}
+.rtl-enabled .new-bookings-card .trezo-card-content .icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+.rtl-enabled .check-in-card .trezo-card-content .icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+.rtl-enabled .check-out-card .trezo-card-content .icon {
+  margin-left: 0;
+  margin-right: auto;
+}
+.rtl-enabled .recent-bookings-card .v-card-header .menu-btn span {
+  padding-right: 0;
+  padding-left: 23px;
+}
+.rtl-enabled .recent-bookings-card .trezo-card-content .calendar .header button i {
+  transform: scaleX(-1);
+}
+.rtl-enabled .recent-bookings-card .trezo-card-content .bookings-list .room-item {
+  direction: rtl;
+}
+.rtl-enabled .recent-bookings-card .trezo-card-content .bookings-list .room-item .link-btn {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .recent-bookings-card .trezo-card-content .bookings-list .room-item .link-btn i {
+  transform: scaleX(-1);
+}
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px !important;
+  padding-left: 0 !important;
+}
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px !important;
+  padding-left: 0 !important;
+}
+.rtl-enabled .popular-rooms-card .trezo-card-content .image .trezo-badge {
+  right: auto;
+  left: 10px;
+}
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.rtl-enabled .re-agent-welcome-card .trezo-card-content .text-lg-end {
+  text-align: left !important;
+}
+.rtl-enabled .top-channels-card .trezo-card-content ul li .circle-progress-bar .percentage {
+  transform: translateY(-50%) translateX(-90%);
+}
+.rtl-enabled .recent-clients-card .trezo-card-content ul li .image {
+  padding-right: 0;
+  padding-left: 2px;
+}
+.rtl-enabled .recent-clients-card .trezo-card-content ul li .image .active-status {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .recent-clients-card .trezo-card-content ul li .link-btn {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .my-featured-listings-card .trezo-card-content .image .trezo-badge {
+  right: 10px;
+  left: auto;
+}
+.rtl-enabled .my-featured-listings-card .trezo-card-content .content {
+  direction: rtl;
+}
+.rtl-enabled .my-featured-listings-card .trezo-card-content .content ul li {
+  padding-left: 0;
+  padding-right: 23px;
+}
+.rtl-enabled .my-featured-listings-card .trezo-card-content .content ul li i {
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table thead tr th:first-child,
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table thead tr th:first-child {
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table thead tr th:last-child,
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table thead tr th:last-child {
+  padding-right: 20px !important;
+  padding-left: 0 !important;
+}
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table tbody tr td:first-child,
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+  padding-left: 20px !important;
+  padding-right: 0 !important;
+}
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table tbody tr td:last-child,
+.rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+  padding-right: 20px !important;
+  padding-left: 0 !important;
+}
+.rtl-enabled .cards-with-amount-card .trezo-card-content .chart {
+  margin-left: 0;
+  margin-right: -10px;
+}
+.rtl-enabled .daily-limit-card .trezo-card-content:nth-child(2) .shape {
+  transform: scaleX(-1);
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .quick-transfer-card .trezo-card-content form .form-group .send-btn {
+  right: auto;
+  left: 0;
+}
+.rtl-enabled .room-details-card .trezo-card-content .author-info ul li {
+  margin-right: 0;
+  margin-left: 20px;
+  padding-left: 0;
+  padding-right: 25px;
+}
+.rtl-enabled .room-details-card .trezo-card-content .author-info ul li i {
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .property-details-images-card .trezo-card-content .trezo-badge {
+  left: 15px;
+  right: auto;
+}
+.rtl-enabled .property-details-card .trezo-card-content .location {
+  padding-left: 0;
+  padding-right: 23px;
+}
+.rtl-enabled .property-details-card .trezo-card-content .location i {
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .property-details-card .trezo-card-content .info ul li {
+  margin-right: 0;
+  margin-left: 20px;
+  padding-left: 0;
+  padding-right: 24px;
+}
+.rtl-enabled .property-details-card .trezo-card-content .info ul li i {
+  left: auto;
+  right: 0;
+}
+.rtl-enabled .property-details-card .trezo-card-content .info ul li:last-child {
+  margin-left: 0;
+}
+.rtl-enabled .property-details-card .trezo-card-content .amenities-list .item {
+  padding-left: 0;
+  padding-right: 22px;
+}
+.rtl-enabled .property-details-card .trezo-card-content .amenities-list .item i {
+  left: auto;
+  right: -3px;
+}
 
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
@@ -11137,6 +13480,429 @@ Custom Padding & Margin Area Style
     left: 10px;
     right: auto !important;
   }
+  .rtl-enabled .linkedin-net-followers-card .trezo-card-content .funfacts-list li {
+    margin-left: 15px;
+    margin-right: 0;
+  }
+  .rtl-enabled .facebook-campaign-card .trezo-card-content .title {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+  .rtl-enabled .facebook-campaign-card .trezo-card-content .chart {
+    padding-left: 0;
+  }
+  .rtl-enabled .facebook-campaign-card .trezo-card-content .chart .items {
+    padding-left: 0;
+    padding-right: 17px;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .bs-welcome-card .trezo-card-content .content {
+    margin-left: 0;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .calendar {
+    margin-left: 0;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list {
+    margin-right: 0;
+    margin-left: -17px !important;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item {
+    margin-right: 17px;
+    margin-left: 0;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .icon {
+    left: auto;
+    right: -28px;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item::before {
+    left: auto;
+    right: -17px;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .restaurant-welcome-card .trezo-card-content .content {
+    margin-left: 0;
+  }
+  .rtl-enabled .restaurant-welcome-card .trezo-card-content .image {
+    margin-left: auto;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .signature {
+    padding-left: 0;
+    margin-right: 0;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .todays-schedule-card .trezo-card-content .events-list::before {
+    margin-right: 0;
+    margin-left: 17px;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px;
+    padding-left: 0;
+  }
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 17px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 17px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 17px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .latest-transactions-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 17px !important;
+    padding-left: 0 !important;
+  }
 }
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -11171,6 +13937,408 @@ Custom Padding & Margin Area Style
   .rtl-enabled .hospital-earnings-card .hospital-earnings-card-content .content .item .chart {
     left: 15px;
     right: auto !important;
+  }
+  .rtl-enabled .linkedin-net-followers-card .trezo-card-content .funfacts-list li {
+    margin-left: 0;
+  }
+  .rtl-enabled .facebook-campaign-card .trezo-card-content .chart {
+    padding-right: 0;
+    padding-left: 150px;
+  }
+  .rtl-enabled .facebook-campaign-card .trezo-card-content .chart .items {
+    padding-right: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .my-recent-patients-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-lab-reports-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list {
+    margin-right: 0;
+    margin-left: -20px !important;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item .icon {
+    left: auto;
+    right: -31px;
+  }
+  .rtl-enabled .recent-appointments-card .trezo-card-content .appointments-list .appointment-item::before {
+    left: auto;
+    right: -20px;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .top-stylist-performance-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .top-customers-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .sa-top-selling-products-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-sales-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .stock-alerts-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .staff-performance-scores-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .tickets-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .customer-ratings-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .recent-orders-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .patients-list-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rtl-enabled .prescriptions-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rtl-enabled .write-prescription-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .menus-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .menus-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .todays-schedule-card .trezo-card-content .events-list::before {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .upcoming-vip-reservations-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px;
+    padding-right: 0;
+  }
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .customer-reviews-card .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px;
+    padding-left: 0;
+  }
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table table thead tr th:first-child,
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table .table thead tr th:first-child {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table table thead tr th:last-child,
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table .table thead tr th:last-child {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table table tbody tr td:first-child,
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table .table tbody tr td:first-child {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+  }
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table table tbody tr td:last-child,
+  .rtl-enabled .latest-transactions-card.component-rtl-enabled .trezo-card-content .basic-table .table tbody tr td:last-child {
+    padding-right: 20px !important;
+    padding-left: 0 !important;
   }
 }
 /* Min width 768px to Max width 991px */
@@ -11299,6 +14467,9 @@ Custom Padding & Margin Area Style
   .rtl-enabled .market-price-statistics-card .v-card-header .subtitle .statistics-buttons-list {
     margin-left: 10px !important;
     margin-right: 0 !important;
+  }
+  .rtl-enabled .restaurant-welcome-card .trezo-card-content .content {
+    margin-left: 0;
   }
 }
 /* Min width 992px to Max width 1199px */
@@ -11552,5 +14723,15 @@ Custom Padding & Margin Area Style
   .rtl-enabled .coming-soon-area .trezo-form .coming-soon-content {
     padding-left: 0 !important;
     padding-right: 120px;
+  }
+  .rtl-enabled .doctor-welcome-card {
+    padding-left: 80px;
+    padding-right: 105px;
+  }
+  .rtl-enabled .bs-welcome-card .trezo-card-content .content {
+    margin-left: 0;
+  }
+  .rtl-enabled .restaurant-welcome-card .trezo-card-content .content {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=styles.css.map */

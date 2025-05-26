@@ -131,7 +131,7 @@ const ProductDetails: React.FC = () => {
                 in stock
               </span>
 
-              <h6 className="font-medium text-lg leading-[1.5] mb-[16px]">
+              <h6 className="!font-medium !text-lg !leading-[1.5] !mb-[16px]">
                 Apple MacBook Pro 16.2&quot; with Liquid Retina XDR Display, M2 Max
                 Chip with 12-Core CPU
               </h6>

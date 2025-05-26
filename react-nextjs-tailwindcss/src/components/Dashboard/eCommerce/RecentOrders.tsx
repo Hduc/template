@@ -152,7 +152,7 @@ const RecentOrders: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex sm:items-center sm:justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Recent Orders</h5>
+            <h5 className="!mb-0">Recent Orders</h5>
           </div>
 
           <div className="trezo-card-subtitle sm:flex sm:items-center">
@@ -260,7 +260,7 @@ const RecentOrders: React.FC = () => {
                     </td>
                     <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                       <span
-                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs ${order.statusClass}`}
+                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs dark:bg-[#15203c] ${order.statusClass}`}
                       >
                         {order.status}
                       </span>
@@ -272,7 +272,7 @@ const RecentOrders: React.FC = () => {
           </div>
 
           <div className="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {displayedOrders.length} of {orders.length} results
             </p>
 
@@ -297,7 +297,7 @@ const RecentOrders: React.FC = () => {
                     className={`w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border dark:border-[#172036] ${
                       currentPage === index + 1
                         ? "border-primary-500 bg-primary-500 text-white"
-                        : ""
+                        : "border-gray-100"
                     }`}
                     onClick={() => handlePageChange(index + 1)}
                   >

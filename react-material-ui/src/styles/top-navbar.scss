@@ -2,12 +2,16 @@
     left: 285px !important;
     right: 25px !important;
     transition: var(--transition) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
     &.sticky {
         box-shadow: #959da51f 0 8px 24px;
     }
+    .logos {
+        display: none;
+    }
 }
-
 
 // dark-theme style
 .dark-theme {

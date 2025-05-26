@@ -996,4 +996,38 @@
         }
     }
 
+    // pos system & podcast dashboard
+    .select-dropdown {
+        right: 0 !important;
+        left: -10px;
+
+        .dropdown-item {
+            text-align: right;
+        }
+    }
+    .right-for-rtl {
+        right: auto !important;
+        left: -10px;
+    }
+    .position-for-mobile {
+        left: auto !important;
+        right: 0 !important;
+
+        ul.ps-0.mb-0.list-unstyled.last-child-none {
+            margin-left: 0 !important;
+            margin-right: -110px !important;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .position-for-mobile {
+            position: initial !important; 
+
+            ul.ps-0.mb-0.list-unstyled.last-child-none {
+                margin-right: -120px !important;
+            }
+        }
+    }
+    // End pos system & podcast dashboard
+
 }

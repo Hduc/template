@@ -1,0 +1,117 @@
+<mat-card
+    class="recently-played-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0 fw-semibold">
+                Recently Played
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <a routerLink="." mat-button class="view-all-btn p-0 d-inline-block">
+                View All
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-two">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Podcast Column -->
+                    <ng-container matColumnDef="podcast">
+                        <td mat-cell *matCellDef="let element">
+                            <div class="employee-info d-flex align-items-center">
+                                <a href="#" target="_blank" class="play-btn lh-1 text-primary">
+                                    <i class="ri-play-large-fill"></i>
+                                </a>
+                                <div class="img">
+                                    <img [src]="element.podcast.img" alt="podcast-image">
+                                </div>
+                                <div>
+                                    <span class="d-block fw-medium">
+                                        {{element.podcast.name}}
+                                    </span>
+                                    <span class="d-block text-body">
+                                        {{element.podcast.email}}
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Last Play Column -->
+                    <ng-container matColumnDef="lastPlay">
+                        <td mat-cell *matCellDef="let element" class="text-body">
+                            {{element.lastPlay}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Play Times Column -->
+                    <ng-container matColumnDef="playTimes">
+                        <td mat-cell *matCellDef="let element" class="text-body">
+                            <span class="play-times d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    headset_mic
+                                </i>
+                                {{element.playTimes}}
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!-- Bookmark Column -->
+                    <ng-container matColumnDef="bookmark">
+                        <td mat-cell *matCellDef="let element">
+                            <button type="button" class="bookmark-btn lh-1 p-0 border-0 bg-transparent" mat-button>
+                                <i class="{{element.bookmark}}"></i>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <!-- Total Time Column -->
+                    <ng-container matColumnDef="totalTime">
+                        <td mat-cell *matCellDef="let element" class="text-body">
+                            {{element.totalTime}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="dot-menu p-0 d-inline-block border-radius-0">
+                                <i class="{{element.action}}"></i>
+                            </button>
+                            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                                    <li>
+                                        <button mat-menu-item class="with-icon">
+                                            <i class="ri-add-fill"></i>
+                                            Add to Playlist
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item class="with-icon">
+                                            <i class="ri-multi-image-line"></i>
+                                            Go to Album
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button mat-menu-item class="with-icon">
+                                            <i class="ri-dropbox-line"></i>
+                                            View Credits
+                                        </button>
+                                    </li>
+                                </ul>
+                            </mat-menu>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

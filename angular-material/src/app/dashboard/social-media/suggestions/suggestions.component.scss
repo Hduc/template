@@ -1,0 +1,174 @@
+.suggestions-card {
+    .mat-mdc-card-header {
+        margin-bottom: 20px;
+        
+        h5 {
+            font-size: 20px;
+        }
+        p {
+            color: #8695AA;
+            font-size: var(--fontSize);
+        }
+    }
+    .mat-mdc-card-content {
+        margin: {
+            left: -25px;
+            right: -25px;
+        };
+        ul {
+            li {
+                margin-bottom: 10.7px;
+                border-bottom: 1px solid #F6F7F9;
+                padding: {
+                    left: 25px;
+                    right: 25px;
+                    bottom: 10.7px;
+                };
+                .user {
+                    gap: 10px;
+
+                    img {
+                        width: 44px;
+                    }
+                    span {
+                        &.text-xs {
+                            margin-top: 6px;
+                        }
+                    }
+                }
+                .action {
+                    gap: 5px;
+
+                    button {
+                        width: 34px;
+                        height: 34px;
+                        font-size: 16px;
+                        transition: .2s;
+                        color: var(--orangeColor);
+                        border: 1px solid #FFC8C0;
+    
+                        &:hover {
+                            border-color: rgba(0, 92, 187, 0.08);
+                        }
+                        &:nth-child(2) {
+                            color: var(--primaryColor);
+                            border-color: #C2CDFF;
+    
+                            &:hover {
+                                border-color: rgba(0, 92, 187, 0.08);
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom-width: 0;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            ul {
+                li {
+                    border-bottom-color: var(--borderColor);
+
+                    .action {
+                        button {
+                            border-color: var(--borderColor);
+        
+                            &:hover {
+                                border-color: rgba(0, 92, 187, 0.08);
+                            }
+                            &:nth-child(2) {
+                                border-color: var(--borderColor);
+        
+                                &:hover {
+                                    border-color: rgba(0, 92, 187, 0.08);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .suggestions-card {
+        .mat-mdc-card-header {
+            h5 {
+                font-size: 16px;
+            }
+            p {
+                margin-top: 2px;
+            }
+        }
+        .mat-mdc-card-content {
+            margin: {
+                left: -17px;
+                right: -17px;
+            };
+            ul {
+                li {
+                    padding: {
+                        left: 17px;
+                        right: 17px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .suggestions-card {
+        .mat-mdc-card-content {
+            margin: {
+                left: -20px;
+                right: -20px;
+            };
+            ul {
+                li {
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .suggestions-card {
+        .mat-mdc-card-header {
+            h5 {
+                font-size: 18px;
+            }
+            p {
+                margin-top: 1px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

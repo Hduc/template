@@ -132,7 +132,7 @@ const SalesAnalytics: React.FC = () => {
       <div className="trezo-card bg-gray-50 dark:bg-[#0c1427] rounded-md border border-gray-100 dark:border-[#172036]">
         <div className="trezo-card-header py-[15px] px-[20px] md:px-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-md font-medium">Sales Analytics</h5>
+            <h5 className="!mb-0 !text-md !font-medium">Sales Analytics</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -181,7 +181,7 @@ const SalesAnalytics: React.FC = () => {
                 </div>
                 <div>
                   <span className="block">Sales Over Time</span>
-                  <h4 className="mb-0 font-semibold mt-px">$120,000</h4>
+                  <h4 className="!mb-0 !font-semibold !mt-px">$120,000</h4>
                 </div>
                 <span className="px-[8px] py-[3px] inline-block bg-success-100 dark:bg-[#15203c] text-success-700 rounded-md ltr:ml-[5px] rtl:mr-[5px]">
                   +9.1%
@@ -213,7 +213,7 @@ const SalesAnalytics: React.FC = () => {
               <TopPerforming />
             </div>
 
-            <h5 className="font-medium text-md mb-[20px]">
+            <h5 className="!font-medium !text-md !mb-[20px]">
               Sales by Category/Products{" "}
               <span className="text-gray-500 dark:text-gray-400 text-base">
                 (Top Performing)
@@ -227,7 +227,7 @@ const SalesAnalytics: React.FC = () => {
                 </div>
                 <div>
                   <span className="block mb-[2px]">Electronics</span>
-                  <h4 className="mb-0 font-medium text-[18px] sm:text-[20px]">$35,000</h4>
+                  <h4 className="!mb-0 !font-medium !text-[18px] sm:!text-[20px]">$35,000</h4>
                 </div>
               </div>
 
@@ -237,7 +237,7 @@ const SalesAnalytics: React.FC = () => {
                 </div>
                 <div>
                   <span className="block mb-[2px]">Clothing</span>
-                  <h4 className="mb-0 font-medium text-[18px] sm:text-[20px]">$25,000</h4>
+                  <h4 className="!mb-0 !font-medium !text-[18px] sm:!text-[20px]">$25,000</h4>
                 </div>
               </div>
 
@@ -247,7 +247,7 @@ const SalesAnalytics: React.FC = () => {
                 </div>
                 <div>
                   <span className="block mb-[2px]">Home Goods</span>
-                  <h4 className="mb-0 font-medium text-[18px] sm:text-[20px]">$18,000</h4>
+                  <h4 className="!mb-0 !font-medium !text-[18px] sm:!text-[20px]">$18,000</h4>
                 </div>
               </div>
             </div>

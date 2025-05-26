@@ -723,6 +723,102 @@
             display: none;
         }
     }
+    &.popular-hosts {
+        .table-responsive {
+            .table {
+                tbody {
+                    tr {
+                        td {
+                            border-color: #F6F7F9;
+                            padding-left: 12px;
+                            padding-right: 12px;
+                        }
+                        &:last-child {
+                            td {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.recently-played {
+        .table-responsive {
+            .table {
+                tbody {
+                    tr {
+                        td {
+                            border-color: #F6F7F9;
+                            padding: 12px 12px;
+                        }
+                        &:last-child {
+                            td {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.top-podcasts {
+        .table-responsive {
+            .table {
+                thead {
+                    tr {
+                        th {
+                            padding-left: 18px;
+                            padding-right: 18px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            border-color: #F6F7F9;
+                            padding-left: 18px;
+                            padding-right: 18px;
+                        }
+                        &:last-child {
+                            td {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.type-prescription {
+        &.style-three {
+            .table-responsive {
+                .table {
+                    tbody {
+                        tr {
+                            td {
+                                padding-top: 24px;
+                                padding-bottom: 24px;
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.teachers-table {
+        &.style-three {
+            .table-responsive .table tbody tr  {
+                &:last-child {
+                    td {
+                        border: none;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .table-src-form {
@@ -848,6 +944,35 @@
     }
 }
 
+/* Max width 418px */
+@media only screen and (max-width: 418px) {
+
+    /* Analytics Dashboard CSS */
+    .default-table-area {
+        &.browser-leads {
+            &.by-keywords {
+                &.style-two {
+                    .table-responsive {
+                        .table {
+                            &.for-mobile-width {
+                                width: 364px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.popular-hosts {
+            .table-responsive {
+                .table {
+                    width: 392px !important;
+                }
+            }
+        }
+    }
+    
+}
+
 /* Max width 490px */
 @media only screen and (max-width: 490px) {
 
@@ -898,7 +1023,7 @@
  
 }
 
-@media only screen and (max-width : 576px) {
+@media only screen and (max-width: 576px) {
 
     .default-table-area {
         &.top-selling-products {
@@ -941,6 +1066,16 @@
                 width: 522px;
             }
         }
+        &.top-podcasts {
+            .table {
+                width: 550px;
+            }
+        }
+        &.type-prescription {
+            .table {
+                width: 552px;
+            }
+        }
     }
     .table-src-form {
         margin-right: 10px;
@@ -979,7 +1114,7 @@
     
 }
 
-@media only screen and (max-width : 685px) {
+@media only screen and (max-width: 685px) {
 
     .default-table-area {
         &.recent-orders {
@@ -1037,8 +1172,23 @@
     
 }
 
+@media only screen and (max-width: 768px) {
+
+    .only-for-responsive-table {
+        table {
+            width: 704px !important;
+        }
+    }
+    .recently-played {
+        table {
+            width: 742px !important;
+        }
+    }
+
+}
+
 /* Min width 768px to Max width 992px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
     .default-table-area {
         &.email-list {
@@ -1104,7 +1254,7 @@
     }
 }
 
-@media only screen and (max-width : 685px) {
+@media only screen and (max-width: 685px) {
 
     .default-table-area {
         &.recent-orders {
@@ -1145,8 +1295,37 @@
 
 }
 
+@media only screen and (max-width: 900px) {
+    .default-table-area {
+        &.campaigns-table {
+            &.style-two {
+                &.top-customers-table {
+                    .table {
+                        width: 836px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1405px) {
+
+    .default-table-area {
+        &.style-three {
+            &.recently-played {
+                .table {
+                    width: 730px;
+                }
+            }
+        }
+    }
+    
+}
+
+
 /* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px)  {
+@media only screen and (min-width: 992px) and (max-width: 1199px)  {
 
     .default-table-area {
         &.recent-leads {
@@ -1185,7 +1364,7 @@
 }
 
 /* Min width 1200px to Max width 1399px */
-@media only screen and (min-width : 1200px) and (max-width : 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
     .default-table-area {
         &.top-selling-products {
@@ -1203,11 +1382,11 @@
                 width: 690px;
             }
         }
-        &.to-do-list {
-            .table {
-                width: 738.66px;
-            }
-        }
+        // &.to-do-list {
+        //     .table {
+        //         width: 738.66px;
+        //     }
+        // }
         &.recent-customer-ratings {
             .table {
                 width: 551.5px;
@@ -1243,7 +1422,7 @@
 }
 
 /* Min width 1400px to Max width 1500px */
-@media only screen and (min-width : 1400px) and (max-width : 1550px) {
+@media only screen and (min-width: 1400px) and (max-width: 1550px) {
 
     .crypto-th-table {
         width: 715px;
@@ -1273,9 +1452,35 @@
                 width: 1300px !important;
             }
         }
+        &.recent-order-list-table {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 1061px !important;
+                    }
+                }
+            }
+        }
+        &.recent-order-list-table {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 1061px !important;
+                    }
+                }
+            }
+        }
+        &.customer-ratings-table {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 1061px !important;
+                    }
+                }
+            }
+        }
     }
     
-
 }
 
 @media only screen and (max-width: 1550px) {

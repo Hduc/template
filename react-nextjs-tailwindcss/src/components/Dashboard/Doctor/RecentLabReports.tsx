@@ -68,7 +68,7 @@ const RecentLabReports: React.FC = () => {
     <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0">Recent Lab Reports</h5>
+          <h5 className="!mb-0">Recent Lab Reports</h5>
         </div>
       </div>
       <div className="trezo-card-content">
@@ -77,7 +77,7 @@ const RecentLabReports: React.FC = () => {
             <tbody className="text-black dark:text-white">
               {labReports.map((report) => (
                 <tr key={report.id}>
-                  <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[11px] ltr:first:pl-0 rtl:first:pr-0 border-b border-primary-50 dark:border-[#172036] ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
+                  <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[12.4px] ltr:first:pl-0 rtl:first:pr-0 border-b border-primary-50 dark:border-[#172036] ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
                     <div className="flex items-center gap-[10px]">
                       <div className="w-[28px]">
                         <Image

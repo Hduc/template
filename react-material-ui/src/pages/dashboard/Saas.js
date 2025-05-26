@@ -17,21 +17,21 @@ const Saas = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={9}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 9 }}>
           <TodaysPayment />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={3}>
-          <Grid container columnSpacing={{ xs: 3 }}>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 3 }}>
+          <Grid container columnSpacing={{ xs: 3 }} justifyContent={"center"}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 12 }}>
               <ActiveUser />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 12 }}>
               <Revenue />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 12 }}>
               <Conversion />
             </Grid>
           </Grid>
@@ -39,41 +39,41 @@ const Saas = () => {
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <TopRefers />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 8 }}>
           <ActiveUsers />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={9}>
+        <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 9 }}>
           <LatestTransactions />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 3 }}>
           <UpgradePlans />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }}>
           <ActiveUsersList />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }}>
           <ProductTradeConditions />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 8, xl: 8 }}>
           <GrossRevenue />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 4, xl: 4 }}>
           <SalesByCountry />
         </Grid>
       </Grid>

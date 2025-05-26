@@ -13,20 +13,31 @@ const Navbar: React.FC = () => {
     setToggleNavbar(!isToggleNavbar);
   };
 
+  // Sticky Menu
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Sticky Menu Logic
   useEffect(() => {
-    let elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
-        elementId?.classList.add("sticky");
-      } else {
-        elementId?.classList.remove("sticky");
-      }
-    });
-  });
+    const handleScroll = () => {
+      const shouldBeSticky = window.scrollY > 170;
+      setIsSticky(shouldBeSticky);
+    };
+
+    // Check scroll position on mount
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <div id="navbar" className="fp-navbar-area transition">
+      <div id="navbar" className={`fp-navbar-area transition ${isSticky ? "sticky" : ""}`}>
         <div className="container">
           <nav className="navbar navbar-expand-lg">
             <Link className="navbar-brand" href="/">

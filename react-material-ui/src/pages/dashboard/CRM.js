@@ -15,49 +15,49 @@ const CRM = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <RevenueGrowth />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <LeadConversion />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TotalOrders />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <AnnualProfit />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7, xl: 8 }}>
           <BalanceOverview />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 4 }}>
           <LeadsBySource />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 4 }}>
           <TopPerformers />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7, xl: 8 }}>
           <RecentLeads />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7, xl: 8 }}>
           <SalesReport />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={5} lg={5} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 4 }}>
           <TopProductsBySales />
         </Grid>
       </Grid>

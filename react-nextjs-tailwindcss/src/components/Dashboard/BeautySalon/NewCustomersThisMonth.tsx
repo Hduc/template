@@ -9,7 +9,7 @@ const NewCustomersThisMonth: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <span className="block">New Customers This Month</span>
-          <h2 className="leading-none text-2xl md:text-3xl mt-[6px] mb-[8px]">
+          <h2 className="!leading-none !text-2xl md:!text-3xl !mt-[6px] !mb-[8px]">
             14.5K
           </h2>
           <span className="inline-block text-xs rounded-[30px] px-[10px] border border-success-300 text-success-700 bg-success-100 dark:border-[#15203c] dark:bg-[#15203c]">

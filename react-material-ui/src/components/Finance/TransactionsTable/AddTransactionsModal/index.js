@@ -117,7 +117,7 @@ const AddTransactionsModal = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -146,7 +146,7 @@ const AddTransactionsModal = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -164,18 +164,18 @@ const AddTransactionsModal = () => {
                         <DatePicker
                           sx={{
                             width: "100%",
-
                             "& fieldset": {
-                              border: "1px solid #D5D9E2",
+                              border: "1px solid rgba(0, 0, 0, 0.23)",
                               borderRadius: "7px",
                             },
                           }}
+                          className="input-date-picker"
                         />
                       </LocalizationProvider>
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -204,7 +204,7 @@ const AddTransactionsModal = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -233,7 +233,7 @@ const AddTransactionsModal = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -263,7 +263,7 @@ const AddTransactionsModal = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -293,7 +293,7 @@ const AddTransactionsModal = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -324,7 +324,7 @@ const AddTransactionsModal = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -354,7 +354,7 @@ const AddTransactionsModal = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -377,7 +377,7 @@ const AddTransactionsModal = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
@@ -388,7 +388,7 @@ const AddTransactionsModal = () => {
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -396,6 +396,7 @@ const AddTransactionsModal = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

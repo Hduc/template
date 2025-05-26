@@ -66,7 +66,7 @@ export class OnTimeDeliveryService {
                         markers: {
                             size: 6,
                             offsetX: -2,
-                            offsetY: .5,
+                            offsetY: 0,
                             shape: 'square'
                         }
                     }

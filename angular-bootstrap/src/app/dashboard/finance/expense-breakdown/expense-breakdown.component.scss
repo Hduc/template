@@ -5,6 +5,21 @@
         }
     }
 }
+::ng-deep {
+    .expense-breakdown-card {
+        &.component-dark-theme {
+            .trezo-card-content {
+                .chart {
+                    .apexcharts-canvas {
+                        .apexcharts-text {
+                            fill: var(--whiteColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {}

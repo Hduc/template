@@ -1,11 +1,12 @@
 "use client";
- 
+
+import { Container } from "react-bootstrap";
 
 const PageBanner = ({ pageTitle }) => {
   return (
     <>
       <div className="page-banner-area">
-        <div className="container position-relative z-1">
+        <Container className="position-relative z-1">
           <div className="banner-content text-center mb-0">
             <h1 className="fs-60 mb-0">{pageTitle}</h1>
           </div>
@@ -24,7 +25,7 @@ const PageBanner = ({ pageTitle }) => {
             width={685}
             height={685}
           />
-        </div>
+        </Container>
       </div>
     </>
   );

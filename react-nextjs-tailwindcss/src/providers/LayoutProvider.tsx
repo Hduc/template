@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import SidebarMenu from "@/components/Layout/SidebarMenu";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
-// import ControlPanel from "@/components/Layout/ControlPanel";
 
 interface LayoutProviderProps {
   children: ReactNode;
@@ -55,19 +54,6 @@ const LayoutProvider: React.FC<LayoutProviderProps> = ({ children }) => {
           {!isAuthPage && <Footer />}
         </div>
       </div>
-
-      {/* <div
-        style={{
-          position: "fixed",
-          bottom: "15px",
-          right: "15px",
-          zIndex: "-5",
-          opacity: 0,
-          visibility: "hidden",
-        }}
-      >
-        <ControlPanel />
-      </div> */}
     </>
   );
 };

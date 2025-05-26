@@ -34,7 +34,7 @@
 }
 
 /* dark-theme style */
-.dark-theme .searchBox .inputSearch {
+[class="dark-theme"] .searchBox .inputSearch {
      background-color: var(--darkSecondaryColor);
      border: 1px solid var(--darkSecondaryColor);
      color: var(--whiteColor);

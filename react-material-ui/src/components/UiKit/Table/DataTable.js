@@ -69,7 +69,8 @@ const DataTable = () => {
             initialState={{ pagination: { paginationModel } }}
             pageSizeOptions={[5, 10]}
             checkboxSelection
-            sx={{ border: 0, fontSize: "14px" }}	
+            sx={{ border: 0, fontSize: "14px" }}
+            className="data-grid-table bg-white"
           />
         </div>
       </Card>

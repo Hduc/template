@@ -24,7 +24,7 @@ const EventDetailsContent: React.FC = () => {
           <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Event Details</h5>
+                <h5 className="!mb-0">Event Details</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -143,7 +143,7 @@ const EventDetailsContent: React.FC = () => {
           <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Event Info</h5>
+                <h5 className="!mb-0">Event Info</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -173,7 +173,7 @@ const EventDetailsContent: React.FC = () => {
                   Networking Reception
                 </li>
               </ul>
-              <h5 className="mt-[23px] mb-[16px] text-lg">
+              <h5 className="!mt-[23px] !mb-[16px] !text-lg">
                 Registration Information
               </h5>
               <ul>
@@ -194,7 +194,7 @@ const EventDetailsContent: React.FC = () => {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">About This Event</h5>
+                <h5 className="!mb-0">About This Event</h5>
               </div>
             </div>
             <div className="trezo-card-content">

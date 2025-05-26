@@ -22,7 +22,10 @@
 </div>
 
 <!-- Event Details Image -->
-<div class="trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none p-0">
+<div
+    class="trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none p-0"
+    [class.component-card-without-border-radius]="themeService.isCardWithoutBorderRadius()"
+>
     <div class="trezo-card-content">
         <img src="images/events/event-details.jpg" class="border-radius" alt="event-details-image">
     </div>

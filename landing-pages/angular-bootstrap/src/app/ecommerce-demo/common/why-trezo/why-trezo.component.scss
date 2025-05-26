@@ -1,0 +1,180 @@
+.why-trezo-image {
+    margin-right: -10px;
+}
+.why-trezo-content {
+    .sub-title {
+        padding: 4.5px 15px;
+        margin-bottom: 15px;
+        border-radius: 100px;
+        color: var(--primaryColor);
+        background-color: #ecf0ff;
+    }
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+    }
+    .features-list {
+        margin-top: -5px;
+
+        .item {
+            margin-top: 50px;
+
+            .number {
+                font-size: 64px;
+                color: var(--blackColor);
+            }
+            .dash {
+                background: #eceef2;
+                max-width: 200px;
+                margin-top: -9px;
+                height: 1px;
+            }
+            span {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.component-dark {
+    .why-trezo-content {
+        .sub-title {
+            background-color: rgba(214, 203, 203, .1);
+        }
+        .features-list {
+            .item {
+                .number {
+                    color: var(--whiteColor);
+                }
+                .dash {
+                    background: rgba(255, 255, 255, .15);
+                }
+            }
+        }
+    }
+}
+.component-rtl {
+    .why-trezo-image {
+        margin: {
+            left: -10px;
+            right: 0;
+        };
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .why-trezo-image {
+        margin: {
+            right: 0;
+            bottom: 25px;
+        };
+    }
+    .why-trezo-content {
+        .sub-title {
+            margin-bottom: 12px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: normal;
+        }
+        .features-list {
+            margin-top: -15px;
+    
+            .item {
+                margin-top: 20px;
+    
+                .number {
+                    font-size: 40px;
+                }
+                .dash {
+                    max-width: 100%;
+                    margin-top: -7px;
+                }
+                span {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .component-rtl {
+        .why-trezo-image {
+            margin-left: 0;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .why-trezo-image {
+        margin: {
+            right: 0;
+            bottom: 25px;
+        };
+    }
+    .why-trezo-content {
+        h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .features-list {
+            margin-top: -15px;
+    
+            .item {
+                margin-top: 30px;
+    
+                .number {
+                    font-size: 54px;
+                }
+                .dash {
+                    margin-top: -9px;
+                }
+            }
+        }
+    }
+    .component-rtl {
+        .why-trezo-image {
+            margin-left: 0;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .why-trezo-image {
+        margin-right: 0;
+    }
+    .why-trezo-content {
+        h2 {
+            font-size: 36px;
+        }
+        .features-list {
+            margin-top: -15px;
+    
+            .item {
+                margin-top: 40px;
+            }
+        }
+    }
+    .component-rtl {
+        .why-trezo-image {
+            margin-left: 0;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

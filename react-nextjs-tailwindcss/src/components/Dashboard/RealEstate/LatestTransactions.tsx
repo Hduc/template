@@ -143,7 +143,7 @@ const LatestTransactions: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Latest Transactions</h5>
+            <h5 className="!mb-0">Latest Transactions</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -261,7 +261,7 @@ const LatestTransactions: React.FC = () => {
 
                     <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] md:ltr:first:pl-[25px] md:rtl:first:pr-[25px] ltr:first:pr-0 rtl:first:pl-0 border-b border-gray-100 dark:border-[#172036]">
                       <span
-                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs ${
+                        className={`px-[8px] py-[3px] inline-block rounded-sm font-medium text-xs dark:bg-[#15203c] ${
                           transaction.status === "Completed"
                             ? "bg-success-50 dark:bg-[#15203c] text-success-600"
                             : transaction.status === "Pending"
@@ -346,7 +346,7 @@ const LatestTransactions: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {startIndex + 1} to{" "}
               {Math.min(endIndex, transactions.length)} of {transactions.length}{" "}
               results

@@ -35,7 +35,7 @@ import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
 import CloseIcon from "@mui/icons-material/Close";
 import PropTypes from "prop-types";
-import Select, { SelectChangeEvent } from "@mui/material/Select"; 
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 // Modal
 interface BootstrapDialogTitleProps {
@@ -380,6 +380,15 @@ const UsersTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter(
+    (row) =>
+      row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.userName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Modal
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -426,7 +435,7 @@ const UsersTable: React.FC = () => {
         >
           <Box
             component="form"
-            className='t-search-form'
+            className="t-search-form"
             sx={{
               width: { sm: "265px" },
             }}
@@ -436,8 +445,10 @@ const UsersTable: React.FC = () => {
             </label>
             <input
               type="text"
-              className='t-input'
+              className="t-input"
               placeholder="Search user here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -568,7 +579,7 @@ const UsersTable: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -734,7 +745,7 @@ const UsersTable: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={10} />
+                    <TableCell className="border-bottom" colSpan={10} />
                   </TableRow>
                 )}
               </TableBody>
@@ -819,7 +830,7 @@ const UsersTable: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -846,7 +857,7 @@ const UsersTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -873,7 +884,7 @@ const UsersTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -909,7 +920,7 @@ const UsersTable: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -947,18 +958,18 @@ const UsersTable: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -966,6 +977,7 @@ const UsersTable: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

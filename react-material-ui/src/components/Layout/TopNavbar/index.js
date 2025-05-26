@@ -6,7 +6,11 @@ import Notifications from "./Notifications";
 import Profile from "./Profile";
 import FullscreenButton from "./FullscreenButton";
 import AppsMenu from "./AppsMenu";
-import ChooseLanguage from "./ChooseLanguage"; 
+import ChooseLanguage from "./ChooseLanguage";
+import DarkMode from "./DarkMode";
+import ControlPanel from "../ControlPanel";
+import HorizontalNavbar from "./HorizontalNavbar";
+import { Link } from "react-router-dom";
 
 const TopNavbar = ({ toggleActive }) => {
   useEffect(() => {
@@ -37,64 +41,95 @@ const TopNavbar = ({ toggleActive }) => {
           borderRadius: "0 0 15px 15px",
           py: { xs: "15px", sm: "3px" },
           width: "auto",
-          zIndex: "489", 
+          zIndex: "489",
         }}
         className="top-navbar"
       >
-        <Toolbar
-          sx={{
-            display: { xs: "block", sm: "flex" },
-            justifyContent: { xs: "center", sm: "space-between" },
-          }}
-        >
-          <Box
+        <Box className="top-navbar-content">
+          <Toolbar
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: { xs: "10px", sm: "5px", md: "10px" },
+              display: { xs: "block", sm: "flex" },
+              justifyContent: { xs: "center", sm: "space-between" },
             }}
           >
-            <Tooltip title="Hide/Show" arrow>
-              <IconButton
-                size="small"
-                edge="start"
-                color="inherit"
-                onClick={toggleActive}
-              >
-                <i className="material-symbols-outlined">menu</i>
-              </IconButton>
-            </Tooltip>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: { xs: "10px", sm: "5px", md: "15px" },
+              }}
+            >
+              <Box className="logos">
+                <Link to="/dashboard/ecommerce/" className="logo">
+                  <img
+                    src="/images/logo.svg"
+                    alt="logo"
+                    width={100}
+                    height={26}
+                  />
+                </Link>
 
-            {/* Search form */}
-            <SearchForm />
+                <Link to="/dashboard/ecommerce/" className="white-logo">
+                  <img
+                    src="/images/white-logo.svg"
+                    alt="logo"
+                    width={100}
+                    height={26}
+                  />
+                </Link>
+              </Box>
 
-            {/* AppsMenu */}
-            <AppsMenu />
-          </Box>
+              <Tooltip title="Hide/Show" arrow>
+                <IconButton
+                  size="small"
+                  edge="start"
+                  color="inherit"
+                  onClick={toggleActive}
+                  className="top-burger"
+                >
+                  <i className="material-symbols-outlined">menu</i>
+                </IconButton>
+              </Tooltip>
 
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: { xs: "8px", sm: "8px", lg: "15px" },
-              mt: { xs: "10px", sm: "0px" },
-            }}
-          >
-            {/* ChooseLanguage */}
-            <ChooseLanguage />
+              {/* Search form */}
+              <SearchForm />
 
-            {/* FullscreenButton */}
-            <FullscreenButton />
+              {/* AppsMenu */}
+              <AppsMenu />
+            </Box>
 
-            {/* Notifications */}
-            <Notifications />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: { xs: "8px", sm: "8px", lg: "15px" },
+                mt: { xs: "10px", sm: "0px" },
+              }}
+            >
+              {/* DarkMode */}
+              <DarkMode />
 
-            {/* Profile */}
-            <Profile /> 
-          </Box>
-        </Toolbar>
+              {/* ChooseLanguage */}
+              <ChooseLanguage />
+
+              {/* FullscreenButton */}
+              <FullscreenButton />
+
+              {/* Notifications */}
+              <Notifications />
+
+              {/* Profile */}
+              <Profile />
+
+              {/* ControlPanel */}
+              <ControlPanel />
+            </Box>
+          </Toolbar>
+        </Box>
+
+        <HorizontalNavbar />
       </AppBar>
     </div>
   );

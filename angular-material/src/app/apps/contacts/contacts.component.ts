@@ -1,12 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { NgIf } from '@angular/common';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { RouterLink } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { SelectionModel } from '@angular/cdk/collections';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 @Component({
@@ -80,7 +80,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'oliver@trezo.com',
         phone: '+1 555-123-4567',
-        lastContacted: '19 Jun 2024',
+        lastContacted: '19 Jun 2025',
         company: 'ABC Corporation',
         leadScore: 50,
         status: {
@@ -101,7 +101,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'carolyn@trezo.com',
         phone: '+1 555-987-6543',
-        lastContacted: '18 Jun 2024',
+        lastContacted: '18 Jun 2025',
         company: 'XYZ Ltd',
         leadScore: 35,
         status: {
@@ -122,7 +122,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'donna@trezo.com',
         phone: '+1 555-456-7890',
-        lastContacted: '17 Jun 2024',
+        lastContacted: '17 Jun 2025',
         company: 'Tech Solutions',
         leadScore: 40,
         status: {
@@ -143,7 +143,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'barbara@trezo.com',
         phone: '+1 555-369-7878',
-        lastContacted: '16 Jun 2024',
+        lastContacted: '16 Jun 2025',
         company: 'Global Solutions',
         leadScore: 25,
         status: {
@@ -164,7 +164,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'rebecca@trezo.com',
         phone: '+1 555-658-4488',
-        lastContacted: '15 Jun 2024',
+        lastContacted: '15 Jun 2025',
         company: 'Acma Industries',
         leadScore: 27,
         status: {
@@ -185,7 +185,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'ramiro@trezo.com',
         phone: '+1 555-558-9966',
-        lastContacted: '14 Jun 2024',
+        lastContacted: '14 Jun 2025',
         company: 'Synergy Ltd',
         leadScore: 16,
         status: {
@@ -206,7 +206,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'robert@trezo.com',
         phone: '+1 555-357-5888',
-        lastContacted: '13 Jun 2024',
+        lastContacted: '13 Jun 2025',
         company: 'Summit Solutions',
         leadScore: 38,
         status: {
@@ -227,7 +227,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'marcelino@trezo.com',
         phone: '+1 555-456-8877',
-        lastContacted: '12 Jun 2024',
+        lastContacted: '12 Jun 2025',
         company: 'Strategies Ltd',
         leadScore: 15,
         status: {
@@ -248,7 +248,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'thomas@trezo.com',
         phone: '+1 555-622-4488',
-        lastContacted: '11 Jun 2024',
+        lastContacted: '11 Jun 2025',
         company: 'Tech Enterprises',
         leadScore: 41,
         status: {
@@ -269,7 +269,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'nathaniel@trezo.com',
         phone: '+1 555-225-4488',
-        lastContacted: '10 Jun 2024',
+        lastContacted: '10 Jun 2025',
         company: 'Synetic Solutions',
         leadScore: 29,
         status: {
@@ -290,7 +290,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'nathaniel@trezo.com',
         phone: '+1 555-225-4488',
-        lastContacted: '10 Jun 2024',
+        lastContacted: '10 Jun 2025',
         company: 'Synetic Solutions',
         leadScore: 29,
         status: {
@@ -311,7 +311,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'thomas@trezo.com',
         phone: '+1 555-622-4488',
-        lastContacted: '11 Jun 2024',
+        lastContacted: '11 Jun 2025',
         company: 'Tech Enterprises',
         leadScore: 41,
         status: {
@@ -332,7 +332,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'marcelino@trezo.com',
         phone: '+1 555-456-8877',
-        lastContacted: '12 Jun 2024',
+        lastContacted: '12 Jun 2025',
         company: 'Strategies Ltd',
         leadScore: 15,
         status: {
@@ -353,7 +353,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'robert@trezo.com',
         phone: '+1 555-357-5888',
-        lastContacted: '13 Jun 2024',
+        lastContacted: '13 Jun 2025',
         company: 'Summit Solutions',
         leadScore: 38,
         status: {
@@ -374,7 +374,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'ramiro@trezo.com',
         phone: '+1 555-558-9966',
-        lastContacted: '14 Jun 2024',
+        lastContacted: '14 Jun 2025',
         company: 'Synergy Ltd',
         leadScore: 16,
         status: {
@@ -395,7 +395,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'rebecca@trezo.com',
         phone: '+1 555-658-4488',
-        lastContacted: '15 Jun 2024',
+        lastContacted: '15 Jun 2025',
         company: 'Acma Industries',
         leadScore: 27,
         status: {
@@ -416,7 +416,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'barbara@trezo.com',
         phone: '+1 555-369-7878',
-        lastContacted: '16 Jun 2024',
+        lastContacted: '16 Jun 2025',
         company: 'Global Solutions',
         leadScore: 25,
         status: {
@@ -437,7 +437,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'donna@trezo.com',
         phone: '+1 555-456-7890',
-        lastContacted: '17 Jun 2024',
+        lastContacted: '17 Jun 2025',
         company: 'Tech Solutions',
         leadScore: 40,
         status: {
@@ -458,7 +458,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'carolyn@trezo.com',
         phone: '+1 555-987-6543',
-        lastContacted: '18 Jun 2024',
+        lastContacted: '18 Jun 2025',
         company: 'XYZ Ltd',
         leadScore: 35,
         status: {
@@ -479,7 +479,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         },
         email: 'oliver@trezo.com',
         phone: '+1 555-123-4567',
-        lastContacted: '19 Jun 2024',
+        lastContacted: '19 Jun 2025',
         company: 'ABC Corporation',
         leadScore: 50,
         status: {

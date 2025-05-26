@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Tables
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -22,21 +22,16 @@
 </div>
 
 <!-- Basic Table -->
-<div class="lg:grid lg:grid-cols-2 gap-[25px]">
-    <div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] mb-[25px]">
 
-        <!-- Top Selling Products -->
-        <app-bt-top-selling-products />
+    <!-- Top Selling Products -->
+    <app-bt-top-selling-products />
 
-    </div>
-    <div>
+    <!-- Recent Orders -->
+    <app-bt-recent-orders />
 
-        <!-- Recent Orders -->
-        <app-bt-recent-orders />
-
-    </div>
 </div>
-<div class="lg:grid lg:grid-cols-3 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
     <div class="lg:col-span-1">
 
         <!-- Top Performers -->
@@ -54,31 +49,23 @@
 <!-- All Projects -->
 <app-bt-all-projects />
 
-<div class="lg:grid lg:grid-cols-3 gap-[25px]">
-    <div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
 
-        <!-- My Tasks -->
-        <app-bt-my-tasks />
+    <!-- My Tasks -->
+    <app-bt-my-tasks />
 
-    </div>
-    <div>
+    <!-- Student's Progress -->
+    <app-bt-students-progress />
 
-        <!-- Student's Progress -->
-        <app-bt-students-progress />
-
-    </div>
-    <div>
-
-        <!-- Group Lessons -->
-        <app-bt-group-lessons />
+    <!-- Group Lessons -->
+    <app-bt-group-lessons />
         
-    </div>
 </div>
 
 <!-- Performance of Agents -->
 <app-bt-performance-of-agents />
 
-<div class="lg:grid lg:grid-cols-5 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-[25px] mb-[25px]">
     <div class="lg:col-span-2">
 
         <!-- Recent Customer Ratings -->

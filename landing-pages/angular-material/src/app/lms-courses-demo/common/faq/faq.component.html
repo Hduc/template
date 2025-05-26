@@ -1,0 +1,87 @@
+<div
+    class="faq-area pb-180"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="lms-section-title text-center mx-auto">
+            <div class="sub-title d-inline-block">
+                <div class="d-flex align-items-center">
+                    <img src="images/lms-courses/ico.svg" alt="ico">
+                    FAQ’s
+                </div>
+            </div>
+            <h2 class="mb-0 fw-bold">
+                Got Questions? We’ve Got Answers
+            </h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="faq-image text-center">
+                    <img src="images/lms-courses/faq.png" alt="faq-image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-accordion">
+                    <div class="accordion-item">
+                        <button
+                            type="button"
+                            (click)="toggleSection(0)"
+                            [ngClass]="{ 'open': isSectionOpen(0) }"
+                            class="accordion-button border-0 fw-semibold position-relative d-block w-full cursor-pointer shadow-none bg-transparent"
+                        >
+                            Can I learn at my own pace?
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="accordion-collapse"
+                            [ngClass]="{ 'open': isSectionOpen(0) }"
+                        >
+                            <p>
+                                Absolutely! Our platform is fully self-paced.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button
+                            type="button"
+                            (click)="toggleSection(1)"
+                            [ngClass]="{ 'open': isSectionOpen(1) }"
+                            class="accordion-button border-0 fw-semibold position-relative d-block w-full cursor-pointer shadow-none bg-transparent"
+                        >
+                            Are certificates recognized?
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="accordion-collapse"
+                            [ngClass]="{ 'open': isSectionOpen(1) }"
+                        >
+                            <p>
+                                Absolutely! Our platform is fully self-paced.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button
+                            type="button"
+                            (click)="toggleSection(2)"
+                            [ngClass]="{ 'open': isSectionOpen(2) }"
+                            class="accordion-button border-0 fw-semibold position-relative d-block w-full cursor-pointer shadow-none bg-transparent"
+                        >
+                            Do I need any prior knowledge? 
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="accordion-collapse"
+                            [ngClass]="{ 'open': isSectionOpen(2) }"
+                        >
+                            <p>
+                                Absolutely! Our platform is fully self-paced.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

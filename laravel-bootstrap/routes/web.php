@@ -74,6 +74,14 @@ Route::get('/call-center', function () {
     return view('call-center');
 });
 
+Route::get('/pos-system', function () {
+    return view('pos-system');
+});
+
+Route::get('/podcast', function () {
+    return view('podcast');
+});
+
 Route::get('/landing-page', function () {
     return view('landing-page');
 });
@@ -470,6 +478,9 @@ Route::get('/toasts', function () {
 });
 Route::get('/check-radio', function () {
     return view('check-radio');
+});
+Route::get('/sweet-alarts', function () {
+    return view('sweet-alarts');
 });
 Route::get('/select', function () {
     return view('select');

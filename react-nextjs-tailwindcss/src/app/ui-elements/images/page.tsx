@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Images</h5>
+        <h5 className="!mb-0">Images</h5>
 
         <ol className="breadcrumb mt-[12px] md:mt-0">
           <li className="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -33,7 +33,7 @@ export default function Page() {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Responsive Images</h5>
+            <h5 className="!mb-0">Responsive Images</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -50,7 +50,7 @@ export default function Page() {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Aligning Images</h5>
+            <h5 className="!mb-0">Aligning Images</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -96,7 +96,7 @@ export default function Page() {
         <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div className="trezo-card-title">
-              <h5 className="mb-0">Picture</h5>
+              <h5 className="!mb-0">Picture</h5>
             </div>
           </div>
           <div className="trezo-card-content">
@@ -113,7 +113,7 @@ export default function Page() {
         <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div className="trezo-card-title">
-              <h5 className="mb-0">Image Thumbnails</h5>
+              <h5 className="!mb-0">Image Thumbnails</h5>
             </div>
           </div>
           <div className="trezo-card-content">

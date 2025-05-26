@@ -425,7 +425,7 @@ const InvoicesTable: React.FC = () => {
 
           {/* Pagination Controls */}
           <div className="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {startIndex + 1} to {Math.min(endIndex, invoices.length)}{" "}
               of {invoices.length} results
             </p>

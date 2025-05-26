@@ -6,15 +6,15 @@ import { AccountsPayableComponent } from './accounts-payable/accounts-payable.co
 import { StatisticsComponent } from './statistics/statistics.component';
 import { CashEndMonthComponent } from './cash-end-month/cash-end-month.component';
 import { WeeklyExpensesComponent } from './weekly-expenses/weekly-expenses.component';
-import { IncomeSourceComponent } from './income-source/income-source.component';
+import { IncomeSourcesComponent } from './income-sources/income-sources.component';
 import { NetProfitComponent } from './net-profit/net-profit.component';
-import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
+import { TransactionsHistoryComponent } from './transactions-history/transactions-history.component';
 import { CardComponent } from './card/card.component';
 import { ExpenseBreakdownComponent } from './expense-breakdown/expense-breakdown.component';
 
 @Component({
     selector: 'app-finance',
-    imports: [TotalIncomeComponent, TotalExpensesComponent, AccountsReceivableComponent, AccountsPayableComponent, StatisticsComponent, CashEndMonthComponent, WeeklyExpensesComponent, IncomeSourceComponent, NetProfitComponent, TransactionHistoryComponent, CardComponent, ExpenseBreakdownComponent],
+    imports: [TotalIncomeComponent, TotalExpensesComponent, AccountsReceivableComponent, AccountsPayableComponent, StatisticsComponent, CashEndMonthComponent, WeeklyExpensesComponent, IncomeSourcesComponent, NetProfitComponent, TransactionsHistoryComponent, CardComponent, ExpenseBreakdownComponent],
     templateUrl: './finance.component.html',
     styleUrl: './finance.component.scss'
 })

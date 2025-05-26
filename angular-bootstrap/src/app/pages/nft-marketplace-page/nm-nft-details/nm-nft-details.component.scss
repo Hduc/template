@@ -16,9 +16,6 @@
 }
 .nft-details-card {
     .trezo-card-content {
-        .text-xs {
-            font-size: 12px;
-        }
         h2 {
             font-size: 24px;
             margin-top: 3px;
@@ -141,7 +138,7 @@
                                 width: 30px;
                                 height: 30px;
                                 font-size: 18px;
-                                background-color: #eceef2;
+                                background-color: var(--borderColor);
 
                                 &:hover {
                                     background-color: var(--primaryColor);

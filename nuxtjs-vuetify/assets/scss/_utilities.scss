@@ -552,6 +552,15 @@
 .bg-primary-500 {
   background-color: #605dff !important;
 }
+.bg-primary-70 {
+  background-color: #dde4ff !important;
+}
+.bg-card-text-c {
+  background-color: #ffe8d4 !important;
+}
+.bg-primary-div-60 {
+  background-color: #f3e8ff !important;
+}
 
 // Text Color
 .text-white {
@@ -704,7 +713,8 @@
 .fw-extrabold {
   font-weight: 800 !important;
 }
-.fw-black {
+.fw-black,
+.fw-900 {
   font-weight: 900 !important;
 }
 

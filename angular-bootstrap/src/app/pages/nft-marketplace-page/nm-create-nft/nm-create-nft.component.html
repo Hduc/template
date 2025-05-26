@@ -111,7 +111,12 @@
             </div>
         </div>
     </div>
-    <div class="trezo-card mb-25 p-0 d-block bg-transparent border-0 shadow-none">
+    <div
+        class="trezo-card mb-25 p-0 d-block bg-transparent border-0 shadow-none"
+        [class.component-body-bg-color]="themeService.isBodyBG()"
+        [class.component-card-borderd]="themeService.isCardBordered()"
+        [class.component-card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+    >
         <div class="trezo-card-content">
             <div class="form-btn-box">
                 <button type="button" class="warn d-inline-block fw-medium border-radius border-0 transition">

@@ -68,7 +68,7 @@ const FollowersByGender: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-[3px] md:mb-0 text-lg md:text-[20px]">
+            <h5 className="!mb-[3px] md:!mb-0 !text-lg md:!text-[20px]">
               Followers by Gender
             </h5>
             <p>Understand your audience better!</p>

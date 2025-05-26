@@ -1,17 +1,18 @@
 <div
-    class="sidebar-area bg-white transition active"
     [ngClass]="{'active': isSidebarToggled}"
-    [class.card-borderd]="themeService.isCardBordered()"
+    class="sidebar-area bg-white transition active"
     [class.dark-sidebar]="themeService.isSidebarDark()"
     [class.hide-sidebar]="themeService.isHideSidebar()"
+    [class.card-borderd]="themeService.isCardBordered()"
     [class.component-dark-theme]="themeService.isDark()"
     [class.right-sidebar]="themeService.isRightSidebar()"
+    [class.component-body-bg-color]="themeService.isBodyBG()"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
     [class.card-with-box-shadow]="themeService.isCardWithBoxShadow()"
 >
     <div class="logo bg-white">
         <a routerLink="/dashboard" class="d-flex align-items-center position-relative">
-            <img src="images/logo-icon.svg" class="transition position-relative" alt="logo-icon">
+            <img src="images/logo-icon.svg" class="position-relative" alt="logo-icon">
             <span class="fw-bold text-black lh-1 transition position-relative">
                 Trezo
             </span>
@@ -43,7 +44,7 @@
                                     Dashboard
                                 </span>
                                 <span class="trezo-badge rounded-circle fw-medium d-inline-block text-center">
-                                    18
+                                    30
                                 </span>
                             </mat-panel-title>
                         </mat-expansion-panel-header>
@@ -56,9 +57,6 @@
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/crm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     CRM
-                                    <span class="trezo-badge d-inline-block position-relative style-two">
-                                        Hot
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
@@ -74,110 +72,220 @@
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/helpdesk" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     HelpDesk
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        Hot
+                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/analytics" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Analytics
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/crypto" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Crypto
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/sales" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Sales
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/hospital" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Hospital
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/hrm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     HRM
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/school" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     School
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/call-center" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Call Center
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
+                                    <span class="trezo-badge d-inline-block position-relative style-two">
+                                        Popular
                                     </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/marketing" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Marketing
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/nft" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     NFT
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/saas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     SaaS
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
-                                    </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/real-estate" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Real Estate
-                                    <span class="trezo-badge d-inline-block position-relative">
-                                        New
+                                    <span class="trezo-badge d-inline-block position-relative style-three">
+                                        Top
                                     </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/shipment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Shipment
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Finance
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/pos-system" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    POS System
                                     <span class="trezo-badge d-inline-block position-relative">
                                         New
                                     </span>
                                 </a>
                             </li>
                             <li class="sidemenu-item">
-                                <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
-                                    Finance
+                                <a routerLink="/dashboard/podcast" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Podcast
                                     <span class="trezo-badge d-inline-block position-relative">
                                         New
                                     </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/social-media" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Social Media
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Doctor
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/beauty-salon" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Beauty Salon
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/store-analysis" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Store Analysis
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/restaurant" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Restaurant
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/hotel" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Hotel
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/real-estate-agent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Real Estate Agent
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/credit-card" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Credit Card
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/crypto-trader" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Crypto Trader
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/crypto-performance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Crypto Perf.
+                                    <span class="trezo-badge d-inline-block position-relative">
+                                        New
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dock_to_right
+                                </i>
+                                <span class="title">
+                                    Layout
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-mui-dark.envytheme.com/dashboard" target="_blank" class="sidemenu-link">
+                                    Dark Mode
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-horizontal.envytheme.com/dashboard" target="_blank" class="sidemenu-link">
+                                    Horizontal Layout
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-dls.envytheme.com/" target="_blank" class="sidemenu-link">
+                                    Sidebar Dark
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-compact.envytheme.com/dashboard" target="_blank" class="sidemenu-link">
+                                    Compact Sidebar
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-mui-rtl.envytheme.com/dashboard" target="_blank" class="sidemenu-link">
+                                    RTL Light
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a href="https://trezo-mui-dark-rtl.envytheme.com/dashboard" target="_blank" class="sidemenu-link">
+                                    RTL Dark
                                 </a>
                             </li>
                         </ul>
@@ -206,12 +314,12 @@
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/team" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
-                                    Our Team
+                                    Team
                                 </a>
                             </li>
                             <li class="sidemenu-item">
                                 <a routerLink="/faq" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
-                                    FAQ’s
+                                    FAQ
                                 </a>
                             </li>
                             <li class="sidemenu-item">
@@ -222,7 +330,7 @@
                         </ul>
                     </mat-expansion-panel>
                     <span class="sub-title d-block fw-medium text-uppercase">
-                        APPS
+                        APPS & PAGES
                     </span>
                     <a routerLink="/dashboard/apps" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                         <i class="material-symbols-outlined">
@@ -348,9 +456,6 @@
                             </li>
                         </ul>
                     </mat-expansion-panel>
-                    <span class="sub-title d-block fw-medium text-uppercase">
-                        PAGES
-                    </span>
                     <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
                         <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -744,6 +849,156 @@
                             <li class="sidemenu-item">
                                 <a routerLink="/dashboard/finance-page/transactions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
                                     Transactions
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    badge
+                                </i>
+                                <span class="title">
+                                    Doctor
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Patients List
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page/add-patient" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Add Patient
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page/patient-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Patient Details
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page/appointments" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Appointments
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page/prescriptions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Prescriptions
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/doctor-page/write-prescription" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Write a Prescription
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    lunch_dining
+                                </i>
+                                <span class="title">
+                                    Restaurant
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/restaurant-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Menus
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/restaurant-page/dish-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Dish Details
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    hotel
+                                </i>
+                                <span class="title">
+                                    Hotel
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/hotel-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Rooms List
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/hotel-page/room-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Room Details
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/hotel-page/guests-list" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Guests List
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    location_away
+                                </i>
+                                <span class="title">
+                                    Real Estate Agent
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/real-estate-agent-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Properties
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/real-estate-agent-page/property-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Property Details
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    paid
+                                </i>
+                                <span class="title">
+                                    Crypto Trader
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/crypto-trader-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Transactions
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/crypto-trader-page/gainers-losers" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Gainers & Losers
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/dashboard/crypto-trader-page/wallet" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Wallet
                                 </a>
                             </li>
                         </ul>

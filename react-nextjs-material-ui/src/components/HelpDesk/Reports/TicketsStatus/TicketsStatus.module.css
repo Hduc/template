@@ -69,7 +69,7 @@
 }
 
 /* dark-theme style */
-.dark-theme .ticketsStatusContent:before {
+[class="dark-theme"] .ticketsStatusContent:before {
     background-color: var(--darkSecondaryColor); 
 }
 

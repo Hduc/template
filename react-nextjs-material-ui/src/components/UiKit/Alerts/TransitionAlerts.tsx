@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { Card, Typography, Box, Alert } from "@mui/material";
+import { Card, Typography, Box, Alert,Button } from "@mui/material";
 
 import IconButton from "@mui/material/IconButton";
 import Collapse from "@mui/material/Collapse";
-import Button from "@mui/material/Button";
 import CloseIcon from "@mui/icons-material/Close";
 
 const TransitionAlerts: React.FC = () => {
@@ -49,7 +48,7 @@ const TransitionAlerts: React.FC = () => {
                   <CloseIcon fontSize="inherit" />
                 </IconButton>
               }
-              sx={{ mb: 2 }}
+              sx={{ mb: 2, color: "success.main" }}
             >
               Click the close icon to see the Collapse transition in action!
             </Alert>

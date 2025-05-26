@@ -38,7 +38,7 @@ const ChatContent = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }}>
           <Card
             className="chat-sidebar-card"
             sx={{
@@ -814,7 +814,7 @@ const ChatContent = () => {
                 <CustomTabPanel value={value} index={1}>
                   <Box mb="20px">
                     <Button
-                      variant="contained"
+                      variant="contained" 
                       sx={{
                         bgcolor: "primary.main",
                         width: "100%",
@@ -1620,7 +1620,7 @@ const ChatContent = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }}>
           <ChatBox />
         </Grid>
       </Grid>

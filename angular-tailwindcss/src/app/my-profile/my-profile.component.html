@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         My Profile
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -19,37 +19,25 @@
 </div>
 
 <!-- My Profile -->
-<div class="2xl:grid 2xl:grid-cols-2 gap-[25px]">
-    <div>
+<div class="grid grid-cols-1 2xl:grid-cols-2 gap-[25px] mb-[25px]">
 
-        <!-- Welcome -->
-        <app-mp-welcome />
+    <!-- Welcome -->
+    <app-mp-welcome />
 
-    </div>
-    <div>
-        <div class="sm:grid sm:grid-cols-3 gap-[25px]">
-            <div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-[25px]">
 
-                <!-- Total Projects -->
-                <app-mp-total-projects />
-                
-            </div>
-            <div>
+        <!-- Total Projects -->
+        <app-mp-total-projects />
+        
+        <!-- Total Orders -->
+        <app-mp-total-orders />
 
-                <!-- Total Orders -->
-                <app-mp-total-orders />
+        <!-- Total Revenue -->
+        <app-mp-total-revenue />
 
-            </div>
-            <div>
-
-                <!-- Total Revenue -->
-                <app-mp-total-revenue />
-
-            </div>
-        </div>
     </div>
 </div>
-<div class="lg:grid lg:grid-cols-3 2xl:grid-cols-4 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px] mb-[25px]">
     <div class="lg:col-span-1">
 
         <!-- Profile Intro -->

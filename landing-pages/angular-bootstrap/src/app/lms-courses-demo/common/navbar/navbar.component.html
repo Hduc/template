@@ -1,0 +1,73 @@
+<nav
+    class="navbar navbar-expand-lg"
+    [ngClass]="{'is-sticky': isSticky}"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/lms-courses-demo">
+            <img src="images/lms-courses/logo.svg" alt="logo">
+            <img src="images/lms-courses/white-logo.svg" alt="logo" class="d-none">
+        </a>
+        <button
+            class="navbar-toggler shadow-none border-0 p-0 lh-1"
+            [class.active]="classApplied"
+            (click)="toggleClass()"
+            type="button"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div
+            class="collapse navbar-collapse"
+            [class.active]="classApplied"
+        >
+            <ul class="navbar-nav mx-auto p-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lms-courses-demo" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lms-courses-demo/why-choose-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Why Choose Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lms-courses-demo/courses" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Courses
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lms-courses-demo/how-it-works" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        How It Works
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/lms-courses-demo/pricing" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        Pricing
+                    </a>
+                </li>
+            </ul>
+            <div class="other-options d-flex align-items-center">
+                <a routerLink="/lms-courses-demo/checkout" class="cart-btn position-relative d-inline-block">
+                    <i class="material-symbols-outlined">
+                        shopping_cart
+                    </i>
+                    <span class="d-inline-block rounded-circle d-flex align-items-center justify-content-center fw-semibold">
+                        01
+                    </span>
+                </a>
+                <a routerLink="/lms-courses-demo/courses" class="lms-default-btn">
+                    <span class="d-inline-block position-relative">
+                        <i class="material-symbols-outlined">
+                            person
+                        </i>
+                        Get Started
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

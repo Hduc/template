@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
-import { HorizontalComponent } from './horizontal/horizontal.component';
+import { MatCardModule } from '@angular/material/card';
 import { VerticalComponent } from './vertical/vertical.component';
+import { HorizontalComponent } from './horizontal/horizontal.component';
 
 @Component({
     selector: 'app-wizard',

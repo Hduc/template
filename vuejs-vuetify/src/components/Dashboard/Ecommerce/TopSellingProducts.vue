@@ -64,11 +64,14 @@
               </td>
               <td>${{ item.price }}</td>
               <td>{{ item.order }}</td>
-              <td :class="computeClass(item.stock)">{{ item.stock }}</td>
+              <td :class="computeClass(String(item.stock))">
+                {{ item.stock }}
+              </td>
               <td>${{ item.amount }}</td>
             </tr>
           </tbody>
         </v-table>
+
         <Pagination items="5" />
       </div>
     </div>

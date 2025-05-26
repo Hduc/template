@@ -6,6 +6,35 @@
   --darkSecondaryColor: #15203c;
 }
 
+.th-toggle-mode {
+  cursor: pointer;
+}
+.th-toggle-mode i {
+  font-size: 22px;
+  color: #FE7A36;
+}
+.th-toggle-mode .ri-moon-line {
+  display: none;
+}
+.th-toggle-mode.active .ri-sun-line {
+  display: none;
+}
+.th-toggle-mode.active .ri-moon-line {
+  display: block;
+}
+
+.t-settings-btn i {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .dark-theme {
   background-color: var(--darkBodyBg);
 }
@@ -320,10 +349,96 @@
 }
 .dark-theme .for-dark-bg {
   background-color: var(--darkBodyBg);
+  background-image: none !important;
 }
 .dark-theme .tsm-charts .apexcharts-datalabels .apexcharts-text, .dark-theme .otd-charts .apexcharts-datalabels .apexcharts-text, .dark-theme .c-of-m .apexcharts-datalabels .apexcharts-text, .dark-theme .eb-chart .apexcharts-datalabels .apexcharts-text {
   fill: #fff !important;
 }
 .dark-theme code {
   background-color: #000 !important;
+}
+.dark-theme .input-date-picker fieldset {
+  border-color: var(--darkBorder) !important;
+}
+.dark-theme .hotel-popular-rooms .swiper-pagination .swiper-pagination-bullet {
+  background-color: #444;
+  opacity: 1;
+}
+.dark-theme .hotel-popular-rooms .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+}
+.dark-theme .rea-my-featured-listings .swiper-pagination .swiper-pagination-bullet {
+  background-color: #444;
+  opacity: 1;
+}
+.dark-theme .rea-my-featured-listings .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--dangerColor);
+}
+.dark-theme .text-black-for-dark {
+  color: var(--blackColor) !important;
+}
+.dark-theme .rea-client-ratings .swiper-pagination .swiper-pagination-bullet {
+  background-color: #444;
+  opacity: 1;
+}
+.dark-theme .rea-client-ratings .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--dangerColor);
+}
+.dark-theme .for-dark-bg-162243 {
+  background-color: #162243 !important;
+}
+.dark-theme .upload-file-paper {
+  border-color: var(--darkBorder) !important;
+}
+.dark-theme .rmui-table::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+}
+.dark-theme .rmui-table::-webkit-scrollbar-track {
+  background: #000;
+}
+.dark-theme .rmui-table::-webkit-scrollbar-thumb {
+  background: #15203c;
+  border-radius: 10px;
+}
+.dark-theme .rmui-table::-webkit-scrollbar-thumb:hover {
+  background: #15203c;
+  cursor: pointer;
+}
+.dark-theme .MuiFormControlLabel-root .MuiCheckbox-root .MuiSvgIcon-root, .dark-theme .MuiFormControlLabel-root .MuiRadio-root .MuiSvgIcon-root {
+  fill: rgba(165, 159, 159, 0.6);
+}
+.dark-theme .data-grid-table .MuiDataGrid-row--borderBottom {
+  background-color: var(--darkSecondaryColor) !important;
+}
+.dark-theme .data-grid-table .MuiDataGrid-row--borderBottom .MuiDataGrid-columnHeader {
+  background-color: var(--darkSecondaryColor) !important;
+}
+.dark-theme .data-grid-table .MuiDataGrid-cell, .dark-theme .data-grid-table .MuiDataGrid-filler, .dark-theme .data-grid-table .css-1tdeh38, .dark-theme .data-grid-table .MuiDataGrid-withBorderColor, .dark-theme .data-grid-table .mui-1tdeh38 {
+  border-color: var(--darkBorder) !important;
+}
+.dark-theme .data-grid-table .MuiSvgIcon-root {
+  fill: rgba(140, 140, 140, 0.6);
+}
+.dark-theme .data-grid-table .MuiDataGrid-row:hover {
+  background-color: #000 !important;
+}
+.dark-theme .data-grid-table .MuiDataGrid-row.Mui-selected {
+  background-color: #000 !important;
+}
+.dark-theme .sorting-selecting-table .MuiTableSortLabel-root:hover {
+  color: #fff !important;
+}
+.dark-theme .sorting-selecting-table .MuiTableCell-head {
+  background-color: #000;
+}
+.dark-theme .sorting-selecting-table .MuiTableCell-root {
+  border-color: var(--darkBorder) !important;
+}
+.dark-theme .customized-tables .MuiTableCell-root {
+  border-color: var(--darkBorder) !important;
+}
+.dark-theme .custom-pagination .MuiTableCell-root {
+  border-color: var(--darkBorder) !important;
 }/*# sourceMappingURL=dark.css.map */

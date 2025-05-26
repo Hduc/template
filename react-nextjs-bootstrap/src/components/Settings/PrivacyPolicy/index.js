@@ -56,10 +56,10 @@ const PrivacyPolicy = () => {
         </li>
 
         <li className="d-flex gap-3">
-          <button className="btn btn-danger fw-semibold text-white bg-danger border-0 py-3 px-4">
+          <button className="btn btn-danger fw-semibold text-white bg-danger border-0 py-2 px-4">
             Cancel
           </button>
-          <button className="btn btn-primary fw-semibold text-white bg-primary border-0 py-3 px-4">
+          <button className="btn btn-primary fw-semibold text-white bg-primary border-0 py-2 px-4">
             Close & Delete This Account
           </button>
         </li>

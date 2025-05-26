@@ -55,7 +55,7 @@ const PropertiesForSale: React.FC = () => {
       <div className="trezo-card border border-primary-50 dark:border-[#172036] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative">
           <div className="flex items-center justify-between">
-            <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+            <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
               +75%
             </span>
             <span className="block text-xs">Last 30 days</span>
@@ -65,7 +65,7 @@ const PropertiesForSale: React.FC = () => {
 
           <span className="block mb-[4px]">Properties for Sale</span>
 
-          <h3 className="mb-0 text-[20px]">5,458</h3>
+          <h3 className="!mb-0 !text-[20px]">5,458</h3>
 
           <div className="absolute ltr:-right-[95px] rtl:-left-[95px] -bottom-[35px]">
             {isChartLoaded && (

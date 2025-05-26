@@ -341,13 +341,22 @@
                 </div>
             </li>
             <li class="relative settings-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
-                <button type="button" class="leading-none inline-block transition-all relative top-[2px] hover:text-primary-500" id="settingsMenuBtn" (click)="toggleClass('settingsMenuBtn')" [class.active]="buttonStates['settingsMenuBtn']">
+                <button
+                    type="button"
+                    (click)="toggleClass('settingsMenuBtn')"
+                    [class.active]="buttonStates['settingsMenuBtn']"
+                    class="leading-none inline-block transition-all relative top-[2px] hover:text-primary-500"
+                >
                     <i class="material-symbols-outlined !text-[22px] md:!text-[24px]">
                         settings
                     </i>
                 </button>
                 <div class="settings-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none p-[20px] absolute mt-[17px] md:mt-[20px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
-                    <button type="button" class="rtl-mode-toggle flex items-center text-black dark:text-white font-medium" (click)="toggleDirection()">
+                    <button
+                        type="button"
+                        (click)="toggleDirection()"
+                        class="rtl-mode-toggle flex items-center text-black dark:text-white font-medium"
+                    >
                         RTL Mode:
                         <span class="inline-block relative rounded-full w-[35px] h-[20px] bg-gray-50 dark:bg-[#0a0e19] ltr:ml-[10px] rtl:mr-[10px]">
                             <span class="inline-block transition-all absolute h-[12px] w-[12px] bg-black dark:bg-white rounded-full top-1/2 -translate-y-1/2"></span>

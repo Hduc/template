@@ -111,7 +111,7 @@ const ProjectsContent: React.FC = () => {
                   height={56}
                 />
               </div>
-              <h6 className="mb-0 text-[15px]">{item.title}</h6>
+              <h6 className="!mb-0 !text-[15px]">{item.title}</h6>
             </div>
             <div className="mt-[20px] md:mt-[30px] lg:mt-[40px] flex items-center justify-between">
               <div className="block text-sm text-black dark:text-white">

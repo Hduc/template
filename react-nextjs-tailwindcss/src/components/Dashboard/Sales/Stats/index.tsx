@@ -30,7 +30,7 @@ const Stats: React.FC = () => {
       <div className="trezo-card rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 md:text-xl flex items-center font-normal">
+            <h5 className="!mb-0 md:!text-xl !flex !items-center !font-normal">
               Welcome Back,{" "}
               <span className="text-primary-500 font-medium">Olivia!</span>
               <Image

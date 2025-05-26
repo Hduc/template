@@ -136,7 +136,7 @@ const StudentsInterestedTopics: React.FC = () => {
               options={options}
               series={series}
               type="bar"
-              height={421}
+              height={433}
               width={"100%"}
             />
           )}

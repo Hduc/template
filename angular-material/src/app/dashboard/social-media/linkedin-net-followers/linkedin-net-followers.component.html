@@ -1,0 +1,83 @@
+<mat-card
+    class="linkedin-net-followers-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0 fw-semibold">
+                LinkedIn Net Followers
+            </h5>
+            <p class="fw-normal">
+                Net followers growth: <span class="text-primary">+275</span>
+            </p>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="card-header-menu d-inline-block border-radius">
+                {{ selectedTimeframe }}
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                    <li>
+                        <button mat-menu-item (click)="onTimeframeChange('Last Day')">
+                            Last Day
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item (click)="onTimeframeChange('Last Week')">
+                            Last Week
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item (click)="onTimeframeChange('Last Month')">
+                            Last Month
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item (click)="onTimeframeChange('Last Year')">
+                            Last Year
+                        </button>
+                    </li>
+                </ul>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="funfacts-list d-sm-flex align-items-center p-0 m-0 list-unstyled">
+            <li>
+                <span class="fw-medium text-black">
+                    56,100
+                </span>
+                <span class="d-block text-xs">
+                    Starting Followers
+                </span>
+            </li>
+            <li>
+                <span class="fw-medium text-black">
+                    300
+                </span>
+                <span class="d-block text-xs">
+                    New Followers
+                </span>
+            </li>
+            <li>
+                <span class="fw-medium text-black">
+                    25
+                </span>
+                <span class="d-block text-xs">
+                    Unfollows
+                </span>
+            </li>
+            <li>
+                <span class="fw-medium text-black">
+                    56,375
+                </span>
+                <span class="d-block text-xs">
+                    Ending Followers
+                </span>
+            </li>
+        </ul>
+        <div class="chart">
+            <div id="linkedin_net_followers_chart"></div>
+        </div>
+    </mat-card-content>
+</mat-card>

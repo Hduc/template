@@ -30,7 +30,7 @@
           >
             <span class="material-symbols-outlined menu-icon">dashboard</span>
             <span class="title">Dashboard</span>
-            <span class="count">18</span>
+            <span class="count">30</span>
           </a>
 
           <ul class="menu-sub" v-show="isOpen('dashboard')">
@@ -50,91 +50,144 @@
                 Project Management
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/lms" class="menu-link">
                 LMS
                 <span class="new tag">Top</span>
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/help-desk" class="menu-link">
                 HelpDesk
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/analytics" class="menu-link">
                 Analytics
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/crypto" class="menu-link">
                 Crypto
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/sales" class="menu-link">
                 Sales
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/hospital" class="menu-link">
                 Hospital
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/marketing" class="menu-link">
                 Marketing
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/nft" class="menu-link">
                 NFT
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/saas" class="menu-link">
                 SaaS
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/real-estate" class="menu-link">
                 Real Estate
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/shipment" class="menu-link">
                 Shipment
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/finance" class="menu-link">
                 Finance
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/hrm" class="menu-link">
                 HRM
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/school" class="menu-link">
                 School
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/call-center" class="menu-link">
                 Call Center
               </RouterLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <RouterLink to="/dashboard/pos-system" class="menu-link">
                 POS System
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/podcast" class="menu-link">
+                Podcast
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/social-media" class="menu-link">
+                Social Media
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/doctor" class="menu-link">
+                Doctor
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/beauty-salon" class="menu-link">
+                Beauty Salon
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/store-analysis" class="menu-link">
+                Store Analysis
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/restaurant" class="menu-link">
+                Restaurant
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/hotel" class="menu-link">
+                Hotel
+                <span class="hot tag">New</span>
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/real-estate-agent" class="menu-link">
+                Real Estate Agent
+                <span class="hot tag">New</span>
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/credit-card" class="menu-link">
+                Credit Card
+                <span class="hot tag">New</span>
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/dashboard/crypto-trader" class="menu-link">
+                Crypto Trader
                 <span class="hot tag">New</span>
               </RouterLink>
             </li>
             <li class="menu-item mb-0">
-              <RouterLink to="/dashboard/podcast" class="menu-link">
-                Podcast
+              <RouterLink to="/dashboard/crypto-performance" class="menu-link">
+                Crypto Perf
                 <span class="hot tag">New</span>
               </RouterLink>
             </li>
@@ -749,6 +802,163 @@
             <li class="menu-item">
               <RouterLink to="/finance/transaction" class="menu-link">
                 Transaction
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('doctor') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('doctor')"
+          >
+            <span class="material-symbols-outlined menu-icon">badge</span>
+            <span class="title">Doctor</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('doctor')">
+            <li class="menu-item">
+              <RouterLink to="/doctor/patients-list" class="menu-link">
+                Patients List
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/doctor/add-patient" class="menu-link">
+                Add Patient
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/doctor/patient-details" class="menu-link">
+                Patient Details
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/doctor/appointments" class="menu-link">
+                Appointments
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/doctor/prescriptions" class="menu-link">
+                Prescriptions
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/doctor/write-prescription" class="menu-link">
+                Write a Prescription
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('restaurant') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('restaurant')"
+          >
+            <span class="material-symbols-outlined menu-icon">
+              lunch_dining
+            </span>
+            <span class="title">Restaurant</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('restaurant')">
+            <li class="menu-item">
+              <RouterLink to="/restaurant/menus" class="menu-link">
+                Menus
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/restaurant/dish-details" class="menu-link">
+                Dish Details
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('hotel') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('hotel')"
+          >
+            <span class="material-symbols-outlined menu-icon"> hotel </span>
+            <span class="title">Hotel</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('hotel')">
+            <li class="menu-item">
+              <RouterLink to="/hotel/rooms-list" class="menu-link">
+                Rooms List
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/hotel/room-details" class="menu-link">
+                Room Details
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/hotel/guests-list" class="menu-link">
+                Guests List
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('realEstateAgent') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('realEstateAgent')"
+          >
+            <span class="material-symbols-outlined menu-icon">
+              location_away
+            </span>
+            <span class="title">Real Estate Agent</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('realEstateAgent')">
+            <li class="menu-item">
+              <RouterLink to="/real-estate-agent/properties" class="menu-link">
+                Properties
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink
+                to="/real-estate-agent/property-details"
+                class="menu-link"
+              >
+                Property Details
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('cryptoTrader') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('cryptoTrader')"
+          >
+            <span class="material-symbols-outlined menu-icon"> paid </span>
+            <span class="title">Crypto Trader</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('cryptoTrader')">
+            <li class="menu-item">
+              <RouterLink to="/crypto-trader/transactions" class="menu-link">
+                Transactions
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/crypto-trader/gainers-losers" class="menu-link">
+                Gainers & Losers
+              </RouterLink>
+            </li>
+            <li class="menu-item">
+              <RouterLink to="/crypto-trader/wallet-crypto" class="menu-link">
+                Wallet
               </RouterLink>
             </li>
           </ul>
@@ -1408,7 +1618,7 @@
 <script>
 import { defineComponent, ref, onMounted } from "vue";
 import feather from "feather-icons";
-import stateStore from "../../utils/store";
+import stateStore from "@/utils/store";
 
 export default defineComponent({
   name: "LeftSidebar",

@@ -211,7 +211,7 @@ const EventsGrid: React.FC = () => {
                 <div className="absolute top-0 ltr:right-0 rtl:left-0 w-[65px] h-[65px] bg-white dark:bg-[#0a0e19] ltr:rounded-bl-md rtl:rounded-br-md"></div>
               </div>
 
-              <h6 className="text-lg mb-[10px]">
+              <h6 className="!text-lg !mb-[10px]">
                 <Link
                   href={event.viewLink}
                   className="text-black dark:text-white transition-all hover:text-primary-500"
@@ -260,7 +260,7 @@ const EventsGrid: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">
+            <p className="!mb-0">
               Showing {startIndex + 1} to {Math.min(endIndex, eventData.length)}{" "}
               of {eventData.length} results
             </p>

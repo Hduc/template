@@ -1,0 +1,28 @@
+<div
+    class="sidebar-settings"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <button
+        type="button"
+        (click)="toggleTheme()"
+        [class.active]="toggleService.isLandingDark()"
+        class="light-dark-toggle d-flex align-items-center fw-medium border-0 p-0 bg-transparent lh-1"
+    >
+        Light/Dark:
+        <i class="material-symbols-outlined">
+            light_mode
+        </i>
+    </button>
+    <button
+        type="button"
+        (click)="toggleRTLEnabledTheme()"
+        [class.active]="toggleService.isLandingRtlEnabled()"
+        class="rtl-mode-toggle d-flex align-items-center fw-medium border-0 p-0 bg-transparent lh-1"
+    >
+        LTR/RTL:
+        <span class="one d-inline-block position-relative">
+            <span class="two d-inline-block rounded-circle"></span>
+        </span>
+    </button>
+</div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, Form, Table, Button, Offcanvas } from "react-bootstrap";
+import { Card, Form, Table, Button } from "react-bootstrap";
 
 const toDoListData = [
   {

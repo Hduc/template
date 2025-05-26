@@ -34,6 +34,29 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .info {
+                .icon {
+                    background-color: #15203c;
+                }
+            }
+            .info-list {
+                .info {
+                    &:nth-child(1) {
+                        .icon {
+                            background-color: #15203c;
+                        }
+                    }
+                    &:nth-child(2) {
+                        .icon {
+                            background-color: #15203c;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

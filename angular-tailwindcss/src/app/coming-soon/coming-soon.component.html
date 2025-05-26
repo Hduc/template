@@ -10,7 +10,7 @@
     <div class="w-full h-full table">
         <div class="table-cell align-middle">
             <div class="mx-auto px-[12.5px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1255px]">
-                <div class="grid lg:grid-cols-2 gap-[25px] items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
                     <div class="xl:ltr:-mr-[25px] xl:rtl:-ml-[25px] rounded-md order-2 lg:order-1">
                         <img src="images/coming-soon.jpg" alt="coming-soon-image" class="rounded-md">
                     </div>
@@ -18,12 +18,30 @@
                         <img src="images/logo-big.svg" alt="logo" class="inline-block dark:hidden">
                         <img src="images/white-logo-big.svg" alt="logo" class="hidden dark:inline-block">
                         <div class="my-[17px] md:my-[25px]">
-                            <h1 class="font-semibold text-[22px] md:text-xl lg:text-2xl 2xl:text-4xl mb-[5px] md:mb-[12px]">
+                            <h1 class="!font-semibold !text-[22px] md:!text-xl lg:!text-2xl 2xl:!text-4xl !mb-[5px] md:!mb-[12px]">
                                 We're working on launching soon, stay tuned!
                             </h1>
-                            <p class="font-medium leading-[1.5] lg:text-md">
+                            <p class="font-medium !leading-[1.5] lg:text-md">
                                 We're coming soon..
                             </p>
+                        </div>
+                        <div class="mb-[10px]">
+                            <div class="inline-block ltr:mr-[20px] ltr:md:mr-[29px] rtl:ml-[20px] rtl:md:ml-[29px] mb-[15px]">
+                                <span class="block text-black dark:text-white font-bold text-xl lg:text-2xl">{{ countdown.days }}</span>
+                                Days
+                            </div>
+                            <div class="inline-block ltr:mr-[20px] ltr:md:mr-[29px] rtl:ml-[20px] rtl:md:ml-[29px] mb-[15px]">
+                                <span class="block text-black dark:text-white font-bold text-xl lg:text-2xl">{{ countdown.hours }}</span>
+                                Hours
+                            </div>
+                            <div class="inline-block ltr:mr-[20px] ltr:md:mr-[29px] rtl:ml-[20px] rtl:md:ml-[29px] mb-[15px]">
+                                <span class="block text-black dark:text-white font-bold text-xl lg:text-2xl">{{ countdown.minutes }}</span>
+                                Minutes
+                            </div>
+                            <div class="inline-block ltr:mr-[20px] ltr:md:mr-[29px] rtl:ml-[20px] rtl:md:ml-[29px] mb-[15px]">
+                                <span class="block text-black dark:text-white font-bold text-xl lg:text-2xl">{{ countdown.seconds }}</span>
+                                Seconds
+                            </div>
                         </div>
                         <div class="mb-[15px] relative">
                             <label class="mb-[10px] md:mb-[12px] text-black dark:text-white font-medium block">

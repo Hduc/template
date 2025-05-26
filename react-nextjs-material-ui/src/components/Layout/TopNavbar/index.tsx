@@ -4,6 +4,8 @@
 
 import React, { useEffect } from "react";
 import { AppBar, Toolbar, IconButton, Box } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
 import Tooltip from "@mui/material/Tooltip";
 import SearchForm from "./SearchForm";
 import Notifications from "./Notifications";
@@ -12,6 +14,8 @@ import FullscreenButton from "./FullscreenButton";
 import AppsMenu from "./AppsMenu";
 import ChooseLanguage from "./ChooseLanguage/index";
 import ControlPanel from "../ControlPanel";
+import DarkMode from "./DarkMode";
+import HorizontalNavbar from "./HorizontalNavbar";
 
 interface TopNavbarProps {
   toggleActive: () => void;
@@ -40,68 +44,97 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ toggleActive }) => {
             boxShadow: "initial",
             borderRadius: "0 0 15px 15px",
             py: { xs: "15px", sm: "3px" },
+            px: "0 !important",
             width: "initial",
             zIndex: "489",
           }}
           className="top-navbar"
         >
-          <Toolbar
-            sx={{
-              display: { xs: "block", sm: "flex" },
-              justifyContent: { xs: "center", sm: "space-between" },
-            }}
-          >
-            <Box
+          <Box className="top-navbar-content">
+            <Toolbar
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: { xs: "10px", sm: "5px", md: "10px" },
+                display: { xs: "block", sm: "flex" },
+                justifyContent: { xs: "center", sm: "space-between" },
               }}
             >
-              <Tooltip title="Hide/Show" arrow>
-                <IconButton
-                  size="small"
-                  edge="start"
-                  color="inherit"
-                  onClick={toggleActive}
-                >
-                  <i className="material-symbols-outlined">menu</i>
-                </IconButton>
-              </Tooltip>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: { xs: "10px", sm: "5px", md: "15px" },
+                }}
+              >
+                <Box className="logos">
+                  <Link href="/dashboard/ecommerce/" className="logo">
+                    <Image
+                      src="/images/logo.svg"
+                      alt="logo"
+                      width={100}
+                      height={26}
+                    />
+                  </Link>
 
-              {/* Search form */}
-              <SearchForm />
+                  <Link href="/dashboard/ecommerce/" className="white-logo">
+                    <Image
+                      src="/images/white-logo.svg"
+                      alt="logo"
+                      width={100}
+                      height={26}
+                    />
+                  </Link>
+                </Box>
 
-              {/* AppsMenu */}
-              <AppsMenu />
-            </Box>
+                <Tooltip title="Hide/Show" arrow>
+                  <IconButton
+                    size="small"
+                    edge="start"
+                    color="inherit"
+                    onClick={toggleActive}
+                    className="top-burger"
+                  >
+                    <i className="material-symbols-outlined">menu</i>
+                  </IconButton>
+                </Tooltip>
 
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: { xs: "8px", sm: "8px", lg: "15px" },
-                mt: { xs: "10px", sm: "0px" },
-              }}
-            >
-              {/* ChooseLanguage */}
-              <ChooseLanguage />
+                {/* Search form */}
+                <SearchForm />
 
-              {/* FullscreenButton */}
-              <FullscreenButton />
+                {/* AppsMenu */}
+                <AppsMenu />
+              </Box>
 
-              {/* Notifications */}
-              <Notifications />
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: { xs: "8px", sm: "8px", lg: "15px" },
+                  mt: { xs: "10px", sm: "0px" },
+                }}
+              >
+                {/* DarkMode */}
+                <DarkMode />
 
-              {/* Profile */}
-              <Profile />
+                {/* ChooseLanguage */}
+                <ChooseLanguage />
 
-              {/* ControlPanel */}
-              <ControlPanel />
-            </Box>
-          </Toolbar>
+                {/* FullscreenButton */}
+                <FullscreenButton />
+
+                {/* Notifications */}
+                <Notifications />
+
+                {/* Profile */}
+                <Profile />
+
+                {/* ControlPanel */}
+                <ControlPanel />
+              </Box>
+            </Toolbar>
+          </Box>
+
+          <HorizontalNavbar />
         </AppBar>
       </div>
     </>

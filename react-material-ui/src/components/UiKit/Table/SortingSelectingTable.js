@@ -25,9 +25,8 @@ import { alpha } from "@mui/material/styles";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
-import PropTypes from 'prop-types'; 
-import { visuallyHidden } from '@mui/utils';
-
+import PropTypes from "prop-types";
+import { visuallyHidden } from "@mui/utils";
 
 function createData(id, name, calories, fat, carbs, protein) {
   return {
@@ -315,9 +314,10 @@ const SortingSelectingTable = () => {
           Sorting Selecting Table
         </Typography>
 
-        <Box sx={{ width: "100%" }}>
+        <Box className="sorting-selecting-table" sx={{ width: "100%" }}>
           <Paper sx={{ width: "100%", mb: 2 }}>
             <EnhancedTableToolbar numSelected={selected.length} />
+
             <TableContainer>
               <Table
                 sx={{ minWidth: 750 }}
@@ -346,12 +346,12 @@ const SortingSelectingTable = () => {
                         tabIndex={-1}
                         key={row.id}
                         selected={isItemSelected}
-                        sx={{ 
+                        sx={{
                           cursor: "pointer",
 
                           td: {
                             fontSize: "14px",
-                          }
+                          },
                         }}
                       >
                         <TableCell padding="checkbox">

@@ -22,7 +22,7 @@ export class ReturningCustomerRateService {
                 const options = {
                     series: series,
                     chart: {
-                        height: 321,
+                        height: 322,
                         type: "line",
                         zoom: {
                             enabled: false

@@ -33,7 +33,7 @@ const ComposeForm: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[15px] md:pb-[20px]">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-md font-semibold">New Message</h5>
+            <h5 className="!mb-0 !text-md !font-semibold">New Message</h5>
           </div>
         </div>
 
@@ -140,7 +140,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     text_fields_alt
                   </i>
                 </button>
@@ -148,7 +148,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     attach_file
                   </i>
                 </button>
@@ -156,7 +156,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     link
                   </i>
                 </button>
@@ -164,7 +164,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     mood
                   </i>
                 </button>
@@ -172,7 +172,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     add_to_drive
                   </i>
                 </button>
@@ -180,7 +180,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     add_photo_alternate
                   </i>
                 </button>
@@ -188,7 +188,7 @@ const ComposeForm: React.FC = () => {
                   type="button"
                   className="inline-block relative top-[2px] transition-all hover:text-primary-500"
                 >
-                  <i className="material-symbols-outlined !text-[18px] !md:text-[20px]">
+                  <i className="material-symbols-outlined !text-[18px] md:!text-[20px]">
                     ink_pen
                   </i>
                 </button>

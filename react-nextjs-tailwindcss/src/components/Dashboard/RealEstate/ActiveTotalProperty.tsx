@@ -17,7 +17,7 @@ const ActiveTotalProperty: React.FC = () => {
             Active Total Property
           </span>
 
-          <h3 className="mb-0 text-[20px] text-white">507,020</h3>
+          <h3 className="!mb-0 !text-[20px] !text-white">507,020</h3>
 
           <div className="-mt-[5px] ltr:text-right rtl:text-left">
             <Image

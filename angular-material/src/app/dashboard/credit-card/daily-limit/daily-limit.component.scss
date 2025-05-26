@@ -1,0 +1,118 @@
+.daily-limit-card {
+    padding: 10px;
+    --successColor: #37D80A;
+
+    .mat-mdc-card-content {
+        margin-bottom: 10px;
+
+        &:nth-child(1) {
+            padding: 25px;
+
+            h5 {
+                font-size: 20px;
+                margin-top: 7px;
+
+                span {
+                    font-size: var(--fontSize);
+                }
+            }
+            .mat-mdc-progress-bar {
+                &.success-progressbar {
+                    margin-top: 15px;
+                    --mdc-linear-progress-track-height: 10px;
+                    --mdc-linear-progress-active-indicator-height: 10px;
+                    --mdc-linear-progress-track-color: #B2FF97;
+                }
+            }
+        }
+        &:nth-child(2) {
+            padding: 19px 25px;
+            gap: 10px;
+
+            h5 {
+                font-size: 20px;
+                margin-top: 7px;
+
+                span {
+                    font-size: var(--fontSize);
+                }
+            }
+            .shape {
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                position: absolute;
+                border-radius: 0 0 7px 0;
+
+                img {
+                    margin-bottom: -3px;
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            &.bg-success-50 {
+                background-color: #0A0E19 !important;
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .mat-mdc-card-content {
+            &:nth-child(2) {
+                .shape {
+                    transform: scaleX(-1);
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .daily-limit-card {
+        .mat-mdc-card-content {
+            &:nth-child(1) {
+                padding: 17px;
+            }
+            &:nth-child(2) {
+                padding: 17px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .daily-limit-card {
+        .mat-mdc-card-content {
+            &:nth-child(1) {
+                padding: 20px;
+            }
+            &:nth-child(2) {
+                padding: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

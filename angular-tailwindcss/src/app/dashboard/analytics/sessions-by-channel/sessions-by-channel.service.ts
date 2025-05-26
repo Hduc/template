@@ -22,7 +22,7 @@ export class SessionsByChannelService {
                 const options = {
                     series: initialData.series,
                     chart: {
-                        height: 256,
+                        height: 257,
                         type: "donut"
                     },
                     labels: initialData.labels,

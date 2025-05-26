@@ -145,7 +145,7 @@ const FacebookCampaignOverview: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header sm:mb-[15px] md:mb-[22px] sm:flex items-center justify-between">
           <div className="trezo-card-title mb-[10px] sm:mb-0">
-            <h5 className="mb-[3px] md:mb-0 text-lg md:text-[20px]">
+            <h5 className="!mb-[3px] md:!mb-0 !text-lg md:!text-[20px]">
               Facebook Campaign Overview
             </h5>
             <p>Track campaign success at a glance!</p>

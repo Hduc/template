@@ -16,7 +16,7 @@ const CryptocurrencyWatchlist: React.FC = () => {
       <div className="trezo-card mb-[25px]">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Cryptocurrency Watchlist</h5>
+            <h5 className="!mb-0">Cryptocurrency Watchlist</h5>
           </div>
         </div>
 

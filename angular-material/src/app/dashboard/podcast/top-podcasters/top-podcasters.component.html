@@ -1,0 +1,86 @@
+<mat-card
+    class="top-podcasters-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0 fw-semibold">
+                Top Podcasters
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <a routerLink="." mat-button class="view-all-btn p-0 d-inline-block">
+                View All
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-two">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="user">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Name
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="employee-info d-flex align-items-center">
+                                <div class="img rounded-circle">
+                                    <img [src]="element.user.img" class="rounded-circle" alt="user-image">
+                                </div>
+                                <div>
+                                    <span class="d-block text-black fw-medium">
+                                        {{element.user.name}}
+                                    </span>
+                                    <span class="d-block text-body">
+                                        {{element.user.email}}
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Episodes Column -->
+                    <ng-container matColumnDef="episodes">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Episodes
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body">
+                            {{element.episodes}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Earnings Column -->
+                    <ng-container matColumnDef="earnings">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Earnings
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body">
+                            {{element.earnings}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Ratings Column -->
+                    <ng-container matColumnDef="ratings">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Ratings
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="ratings lh-1">
+                                @for (stars of element.ratings; track stars) {
+                                    <i [class]="[stars.star]"></i>
+                                }
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

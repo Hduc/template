@@ -29,7 +29,8 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import { styled } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
-import ClearIcon from "@mui/icons-material/Clear"; 
+import ClearIcon from "@mui/icons-material/Clear";
+import FileUpload from "../../../../Forms/FileUpload";
 
 // Modal Styling
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -66,8 +67,8 @@ const TablePaginationActions = ({ count, page, rowsPerPage, onPageChange }) => {
         onClick={handleBackButtonClick}
         disabled={page === 0}
         aria-label="previous page"
-        sx={{
-          border: "1px solid #eee",
+        className="border"
+        sx={{ 
           borderRadius: "4px",
           padding: "4px",
         }}
@@ -83,8 +84,8 @@ const TablePaginationActions = ({ count, page, rowsPerPage, onPageChange }) => {
         onClick={handleNextButtonClick}
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         aria-label="next page"
-        sx={{
-          border: "1px solid #eee",
+        className="border"
+        sx={{ 
           borderRadius: "4px",
           padding: "4px",
         }}
@@ -291,6 +292,12 @@ const RecentFiles = () => {
   // Form State
   const [owner, setOwner] = useState("");
   const [fileType, setFileType] = useState("");
+
+  // File Upload
+  const handleFileSelect = (files) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
 
   return (
     <>
@@ -650,7 +657,7 @@ const RecentFiles = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -677,7 +684,7 @@ const RecentFiles = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -708,7 +715,7 @@ const RecentFiles = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -736,7 +743,7 @@ const RecentFiles = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -749,21 +756,10 @@ const RecentFiles = () => {
                       Upload File
                     </Typography>
 
-                    <TextField
-                      autoComplete="uploadFile"
-                      name="uploadFile"
-                      required
-                      fullWidth
-                      id="uploadFile"
-                      type="file"
-                      autoFocus
-                      InputProps={{
-                        style: { borderRadius: 8 },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
@@ -774,7 +770,7 @@ const RecentFiles = () => {
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -782,6 +778,7 @@ const RecentFiles = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

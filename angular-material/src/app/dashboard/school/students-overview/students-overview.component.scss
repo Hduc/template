@@ -30,6 +30,22 @@
             }
         }
     }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .info {
+                .item {
+                    .icon {
+                        background-color: #15203c;
+                    }
+                    &:nth-child(2) {
+                        .icon {
+                            background-color: #15203c;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

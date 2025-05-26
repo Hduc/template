@@ -116,9 +116,9 @@ const TicketsDue: React.FC = () => {
     <>
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
-          <span className="block">TicketsDue</span>
+          <span className="block">Tickets Due</span>
 
-          <h5 className="mb-0 text-[20px] mt-[2px]">980</h5>
+          <h5 className="!mb-0 !text-[20px] mt-[2px]">980</h5>
 
           <div className="-mt-[14px] -mb-[15px]">
             {isChartLoaded && (

@@ -14,12 +14,19 @@ import {
   FormControlLabel,
 } from "@mui/material";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "@/components/Forms/FileUpload";
 
 const CreateNft: React.FC = () => {
   const [value, setValue] = React.useState("female");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
+  };
+
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
   };
 
   return (
@@ -39,7 +46,7 @@ const CreateNft: React.FC = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -49,30 +56,13 @@ const CreateNft: React.FC = () => {
                 }}
                 className="text-black"
               >
-                Upload Image, Video, Audio, or 3D Model
+                Upload Image
               </Typography>
 
-              <TextField
-                autoComplete="uploadFile"
-                name="uploadFile"
-                required
-                fullWidth
-                id="uploadFile"
-                type="file"
-                autoFocus
-                inputProps={{
-                  multiple: true,
-                }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -112,7 +102,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"
@@ -131,7 +121,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -171,7 +161,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -211,7 +201,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -252,7 +242,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -292,7 +282,7 @@ const CreateNft: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <FormControl>
                 <RadioGroup
                   defaultValue="putOnSale"
@@ -300,9 +290,9 @@ const CreateNft: React.FC = () => {
                   value={value}
                   onChange={handleChange}
                 >
-                  <Box 
-                    sx={{ 
-                      display: {xs: 'block', sm: 'flex'}, 
+                  <Box
+                    sx={{
+                      display: { xs: "block", sm: "flex" },
                       alignItems: "center",
                     }}
                   >

@@ -132,7 +132,7 @@ const RealTimeSales: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Real-Time Sales</h5>
+            <h5 className="!mb-0">Real-Time Sales</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -183,7 +183,7 @@ const RealTimeSales: React.FC = () => {
           <div className="flex justify-between pt-[28px] border-t border-gray-100 dark:border-[#172036]">
             <div>
               <span className="block text-xs">Total Sales</span>
-              <h6 className="mb-0 font-medium text-lg mt-[5px]">
+              <h6 className="!mb-0 !font-medium !text-lg !mt-[5px]">
                 $150.7k  {' '}
                 <span className="text-success-600 text-xs ltr:pl-[16px] rtl:pr-[16px] relative">
                   <i className="ri-arrow-up-fill ltr:left-0 rtl:right-0 absolute text-md top-1/2 -translate-y-1/2"></i>
@@ -193,7 +193,7 @@ const RealTimeSales: React.FC = () => {
             </div>
             <div>
               <span className="block text-xs">Avg. Sales Per Day</span>
-              <h6 className="mb-0 font-medium text-lg mt-[5px]">
+              <h6 className="!mb-0 !font-medium !text-lg !mt-[5px]">
                 $19.2k {' '}
                 <span className="text-danger-500 text-xs ltr:pl-[16px] rtl:pr-[16px] relative">
                   <i className="ri-arrow-down-fill ltr:left-0 rtl:right-0 absolute text-md top-1/2 -translate-y-1/2"></i>

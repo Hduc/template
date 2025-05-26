@@ -15,7 +15,7 @@ const Conpleted: React.FC = () => {
           height={308}
         />
 
-        <h3 className="text-gray-900 dark:text-gray-400 text-xl mt-[25px] mb-[12px]">
+        <h3 className="!text-gray-900 dark:!text-gray-400 !text-xl !mt-[25px] !mb-[12px]">
           Campaign Created!
         </h3>
 

@@ -23,7 +23,7 @@ import {
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"; 
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import CustomDropdown from "./CustomDropdown";
 
 interface TablePaginationActionsProps {
@@ -200,34 +200,29 @@ const rows = [
 ].sort((b, a) => (a.orderID < b.orderID ? -1 : 1));
 
 const RecentOrders: React.FC = () => {
-  // Select
-  const [select, setSelect] = React.useState("");
-  const handleChange = (event: SelectChangeEvent) => {
-    setSelect(event.target.value as string);
-  };
-
   // Table
+  const [searchQuery, setSearchQuery] = React.useState("");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  // Avoid a layout jump when reaching the last page with empty rows.
+  // Filtering based on search
+  const filteredRows = rows.filter(
+    (row) =>
+      row.orderID.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.status.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Pagination logic
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
-
-  const handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement> | null,
-    newPage: number
-  ) => {
-    setPage(newPage);
-  };
-
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredRows.length) : 0;
+  const handleChangePage = (event: any, newPage: number) => setPage(newPage);
   const handleChangeRowsPerPage = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
-
   return (
     <>
       <Card
@@ -265,14 +260,15 @@ const RecentOrders: React.FC = () => {
               gap: "20px",
             }}
           >
-            <form className='t-search-form'>
+            <form className="t-search-form">
               <label>
                 <i className="material-symbols-outlined">search</i>
               </label>
               <input
                 type="text"
-                className='t-input'
-                placeholder="Search here....."
+                className="t-input"
+                placeholder="Search here..."
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </form>
 
@@ -355,11 +351,11 @@ const RecentOrders: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
-                : rows
+                : filteredRows
               ).map((row) => (
                 <TableRow key={row.orderID}>
                   <TableCell
@@ -444,7 +440,7 @@ const RecentOrders: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={5} />
+                  <TableCell className="border-bottom" colSpan={5} />
                 </TableRow>
               )}
             </TableBody>
@@ -454,7 +450,7 @@ const RecentOrders: React.FC = () => {
                 <TablePagination
                   rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
                   colSpan={5}
-                  count={rows.length}
+                  count={filteredRows.length}
                   rowsPerPage={rowsPerPage}
                   page={page}
                   slotProps={{

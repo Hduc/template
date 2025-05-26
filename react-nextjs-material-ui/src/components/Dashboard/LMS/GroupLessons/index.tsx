@@ -310,7 +310,7 @@ const GroupLessons: React.FC = () => {
       >
         <Box
           sx={{
-            display: { xs: "block", sm: "flex" },
+            display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             mb: "25px",
@@ -485,7 +485,7 @@ const GroupLessons: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={5} />
+                  <TableCell className="border-bottom" colSpan={5} />
                 </TableRow>
               )}
             </TableBody>

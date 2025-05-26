@@ -6,8 +6,8 @@ import "swiper/css/bundle";
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
-import 'react-tabs/style/react-tabs.css';
- 
+import 'react-tabs/style/react-tabs.css'; 
+
 // Styles
 import "../../styles/style.css";
 

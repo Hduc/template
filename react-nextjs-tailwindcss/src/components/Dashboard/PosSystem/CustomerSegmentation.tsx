@@ -90,7 +90,7 @@ const CustomerSegmentation: React.FC = () => {
       <div className="trezo-card bg-gray-50 dark:bg-[#0c1427] rounded-md border border-gray-100 dark:border-[#172036]">
         <div className="trezo-card-header py-[15px] px-[20px] md:px-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-md font-medium">Customer Segmentation</h5>
+            <h5 className="!mb-0 !text-md !font-medium">Customer Segmentation</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -144,7 +144,7 @@ const CustomerSegmentation: React.FC = () => {
             </div>
             <div>
               <span className="block mb-[3px]">New Customers</span>
-              <h4 className="mb-0 font-semibold text-[20px] flex items-center gap-[6px]">
+              <h4 className="!mb-0 !font-semibold !text-[20px] !flex !items-center !gap-[6px]">
                 1,200{" "}
                 <span className="text-gray-500 dark:text-gray-400 text-xs font-normal">
                   +40% of total transactions
@@ -159,7 +159,7 @@ const CustomerSegmentation: React.FC = () => {
             </div>
             <div>
               <span className="block mb-[3px]">Returning Customers</span>
-              <h4 className="mb-0 font-semibold text-[20px] flex items-center gap-[6px]">
+              <h4 className="!mb-0 !font-semibold !text-[20px] !flex !items-center !gap-[6px]">
                 1,800{" "}
                 <span className="text-gray-500 dark:text-gray-400 text-xs font-normal">
                   +60% of total transactions

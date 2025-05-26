@@ -38,7 +38,7 @@ const ProjectsOverview: React.FC = () => {
         </Box>
 
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
             <Box
               className="pm-po-card bg-primary-50"
               sx={{ 
@@ -112,7 +112,7 @@ const ProjectsOverview: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
             <Box
               className="pm-po-card bg-orange-50"
               sx={{
@@ -186,7 +186,7 @@ const ProjectsOverview: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
             <Box
               className="pm-po-card bg-success-50"
               sx={{ 
@@ -260,7 +260,7 @@ const ProjectsOverview: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
             <Box
               className="pm-po-card bg-purple-50"
               sx={{

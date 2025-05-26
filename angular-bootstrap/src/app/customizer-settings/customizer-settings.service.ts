@@ -27,6 +27,9 @@ export class CustomizerSettingsService {
             // Card Bordered
             this.isCardBorderedTheme = JSON.parse(localStorage.getItem('isCardBorderedTheme')!);
 
+            // Navbar
+            this.isNavbarTheme = JSON.parse(localStorage.getItem('isNavbarTheme')!);
+
             // Card Without Border Radius
             this.isCardWithoutBorderRadiusTheme = JSON.parse(localStorage.getItem('isCardWithoutBorderRadiusTheme')!);
 
@@ -36,6 +39,10 @@ export class CustomizerSettingsService {
             // RTL Mode
             this.isRTLEnabledTheme = JSON.parse(localStorage.getItem('isRTLEnabledTheme')!) || false;
             this.updateRTLBodyClass();
+
+            // Body BG Color
+            this.isBodyBGTheme = JSON.parse(localStorage.getItem('isBodyBGTheme')!) || false;
+            this.updateBodyBGBodyClass();
         }
     }
 
@@ -116,6 +123,16 @@ export class CustomizerSettingsService {
         return this.isCardBorderedTheme;
     }
 
+    // Navbar
+    private isNavbarTheme!: boolean;
+    toggleNavbarTheme() {
+        this.isNavbarTheme = !this.isNavbarTheme;
+        localStorage.setItem('isNavbarTheme', JSON.stringify(this.isNavbarTheme));
+    }
+    isNavbar() {
+        return this.isNavbarTheme;
+    }
+
     // Card Without Border Radius
     private isCardWithoutBorderRadiusTheme!: boolean;
     toggleCardWithoutBorderRadiusTheme() {
@@ -154,6 +171,28 @@ export class CustomizerSettingsService {
                 document.body.classList.add('rtl-enabled');
             } else {
                 document.body.classList.remove('rtl-enabled');
+            }
+        }
+    }
+
+    // Body BG Color
+    private isBodyBGTheme!: boolean;
+    toggleBodyBGTheme() {
+        this.isBodyBGTheme = !this.isBodyBGTheme;
+        if (this.isBrowser()) {
+            localStorage.setItem('isBodyBGTheme', JSON.stringify(this.isBodyBGTheme));
+            this.updateBodyBGBodyClass();
+        }
+    }
+    isBodyBG() {
+        return this.isBodyBGTheme;
+    }
+    private updateBodyBGBodyClass() {
+        if (this.isBrowser()) {
+            if (this.isBodyBGTheme) {
+                document.body.classList.add('body-bg-color');
+            } else {
+                document.body.classList.remove('body-bg-color');
             }
         }
     }

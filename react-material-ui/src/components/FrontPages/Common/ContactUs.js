@@ -33,7 +33,7 @@ const ContactUs = () => {
           }}
         >
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={12} md={12} lg={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
               <div className="fp-contact-image border-radius">
                 <img
                   src="/images/front-pages/contact.jpg"
@@ -45,7 +45,7 @@ const ContactUs = () => {
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={12} lg={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
               <div className="fp-contact-content">
                 <div className="section-title">
                   <div className="sub-title">
@@ -102,6 +102,10 @@ const ContactUs = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -140,6 +144,10 @@ const ContactUs = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -177,6 +185,10 @@ const ContactUs = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>

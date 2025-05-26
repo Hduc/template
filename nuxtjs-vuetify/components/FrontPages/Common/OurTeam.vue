@@ -12,12 +12,7 @@
         </h2>
       </div>
       <div class="team-slides">
-        <CCarousel
-          v-bind="settings"
-          :autoplay="3000"
-          :wrap-around="true"
-          :breakpoints="breakpoints"
-        >
+        <CCarousel v-bind="config">
           <CSlide v-for="slide in items" :key="slide.id">
             <div class="single-team-member">
               <div class="image border-radius">
@@ -81,12 +76,37 @@ import image4 from "~/assets/images/front-pages/team4.jpg";
 
 export default defineComponent({
   name: "OurTeam",
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "center",
-    },
-    items: [
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+      breakpoints: {
+        0: {
+          itemsToShow: 1,
+          snapAlign: "start",
+        },
+        515: {
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+        695: {
+          itemsToShow: 2,
+          snapAlign: "start",
+        },
+        935: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+        1200: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+      },
+    };
+
+    const items = [
       {
         id: 1,
         image: image1,
@@ -179,30 +199,13 @@ export default defineComponent({
           },
         ],
       },
-    ],
-    breakpoints: {
-      0: {
-        itemsToShow: 1,
-        snapAlign: "start",
-      },
-      515: {
-        itemsToShow: 2,
-        snapAlign: "start",
-      },
-      695: {
-        itemsToShow: 2,
-        snapAlign: "start",
-      },
-      935: {
-        itemsToShow: 3,
-        snapAlign: "center",
-      },
-      1200: {
-        itemsToShow: 3,
-        snapAlign: "center",
-      },
-    },
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>
 

@@ -1,0 +1,136 @@
+.marketing-section-title {
+    h2 {
+        max-width: 630px;
+    }
+    p {
+        max-width: 615px;
+    }
+}
+.blog-item {
+    margin-bottom: 25px;
+
+    .image {
+        border-radius: 25px;
+        margin-bottom: 25px;
+
+        img {
+            border-radius: 25px;
+        }
+    }
+    .content {
+        padding: {
+            left: 25px;
+            right: 25px;
+        };
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+
+            a {
+                &:hover {
+                    color: var(--orangeColor);
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .marketing-section-title {
+        text-align: center;
+
+        h2 {
+            max-width: 100%;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .blog-item {
+        .image {
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: {
+                left: 0;
+                right: 0;
+            };
+            h3 {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .marketing-section-title {
+        text-align: center;
+
+        h2 {
+            max-width: 100%;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .blog-item {
+        .image {
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: {
+                left: 0;
+                right: 0;
+            };
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .blog-item {
+        .content {
+            padding: {
+                left: 0;
+                right: 0;
+            };
+            h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .blog-item {
+        .content {
+            padding: {
+                left: 20px;
+                right: 20px;
+            };
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

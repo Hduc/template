@@ -111,7 +111,7 @@ const AssetsContent: React.FC = () => {
                     folder_open
                   </i>
                 </div>
-                <h6 className="mb-0 text-[15px]">{card.title}</h6>
+                <h6 className="!mb-0 !text-[15px]">{card.title}</h6>
               </div>
               <div className="mt-[20px] md:mt-[30px] lg:mt-[40px] flex items-center justify-between">
                 <div className="block text-sm text-black dark:text-white">

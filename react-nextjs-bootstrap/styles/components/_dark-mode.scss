@@ -874,27 +874,6 @@
             border-color: #757DFF !important;
         }
     }
- 
-    .control-panel-modal {
-        .modal-header {
-            &.bg-body-bg {
-                background-color: #000000 !important;
-                border-left: 1px solid #333;
-                border-bottom: 1px solid #333;
-            }
-            .btn-close {
-                background-color: #fff;
-                opacity: 1;
-                width: 30px;
-                height: 30px;
-                border-radius: 100px;
-            }
-        }
-        .cpm-content {
-            background-color: #000;
-            border-left: 1px solid #333;
-        }
-    }
     .react-calendar {
         background-color: $dark-card-bg;
 
@@ -1016,7 +995,7 @@
             fill: #fff !important;
         }
         .apexcharts-tooltip-y-group {
-            span {
+            .apexcharts-tooltip-text-y-label, .apexcharts-tooltip-text-y-value {
                 color: #fff !important;
             }
         }
@@ -1038,6 +1017,66 @@
     .accordion-button:not(.collapsed)::after {
         filter: contrast(0.4);
     }
+
+    // Hotel dashboard
+    .welcome-for-hotel {
+        background-color: $dark-body-bg !important;
+    }
+    .popular-rooms-slide {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: #555;
+                opacity: 1;
+    
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    // End Hotel dashboard
+
+    // Real Estate Agent dashboard
+    .bg-gray-100 {
+        background-color: $dark-input-bg !important; 
+        
+        &.border {
+            border-color: $dark-input-bg !important;
+        }
+    }
+    .my-featured-listings-bg {
+        background-color: #15203c !important;
+    }
+    .rea-manage-app {
+        background-color: #15203c !important;
+    }
+    .rea-client-ratings-card {
+        .bg-border-color-50, .bg-danger-100, .bg-success-90 {
+            background-color: #15203c !important;
+        }
+    }
+    .rea-client-ratings-slide, .my-featured-listings-slide {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: #555;
+                opacity: 1;
+    
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    .cc-card {
+        background-image: inherit !important;
+    }
+    .gradient-card-dark {
+        background: #15203c !important;
+    }
+    .bg-black-for-dark {
+        background-color: #000 !important;
+    }
+    // End Real Estate Agent dashboard
 }
 
 // dark-top-navbar

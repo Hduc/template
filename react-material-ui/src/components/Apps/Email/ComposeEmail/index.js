@@ -97,7 +97,7 @@ const ComposeEmail = () => {
 
       <form>
         <Grid container spacing={3} columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-          <Grid item xs={12} md={12} lg={12} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
             <Box>
               <Typography
                 component="label"
@@ -136,7 +136,7 @@ const ComposeEmail = () => {
           </Grid>
 
           {/* CC Field */}
-          <Grid item xs={12} md={12} lg={12} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
             <Box>
               <Typography
                 component="label"
@@ -175,7 +175,7 @@ const ComposeEmail = () => {
           </Grid>
 
           {/* BCC Field */}
-          <Grid item xs={12} md={12} lg={12} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
             <Box>
               <Typography
                 component="label"
@@ -214,7 +214,7 @@ const ComposeEmail = () => {
           </Grid>
 
           {/* Subject Field */}
-          <Grid item xs={12} md={12} lg={12} xl={6}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
             <Box>
               <FormControl fullWidth>
                 <Typography
@@ -246,7 +246,7 @@ const ComposeEmail = () => {
           </Grid>
 
           {/* Message Field */}
-          <Grid item xs={12} md={12} lg={12} xl={12}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
             <Box>
               <Typography
                 component="label"
@@ -265,7 +265,7 @@ const ComposeEmail = () => {
           </Grid>
 
           {/* Actions */}
-          <Grid item xs={12} md={12} lg={12} xl={12}>
+          <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
             <Box
               sx={{
                 display: "flex",

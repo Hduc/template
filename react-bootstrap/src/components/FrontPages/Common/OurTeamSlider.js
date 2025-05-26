@@ -1,5 +1,6 @@
 "use client";
 
+import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -49,7 +50,7 @@ const OurTeamSlider = () => {
 
   return (
     <div className="our-team-area position-relative z-2">
-      <div className="container">
+      <Container>
         <div className="mb-4 mb-lg-5">
           <div className="section-title ms-0 text-start mw-630 mb-0">
             <span className="top-title">
@@ -143,7 +144,7 @@ const OurTeamSlider = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </Container>
 
       {/* Shape Images */}
       <img

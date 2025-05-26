@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Grid,
@@ -9,1625 +9,490 @@ import {
   Typography,
   AvatarGroup,
   Avatar,
-  Pagination,
 } from "@mui/material";
 import Link from "next/link";
 
+interface EventData {
+  id: number;
+  image: string;
+  price: string;
+  title: string;
+  description: string;
+  avatarImages: string[];
+  seatBooked: number;
+  seatProgress: number; // as a percentage value (0-100)
+  detailsUrl: string;
+}
+
+const eventsData: EventData[] = [
+  {
+    id: 1,
+    image: "/images/events/event1.jpg",
+    price: "$120",
+    title: "Annual Conference 2024",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user6.jpg",
+      "/images/users/user7.jpg",
+      "/images/users/user8.jpg",
+      "/images/users/user9.jpg",
+      "/images/users/user10.jpg",
+    ],
+    seatBooked: 1156,
+    seatProgress: 85,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 2,
+    image: "/images/events/event2.jpg",
+    price: "$59",
+    title: "Leadership Summit 2024",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user11.jpg",
+      "/images/users/user12.jpg",
+      "/images/users/user13.jpg",
+      "/images/users/user14.jpg",
+    ],
+    seatBooked: 556,
+    seatProgress: 24,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 3,
+    image: "/images/events/event3.jpg",
+    price: "$123",
+    title: "Product Launch Webinar",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user15.jpg",
+      "/images/users/user16.jpg",
+      "/images/users/user17.jpg",
+    ],
+    seatBooked: 356,
+    seatProgress: 65,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 4,
+    image: "/images/events/event4.jpg",
+    price: "$89",
+    title: "Tech Innovators Forum",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user18.jpg",
+      "/images/users/user19.jpg",
+      "/images/users/user20.jpg",
+    ],
+    seatBooked: 789,
+    seatProgress: 72,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 5,
+    image: "/images/events/event5.jpg",
+    price: "$199",
+    title: "Global Marketing Expo",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user21.jpg",
+      "/images/users/user22.jpg",
+      "/images/users/user23.jpg",
+      "/images/users/user24.jpg",
+    ],
+    seatBooked: 1200,
+    seatProgress: 90,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 6,
+    image: "/images/events/event6.jpg",
+    price: "$49",
+    title: "Startup Pitch Night",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user25.jpg",
+      "/images/users/user26.jpg",
+      "/images/users/user27.jpg",
+    ],
+    seatBooked: 300,
+    seatProgress: 50,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 7,
+    image: "/images/events/event7.jpg",
+    price: "$149",
+    title: "AI & Machine Learning Workshop",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user28.jpg",
+      "/images/users/user29.jpg",
+      "/images/users/user30.jpg",
+    ],
+    seatBooked: 450,
+    seatProgress: 60,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 8,
+    image: "/images/events/event8.jpg",
+    price: "$79",
+    title: "Creative Design Conference",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user31.jpg",
+      "/images/users/user32.jpg",
+      "/images/users/user33.jpg",
+    ],
+    seatBooked: 600,
+    seatProgress: 75,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 9,
+    image: "/images/events/event9.jpg",
+    price: "$99",
+    title: "Digital Transformation Summit",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user34.jpg",
+      "/images/users/user35.jpg",
+      "/images/users/user36.jpg",
+    ],
+    seatBooked: 850,
+    seatProgress: 80,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 10,
+    image: "/images/events/event10.jpg",
+    price: "$69",
+    title: "Future of Work Symposium",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user37.jpg",
+      "/images/users/user38.jpg",
+      "/images/users/user39.jpg",
+    ],
+    seatBooked: 400,
+    seatProgress: 55,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 11,
+    image: "/images/events/event1.jpg",
+    price: "$109",
+    title: "Sustainability & Green Tech Expo",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user40.jpg",
+      "/images/users/user41.jpg",
+      "/images/users/user42.jpg",
+    ],
+    seatBooked: 700,
+    seatProgress: 70,
+    detailsUrl: "/events/details",
+  },
+  {
+    id: 12,
+    image: "/images/events/event2.jpg",
+    price: "$159",
+    title: "Blockchain & Crypto Conference",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    avatarImages: [
+      "/images/users/user43.jpg",
+      "/images/users/user44.jpg",
+      "/images/users/user45.jpg",
+    ],
+    seatBooked: 950,
+    seatProgress: 88,
+    detailsUrl: "/events/details",
+  },
+];
+
 const EventsGrid: React.FC = () => {
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const eventsPerPage = 8; // Change this to show more or fewer events per page
+
+  const totalPages = Math.ceil(eventsData.length / eventsPerPage);
+  const indexOfFirstItem = (currentPage - 1) * eventsPerPage;
+  const indexOfLastItem = indexOfFirstItem + eventsPerPage;
+  const currentEvents = eventsData.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event1.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $120
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
+        {currentEvents.map((event) => (
+          <Grid size={{ xs: 12, sm: 6, lg: 4, xl: 3 }} key={event.id}>
+            <Card
+              sx={{
+                boxShadow: "none",
+                borderRadius: "7px",
+                mb: "25px",
+                padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
+              }}
+              className="rmui-card"
+            >
+              <Box position="relative">
                 <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
+                  href={event.detailsUrl}
+                  className="border-radius"
+                  style={{
+                    display: "block",
+                  }}
                 >
-                  Annual Conference 2024
+                  <Image
+                    src={event.image}
+                    className="border-radius"
+                    alt="event-image"
+                    width={700}
+                    height={467}
+                  />
                 </Link>
-              </Typography>
 
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user6.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user7.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user8.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user9.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user10.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
                 <Box
+                  className="text-white po-right-0"
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
+                    textAlign: "center",
+                    justifyContent: "center",
+                    fontWeight: "bold",
+                    bgcolor: "primary.main",
+                    position: "absolute",
+                    top: "0px",
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "7px",
+                    fontSize: "16px",
                   }}
                 >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    1156
-                  </Typography>
+                  {event.price}
                 </Box>
-                <Box
+              </Box>
+
+              <Box sx={{ mt: "15px" }}>
+                <Typography
+                  variant="h6"
                   sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
+                    fontSize: "18px",
+                    mb: "5px",
+                    fontWeight: "700",
                   }}
                 >
+                  <Link
+                    href={event.detailsUrl}
+                    className="text-black hover-text-color"
+                  >
+                    {event.title}
+                  </Link>
+                </Typography>
+
+                <Typography mb="15px" lineHeight="1.8">
+                  {event.description}
+                </Typography>
+
+                <AvatarGroup
+                  max={4}
+                  sx={{
+                    justifyContent: "flex-end",
+                    mb: "20px",
+
+                    "& .MuiAvatar-root": {
+                      border: "2px solid #fff",
+                      backgroundColor: "#f0f0f0",
+                      color: "#000",
+                      width: "35px",
+                      height: "35px",
+                    },
+                    "& .MuiAvatarGroup-avatar": {
+                      backgroundColor: "#605dff", // Custom background color for the total avatar
+                      color: "#fff", // Custom color for the text
+                      fontSize: "10px",
+                    },
+                  }}
+                >
+                  {event.avatarImages.map((src, index) => (
+                    <Avatar key={index} alt={`Avatar ${index}`} src={src} />
+                  ))}
+                </AvatarGroup>
+
+                <Box className="progress">
                   <Box
                     sx={{
-                      bgcolor: `primary.main`,
-                      width: `85%`,
-                      height: "4px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      mb: "10px",
                     }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
+                  >
+                    <Typography>Seat Booked</Typography>
 
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event2.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $59
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Leadership Summit 2024
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user11.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user12.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user13.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user14.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    556
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
+                    <Typography fontWeight={600} className="text-black">
+                      {event.seatBooked}
+                    </Typography>
+                  </Box>
                   <Box
                     sx={{
-                      bgcolor: `primary.main`,
-                      width: `24%`,
+                      bgcolor: "#ecf0ff",
+                      width: "100%",
                       height: "4px",
                     }}
-                  ></Box>
+                  >
+                    <Box
+                      sx={{
+                        bgcolor: `primary.main`,
+                        width: `${event.seatProgress}%`,
+                        height: "4px",
+                      }}
+                    ></Box>
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event3.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $123
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Product Launch Webinar
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user15.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user16.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user17.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    356
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `65%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event4.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $99
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  AI in Healthcare Symposium
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user18.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user19.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user20.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    3226
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `82%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event5.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $35
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Tech Summit 2024
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user21.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user22.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user23.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user24.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user25.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    4109
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `48%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event6.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $76
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Startup Pitch Day
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user26.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user27.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    432
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `37%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event7.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $30
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Workshop: Digital Marketing
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user28.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user29.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user30.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    1728
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `65%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event8.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $87
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Charity Gala Dinner
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user1.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user2.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user3.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user4.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user5.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    1306
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `80%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event9.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $50
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Web Development Seminar
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user6.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user7.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user8.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user9.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user10.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    2756
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `78%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event10.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $89
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Networking Mixer
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user11.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user7.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user12.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user9.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user15.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    1467
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `30%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event1.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $105
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Annual Conference 2024
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user16.jpg" />
-                <Avatar alt="Travis Howard" src="/images/users/user17.jpg" />
-                <Avatar alt="Agnes Walker" src="/images/users/user18.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user9.jpg" />
-                <Avatar alt="Trevor Le" src="/images/users/user10.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    799
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `90%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
-
-        <Grid item xs={12} sm={6} lg={4} xl={3}>
-          <Card
-            sx={{
-              boxShadow: "none",
-              borderRadius: "7px",
-              mb: "25px",
-              padding: { xs: "18px", sm: "20px", lg: "12px", xl: "25px" },
-            }}
-            className="rmui-card"
-          >
-            <Box position="relative">
-              <Link
-                href="/events/details"
-                className="border-radius"
-                style={{
-                  display: "block",
-                }}
-              >
-                <Image
-                  src="/images/events/event1.jpg"
-                  className="border-radius"
-                  alt="event-image"
-                  width={700}
-                  height={467}
-                />
-              </Link>
-
-              <Box
-                className="text-white po-right-0"
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  textAlign: "center",
-                  justifyContent: "center",
-                  fontWeight: "bold",
-                  bgcolor: "primary.main",
-                  position: "absolute",
-                  top: "0px",
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "7px",
-                  fontSize: "16px",
-                }}
-              >
-                $120
-              </Box>
-            </Box>
-
-            <Box sx={{ mt: "15px" }}>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontSize: "18px",
-                  mb: "5px",
-                  fontWeight: "700",
-                }}
-              >
-                <Link
-                  href="/events/details"
-                  className="text-black hover-text-color"
-                >
-                  Leadership Summit 2024
-                </Link>
-              </Typography>
-
-              <Typography mb="15px" lineHeight="1.8">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text.
-              </Typography>
-
-              <AvatarGroup
-                max={4}
-                sx={{
-                  justifyContent: "flex-end",
-                  mb: "20px",
-
-                  "& .MuiAvatar-root": {
-                    border: "2px solid #fff",
-                    backgroundColor: "#f0f0f0",
-                    color: "#000",
-                    width: "35px",
-                    height: "35px",
-                  },
-                  "& .MuiAvatarGroup-avatar": {
-                    backgroundColor: "#605dff", // Custom background color for the total avatar
-                    color: "#fff", // Custom color for the text
-                    fontSize: "10px",
-                  },
-                }}
-              >
-                <Avatar alt="Remy Sharp" src="/images/users/user6.jpg" />
-              </AvatarGroup>
-
-              <Box className="progress">
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mb: "10px",
-                  }}
-                >
-                  <Typography>Seat Booked</Typography>
-
-                  <Typography fontWeight={600} className="text-black">
-                    3241
-                  </Typography>
-                </Box>
-                <Box
-                  sx={{
-                    bgcolor: "#ecf0ff",
-                    width: "100%",
-                    height: "4px",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      bgcolor: `primary.main`,
-                      width: `85%`,
-                      height: "4px",
-                    }}
-                  ></Box>
-                </Box>
-              </Box>
-            </Box>
-          </Card>
-        </Grid>
+            </Card>
+          </Grid>
+        ))}
 
         {/* Pagination */}
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-          <Box
-            className="pagination-card bg-white"
-            sx={{
-              mb: "25px",
-              padding: "25px",
-              borderRadius: "7px",
-            }}
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
+          <Card
+            className="bg-white"
+            sx={{ borderRadius: "7px", mb: "25px", boxShadow: "none" }}
           >
-            <Box
-              sx={{
-                display: { sm: "flex" },
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
-              <Typography sx={{ mb: { xs: "10px", sm: "0" } }}>
-                Showing 9 of 36 results
-              </Typography>
+            <Box sx={{ padding: "24px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: { xs: "center", sm: "space-between" },
+                  gap: "10px",
+                  flexWrap: "wrap",
+                }}
+              >
+                <Typography
+                  component={"span"}
+                  sx={{ fontSize: "12px", fontWeight: "500" }}
+                >
+                  Showing {indexOfFirstItem + 1}-
+                  {Math.min(indexOfLastItem, eventsData.length)} of{" "}
+                  {eventsData.length} Results
+                </Typography>
 
-              <Pagination
-                count={4}
-                variant="outlined"
-                shape="rounded"
-                color="primary"
-              />
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "5px",
+                  }}
+                >
+                  <Box
+                    className="border"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "5px",
+                      cursor: "pointer",
+
+                      "&:hover": {
+                        backgroundColor: "primary.main",
+                        color: "#fff !important",
+                      },
+                    }}
+                    onClick={handlePreviousPage}
+                  >
+                    <i className="material-symbols-outlined">
+                      keyboard_arrow_left
+                    </i>
+                  </Box>
+
+                  {Array.from({ length: totalPages }, (_, index) => (
+                    <Box
+                      key={index + 1}
+                      className={`border ${
+                        currentPage === index + 1
+                          ? "bg-primary text-white border-color-primary"
+                          : ""
+                      }`}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+
+                        "&:hover": {
+                          backgroundColor: "primary.main",
+                          color: "#fff !important",
+                        },
+                      }}
+                      onClick={() => handlePageChange(index + 1)}
+                    >
+                      {index + 1}
+                    </Box>
+                  ))}
+
+                  <Box
+                    className="border"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "5px",
+                      cursor: "pointer",
+
+                      "&:hover": {
+                        backgroundColor: "primary.main",
+                        color: "#fff !important",
+                      },
+                    }}
+                    onClick={handleNextPage}
+                  >
+                    <i className="material-symbols-outlined">
+                      keyboard_arrow_right
+                    </i>
+                  </Box>
+                </Box>
+              </Box>
             </Box>
-          </Box>
+          </Card>
         </Grid>
       </Grid>
     </>

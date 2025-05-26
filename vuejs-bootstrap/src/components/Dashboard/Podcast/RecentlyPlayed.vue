@@ -138,7 +138,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
+import feather from "feather-icons";
 
 export default defineComponent({
   name: "RecentlyPlayed",
@@ -228,6 +229,10 @@ export default defineComponent({
         isPlaying.value = index;
       }
     };
+
+    onMounted(() => {
+      feather.replace();
+    });
 
     return {
       audioRefs,

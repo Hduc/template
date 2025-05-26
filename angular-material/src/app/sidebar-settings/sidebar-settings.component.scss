@@ -17,7 +17,7 @@
         border-radius: 5px 0 0 5px;
         transition: var(--transition);
         background-color: var(--whiteColor);
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.02) 0px 0px 0px 1px;
         
         i {
             display: block;
@@ -184,8 +184,8 @@
     .live-demo-btn {
         background-color: var(--whiteColor);
         color: var(--primaryColor);
+        padding: 3px 15px 4px;
         border-radius: 30px;
-        padding: 3.5px 15px;
         font: {
             size: 14px;
             weight: 400;

@@ -9,7 +9,7 @@
       <CommonCalendarContent />
       <div class="upcoming-events">
         <span class="title d-block fw-medium"> Upcoming Events: </span>
-        <CCarousel v-bind="settings" :autoplay="3000" :wrap-around="true">
+        <CCarousel v-bind="config">
           <CSlide v-for="slide in items" :key="slide.id">
             <div class="event-item position-relative">
               <h6 class="fw-semibold">Pythons Unleashed: {{ slide.title }}</h6>
@@ -29,17 +29,20 @@
   </v-card>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "WorkingSchedule",
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "center",
-    },
-    items: [
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+    };
+
+    const items = [
       {
         id: 1,
         title: "A Development Expedition",
@@ -61,8 +64,13 @@ export default defineComponent({
         startTime: "12.00 PM",
         endTime: "6.00 PM",
       },
-    ],
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>
 

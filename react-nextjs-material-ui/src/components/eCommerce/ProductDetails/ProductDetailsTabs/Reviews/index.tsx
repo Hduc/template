@@ -21,7 +21,7 @@ const Reviews: React.FC = () => {
           spacing={{ xs: 3, sm: 3, md: 3, lg: 3 }}
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
-          <Grid item xs={12} sm={6} lg={6} xl={8}>
+          <Grid size={{ xs: 12, sm: 6, lg: 6, xl: 8 }}>
             <Box
               className="rating-item"
               sx={{
@@ -304,7 +304,7 @@ const Reviews: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} lg={6} xl={4}>
+          <Grid size={{ xs: 12, sm: 6, lg: 6, xl: 4 }}>
             <Box
               className="overall-reviews"
               sx={{

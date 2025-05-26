@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { RouterOutlet, Router, Event, NavigationEnd } from '@angular/router';
+import { SidebarSettingsComponent } from './sidebar-settings/sidebar-settings.component';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, CommonModule],
+    imports: [RouterOutlet, CommonModule, SidebarSettingsComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

@@ -3,7 +3,6 @@
     <div class="card-body p-4">
       <span class="fs-14 d-block mb-4">On-Time Delivery</span>
       <div style="margin: -7px 0 -13px 0">
-        <div id="on_time_delivery"></div>
         <apexchart
           v-if="isClient"
           type="pie"

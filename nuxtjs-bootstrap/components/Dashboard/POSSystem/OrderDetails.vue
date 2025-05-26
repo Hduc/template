@@ -218,12 +218,12 @@
           </div>
         </div>
 
-        <RouterLink
+        <NuxtLink
           to="/ecommerce/checkout"
           class="btn btn-primary fs-16 fw-medium w-100 py-2"
         >
           Place Order
-        </RouterLink>
+        </NuxtLink>
       </div>
     </div>
   </div>

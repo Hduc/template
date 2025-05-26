@@ -139,6 +139,7 @@ const EmergencyRoomVisits: React.FC = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            gap: "10px",
             mb: "25px",
           }}
         >

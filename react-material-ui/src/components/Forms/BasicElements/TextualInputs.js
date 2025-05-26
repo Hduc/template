@@ -60,7 +60,7 @@ const TextualInputs = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="First name"
@@ -80,12 +80,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Last name"
@@ -105,12 +109,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Email address"
@@ -130,12 +138,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Phone number"
@@ -155,12 +167,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Address"
@@ -180,12 +196,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Country"
@@ -205,12 +225,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <FormControl fullWidth>
                 <InputLabel id="product-type-label">Town/City</InputLabel>
                 <Select
@@ -234,7 +258,7 @@ const TextualInputs = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <FormControl fullWidth>
                 <InputLabel id="state-label">State</InputLabel>
                 <Select
@@ -258,7 +282,7 @@ const TextualInputs = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <FormControl fullWidth>
                 <TextField
                   label="Zip code"
@@ -278,12 +302,16 @@ const TextualInputs = () => {
                     "& .MuiInputBase-root:hover::before": {
                       border: "none",
                     },
+                    "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                      {
+                        border: "none",
+                      },
                   }}
                 />
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"

@@ -1,0 +1,58 @@
+<mat-card
+    class="recent-lab-reports-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Recent Lab Reports
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-five">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- File Column -->
+                    <ng-container matColumnDef="reportFile">
+                        <th mat-header-cell *matHeaderCellDef>
+                            File
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="employee-info d-flex">
+                                <div class="img">
+                                    <img [src]="element.reportFile.img" alt="user-image">
+                                </div>
+                                <div>
+                                    <span class="d-block text-black fw-semibold">
+                                        {{element.reportFile.name}}
+                                    </span>
+                                    <span class="d-block text-body">
+                                        submitted by <span class="text-black">{{element.reportFile.author}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Download Column -->
+                    <ng-container matColumnDef="download">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Download
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-button class="p-0">
+                                <i class="{{element.download}}"></i>
+                            </button>
+                        </td>
+                    </ng-container>
+
+                    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

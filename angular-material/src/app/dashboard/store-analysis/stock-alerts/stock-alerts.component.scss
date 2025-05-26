@@ -1,0 +1,71 @@
+::ng-deep {
+    .stock-alerts-card {
+        .mat-mdc-card-content {
+            .mat-mdc-table {
+                &.mdc-data-table__table {
+                    .mat-mdc-header-row {
+                        .mat-mdc-header-cell {
+                            padding-bottom: 10.4px;
+                            
+                            &:nth-child(4), &:nth-child(5) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .mdc-data-table__content {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 10.4px;
+                                    bottom: 10.4px;
+                                };
+                                .employee-info {
+                                    gap: 10px;
+
+                                    .img {
+                                        width: 29px;
+                                    }
+                                    a {
+                                        font-size: var(--fontSize);
+                                    }
+                                }
+                                .trezo-badge {
+                                    border-radius: 30px;
+                                    padding: 1px 10px;
+                                }
+                                .dot-menu {
+                                    font-size: 18px;
+                                    color: var(--bodyColor);
+                                }
+                                &:nth-child(4), &:nth-child(5) {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-paginator {
+                padding-top: 10.4px;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

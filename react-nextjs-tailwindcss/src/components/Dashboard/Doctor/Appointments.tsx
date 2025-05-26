@@ -10,7 +10,7 @@ const Appointments: React.FC = () => {
         <div className="trezo-card-content flex justify-between">
           <div>
             <span className="block">Appointments</span>
-            <h2 className="text-xl md:text-2xl font-black mt-[5px] mb-[8px]">
+            <h2 className="!text-xl md:!text-2xl !font-black !mt-[5px] !mb-[8px]">
               32
             </h2>
             <span className="inline-block text-xs rounded-[30px] px-[10px] border border-orange-300 text-danger-500 bg-orange-100 dark:border-[#15203c] dark:bg-[#15203c]">

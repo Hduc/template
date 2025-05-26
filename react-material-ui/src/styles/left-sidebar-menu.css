@@ -105,14 +105,18 @@
   color: var(--blackColor);
   font-size: var(--fontSize);
   font-weight: 500;
+  box-sizing: unset;
   background-color: transparent;
   margin-top: 0;
   margin-bottom: 5px;
-  padding-bottom: 9.5px;
+  padding-bottom: 9px;
   padding-right: 10px;
-  padding-left: 40px;
-  padding-top: 9.5px;
+  padding-left: 10px;
+  padding-top: 9px;
   min-height: auto;
+  position: relative;
+  width: 91%;
+  white-space: nowrap;
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary.Mui-expanded {
   background-color: #f6f7f9;
@@ -129,13 +133,10 @@
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
   transition: var(--transition);
-  transform: translateY(-50%);
   color: var(--bodyColor);
-  position: absolute;
   font-size: 22px;
   line-height: 1;
-  left: 12px;
-  top: 50%;
+  margin-right: 7px;
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-expandIconWrapper {
   position: absolute;
@@ -254,32 +255,31 @@
   margin-bottom: 0;
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link {
+  white-space: nowrap;
   transition: var(--transition);
   color: var(--blackColor);
   margin-bottom: 5px;
   position: relative;
   border-radius: 7px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   text-decoration: none;
-  padding-bottom: 9.5px;
-  padding-right: 30px;
-  padding-top: 9.5px;
-  padding-left: 40px;
+  padding-bottom: 9px;
+  padding-right: 10px;
+  padding-top: 9px;
+  padding-left: 10px;
   font-size: var(--fontSize);
+  font-weight: 500;
+}
+.left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link span {
   font-weight: 500;
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link i {
   transition: var(--transition);
-  transform: translateY(-50%);
   color: var(--bodyColor);
-  position: absolute;
   font-size: 22px;
   line-height: 1;
-  left: 12px;
-  top: 50%;
-}
-.left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
-  font-weight: 500;
 }
 .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link:hover, .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link.active {
   color: var(--primaryColor);
@@ -315,6 +315,9 @@
 }
 .dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .title {
   color: var(--whiteColor);
+}
+.dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary.Mui-expanded {
   background-color: #15203c;
@@ -353,6 +356,9 @@
 .dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link {
   color: var(--whiteColor);
 }
+.dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
+  color: var(--whiteColor);
+}
 .dark-theme .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link i {
   color: var(--darkBodyColor);
 }
@@ -386,13 +392,9 @@
   right: auto;
   left: 25px;
 }
-[dir=rtl] .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
-  padding-right: 40px;
-  padding-left: 10px;
-}
 [dir=rtl] .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
-  left: auto;
-  right: 12px;
+  margin-right: 0;
+  margin-left: 7px;
 }
 [dir=rtl] .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
   right: auto;
@@ -418,14 +420,6 @@
   margin-left: 0;
   margin-right: 9px;
 }
-[dir=rtl] .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link {
-  padding-right: 40px;
-  padding-left: 30px;
-}
-[dir=rtl] .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link i {
-  left: auto;
-  right: 12px;
-}
 
 /* Max width 767px */
 /* Min width 576px to Max width 767px */
@@ -446,9 +440,6 @@
     padding-right: 18px;
     padding-bottom: 15px;
   }
-  .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
-    padding-left: 36px;
-  }
   .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
     font-size: 18px;
   }
@@ -460,7 +451,6 @@
     padding-left: 35px;
   }
   .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link {
-    padding-left: 36px;
     font-size: 13px;
   }
   .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link i {
@@ -516,6 +506,7 @@
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
+    width: 20px;
   }
   .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .title, .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
     display: none;
@@ -524,21 +515,10 @@
     display: none;
   }
   .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
-    transform: initial;
-    position: initial;
+    margin-right: 0;
   }
   .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .MuiCollapse-entered {
     display: none;
-  }
-  .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link {
-    padding-bottom: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-left: 10px;
-  }
-  .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link i {
-    transform: initial;
-    position: initial;
   }
   .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
     display: none;
@@ -570,10 +550,10 @@
     display: inline-block;
   }
   .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
-    padding-bottom: 9.5px;
-    padding-right: 10px;
-    padding-left: 40px;
-    padding-top: 9.5px;
+    width: 91%;
+  }
+  .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-right: 7px;
   }
   .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .title, .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
     display: inline-block;
@@ -581,33 +561,141 @@
   .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-expandIconWrapper {
     display: inline-block;
   }
-  .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
-    transform: translateY(-50%);
-    position: absolute;
-  }
   .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .MuiCollapse-entered {
     display: block;
-  }
-  .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sidebar-menu-link {
-    padding-bottom: 9.5px;
-    padding-right: 10px;
-    padding-top: 9.5px;
-    padding-left: 40px;
-  }
-  .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sidebar-menu-link i {
-    transform: translateY(-50%);
-    position: absolute;
   }
   .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
     display: inline-block;
   }
-  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
-    padding-right: 40px;
-    padding-left: 10px;
+  .main-wrapper-content.compact-sidebar {
+    padding-left: 85px;
   }
-  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sidebar-menu-link {
-    padding-right: 40px;
+  .main-wrapper-content.compact-sidebar .top-navbar {
+    left: 90px !important;
+  }
+  .main-wrapper-content.compact-sidebar .top-navbar .top-burger {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu {
+    width: 65px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .burger-menu {
+    display: none !important;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .logo {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .logo a {
+    justify-content: center;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .logo a span {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .burger-menu {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner {
     padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 75px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .sub-title {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 20px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .title, .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-expandIconWrapper {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-right: 0;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .MuiCollapse-entered {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
+    display: none;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover {
+    width: 260px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .burger-menu {
+    display: none !important;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .logo {
+    padding: 18px 25px 16px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .logo a {
+    justify-content: flex-start;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .logo a span {
+    display: inline-block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .burger-menu {
+    display: inline-block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 90px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sub-title {
+    display: inline-block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary {
+    width: 91%;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-right: 7px;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .title, .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content .trezo-badge {
+    display: inline-block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-expandIconWrapper {
+    display: inline-block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .MuiCollapse-entered {
+    display: block;
+  }
+  .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .sidebar-menu-link .title {
+    display: inline-block;
+  }
+  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu .sidebar-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 75px;
+  }
+  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .sub-title {
+    display: none;
+  }
+  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-left: 0;
+  }
+  [dir=rtl] .main-wrapper-content.active .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-left: 7px;
+  }
+  [dir=rtl] .main-wrapper-content.compact-sidebar {
+    padding-right: 85px;
+    padding-left: 25px;
+  }
+  [dir=rtl] .main-wrapper-content.compact-sidebar .top-navbar {
+    left: 25px !important;
+    right: 90px !important;
+  }
+  [dir=rtl] .main-wrapper-content.compact-sidebar .left-sidebar-menu .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-left: 0;
+  }
+  [dir=rtl] .main-wrapper-content.compact-sidebar .left-sidebar-menu:hover .sidebar-inner .sidebar-menu .mat-accordion .mat-summary .MuiAccordionSummary-content i {
+    margin-left: 7px;
   }
 }
 /* Min width 1200px to Max width 1399px *//*# sourceMappingURL=left-sidebar-menu.css.map */

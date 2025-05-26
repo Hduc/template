@@ -22,7 +22,7 @@ const EventsDetails: React.FC = () => {
       </Box>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -307,17 +307,17 @@ const EventsDetails: React.FC = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <EventInfo />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <AboutThisEvent />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <Speakers />
         </Grid>
       </Grid>

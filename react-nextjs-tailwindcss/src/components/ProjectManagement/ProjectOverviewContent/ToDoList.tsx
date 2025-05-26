@@ -163,7 +163,7 @@ const ToDoList: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">To Do List</h5>
+            <h5 className="!mb-0">To Do List</h5>
           </div>
 
           <div className="sm:flex items-center gap-3">
@@ -357,7 +357,7 @@ const ToDoList: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {displayedTasks.length} of {tasks.length} results
             </p>
 
@@ -382,7 +382,7 @@ const ToDoList: React.FC = () => {
                     className={`w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border dark:border-[#172036] ${
                       currentPage === index + 1
                         ? "border-primary-500 bg-primary-500 text-white"
-                        : ""
+                        : "border-gray-100"
                     }`}
                     onClick={() => handlePageChange(index + 1)}
                   >
@@ -425,7 +425,7 @@ const ToDoList: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                 <div className="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0">Add New Task</h5>
+                    <h5 className="!mb-0">Add New Task</h5>
                   </div>
                   <div className="trezo-card-subtitle">
                     <button

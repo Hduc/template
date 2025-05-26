@@ -53,7 +53,7 @@ const MyDrive = () => {
           spacing={3}
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
             <Box
               className="bg-primary-50"
               sx={{
@@ -159,7 +159,7 @@ const MyDrive = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
             <Box
               className="bg-orange-50"
               sx={{
@@ -265,7 +265,7 @@ const MyDrive = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
             <Box
               className="bg-success-50"
               sx={{
@@ -371,7 +371,7 @@ const MyDrive = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
             <Box
               className="bg-purple-50"
               sx={{

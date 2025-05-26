@@ -29,13 +29,14 @@ import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-const label = { inputProps: { "aria-label": "Checkbox demo" } }; 
+const label = { inputProps: { "aria-label": "Checkbox demo" } };
 import { styled } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
 import CloseIcon from "@mui/icons-material/Close";
 import PropTypes from "prop-types";
-import Select, { SelectChangeEvent } from "@mui/material/Select"; 
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import FileUpload from "@/components/Forms/FileUpload";
 
 // Modal
 interface BootstrapDialogTitleProps {
@@ -224,12 +225,17 @@ const rows = [
 
 const CategoriesTable: React.FC = () => {
   // Table
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  // Filtered rows based on search query
+  const filteredRows = rows.filter(
+    (row) =>
+      row.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.slug.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
@@ -265,6 +271,12 @@ const CategoriesTable: React.FC = () => {
     setStatus(event.target.value as string);
   };
 
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Card
@@ -284,14 +296,15 @@ const CategoriesTable: React.FC = () => {
             mb: "25px",
           }}
         >
-          <form className='t-search-form'>
+          <form className="t-search-form">
             <label>
               <i className="material-symbols-outlined">search</i>
             </label>
             <input
               type="text"
-              className='t-input'
-              placeholder="Search category here....."
+              className="t-input"
+              placeholder="Search here..."
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </form>
 
@@ -417,11 +430,11 @@ const CategoriesTable: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
-                : rows
+                : filteredRows
               ).map((row) => (
                 <TableRow key={row.id}>
                   <TableCell
@@ -559,11 +572,6 @@ const CategoriesTable: React.FC = () => {
                   </TableCell>
                 </TableRow>
               ))}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={8} />
-                </TableRow>
-              )}
             </TableBody>
 
             <TableFooter>
@@ -571,7 +579,7 @@ const CategoriesTable: React.FC = () => {
                 <TablePagination
                   rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
                   colSpan={8}
-                  count={rows.length}
+                  count={filteredRows.length}
                   rowsPerPage={rowsPerPage}
                   page={page}
                   slotProps={{
@@ -640,7 +648,7 @@ const CategoriesTable: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -667,7 +675,7 @@ const CategoriesTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -697,7 +705,7 @@ const CategoriesTable: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -710,21 +718,21 @@ const CategoriesTable: React.FC = () => {
                       Description
                     </Typography>
 
-                    <textarea 
-                      id="description" 
-                      name="description" 
+                    <textarea
+                      id="description"
+                      name="description"
                       placeholder="Description"
                       rows={5}
                       style={{
-                        width: '100%',
-                        borderRadius: '6px',
-                        padding: '10px 15px',
-                        border: '1px solid #D5D9E2'
-                      }} 
+                        width: "100%",
+                        borderRadius: "6px",
+                        padding: "10px 15px",
+                        border: "1px solid #D5D9E2",
+                      }}
                     ></textarea>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -737,32 +745,21 @@ const CategoriesTable: React.FC = () => {
                       Image
                     </Typography>
 
-                    <TextField
-                      autoComplete="image"
-                      name="image"
-                      required
-                      fullWidth
-                      id="image"
-                      type="file"
-                      autoFocus
-                      InputProps={{
-                        style: { borderRadius: 8 },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -770,6 +767,7 @@ const CategoriesTable: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

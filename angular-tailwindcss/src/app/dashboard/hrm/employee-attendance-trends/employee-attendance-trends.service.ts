@@ -32,7 +32,7 @@ export class EmployeeAttendanceTrendsService {
                     ],
                     chart: {
                         type: "area",
-                        height: 422,
+                        height: 424,
                         zoom: {
                             enabled: false
                         },

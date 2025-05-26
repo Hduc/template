@@ -128,7 +128,7 @@ const NewTicketsVSSolvedTickets: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">New Tickets vs Solved Tickets</h5>
+            <h5 className="!mb-0">New Tickets vs Solved Tickets</h5>
           </div>
 
           <div className="trezo-card-subtitle">

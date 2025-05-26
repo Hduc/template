@@ -1040,6 +1040,77 @@
     .accordion-button:not(.collapsed)::after {
         filter: contrast(0.4);
     }
+
+    // pos system & podcast dashboard
+    .payment-method {
+        .text-black {
+            color: #717171 !important;
+        }
+    }
+    // End pos system & podcast dashboard
+
+    // Hotel dashboard
+    .border-gray-100 {
+        border-color: $dark-input-bg !important;
+    }
+    .welcome-for-hotel {
+        background-color: $dark-body-bg !important;
+    }
+    .popular-rooms-slide {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: #555;
+                opacity: 1;
+    
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    // End Hotel dashboard
+
+    // Real Estate Agent dashboard
+    .bg-gray-100 {
+        background-color: $dark-input-bg !important; 
+        
+        &.border {
+            border-color: $dark-input-bg !important;
+        }
+    }
+    .my-featured-listings-bg {
+        background-color: #15203c !important;
+    }
+    .rea-manage-app {
+        background-color: #15203c !important;
+    }
+    .rea-client-ratings-card {
+        .bg-border-color-50, .bg-danger-100, .bg-success-90 {
+            background-color: #15203c !important;
+        }
+    }
+    .rea-client-ratings-slide, .my-featured-listings-slide {
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                background-color: #555; 
+                opacity: 1;
+    
+                &.swiper-pagination-bullet-active {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    .cc-card {
+        background-image: inherit !important;
+    }
+    .gradient-card-dark {
+        background: #15203c !important;
+    }
+    .bg-black-for-dark {
+        background-color: #000 !important;
+    }
+    // End Real Estate Agent dashboard
 }
 
 // dark-top-navbar
@@ -1219,7 +1290,6 @@
                 color: $dark-body-color; 
             }
         }
-
         .accordion {
             .accordion-item {
                 .accordion-header {
@@ -1287,5 +1357,5 @@
                 }
             }
         }
-    }
+    } 
 }

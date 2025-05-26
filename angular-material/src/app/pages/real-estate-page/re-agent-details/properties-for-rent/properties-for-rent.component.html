@@ -1,10 +1,12 @@
 <mat-card
     class="properties-for-rent-card mb-25 border-radius d-block bg-white border-0 shadow-none"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+    [class.card-without-border-radius]="themeService.isCardWithoutBorderRadius()"
 >
     <mat-card-content>
         <div class="d-flex align-items-center justify-content-between">
-            <span class="info-badge d-inline-block">
+            <span class="trezo-badge up with-border">
                 +35%
             </span>
             <span class="d-block text-xs">

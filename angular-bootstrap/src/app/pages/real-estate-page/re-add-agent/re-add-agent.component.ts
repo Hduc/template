@@ -40,7 +40,4 @@ export class ReAddAgentComponent {
         }
     }
 
-    // File Uploader
-    public multiple: boolean = true;
-
 }

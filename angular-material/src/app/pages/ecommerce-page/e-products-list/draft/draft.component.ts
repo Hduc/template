@@ -52,7 +52,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product2.jpg',
             title: 'Headphone',
-            date: '07 Jun 2024'
+            date: '07 Jun 2025'
         },
         category: 'Electronics',
         price: '$49.00',
@@ -78,7 +78,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product5.jpg',
             title: 'Airbuds 2nd Gen',
-            date: '04 Jun 2024'
+            date: '04 Jun 2025'
         },
         category: 'Headphone',
         price: '$79.00',

@@ -55,6 +55,9 @@ export class StudentsOverviewService {
                             }
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     legend: {
                         show: true,
                         position: 'top',

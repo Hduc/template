@@ -180,7 +180,7 @@ const PmClients = () => {
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {paginatedClients.map((client) => (
-          <Grid key={client.id} item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid key={client.id} size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <Box
               className="bg-white"
               sx={{
@@ -368,12 +368,12 @@ const PmClients = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
               key={index}
-              className="border text-body"
+              className="border "
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
                 "&:hover": {

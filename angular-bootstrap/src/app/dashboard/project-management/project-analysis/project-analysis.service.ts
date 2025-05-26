@@ -49,6 +49,9 @@ export class ProjectAnalysisService {
                         show: true,
                         colors: ["transparent"]
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         categories: categories,
                         axisTicks: {

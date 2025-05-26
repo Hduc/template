@@ -1,4 +1,7 @@
-<div class="mp-total-projects-card trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+<div
+    class="mp-total-projects-card trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
     <div class="trezo-card-content">
         <span class="d-block">
             Total Projects

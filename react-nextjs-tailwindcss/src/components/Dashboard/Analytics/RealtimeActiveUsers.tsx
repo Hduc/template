@@ -135,11 +135,11 @@ const RealtimeActiveUsers: React.FC = () => {
     <>
       <div className="trezo-card bg-primary-600 mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative z-[1]">
-          <h6 className="text-md mb-[6px] font-light text-white">
+          <h6 className="!text-md !mb-[6px] !font-light !text-white">
             Realtime Active Users
           </h6>
 
-          <h2 className="text-4xl mb-[20px] md:mb-[25px] lg:mb-[45px] text-white leading-none font-medium -tracking-[1px]">
+          <h2 className="!text-4xl !mb-[20px] md:!mb-[25px] lg:!mb-[45px] !text-white !leading-none !font-medium !-tracking-[1px]">
             4,890
           </h2>
 

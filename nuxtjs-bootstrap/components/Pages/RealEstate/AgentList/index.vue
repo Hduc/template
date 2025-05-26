@@ -77,17 +77,17 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
-              >Message</RouterLink
+              >Message</NuxtLink
             >
-            <RouterLink
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -169,18 +169,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -262,18 +262,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -355,18 +355,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -448,18 +448,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -541,18 +541,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -634,18 +634,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -727,18 +727,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -820,18 +820,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -913,18 +913,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1006,18 +1006,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -1099,18 +1099,18 @@
             </li>
           </ul>
           <div class="d-flex align-items-center">
-            <RouterLink
+            <NuxtLink
               to="/apps/chat"
               class="btn btn-primary py-2 px-3 fw-medium"
             >
               Message
-            </RouterLink>
-            <RouterLink
+            </NuxtLink>
+            <NuxtLink
               to="/real-estate/agent-overview"
               class="btn btn-outline-primary py-2 px-3 fw-medium ms-3"
             >
               View Profile
-            </RouterLink>
+            </NuxtLink>
           </div>
         </div>
       </div>

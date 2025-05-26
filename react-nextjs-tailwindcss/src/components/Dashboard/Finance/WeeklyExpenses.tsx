@@ -128,9 +128,9 @@ const WeeklyExpenses: React.FC = () => {
           <div className="trezo-card-title flex items-center gap-[15px]">
             <div>
               <span className="block mb-[4px]">Weekly Expenses</span>
-              <h5 className="mb-0 md:text-[20px]">$1,200</h5>
+              <h5 className="!mb-0 md:!text-[20px]">$1,200</h5>
             </div>
-            <span className="inline-block px-[8.5px] text-danger-600 border border-danger-300 bg-danger-100 rounded-[100px] text-xs">
+            <span className="inline-block px-[8.5px] text-danger-600 border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#15203c] text-sm rounded-[100px] text-xs">
               -5.1%
             </span>
           </div>

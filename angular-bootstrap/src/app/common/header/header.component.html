@@ -9,7 +9,7 @@
     [class.card-borderd]="themeService.isCardBordered()"
     [class.dark-header]="themeService.isHeaderDark()"
 >
-    <div class="d-md-flex align-items-center justify-content-between">
+    <div class="inner-area d-md-flex align-items-center justify-content-between">
         <div class="header-left-side d-flex align-items-center">
             <div
                 class="burger-menu transition position-relative lh-1"
@@ -20,6 +20,12 @@
                     menu
                 </i>
             </div>
+            <a routerLink="/dashboard" class="logo">
+                <img src="images/logo.svg" alt="logo">
+            </a>
+            <a routerLink="/dashboard" class="logo white-logo">
+                <img src="images/white-logo.svg" alt="logo">
+            </a>
             <form class="search-box position-relative">
                 <input type="text" class="input-search d-block w-100 border-radius" placeholder="Search here.....">
                 <button type="submit" class="bg-transparent p-0 border-0 transition">
@@ -386,4 +392,5 @@
             </li>
         </ul>
     </div>
+    <app-navbar />
 </div>

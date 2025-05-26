@@ -85,7 +85,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -102,12 +102,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -123,7 +123,7 @@
                       <span class="fs-12">NFT ID: 35246</span>
                       <h4 class="fw-semibold fs-14 mb-0">Christmas Eve</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -137,7 +137,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -150,7 +150,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">5.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -186,7 +186,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -203,12 +203,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="January 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -224,7 +224,7 @@
                       <span class="fs-12">NFT ID: 35247</span>
                       <h4 class="fw-semibold fs-14 mb-0">Humming Bird</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -238,7 +238,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -251,7 +251,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -287,7 +287,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -304,12 +304,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -325,7 +325,7 @@
                       <span class="fs-12">NFT ID: 35228</span>
                       <h4 class="fw-semibold fs-14 mb-0">Naughty Pool</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -339,7 +339,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -352,7 +352,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">9.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -388,7 +388,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -405,12 +405,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -426,7 +426,7 @@
                       <span class="fs-12">NFT ID: 35248</span>
                       <h4 class="fw-semibold fs-14 mb-0">Pixel Watermmelon</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -440,7 +440,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -453,7 +453,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">3.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -489,7 +489,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -506,12 +506,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -527,7 +527,7 @@
                       <span class="fs-12">NFT ID: 35258</span>
                       <h4 class="fw-semibold fs-14 mb-0">BDancing Cookies</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -541,7 +541,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -554,7 +554,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -590,7 +590,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -607,12 +607,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -628,7 +628,7 @@
                       <span class="fs-12">NFT ID: 35158</span>
                       <h4 class="fw-semibold fs-14 mb-0">Rotating Flower</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -642,7 +642,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -655,7 +655,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">6.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -704,7 +704,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -721,12 +721,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -742,7 +742,7 @@
                       <span class="fs-12">NFT ID: 35248</span>
                       <h4 class="fw-semibold fs-14 mb-0">Pixel Watermmelon</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -756,7 +756,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -769,7 +769,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">3.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -805,7 +805,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -822,12 +822,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -843,7 +843,7 @@
                       <span class="fs-12">NFT ID: 35258</span>
                       <h4 class="fw-semibold fs-14 mb-0">BDancing Cookies</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -857,7 +857,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -870,7 +870,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -906,7 +906,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -923,12 +923,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -944,7 +944,7 @@
                       <span class="fs-12">NFT ID: 35158</span>
                       <h4 class="fw-semibold fs-14 mb-0">Rotating Flower</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -958,7 +958,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -971,7 +971,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">6.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1007,7 +1007,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1024,12 +1024,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1045,7 +1045,7 @@
                       <span class="fs-12">NFT ID: 35246</span>
                       <h4 class="fw-semibold fs-14 mb-0">Christmas Eve</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1059,7 +1059,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1072,7 +1072,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">5.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1108,7 +1108,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1125,12 +1125,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="January 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1146,7 +1146,7 @@
                       <span class="fs-12">NFT ID: 35247</span>
                       <h4 class="fw-semibold fs-14 mb-0">Humming Bird</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1160,7 +1160,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1173,7 +1173,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1209,7 +1209,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1226,12 +1226,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1247,7 +1247,7 @@
                       <span class="fs-12">NFT ID: 35228</span>
                       <h4 class="fw-semibold fs-14 mb-0">Naughty Pool</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1261,7 +1261,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1274,7 +1274,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">9.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1323,7 +1323,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1340,12 +1340,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1361,7 +1361,7 @@
                       <span class="fs-12">NFT ID: 35246</span>
                       <h4 class="fw-semibold fs-14 mb-0">Christmas Eve</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1375,7 +1375,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1388,7 +1388,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">5.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1424,7 +1424,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1441,12 +1441,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="January 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1462,7 +1462,7 @@
                       <span class="fs-12">NFT ID: 35247</span>
                       <h4 class="fw-semibold fs-14 mb-0">Humming Bird</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1476,7 +1476,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1489,7 +1489,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1525,7 +1525,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1542,12 +1542,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1563,7 +1563,7 @@
                       <span class="fs-12">NFT ID: 35228</span>
                       <h4 class="fw-semibold fs-14 mb-0">Naughty Pool</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1577,7 +1577,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1590,7 +1590,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">9.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1626,7 +1626,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1643,12 +1643,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1664,7 +1664,7 @@
                       <span class="fs-12">NFT ID: 35248</span>
                       <h4 class="fw-semibold fs-14 mb-0">Pixel Watermmelon</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1678,7 +1678,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1691,7 +1691,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">3.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1727,7 +1727,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1744,12 +1744,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1765,7 +1765,7 @@
                       <span class="fs-12">NFT ID: 35258</span>
                       <h4 class="fw-semibold fs-14 mb-0">BDancing Cookies</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1779,7 +1779,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1792,7 +1792,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1828,7 +1828,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1845,12 +1845,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1866,7 +1866,7 @@
                       <span class="fs-12">NFT ID: 35158</span>
                       <h4 class="fw-semibold fs-14 mb-0">Rotating Flower</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1880,7 +1880,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1893,7 +1893,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">6.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -1942,7 +1942,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -1959,12 +1959,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -1980,7 +1980,7 @@
                       <span class="fs-12">NFT ID: 35248</span>
                       <h4 class="fw-semibold fs-14 mb-0">Pixel Watermmelon</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -1994,7 +1994,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2007,7 +2007,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">3.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -2043,7 +2043,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -2060,12 +2060,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2081,7 +2081,7 @@
                       <span class="fs-12">NFT ID: 35258</span>
                       <h4 class="fw-semibold fs-14 mb-0">BDancing Cookies</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -2095,7 +2095,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2108,7 +2108,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -2144,7 +2144,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -2161,12 +2161,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2182,7 +2182,7 @@
                       <span class="fs-12">NFT ID: 35158</span>
                       <h4 class="fw-semibold fs-14 mb-0">Rotating Flower</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -2196,7 +2196,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2209,7 +2209,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">6.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -2245,7 +2245,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -2262,12 +2262,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="December 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2283,7 +2283,7 @@
                       <span class="fs-12">NFT ID: 35246</span>
                       <h4 class="fw-semibold fs-14 mb-0">Christmas Eve</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -2297,7 +2297,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2310,7 +2310,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">5.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -2346,7 +2346,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -2363,12 +2363,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="January 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2384,7 +2384,7 @@
                       <span class="fs-12">NFT ID: 35247</span>
                       <h4 class="fw-semibold fs-14 mb-0">Humming Bird</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -2398,7 +2398,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2411,7 +2411,7 @@
                       >
                       <h4 class="fw-semibold fs-14 mb-0">12.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"
@@ -2447,7 +2447,7 @@
               <div
                 class="bg-white rounded-3 border-0 p-3 place-bid for-dark-card mb-4"
               >
-                <RouterLink
+                <NuxtLink
                   to="/nft-marketplace/nft-details"
                   class="d-block mb-3 text-decoration-none position-relative"
                 >
@@ -2464,12 +2464,12 @@
                   <PagesNFTMarketplaceLiveAuctionCountdownTimer
                     endDate="February 14, 2026 21:14:01"
                   />
-                </RouterLink>
+                </NuxtLink>
 
                 <div
                   class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/creator-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2485,7 +2485,7 @@
                       <span class="fs-12">NFT ID: 35228</span>
                       <h4 class="fw-semibold fs-14 mb-0">Naughty Pool</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <img
                     src="@/assets/images/verify.svg"
                     class="cursor"
@@ -2499,7 +2499,7 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4 pb-2"
                 >
-                  <RouterLink
+                  <NuxtLink
                     to="/nft-marketplace/nft-details"
                     class="d-flex align-items-center text-decoration-none"
                   >
@@ -2512,7 +2512,7 @@
                       </span>
                       <h4 class="fw-semibold fs-14 mb-0">9.50 ETH</h4>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                   <button class="bg-transparent p-0 border-0">
                     <i
                       class="ri-heart-fill fs-20 position-relative top-2"

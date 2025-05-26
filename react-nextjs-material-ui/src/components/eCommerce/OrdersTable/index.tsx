@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"; 
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import AddIcon from "@mui/icons-material/Add";
 
 interface TablePaginationActionsProps {
@@ -324,10 +324,18 @@ const OrdersTable: React.FC = () => {
   // Table
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  // Filter rows based on search term
+  const filteredRows = rows.filter(
+    (row) =>
+      row.orderID.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      row.customerName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredRows.length) : 0;
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
@@ -365,7 +373,7 @@ const OrdersTable: React.FC = () => {
           >
             <Box
               component="form"
-              className='t-search-form'
+              className="t-search-form"
               sx={{
                 width: "265px",
               }}
@@ -375,8 +383,10 @@ const OrdersTable: React.FC = () => {
               </label>
               <input
                 type="text"
-                className='t-input'
-                placeholder="Search order here....."
+                className="t-input"
+                placeholder="Search here..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </Box>
 
@@ -499,11 +509,11 @@ const OrdersTable: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
-                  : rows
+                  : filteredRows
                 ).map((row) => (
                   <TableRow key={row.orderID}>
                     <TableCell
@@ -536,7 +546,7 @@ const OrdersTable: React.FC = () => {
                             alt="Product"
                             width={40}
                             height={40}
-                            style={{ borderRadius: "7px" }}
+                            style={{ borderRadius: "100px" }}
                           />
                         </Box>
 
@@ -662,7 +672,7 @@ const OrdersTable: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={8} />
+                    <TableCell className="border-bottom" colSpan={8} />
                   </TableRow>
                 )}
               </TableBody>
@@ -677,7 +687,7 @@ const OrdersTable: React.FC = () => {
                       { label: "All", value: -1 },
                     ]}
                     colSpan={8}
-                    count={rows.length}
+                    count={filteredRows.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     slotProps={{

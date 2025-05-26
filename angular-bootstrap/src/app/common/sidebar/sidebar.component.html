@@ -8,6 +8,7 @@
     [class.right-sidebar]="themeService.isRightSidebar()"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
     [class.card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+    [class.component-body-bg-color]="themeService.isBodyBG()"
 >
     <div class="logo bg-white">
         <a routerLink="/dashboard" class="d-flex align-items-center position-relative">
@@ -47,7 +48,7 @@
                                 Dashboard
                             </span>
                             <span class="trezo-badge rounded-circle fw-medium d-inline-block text-center">
-                                18
+                                30
                             </span>
                         </button>
                         <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(0) }">
@@ -61,9 +62,6 @@
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/crm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             CRM
-                                            <span class="trezo-badge d-inline-block position-relative style-two">
-                                                Hot
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
@@ -79,6 +77,9 @@
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/helpdesk" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             HelpDesk
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                Hot
+                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
@@ -104,73 +105,199 @@
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/hrm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             HRM
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/school" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             School
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/call-center" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             Call Center
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
+                                            <span class="trezo-badge d-inline-block position-relative style-two">
+                                                Popular
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/marketing" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             Marketing
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/nft" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             NFT
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/saas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             SaaS
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
-                                            </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/real-estate" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             Real Estate
-                                            <span class="trezo-badge d-inline-block position-relative">
-                                                New
+                                            <span class="trezo-badge d-inline-block position-relative style-three">
+                                                Top
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
                                         <a routerLink="/dashboard/shipment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
                                             Shipment
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Finance
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/pos-system" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            POS System
                                             <span class="trezo-badge d-inline-block position-relative">
                                                 New
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sidemenu-item">
-                                        <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
-                                            Finance
+                                        <a routerLink="/dashboard/podcast" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Podcast
                                             <span class="trezo-badge d-inline-block position-relative">
                                                 New
                                             </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/social-media" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Social Media
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Doctor
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/beauty-salon" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Beauty Salon
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/store-analysis" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Store Analysis
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/restaurant" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Restaurant
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/hotel" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Hotel
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/real-estate-agent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Real Estate Agent
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/credit-card" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Credit Card
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/crypto-trader" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Crypto Trader
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/crypto-performance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Crypto Perf.
+                                            <span class="trezo-badge d-inline-block position-relative">
+                                                New
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(28)"
+                            [ngClass]="{ 'open': isSectionOpen(28) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
+                                dock_to_right
+                            </i>
+                            <span class="title lh-1">
+                                Layout
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(28) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-bs-dark.envytheme.com/dashboard" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Dark Mode
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-horizontal.envytheme.com/dashboard" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Horizontal Layout
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-dls.envytheme.com/" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Sidebar Dark
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-compact.envytheme.com/dashboard" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Compact Sidebar
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-bs-rtl.envytheme.com/dashboard" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            RTL Light
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a href="https://trezo-bs-dark-rtl.envytheme.com/dashboard" target="_blank" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            RTL Dark
                                         </a>
                                     </li>
                                 </ul>
@@ -224,7 +351,7 @@
                         </div>
                     </div>
                     <span class="sub-title d-block fw-medium text-uppercase">
-                        APPS
+                        APPS & PAGES
                     </span>
                     <div class="accordion-item border-radius border-0">
                         <a routerLink="/dashboard/apps" class="sidebar-menu-link w-100 position-relative border-radius fw-medium transition" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -374,9 +501,6 @@
                             </div>
                         </div>
                     </div>
-                    <span class="sub-title d-block fw-medium text-uppercase">
-                        PAGES
-                    </span>
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
@@ -838,13 +962,198 @@
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
+                                badge
+                            </i>
+                            <span class="title lh-1">
+                                Doctor
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(12) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Patients List
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page/add-patient" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Add Patient
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page/patient-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Patient Details
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page/appointments" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Appointments
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page/prescriptions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Prescriptions
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/doctor-page/write-prescription" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Write a Prescription
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(13)"
+                            [ngClass]="{ 'open': isSectionOpen(13) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
+                                lunch_dining
+                            </i>
+                            <span class="title lh-1">
+                                Restaurant
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(13) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/restaurant-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Menus
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/restaurant-page/dish-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Dish Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(30)"
+                            [ngClass]="{ 'open': isSectionOpen(30) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
+                                hotel
+                            </i>
+                            <span class="title lh-1">
+                                Hotel
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(30) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/hotel-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Rooms List
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/hotel-page/room-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Room Details
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/hotel-page/guests-list" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Guests List
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(31)"
+                            [ngClass]="{ 'open': isSectionOpen(31) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
+                                location_away
+                            </i>
+                            <span class="title lh-1">
+                                Real Estate Agent
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(31) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/real-estate-agent-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Properties
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/real-estate-agent-page/property-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Property Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(29)"
+                            [ngClass]="{ 'open': isSectionOpen(29) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
+                                paid
+                            </i>
+                            <span class="title lh-1">
+                                Crypto Trader
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(29) }">
+                            <div class="accordion-body">
+                                <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/crypto-trader-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Transactions
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/crypto-trader-page/gainers-losers" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Gainers & Losers
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item">
+                                        <a routerLink="/dashboard/crypto-trader-page/wallet" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link border-radius d-block position-relative transition fw-medium">
+                                            Wallet
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-radius border-0">
+                        <button
+                            type="button"
+                            (click)="toggleSection(14)"
+                            [ngClass]="{ 'open': isSectionOpen(14) }"
+                            class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
+                        >
+                            <i class="material-symbols-outlined">
                                 local_activity
                             </i>
                             <span class="title lh-1">
                                 Events
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(12) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(14) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -879,8 +1188,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(13)"
-                            [ngClass]="{ 'open': isSectionOpen(13) }"
+                            (click)="toggleSection(15)"
+                            [ngClass]="{ 'open': isSectionOpen(15) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -890,7 +1199,7 @@
                                 Social
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(13) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(15) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -910,8 +1219,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(14)"
-                            [ngClass]="{ 'open': isSectionOpen(14) }"
+                            (click)="toggleSection(16)"
+                            [ngClass]="{ 'open': isSectionOpen(16) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -921,7 +1230,7 @@
                                 Invoices
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(14) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(16) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -951,8 +1260,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(15)"
-                            [ngClass]="{ 'open': isSectionOpen(15) }"
+                            (click)="toggleSection(17)"
+                            [ngClass]="{ 'open': isSectionOpen(17) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -962,7 +1271,7 @@
                                 Users
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(15) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(17) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -987,8 +1296,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(16)"
-                            [ngClass]="{ 'open': isSectionOpen(16) }"
+                            (click)="toggleSection(18)"
+                            [ngClass]="{ 'open': isSectionOpen(18) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -998,7 +1307,7 @@
                                 Profile
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(16) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(18) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1036,8 +1345,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(17)"
-                            [ngClass]="{ 'open': isSectionOpen(17) }"
+                            (click)="toggleSection(19)"
+                            [ngClass]="{ 'open': isSectionOpen(19) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1047,7 +1356,7 @@
                                 Icons
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(17) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(19) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1067,8 +1376,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(18)"
-                            [ngClass]="{ 'open': isSectionOpen(18) }"
+                            (click)="toggleSection(20)"
+                            [ngClass]="{ 'open': isSectionOpen(20) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1078,7 +1387,7 @@
                                 UI Elements
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(18) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(20) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1263,8 +1572,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(19)"
-                            [ngClass]="{ 'open': isSectionOpen(19) }"
+                            (click)="toggleSection(21)"
+                            [ngClass]="{ 'open': isSectionOpen(21) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1274,7 +1583,7 @@
                                 Forms
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(19) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(21) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1334,8 +1643,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(20)"
-                            [ngClass]="{ 'open': isSectionOpen(20) }"
+                            (click)="toggleSection(22)"
+                            [ngClass]="{ 'open': isSectionOpen(22) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1345,7 +1654,7 @@
                                 Charts
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(20) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(22) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1400,8 +1709,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(21)"
-                            [ngClass]="{ 'open': isSectionOpen(21) }"
+                            (click)="toggleSection(23)"
+                            [ngClass]="{ 'open': isSectionOpen(23) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1411,7 +1720,7 @@
                                 Authentication
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(21) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(23) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1456,8 +1765,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(22)"
-                            [ngClass]="{ 'open': isSectionOpen(22) }"
+                            (click)="toggleSection(24)"
+                            [ngClass]="{ 'open': isSectionOpen(24) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1467,7 +1776,7 @@
                                 Extra Pages
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(22) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(24) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1517,8 +1826,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(23)"
-                            [ngClass]="{ 'open': isSectionOpen(23) }"
+                            (click)="toggleSection(25)"
+                            [ngClass]="{ 'open': isSectionOpen(25) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1528,7 +1837,7 @@
                                 Errors
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(23) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(25) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1601,8 +1910,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(24)"
-                            [ngClass]="{ 'open': isSectionOpen(24) }"
+                            (click)="toggleSection(26)"
+                            [ngClass]="{ 'open': isSectionOpen(26) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1612,7 +1921,7 @@
                                 Settings
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(24) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(26) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">
@@ -1647,8 +1956,8 @@
                     <div class="accordion-item border-radius border-0">
                         <button
                             type="button"
-                            (click)="toggleSection(25)"
-                            [ngClass]="{ 'open': isSectionOpen(25) }"
+                            (click)="toggleSection(27)"
+                            [ngClass]="{ 'open': isSectionOpen(27) }"
                             class="accordion-button text-start shadow-none fw-medium border-0 transition border-radius"
                         >
                             <i class="material-symbols-outlined">
@@ -1658,7 +1967,7 @@
                                 Multi Level Menu
                             </span>
                         </button>
-                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(25) }">
+                        <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(27) }">
                             <div class="accordion-body">
                                 <ul class="sidebar-sub-menu p-0 list-unstyled mb-0">
                                     <li class="sidemenu-item">

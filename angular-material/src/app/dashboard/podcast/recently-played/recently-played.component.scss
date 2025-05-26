@@ -1,0 +1,108 @@
+::ng-deep {
+    .recently-played-card {
+        .mat-mdc-card-content {
+            margin-bottom: -12px;
+
+            .table-style-two {
+                .mat-mdc-table {
+                    .mat-mdc-row {
+                        .mat-mdc-cell {
+                            padding: {
+                                top: 12px;
+                                bottom: 12px;
+                            };
+                            .employee-info {
+                                gap: 10px;
+
+                                .play-btn {
+                                    font-size: 24px;
+                                }
+                                .img {
+                                    width: 34px;
+                                    border-radius: 5px;
+
+                                    img {
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                            .play-times {
+                                padding-left: 27px;
+                                
+                                i {
+                                    left: 0;
+                                    top: 50%;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    color: var(--primaryColor);
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            .bookmark-btn {
+                                font-size: 24px;
+                                color: var(--bodyColor);
+                            }
+                            .dot-menu {
+                                font-size: 20px;
+                                color: var(--bodyColor);
+                            }
+                            &:last-child {
+                                text-align: end;
+                            }
+                        }
+                        &:first-child {
+                            .mat-mdc-cell {
+                                padding-top: 0;
+                            }
+                        }
+                        &:last-child {
+                            .mat-mdc-cell {
+                                border-bottom-width: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .mat-mdc-card-content {
+                .table-style-two {
+                    .mat-mdc-table {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                .play-times {
+                                    padding: {
+                                        left: 0;
+                                        right: 27px;
+                                    };
+                                    i {
+                                        left: auto;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

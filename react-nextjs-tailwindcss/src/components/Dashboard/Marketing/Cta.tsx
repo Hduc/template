@@ -13,7 +13,7 @@ const Cta: React.FC = () => {
         }}
       >
         <div className="trezo-card-content md:py-[11px] mx-auto md:max-w-[212px]">
-          <h3 className="dark:text-black text-lg md:text-xl leading-[1.3] mb-[15px] md:mb-[30px] mx-auto max-w-[185px]">
+          <h3 className="dark:!text-black !text-lg md:!text-xl !leading-[1.3] !mb-[15px] md:!mb-[30px] !mx-auto !max-w-[185px]">
             <span className="font-normal">Want To Try</span> New Marketing Tool?
           </h3>
           <Image

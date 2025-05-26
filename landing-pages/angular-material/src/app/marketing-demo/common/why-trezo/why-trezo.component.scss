@@ -1,0 +1,164 @@
+.why-trezo-box {
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 70px 60px;
+
+    .icon {
+        padding-left: 22px;
+        margin-bottom: 87px;
+
+        &::before {
+            top: 0;
+            left: 0;
+            width: 55px;
+            content: '';
+            z-index: -1;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            background: #fff5ed;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .content {
+        max-width: 290px;
+    }
+    .image {
+        top: 50%;
+        right: 0;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+}
+.component-dark {
+    .why-trezo-box {
+        background-color: #1a1919;
+    
+        .icon {    
+            &::before {
+                background: #000000;
+            }
+        }
+    }
+}
+.component-rtl {
+    .why-trezo-box {
+        .icon {
+            padding: {
+                left: 0;
+                right: 22px;
+            };
+            &::before {
+                right: 0;
+                left: auto;
+            }
+        }
+        .image {
+            transform: scaleX(-1) translateY(-50%);
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .why-trezo-box {
+        padding: 30px 20px;
+    
+        .icon {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .content {
+            max-width: 100%;
+        }
+        .image {
+            top: 0;
+            margin-top: 20px;
+            position: relative;
+            transform: translateY(0);
+        }
+    }
+    .component-rtl {
+        .why-trezo-box {
+            .icon {
+                padding: {
+                    left: 0;
+                    right: 20px;
+                };
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .why-trezo-box {
+        padding: 50px 25px;
+    
+        .icon {
+            margin-bottom: 50px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .content {
+            max-width: 320px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .why-trezo-box {
+        padding: 70px 30px;
+    
+        .icon {
+            margin-bottom: 70px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        .content {
+            max-width: 290px;
+        }
+        .image {
+            max-width: 160px;
+        }
+    }
+    
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .why-trezo-box {
+        padding: 70px 40px;
+    
+        .image {
+            max-width: 225px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

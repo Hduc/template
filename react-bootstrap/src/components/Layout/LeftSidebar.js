@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import { Accordion } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,9 +8,29 @@ const LeftSidebar = ({ toggleActive }) => {
   const location = useLocation(); // Use `useLocation` to get the current path
   const pathname = location.pathname; // Extract `pathname` from location
 
+  // Enable the dark sidebar exclusively for the /dashboard/beauty-salon/ page URL.
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Only check or set the theme if we're on the beauty-salon page.
+    if (pathname === "/dashboard/beauty-salon") {
+      const storedTheme = localStorage.getItem("beautySalonSidebarTheme");
+      if (storedTheme) {
+        setIsDark(storedTheme === "dark");
+      } else {
+        // Default to dark theme and persist it in localStorage
+        setIsDark(true);
+        localStorage.setItem("beautySalonSidebarTheme", "dark");
+      }
+    } else {
+      // For other pages, do not use localStorage for the theme
+      setIsDark(false);
+    }
+  }, [pathname]);
+
   return (
-    <>
-      <div className="sidebar-area">
+    <> 
+      <div className={`sidebar-area ${pathname === "/dashboard/beauty-salon" && isDark ? "dark" : ""}`}>
         <div className="logo position-relative">
           <Link
             to="/dashboard/ecommerce"
@@ -41,7 +62,7 @@ const LeftSidebar = ({ toggleActive }) => {
               <Accordion.Header>
                 <i className="material-symbols-outlined">dashboard</i>
                 <span className="title">Dashboard</span>
-                <span className="count">18</span>
+                <span className="count">30</span>
               </Accordion.Header>
               <Accordion.Body>
                 <ul className="sub-menu">
@@ -245,6 +266,157 @@ const LeftSidebar = ({ toggleActive }) => {
                       Call Center
                     </Link>
                   </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/pos-system"
+                      className={`menu-link ${
+                        pathname === "/dashboard/pos-system" ? "active" : ""
+                      }`}
+                    >
+                      POS System
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/podcast"
+                      className={`menu-link ${
+                        pathname === "/dashboard/podcast" ? "active" : ""
+                      }`}
+                    >
+                      Podcast
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/social-media"
+                      className={`menu-link ${
+                        pathname === "/dashboard/social-media" ? "active" : ""
+                      }`}
+                    >
+                      Social Media 
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/doctor"
+                      className={`menu-link ${
+                        pathname === "/dashboard/doctor" ? "active" : ""
+                      }`}
+                    >
+                      Doctor 
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/beauty-salon"
+                      className={`menu-link ${
+                        pathname === "/dashboard/beauty-salon" ? "active" : ""
+                      }`}
+                    >
+                      Beauty Salon 
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/store-analytics"
+                      className={`menu-link ${
+                        pathname === "/dashboard/store-analytics"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Store Analytics 
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/restaurant"
+                      className={`menu-link ${
+                        pathname === "/dashboard/restaurant"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Restaurant
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/hotel"
+                      className={`menu-link ${
+                        pathname === "/dashboard/hotel"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Hotel
+                      <span className="tag">New</span>
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/real-estate-agent"
+                      className={`menu-link ${
+                        pathname === "/dashboard/real-estate-agent"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Real Estate Agent
+                      <span className="tag">New</span>
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/credit-card"
+                      className={`menu-link ${
+                        pathname === "/dashboard/credit-card"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Credit Card
+                      <span className="tag">New</span>
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/crypto-trader"
+                      className={`menu-link ${
+                        pathname === "/dashboard/crypto-trader"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Crypto Trader
+                      <span className="tag">New</span>
+                    </Link>
+                  </li>
+
+                  <li className="menu-item mb-0">
+                    <Link
+                      to="/dashboard/crypto-performance"
+                      className={`menu-link ${
+                        pathname === "/dashboard/crypto-performance"
+                          ? "active"
+                          : ""
+                      }`}
+                    >
+                      Crypto Perf.
+                      <span className="tag">New</span>
+                    </Link>
+                  </li> 
                 </ul>
               </Accordion.Body>
             </Accordion.Item>
@@ -497,9 +669,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/apps/file-manager/assets"
                       className={`menu-link ${
-                        pathname === "/apps/file-manager/assets"
-                          ? "active"
-                          : ""
+                        pathname === "/apps/file-manager/assets" ? "active" : ""
                       }`}
                     >
                       Assets
@@ -622,9 +792,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/ecommerce/create-product"
                       className={`menu-link ${
-                        pathname === "/ecommerce/create-product"
-                          ? "active"
-                          : ""
+                        pathname === "/ecommerce/create-product" ? "active" : ""
                       }`}
                     >
                       Create Product
@@ -679,9 +847,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/ecommerce/orders/details"
                       className={`menu-link ${
-                        pathname === "/ecommerce/orders/details"
-                          ? "active"
-                          : ""
+                        pathname === "/ecommerce/orders/details" ? "active" : ""
                       }`}
                     >
                       Orders Details
@@ -775,9 +941,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/ecommerce/sellers/create"
                       className={`menu-link ${
-                        pathname === "/ecommerce/sellers/create"
-                          ? "active"
-                          : ""
+                        pathname === "/ecommerce/sellers/create" ? "active" : ""
                       }`}
                     >
                       Create Seller
@@ -926,9 +1090,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/project-management/teams"
                       className={`menu-link ${
-                        pathname === "/project-management/teams"
-                          ? "active"
-                          : ""
+                        pathname === "/project-management/teams" ? "active" : ""
                       }`}
                     >
                       Teams
@@ -952,9 +1114,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/project-management/users"
                       className={`menu-link ${
-                        pathname === "/project-management/users"
-                          ? "active"
-                          : ""
+                        pathname === "/project-management/users" ? "active" : ""
                       }`}
                     >
                       Users
@@ -1062,9 +1222,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/helpdesk/tickets/details"
                       className={`menu-link ${
-                        pathname === "/helpdesk/tickets/details"
-                          ? "active"
-                          : ""
+                        pathname === "/helpdesk/tickets/details" ? "active" : ""
                       }`}
                     >
                       Ticket Details
@@ -1231,9 +1389,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/real-estate/add-property"
                       className={`menu-link ${
-                        pathname === "/real-estate/add-property"
-                          ? "active"
-                          : ""
+                        pathname === "/real-estate/add-property" ? "active" : ""
                       }`}
                     >
                       Add Property
@@ -1323,6 +1479,232 @@ const LeftSidebar = ({ toggleActive }) => {
 
             <Accordion.Item eventKey="12">
               <Accordion.Header>
+                <i className="material-symbols-outlined">badge</i>
+                <span className="title">Doctor</span>
+              </Accordion.Header>
+              <Accordion.Body>
+                <ul className="sub-menu">
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/patients-list"
+                      className={`menu-link ${
+                        pathname === "/doctor/patients-list" ? "active" : ""
+                      }`}
+                    >
+                      Patients List
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/add-patient"
+                      className={`menu-link ${
+                        pathname === "/doctor/add-patient" ? "active" : ""
+                      }`}
+                    >
+                      Add Patient
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/patient-details"
+                      className={`menu-link ${
+                        pathname === "/doctor/patient-details" ? "active" : ""
+                      }`}
+                    >
+                      Patient Details
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/appointments"
+                      className={`menu-link ${
+                        pathname === "/doctor/appointments" ? "active" : ""
+                      }`}
+                    >
+                      Appointments
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/prescriptions"
+                      className={`menu-link ${
+                        pathname === "/doctor/prescriptions" ? "active" : ""
+                      }`}
+                    >
+                      Prescriptions
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/doctor/write-prescription"
+                      className={`menu-link ${
+                        pathname === "/doctor/write-prescription" ? "active" : ""
+                      }`}
+                    >
+                      Write Prescription
+                    </Link>
+                  </li> 
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="13">
+              <Accordion.Header>
+                <i className="material-symbols-outlined">lunch_dining</i>
+                <span className="title">Restaurant</span>
+              </Accordion.Header>
+              <Accordion.Body>
+                <ul className="sub-menu">
+                  <li className="menu-item">
+                    <Link
+                      to="/restaurant/menus"
+                      className={`menu-link ${
+                        pathname === "/restaurant/menus" ? "active" : ""
+                      }`}
+                    >
+                      Menus
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/restaurant/dish-details"
+                      className={`menu-link ${
+                        pathname === "/restaurant/dish-details" ? "active" : ""
+                      }`}
+                    >
+                      Dish Details
+                    </Link>
+                  </li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="14">
+              <Accordion.Header>
+                <i className="material-symbols-outlined">hotel</i>
+                <span className="title">Hotel</span>
+              </Accordion.Header>
+              <Accordion.Body>
+                <ul className="sub-menu">
+                  <li className="menu-item">
+                    <Link
+                      to="/hotel/rooms-list"
+                      className={`menu-link ${
+                        pathname === "/hotel/rooms-list" ? "active" : ""
+                      }`}
+                    >
+                      Rooms List
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/hotel/room-details"
+                      className={`menu-link ${
+                        pathname === "/hotel/room-details" ? "active" : ""
+                      }`}
+                    >
+                      Room Details
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/hotel/guests-list"
+                      className={`menu-link ${
+                        pathname === "/hotel/guests-list" ? "active" : ""
+                      }`}
+                    >
+                      Guests List
+                    </Link>
+                  </li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="15">
+              <Accordion.Header>
+                <i className="material-symbols-outlined">location_away</i>
+                <span className="title">Real Estate Agent</span>
+              </Accordion.Header>
+              <Accordion.Body>
+                <ul className="sub-menu">
+                  <li className="menu-item">
+                    <Link
+                      to="/real-estate-agent/properties"
+                      className={`menu-link ${
+                        pathname === "/real-estate-agent/properties" ? "active" : ""
+                      }`}
+                    >
+                      Properties
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/real-estate-agent/property-details"
+                      className={`menu-link ${
+                        pathname === "/real-estate-agent/property-details" ? "active" : ""
+                      }`}
+                    >
+                      Property Details
+                    </Link>
+                  </li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="16">
+              <Accordion.Header>
+                <i className="material-symbols-outlined">paid</i>
+                <span className="title">Crypto Trader</span>
+              </Accordion.Header>
+              <Accordion.Body>
+                <ul className="sub-menu">
+                  <li className="menu-item">
+                    <Link
+                      to="/crypto-trader/transactions"
+                      className={`menu-link ${
+                        pathname === "/crypto-trader/transactions" ? "active" : ""
+                      }`}
+                    >
+                      Transactions
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/crypto-trader/gainers-losers"
+                      className={`menu-link ${
+                        pathname === "/crypto-trader/gainers-losers" ? "active" : ""
+                      }`}
+                    >
+                      Gainers & Losers
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link
+                      to="/crypto-trader/wallet"
+                      className={`menu-link ${
+                        pathname === "/crypto-trader/wallet" ? "active" : ""
+                      }`}
+                    >
+                      Wallet
+                    </Link>
+                  </li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="17">
+              <Accordion.Header>
                 <i className="material-symbols-outlined">local_activity</i>
                 <span className="title">Events</span>
               </Accordion.Header>
@@ -1386,7 +1768,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="13">
+            <Accordion.Item eventKey="18">
               <Accordion.Header>
                 <i className="material-symbols-outlined">share</i>
                 <span className="title">Social</span>
@@ -1418,7 +1800,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="14">
+            <Accordion.Item eventKey="19">
               <Accordion.Header>
                 <i className="material-symbols-outlined">content_paste</i>
                 <span className="title">Invoices</span>
@@ -1472,7 +1854,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="15">
+            <Accordion.Item eventKey="20">
               <Accordion.Header>
                 <i className="material-symbols-outlined">group_add</i>
                 <span className="title">Users</span>
@@ -1515,7 +1897,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="16">
+            <Accordion.Item eventKey="21">
               <Accordion.Header>
                 <i className="material-symbols-outlined">account_box</i>
                 <span className="title">Profile</span>
@@ -1574,7 +1956,7 @@ const LeftSidebar = ({ toggleActive }) => {
               <span className="menu-title-text">MODULES</span>
             </div>
 
-            <Accordion.Item eventKey="17">
+            <Accordion.Item eventKey="22">
               <Accordion.Header>
                 <i className="material-symbols-outlined">add_reaction</i>
                 <span className="title">Icons</span>
@@ -1606,7 +1988,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="18">
+            <Accordion.Item eventKey="23">
               <Accordion.Header>
                 <i className="material-symbols-outlined">qr_code_scanner</i>
                 <span className="title">UI Elements</span>
@@ -1781,7 +2163,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="19">
+            <Accordion.Item eventKey="24">
               <Accordion.Header>
                 <i className="material-symbols-outlined">table_chart</i>
                 <span className="title">Tables</span>
@@ -1813,7 +2195,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="20">
+            <Accordion.Item eventKey="25">
               <Accordion.Header>
                 <i className="material-symbols-outlined">forum</i>
                 <span className="title">Forms</span>
@@ -1878,7 +2260,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="21">
+            <Accordion.Item eventKey="26">
               <Accordion.Header>
                 <i className="material-symbols-outlined">pie_chart</i>
                 <span className="title">Charts</span>
@@ -1987,7 +2369,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="22">
+            <Accordion.Item eventKey="27">
               <Accordion.Header>
                 <i className="material-symbols-outlined">lock</i>
                 <span className="title">Authentication</span>
@@ -2082,7 +2464,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="23">
+            <Accordion.Item eventKey="28">
               <Accordion.Header>
                 <i className="material-symbols-outlined">content_copy</i>
                 <span className="title">Extra Pages</span>
@@ -2202,7 +2584,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey="24">
+            <Accordion.Item eventKey="29">
               <Accordion.Header>
                 <i className="material-symbols-outlined">chat_error</i>
                 <span className="title">Errors Pages</span>
@@ -2296,7 +2678,7 @@ const LeftSidebar = ({ toggleActive }) => {
               </Link>
             </div>
 
-            <Accordion.Item eventKey="25">
+            <Accordion.Item eventKey="29">
               <Accordion.Header>
                 <i className="material-symbols-outlined">settings</i>
                 <span className="title">Settings</span>
@@ -2320,9 +2702,7 @@ const LeftSidebar = ({ toggleActive }) => {
                     <Link
                       to="/settings/change-password"
                       className={`menu-link ${
-                        pathname === "/settings/change-password"
-                          ? "active"
-                          : ""
+                        pathname === "/settings/change-password" ? "active" : ""
                       }`}
                     >
                       Change Password

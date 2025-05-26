@@ -1,9 +1,9 @@
+import { NgClass } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgClass } from '@angular/common';
 import { ToggleService } from '../header/toggle.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
 
 @Component({

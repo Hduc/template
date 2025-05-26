@@ -39,7 +39,6 @@
             .mat-mdc-card-subtitle {
                 .mat-mdc-form-field {
                     width: auto;
-                    margin-right: 10px;
                     position: relative;
                     --mdc-icon-button-state-layer-size: 100%;
 
@@ -52,6 +51,8 @@
                         transform: translateY(-50%);
                     }
                     .mat-mdc-text-field-wrapper {
+                        border-color: var(--borderColor);
+                        background: #F5F7F8;
                         padding: 2px 15px;
                         width: auto;
                     }
@@ -105,6 +106,7 @@
                     &.mat-mdc-form-field-type-mat-date-range-input {
                         .mat-mdc-form-field-infix {
                             width: 194px;
+                            margin-left: 10px;
                             padding-left: 23px;
                         }
                     }
@@ -153,6 +155,17 @@
                                 left: auto;
                                 right: 0;
                             }
+                        }
+                    }
+                }
+            }
+        }
+        &.component-dark-theme {
+            .mat-mdc-card-header {
+                .mat-mdc-card-subtitle {
+                    .mat-mdc-form-field {
+                        .mat-mdc-text-field-wrapper {
+                            background: #15203c;
                         }
                     }
                 }

@@ -44,7 +44,7 @@ const TestimonialsStyle6: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Testimonials Style - 6</h5>
+            <h5 className="!mb-0">Testimonials Style - 6</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -58,7 +58,7 @@ const TestimonialsStyle6: React.FC = () => {
                   alt={testimonial.name}
                   className="inline-block rounded-full"
                 />
-                <h5 className="mt-[15px] mb-[7px]">{testimonial.name}</h5>
+                <h5 className="!mt-[15px] !mb-[7px]">{testimonial.name}</h5>
                 <span className="block">{testimonial.role}</span>
                 <div className="leading-none text-[#fe7a36] my-[15px] text-md flex items-center justify-center gap-[2px]">
                   {Array.from({ length: 5 }).map((_, starIndex) => {

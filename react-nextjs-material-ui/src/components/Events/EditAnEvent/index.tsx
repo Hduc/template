@@ -19,6 +19,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "@/components/Forms/FileUpload";
 
 const EditAnEvent: React.FC = () => {
   const [ticketType, setTicketType] = useState<string>("");
@@ -57,6 +58,12 @@ const EditAnEvent: React.FC = () => {
     setEventTime(event.target.value as string);
   };
 
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Box component="form">
@@ -74,7 +81,7 @@ const EditAnEvent: React.FC = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -117,7 +124,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -154,7 +161,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -197,7 +204,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -235,7 +242,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -275,7 +282,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -318,7 +325,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -363,7 +370,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -403,7 +410,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -443,7 +450,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -460,17 +467,17 @@ const EditAnEvent: React.FC = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -487,17 +494,17 @@ const EditAnEvent: React.FC = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -535,7 +542,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -552,17 +559,17 @@ const EditAnEvent: React.FC = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -606,7 +613,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -650,7 +657,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"
@@ -669,7 +676,7 @@ const EditAnEvent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -682,27 +689,10 @@ const EditAnEvent: React.FC = () => {
                 Event Image
               </Typography>
 
-              <TextField
-                autoComplete="uploadFile"
-                name="uploadFile"
-                required
-                fullWidth
-                id="uploadFile"
-                type="file"
-                autoFocus
-                inputProps={{
-                  multiple: true,
-                }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box
                 sx={{
                   display: "flex",

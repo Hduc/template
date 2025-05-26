@@ -101,7 +101,9 @@ const CustomerSatisfaction: React.FC = () => {
       <div className="trezo-card bg-primary-500 mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 text-white font-semibold">Total Sales</h5>
+            <h5 className="!mb-0 !text-white !font-semibold">
+              Customer Satisfaction
+            </h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -150,7 +152,7 @@ const CustomerSatisfaction: React.FC = () => {
 
             <div className="text-center top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 absolute">
               <span className="block text-white">Overall</span>
-              <h6 className="mb-0 text-[20px] mt-[5px] text-white font-semibold">
+              <h6 className="!mb-0 !text-[20px] !mt-[5px] !text-white !font-semibold">
                 98%
               </h6>
             </div>

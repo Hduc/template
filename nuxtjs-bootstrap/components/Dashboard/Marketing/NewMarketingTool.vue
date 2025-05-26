@@ -12,13 +12,13 @@
       <div class="py-4 mb-3">
         <img src="~/assets/images/marketing-tool.png" alt="marketing-tool" />
       </div>
-      <RouterLink
+      <NuxtLink
         to="/contact"
         class="d-inline-block py-2 px-4 btn btn-primary border-0"
         style="background-color: #6a22a7"
       >
         Contact Us
-      </RouterLink>
+      </NuxtLink>
     </div>
   </div>
 </template>

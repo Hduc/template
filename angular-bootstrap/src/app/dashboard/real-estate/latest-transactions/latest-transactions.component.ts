@@ -22,4 +22,5 @@ export class LatestTransactionsComponent {
             this.isCardHeaderOpen = false;
         }
     }
+    
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import { Container, Row, Col } from "react-bootstrap";
+
 const Widget = () => {
   // Static data for the widget features
   const widgetFeatures = [
@@ -31,9 +33,9 @@ const Widget = () => {
 
   return (
     <div className="tailor-area position-relative z-1">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6">
+      <Container>
+        <Row className="align-items-center">
+          <Col lg={6}>
             <div className="tailor-img">
               <img
                 src="/images/landing/tailor-img.png"
@@ -42,9 +44,9 @@ const Widget = () => {
                 height={592}
               />
             </div>
-          </div>
+          </Col>
 
-          <div className="col-lg-6">
+          <Col lg={6}>
             <div className="tailor-content">
               <h2>
                 Tailor Your Dashboard: Unleash the Power of Customizable Widgets
@@ -70,9 +72,9 @@ const Widget = () => {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Shape Images */}
       <img

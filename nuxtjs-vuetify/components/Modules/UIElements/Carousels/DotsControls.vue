@@ -3,7 +3,7 @@
     <div class="v-card-header mb-4">
       <h5 class="mb-0">With Dots Controls</h5>
     </div>
-    <CCarousel v-bind="settings" :autoplay="5000" :wrap-around="true">
+    <CCarousel v-bind="config">
       <CSlide v-for="slide in items" :key="slide.id">
         <v-img :src="slide.image" class="border-radius" alt="course-image" />
       </CSlide>
@@ -24,12 +24,15 @@ import image3 from "~/assets/images/gallery/gallery3.jpg";
 
 export default defineComponent({
   name: "DotsControls",
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "center",
-    },
-    items: [
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+    };
+
+    const items = [
       {
         id: 1,
         image: image1,
@@ -42,7 +45,12 @@ export default defineComponent({
         id: 3,
         image: image3,
       },
-    ],
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>

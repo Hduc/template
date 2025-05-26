@@ -32,11 +32,11 @@ const CoursesDetails = () => {
       <TablesOfContent />
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <CourseInstructor />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <EnrolledStudents />
         </Grid>
       </Grid>

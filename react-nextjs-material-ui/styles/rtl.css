@@ -8,6 +8,9 @@
   margin-right: 0;
   margin-left: -4px;
 }
+[dir=rtl] .rtl-tf-scaleX-1 {
+  transform: scaleX(-1);
+}
 [dir=rtl] .apexcharts-canvas {
   direction: ltr;
 }
@@ -16,7 +19,7 @@
 }
 [dir=rtl] .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-marker {
   margin-right: 0;
-  margin-left: 6px;
+  margin-left: 8px;
 }
 [dir=rtl] .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-series-group {
   justify-content: start;
@@ -88,4 +91,12 @@
 }
 [dir=rtl] .rp-slide .swiper-pagination {
   text-align: right;
+}
+[dir=rtl] .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir=rtl] .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
 }/*# sourceMappingURL=rtl.css.map */

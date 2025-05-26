@@ -44,7 +44,7 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
     {
         id: '#JAN-854',
-        timestamp: '01 Dec 2024 09:30 AM',
+        timestamp: '01 Dec 2025 09:30 AM',
         type: 'Information',
         content: 'New software update available. Click here to download.',
         status: {
@@ -57,7 +57,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-853',
-        timestamp: '30 Nov 2024 09:30 AM',
+        timestamp: '30 Nov 2025 09:30 AM',
         type: 'Alert',
         content: 'Urgent: Server maintenance scheduled for tomorrow at 10:00 PM.',
         status: {
@@ -70,7 +70,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-852',
-        timestamp: '28 Nov 2024 09:30 AM',
+        timestamp: '28 Nov 2025 09:30 AM',
         type: 'Announcement',
         content: 'Welcome to our new team member, Jane Smith, as Head of Sales.',
         status: {
@@ -83,7 +83,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-851',
-        timestamp: '27 Nov 2024 09:30 AM',
+        timestamp: '27 Nov 2025 09:30 AM',
         type: 'Information',
         content: 'Check out our latest blog post for tips on improving efficiency.',
         status: {
@@ -96,7 +96,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-850',
-        timestamp: '26 Nov 2024 09:30 AM',
+        timestamp: '26 Nov 2025 09:30 AM',
         type: 'Alert',
         content: 'Attention: Upcoming webinar on cybersecurity best practices.',
         status: {
@@ -109,7 +109,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-849',
-        timestamp: '25 Nov 2024 09:30 AM',
+        timestamp: '25 Nov 2025 09:30 AM',
         type: 'Announcement',
         content: 'Happy Thanksgiving! Our office will be closed on Nov 30.',
         status: {
@@ -122,7 +122,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-848',
-        timestamp: '24 Nov 2024 09:30 AM',
+        timestamp: '24 Nov 2025 09:30 AM',
         type: 'Information',
         content: 'Year-end financial reports are now available for download.',
         status: {
@@ -135,7 +135,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-847',
-        timestamp: '23 Nov 2024 09:30 AM',
+        timestamp: '23 Nov 2025 09:30 AM',
         type: 'Announcement',
         content: 'Critical security update. Update your passwords immediately.',
         status: {
@@ -148,7 +148,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-846',
-        timestamp: '22 Nov 2024 09:30 AM',
+        timestamp: '22 Nov 2025 09:30 AM',
         type: 'Information',
         content: 'Holiday Office Party on Dec 20. Save the date!',
         status: {
@@ -161,7 +161,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         id: '#JAN-845',
-        timestamp: '20 Nov 2024 09:30 AM',
+        timestamp: '20 Nov 2025 09:30 AM',
         type: 'Alert',
         content: 'Year-end sale: Up to 20% off on selected products.',
         status: {

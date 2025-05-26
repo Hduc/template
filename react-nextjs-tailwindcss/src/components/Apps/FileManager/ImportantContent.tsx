@@ -170,7 +170,7 @@ const ImportantContent: React.FC = () => {
     <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0">Important</h5>
+          <h5 className="!mb-0">Important</h5>
         </div>
       </div>
 
@@ -294,7 +294,7 @@ const ImportantContent: React.FC = () => {
         </div>
 
         <div className="px-[20px] py-[12px] md:py-[14px] flex items-center justify-between">
-          <p className="mb-0 text-sm">
+          <p className="!mb-0 !text-sm">
             Showing {paginatedData.length} of {fileData.length} results
           </p>
           <ol className="flex">

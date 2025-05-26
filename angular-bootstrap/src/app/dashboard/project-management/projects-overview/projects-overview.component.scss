@@ -4,7 +4,6 @@
     .trezo-card-content {
         .box {
             padding: 22px 20px;
-            border-radius: 7px;
             margin-bottom: 25px;
 
             .icon {
@@ -69,6 +68,27 @@
             .bg-primary-50, .bg-orange-50, .bg-success-50, .bg-purple-50 {
                 background-color: #15203c !important;
             }
+            .box {
+                .info {
+                    .info-badge {
+                        border-color: #15203c;
+                        background-color: #15203c;
+        
+                        &.down {
+                            border-color: #15203c;
+                            background-color: #15203c;
+                        }
+                    }
+                    .users {
+                        img {
+                            border-color: #0C1427;
+                        }
+                        span {
+                            border-color: #0C1427;
+                        }
+                    }
+                }
+            }
         }
     }
     &.component-rtl-enabled {
@@ -90,6 +110,13 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    &.component-card-without-border-radius {
+        .trezo-card-content {
+            .box {
+                border-radius: 0 !important;
             }
         }
     }

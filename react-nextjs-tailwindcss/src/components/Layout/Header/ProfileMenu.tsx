@@ -54,7 +54,7 @@ const ProfileMenu: React.FC = () => {
           width={35}
           height={35}
         />
-        <span className="block font-semibold text-[0] lg:text-base">
+        <span className="block font-semibold text-[0px] lg:text-base">
           Olivia
         </span>
         <i className="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>

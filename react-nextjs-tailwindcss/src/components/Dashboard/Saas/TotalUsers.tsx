@@ -55,9 +55,9 @@ const TotalUsers: React.FC = () => {
         <div className="trezo-card-content relative">
           <span className="block mb-[5px]">Total Users</span>
 
-          <h3 className="leading-none text-lg md:text-xl mb-[8px]">241K</h3>
+          <h3 className="!leading-none !text-lg md:!text-xl !mb-[8px]">241K</h3>
 
-          <span className="inline-block px-[9px] text-success-700 border border-success-300 bg-success-100 text-xs rounded-[100px]">
+          <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-[100px]">
             +5.4%
           </span>
 

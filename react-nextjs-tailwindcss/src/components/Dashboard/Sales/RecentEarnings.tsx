@@ -135,7 +135,7 @@ const RecentEarnings: React.FC = () => {
       <div className="trezo-card border border-gray-100 dark:border-[#172036] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Recent Earnings</h5>
+            <h5 className="!mb-0">Recent Earnings</h5>
           </div>
 
           <div className="trezo-card-subtitle">

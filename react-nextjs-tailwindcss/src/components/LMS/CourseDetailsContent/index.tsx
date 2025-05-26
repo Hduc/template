@@ -20,7 +20,7 @@ const CourseDetailsContent: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Course</h5>
+            <h5 className="!mb-0">Course</h5>
           </div>
         </div>
         <div className="trezo-card-content -mx-[20px] md:-mx-[25px]">
@@ -126,7 +126,7 @@ const CourseDetailsContent: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Tables Of Content</h5>
+            <h5 className="!mb-0">Tables Of Content</h5>
           </div>
         </div>
 
@@ -572,7 +572,7 @@ const CourseDetailsContent: React.FC = () => {
 
             <div className="lg:col-span-1">
               <div className="bg-primary-500 rounded-md text-center py-[30px] md:py-[50px] px-[20px] md:px-[30px] 2xl:ltr:-ml-[30px] 2xl:rtl:-mr-[30px] 2xl:ltr:mr-[85px] 2xl:rtl:ml-[85px] mt-[20px] md:mt-[25px] lg:mt-0">
-                <h4 className="mb-[10px] text-white text-lg md:text-[21px]">
+                <h4 className="!mb-[10px] !text-white !text-lg md:!text-[21px]">
                   Unlock Library
                 </h4>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -344,6 +344,15 @@ const UsersList: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter(
+    (row) =>
+      row.userId.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.userName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -366,7 +375,7 @@ const UsersList: React.FC = () => {
           >
             <Box
               component="form"
-              className='t-search-form'
+              className="t-search-form"
               sx={{
                 width: "265px",
               }}
@@ -376,8 +385,10 @@ const UsersList: React.FC = () => {
               </label>
               <input
                 type="text"
-                className='t-input'
+                className="t-input"
                 placeholder="Search here..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </Box>
 
@@ -509,7 +520,7 @@ const UsersList: React.FC = () => {
 
                 <TableBody>
                   {(rowsPerPage > 0
-                    ? rows.slice(
+                    ? filteredRows.slice(
                         page * rowsPerPage,
                         page * rowsPerPage + rowsPerPage
                       )
@@ -670,7 +681,7 @@ const UsersList: React.FC = () => {
                   ))}
                   {emptyRows > 0 && (
                     <TableRow style={{ height: 53 * emptyRows }}>
-                      <TableCell colSpan={8} />
+                      <TableCell className="border-bottom" colSpan={8} />
                     </TableRow>
                   )}
                 </TableBody>

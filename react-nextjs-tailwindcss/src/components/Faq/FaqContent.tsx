@@ -15,7 +15,7 @@ const FaqContent: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content py-[10px] md:py-[25px]">
           <div className="text-center mx-auto md:max-w-[550px] mb-[25px] md:mb-[35px]">
-            <h3 className="mb-[10px] md:mb-[12px] text-lg md:text-xl">
+            <h3 className="!mb-[10px] md:!mb-[12px] !text-lg md:!text-xl">
               Frequently Asked Questions
             </h3>
             <p className="leading-[1.7]">

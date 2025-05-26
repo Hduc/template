@@ -136,7 +136,7 @@ const CriticalPatients: React.FC = () => {
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
             <p className="mb-[2px]">Critical Patients</p>
-            <h5 className="mb-0">780</h5>
+            <h5 className="!mb-0">780</h5>
           </div>
         </div>
 

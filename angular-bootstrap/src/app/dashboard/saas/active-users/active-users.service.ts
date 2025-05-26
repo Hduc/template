@@ -50,6 +50,9 @@ export class ActiveUsersService {
                     dataLabels: {
                         enabled: false
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         categories: categories,
                         axisTicks: {

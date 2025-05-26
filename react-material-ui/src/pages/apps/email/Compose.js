@@ -24,11 +24,11 @@ const Compose = () => {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={4} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }}>
           <Sidebar />
         </Grid>
 
-        <Grid item xs={12} md={8} lg={8} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }}>
           <ComposeEmail />
         </Grid>
       </Grid>

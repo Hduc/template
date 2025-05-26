@@ -10,7 +10,7 @@ const Prescriptions: React.FC = () => {
         <div className="trezo-card-content">
           <div className="sm:flex justify-between">
             <div>
-              <h4 className="mb-[7px] text-[20px] font-semibold">
+              <h4 className="!mb-[7px] !text-[20px] !font-semibold">
                 Dr. Walter White
               </h4>
               <span className="block md:text-md mt-[5px]">

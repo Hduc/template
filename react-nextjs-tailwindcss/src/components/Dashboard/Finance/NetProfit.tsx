@@ -120,9 +120,9 @@ const NetProfit: React.FC = () => {
           <div className="trezo-card-title flex items-center gap-[15px]">
             <div>
               <span className="block mb-[4px]">Net Profit</span>
-              <h5 className="mb-0 md:text-[20px]">$42,458</h5>
+              <h5 className="!mb-0 md:!text-[20px]">$42,458</h5>
             </div>
-            <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+            <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
               +7.6%
             </span>
           </div>

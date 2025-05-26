@@ -106,6 +106,9 @@
     }
 
     // Color
+    &.body-bg-color {
+        background-color: #0C1427;
+    }
     .bg-white {
         background-color: #0C1427 !important;
     }
@@ -118,6 +121,45 @@
     .bg-gray {
         background-color: #15203c !important;
     }
+    .bg-primary-50 {
+        background-color: #15203c !important;
+    }
+    .bg-danger-50 {
+        background-color: #15203c !important;
+    }
+    .bg-success-50 {
+        background-color: #15203c !important;
+    }
+    .bg-secondary-50 {
+        background-color: #15203c !important;
+    }
+    .bg-purple-50 {
+        background-color: #15203c !important;
+    }
+    .bg-orange-50 {
+        background-color: #15203c !important;
+    }
+    .bg-purple-100 {
+        background-color: #15203c !important;
+    }
+    .bg-orange-100 {
+        background-color: #15203c !important;
+    }
+    .bg-success-100 {
+        background-color: #15203c !important;
+    }
+    .bg-secondary-100 {
+        background-color: #15203c !important;
+    }
+    .bg-primary-100 {
+        background-color: #15203c !important;
+    }
+    .bg-danger-100 {
+        background-color: #15203c !important;
+    }
+    .bg-danger-200 {
+        background-color: #15203c !important;
+    }
 
     // Heading
     .h1, h1, .display-1, .h2, h2, .display-2, .h3, h3, .display-3, .h4, h4, .display-4, .h5, h5, .display-5, .h6, h6, .display-6 {
@@ -127,6 +169,25 @@
     // NG Scrollbar
     .ng-scrollbar {
         --scrollbar-thumb-color: rgba(255, 255, 255, .05);
+    }
+
+    // Progressbar
+    .mat-mdc-progress-bar {
+        &.success-progressbar {
+            --mdc-linear-progress-track-color: var(--borderColor);
+        }
+        &.purple-progressbar {
+            --mdc-linear-progress-track-color: var(--borderColor);
+        }
+        &.orange-progressbar {
+            --mdc-linear-progress-track-color: var(--borderColor);
+        }
+        &.secondary-progressbar {
+            --mdc-linear-progress-track-color: var(--borderColor);
+        }
+        &.info-progressbar {
+            --mdc-linear-progress-track-color: var(--borderColor);
+        }
     }
 
     // Input
@@ -403,6 +464,9 @@
                 }
             }
         }
+        &.style-two {
+            background-color: #0A0E19;
+        }
     }
 
     // Add New Popup
@@ -506,6 +570,10 @@
     .mat-mdc-form-field {
         input {
             background-color: transparent;
+
+            &::placeholder {
+                color: var(--bodyColor) !important;
+            }
         }
         .mdc-text-field {
             border-color: var(--borderColor);
@@ -783,6 +851,15 @@
         }
         &.pPending {
             background-color: #15203c;
+        }
+        &.with-border {
+            border-color: #15203c;
+            background-color: #15203c;
+    
+            &.down {
+                border-color: #15203c;
+                background-color: #15203c;
+            }
         }
     }
     

@@ -1,0 +1,10 @@
+<button
+    mat-button
+    type="button"
+    *ngIf="isShow"
+    (click)="scrollToTop()"
+    class="back-to-top p-0 position-fixed rounded-circle"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <i class="ri-arrow-up-line"></i>
+</button>

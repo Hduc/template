@@ -476,7 +476,7 @@ const PatientsListTable: React.FC = () => {
           </div>
 
           <div className="pt-[12.5px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-xs">
+            <p className="!mb-0 !text-xs">
               Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of{" "}
               {totalItems} results
             </p>

@@ -11,7 +11,7 @@ const ClickThroughRate: React.FC = () => {
           <div className="flex items-center justify-between mb-[10px]">
             <div>
               <span className="block mb-[6px]">Click Through Rate</span>
-              <h3 className="leading-none text-xl md:text-2xl lg:text-3xl mb-0">
+              <h3 className="!leading-none !text-xl md:!text-2xl lg:!text-3xl !mb-0">
                 $2.95
               </h3>
             </div>
@@ -23,7 +23,7 @@ const ClickThroughRate: React.FC = () => {
               height={60}
             />
           </div>
-          <span className="inline-block px-[9px] text-success-700 border border-success-300 bg-success-100 text-sm rounded-[100px]">
+          <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-[100px]">
             +7%
           </span>
           <span className="block text-xs mt-[10px]">vs previous 30 days</span>

@@ -23,7 +23,7 @@ export class AnalyticsOverviewService {
                     series: initialData.series,
                     chart: {
                         type: "bar",
-                        height: 350,
+                        height: 354,
                         toolbar: {
                             show: false
                         }

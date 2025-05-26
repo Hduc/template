@@ -129,7 +129,7 @@ const StudentsProgress: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Student&apos;s Progress</h5>
+            <h5 className="!mb-0">Student&apos;s Progress</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -206,12 +206,12 @@ const StudentsProgress: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] flex items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Items per pages: <strong>{ITEMS_PER_PAGE}</strong>
             </p>
 
             <div className="flex items-center">
-              <p className="mb-0 text-sm">
+              <p className="!mb-0 !text-sm">
                 {ITEMS_PER_PAGE * (currentPage - 1) + 1} –{" "}
                 {Math.min(
                   ITEMS_PER_PAGE * currentPage,

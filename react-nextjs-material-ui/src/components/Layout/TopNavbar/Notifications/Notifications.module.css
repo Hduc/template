@@ -46,10 +46,10 @@
 }
  
 /* dark-theme style */
-.dark-theme .header {
+[class="dark-theme"] .header {
   border-bottom: 1px dashed var(--darkBorder);
 }
-.dark-theme .notificationList {
+[class="dark-theme"] .notificationList {
   border-bottom: 1px dashed var(--darkBorder);
 }
 

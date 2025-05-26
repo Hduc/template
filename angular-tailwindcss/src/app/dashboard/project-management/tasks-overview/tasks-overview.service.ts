@@ -23,7 +23,7 @@ export class TasksOverviewService {
                 const options = {
                     series: series,
                     chart: {
-                        height: 382,
+                        height: 376,
                         type: "pie"
                     },
                     labels: labels,

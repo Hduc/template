@@ -167,7 +167,7 @@ const CustomPaginationActions: React.FC = () => {
           Custom Pagination Actions
         </Typography>
 
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className="custom-pagination">
           <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
             <TableBody>
               {(rowsPerPage > 0
@@ -198,7 +198,7 @@ const CustomPaginationActions: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={6} />
+                  <TableCell className="border-bottom" colSpan={6} />
                 </TableRow>
               )}
             </TableBody>

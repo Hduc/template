@@ -111,12 +111,14 @@ const ResignedEmployees: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[30px] rounded-md">
         <div className="trezo-card-content relative">
           <div className="flex items-center gap-[12px]">
-            <div className="bg-orange-600 rounded-[4px] text-white w-[44px] h-[44px] flex items-center justify-center">
+            <div className="bg-orange-100 dark:bg-[#15203c] text-orange-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-lg">
               <i className="material-symbols-outlined">person_remove</i>
             </div>
             <div>
               <span className="block">Resigned Employees</span>
-              <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">318</h5>
+              <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
+                318
+              </h5>
             </div>
           </div>
           <div className="mt-[32px] flex items-center gap-[7px]">

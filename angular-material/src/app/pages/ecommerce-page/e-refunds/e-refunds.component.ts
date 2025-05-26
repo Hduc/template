@@ -51,7 +51,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user6.jpg',
             name: 'Oliver Khan'
         },
-        date: '19 Jun 2024',
+        date: '19 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 1,
         noOrderReplaced: 0,
@@ -64,7 +64,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user7.jpg',
             name: 'Marcia Baker'
         },
-        date: '19 Jun 2024',
+        date: '19 Jun 2025',
         noOrderReturned: 1,
         noOrderRefunded: 1,
         noOrderReplaced: 0,
@@ -77,7 +77,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user8.jpg',
             name: 'Carolyn Barnes'
         },
-        date: '20 Jun 2024',
+        date: '20 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 7,
         noOrderReplaced: 4,
@@ -90,7 +90,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user9.jpg',
             name: 'Donna Miller'
         },
-        date: '21 Jun 2024',
+        date: '21 Jun 2025',
         noOrderReturned: 3,
         noOrderRefunded: 1,
         noOrderReplaced: 2,
@@ -103,7 +103,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user10.jpg',
             name: 'Barbara Cross'
         },
-        date: '22 Jun 2024',
+        date: '22 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 2,
         noOrderReplaced: 7,
@@ -116,7 +116,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user11.jpg',
             name: 'Rebecca Block'
         },
-        date: '23 Jun 2024',
+        date: '23 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 6,
         noOrderReplaced: 2,
@@ -129,7 +129,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user12.jpg',
             name: 'Ramiro McCarty'
         },
-        date: '24 Jun 2024',
+        date: '24 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 6,
         noOrderReplaced: 1,
@@ -142,7 +142,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user13.jpg',
             name: 'Robert Fairweather'
         },
-        date: '25 Jun 2024',
+        date: '25 Jun 2025',
         noOrderReturned: 6,
         noOrderRefunded: 5,
         noOrderReplaced: 4,
@@ -155,7 +155,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user14.jpg',
             name: 'Marcelino Haddock'
         },
-        date: '26 Jun 2024',
+        date: '26 Jun 2025',
         noOrderReturned: 7,
         noOrderRefunded: 2,
         noOrderReplaced: 5,
@@ -168,7 +168,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user15.jpg',
             name: 'Thomas Wilson'
         },
-        date: '27 Jun 2024',
+        date: '27 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 1,
         noOrderReplaced: 6,
@@ -181,7 +181,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user15.jpg',
             name: 'Thomas Wilson'
         },
-        date: '27 Jun 2024',
+        date: '27 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 1,
         noOrderReplaced: 6,
@@ -194,7 +194,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user14.jpg',
             name: 'Marcelino Haddock'
         },
-        date: '26 Jun 2024',
+        date: '26 Jun 2025',
         noOrderReturned: 7,
         noOrderRefunded: 2,
         noOrderReplaced: 5,
@@ -207,7 +207,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user13.jpg',
             name: 'Robert Fairweather'
         },
-        date: '25 Jun 2024',
+        date: '25 Jun 2025',
         noOrderReturned: 6,
         noOrderRefunded: 5,
         noOrderReplaced: 4,
@@ -220,7 +220,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user12.jpg',
             name: 'Ramiro McCarty'
         },
-        date: '24 Jun 2024',
+        date: '24 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 6,
         noOrderReplaced: 1,
@@ -233,7 +233,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user11.jpg',
             name: 'Rebecca Block'
         },
-        date: '23 Jun 2024',
+        date: '23 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 6,
         noOrderReplaced: 2,
@@ -246,7 +246,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user10.jpg',
             name: 'Barbara Cross'
         },
-        date: '22 Jun 2024',
+        date: '22 Jun 2025',
         noOrderReturned: 5,
         noOrderRefunded: 2,
         noOrderReplaced: 7,
@@ -259,7 +259,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user9.jpg',
             name: 'Donna Miller'
         },
-        date: '21 Jun 2024',
+        date: '21 Jun 2025',
         noOrderReturned: 3,
         noOrderRefunded: 1,
         noOrderReplaced: 2,
@@ -272,7 +272,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user8.jpg',
             name: 'Carolyn Barnes'
         },
-        date: '20 Jun 2024',
+        date: '20 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 7,
         noOrderReplaced: 4,
@@ -285,7 +285,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user7.jpg',
             name: 'Marcia Baker'
         },
-        date: '19 Jun 2024',
+        date: '19 Jun 2025',
         noOrderReturned: 1,
         noOrderRefunded: 1,
         noOrderReplaced: 0,
@@ -298,7 +298,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             img: 'images/users/user6.jpg',
             name: 'Oliver Khan'
         },
-        date: '19 Jun 2024',
+        date: '19 Jun 2025',
         noOrderReturned: 2,
         noOrderRefunded: 1,
         noOrderReplaced: 0,

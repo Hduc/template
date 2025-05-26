@@ -55,7 +55,7 @@ const Overview = () => {
 
         <Box className="overview-navs">
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4 }}>
               <Box
                 onClick={() => handleTabClick(0)}
                 sx={{
@@ -146,7 +146,7 @@ const Overview = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4 }}>
               <Box
                 onClick={() => handleTabClick(1)}
                 sx={{
@@ -235,7 +235,7 @@ const Overview = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={4} md={4}>
+            <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4 }}>
               <Box
                 onClick={() => handleTabClick(2)}
                 sx={{

@@ -8,7 +8,7 @@ const PaginationStyle2: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">Showing 9 of 36 results</p>
+            <p className="!mb-0">Showing 9 of 36 results</p>
 
             <ol className="mt-[10px] sm:mt-0">
               <li className="inline-block mx-[2px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">

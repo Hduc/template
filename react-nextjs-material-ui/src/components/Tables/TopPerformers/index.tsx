@@ -357,7 +357,7 @@ const TopPerformers: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={5} />
+                  <TableCell className="border-bottom" colSpan={5} />
                 </TableRow>
               )}
             </TableBody>

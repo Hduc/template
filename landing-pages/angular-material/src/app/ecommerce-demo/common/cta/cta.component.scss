@@ -1,0 +1,191 @@
+.cta-inner-area {
+    padding: 140px 50px;
+    border-radius: 15px;
+    background: linear-gradient(278deg, #757DFF 23.88%, #4936F5 94.06%);
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+        color: var(--whiteColor);
+    }
+    p {
+        color: var(--whiteColor);
+    }
+    .btn-box {
+        margin-top: 40px;
+
+        .ecommerce-default-btn {
+            &.mat-mdc-button {
+                border-color: var(--whiteColor);
+                background-color: var(--whiteColor);
+                color: var(--primaryColor) !important;
+                margin: {
+                    left: 7px;
+                    right: 7px;
+                };
+                &:hover {
+                    border-color: var(--blackColor);
+                    background-color: var(--blackColor);
+                    color: var(--whiteColor) !important;
+                }
+                &.with-border {
+                    background-color: transparent;
+                    border-color: var(--whiteColor);
+                    color: var(--whiteColor) !important;
+            
+                    &:hover {
+                        border-color: var(--blackColor);
+                        color: var(--whiteColor) !important;
+                        background-color: var(--blackColor);
+                    }
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .shape1 {
+        left: 6.5%;
+        bottom: 20%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape2 {
+        left: 14%;
+        bottom: 43%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape3 {
+        top: 20%;
+        right: 6.5%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape4 {
+        top: 43%;
+        right: 14%;
+        z-index: -1;
+        position: absolute;
+    }
+    &.component-rtl {
+        .btn-box {
+            .ecommerce-default-btn {
+                &:first-child {
+                    margin: {
+                        left: 7px;
+                        right: 0;
+                    };
+                }
+                &:last-child {
+                    margin: {
+                        right: 7px;
+                        left: 0;
+                    };
+                }
+            }
+        }
+        .shape1 {
+            left: auto;
+            right: 6.5%;
+        }
+        .shape2 {
+            left: auto;
+            right: 14%;
+        }
+        .shape3 {
+            right: auto;
+            left: 6.5%;
+        }
+        .shape4 {
+            right: auto;
+            left: 14%;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .cta-inner-area {
+        padding: 70px 20px;
+    
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            letter-spacing: normal;
+        }
+        .btn-box {
+            margin-top: -8px;
+
+            .ecommerce-default-btn {
+                margin-top: 15px;
+            }
+        }
+        .shape1, .shape2, .shape3, .shape4 {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .cta-inner-area {
+        padding: 90px 30px;
+    
+        h2 {
+            font-size: 32px;
+        }
+        .btn-box {
+            margin-top: 30px;
+        }
+        .shape1, .shape2, .shape3, .shape4 {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .cta-inner-area {
+        padding: 110px 40px;
+    
+        h2 {
+            font-size: 36px;
+        }
+        .btn-box {
+            margin-top: 35px;
+        }
+        .shape1 {
+            left: 4.5%;
+        }
+        .shape2 {
+            left: 12%;
+        }
+        .shape3 {
+            right: 4.5%;
+        }
+        .shape4 {
+            right: 12%;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

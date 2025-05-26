@@ -27,7 +27,7 @@ const CampaignDetails: React.FC = () => {
 
   return (
     <>
-      <h3 className="mb-[20px] md:mb-[25px] lg:mb-[35px] text-gray-900 dark:text-gray-400 text-lg">
+      <h3 className="!mb-[20px] md:!mb-[25px] lg:!mb-[35px] !text-gray-900 dark:!text-gray-400 !text-lg">
         Campaign Details
       </h3>
 

@@ -503,7 +503,7 @@ const Customers = () => {
                       {Array.from({ length: totalPages }, (_, index) => (
                         <Button
                           key={index}
-                          className="border text-body"
+                          className="border"
                           onClick={() => setCurrentPage(index + 1)}
                           sx={{
                             bgcolor:
@@ -513,7 +513,7 @@ const Customers = () => {
                             color:
                               currentPage === index + 1
                                 ? "white !important"
-                                : "inherit",
+                                : "text-body",
                             minWidth: "30px",
                             height: "30px",
                             "&:hover": {

@@ -44,7 +44,7 @@ const CoverPhoto: React.FC = () => {
                   />
                 </div>
                 <div className="ltr:md:ml-[30px] rtl:md:mr-[30px] mt-[12px] md:mt-0">
-                  <span className="block text-lg md:text-[20px] lg:text-xl text-black darl:text-wihte font-bold">
+                  <span className="block text-lg md:text-[20px] lg:text-xl text-black dark:text-white font-bold">
                     Alice Johnson
                   </span>
                   <span className="block xl:text-md font-medium mt-[2px] md:mt-0">

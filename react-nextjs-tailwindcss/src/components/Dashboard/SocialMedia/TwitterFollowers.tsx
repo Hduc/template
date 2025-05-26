@@ -10,7 +10,7 @@ const TwitterFollowers: React.FC = () => {
         <div className="trezo-card-content">
           <Image src="/images/icons/x.svg" alt="x" width={40} height={40} />
 
-          <h3 className="font-medium text-2xl md:text-3xl lg:text-4xl -tracking-[1px] mt-[16px] -mb-[2px]">
+          <h3 className="!font-medium !text-2xl md:!text-3xl lg:!text-4xl !-tracking-[1px] !mt-[16px] !-mb-[2px]">
             75.2k
           </h3>
 

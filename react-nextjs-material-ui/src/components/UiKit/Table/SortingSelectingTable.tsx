@@ -373,7 +373,7 @@ const SortingSelectingTable: React.FC = () => {
           Sorting Selecting Table
         </Typography>
 
-        <Box sx={{ width: "100%" }}>
+        <Box className="sorting-selecting-table" sx={{ width: "100%" }}>
           <Paper sx={{ width: "100%", mb: 2 }}>
             <EnhancedTableToolbar numSelected={selected.length} />
             <TableContainer>

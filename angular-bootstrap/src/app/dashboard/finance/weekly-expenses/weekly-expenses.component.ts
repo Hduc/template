@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WeeklyExpensesService } from './weekly-expenses.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-weekly-expenses',
@@ -10,6 +11,7 @@ import { WeeklyExpensesService } from './weekly-expenses.service';
 export class WeeklyExpensesComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private weeklyExpensesService: WeeklyExpensesService
     ) {}
 

@@ -41,28 +41,28 @@ const Footer: React.FC = () => {
                 <a
                   href="https://www.facebook.com/"
                   target="_blank"
-                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0"
+                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[8px] rtl:ml-[8px] ltr:last:mr-0 rtl:last:ml-0"
                 >
                   <i className="ri-facebook-fill"></i>
                 </a>
                 <a
                   href="https://x.com/?lang=en"
                   target="_blank"
-                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0"
+                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[8px] rtl:ml-[8px] ltr:last:mr-0 rtl:last:ml-0"
                 >
                   <i className="ri-twitter-x-fill"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/"
                   target="_blank"
-                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0"
+                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[8px] rtl:ml-[8px] ltr:last:mr-0 rtl:last:ml-0"
                 >
                   <i className="ri-linkedin-fill"></i>
                 </a>
                 <a
                   href="https://www.dribbble.com/"
                   target="_blank"
-                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0"
+                  className="inline-block leading-none text-[20px] text-primary-600 transition-all hover:text-primary-500 ltr:mr-[8px] rtl:ml-[8px] ltr:last:mr-0 rtl:last:ml-0"
                 >
                   <i className="ri-dribbble-fill"></i>
                 </a>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="ltr:xl:pl-[142px] rtl:xl:pr-[142px]">
-              <h3 className="leading-[1.2] text-[16px] md:text-[18px] mb-[18px] font-semibold">
+              <h3 className="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold">
                 Our Products
               </h3>
               <ul>
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
-              <h3 className="leading-[1.2] text-[16px] md:text-[18px] mb-[18px] font-semibold">
+              <h3 className="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold">
                 Quick Links
               </h3>
               <ul>
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="ltr:xl:pl-[80px] rtl:xl:pr-[80px]">
-              <h3 className="leading-[1.2] text-[16px] md:text-[18px] mb-[18px] font-semibold">
+              <h3 className="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold">
                 Privacy Policy
               </h3>
               <ul>

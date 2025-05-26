@@ -62,7 +62,7 @@ const PricingStyle3 = () => {
       <div className={styles.cardContent}>
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
           {pricingPlans.map((plan) => (
-            <Grid key={plan.id} item xs={12} sm={6} md={6} lg={4}>
+            <Grid key={plan.id} size={{ xs: 12, sm: 6, md: 6, lg: 4 }}>
               <div className={styles.singlePricingBox}>
                 <div className="text-center">
                   <div className={styles.title}>

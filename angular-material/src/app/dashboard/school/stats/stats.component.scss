@@ -73,6 +73,21 @@
             }
         }
     }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .item {
+                .info {
+                    .trezo-badge {
+                        background-color: #15203c;
+        
+                        &.down {
+                            background-color: #15203c;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

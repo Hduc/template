@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
 
 const toDoListData = [
   {
@@ -46,6 +44,46 @@ const toDoListData = [
     priority: "Low",
     status: "cancelled",
   },
+  {
+    id: "#849",
+    taskTitle: "Database Optimization",
+    assignedTo: "Liam Johnson",
+    dueDate: "05 Apr 2024",
+    priority: "Medium",
+    status: "inProgress",
+  },
+  {
+    id: "#848",
+    taskTitle: "Security Audit",
+    assignedTo: "Mason Williams",
+    dueDate: "01 Apr 2024",
+    priority: "High",
+    status: "pending",
+  },
+  {
+    id: "#847",
+    taskTitle: "UI/UX Design",
+    assignedTo: "Emma Brown",
+    dueDate: "28 Mar 2024",
+    priority: "Medium",
+    status: "finished",
+  },
+  {
+    id: "#846",
+    taskTitle: "API Integration",
+    assignedTo: "James Davis",
+    dueDate: "25 Mar 2024",
+    priority: "High",
+    status: "inProgress",
+  },
+  {
+    id: "#845",
+    taskTitle: "Performance Testing",
+    assignedTo: "Charlotte Wilson",
+    dueDate: "20 Mar 2024",
+    priority: "Low",
+    status: "pending",
+  },
 ];
 
 const ToDoList = () => {
@@ -54,6 +92,21 @@ const ToDoList = () => {
   const handleToggleShowModal = () => {
     setShowModal(!isShowModal);
   };
+
+  // Table
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
+
+  const filteredData = toDoListData.filter((item) =>
+    item.taskTitle.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const displayedData = filteredData.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   return (
     <>
@@ -64,7 +117,18 @@ const ToDoList = () => {
               <h3 className="mb-0">To Do List</h3>
 
               <div className="d-flex align-items-center gap-2">
-                <SearchForm />
+                <Form className="position-relative table-src-form me-0">
+                  <Form.Control
+                    type="text"
+                    placeholder="Search here"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+
+                  <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                    search
+                  </span>
+                </Form>
 
                 <div className="text-end">
                   <button
@@ -106,64 +170,119 @@ const ToDoList = () => {
                 </thead>
 
                 <tbody>
-                  {toDoListData &&
-                    toDoListData.slice(0, 5).map((value, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <Form>
-                            <Form.Check
-                              type="checkbox"
-                              id="default-checkbox"
-                              label={value.id}
-                              className="fw-medium fs-14"
-                            />
-                          </Form>
-                        </td>
+                  {displayedData.map((task, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <Form>
+                          <Form.Check
+                            type="checkbox"
+                            id="default-checkbox"
+                            label={task.id}
+                            className="fw-medium fs-14"
+                          />
+                        </Form>
+                      </td>
 
-                        <td className="text-body">{value.taskTitle}</td>
+                      <td className="text-body">{task.taskTitle}</td>
 
-                        <td>{value.assignedTo}</td>
+                      <td>{task.assignedTo}</td>
 
-                        <td className="text-body">{value.dueDate}</td>
+                      <td className="text-body">{task.dueDate}</td>
 
-                        <td className="text-body">{value.priority}</td>
+                      <td className="text-body">{task.priority}</td>
 
-                        <td>
-                          <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${value.status}`}
-                          >
-                            {value.status}
-                          </span>
-                        </td>
+                      <td>
+                        <span
+                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${task.status}`}
+                        >
+                          {task.status}
+                        </span>
+                      </td>
 
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
 
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
 
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing {displayedData.length} of {filteredData.length}{" "}
+                    Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button
+                          className={`page-link icon ${
+                            currentPage === 1 ? "disabled" : ""
+                          }`}
+                          onClick={() =>
+                            setCurrentPage((prev) => Math.max(prev - 1, 1))
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+
+                      {[...Array(totalPages)].map((_, i) => (
+                        <li key={i} className="page-item">
+                          <button
+                            className={`page-link ${
+                              currentPage === i + 1 ? "active" : ""
+                            }`}
+                            onClick={() => setCurrentPage(i + 1)}
+                          >
+                            {i + 1}
+                          </button>
+                        </li>
+                      ))}
+
+                      <li className="page-item">
+                        <button
+                          className={`page-link icon ${
+                            currentPage === totalPages ? "disabled" : ""
+                          }`}
+                          onClick={() =>
+                            setCurrentPage((prev) =>
+                              Math.min(prev + 1, totalPages)
+                            )
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

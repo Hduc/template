@@ -1,0 +1,303 @@
+.banner-area {
+    padding-top: 200px;
+    background: linear-gradient(180deg, #4936F5 0%, #FFFFFF 100%);
+
+    .shape1 {
+        left: 5%;
+        top: 28.6%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape2 {
+        left: 13%;
+        top: 18.4%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape3 {
+        right: 5%;
+        top: 21.4%;
+        z-index: -1;
+        position: absolute;
+    }
+    .shape4 {
+        right: 13%;
+        top: 33.8%;
+        z-index: -1;
+        position: absolute;
+    }
+    &.component-dark {
+        background: linear-gradient(180deg, #4936F5 0%, #000000 100%);
+    }
+    &.component-rtl {
+        .shape1 {
+            left: auto;
+            right: 5%;
+        }
+        .shape2 {
+            left: auto;
+            right: 13%;
+        }
+        .shape3 {
+            right: auto;
+            left: 5%;
+        }
+        .shape4 {
+            right: auto;
+            left: 13%;
+        }
+        .banner-content {
+            .content {
+                .btn-box {
+                    .ecommerce-default-btn {
+                        &:first-child {
+                            margin: {
+                                left: 7px;
+                                right: 0;
+                            };
+                        }
+                        &:last-child {
+                            margin: {
+                                right: 7px;
+                                left: 0;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.banner-content {
+    .content {
+        max-width: 850px;
+        
+        .sub-title {
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            border-radius: 100px;
+            color: var(--primaryColor);
+            background-color: #ecf0ff;
+
+            span {
+                padding-left: 23px;
+
+                i {
+                    left: 0;
+                    top: 50%;
+                    font-size: 18px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        h1 {
+            font-size: 72px;
+            margin-bottom: 15px;
+            letter-spacing: -1.5px;
+            color: var(--whiteColor);
+        }
+        p {
+            font-size: 16px;
+            color: var(--whiteColor);
+        }
+        .btn-box {
+            margin-top: 40px;
+
+            .ecommerce-default-btn {
+                margin: {
+                    left: 7px;
+                    right: 7px;
+                };
+                &.with-border {
+                    color: var(--whiteColor);
+                    border-color: var(--whiteColor);
+            
+                    &:hover {
+                        border-color: var(--primaryColor);
+                        color: var(--whiteColor) !important;
+                    }
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .image {
+        margin-top: 105px;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .banner-area {
+        padding-top: 120px;
+    
+        .shape1, .shape2, .shape3, .shape4 {
+            display: none;
+        }
+    }
+    .banner-content {
+        .content {
+            max-width: 100%;
+            
+            .sub-title {
+                padding: 4px 12px;
+                margin-bottom: 12px;
+    
+                span {
+                    padding-left: 23px;
+    
+                    i {
+                        left: 0;
+                        top: 50%;
+                        font-size: 18px;
+                        position: absolute;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            h1 {
+                font-size: 30px;
+                margin-bottom: 12px;
+                letter-spacing: -1px;
+            }
+            p {
+                font-size: 13px;
+            }
+            .btn-box {
+                margin-top: -8px;
+    
+                .ecommerce-default-btn {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .image {
+            margin-top: 25px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .banner-area {
+        padding-top: 150px;
+    
+        .shape1, .shape2, .shape3, .shape4 {
+            display: none;
+        }
+    }
+    .banner-content {
+        .content {
+            max-width: 100%;
+            
+            h1 {
+                font-size: 45px;
+                letter-spacing: -1px;
+            }
+            p {
+                font-size: 15px;
+            }
+            .btn-box {
+                margin-top: 30px;
+            }
+        }
+        .image {
+            margin-top: 50px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .banner-area {
+        padding-top: 190px;
+    }
+    .banner-content {
+        .content {
+            h1 {
+                font-size: 55px;
+            }
+            .btn-box {
+                margin-top: 35px;
+            }
+        }
+        .image {
+            margin-top: 80px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .banner-area {
+        padding-top: 190px;
+    }
+    .banner-content {
+        .content {
+            h1 {
+                font-size: 55px;
+            }
+            .btn-box {
+                margin-top: 35px;
+            }
+        }
+        .image {
+            margin-top: 80px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .banner-area {
+        .shape1 {
+            left: 16.5%;
+        }
+        .shape2 {
+            left: 22.2%;
+        }
+        .shape3 {
+            right: 16.6%;
+        }
+        .shape4 {
+            right: 22.9%;
+        }
+        &.component-rtl {
+            .shape1 {
+                left: auto;
+                right: 16.5%;
+            }
+            .shape2 {
+                left: auto;
+                right: 22.2%;
+            }
+            .shape3 {
+                right: auto;
+                left: 16.6%;
+            }
+            .shape4 {
+                right: auto;
+                left: 22.9%;
+            }
+        }
+    }
+
+}

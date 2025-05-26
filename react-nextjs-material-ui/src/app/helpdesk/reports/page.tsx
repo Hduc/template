@@ -1,5 +1,5 @@
-import * as React from "react"; 
-import NextLink from 'next/link'; 
+import * as React from "react";
+import NextLink from "next/link";
 import Grid from "@mui/material/Grid";
 import NewTicketsSolvedTickets from "@/components/HelpDesk/Reports/NewTicketsSolvedTickets";
 import TicketsStatus from "@/components/HelpDesk/Reports/TicketsStatus";
@@ -28,29 +28,29 @@ export default function Page() {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <NewTicketsSolvedTickets />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <TicketsStatus />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <SupportOverview />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <CustomerSatisfaction />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <ResponseTime />
         </Grid>
       </Grid>
-      
+
       <PerformanceOfAgents />
     </>
   );

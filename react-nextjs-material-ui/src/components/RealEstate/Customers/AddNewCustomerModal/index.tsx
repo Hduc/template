@@ -23,6 +23,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import FileUpload from "@/components/Forms/FileUpload";
 
 // Modal
 interface BootstrapDialogTitleProps {
@@ -95,9 +96,10 @@ const AddNewCustomerModal: React.FC = () => {
     setCountry(event.target.value as string);
   };
 
-  const [status, setStatus] = useState("");
-  const handleChangeStatus = (event: SelectChangeEvent) => {
-    setStatus(event.target.value as string);
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
   };
 
   return (
@@ -162,7 +164,7 @@ const AddNewCustomerModal: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -189,7 +191,7 @@ const AddNewCustomerModal: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -216,7 +218,7 @@ const AddNewCustomerModal: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -243,7 +245,7 @@ const AddNewCustomerModal: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -270,7 +272,7 @@ const AddNewCustomerModal: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -303,7 +305,7 @@ const AddNewCustomerModal: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -320,17 +322,17 @@ const AddNewCustomerModal: React.FC = () => {
                       <DatePicker
                         sx={{
                           width: "100%",
-
                           "& fieldset": {
-                            border: "1px solid #D5D9E2",
+                            border: "1px solid rgba(0, 0, 0, 0.23)",
                             borderRadius: "7px",
                           },
                         }}
+                        className="input-date-picker"
                       />
                     </LocalizationProvider>
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -357,7 +359,7 @@ const AddNewCustomerModal: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={6} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -388,7 +390,7 @@ const AddNewCustomerModal: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12} xl={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -401,38 +403,21 @@ const AddNewCustomerModal: React.FC = () => {
                       Add Customer Photo
                     </Typography>
 
-                    <TextField
-                      autoComplete="uploadFile"
-                      name="uploadFile"
-                      required
-                      fullWidth
-                      id="uploadFile"
-                      type="file"
-                      autoFocus
-                      inputProps={{
-                        multiple: true,
-                      }}
-                      sx={{
-                        "& fieldset": {
-                          border: "1px solid #D5D9E2",
-                          borderRadius: "7px",
-                        },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -440,6 +425,7 @@ const AddNewCustomerModal: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

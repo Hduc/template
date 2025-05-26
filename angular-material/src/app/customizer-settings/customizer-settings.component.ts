@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CustomizerSettingsService } from './customizer-settings.service';
 import { NgClass } from '@angular/common';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatButtonModule } from '@angular/material/button';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { CustomizerSettingsService } from './customizer-settings.service';
 
 @Component({
     selector: 'app-customizer-settings',
@@ -54,6 +54,11 @@ export class CustomizerSettingsComponent {
         this.themeService.toggleCardBorderedTheme();
     }
 
+    // Navbar
+    toggleNavbarTheme() {
+        this.themeService.toggleNavbarTheme();
+    }
+
     // Card Without Border Radius
     toggleCardWithoutBorderRadiusTheme() {
         this.themeService.toggleCardWithoutBorderRadiusTheme();
@@ -67,6 +72,11 @@ export class CustomizerSettingsComponent {
     // RTL Mode
     toggleRTLEnabledTheme() {
         this.themeService.toggleRTLEnabledTheme();
+    }
+
+    // Body Bg Color
+    toggleBodyBGTheme() {
+        this.themeService.toggleBodyBGTheme();
     }
 
     // Settings Button Toggle

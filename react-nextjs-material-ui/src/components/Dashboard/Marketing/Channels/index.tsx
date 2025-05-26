@@ -89,6 +89,7 @@ const Channels: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              gap: "10px",
               pb: "15px",
               mb: "14px",
             }}
@@ -123,7 +124,7 @@ const Channels: React.FC = () => {
               </Box>
             </Box>
 
-            <Box sx={{ width: "150px" }}>
+            <Box sx={{ width: { xs: "120px", sm: "150px" } }}>
               <Box
                 sx={{
                   display: "flex",

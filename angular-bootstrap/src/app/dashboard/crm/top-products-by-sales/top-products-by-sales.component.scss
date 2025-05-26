@@ -37,6 +37,17 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            ul {
+                li {
+                    .icon {
+                        background-color: #15203c !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

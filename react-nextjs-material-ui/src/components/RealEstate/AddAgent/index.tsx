@@ -11,8 +11,15 @@ import {
   Button,
 } from "@mui/material";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "@/components/Forms/FileUpload";
 
 const AddAgent: React.FC = () => {
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Box component="form">
@@ -30,7 +37,7 @@ const AddAgent: React.FC = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -70,7 +77,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -110,7 +117,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -149,8 +156,8 @@ const AddAgent: React.FC = () => {
                 </FormControl>
               </Box>
             </Grid>
- 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -190,7 +197,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -230,7 +237,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -270,7 +277,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -310,7 +317,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -350,7 +357,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -390,7 +397,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -429,8 +436,8 @@ const AddAgent: React.FC = () => {
                 </FormControl>
               </Box>
             </Grid>
- 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"
@@ -449,7 +456,7 @@ const AddAgent: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -462,24 +469,7 @@ const AddAgent: React.FC = () => {
                 Add Agent Photo
               </Typography>
 
-              <TextField
-                autoComplete="uploadFile"
-                name="uploadFile"
-                required
-                fullWidth
-                id="uploadFile"
-                type="file"
-                autoFocus
-                inputProps={{
-                  multiple: true,
-                }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
           </Grid>
         </Card>

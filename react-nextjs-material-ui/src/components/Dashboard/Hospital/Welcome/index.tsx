@@ -20,7 +20,7 @@ const Welcome: React.FC = () => {
         }}
       >
         <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-          <Grid item xs={12} sm={7}>
+          <Grid size={{ xs: 12, sm: 7 }}>
             <Box>
               <Typography
                 component="h3"
@@ -141,7 +141,7 @@ const Welcome: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={5}>
+          <Grid size={{ xs: 12, sm: 5 }}>
             <Box
               className="text-center"
               sx={{ position: "relative", zIndex: "5" }}

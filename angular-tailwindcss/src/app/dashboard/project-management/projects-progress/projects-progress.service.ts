@@ -23,7 +23,7 @@ export class ProjectsProgressService {
                 const options = {
                     series: series,
                     chart: {
-                        height: 325,
+                        height: 315,
                         type: "line",
                         zoom: {
                             enabled: false

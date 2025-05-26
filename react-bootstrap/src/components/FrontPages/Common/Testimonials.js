@@ -1,5 +1,7 @@
 "use client";
 
+import { Container } from "react-bootstrap";
+
 const Testimonials = () => {
   // Static testimonials data
   const testimonialsData = [
@@ -55,7 +57,7 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-area ptb-150" id="testimonials">
-      <div className="container">
+      <Container>
         <div className="section-title mw-630">
           <span className="top-title">
             <span>Testimonials</span>
@@ -104,7 +106,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const footerData = {
@@ -55,10 +56,10 @@ const Footer = () => {
   return (
     <>
       <div className="footers-area pb-125 position-relative z-2">
-        <div className="container">
-          <div className="row">
+        <Container>
+          <Row>
             {/* Logo and Description */}
-            <div className="col-lg-3 col-sm-6">
+            <Col sm={6} lg={3}>
               <div className="footer-single-item mb-4">
                 <Link to="/" className="footer-logo d-inline-block mb-4">
                   <img
@@ -94,11 +95,11 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Col>
 
             {/* Dynamic Sections */}
             {footerData.sections.map((section, index) => (
-              <div key={index} className="col-lg-3 col-sm-6">
+              <Col key={index} sm={6} lg={3}>
                 <div
                   className={`footer-single-item mb-4 ${
                     section.addClasses || ""
@@ -115,14 +116,14 @@ const Footer = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </Col>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
 
       <div className="copyright-area bg-white text-center py-4">
-        <div className="container">
+        <Container>
           <p className="fs-14">
             © <span className="text-primary-div">{footerData.brand}</span> is
             Proudly Owned by{" "}
@@ -135,7 +136,7 @@ const Footer = () => {
               {footerData.copyright.ownerName}
             </a>
           </p>
-        </div>
+        </Container>
       </div>
     </>
   );

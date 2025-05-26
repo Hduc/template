@@ -403,7 +403,7 @@ const ToDoList = () => {
                           alignItems: "center",
                         }}
                       >
-                        <Link href={row.viewLink}>
+                        <Link to={row.viewLink}>
                           <IconButton
                             aria-label="view"
                             color="primary"

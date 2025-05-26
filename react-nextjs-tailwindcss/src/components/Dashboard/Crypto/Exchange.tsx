@@ -60,7 +60,7 @@ const Exchange: React.FC = () => {
       <div className="trezo-card bg-purple-100 dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-200 dark:border-[#172036] pb-[8px] -mx-[20px] md:-mx-[25px] px-[20px] md:px-[25px]">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Exchange</h5>
+            <h5 className="!mb-0">Exchange</h5>
           </div>
           <div className="trezo-card-subtitle">
             <button

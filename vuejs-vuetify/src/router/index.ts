@@ -20,6 +20,16 @@ import SchoolPage from "../pages/Dashboard/SchoolPage.vue";
 import CallCenterPage from "../pages/Dashboard/CallCenterPage.vue";
 import POSSystemPage from "../pages/Dashboard/POSSystemPage.vue";
 import PodcastPage from "../pages/Dashboard/PodcastPage.vue";
+import SocialMediaPage from "../pages/Dashboard/SocialMediaPage.vue";
+import DoctorPage from "../pages/Dashboard/DoctorPage.vue";
+import BeautySalonPage from "../pages/Dashboard/BeautySalonPage.vue";
+import StoreAnalysisPage from "../pages/Dashboard/StoreAnalysisPage.vue";
+import RestaurantPage from "../pages/Dashboard/RestaurantPage.vue";
+import HotelPage from "../pages/Dashboard/HotelPage.vue";
+import RealEstateAgentPage from "../pages/Dashboard/RealEstateAgentPage.vue";
+import CreditCardPage from "../pages/Dashboard/CreditCardPage.vue";
+import CryptoTraderPage from "../pages/Dashboard/CryptoTraderPage.vue";
+import CryptoPerformancePage from "../pages/Dashboard/CryptoPerformancePage.vue";
 import HomePage from "../pages/HomePage.vue";
 import FeaturesPage from "../pages/FeaturesPage.vue";
 import OurTeamPage from "../pages/OurTeamPage.vue";
@@ -98,6 +108,22 @@ import AgentOverviewPage from "../pages/RealEstate/AgentOverviewPage.vue";
 import AddAgentPage from "../pages/RealEstate/AddAgentPage.vue";
 import WalletPage from "../pages/Finance/WalletPage.vue";
 import TransactionPage from "../pages/Finance/TransactionPage.vue";
+import PatientsListPage from "../pages/Doctor/PatientsListPage.vue";
+import AddPatientPage from "../pages/Doctor/AddPatientPage.vue";
+import PatientDetailsPage from "../pages/Doctor/PatientDetailsPage.vue";
+import AppointmentsPage from "../pages/Doctor/AppointmentsPage.vue";
+import PrescriptionsPage from "../pages/Doctor/PrescriptionsPage.vue";
+import WritePrescriptionPage from "../pages/Doctor/WritePrescriptionPage.vue";
+import MenuPage from "../pages/Restaurant/MenuPage.vue";
+import DishDetailsPage from "../pages/Restaurant/DishDetailsPage.vue";
+import RoomsListPage from "../pages/Hotel/RoomsListPage.vue";
+import RoomDetailsPage from "../pages/Hotel/RoomDetailsPage.vue";
+import GuestsListPage from "../pages/Hotel/GuestsListPage.vue";
+import PropertiesPage from "../pages/RealEstateAgent/PropertiesPage.vue";
+import PropertyDetailsPage from "../pages/RealEstateAgent/PropertyDetailsPage.vue";
+import TransactionsPage from "../pages/CryptoTrader/TransactionsPage.vue";
+import GainersLosersPage from "../pages/CryptoTrader/GainersLosersPage.vue";
+import CTWalletPage from "../pages/CryptoTrader/CTWalletPage.vue";
 import EventsPage from "../pages/Events/EventsPage.vue";
 import EventsListPage from "../pages/Events/EventsListPage.vue";
 import EventDetailsPage from "../pages/Events/EventDetailsPage.vue";
@@ -304,6 +330,56 @@ const routes: Array<RouteRecordRaw> = [
     path: "/dashboard/podcast",
     name: "PodcastPage",
     component: PodcastPage,
+  },
+  {
+    path: "/dashboard/social-media",
+    name: "SocialMediaPage",
+    component: SocialMediaPage,
+  },
+  {
+    path: "/dashboard/doctor",
+    name: "DoctorPage",
+    component: DoctorPage,
+  },
+  {
+    path: "/dashboard/beauty-salon",
+    name: "BeautySalonPage",
+    component: BeautySalonPage,
+  },
+  {
+    path: "/dashboard/store-analysis",
+    name: "StoreAnalysisPage",
+    component: StoreAnalysisPage,
+  },
+  {
+    path: "/dashboard/restaurant",
+    name: "RestaurantPage",
+    component: RestaurantPage,
+  },
+  {
+    path: "/dashboard/hotel",
+    name: "HotelPage",
+    component: HotelPage,
+  },
+  {
+    path: "/dashboard/real-estate-agent",
+    name: "RealEstateAgentPage",
+    component: RealEstateAgentPage,
+  },
+  {
+    path: "/dashboard/credit-card",
+    name: "CreditCardPage",
+    component: CreditCardPage,
+  },
+  {
+    path: "/dashboard/crypto-trader",
+    name: "CryptoTraderPage",
+    component: CryptoTraderPage,
+  },
+  {
+    path: "/dashboard/crypto-performance",
+    name: "CryptoPerformancePage",
+    component: CryptoPerformancePage,
   },
   {
     path: "/",
@@ -694,6 +770,86 @@ const routes: Array<RouteRecordRaw> = [
     path: "/finance/transaction",
     name: "TransactionPage",
     component: TransactionPage,
+  },
+  {
+    path: "/doctor/patients-list",
+    name: "PatientsListPage",
+    component: PatientsListPage,
+  },
+  {
+    path: "/doctor/add-patient",
+    name: "AddPatientPage",
+    component: AddPatientPage,
+  },
+  {
+    path: "/doctor/patient-details",
+    name: "PatientDetailsPage",
+    component: PatientDetailsPage,
+  },
+  {
+    path: "/doctor/appointments",
+    name: "AppointmentsPage",
+    component: AppointmentsPage,
+  },
+  {
+    path: "/doctor/prescriptions",
+    name: "PrescriptionsPage",
+    component: PrescriptionsPage,
+  },
+  {
+    path: "/doctor/write-prescription",
+    name: "WritePrescriptionPage",
+    component: WritePrescriptionPage,
+  },
+  {
+    path: "/restaurant/menus",
+    name: "MenuPage",
+    component: MenuPage,
+  },
+  {
+    path: "/restaurant/dish-details",
+    name: "DishDetailsPage",
+    component: DishDetailsPage,
+  },
+  {
+    path: "/hotel/rooms-list",
+    name: "RoomsListPage",
+    component: RoomsListPage,
+  },
+  {
+    path: "/hotel/room-details",
+    name: "RoomDetailsPage",
+    component: RoomDetailsPage,
+  },
+  {
+    path: "/hotel/guests-list",
+    name: "GuestsListPage",
+    component: GuestsListPage,
+  },
+  {
+    path: "/real-estate-agent/properties",
+    name: "PropertiesPage",
+    component: PropertiesPage,
+  },
+  {
+    path: "/real-estate-agent/property-details",
+    name: "PropertyDetailsPage",
+    component: PropertyDetailsPage,
+  },
+  {
+    path: "/crypto-trader/transactions",
+    name: "TransactionsPage",
+    component: TransactionsPage,
+  },
+  {
+    path: "/crypto-trader/gainers-losers",
+    name: "GainersLosersPage",
+    component: GainersLosersPage,
+  },
+  {
+    path: "/crypto-trader/wallet-crypto",
+    name: "CTWalletPage",
+    component: CTWalletPage,
   },
   {
     path: "/events/events-grid",

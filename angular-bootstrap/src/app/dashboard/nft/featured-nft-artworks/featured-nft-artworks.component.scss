@@ -1,4 +1,9 @@
 .featured-nft-artworks-card {
+    .trezo-card-header {
+        .trezo-card-title {
+            padding-top: 3px;
+        }
+    }
     .trezo-card-content {
         .nft-item {
             padding: 10px;
@@ -91,9 +96,46 @@
     }
     &.component-card-borderd {
         border-width: 0 !important;
+
+        .trezo-card-content {
+            .nft-item {
+                border: 1px solid var(--borderColor) !important;
+            }
+        }
     }
     &.component-card-with-box-shadow {
         box-shadow: unset !important;
+
+        .trezo-card-content {
+            .nft-item {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+            }
+        }
+    }
+    &.component-card-without-border-radius {
+        .trezo-card-content {
+            .nft-item {
+                border-radius: 0 !important;
+            }
+        }
+    }
+    &.component-body-bg-color {
+        border-width: 0 !important;
+        box-shadow: unset !important;
+
+        .trezo-card-content {
+            .nft-item {
+                box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05) !important;
+                border: 1px solid var(--borderColor) !important;
+            }
+        }
+        &.component-card-with-box-shadow {
+            .trezo-card-content {
+                .nft-item {
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+                }
+            }
+        }
     }
 }
 ::ng-deep {
@@ -102,7 +144,7 @@
             .owl-theme {
                 .owl-nav {
                     right: 0;
-                    top: -50px;
+                    top: -48px;
                     margin-top: 0;
                     position: absolute;
 
@@ -150,6 +192,13 @@
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
+    .featured-nft-artworks-card {
+        .trezo-card-header {
+            .trezo-card-title {
+                padding-top: 0;
+            }
+        }
+    }
     ::ng-deep {
         .featured-nft-artworks-card {
             .trezo-card-content {

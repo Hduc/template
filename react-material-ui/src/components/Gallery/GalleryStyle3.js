@@ -32,7 +32,7 @@ const GalleryStyle3 = () => {
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           spacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }}>
             <img
               src="/images/gallery/gallery1.jpg"
               className="border-radius"
@@ -42,7 +42,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }}>
             <img
               src="/images/gallery/gallery2.jpg"
               className="border-radius"
@@ -52,7 +52,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }}>
             <img
               src="/images/gallery/gallery3.jpg"
               className="border-radius"
@@ -62,7 +62,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 6 }}>
             <img
               src="/images/gallery/gallery4.jpg"
               className="border-radius"
@@ -72,7 +72,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={6}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 6 }}>
             <img
               src="/images/gallery/gallery5.jpg"
               className="border-radius"
@@ -82,7 +82,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <img
               src="/images/gallery/gallery6.jpg"
               className="border-radius"
@@ -92,7 +92,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <img
               src="/images/gallery/gallery7.jpg"
               className="border-radius"
@@ -102,7 +102,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <img
               src="/images/gallery/gallery8.jpg"
               className="border-radius"
@@ -112,7 +112,7 @@ const GalleryStyle3 = () => {
             />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}>
             <img
               src="/images/gallery/gallery9.jpg"
               className="border-radius"

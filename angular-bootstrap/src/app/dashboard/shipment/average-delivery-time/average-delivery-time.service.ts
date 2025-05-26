@@ -101,6 +101,9 @@ export class AverageDeliveryTimeService {
                             color: '#ECEEF2'
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     tooltip: {
                         y: {
                             formatter: function(val:any) {

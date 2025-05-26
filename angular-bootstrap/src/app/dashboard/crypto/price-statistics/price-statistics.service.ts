@@ -285,6 +285,9 @@ export class PriceStatisticsService {
                             }
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         type: "datetime",
                         axisTicks: {

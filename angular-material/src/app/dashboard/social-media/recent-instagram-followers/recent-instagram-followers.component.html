@@ -1,0 +1,144 @@
+<mat-card
+    class="recent-instagram-followers-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0 fw-semibold">
+                Recent Instagram Followers
+            </h5>
+            <p class="fw-normal">
+                Check out your latest followers
+            </p>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="dot-menu style-two p-0 d-inline-block border-radius-0">
+                <i class="ri-more-2-fill"></i>
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                    <li>
+                        <button mat-menu-item>
+                            This Day
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Week
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Month
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            This Year
+                        </button>
+                    </li>
+                </ul>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="p-0 m-0 list-unstyled">
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user69.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        Mason Lee
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user70.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        Mia Patel
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user71.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        James Nguyen
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user72.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        Benjamin Kim
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user73.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        Elijah Watson
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between">
+                <div class="user d-flex align-items-center">
+                    <img src="images/users/user74.jpg" class="rounded-circle" alt="user-image">
+                    <span class="d-block fw-medium text-black">
+                        Daniel Flores
+                    </span>
+                </div>
+                <div class="action d-flex align-items-center">
+                    <button type="button" mat-button class="follow-btn">
+                        Follow Back
+                    </button>
+                    <button type="button" mat-button class="message-btn p-0">
+                        <i class="ri-message-2-line"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

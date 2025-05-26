@@ -38,7 +38,7 @@ export class SalesOverviewComponent {
                     { name: "Sales", data: [20, 30, 40, 80, 20, 80] },
                     { name: "Sales", data: [30, 70, 80, 15, 45, 10] }
                 ],
-                categories: ["2019", "2020", "2021", "2022", "2023", "2024"]
+                categories: ["2020", "2021", "2022", "2023", "2024", "2025"]
             }
         };
     }

@@ -28,12 +28,13 @@ import {
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import AddIcon from "@mui/icons-material/Add"; 
+import AddIcon from "@mui/icons-material/Add";
 import { styled } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import CloseIcon from "@mui/icons-material/Close";
 import PropTypes from "prop-types";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import FileUpload from "@/components/Forms/FileUpload";
 
 // Modal
 interface BootstrapDialogTitleProps {
@@ -596,6 +597,15 @@ const Instructors: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter(
+    (row) =>
+      row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Modal
   const [openModal, setOpenModal] = useState(false);
   const handleClickOpenModal = () => {
@@ -626,6 +636,12 @@ const Instructors: React.FC = () => {
     setStatus(event.target.value as string);
   };
 
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Card
@@ -647,7 +663,7 @@ const Instructors: React.FC = () => {
         >
           <Box
             component="form"
-            className='t-search-form'
+            className="t-search-form"
             sx={{
               width: { sm: "265px" },
             }}
@@ -657,8 +673,10 @@ const Instructors: React.FC = () => {
             </label>
             <input
               type="text"
-              className='t-input'
+              className="t-input"
               placeholder="Search instructor here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -791,7 +809,7 @@ const Instructors: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -941,7 +959,7 @@ const Instructors: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={8} />
+                    <TableCell className="border-bottom" colSpan={8} />
                   </TableRow>
                 )}
               </TableBody>
@@ -1030,7 +1048,7 @@ const Instructors: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1057,7 +1075,7 @@ const Instructors: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1084,7 +1102,7 @@ const Instructors: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1111,7 +1129,7 @@ const Instructors: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1138,7 +1156,7 @@ const Instructors: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1175,7 +1193,7 @@ const Instructors: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1205,7 +1223,7 @@ const Instructors: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1218,21 +1236,10 @@ const Instructors: React.FC = () => {
                       Instructor Image
                     </Typography>
 
-                    <TextField
-                      autoComplete="image"
-                      name="image"
-                      required
-                      fullWidth
-                      id="image"
-                      type="file"
-                      autoFocus
-                      InputProps={{
-                        style: { borderRadius: 8 },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",

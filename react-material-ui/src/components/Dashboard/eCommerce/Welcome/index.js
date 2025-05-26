@@ -27,7 +27,7 @@ const Welcome = () => {
                   </i>
                 </div>
                 <div>
-                  <span className={styles.title}>86 New orders</span>
+                  <span className={styles.title}>86 New Orders</span>
                   <span style={{ display: "block" }}>Awaiting processing</span>
                 </div>
               </div>

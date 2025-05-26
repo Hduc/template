@@ -3,46 +3,82 @@
 import React, { useState, useEffect } from "react";
 
 const LeftSidebarDark = () => {
+  // Light/Dark Mode state
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     // Retrieve the user's preference from local storage
-    const storedPreference = localStorage.getItem("leftSidebarDarkTheme");
-    if (storedPreference === "LeftSidebarDark") {
+    const storedPreference = localStorage.getItem("left-sidebar-theme");
+    if (storedPreference === "left-sidebar-dark") {
       setIsDarkMode(true);
     }
   }, []);
 
   const handleToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   useEffect(() => {
     // Update the user's preference in local storage
-    localStorage.setItem("leftSidebarDarkTheme", isDarkMode ? "LeftSidebarDark" : "light");
+    localStorage.setItem(
+      "left-sidebar-theme",
+      isDarkMode ? "left-sidebar-dark" : "light"
+    );
 
-    // Update the class on the top navbar element to apply the selected mode
-    const leftSidebarElement = document.querySelector("html");
-    if (isDarkMode) {
-      leftSidebarElement.classList.add("left-sidebar-dark");
-    } else {
-      leftSidebarElement.classList.remove("left-sidebar-dark");
+    // Update the class on the <left-sidebar-dark> element to apply the selected mode
+    const sidebarElement = document.querySelector(".sidebar-area");
+    if (sidebarElement) {
+      if (isDarkMode) {
+        sidebarElement.classList.add("dark");
+      } else {
+        sidebarElement.classList.remove("dark");
+      }
     }
   }, [isDarkMode]);
 
   return (
-    <div className="mb-4 pb-2">
-      <h4 className="fs-15 fw-semibold border-bottom pb-2 mb-3">
-        Left Sidebar Dark/Light Mode
-      </h4>
+    <>
+      <span className="title">Sidebar</span>
 
       <button
-        className="boxed-style settings-btn" 
+        className={`switch-btn sidebar-btn bg-transparent border-none p-0 ${
+          isDarkMode ? "active" : ""
+        }`}
         onClick={handleToggle}
       >
-        Switch to {isDarkMode ? "Light Mode" : "Dark Mode"}
+        <div className="first">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Light</span>
+          </div>
+        </div>
+
+        <div className="second">
+          <div className="box">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="sub-title">
+            <div className="dot-checkbox"></div>
+            <span style={{ display: "block", fontWeight: "600" }}>Dark</span>
+          </div>
+        </div>
       </button>
-    </div>
+    </>
   );
 };
 

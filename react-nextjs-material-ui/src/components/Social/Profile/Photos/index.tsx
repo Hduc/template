@@ -29,7 +29,7 @@ const Photos: React.FC = () => {
         </Typography>
 
         <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1, lg: 1 }}>
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product6.jpg"
@@ -43,7 +43,7 @@ const Photos: React.FC = () => {
             </a>
           </Grid>
 
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product7.jpg"
@@ -57,7 +57,7 @@ const Photos: React.FC = () => {
             </a>
           </Grid>
 
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product8.jpg"
@@ -71,7 +71,7 @@ const Photos: React.FC = () => {
             </a>
           </Grid>
 
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product9.jpg"
@@ -85,7 +85,7 @@ const Photos: React.FC = () => {
             </a>
           </Grid>
 
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product10.jpg"
@@ -99,7 +99,7 @@ const Photos: React.FC = () => {
             </a>
           </Grid>
 
-          <Grid item xs={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 4, md: 4, lg: 4, xl: 4 }}>
             <a href="#" target="_blank">
               <Image
                 src="/images/products/product11.jpg"

@@ -25,11 +25,11 @@ const CustomersDetails = () => {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={8} lg={8} xl={9}>
+        <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 9 }}>
           <TransactionsHistory />
         </Grid>
 
-        <Grid item xs={12} md={4} lg={4} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 3 }}>
           <CustomerId />
         </Grid>
       </Grid>

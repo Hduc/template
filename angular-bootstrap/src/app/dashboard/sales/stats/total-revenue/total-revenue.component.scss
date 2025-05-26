@@ -104,6 +104,27 @@
             }
         }
     }
+    &.component-card-without-border-radius {
+        border-radius: 0 !important;
+    }
+    &.component-dark-theme {
+        .content {
+            .icon {
+                background-color: #15203c !important;
+            }
+        }
+        .info {
+            .info-badge {
+                border-color: #15203c;
+                background-color: #15203c;
+
+                &.down {
+                    border-color: #15203c;
+                    background-color: #15203c;
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

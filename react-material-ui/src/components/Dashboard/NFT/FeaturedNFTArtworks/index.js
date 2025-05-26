@@ -95,7 +95,8 @@ const FeaturedNFTArtworks = () => {
               600: { slidesPerView: 2 },
               992: { slidesPerView: 2 },
               1200: { slidesPerView: 1 },
-              1440: { slidesPerView: 3 },
+              1440: { slidesPerView: 2 },
+              1500: { slidesPerView: 3 },
             }}
             autoplay={{
               delay: 5000,

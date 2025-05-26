@@ -115,8 +115,8 @@ const EnhancedTransferList = () => {
         </Typography>
 
         <Grid container spacing={2} justifyContent="center" alignItems="center">
-          <Grid item>{customList(left)}</Grid>
-          <Grid item>
+          <Grid>{customList(left)}</Grid>
+          <Grid>
             <Grid container direction="column" alignItems="center">
               <Button
                 sx={{ my: 0.5 }}
@@ -160,7 +160,7 @@ const EnhancedTransferList = () => {
               </Button>
             </Grid>
           </Grid>
-          <Grid item>{customList(right)}</Grid>
+          <Grid>{customList(right)}</Grid>
         </Grid>
       </Card>
     </>

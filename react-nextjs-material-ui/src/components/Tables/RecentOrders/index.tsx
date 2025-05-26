@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -23,7 +23,7 @@ import {
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"; 
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 interface TablePaginationActionsProps {
   count: number;
@@ -227,6 +227,13 @@ const RecentOrders: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.customerName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -264,14 +271,16 @@ const RecentOrders: React.FC = () => {
               gap: "20px",
             }}
           >
-            <form className='t-search-form'>
+            <form className="t-search-form">
               <label>
                 <i className="material-symbols-outlined">search</i>
               </label>
               <input
                 type="text"
-                className='t-input'
+                className="t-input"
                 placeholder="Search here....."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </form>
 
@@ -369,7 +378,7 @@ const RecentOrders: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
@@ -458,7 +467,7 @@ const RecentOrders: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={5} />
+                  <TableCell className="border-bottom" colSpan={5} />
                 </TableRow>
               )}
             </TableBody>

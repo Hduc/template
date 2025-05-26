@@ -377,7 +377,7 @@ const MenusTable: React.FC = () => {
         </div>
 
         <div className="pt-[14px] sm:flex sm:items-center justify-between">
-          <p className="mb-0 text-xs">
+          <p className="!mb-0 !text-xs">
             Showing {indexOfFirstItem + 1} to{" "}
             {Math.min(indexOfLastItem, filteredItems.length)} of{" "}
             {filteredItems.length} results

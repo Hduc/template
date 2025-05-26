@@ -83,7 +83,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         id: '#854',
         ticketTitle: 'Network Infrastructure',
         assignedTo: 'Oliver Clark',
-        dueDate: '30 Apr 2024',
+        dueDate: '30 Apr 2025',
         priority: 'High',
         status: {
             finished: true,
@@ -101,7 +101,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         id: '#853',
         ticketTitle: 'Cloud Migration',
         assignedTo: 'Ethan Baker',
-        dueDate: '25 Apr 2024',
+        dueDate: '25 Apr 2025',
         priority: 'Low',
         status: {
             finished: false,
@@ -119,7 +119,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         id: '#852',
         ticketTitle: 'Website Revamp',
         assignedTo: 'Sophia Carter',
-        dueDate: '20 Apr 2024',
+        dueDate: '20 Apr 2025',
         priority: 'Medium',
         status: {
             finished: false,
@@ -137,7 +137,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         id: '#851',
         ticketTitle: 'Mobile Application',
         assignedTo: 'Ava Cooper',
-        dueDate: '15 Apr 2024',
+        dueDate: '15 Apr 2025',
         priority: 'High',
         status: {
             finished: true,
@@ -155,7 +155,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         id: '#850',
         ticketTitle: 'System Deployment',
         assignedTo: 'Isabella Evans',
-        dueDate: '10 Apr 2024',
+        dueDate: '10 Apr 2025',
         priority: 'Low',
         status: {
             finished: false,

@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Explore All
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -25,7 +25,7 @@
 <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
         <div class="trezo-card-title">
-            <h5 class="mb-0">
+            <h5 class="!mb-0">
                 Filter
             </h5>
         </div>
@@ -112,7 +112,7 @@
                         <div class="number-group flex items-center justify-between">
                             <input
                                 [(ngModel)]="rangeValues[0]"
-                                class="number-input md:text-md font-semibold text-gray-900 dark:text-gray-400 !outline-0"
+                                class="number-input md:text-md font-semibold text-gray-900 dark:text-gray-400 !outline-0 dark:bg-[#0c1427]"
                                 type="number"
                                 [min]="minValue"
                                 [max]="maxValue"
@@ -120,7 +120,7 @@
                             />
                             <input
                                 [(ngModel)]="rangeValues[1]"
-                                class="number-input md:text-md font-semibold text-gray-900 dark:text-gray-400 !outline-0"
+                                class="number-input md:text-md font-semibold text-gray-900 dark:text-gray-400 !outline-0 dark:bg-[#0c1427]"
                                 type="number"
                                 [min]="minValue"
                                 [max]="maxValue"
@@ -163,10 +163,10 @@
 <div class="trezo-card mb-[25px]">
     <div class="trezo-card-content">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-[25px]">
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured1.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -197,10 +197,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured2.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -231,10 +231,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured3.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -265,10 +265,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured4.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -299,10 +299,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured5.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -333,10 +333,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured6.gif" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -367,10 +367,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured7.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -401,10 +401,10 @@
                     </span>
                 </div>
             </div>
-            <div class="nft-card bg-white dark:bg-[#0c1427] p-[10px] rounded-md">
+            <div class="bg-white dark:bg-[#0c1427] p-[10px] rounded-md group">
                 <div class="relative">
                     <img src="images/nfts/featured8.jpg" class="rounded-md mb-[12px]" alt="nft-image">
-                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block" type="button">
+                    <button class="bid-btn absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-[15px] md:text-md rounded-[4px] bg-primary-500 text-white font-medium py-[7px] px-[20px] transition-all hover:bg-primary-400 inline-block opacity-0 invisible group-hover:visible group-hover:opacity-100" type="button">
                         Place Bid
                     </button>
                 </div>
@@ -443,7 +443,7 @@
 <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-content">
         <div class="sm:flex sm:items-center justify-between">
-            <p class="mb-0">
+            <p class="!mb-0">
                 Showing 8 of 36 results
             </p>
             <ol class="mt-[10px] sm:mt-0">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ExpenseBreakdownService } from './expense-breakdown.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-expense-breakdown',
@@ -10,6 +11,7 @@ import { ExpenseBreakdownService } from './expense-breakdown.service';
 export class ExpenseBreakdownComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private expenseBreakdownService: ExpenseBreakdownService
     ) {}
 

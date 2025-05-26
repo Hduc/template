@@ -293,60 +293,32 @@ const TopSellingProducts: React.FC = () => {
         >
           <Table sx={{ minWidth: 650 }} aria-label="Top Selling Products Table">
             <TableHead className="bg-f6f7f9">
-              <TableRow>
-                <TableCell
-                  sx={{
+              <TableRow
+                sx={{
+                  "& th": {
                     fontWeight: "500",
                     padding: "10px 20px",
                     fontSize: "14px",
-                  }}
-                  className="text-black border-bottom"
-                >
+                  },
+                }}
+              >
+                <TableCell className="text-black border-bottom">
                   Product
                 </TableCell>
 
-                <TableCell
-                  sx={{
-                    fontWeight: "500",
-                    padding: "10px 20px",
-                    fontSize: "14px",
-                  }}
-                  className="text-black border-bottom"
-                >
+                <TableCell className="text-black border-bottom">
                   Price
                 </TableCell>
 
-                <TableCell
-                  sx={{
-                    fontWeight: "500",
-                    padding: "10px 20px",
-                    fontSize: "14px",
-                  }}
-                  className="text-black border-bottom"
-                >
+                <TableCell className="text-black border-bottom">
                   Order
                 </TableCell>
 
-                <TableCell
-                  sx={{
-                    fontWeight: "500",
-                    padding: "10px 20px",
-                    fontSize: "14px",
-                  }}
-                  className="text-black border-bottom"
-                >
+                <TableCell className="text-black border-bottom">
                   Stock
                 </TableCell>
 
-                <TableCell
-                  align="center"
-                  sx={{
-                    fontWeight: "500",
-                    padding: "10px 20px",
-                    fontSize: "14px",
-                  }}
-                  className="text-black border-bottom"
-                >
+                <TableCell align="center" className="text-black border-bottom">
                   Amount
                 </TableCell>
               </TableRow>
@@ -360,14 +332,16 @@ const TopSellingProducts: React.FC = () => {
                   )
                 : rows
               ).map((row) => (
-                <TableRow key={row.name}>
-                  <TableCell
-                    sx={{
+                <TableRow
+                  key={row.name}
+                  sx={{
+                    "& td": {
                       padding: "14px 20px",
                       fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                    },
+                  }}
+                >
+                  <TableCell className="text-black border-bottom">
                     <Box
                       sx={{
                         display: "flex",
@@ -409,42 +383,20 @@ const TopSellingProducts: React.FC = () => {
                     </Box>
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     ${row.price}
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     {row.order}
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     {row.stock}
                   </TableCell>
 
                   <TableCell
                     align="center"
-                    sx={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                    }}
                     className="text-black border-bottom"
                   >
                     ${row.amount}
@@ -453,7 +405,7 @@ const TopSellingProducts: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={5} />
+                  <TableCell className="border-bottom" colSpan={5} />
                 </TableRow>
               )}
             </TableBody>

@@ -57,7 +57,7 @@ const CustomerSatisfactionRate: React.FC = () => {
         <div className="trezo-card-content">
           <span className="block">Customer Satisfaction Rate</span>
 
-          <h2 className="leading-none text-2xl md:text-3xl mt-[6px] md:mb-[12px]">
+          <h2 className="!leading-none !text-2xl md:!text-3xl !mt-[6px] md:!mb-[12px]">
             88.5%
           </h2>
 

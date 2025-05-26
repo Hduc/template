@@ -21,7 +21,7 @@ export class SupportOverviewService {
                 const options = {
                     series: series,
                     chart: {
-                        height: 382,
+                        height: 376,
                         type: "pie"
                     },
                     labels: [

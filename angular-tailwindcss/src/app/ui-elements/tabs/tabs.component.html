@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Tabs
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -26,24 +26,24 @@
     <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div class="trezo-card-title">
-                <h5 class="mb-0">
+                <h5 class="!mb-0">
                     Basic Tabs
                 </h5>
             </div>
         </div>
         <div class="trezo-card-content">
-            <ul class="navs mb-[20px] border-b border-gray-100 dark:border-[#172036]">
-                <li class="nav-item inline-block ltr:mr-[20px] rtl:ml-[20px]" [ngClass]="{'active': currentTab === 'tab1'}">
+            <ul class="navs-tabs mb-[20px] border-b border-gray-100 dark:border-[#172036]">
+                <li class="nav-item inline-block ltr:mr-[25px] rtl:ml-[25px]" [ngClass]="{'active': currentTab === 'tab1'}">
                     <button type="button" (click)="switchTab($event, 'tab1')" class="nav-link block pb-[8px] transition-all relative font-medium">
                         Tab 1
                     </button>
                 </li>
-                <li class="nav-item inline-block ltr:mr-[20px] rtl:ml-[20px]" [ngClass]="{'active': currentTab === 'tab2'}">
+                <li class="nav-item inline-block ltr:mr-[25px] rtl:ml-[25px]" [ngClass]="{'active': currentTab === 'tab2'}">
                     <button type="button" (click)="switchTab($event, 'tab2')" class="nav-link block pb-[8px] transition-all relative font-medium">
                         Tab 2
                     </button>
                 </li>
-                <li class="nav-item inline-block ltr:mr-[20px] rtl:ml-[20px]" [ngClass]="{'active': currentTab === 'tab3'}">
+                <li class="nav-item inline-block ltr:mr-[25px] rtl:ml-[25px]" [ngClass]="{'active': currentTab === 'tab3'}">
                     <button type="button" (click)="switchTab($event, 'tab3')" class="nav-link block pb-[8px] transition-all relative font-medium">
                         Tab 3
                     </button>
@@ -71,7 +71,7 @@
     <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
             <div class="trezo-card-title">
-                <h5 class="mb-0">
+                <h5 class="!mb-0">
                     Icon Tabs
                 </h5>
             </div>

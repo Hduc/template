@@ -50,7 +50,7 @@ const WorkingSchedule: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Working Schedule</h5>
+            <h5 className="!mb-0">Working Schedule</h5>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ const WorkingSchedule: React.FC = () => {
                 <SwiperSlide key={event.id}>
                   <div className="relative ltr:pl-[14px] rtl:pr-[14px]">
                     <div className="absolute ltr:left-0 rtl:right-0 top-[4px] w-[7px] h-[7px] rounded-sm bg-primary-500"></div>
-                    <h6 className="text-sm mb-[5px] font-semibold">
+                    <h6 className="!text-sm !mb-[5px] !font-semibold">
                       {event.title}
                     </h6>
                     <span className="text-xs">

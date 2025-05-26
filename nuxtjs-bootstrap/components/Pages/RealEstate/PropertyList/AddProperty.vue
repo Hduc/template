@@ -23,13 +23,13 @@
       </div>
     </div>
     <div class="col-sm-7 text-sm-end text-center mt-3 mt-sm-0">
-      <RouterLink
+      <NuxtLink
         to="/real-estate/add-property"
         class="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
       >
         <i class="ri-add-line d-none d-sm-inline-block"></i>
         <span>Add Property</span>
-      </RouterLink>
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -35,7 +35,7 @@ export class ActiveUsersComponent {
             },
             'Yearly': {
                 series: [230, 300, 450, 400, 380],
-                categories: ['2020', '2021', '2022', '2023', '2024']
+                categories: ['2021', '2022', '2023', '2024', '2025']
             }
         };
     }

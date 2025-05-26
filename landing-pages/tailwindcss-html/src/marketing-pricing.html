@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+
+        <!-- Sidebar Settings -->
+        <div class="sidebar-settings fixed top-1/2 -translate-y-1/2 ltr:right-0 rtl:left-0 bg-white dark:bg-[#0a0e19] ltr:rounded-l-[10px] rtl:rounded-r-[10px] border border-gray-100 dark:border-[#202c4b] ltr:border-r-0 rtl:border-l-0 shadow-md z-[9] p-[10px] md:p-[15px]">
+            <button type="button" class="light-dark-toggle leading-none transition-all text-black dark:text-white font-medium flex items-center gap-[10px]" id="light-dark-toggle">
+                Light/Dark:
+                <i class="material-symbols-outlined !text-[20px] md:!text-[22px] text-[#fe7a36]">
+                    light_mode
+                </i>
+            </button>
+            <button type="button" class="rtl-mode-toggle flex items-center text-black dark:text-white font-medium mt-[10px] gap-[10px]" id="rtl-mode-toggle">
+                LTR/RTL:
+                <span class="inline-block relative rounded-full w-[35px] h-[20px] bg-gray-50 dark:bg-[#0a0e19]">
+                    <span class="inline-block transition-all absolute h-[12px] w-[12px] bg-black dark:bg-white rounded-full top-1/2 -translate-y-1/2"></span>
+                </span>
+            </button>
+        </div>
+        <!-- End Sidebar Settings -->
+
+        <!-- Navbar -->
+        <div class="marketing-navbar fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px] md:py-[30px]" id="navbar">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="navbar relative bg-white dark:bg-[#0a0e19] rounded-[100px] py-[10px] md:py-[12px] lg:py-[8px] px-[15px] md:px-[20px] lg:px-[15px] transition-all">
+                    <div class="flex items-center flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                        <a href="marketing-index.html" class="inline-block w-[125px] ltr:mr-[15px] rtl:ml-[15px]">
+                            <img src="assets/images/marketing/logo.svg" alt="logo" class="inline-block dark:hidden">
+                            <img src="assets/images/marketing/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                        </a>
+                        <button type="button" class="inline-block relative leading-none lg:hidden" id="navbar-burger-menu">
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                            <span class="h-[3px] w-[30px] my-[5px] block bg-black dark:bg-white"></span>
+                        </button>
+                        <div class="hidden lg:flex items-center grow basis-full basis-auto"><!-- For Big Devices -->
+                            <ul class="flex mx-auto flex-row gap-[30px] xl:gap-[45px]">
+                                <li>
+                                    <a href="marketing-index.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Home
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="marketing-features.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Features
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="marketing-pricing.html" class="font-medium text-orange-600 dark:text-orange-600 transition-all hover:text-orange-600">
+                                        Pricing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="marketing-blog.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="flex items-center gap-[25px] xl:gap-[30px]">
+                                <a href="https://trezo-twcss.envytheme.com/sign-in.html" target="_blank" class="inline-block text-orange-600 transition-all hover:text-orange-700">
+                                    Login
+                                </a>
+                                <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="inline-block text-orange-600 py-[10.5px] px-[28px] rounded-[100px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500">
+                                    Get Started
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] p-[20px] md:p-[30px] w-full hidden lg:!hidden absolute top-[100%] left-0 right-0" id="navbar-collapse"><!-- For Responsive -->
+                            <ul>
+                                <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                    <a href="marketing-index.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                    <a href="marketing-features.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Features
+                                    </a>
+                                </li>
+                                <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                    <a href="marketing-pricing.html" class="font-medium text-orange-600 dark:text-orange-600 transition-all hover:text-orange-600">
+                                        Pricing
+                                    </a>
+                                </li>
+                                <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                    <a href="marketing-blog.html" class="font-medium text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                        Blog
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="flex items-center gap-[20px] mt-[15px]">
+                                <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="inline-block text-orange-600 py-[10.5px] px-[28px] rounded-[100px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500">
+                                    Get Started
+                                </a>
+                                <a href="https://trezo-twcss.envytheme.com/sign-in.html" target="_blank" class="inline-block text-orange-600 transition-all hover:text-orange-700">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
+        
+        <!-- Pricing -->
+        <div class="pt-[145px] md:pt-[175px] lg:pt-[190px] xl:pt-[175px] pb-[70px] md:pb-[90px] lg:pb-[110px] xl:pb-[140px] relative z-[1] overflow-hidden">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="text-center mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px] 2xl:mb-[70px]">
+                    <span class="inline-block py-[4.5px] px-[15px] rounded-[100px] bg-orange-100 dark:bg-[#0a0e19] text-orange-700 mb-[12px]">
+                        Pricing
+                    </span>
+                    <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl xl:max-w-[520px] mx-auto !leading-[1.2] !mb-[10px] lg:!mb-[12px]">
+                        Flexible Plans That Scale With You
+                    </h2>
+                    <p class="md:text-[15px] lg:text-md">
+                        Trezo has a plan that fits your needs — and grows with you.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[25px] items-center">
+                    <div class="order-1 lg:order-1">
+                        <div class="bg-white dark:bg-[#0a0e19] px-[20px] py-[25px] md:px-[35px] md:py-[45px] xl:px-[55px] xl:py-[65px] rounded-[25px]">
+                            <span class="block text-orange-600 font-medium text-md lg:text-lg mb-[10px] md:mb-[17px]">
+                                Free Trial
+                            </span>
+                            <div class="text-gray-700 dark:text-gray-100 font-medium text-4xl md:text-5xl mb-[15px] md:mb-[18px]">
+                                $0
+                                <span class="ltr:-ml-[8px] rtl:-mr-[8px] md:-tracking-[1px] text-base md:text-[15px] font-normal lg:text-md text-gray-500 dark:text-gray-400">
+                                    /monthly
+                                </span>
+                            </div>
+                            <p class="md:text-[15px] lg:text-md">
+                                Perfect for individuals or small teams getting started
+                            </p>
+                            <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="inline-block text-orange-600 py-[10.5px] px-[20px] rounded-[7px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500 md:text-[15px] lg:text-md md:mt-[5px] lg:mt-[10px]">
+                                <span class="inline-block relative ltr:pl-[28px] rtl:pr-[28px]">
+                                    <i class="material-symbols-outlined absolute top-1/2 ltr:-left-[2px] rtl:-right-[2px] -translate-y-1/2">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                            <ul class="mt-[20px] md:mt-[25px] lg:mt-[35px]">
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Access to core features
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    1 active project
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Up to 3 team members
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Email campaign builder
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Basic analytics
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    7-day activity history
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="order-3 lg:order-2">
+                        <div class="bg-white dark:bg-[#0a0e19] px-[20px] py-[25px] md:px-[35px] md:py-[45px] xl:px-[55px] xl:py-[80px] rounded-[25px]">
+                            <span class="block text-orange-600 font-medium text-md lg:text-lg mb-[10px] md:mb-[17px]">
+                                Pro
+                            </span>
+                            <div class="text-gray-700 dark:text-gray-100 font-medium text-4xl md:text-5xl mb-[15px] md:mb-[18px]">
+                                $39
+                                <span class="ltr:-ml-[8px] rtl:-mr-[8px] md:-tracking-[1px] text-base md:text-[15px] font-normal lg:text-md text-gray-500 dark:text-gray-400">
+                                    /monthly
+                                </span>
+                            </div>
+                            <p class="md:text-[15px] lg:text-md">
+                                Ideal for growing teams and agencies
+                            </p>
+                            <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="inline-block text-white py-[10.5px] px-[20px] rounded-[7px] transition-all font-medium border border-orange-600 bg-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500 md:text-[15px] lg:text-md md:mt-[5px] lg:mt-[10px]">
+                                <span class="inline-block relative ltr:pl-[28px] rtl:pr-[28px]">
+                                    <i class="material-symbols-outlined absolute top-1/2 ltr:-left-[2px] rtl:-right-[2px] -translate-y-1/2">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                            <ul class="mt-[20px] md:mt-[25px] lg:mt-[35px]">
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Everything in free trial
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Unlimited projects & campaigns
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Up to 15 team members
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Advanced analytics & reports
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Funnel tracking & segmentation
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Social & email integrations
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Priority email support
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="order-2 lg:order-3">
+                        <div class="bg-white dark:bg-[#0a0e19] px-[20px] py-[25px] md:px-[35px] md:py-[45px] xl:px-[55px] xl:py-[65px] rounded-[25px]">
+                            <span class="block text-orange-600 font-medium text-md lg:text-lg mb-[10px] md:mb-[17px]">
+                                Enterprise
+                            </span>
+                            <div class="text-gray-700 dark:text-gray-100 font-medium text-4xl md:text-5xl mb-[15px] md:mb-[18px]">
+                                $79
+                                <span class="ltr:-ml-[8px] rtl:-mr-[8px] md:-tracking-[1px] text-base md:text-[15px] font-normal lg:text-md text-gray-500 dark:text-gray-400">
+                                    /monthly
+                                </span>
+                            </div>
+                            <p class="md:text-[15px] lg:text-md">
+                                Built for large teams and custom needs
+                            </p>
+                            <a href="https://trezo-twcss.envytheme.com/" target="_blank" class="inline-block text-orange-600 py-[10.5px] px-[20px] rounded-[7px] transition-all font-medium border border-orange-600 hover:text-white hover:bg-orange-500 hover:border-orange-500 md:text-[15px] lg:text-md md:mt-[5px] lg:mt-[10px]">
+                                <span class="inline-block relative ltr:pl-[28px] rtl:pr-[28px]">
+                                    <i class="material-symbols-outlined absolute top-1/2 ltr:-left-[2px] rtl:-right-[2px] -translate-y-1/2">
+                                        person
+                                    </i>
+                                    Get Started
+                                </span>
+                            </a>
+                            <ul class="mt-[20px] md:mt-[25px] lg:mt-[35px]">
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Everything in pro
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Unlimited team members
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Dedicated account manager
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Custom integrations
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    Advanced security & audit logs
+                                </li>
+                                <li class="text-gray-700 dark:text-gray-100 md:text-[15px] lg:text-md relative ltr:pl-[32px] rtl:pr-[32px] mb-[12px] md:mb-[15px] last:mb-0">
+                                    <img src="assets/images/marketing/icons/check.svg" class="absolute top-1/2 ltr:left-0 rtl:right-0 -translate-y-1/2 dark:invert" alt="check">
+                                    24/7 priority support
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-no-repeat bg-top -z-[1] dark:hidden"
+                style="background: linear-gradient(180deg, #FFEFE1 0%, #FFF 100%);"
+            ></div>
+            <div class="absolute top-[70px] md:top-[84px] lg:top-[91px] left-0 right-0 -z-[1]">
+                <img src="assets/images/marketing/perspective-grid.png" class="inline-block" alt="perspective-grid">
+            </div>
+        </div>
+        <!-- End Pricing -->
+        
+        <!-- Dashboard Showcase -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[25px] items-center">
+                <div class="xl:max-w-[521px]">
+                    <img src="assets/images/marketing/dashboard.jpg" class="rounded-[25px]" alt="dashboard">
+                </div>
+                <div>
+                    <span class="inline-block py-[4.5px] px-[15px] rounded-[100px] bg-orange-100 dark:bg-[#0a0e19] text-orange-700 mb-[12px]">
+                        Dashboard Showcase
+                    </span>
+                    <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl xl:max-w-[545px] !leading-[1.2] !mb-[10px] lg:!mb-[17px]">
+                        Experience Trezo in Action — No Guesswork, Just Results
+                    </h2>
+                    <p>
+                        Get a firsthand look at how Trezo transforms your marketing workflow. From real-time performance tracking to campaign management and team collaboration — our interactive dashboard puts the power of data and strategy at your fingertips.
+                    </p>
+                    <div class="my-[20px] md:my-[30px] xl:my-[40px]">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[15px]">
+                            <div class="flex items-center md:text-md xl:text-lg font-medium text-gray-700 dark:text-gray-100 gap-[10px] md:gap-[12px]">
+                                <div class="rounded-full w-[23px] h-[23px] md:w-[29px] md:h-[29px] flex items-center justify-center bg-success-600 text-white">
+                                    <i class="ri-check-fill"></i>
+                                </div>
+                                Real-time analytics
+                            </div>
+                            <div class="flex items-center md:text-md xl:text-lg font-medium text-gray-700 dark:text-gray-100 gap-[10px] md:gap-[12px]">
+                                <div class="rounded-full w-[23px] h-[23px] md:w-[29px] md:h-[29px] flex items-center justify-center bg-success-600 text-white">
+                                    <i class="ri-check-fill"></i>
+                                </div>
+                                Customizable widgets
+                            </div>
+                            <div class="flex items-center md:text-md xl:text-lg font-medium text-gray-700 dark:text-gray-100 gap-[10px] md:gap-[12px]">
+                                <div class="rounded-full w-[23px] h-[23px] md:w-[29px] md:h-[29px] flex items-center justify-center bg-success-600 text-white">
+                                    <i class="ri-check-fill"></i>
+                                </div>
+                                Drag-and-drop simplicity
+                            </div>
+                            <div class="flex items-center md:text-md xl:text-lg font-medium text-gray-700 dark:text-gray-100 gap-[10px] md:gap-[12px]">
+                                <div class="rounded-full w-[23px] h-[23px] md:w-[29px] md:h-[29px] flex items-center justify-center bg-success-600 text-white">
+                                    <i class="ri-check-fill"></i>
+                                </div>
+                                No setup required
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-900 dark:text-gray-100 font-medium md:text-[15px] lg:text-md">
+                        Try the live demo and see why marketers love Trezo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Dashboard Showcase -->
+        
+        <!-- FAQ -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[150px] 2xl:py-[180px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="text-center mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px] 2xl:mb-[70px]">
+                    <span class="inline-block py-[4.5px] px-[15px] rounded-[100px] bg-orange-100 dark:bg-[#0a0e19] text-orange-700 mb-[12px]">
+                        Frequently Asked Questions
+                    </span>
+                    <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl xl:max-w-[520px] mx-auto !leading-[1.2] !mb-[10px] lg:!mb-[12px]">
+                        Everything You Need to Know About Trezo
+                    </h2>
+                    <p class="md:text-[15px] lg:text-md">
+                        Here are some of the most common things people ask us.
+                    </p>
+                </div>
+                <div class="toc-accordion mx-auto lg:max-w-[850px]" id="tablesOfContentAccordion">
+                    <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                        <button class="toc-accordion-button open text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                            Is there a free trial available?
+                            <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                        </button>
+                        <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px]" style="display: block;">
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                            </p>
+                        </div>
+                        <div
+                            class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                            style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                        <button class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                            Can I upgrade or downgrade my plan anytime?
+                            <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                        </button>
+                        <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                            </p>
+                        </div>
+                        <div
+                            class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                            style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                        <button class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                            Is Trezo suitable for large teams or enterprises?
+                            <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                        </button>
+                        <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                            </p>
+                        </div>
+                        <div
+                            class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                            style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                        <button class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                            Do you offer onboarding or training?
+                            <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                        </button>
+                        <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                            </p>
+                        </div>
+                        <div
+                            class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                            style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="toc-accordion-item bg-white dark:bg-[#0a0e19] border border-orange-100 dark:border-[#202c4b] rounded-[25px] text-gray-700 dark:text-gray-100 relative z-[1] mb-[15px] last:mb-0">
+                        <button class="toc-accordion-button text-[15px] md:text-md lg:text-lg py-[20px] md:py-[28px] px-[20px] md:px-[30px] block w-full ltr:text-left rtl:text-right font-semibold relative" type="button">
+                            What channels does Trezo support?
+                            <i class="ri-arrow-down-s-line absolute top-1/2 -translate-y-1/2 ltr:right-[20px] rtl:left-[20px] md:ltr:right-[30px] md:rtl:left-[30px] text-[20px] md:text-[25px]"></i>
+                        </button>
+                        <div class="toc-accordion-collapse -mt-[7px] md:-mt-[12px] px-[20px] md:px-[30px] pb-[20px] md:pb-[28px] hidden">
+                            <p class="text-gray-500 dark:text-gray-400">
+                                Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                            </p>
+                        </div>
+                        <div
+                            class="opacity-50 absolute top-0 left-0 right-0 bottom-0 -z-[1] rounded-[25px] dark:hidden"
+                            style="background: linear-gradient(180deg, #FFEFE1 0%, #FFFFFF 100%);"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End FAQ -->
+        
+        <!-- Footer -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+            <div class="h-px w-full bg-orange-100 dark:bg-gray-900 dark:hidden"></div>
+        </div>
+        <div class="relative z-[1] py-[70px] md:py-[90px] lg:py-[110px] xl:py-[140px] dark:bg-[#0a0e19]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
+                    <div class="ltr:xl:-mr-[35px] rtl:xl:-ml-[35px]">
+                        <a href="marketing-index.html" class="inline-block max-w-[132px] mb-[20px] md:mb-[23px]">
+                            <img src="assets/images/marketing/logo.svg" alt="logo" class="inline-block dark:hidden">
+                            <img src="assets/images/marketing/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                        </a>
+                        <p>
+                            Your all-in-one marketing command center — built to help you grow, scale, and win smarter.
+                        </p>
+                        <div class="mt-[20px] md:mt-[35px]">
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-orange-600 transition-all hover:text-orange-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-orange-600 transition-all hover:text-orange-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-orange-600 transition-all hover:text-orange-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-orange-600 transition-all hover:text-orange-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-dribbble-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Pricing Plans
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Use Cases
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Resources
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Help Center
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Documentation
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-orange-600">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[80px] rtl:xl:pr-[80px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Get in Touch
+                        </h3>
+                        <ul>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Email:
+                                <a href="mailto:support@trezo.com" class="text-orange-500 hover:text-orange-800 transition-all">
+                                    support@trezo.com
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Phone:
+                                <a href="tell:+1(555)123-4567" class="text-orange-500 hover:text-orange-800 transition-all">
+                                    +1 (555) 123-4567
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Location:
+                                <span class="font-semibold">
+                                    123 Learning Ave, Knowledge City, USA
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                style="background: linear-gradient(180deg, #FFF 0%, #FFEFE1 100%);"
+            ></div>
+        </div>
+        <div class="py-[25px] md:py-[30px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:gap-[25px]">
+                    <div class="text-center ltr:lg:text-left rtl:lg:text-right">
+                        <p>
+                            © <span class="text-purple-500">Trezo</span> is Proudly Owned by <a href="https://envytheme.com/" target="_blank" class="text-orange-500 transition-all hover:underline">EnvyTheme</a>
+                        </p>
+                    </div>
+                    <div class="text-center lg:flex items-center justify-end gap-[15px]">
+                        <a href="#" class="transition-all hover:text-orange-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Terms of Service
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-orange-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Privacy Policy
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-orange-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+        
+        <!-- Back To Top -->
+        <button id="backToTopBtn" class="fixed bottom-[20px] right-[20px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[40px] xl:right-[40px] z-[9] flex items-center justify-center w-[40px] h-[40px] bg-orange-500 hover:bg-orange-700 text-white rounded-full transition-all text-[20px]" type="button">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!-- End Back To Top -->
+         
+        <!-- Links Of JS File -->
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

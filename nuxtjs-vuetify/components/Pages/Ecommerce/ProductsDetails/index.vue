@@ -8,10 +8,8 @@
           <div class="product-details-image">
             <CCarousel
               id="gallery"
-              :items-to-show="1"
-              :wrap-around="false"
-              :transition="{ name: 'carousel-slide', mode: 'out-in' }"
-              v-model:current-slide="currentSlide"
+              v-bind="galleryConfig"
+              v-model="currentSlide"
               class="product-gallery__featured"
             >
               <CSlide v-for="(image, index) in productImages" :key="index">
@@ -19,22 +17,19 @@
                   :src="image.url"
                   :alt="'Product Image ' + (index + 1)"
                   class="border-radius"
+                  :aspect-ratio="4 / 3"
                 />
               </CSlide>
             </CCarousel>
             <CCarousel
               id="thumbnails"
-              :items-to-show="3"
-              :wrap-around="true"
-              :transition="{ name: 'carousel-thumb-slide', mode: 'out-in' }"
-              :gutter="25"
-              v-model:current-slide="currentSlide"
-              ref="carousel"
-              class="product-gallery__carousel"
+              v-bind="thumbnailsConfig"
+              v-model="currentSlide"
+              class="product-gallery__carousel mt-4"
             >
               <CSlide v-for="(image, index) in productImages" :key="index">
                 <div
-                  @click="slideTo(index)"
+                  @click="currentSlide = index"
                   class="border-radius cursor-pointer"
                 >
                   <v-img
@@ -138,7 +133,7 @@
               </div>
             </div>
             <div class="add-to-cart d-flex align-items-center">
-              <PagesEcommerceProductsDetailsQuantityCounter value="1" />
+              <PagesEcommerceProductsDetailsQuantityCounter :value="1" />
               <button type="button">
                 <i class="ri-shopping-cart-line"></i>
                 Add To Cart
@@ -255,10 +250,6 @@ export default defineComponent({
       colorActiveButton.value = "second";
     };
 
-    const slideTo = (index: number) => {
-      currentSlide.value = index;
-    };
-
     return {
       currentSlide,
       productImages,
@@ -274,7 +265,20 @@ export default defineComponent({
       colorActiveButton,
       setColorTextToFirst,
       setColorTextToSecond,
-      slideTo,
+      galleryConfig: {
+        itemsToShow: 1,
+        wrapAround: true,
+        slideEffect: "fade",
+        mouseDrag: false,
+        touchDrag: false,
+      },
+      thumbnailsConfig: {
+        itemsToShow: 3,
+        wrapAround: true,
+        touchDrag: true,
+        snapAlign: "center",
+        gap: 15,
+      },
     };
   },
 });
@@ -292,15 +296,6 @@ export default defineComponent({
       .carousel {
         &.product-gallery__featured {
           margin-bottom: 25px;
-        }
-        &.product-gallery__carousel {
-          .carousel__slide {
-            &.carousel__slide--visible {
-              &.carousel__slide--active {
-                margin: 0 15px;
-              }
-            }
-          }
         }
       }
     }

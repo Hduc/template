@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   Box,
@@ -368,6 +368,14 @@ const InvoiceTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.invoiceId.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    row.customerName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Select
   const [select, setSelect] = React.useState("");
   const handleChange = (event: SelectChangeEvent) => {
@@ -400,7 +408,9 @@ const InvoiceTable: React.FC = () => {
             <input
               type="text"
               className='t-input'
-              placeholder="Search here....."
+              placeholder="Search here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </form>
 
@@ -529,7 +539,7 @@ const InvoiceTable: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
@@ -691,7 +701,7 @@ const InvoiceTable: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={8} />
+                  <TableCell className="border-bottom" colSpan={8} />
                 </TableRow>
               )}
             </TableBody>

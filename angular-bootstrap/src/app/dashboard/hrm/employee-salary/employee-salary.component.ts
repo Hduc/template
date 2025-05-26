@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { EmployeeSalaryService } from './employee-salary.service';
 import { NgIf } from '@angular/common';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-employee-salary',
@@ -14,7 +15,8 @@ export class EmployeeSalaryComponent {
     selectedTimeframe: string = 'This Week'; // Default timeframe
 
     constructor(
-        private employeeSalaryService: EmployeeSalaryService
+        private employeeSalaryService: EmployeeSalaryService,
+        public themeService: CustomizerSettingsService
     ) {
         this.chartData = {
             'This Day': {

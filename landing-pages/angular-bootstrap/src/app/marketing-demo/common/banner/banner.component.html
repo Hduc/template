@@ -1,0 +1,74 @@
+<div
+    class="banner-area position-relative z-1 overflow-hidden"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="banner-content">
+                    <div class="sub-title d-inline-block">
+                        <span class="d-inline-block position-relative">
+                            <i class="ri-fire-fill"></i>
+                            Less chaos. More clarity. Better results.
+                        </span>
+                    </div>
+                    <h1 class="fw-medium">
+                        Unlock <span>rapid growth</span> with an all-in-one marketing hub
+                    </h1>
+                    <p>
+                        Trezo gives you the tools to plan, execute, and track campaigns — all in one smart dashboard.
+                    </p>
+                    <div class="btn-box">
+                        <a routerLink="/marketing-demo/pricing" class="marketing-default-btn">
+                            Start Your Free Trial
+                        </a>
+                        <button
+                            type="button"
+                            class="video-btn"
+                            (click)="openPopup()"
+                        >
+                            <span class="d-inline-block position-relative">
+                                <i class="ri-play-fill"></i>
+                                Watch Demo
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="banner-image position-relative text-center">
+                    <img src="images/marketing/woman-with-tab.png" alt="woman-with-tab">
+                    <img src="images/marketing/flying-laptop.png" alt="flying-laptop">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape">
+        <img src="images/marketing/perspective-grid.png" alt="perspective-grid">
+    </div>
+</div>
+
+<!-- Vide Popup -->
+<div
+    class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready"
+    *ngIf="isOpen"
+    tabindex="-1"
+>
+    <div class="mfp-container mfp-iframe-holder">
+        <div class="mfp-content">
+            <div class="mfp-iframe-scaler">
+                <button
+                    (click)="closePopup()"
+                    title="Close (Esc)"
+                    type="button"
+                    class="mfp-close"
+                >
+                    ×
+                </button>
+                <iframe src="https://www.youtube.com/embed/_ZppXdKk4c8" title="Introducing Trezo | The Next-Generation Multi-Framework Admin Dashboard Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mfp-bg mfp-fade mfp-ready" *ngIf="isOpen"></div>

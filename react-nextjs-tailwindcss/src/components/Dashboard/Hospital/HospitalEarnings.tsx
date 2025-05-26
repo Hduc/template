@@ -120,7 +120,7 @@ const HospitalEarnings: React.FC = () => {
       <div className="trezo-card bg-orange-50 dark:bg-[#16223e] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Hospital Earnings</h5>
+            <h5 className="!mb-0">Hospital Earnings</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -173,7 +173,7 @@ const HospitalEarnings: React.FC = () => {
               <div className="md:ltr:pl-[15px] md:rtl:pr-[15px] mt-[20px] md:mt-[25px] lg:mt-0">
                 <div className="sm:grid sm:grid-cols-2 gap-[15px] md:gap-[25px]">
                   <div className="bg-white dark:bg-[#0c1427] rounded-md py-[17.5px] px-[20px] md:px-[25px] mb-[15px] md:mb-[25px]">
-                    <h3 className="text-xl font-medium mb-[5px]">$120,000</h3>
+                    <h3 className="!text-xl !font-medium !mb-[5px]">$120,000</h3>
                     <div className="flex items-center">
                       <span className="block">Total Profit</span>
                       <span className="relative font-medium inline-block ltr:ml-[8px] rtl:mr-[8px] text-xs ltr:pl-[15px] rtl:pr-[15px] text-danger-500">
@@ -184,7 +184,7 @@ const HospitalEarnings: React.FC = () => {
                   </div>
 
                   <div className="bg-white dark:bg-[#0c1427] rounded-md py-[17.5px] px-[20px] md:px-[25px] mb-[15px] md:mb-[25px]">
-                    <h3 className="text-xl font-medium mb-[5px]">$80,000</h3>
+                    <h3 className="!text-xl !font-medium !mb-[5px]">$80,000</h3>
                     <div className="flex items-center">
                       <span className="block">Total Costs</span>
                       <span className="relative font-medium inline-block ltr:ml-[8px] rtl:mr-[8px] text-xs ltr:pl-[15px] rtl:pr-[15px] text-success-600">
@@ -196,7 +196,7 @@ const HospitalEarnings: React.FC = () => {
                 </div>
 
                 <div className="bg-white dark:bg-[#0c1427] rounded-md relative p-[20px] md:p-[25px] mb-[15px]">
-                  <h3 className="font-medium text-xl mb-[5px]">
+                  <h3 className="!font-medium !text-xl !mb-[5px]">
                     $900,000
                     <span className="relative inline-block -top-[4px] text-xs ltr:pl-[15px] rtl:pr-[15px] text-success-600">
                       <i className="ri-arrow-up-fill absolute text-base top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0"></i>

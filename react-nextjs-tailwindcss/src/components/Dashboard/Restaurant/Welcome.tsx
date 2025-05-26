@@ -14,7 +14,7 @@ const Welcome: React.FC = () => {
                 Hello Olivia!
               </span>
 
-              <h1 className="-tracking-[0.5px] leading-[1.2] mb-0 text-xl md:text-2xl 2xl:text-3xl text-white">
+              <h1 className="!-tracking-[0.5px] !leading-[1.2] !mb-0 !text-xl md:!text-2xl 2xl:!text-3xl !text-white">
                 Here Your Restaurant Stats Today.
               </h1>
 
@@ -24,7 +24,7 @@ const Welcome: React.FC = () => {
                     order_approve
                   </i>
                   <span className="block text-white">Total Orders</span>
-                  <h6 className="mb-0 text-md text-white mt-[2px]">12051+</h6>
+                  <h6 className="!mb-0 !text-md !text-white !mt-[2px]">12051+</h6>
                 </div>
 
                 <div className="relative ltr:pl-[33px] rtl:pr-[33px]">
@@ -32,7 +32,7 @@ const Welcome: React.FC = () => {
                     group
                   </i>
                   <span className="block text-white">Total Users</span>
-                  <h6 className="mb-0 text-md text-white mt-[2px]">153k+</h6>
+                  <h6 className="!mb-0 !text-md !text-white !mt-[2px]">153k+</h6>
                 </div>
               </div>
             </div>

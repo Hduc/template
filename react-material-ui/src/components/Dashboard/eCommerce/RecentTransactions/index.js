@@ -24,6 +24,43 @@ const RecentTransactions = () => {
     setAnchorEl(null);
   };
 
+  const getTransactionColors = (type, amount) => {
+    const isPositive = amount.startsWith("+");
+
+    switch (type) {
+      case "credit_card":
+        return {
+          bgColor: isPositive ? "primary.100" : "error.100",
+          textColor: isPositive ? "text-primary" : "text-danger",
+          amountColor: isPositive ? "success.main" : "error.main", // Added specific amount color
+        };
+      case "paypal":
+        return {
+          bgColor: "error.100",
+          textColor: "text-danger",
+          amountColor: "error.main",
+        };
+      case "wise":
+        return {
+          bgColor: "purple.100",
+          textColor: "text-purple",
+          amountColor: "purple.main",
+        };
+      case "payoneer":
+        return {
+          bgColor: "secondary.100",
+          textColor: "text-secondary",
+          amountColor: "secondary.main",
+        };
+      default:
+        return {
+          bgColor: isPositive ? "success.100" : "error.100",
+          textColor: isPositive ? "text-success" : "text-danger",
+          amountColor: isPositive ? "success.main" : "error.main",
+        };
+    }
+  };
+
   // Dynamic transactions data (you can replace this with data fetched from an API)
   const transactions = [
     {
@@ -33,8 +70,6 @@ const RecentTransactions = () => {
       date: "16 Jun 2024 - 7:12 pm",
       amount: "+1,520",
       icon: "credit_card",
-      bgColor: "primary.100",
-      textColor: "text-primary",
     },
     {
       id: 2,
@@ -43,8 +78,6 @@ const RecentTransactions = () => {
       date: "15 Jun 2024 - 1:42 am",
       amount: "-2,250",
       icon: "redeem",
-      bgColor: "error.100",
-      textColor: "text-danger",
     },
     {
       id: 3,
@@ -53,8 +86,6 @@ const RecentTransactions = () => {
       date: "14 Jun 2024 - 4:21 pm",
       amount: "+3,560",
       icon: "account_balance",
-      bgColor: "purple",
-      textColor: "text-purple",
     },
     {
       id: 4,
@@ -63,8 +94,6 @@ const RecentTransactions = () => {
       date: "13 Jun 2024 - 2:42 am",
       amount: "+6,500",
       icon: "currency_ruble",
-      bgColor: "secondary.100",
-      textColor: "text-secondary",
     },
     {
       id: 5,
@@ -73,8 +102,6 @@ const RecentTransactions = () => {
       date: "12 Jun 2024 - 3:20 pm",
       amount: "-4,320",
       icon: "credit_score",
-      bgColor: "success.100",
-      textColor: "text-success",
     },
   ];
 
@@ -151,65 +178,76 @@ const RecentTransactions = () => {
         </Box>
 
         <Box>
-          {/* Map through dynamic transactions */}
-          {transactions.map((transaction) => (
-            <Box
-              key={transaction.id}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginTop: "20px",
-              }}
-            >
+          {transactions.map((transaction) => {
+            const colors = getTransactionColors(
+              transaction.type,
+              transaction.amount
+            );
+
+            return (
               <Box
+                key={transaction.id}
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "12px",
+                  justifyContent: "space-between",
+                  marginTop: "20px",
                 }}
               >
                 <Box
-                  className={transaction.textColor}
                   sx={{
-                    bgcolor: transaction.bgColor,
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "100px",
-                    width: "41px",
-                    height: "41px",
+                    gap: "12px",
                   }}
                 >
-                  <i className="material-symbols-outlined">{transaction.icon}</i>
-                </Box>
-
-                <Box>
-                  <Typography
-                    className="text-black"
-                    component="div"
+                  <Box
+                    className={colors.textColor}
                     sx={{
-                      fontWeight: "500",
-                      fontSize: "16px",
+                      bgcolor: colors.bgColor,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: "100px",
+                      width: "41px",
+                      height: "41px",
                     }}
                   >
-                    {transaction.name}
-                  </Typography>
+                    <i className="material-symbols-outlined">
+                      {transaction.icon}
+                    </i>
+                  </Box>
 
-                  <Typography
-                    component="span"
-                    sx={{ fontSize: "13px", display: "block" }}
-                  >
-                    {transaction.date}
-                  </Typography>
+                  <Box>
+                    <Typography
+                      className="text-black"
+                      component="div"
+                      sx={{
+                        fontWeight: "500",
+                        fontSize: "16px",
+                      }}
+                    >
+                      {transaction.name}
+                    </Typography>
+
+                    <Typography
+                      component="span"
+                      sx={{ fontSize: "13px", display: "block" }}
+                    >
+                      {transaction.date}
+                    </Typography>
+                  </Box>
                 </Box>
-              </Box>
 
-              <Typography component="span" className={transaction.textColor}>
-                {transaction.amount}
-              </Typography>
-            </Box>
-          ))}
+                <Typography
+                  component="span"
+                  sx={{ color: colors.amountColor, fontWeight: 500 }}
+                >
+                  {transaction.amount}
+                </Typography>
+              </Box>
+            );
+          })}
         </Box>
       </Card>
     </>

@@ -9,7 +9,7 @@ const Content: React.FC = () => {
     <>
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
-          <h3 className="text-md md:text-lg mb-[12px]">About Harold Cook</h3>
+          <h3 className="!text-md md:!text-lg !mb-[12px]">About Harold Cook</h3>
           <p>
             With over a decade of experience in the real estate market, Harold
             Cook has built a reputation for his in-depth knowledge of
@@ -27,7 +27,7 @@ const Content: React.FC = () => {
 
           <PropertyStatus />
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Specialization
           </h3>
 
@@ -52,7 +52,7 @@ const Content: React.FC = () => {
             </li>
           </ul>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Recent Achievements
           </h3>
           <ul>

@@ -26,7 +26,7 @@ const UsersByCountry: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Users by Country</h5>
+            <h5 className="!mb-0">Users by Country</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -85,7 +85,7 @@ const UsersByCountry: React.FC = () => {
                 <span className="block font-medium text-xs mb-[4px]">
                   United States
                 </span>
-                <h6 className="mb-0 text-md font-semibold">
+                <h6 className="!mb-0 !text-md !font-semibold">
                   12,800{" "}
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     35.6%
@@ -105,7 +105,7 @@ const UsersByCountry: React.FC = () => {
                 <span className="block font-medium text-xs mb-[4px]">
                   United Kingdom
                 </span>
-                <h6 className="mb-0 text-md font-semibold">
+                <h6 className="!mb-0 !text-md !font-semibold">
                   6,750{" "}
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     18.7%
@@ -125,7 +125,7 @@ const UsersByCountry: React.FC = () => {
                 <span className="block font-medium text-xs mb-[4px]">
                   Canada
                 </span>
-                <h6 className="mb-0 text-md font-semibold">
+                <h6 className="!mb-0 !text-md !font-semibold">
                   2,500{" "}
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     6.3%
@@ -145,7 +145,7 @@ const UsersByCountry: React.FC = () => {
                 <span className="block font-medium text-xs mb-[4px]">
                   Australia
                 </span>
-                <h6 className="mb-0 text-md font-semibold">
+                <h6 className="!mb-0 !text-md !font-semibold">
                   2,200{" "}
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     5.4%

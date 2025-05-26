@@ -142,8 +142,8 @@
                         &:not(.mat-calendar-body-selected) {
                             &:not(.mat-calendar-body-comparison-identical) {
                                 color: var(--whiteColor);
-                                border-color: var(--secondaryColor);
-                                background-color: var(--secondaryColor);
+                                border-color: var(--primaryColor);
+                                background-color: var(--primaryColor);
                             }
                         }
                     }
@@ -217,21 +217,13 @@
                     .mat-calendar-header {
                         .mat-calendar-controls {
                             .mat-calendar-next-button {
-                                &::after {
-                                    transform: translateX(2px) rotate(-45deg);
-                                    border: {
-                                        left-width: 2px;
-                                        right-width: 0;
-                                    };
+                                svg {
+                                    transform: scaleX(-1);
                                 }
                             }
                             .mat-calendar-previous-button {
-                                &::after {
-                                    transform: translateX(-2px) rotate(45deg);
-                                    border: {
-                                        left-width: 0;
-                                        right-width: 2px;
-                                    };
+                                svg {
+                                    transform: scaleX(-1);
                                 }
                             }
                         }

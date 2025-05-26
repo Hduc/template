@@ -25,19 +25,19 @@ export class OrderSummaryComponent {
         this.chartData = {
             'This Day': {
                 series: [40, 30, 30],
-                labels: ['Completed', 'New Order', 'Pending']
+                labels: ['Completed', 'New', 'Pending']
             },
             'This Week': {
                 series: [60, 25, 15],
-                labels: ['Completed', 'New Order', 'Pending']
+                labels: ['Completed', 'New', 'Pending']
             },
             'This Month': {
                 series: [50, 40, 10],
-                labels: ['Completed', 'New Order', 'Pending']
+                labels: ['Completed', 'New', 'Pending']
             },
             'This Year': {
                 series: [60, 30, 10],
-                labels: ['Completed', 'New Order', 'Pending']
+                labels: ['Completed', 'New', 'Pending']
             }
         };
     }

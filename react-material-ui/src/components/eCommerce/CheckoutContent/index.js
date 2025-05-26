@@ -37,7 +37,7 @@ const CheckoutContent = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 8 }}>
           <Card
             sx={{
               boxShadow: "none",
@@ -70,7 +70,7 @@ const CheckoutContent = () => {
                 spacing={3}
                 columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
               >
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -104,13 +104,17 @@ const CheckoutContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -144,13 +148,17 @@ const CheckoutContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -184,13 +192,17 @@ const CheckoutContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -230,7 +242,7 @@ const CheckoutContent = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -270,7 +282,7 @@ const CheckoutContent = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -304,13 +316,17 @@ const CheckoutContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -344,13 +360,17 @@ const CheckoutContent = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -395,7 +415,7 @@ const CheckoutContent = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -436,7 +456,7 @@ const CheckoutContent = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 4 }}>
           <ShoppingCart />
 
           <PaymentMethod />

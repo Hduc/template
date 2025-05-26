@@ -201,7 +201,7 @@ const Sidebar: React.FC = () => {
           </ul>
 
           <div className="border-t border-gray-100 dark:border-[#172036] -mx-[20px] md:-mx-[25px] px-[20px] md:px-[25px] pt-[20px] md:pt-[25px]">
-            <h6 className="mb-[11px] text-[15px]">Storage Status</h6>
+            <h6 className="!mb-[11px] !text-[15px]">Storage Status</h6>
 
             <span className="block text-sm ">% 50 GB used of 100 GB</span>
 

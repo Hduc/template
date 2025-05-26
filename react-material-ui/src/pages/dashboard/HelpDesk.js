@@ -18,37 +18,37 @@ const HelpDesk = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}>
           <Congratulations />
 
           <Grid container columnSpacing={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <TicketsResolved />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <TicketsInProgress />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <TicketsDue />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <TicketsNewOpen />
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 8 }}>
           <TicketsStatus />
 
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <CustomerSatisfaction />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={12} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 12, xl: 6 }}>
               <ResponseTime />
             </Grid>
           </Grid>
@@ -58,21 +58,21 @@ const HelpDesk = () => {
       <PerformanceOfAgents />
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <NewTicketsSolvedTickets />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <RecentCustomerRatings />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <ToDoList />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <SupportOverview />
         </Grid>
       </Grid>

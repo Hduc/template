@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Card, Form, Table, Button, Offcanvas } from "react-bootstrap";
+import { Card, Form, Table, Button } from "react-bootstrap";
 import SearchForm from "./SearchForm";
 import Pagination from "./Pagination";
 import Image from "next/image";

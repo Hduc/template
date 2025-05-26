@@ -1,0 +1,66 @@
+::ng-deep {
+    .my-recent-patients-card {
+        .mat-mdc-card-content {
+            .mat-mdc-table {
+                &.mdc-data-table__table {
+                    .mat-mdc-header-row {
+                        .mat-mdc-header-cell {
+                            padding-bottom: 9px;
+                        }
+                    }
+                    .mdc-data-table__content {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 9px;
+                                    bottom: 9px;
+                                };
+                                .employee-info {
+                                    gap: 10px;
+
+                                    .img {
+                                        width: 40px;
+                                    }
+                                    span {
+                                        &:nth-child(1) {
+                                            font-size: var(--fontSize);
+                                        }
+                                    }
+                                }
+                                .trezo-badge {
+                                    border-radius: 30px;
+                                    padding: 1px 10px;
+                                }
+                                .dot-menu {
+                                    font-size: 18px;
+                                    color: var(--bodyColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-paginator {
+                padding-top: 9px;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

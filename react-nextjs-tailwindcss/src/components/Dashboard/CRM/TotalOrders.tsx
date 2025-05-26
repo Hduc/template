@@ -100,7 +100,7 @@ const TotalOrders: React.FC = () => {
         <div className="trezo-card-content relative">
           <span className="block">Total Orders</span>
 
-          <h5 className="mb-0 mt-[3px] text-[20px]">$72,458</h5>
+          <h5 className="!mb-0 !mt-[3px] !text-[20px]">$72,458</h5>
 
           <div className="absolute -top-[40px] ltr:-right-[9px] rtl:-left-[9px] max-w-[120px]">
             {isChartLoaded && (
@@ -115,7 +115,7 @@ const TotalOrders: React.FC = () => {
           </div>
 
           <div className="mt-[25px] md:mt-[34px] flex items-center justify-between">
-            <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 rounded-xl">
+            <span className="inline-block text-sm text-success-700 py-[1px] px-[8.3px] border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-xl">
               +25%
             </span>
             <span className="block text-sm">Last 90 days</span>

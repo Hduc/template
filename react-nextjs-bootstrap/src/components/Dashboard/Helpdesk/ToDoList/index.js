@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Card, Form, Table, Button } from "react-bootstrap";
-import SearchForm from "./SearchForm";
 
 const toDoListData = [
   {
@@ -88,15 +87,22 @@ const ToDoList = () => {
     setShowModal(!isShowModal);
   };
 
+  // Table
+  const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(toDoListData.length / ITEMS_PER_PAGE);
 
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  // Filter the to-do list dynamically based on the search query
+  const filteredTasks = toDoListData.filter(
+    (item) =>
+      item.taskTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.assignedTo.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.id.includes(searchQuery)
+  );
 
-  // Calculate which items to display on the current page
-  const currentItems = toDoListData.slice(
+  const totalPages = Math.ceil(filteredTasks.length / ITEMS_PER_PAGE);
+
+  // Get paginated results based on current page
+  const currentItems = filteredTasks.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
@@ -110,7 +116,19 @@ const ToDoList = () => {
               <h3 className="mb-0">To Do List</h3>
 
               <div className="d-flex align-items-center gap-2">
-                <SearchForm />
+                <Form className="position-relative table-src-form me-0">
+                  <Form.Control
+                    type="text"
+                    placeholder="Search here"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+
+                  <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                    search
+                  </span>
+                </Form>
+
                 <div className="text-end">
                   <button
                     className="btn btn-outline-primary py-1 px-2 px-sm-4 fs-14 fw-medium rounded-3 hover-bg"
@@ -151,103 +169,119 @@ const ToDoList = () => {
                 </thead>
 
                 <tbody>
-                  {currentItems.map((item, i) => (
-                    <tr key={i}>
-                      <td className="text-body">
-                        <Form>
-                          <Form.Check
-                            type="checkbox"
-                            label={item.id}
-                            className="fw-medium fs-14"
-                          />
-                        </Form>
-                      </td>
-                      <td className="text-body">{item.taskTitle}</td>
-                      <td>{item.assignedTo}</td>
-                      <td className="text-body">{item.dueDate}</td>
-                      <td className="text-body">{item.priority}</td>
-                      <td>
-                        <span
-                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${item.status}`}
-                        >
-                          {item.status}
-                        </span>
-                      </td>
-                      <td>
-                        <div className="d-flex align-items-center gap-1">
-                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                            <span className="material-symbols-outlined fs-16 text-primary">
-                              visibility
-                            </span>
-                          </button>
-                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                            <span className="material-symbols-outlined fs-16 text-body">
-                              edit
-                            </span>
-                          </button>
-                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                            <span className="material-symbols-outlined fs-16 text-danger">
-                              delete
-                            </span>
-                          </button>
-                        </div>
+                  {currentItems.length > 0 ? (
+                    currentItems.map((item, i) => (
+                      <tr key={i}>
+                        <td className="text-body">
+                          <Form>
+                            <Form.Check
+                              type="checkbox"
+                              label={item.id}
+                              className="fw-medium fs-14"
+                            />
+                          </Form>
+                        </td>
+                        <td className="text-body">{item.taskTitle}</td>
+                        <td>{item.assignedTo}</td>
+                        <td className="text-body">{item.dueDate}</td>
+                        <td className="text-body">{item.priority}</td>
+                        <td>
+                          <span
+                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${item.status}`}
+                          >
+                            {item.status}
+                          </span>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center gap-1">
+                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                              <span className="material-symbols-outlined fs-16 text-primary">
+                                visibility
+                              </span>
+                            </button>
+                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                              <span className="material-symbols-outlined fs-16 text-body">
+                                edit
+                              </span>
+                            </button>
+                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                              <span className="material-symbols-outlined fs-16 text-danger">
+                                delete
+                              </span>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="7" className="text-center">
+                        No matching results found.
                       </td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </Table>
 
-              <div className="p-4">
-                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
-                  <span className="fs-12 fw-medium">
-                    Showing {currentItems.length} of {toDoListData.length}{" "}
-                    Results
-                  </span>
+              {filteredTasks.length > ITEMS_PER_PAGE && (
+                <div className="p-4">
+                  <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                    <span className="fs-12 fw-medium">
+                      Showing {currentItems.length} of {toDoListData.length}{" "}
+                      Results
+                    </span>
 
-                  <nav aria-label="Page navigation example">
-                    <ul className="pagination mb-0 justify-content-center">
-                      <li className="page-item">
-                        <button
-                          className={`page-link icon btn ${
-                            currentPage === 1 ? "disabled" : ""
-                          }`}
-                          onClick={() => handlePageChange(currentPage - 1)}
-                        >
-                          <span className="material-symbols-outlined">
-                            keyboard_arrow_left
-                          </span>
-                        </button>
-                      </li>
-
-                      {[...Array(totalPages)].map((_, index) => (
-                        <li key={index} className="page-item">
+                    <nav aria-label="Page navigation example">
+                      <ul className="pagination mb-0 justify-content-center">
+                        <li className="page-item">
                           <button
-                            className={`page-link ${
-                              currentPage === index + 1 ? "active" : ""
+                            className={`page-link icon btn ${
+                              currentPage === 1 ? "disabled" : ""
                             }`}
-                            onClick={() => handlePageChange(index + 1)}
+                            onClick={() =>
+                              setCurrentPage((prev) => Math.max(prev - 1, 1))
+                            }
                           >
-                            {index + 1}
+                            <span className="material-symbols-outlined">
+                              keyboard_arrow_left
+                            </span>
                           </button>
                         </li>
-                      ))}
 
-                      <li className="page-item">
-                        <button
-                          className={`page-link icon btn ${
-                            currentPage === totalPages ? "disabled" : ""
-                          }`}
-                          onClick={() => handlePageChange(currentPage + 1)}
-                        >
-                          <span className="material-symbols-outlined">
-                            keyboard_arrow_right
-                          </span>
-                        </button>
-                      </li>
-                    </ul>
-                  </nav>
+                        {[...Array(totalPages)].map((_, index) => (
+                          <li key={index} className="page-item">
+                            <button
+                              className={`page-link ${
+                                currentPage === index + 1 ? "active" : ""
+                              }`}
+                              onClick={() => setCurrentPage(index + 1)}
+                            >
+                              {index + 1}
+                            </button>
+                          </li>
+                        ))}
+
+                        <li className="page-item">
+                          <button
+                            className={`page-link icon btn ${
+                              currentPage === totalPages ? "disabled" : ""
+                            }`}
+                            onClick={() =>
+                              setCurrentPage((prev) =>
+                                Math.min(prev + 1, totalPages)
+                              )
+                            }
+                          >
+                            <span className="material-symbols-outlined">
+                              keyboard_arrow_right
+                            </span>
+                          </button>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </Card.Body>

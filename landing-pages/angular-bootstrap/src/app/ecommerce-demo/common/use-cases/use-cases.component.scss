@@ -1,0 +1,208 @@
+.use-case-box {
+    max-width: 195px;
+    margin: {
+        bottom: 25px;
+        top: 25px;
+    };
+    .icon {
+        width: 120px;
+        height: 120px;
+        background-color: var(--whiteColor);
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 28px;
+        };
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .arrow {
+        top: -50px;
+        right: -160px;
+        position: absolute;
+    }
+}
+.col-lg-3 {
+    &:nth-child(1), &:nth-child(3) {
+        .use-case-box {
+            margin-top: 95px;
+        }
+    }
+    &:nth-child(2), &:nth-child(4) {
+        .use-case-box {
+            .arrow {
+                top: 80px;
+                transform: scaleY(-1);
+            }
+        }
+    }
+    &:nth-child(4) {
+        .use-case-box {
+            .arrow {
+                display: none;
+            }
+        }
+    }
+}
+.shape {
+    left: 0;
+    right: 0;
+    top: -200px;
+    z-index: -1;
+    position: absolute;
+}
+.component-dark {
+    .use-case-box {
+        .icon {
+            background-color: #000000;
+        }
+    }
+}
+.component-rtl {
+    .use-case-box {
+        .arrow {
+            right: auto;
+            left: -160px;
+            transform: scaleX(-1);
+        }
+    }
+    .col-lg-3 {
+        &:nth-child(2), &:nth-child(4) {
+            .use-case-box {
+                .arrow {
+                    transform: scaleY(-1) scaleX(-1);
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .use-case-box {
+        max-width: 100%;
+        margin-top: 0;
+
+        .icon {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 20px;
+            background-color: #f7f7f7;
+        }
+        .arrow {
+            display: none;
+        }
+    }
+    .col-lg-3 {
+        &:nth-child(1), &:nth-child(3) {
+            .use-case-box {
+                margin-top: 0;
+            }
+        }
+    }
+    .shape {
+        display: none;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .use-case-box {
+        margin-top: 0;
+
+        .icon {
+            margin-bottom: 20px;
+        }
+        .arrow {
+            display: none;
+        }
+    }
+    .col-lg-3 {
+        &:nth-child(1), &:nth-child(3) {
+            .use-case-box {
+                margin-top: 0;
+            }
+        }
+    }
+    .shape {
+        top: 120px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .use-case-box {
+        margin-top: 0;
+
+        .icon {
+            margin-bottom: 25px;
+        }
+        .arrow {
+            right: -72px;
+            max-width: 120px;
+        }
+    }
+    .col-lg-3 {
+        &:nth-child(1), &:nth-child(3) {
+            .use-case-box {
+                margin-top: 75px;
+            }
+        }
+        &:nth-child(2), &:nth-child(4) {
+            .use-case-box {
+                .arrow {
+                    top: 75px;
+                    max-width: 100px;
+                }
+            }
+        }
+    }
+    .shape {
+        top: 0;
+    }
+    .component-rtl {
+        .use-case-box {
+            .arrow {
+                right: auto;
+                left: -72px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .use-case-box {
+        .arrow {
+            right: -120px;
+            max-width: 150px;
+        }
+    }
+    .shape {
+        top: 0;
+    }
+    .component-rtl {
+        .use-case-box {
+            .arrow {
+                right: auto;
+                left: -120px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -403,37 +403,24 @@ const TopInstructors: React.FC = () => {
           >
             <Table sx={{ minWidth: 480 }} aria-label="Table">
               <TableHead className="bg-primary-50">
-                <TableRow>
-                  <TableCell
-                    sx={{
+                <TableRow
+                  sx={{
+                    "& th": {
                       fontWeight: "500",
                       padding: "10px 20px",
                       fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                    },
+                  }}
+                >
+                  <TableCell className="text-black border-bottom">
                     Name
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Courses
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Ratings
                   </TableCell>
                 </TableRow>
@@ -447,14 +434,16 @@ const TopInstructors: React.FC = () => {
                     )
                   : rows
                 ).map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell
-                      sx={{
+                  <TableRow
+                    key={row.id}
+                    sx={{
+                      "& td": {
                         padding: "13px 20px",
                         fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                      },
+                    }}
+                  >
+                    <TableCell className="text-black border-bottom">
                       <Box
                         sx={{
                           display: "flex",
@@ -495,22 +484,11 @@ const TopInstructors: React.FC = () => {
                       </Box>
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "13px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.courses}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "13px 20px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       <Box
                         sx={{
                           display: "flex",
@@ -531,7 +509,7 @@ const TopInstructors: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={3} />
+                    <TableCell className="border-bottom" colSpan={3} />
                   </TableRow>
                 )}
               </TableBody>

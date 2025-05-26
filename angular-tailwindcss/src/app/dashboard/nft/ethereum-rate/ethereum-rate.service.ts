@@ -25,7 +25,7 @@ export class EthereumRateService {
                     ],
                     chart: {
                         type: "area",
-                        height: 238,
+                        height: 246,
                         zoom: {
                             enabled: false
                         },

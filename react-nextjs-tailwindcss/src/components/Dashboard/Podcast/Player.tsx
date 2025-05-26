@@ -111,7 +111,7 @@ const Player: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Player</h5>
+            <h5 className="!mb-0 !font-semibold">Player</h5>
           </div>
 
           <Menu
@@ -148,7 +148,7 @@ const Player: React.FC = () => {
           ></div>
           <div className="flex justify-between mt-[19px]">
             <div>
-              <h6 className="font-medium text-base mb-[7px]">
+              <h6 className="!font-medium !text-base !mb-[7px]">
                 Building an Online Presence
               </h6>
               <span className="block text-xs">Ethan Cooper</span>

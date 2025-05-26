@@ -26,12 +26,12 @@ const DateTimePickerInput = () => {
           <DateTimePicker
             sx={{
               width: "100%",
-
               "& fieldset": {
-                border: "1px solid #D5D9E2",
+                border: "1px solid rgba(0, 0, 0, 0.23)",
                 borderRadius: "7px",
               },
             }}
+            className="input-date-picker"
           />
         </LocalizationProvider>
       </Box>

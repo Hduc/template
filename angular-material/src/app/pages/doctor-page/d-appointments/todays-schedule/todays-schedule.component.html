@@ -1,0 +1,177 @@
+<!-- Today's Schedule -->
+<mat-card
+    class="todays-schedule-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Today's Schedule
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-calendar></mat-calendar>
+    </mat-card-content>
+</mat-card>
+<mat-card
+    class="mb-25 border-radius d-block bg-transparent p-0 border-0 shadow-none"
+    [class.component-body-bg-color]="themeService.isBodyBG()"
+    [class.component-card-borderd]="themeService.isCardBordered()"
+    [class.component-card-with-box-shadow]="themeService.isCardWithBoxShadow()"
+>
+    <mat-card-content>
+        <div class="form-btn-box">
+            <button type="button" mat-button color="primary" (click)="toggleClass()">
+                <i class="material-symbols-outlined">
+                    add
+                </i>
+                Add A Schedule
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Add New Popup -->
+<div
+    class="add-new-popup"
+    [class.active]="classApplied"
+>
+    <div class="popup-dialog">
+        <mat-card class="border-radius w-100 d-block bg-white border-0 shadow-none">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mb-0">
+                        Add A Schedule
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                    >
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Select Date
+                            </label>
+                            <mat-form-field>
+                                <mat-label>Select Date</mat-label>
+                                <input matInput [matDatepicker]="startDatePicker">
+                                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                                <mat-datepicker-toggle matIconSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                                <mat-datepicker #startDatePicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Select Time
+                            </label>
+                            <mat-form-field appearance="fill">
+                                <input matInput placeholder="Select Time" [ngxTimepicker]="picker">
+                                <i class="material-symbols-outlined mr-15" matSuffix>
+                                    schedule
+                                </i>
+                                <ngx-material-timepicker #picker></ngx-material-timepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Schedule Type
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Select
+                                </mat-label>
+                                <mat-select>
+                                    <mat-option value="option1">
+                                        Appointment with Patient
+                                    </mat-option>
+                                    <mat-option value="option2">
+                                        Group Meeting
+                                    </mat-option>
+                                    <mat-option value="option3">
+                                        Team Meeting
+                                    </mat-option>
+                                    <mat-option value="option4">
+                                        Client Meeting
+                                    </mat-option>
+                                    <mat-option value="option5">
+                                        Doctor Meeting
+                                    </mat-option>
+                                    <mat-option value="option6">
+                                        Other
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Patient Name
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Patient Name
+                                </mat-label>
+                                <input matInput placeholder="E.g. Jonathon Ronan">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Set Alarm
+                            </label>
+                            <mat-form-field appearance="fill">
+                                <input matInput placeholder="Set Alarm" [ngxTimepicker]="picker2">
+                                <i class="material-symbols-outlined mr-15" matSuffix>
+                                    schedule
+                                </i>
+                                <ngx-material-timepicker #picker2></ngx-material-timepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Patient Avatar
+                            </label>
+                            <file-upload class="file-uploader"></file-upload>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                        color="warn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        mat-button
+                        color="primary"
+                    >
+                        <i class="material-symbols-outlined">
+                            add
+                        </i>
+                        Add Schedule
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -329,6 +329,14 @@ const RefundsTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    row.customerName.toLowerCase().includes(searchQuery.toLowerCase()) 
+  );
+
   return (
     <>
       <Card
@@ -361,7 +369,9 @@ const RefundsTable: React.FC = () => {
             <input
               type="text"
               className='t-input'
-              placeholder="Search here....."
+              placeholder="Search here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -489,7 +499,7 @@ const RefundsTable: React.FC = () => {
 
             <TableBody>
               {(rowsPerPage > 0
-                ? rows.slice(
+                ? filteredRows.slice(
                     page * rowsPerPage,
                     page * rowsPerPage + rowsPerPage
                   )
@@ -607,7 +617,7 @@ const RefundsTable: React.FC = () => {
               ))}
               {emptyRows > 0 && (
                 <TableRow style={{ height: 53 * emptyRows }}>
-                  <TableCell colSpan={8} />
+                  <TableCell className="border-bottom" colSpan={8} />
                 </TableRow>
               )}
             </TableBody>

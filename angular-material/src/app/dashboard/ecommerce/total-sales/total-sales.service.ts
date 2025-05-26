@@ -103,10 +103,10 @@ export class TotalSalesService {
                             colors: '#64748B'
                         },
                         markers: {
-                            size: 6,
+                            size: 7,
                             offsetX: -2,
                             offsetY: -.5,
-                            shape: 'circle'
+                            shape: 'diamond'
                         }
                     },
                     tooltip: {

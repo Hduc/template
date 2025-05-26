@@ -179,7 +179,7 @@ const AttendanceAnalytics: React.FC = () => {
               options={options}
               series={series}
               type="bar"
-              height={358}
+              height={370}
               width={"100%"}
             />
           )}

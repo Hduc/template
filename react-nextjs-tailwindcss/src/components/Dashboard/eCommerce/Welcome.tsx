@@ -9,12 +9,12 @@ const Welcome: React.FC = () => {
       <div className="trezo-card bg-primary-500 mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content relative ltr:md:pr-[230px] rtl:md:pl-[230px]">
           <div className="md:pt-[5px] md:pb-[5px]">
-            <h5 className="mb-[5px] md:mb-[2px] font-semibold text-white">
+            <h5 className="!mb-[5px] md:!mb-[2px] !font-semibold !text-white">
               Good Morning, <span className="text-[#ffcea9]">Olivia!</span>
             </h5>
 
             <p className="text-[#d5d9e2]">
-              Here&aposs what&aposs happening with your store today.
+              Here&apos;s what&apos;s happening with your store today.
             </p>
 
             <div className="border-t border-primary-400 mt-[15px] mb-[15px] md:mt-[30px] md:mb-[33px]"></div>
@@ -26,14 +26,14 @@ const Welcome: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-[15px] md:text-md text-white block font-semibold mb-[1px] md:mb-0">
-                    86 New orders
+                    86 New Orders
                   </span>
                   <span className="block text-gray-200">
                     Awaiting processing
                   </span>
                 </div>
               </div>
-              
+
               <div className="flex items-center mt-[15px] sm:mt-0">
                 <div className="w-[42px] h-[42px] rtl:ml-[12px] ltr:mr-[12px] bg-danger-50 text-danger-500 rounded-md flex items-center justify-center">
                   <i className="material-symbols-outlined">chat_error</i>

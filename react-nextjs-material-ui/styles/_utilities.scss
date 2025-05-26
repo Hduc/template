@@ -27,8 +27,29 @@
 	right: 20px;
 }
 
+// New
+.ml-auto {
+	margin-left: auto;
+}
+.mr-auto {
+	margin-right: auto;
+}
+.po-right-10 {
+	right: 10px;
+}
+.po-right-3 {
+	right: 3px;
+}
+.-right-10 {
+	right: -10px;
+}
+// End New
+
 .po-left-32 {
 	left: 32%;
+}
+.po-left-15 {
+	left: 15px;
 }
 .po-right-35 {
 	right: 35%;
@@ -70,9 +91,31 @@
 		right: auto;
 		left: -80px;
 	}
+	.po-left-15 {
+		left: auto;
+		right: 15px;
+	}
+
+	// New
+	.po-right-10 {
+		right: auto;
+		left: 10px;
+	}
+	.po-right-3 {
+		right: auto;
+		left: 3px;
+	}
+	.-right-10 {
+		right: auto;
+		left: -10px;
+	}
+	// End New
 }
 
 // BG Color
+.bg-eceef2 {
+	background-color: #eceef2 !important;
+}
 .bg-white {
 	background-color: var(--whiteColor) !important;
 }
@@ -199,14 +242,14 @@
 .bg-orange-500 {
 	background-color: rgb(253 88 18) !important;
 }
-.bg-eceef2 {
-	background-color: #eceef2 !important;
-}
 .bg-grey-100 {
 	background-color: #eceef2;
 }
   
 // Text Color
+.text-body {
+	color: var(--bodyColor) !important;
+}
 .text-white {
 	color: var(--whiteColor) !important;
 }
@@ -218,9 +261,6 @@
 }
 .text-primary-500 {
 	color: #605dff !important;
-}
-.text-body {
-	color: var(--bodyColor) !important;
 }
 .text-transparent {
 	color: transparent !important;
@@ -275,9 +315,6 @@
 }
 
 // Border
-.border-color-primary {
-	border-color: var(--primaryColor);
-}
 .border {
 	border: 1px solid #edeff5 !important;
 }
@@ -295,6 +332,9 @@
 }
 .border-none {
 	border: none !important;
+}
+.border-color-primary {
+	border-color: var(--primaryColor) !important; 
 }
 
 // Border Radius

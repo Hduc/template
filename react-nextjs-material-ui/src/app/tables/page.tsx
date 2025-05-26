@@ -33,21 +33,21 @@ export default function Page() {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <TopSellingProducts />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <RecentOrders />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <TopPerformers />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <RecentLeads />
         </Grid>
       </Grid>
@@ -55,21 +55,21 @@ export default function Page() {
       <AllProjects />
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <StudentsProgress />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <GroupLessons />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <MyTasks />
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <RecentCustomerRatings />
         </Grid>
       </Grid>

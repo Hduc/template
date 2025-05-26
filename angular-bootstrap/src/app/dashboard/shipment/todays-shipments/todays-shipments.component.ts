@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TodaysShipmentsService } from './todays-shipments.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-todays-shipments',
@@ -10,6 +11,7 @@ import { TodaysShipmentsService } from './todays-shipments.service';
 export class TodaysShipmentsComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private todaysShipmentsService: TodaysShipmentsService
     ) {}
 

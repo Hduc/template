@@ -52,6 +52,11 @@
   border-color: var(--fpPurpleColor);
 }
 
+.main-content:has(div.fp-wrapper) {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
 .section-title {
   max-width: 785px;
   margin-bottom: 90px;
@@ -253,6 +258,12 @@
 }
 .dark-theme .fp-navbar-area .navbar .navbar-brand img.d-none {
   display: inline !important;
+}
+.dark-theme .fp-navbar-area .navbar .navbar-nav .nav-item .nav-link {
+  color: var(--darkBodyColor);
+}
+.dark-theme .fp-navbar-area .navbar .navbar-nav .nav-item .nav-link.active {
+  color: var(--primaryColor);
 }
 .dark-theme .fp-navbar-area .navbar .navbar-toggler {
   color: var(--whiteColor);

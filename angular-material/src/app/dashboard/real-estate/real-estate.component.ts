@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActiveTotalPropertyComponent } from './active-total-property/active-total-property.component';
+import { TotalActivePropertiesComponent } from './total-active-properties/total-active-properties.component';
 import { ReRevenueComponent } from './re-revenue/re-revenue.component';
 import { NewSoldPropertiesComponent } from './new-sold-properties/new-sold-properties.component';
 import { PropertiesForSaleComponent } from './properties-for-sale/properties-for-sale.component';
@@ -8,14 +8,14 @@ import { NewCustomersMonthComponent } from './new-customers-month/new-customers-
 import { MostSalesLocationComponent } from './most-sales-location/most-sales-location.component';
 import { RentalIncomeComponent } from './rental-income/rental-income.component';
 import { SocialSearchComponent } from './social-search/social-search.component';
-import { RecentPropertyComponent } from './recent-property/recent-property.component';
+import { RecentPropertiesComponent } from './recent-properties/recent-properties.component';
 import { CustomerReviewsComponent } from './customer-reviews/customer-reviews.component';
-import { TopPropertyComponent } from './top-property/top-property.component';
+import { TopPropertiesComponent } from './top-properties/top-properties.component';
 import { LatestTransactionsComponent } from './latest-transactions/latest-transactions.component';
 
 @Component({
     selector: 'app-real-estate',
-    imports: [ActiveTotalPropertyComponent, ReRevenueComponent, NewSoldPropertiesComponent, PropertiesForSaleComponent, PropertiesForRentComponent, NewCustomersMonthComponent, MostSalesLocationComponent, RentalIncomeComponent, SocialSearchComponent, RecentPropertyComponent, CustomerReviewsComponent, TopPropertyComponent, LatestTransactionsComponent],
+    imports: [TotalActivePropertiesComponent, ReRevenueComponent, NewSoldPropertiesComponent, PropertiesForSaleComponent, PropertiesForRentComponent, NewCustomersMonthComponent, MostSalesLocationComponent, RentalIncomeComponent, SocialSearchComponent, RecentPropertiesComponent, CustomerReviewsComponent, TopPropertiesComponent, LatestTransactionsComponent],
     templateUrl: './real-estate.component.html',
     styleUrl: './real-estate.component.scss'
 })

@@ -1,0 +1,92 @@
+.quick-transfer-card {
+    .mat-mdc-card-content {
+        form {
+            .form-group {
+                margin-bottom: 24px;
+
+                label {
+                    margin-bottom: 10px;
+                }
+                .form-control {
+                    border-color: #D5D9E2;
+                    font-size: 16px;
+                    height: 53px;
+                }
+                .mat-mdc-button {
+                    right: 0;
+                    bottom: 0;
+                    width: 53px;
+                    height: 53px;
+                    position: absolute;
+                    color: var(--whiteColor);
+                    background-color: var(--primaryColor);
+
+                    i {
+                        top: 1px;
+                        font-size: 20px;
+                        position: relative;
+                    }
+                    &:hover {
+                        background-color: var(--secondaryColor);
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .mat-mdc-card-content {
+            form {
+                .form-group {
+                    .mat-mdc-button {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            form {
+                .form-group {
+                    .form-control {
+                        border-color: var(--borderColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .quick-transfer-card {
+        .mat-mdc-card-content {
+            form {
+                .form-group {
+                    margin-bottom: 17px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

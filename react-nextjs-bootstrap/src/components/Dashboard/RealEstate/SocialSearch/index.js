@@ -58,7 +58,7 @@ const SocialSearch = () => {
                 options={options}
                 series={series}
                 type="radialBar"
-                height={230}
+                height={220}
               />
             )}
           </div>

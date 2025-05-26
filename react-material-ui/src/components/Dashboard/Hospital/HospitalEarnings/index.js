@@ -203,7 +203,7 @@ const HospitalEarnings = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={12} md={12} lg={5} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 5, xl: 5 }}>
           <Box
             className="text-center"
             sx={{
@@ -219,14 +219,14 @@ const HospitalEarnings = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 7, xl: 7 }}>
           <Grid
             container
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{
@@ -278,7 +278,7 @@ const HospitalEarnings = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{
@@ -330,7 +330,7 @@ const HospitalEarnings = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12}>
+            <Grid size={{ xs: 12, sm: 12 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{

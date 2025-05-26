@@ -22,7 +22,7 @@ const Cards: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Card</h5>
+            <h5 className="!mb-0">Card</h5>
           </div>
           <div className="trezo-card-subtitle">
             <Menu as="div" className="trezo-card-dropdown relative">
@@ -76,7 +76,7 @@ const Cards: React.FC = () => {
               />
 
               <h5
-                className="text-white font-semibold mt-[12px] mb-[50px]"
+                className="!text-white !font-semibold !mt-[12px] !mb-[50px]"
                 style={{ wordSpacing: "4px" }}
               >
                 5322 0520 0744 1794
@@ -112,7 +112,7 @@ const Cards: React.FC = () => {
               />
 
               <h5
-                className="text-white font-semibold mt-[12px] mb-[50px]"
+                className="!text-white !font-semibold !mt-[12px] !mb-[50px]"
                 style={{ wordSpacing: "4px" }}
               >
                 .... .... .... 1794
@@ -159,7 +159,7 @@ const Cards: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                 <div className="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0">Add New Card</h5>
+                    <h5 className="!mb-0">Add New Card</h5>
                   </div>
                   <div className="trezo-card-subtitle">
                     <button

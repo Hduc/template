@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Chat
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -22,21 +22,21 @@
 </div>
 
 <!-- Chat -->
-<div class="lg:grid lg:grid-cols-3 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
     <div class="lg:col-span-1">
 
         <!-- Sidebar -->
-        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+        <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div class="trezo-card-header mb-[20px] flex items-center justify-between">
                 <div class="trezo-card-title">
-                    <h5 class="mb-0 text-md font-medium">
+                    <h5 class="!mb-0 !text-md !font-medium">
                         Messages
                     </h5>
                 </div>
             </div>
             <div class="trezo-card-content">
                 <form class="relative mb-[20px]">
-                    <label class="absolute ltr:left-[13px] rtl:right-[13px] mt-[2px] text-black dark:text-white top-1/2 -translate-y-1/2">
+                    <label class="absolute ltr:left-[13px] rtl:right-[13px] text-black dark:text-white top-1/2 -translate-y-1/2">
                         <i class="material-symbols-outlined !text-lg">
                             search
                         </i>
@@ -45,7 +45,7 @@
                 </form>
                 <ul class="chat-sidebar-navs flex border-b border-gray-100 dark:border-[#172036]">
                     <li class="nav-item ltr:mr-[19px] rtl:ml-[19px] xl:ltr:mr-[30px] xl:rtl:ml-[30px] ltr:last:mr-0 rtl:ml-0"[ngClass]="{'active': currentTab === 'tab1'}">
-                        <button type="button" (click)="switchTab($event, 'tab1')" class="nav-link active font-medium relative pb-[8px] transition-all">
+                        <button type="button" (click)="switchTab($event, 'tab1')" class="nav-link font-medium relative pb-[8px] transition-all">
                             All Message
                         </button>
                     </li>
@@ -61,7 +61,7 @@
                     </li>
                 </ul>
                 <div class="chat-sidebar-tab-content">
-                    <div id="tab1" *ngIf="currentTab === 'tab1'" class="tab-pane ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
+                    <div id="tab1" *ngIf="currentTab === 'tab1'" class="ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
                         <div class="chat-users-list overflow-y-scroll h-[476px] md:h-[559px] lg:h-[720px] xl:h-[820px] ltr:pr-[20px] rtl:pl-[20px] md:ltr:pr-[25px] md:rtl:pl-[25px] pt-[20px]">
                             <div class="flex items-center justify-between mb-[13.5px] pb-[13.5px] border-b border-gray-100 dark:border-[#172036] last:border-0 last:pb-0 last:mb-0">
                                 <div class="flex items-center">
@@ -73,7 +73,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Sarah Smith
                                         </span>
-                                        <span class="text-success-600 block text-xs mt-[2px]">
+                                        <span class="text-success-600 block text-xs mt-[4px]">
                                             Typing...
                                         </span>
                                     </div>
@@ -92,7 +92,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Michael Johnson
                                         </span>
-                                        <span class="block text-xs mt-[2px] relative ltr:pl-[16px] rtl:pr-[16px]">
+                                        <span class="block text-xs mt-[4px] relative ltr:pl-[16px] rtl:pr-[16px]">
                                             <i class="ri-file-text-line ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2 -mt-[.5px]"></i>
                                             Attachment...
                                         </span>
@@ -112,7 +112,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Emily Brown
                                         </span>
-                                        <span class="block text-xs mt-[2px] relative ltr:pl-[16px] rtl:pr-[16px]">
+                                        <span class="block text-xs mt-[4px] relative ltr:pl-[16px] rtl:pr-[16px]">
                                             <i class="ri-mic-line ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2 -mt-[.5px]"></i>
                                             Voice message
                                         </span>
@@ -132,7 +132,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             David Martinez
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Excellent work...
                                         </span>
                                     </div>
@@ -151,7 +151,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Jessica Taylor
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Hello! Mr.. 🔥
                                         </span>
                                     </div>
@@ -170,7 +170,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Christopher Lee
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Very good...
                                         </span>
                                     </div>
@@ -189,7 +189,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Amanda Rodriguez
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             That’s cool...
                                         </span>
                                     </div>
@@ -208,7 +208,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Daniel Garcia
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Good morning!😀
                                         </span>
                                     </div>
@@ -227,7 +227,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Jennifer Thomas
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Hi John!
                                         </span>
                                     </div>
@@ -246,7 +246,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Elizabeth Clark
                                         </span>
-                                        <span class="text-success-600 block text-xs mt-[2px]">
+                                        <span class="text-success-600 block text-xs mt-[4px]">
                                             Sounds good...
                                         </span>
                                     </div>
@@ -265,7 +265,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             William Lewis
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             How are you?😐
                                         </span>
                                     </div>
@@ -284,7 +284,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Michelle King
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Good evening!
                                         </span>
                                     </div>
@@ -295,7 +295,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab2" *ngIf="currentTab === 'tab2'" class="tab-pane ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
+                    <div id="tab2" *ngIf="currentTab === 'tab2'" class="ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
                         <div class="mt-[20px] ltr:pr-[20p] rtl:pl-[20px] ltr:md:pr-[25px] rtl:md:pl-[20px]">
                             <button type="button" class="block w-full text-center py-[11.8px] px-[22px] text-white bg-primary-500 transition-all text-md font-medium hover:bg-primary-400">
                                 + Create New Group
@@ -311,7 +311,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             UI/UX Designer Group
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Divan: Sure I’ll submit the file...
                                         </span>
                                     </div>
@@ -329,7 +329,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Web Development Group
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Divan: <span class="text-success-600">Typing...</span>
                                         </span>
                                     </div>
@@ -347,7 +347,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Discussion Group
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Divan: Great ! 🔥
                                         </span>
                                     </div>
@@ -365,7 +365,7 @@
                                         <span class="block font-semibold text-black dark:text-white">
                                             Design Group
                                         </span>
-                                        <span class="block text-xs mt-[2px]">
+                                        <span class="block text-xs mt-[4px]">
                                             Olivia: Hello! Mr..
                                         </span>
                                     </div>
@@ -376,7 +376,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="tab3" *ngIf="currentTab === 'tab3'" class="tab-pane ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
+                    <div id="tab3" *ngIf="currentTab === 'tab3'" class="ltr:-mr-[20px] rtl:-ml-[20px] md:ltr:-mr-[25px] md:rtl:-ml-[25px]">
                         <div class="chat-users-list overflow-y-scroll h-[476px] md:h-[559px] lg:h-[720px] xl:h-[820px] ltr:pr-[20px] rtl:pl-[20px] md:ltr:pr-[25px] md:rtl:pl-[25px] pt-[20px]">
                             <div class="flex items-center justify-between mb-[13.5px] pb-[13.5px] border-b border-gray-100 dark:border-[#172036] last:border-0 last:pb-0 last:mb-0">
                                 <div class="flex items-center">
@@ -544,7 +544,7 @@
     <div class="lg:col-span-2">
 
         <!-- Chat -->
-        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+        <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div class="trezo-card-header sm:flex items-center justify-between">
                 <div class="trezo-card-title">
                     <div class="flex items-center">
@@ -602,7 +602,7 @@
                 <span class="text-xs pb-[18px] block">
                     2023-11-10 09:15 AM
                 </span>
-                <div class="chat-body h-[703px] overflow-y-scroll ltr:-mr-[25px] rtl:-ml-[25px] rotate-180">
+                <div class="chat-body h-[707px] overflow-y-scroll ltr:-mr-[25px] rtl:-ml-[25px] rotate-180">
                     <ul class="flex-col-reverse flex ltr:pl-[25px] rtl:pr-[25px] justify-end">
                         <li class="relative rotate-180 ltr:pl-[45px] rtl:pr-[45px] w-full md:w-[90%]">
                             <img src="images/users/user31.jpg" width="35" alt="user" class="rounded-full top-0 ltr:left-0 rtl:right-0 absolute">

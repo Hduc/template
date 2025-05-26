@@ -87,11 +87,17 @@
         }
         /* Handle */
         &::-webkit-scrollbar-thumb {
-            background: #c5c5c5; 
+            background: #fff; 
         }
         /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
             background: #888; 
+        }
+        &:hover {
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #c5c5c5; 
+            }
         }
 
         .sidebar-menu {
@@ -133,6 +139,7 @@
                     min-height: auto;
                     position: relative;
                     width: 91%;
+                    white-space: nowrap;
   
                     &.Mui-expanded {
                         background-color: #f6f7f9;
@@ -265,6 +272,7 @@
                                     };
                                     display: inline-block;
                                     position: relative;
+
                                     &::before {
                                         top: 50%;
                                         left: -3px;
@@ -275,6 +283,7 @@
                                         background: #FFE8D4;
                                         transform: translateY(-50%) rotate(45deg);
                                     }
+                                    
                                     &.style-two {
                                         color: #25B003;
                                         background-color: #D8FFC8;
@@ -309,10 +318,14 @@
                     top: 9px;
                     left: 10px;
                 };
+                white-space: nowrap;
                 font: {
                     size: var(--fontSize);
                     weight: 500;
                 };
+                span {
+                    font-weight: 500;
+                }
                 i {
                     transition: var(--transition);
                     color: var(--bodyColor);
@@ -335,12 +348,23 @@
 // dark-theme style
 .dark-theme {
     .left-sidebar-menu {
+        border-right-color: #2f2f2f;
+        
+        .logo {
+            background-color: var(--darkCardBg);
+            border-bottom: 1px solid var(--darkBorder);
+
+            a {
+                span {
+                    color: var(--whiteColor);
+                }
+            }
+        }
         .burger-menu {
             span {
                 background-color: #fff;
             }
         }
-
         .sidebar-inner {
             background-color: var(--darkCardBg);
 
@@ -350,15 +374,17 @@
 
             /* Track */
             &::-webkit-scrollbar-track {
-                background: #15203c; 
+                background: var(--darkCardBg);
             }
             /* Handle */
             &::-webkit-scrollbar-thumb {
-                background: #888; 
+                background: var(--darkCardBg);
             }
-            /* Handle on hover */
-            &::-webkit-scrollbar-thumb:hover {
-                background: #999; 
+            &:hover {
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #222; 
+                }
             }
 
             .sidebar-menu {
@@ -372,7 +398,11 @@
                                 color: var(--whiteColor);
                             }
                         }
-
+                        .MuiAccordionSummary-content {
+                            .trezo-badge {
+                                background-color: rgba(255, 255, 255, 0.08); 
+                            }
+                        }
                         &.Mui-expanded {
                             background-color: #15203c;
 
@@ -383,7 +413,6 @@
                                 color: var(--whiteColor);
                             }
                         }
-
                         &:hover {
                             background-color: #15203c;
 
@@ -425,10 +454,12 @@
                         }
                     }
                 }
-
                 .sidebar-menu-link {
                     color: var(--whiteColor);
 
+                    .title {
+                        color: var(--whiteColor);
+                    }
                     i {
                         color: var(--darkBodyColor);
                     }
@@ -447,17 +478,7 @@
                     }
                 }
             }
-        }
-        .logo {
-            background-color: var(--darkCardBg);
-            border-bottom: 1px solid var(--darkBorder);
-
-            a {
-                span {
-                    color: var(--whiteColor);
-                }
-            }
-        }
+        } 
     }
 }
 
@@ -501,7 +522,6 @@
                             margin-left: 0;
                         }
                     }
-
                     .mat-details {
                         .sidebar-sub-menu {
                             padding: 0;
@@ -530,8 +550,6 @@
     }
 }
 
-
- 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {}
 
@@ -752,6 +770,230 @@
                             .sidebar-menu-link {
                                 .title {
                                     display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // compact-sidebar
+        &.compact-sidebar {
+            padding-left: 85px;
+
+            .top-navbar {
+                left: 90px;
+
+                .top-burger {
+                    display: none;
+                }
+            }
+
+            .left-sidebar-menu {
+                width: 65px;
+
+                .burger-menu {
+                    display: none !important;
+                }
+                .logo {
+                    padding-left: 12px;
+                    padding-right: 12px;
+
+                    a {
+                        justify-content: center;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+                .burger-menu {
+                    display: none;
+                }
+                .sidebar-inner {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 75px;
+
+                    .sidebar-menu {
+                        .sub-title {
+                            display: none;
+                        }
+                        .mat-accordion {
+                            .mat-summary { 
+                                padding-bottom: 10px;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                padding-top: 10px;
+                                width: 20px;
+
+                                .MuiAccordionSummary-content {
+                                    .title, .trezo-badge {
+                                        display: none;
+                                    }
+                                }
+                                .MuiAccordionSummary-expandIconWrapper {
+                                    display: none;
+                                }
+                                .MuiAccordionSummary-content {
+                                    i { 
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            .MuiCollapse-entered {
+                                display: none;
+                            }
+                        }
+                        .sidebar-menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    width: 260px;
+
+                    .burger-menu {
+                        display: none !important;
+                    }
+
+                    .logo {
+                        padding: 18px 25px 16px; 
+    
+                        a {
+                            justify-content: flex-start;
+    
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .burger-menu {
+                        display: inline-block;
+                    }
+                    .sidebar-inner {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        padding-top: 90px;
+    
+                        .sidebar-menu {
+                            .sub-title {
+                                display: inline-block;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    width: 91%;
+
+                                    .MuiAccordionSummary-content {
+                                        i { 
+                                            margin-right: 7px;
+                                        }
+                                        .title, .trezo-badge {
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .MuiAccordionSummary-expandIconWrapper {
+                                        display: inline-block;
+                                    } 
+                                }
+                                .MuiCollapse-entered {
+                                    display: block;
+                                }
+                            }
+
+                            .sidebar-menu-link {
+                                .title {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        } 
+    }
+
+    // RTL Style
+    [dir="rtl"] {
+        .main-wrapper-content {
+            &.active {
+                .left-sidebar-menu {
+                    .sidebar-inner {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-top: 75px;
+
+                        .sidebar-menu {
+                            .sub-title {
+                                display: none;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    .MuiAccordionSummary-content {
+                                        i {  
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .sidebar-inner {
+                            .sidebar-menu {
+                                .mat-accordion {
+                                    .mat-summary { 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // compact-sidebar
+            &.compact-sidebar {
+                padding-right: 85px;
+                padding-left: 25px;
+
+                .top-navbar {
+                    left: 25px;
+                    right: 90px;
+                }
+
+                .left-sidebar-menu {
+                    .sidebar-inner {
+                        .sidebar-menu {
+                            .mat-accordion {
+                                .mat-summary {
+                                    .MuiAccordionSummary-content i {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .sidebar-inner {
+                            .sidebar-menu {
+                                .mat-accordion {
+                                    .mat-summary { 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

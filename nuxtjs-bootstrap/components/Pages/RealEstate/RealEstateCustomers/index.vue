@@ -44,10 +44,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-1.jpg"
                       class="wh-44 rounded-2"
@@ -56,7 +53,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Sarah Johnson</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>74 Grim Avenue San Diego,</td>
                 <td>2024-10-01</td>
@@ -104,10 +101,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-2.jpg"
                       class="wh-44 rounded-2"
@@ -116,7 +110,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Michael Smith</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>9 Paul Wayne Haggerty Road</td>
                 <td>2024-09-28</td>
@@ -164,10 +158,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-3.jpg"
                       class="wh-44 rounded-2"
@@ -176,7 +167,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Emily Brown</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>61 Ottis Street Oklahoma City</td>
                 <td>2024-09-25</td>
@@ -224,10 +215,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-4.jpg"
                       class="wh-44 rounded-2"
@@ -236,7 +224,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Jason Lee</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>Residential</td>
                 <td>2024-09-22</td>
@@ -284,10 +272,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-5.jpg"
                       class="wh-44 rounded-2"
@@ -296,7 +281,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Ashley Davis</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>01 Lakeland Terrace Detroit</td>
                 <td>2024-09-20</td>
@@ -344,10 +329,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-103.png"
                       class="wh-44 rounded-2"
@@ -356,7 +338,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Shirley Cooper</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>29 Aviation Way Los Angeles</td>
                 <td>2024-09-23</td>
@@ -404,10 +386,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-104.png"
                       class="wh-44 rounded-2"
@@ -416,7 +395,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Bret Brown</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>2 Little Acres Lane Mattoon</td>
                 <td>2024-09-27</td>
@@ -464,10 +443,7 @@
                   </div>
                 </td>
                 <td>
-                  <RouterLink
-                    to="/my-profile"
-                    class="d-flex align-items-center"
-                  >
+                  <NuxtLink to="/my-profile" class="d-flex align-items-center">
                     <img
                       src="@/assets/images/user-105.png"
                       class="wh-44 rounded-2"
@@ -476,7 +452,7 @@
                     <div class="ms-2">
                       <h6 class="fw-medium fs-14">Frances Mills</h6>
                     </div>
-                  </RouterLink>
+                  </NuxtLink>
                 </td>
                 <td>47 Hope Street Portland</td>
                 <td>2024-09-28</td>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { CustomizerSettingsService } from '../../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-total-expenses:not(0)',
@@ -7,4 +8,10 @@ import { MatCardModule } from '@angular/material/card';
     templateUrl: './total-expenses.component.html',
     styleUrl: './total-expenses.component.scss'
 })
-export class TotalExpensesComponent {}
+export class TotalExpensesComponent {
+
+    constructor(
+        public themeService: CustomizerSettingsService
+    ) {}
+
+}

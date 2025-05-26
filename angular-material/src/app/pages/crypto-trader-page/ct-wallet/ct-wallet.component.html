@@ -1,0 +1,272 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Wallet
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 p-0">
+        <li class="breadcrumb-item d-inline-block position-relative">
+            <a routerLink="/dashboard" class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    home
+                </i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Crypto Trader
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Wallet
+        </li>
+    </ol>
+</div>
+
+<!-- Wallet -->
+<mat-card class="ctp-wallet-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+    <mat-card-header>
+        <mat-card-title>
+            <button class="add-btn" (click)="toggleClass()" mat-button type="button">
+                <i class="material-symbols-outlined">
+                    add
+                </i>
+                Add Wallet
+            </button>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <form class="search-box position-relative">
+                <label>
+                    <i class="material-symbols-outlined">
+                        search
+                    </i>
+                </label>
+                <input type="text" class="input-search" placeholder="Search here....." (keyup)="applyFilter($event)" #input>
+            </form>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-style-two">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Name
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="fw-medium text-primary">
+                            {{element.name}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Address Column -->
+                    <ng-container matColumnDef="address">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Address
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="fw-medium">
+                            {{element.address}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Crypto Asset Column -->
+                    <ng-container matColumnDef="cryptoAsset">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Crypto Asset
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="customer-info d-flex align-items-center">
+                                <div class="img border-radius-0">
+                                    <img [src]="element.cryptoAsset.img" class="border-radius-0" alt="coin-image">
+                                </div>
+                                <span class="d-block fw-semibold m-0">
+                                    {{element.cryptoAsset.name}} <span class="text-body fw-normal text-xs m-0">({{element.cryptoAsset.abbreviation}})</span>
+                                </span>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Balance Column -->
+                    <ng-container matColumnDef="balance">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Balance
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="fw-medium">
+                            {{element.balance}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Last Transaction Date Column -->
+                    <ng-container matColumnDef="lastTransactionDate">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Last Transaction Date
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="fw-medium">
+                            {{element.lastTransactionDate}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Status
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class="text-success" *ngIf="element.status.active">
+                                Active
+                            </span>
+                            <span class="text-danger" *ngIf="element.status.inactive">
+                                Inactive
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="6">
+                            No data matching the filter "{{input.value}}"
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Add New Popup -->
+<div
+    class="add-new-popup"
+    [class.active]="classApplied"
+>
+    <div class="popup-dialog">
+        <mat-card class="border-radius d-block bg-white border-0 shadow-none">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mb-0">
+                        Add New Wallet
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                    >
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Wallet Name
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter wallet name
+                                </mat-label>
+                                <input matInput placeholder="BTC Wallet">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Wallet Address
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter wallet address
+                                </mat-label>
+                                <input matInput placeholder="3FZasd93cpjq2LkjuV5qJHunfnkLtktZc4">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Crypto Asset
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter crypto asset
+                                </mat-label>
+                                <input matInput placeholder="Bitcoin (BTC)">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Balance
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter balance
+                                </mat-label>
+                                <input matInput placeholder="0.25 BTC">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Last Transaction Date
+                            </label>
+                            <mat-form-field>
+                                <mat-label>Select date</mat-label>
+                                <input matInput [matDatepicker]="dueDatePicker">
+                                <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+                                <mat-datepicker-toggle matIconSuffix [for]="dueDatePicker"></mat-datepicker-toggle>
+                                <mat-datepicker #dueDatePicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Status
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Select
+                                </mat-label>
+                                <mat-select>
+                                    <mat-option value="option1">
+                                        Active
+                                    </mat-option>
+                                    <mat-option value="option2">
+                                        Inactive
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                        color="warn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        mat-button
+                        color="primary"
+                    >
+                        <i class="material-symbols-outlined">
+                            add
+                        </i>
+                        Create
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

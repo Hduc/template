@@ -1,15 +1,15 @@
-<div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+<div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div class="trezo-card-title">
-            <h5 class="mb-0">
-                {{ selectedTimeframe }}
+            <h5 class="!mb-0">
+                Courses Sales
             </h5>
         </div>
         <div class="trezo-card-subtitle">
             <div class="trezo-card-dropdown relative">
                 <button type="button" class="trezo-card-dropdown-btn inline-block transition-all hover:text-primary-500" (click)="toggleCardHeaderMenu()">
                     <span class="inline-block relative ltr:pr-[17px] ltr:md:pr-[20px] rtl:pl-[17px] rtl:ml:pr-[20px]">
-                        This Month
+                        {{ selectedTimeframe }}
                         <i class="ri-arrow-down-s-line text-lg absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2"></i>
                     </span>
                 </button>
@@ -40,10 +40,10 @@
     </div>
     <div class="trezo-card-content h-[225px] relative pt-[20px]">
         <div class="flex items-center z-[2] relative">
-            <h5 class="mb-0 text-[20px]">
+            <h5 class="!mb-0 !text-[20px]">
                 $57.2k
             </h5>
-            <span class="inline-block text-sm text-success-700 ltr:ml-[15px] rtl:mr-[15px] px-[8.3px] py-[3px] rounded-full border border-success-300 bg-success-100">
+            <span class="inline-block text-sm text-success-700 ltr:ml-[15px] rtl:mr-[15px] px-[8.3px] py-[3px] rounded-full border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c]">
                 +10%
             </span>
         </div>

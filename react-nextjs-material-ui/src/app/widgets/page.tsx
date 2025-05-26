@@ -46,105 +46,105 @@ export default function Page() {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <RevenueGrowth />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <LeadConversion />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TotalOrders />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <AnnualProfit />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TicketsResolved />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TicketsInProgress />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TicketsDue />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <TicketsNewOpen />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <Welcome />
         </Grid>
 
-        <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 2 }}>
           <TotalCourses />
         </Grid>
 
-        <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 2 }}>
           <TotalEnrolled />
         </Grid>
 
-        <Grid item xs={12} sm={4} md={4} lg={4} xl={2}>
+        <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 2 }}>
           <TotalMentors />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
           <TotalCustomers />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
           <TotalRevenue />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
           <TopOrders />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <ProjectsOverview />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={6}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <ProjectsRoadmap />
         </Grid> 
       </Grid>
  
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <CoursesSales />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <TimeSpent />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <OurTopCourses />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <ProjectsAnalysis />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <TeamMembers />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 4 }}>
           <LeadsBySource />
         </Grid>
       </Grid>

@@ -3,6 +3,117 @@
 .header-dark {
   .header-area {
     background-color: $dark-card-bg !important;
+
+    .left-header-content {
+      ul {
+        li {
+          &.logo {
+            .logo-white {
+              display: block !important;
+            }
+            .logo-black {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .navbar-area {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      .accordion {
+        .accordion-item {
+          color: var(--whiteColor);
+
+          .accordion-button {
+            color: var(--whiteColor);
+
+            .trezo-badge {
+              background-color: rgba(255, 255, 255, 0.08);
+
+              &.style-two {
+                background-color: rgba(255, 255, 255, 0.08);
+              }
+              &.style-three {
+                background-color: rgba(255, 255, 255, 0.08);
+              }
+            }
+            &:hover {
+              color: var(--whiteColor);
+              background-color: #15203c;
+
+              i {
+                color: var(--whiteColor);
+              }
+              &::before {
+                color: var(--whiteColor);
+              }
+            }
+          }
+          &:has(.active) .accordion-button {
+            color: var(--whiteColor);
+            background-color: #15203c;
+
+            i {
+              color: var(--whiteColor);
+            }
+            &::before {
+              color: var(--whiteColor);
+            }
+          }
+          .accordion-body {
+            background-color: #0c1427;
+
+            .accordion-button {
+              &:hover,
+              &.active {
+                background-color: #15203c;
+              }
+              .trezo-badge {
+                background-color: rgba(255, 255, 255, 0.08);
+
+                &.style-two {
+                  background-color: rgba(255, 255, 255, 0.08);
+                }
+                &.style-three {
+                  background-color: rgba(255, 255, 255, 0.08);
+                }
+              }
+            }
+            .sidebar-sub-menu {
+              .sidemenu-item {
+                .sidemenu-link {
+                  &:hover,
+                  &.active {
+                    background-color: #15203c;
+                  }
+                  .trezo-badge {
+                    background: rgba(255, 255, 255, 0.08);
+
+                    &::before {
+                      background: rgba(255, 255, 255, 0.08);
+                    }
+                    &.style-two {
+                      background: rgba(255, 255, 255, 0.08);
+
+                      &::before {
+                        background: rgba(255, 255, 255, 0.08);
+                      }
+                    }
+                    &.style-three {
+                      background: rgba(255, 255, 255, 0.08);
+
+                      &::before {
+                        background: rgba(255, 255, 255, 0.08);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .left-header-content {
     ul {

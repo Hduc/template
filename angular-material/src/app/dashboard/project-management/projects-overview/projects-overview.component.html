@@ -2,6 +2,7 @@
     class="projects-overview-card mb-25 border-radius d-block bg-white border-0 shadow-none"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
     [class.component-dark-theme]="themeService.isDark()"
+    [class.card-without-border-radius]="themeService.isCardWithoutBorderRadius()"
 >
     <mat-card-header>
         <mat-card-title>
@@ -33,7 +34,7 @@
                         <span class="sub-title d-block">
                             Projects this month
                         </span>
-                        <span class="info-badge d-inline-block">
+                        <span class="trezo-badge up with-border">
                             +10%
                         </span>
                     </div>
@@ -60,7 +61,7 @@
                         <span class="sub-title d-block">
                             Projects this month
                         </span>
-                        <span class="info-badge d-inline-block">
+                        <span class="trezo-badge up with-border">
                             +10%
                         </span>
                     </div>
@@ -87,7 +88,7 @@
                         <span class="sub-title d-block">
                             Projects this month
                         </span>
-                        <span class="info-badge down d-inline-block">
+                        <span class="trezo-badge down with-border">
                             -15%
                         </span>
                     </div>

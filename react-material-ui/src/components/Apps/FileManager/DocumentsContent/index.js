@@ -7,7 +7,7 @@ const Personal = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -91,7 +91,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -175,7 +175,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -259,7 +259,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -343,7 +343,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -427,7 +427,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -511,7 +511,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -595,7 +595,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -679,7 +679,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -763,7 +763,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -847,7 +847,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -931,7 +931,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -1015,7 +1015,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -1099,7 +1099,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -1183,7 +1183,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{
@@ -1267,7 +1267,7 @@ const Personal = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
           <Box
             className="bg-white"
             sx={{

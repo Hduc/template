@@ -301,7 +301,7 @@ const SellersContent = () => {
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {currentData.length > 0 ? (
           currentData.map((seller) => (
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={3} key={seller.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }} key={seller.id}>
               <Card
                 sx={{
                   boxShadow: "none",
@@ -467,7 +467,7 @@ const SellersContent = () => {
                   bgcolor:
                     currentPage === index + 1 ? "primary.main" : "inherit",
                   color:
-                    currentPage === index + 1 ? "white !important" : "inherit",
+                    currentPage === index + 1 ? "white !important" : "text-body",
                   minWidth: "30px",
                   height: "30px",
                 }}

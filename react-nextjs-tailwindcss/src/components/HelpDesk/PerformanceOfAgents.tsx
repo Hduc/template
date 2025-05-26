@@ -201,7 +201,7 @@ const PerformanceOfAgents: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Performance of Agents</h5>
+            <h5 className="!mb-0">Performance of Agents</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -433,7 +433,7 @@ const PerformanceOfAgents: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {displayedAgents.length} of {agents.length} results
             </p>
 
@@ -458,7 +458,7 @@ const PerformanceOfAgents: React.FC = () => {
                     className={`w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border dark:border-[#172036] ${
                       currentPage === index + 1
                         ? "border-primary-500 bg-primary-500 text-white"
-                        : ""
+                        : "border-gray-100"
                     }`}
                     onClick={() => handlePageChange(index + 1)}
                   >

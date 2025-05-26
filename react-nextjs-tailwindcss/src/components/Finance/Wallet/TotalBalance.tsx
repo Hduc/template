@@ -10,7 +10,7 @@ const TotalBalance: React.FC = () => {
           <div className="flex justify-between">
             <div>
               <span className="block">Total Balance</span>
-              <h5 className="mb-0 mt-[3px] text-[20px]">$783,152</h5>
+              <h5 className="!mb-0 !mt-[3px] !text-[20px]">$783,152</h5>
             </div>
 
             <div className="w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full text-primary-600 bg-primary-50 dark:bg-[#0a0e19]">
@@ -21,7 +21,7 @@ const TotalBalance: React.FC = () => {
           </div>
 
           <div className="mt-[15px] flex items-center gap-[10px]">
-            <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+            <span className="inline-block px-[8.5px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
               +22.5%
             </span>
             <span className="block text-xs">Last 30 days</span>

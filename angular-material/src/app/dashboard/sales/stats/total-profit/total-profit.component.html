@@ -1,6 +1,7 @@
 <div
     class="profit-box total-profit-box border-radius position-relative overflow-hidden"
     [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.card-without-border-radius]="themeService.isCardWithoutBorderRadius()"
 >
     <div class="content d-flex align-items-center">
         <div class="icon bg-secondary-100 text-white text-center position-relative z-1">
@@ -16,7 +17,7 @@
         </div>
     </div>
     <div class="info d-flex align-items-center">
-        <span class="info-badge down fw-medium d-inline-block position-relative">
+        <span class="trezo-badge with-border down position-relative">
             <i class="ri-arrow-down-fill"></i>
             7%
         </span>

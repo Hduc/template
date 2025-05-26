@@ -1,0 +1,152 @@
+.sidebar-settings {
+    top: 50%;
+    right: 0;
+    z-index: 9;
+    padding: 15px;
+    position: fixed;
+    transform: translateY(-50%);
+    border: 1px solid #eceef2;
+    border-radius: 10px 0 0 10px;
+    background-color: var(--whiteColor);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    .light-dark-toggle {
+        color: var(--blackColor);
+        margin-bottom: 10px;
+        min-width: unset;
+        height: auto;
+
+        i {
+            font-size: 22px;
+            color: var(--orangeColor);
+        }
+    }
+    .rtl-mode-toggle {
+        color: var(--blackColor);
+        min-width: unset;
+        height: auto;
+
+        .one {
+            width: 35px;
+            height: 20px;
+            border-radius: 100px;
+            background-color: #f6f7f9;
+
+            .two {
+                top: 50%;
+                left: 5px;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                transform: translateY(-50%);
+                transition: var(--transition);
+                background-color: var(--blackColor);
+            }
+        }
+        &.active {
+            .one {
+                .two {
+                    left: 17px;
+                    background-color: var(--primaryColor);
+                }
+            }
+        }
+        &:hover {
+            .one {
+                .two {
+                    background-color: var(--primaryColor);
+                }
+            }
+        }
+    }
+    &.component-dark {
+        background-color: var(--darkColor);
+        border-color: rgba(255, 255, 255, 0.1);
+
+        .light-dark-toggle {
+            color: var(--whiteColor);
+        }
+        .rtl-mode-toggle {
+            color: var(--whiteColor);
+            
+            .one {
+                background-color: rgba(255, 255, 255, 0.1);
+    
+                .two {
+                    background-color: var(--whiteColor);
+                }
+            }
+            &.active {
+                .one {
+                    .two {
+                        background-color: var(--primaryColor);
+                    }
+                }
+            }
+            &:hover {
+                .one {
+                    .two {
+                        background-color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+    &.component-rtl {
+        border-radius: 0 10px 10px 0;
+        right: auto;
+        left: 0;
+    }
+}
+::ng-deep {
+    .sidebar-settings {
+        .light-dark-toggle, .rtl-mode-toggle {
+            .mdc-button__label {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .sidebar-settings {
+        padding: 10px;
+    
+        .light-dark-toggle {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        .rtl-mode-toggle {
+            font-size: 13px;
+        }
+    }
+    ::ng-deep {
+        .sidebar-settings {
+            .light-dark-toggle, .rtl-mode-toggle {
+                .mdc-button__label {
+                    gap: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

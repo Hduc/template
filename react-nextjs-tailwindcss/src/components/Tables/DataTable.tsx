@@ -135,7 +135,7 @@ const DataTable: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex sm:items-center sm:justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Data Table</h5>
+            <h5 className="!mb-0">Data Table</h5>
           </div>
           <div className="trezo-card-subtitle sm:flex sm:items-center">
             <form className="relative sm:w-[320px] mt-[13px] sm:mt-0">

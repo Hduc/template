@@ -6,6 +6,26 @@
         }
     }
 }
+::ng-deep {
+    .cash-end-month-card {
+        &.component-dark-theme {
+            .trezo-card-content {
+                .chart {
+                    .apexcharts-canvas {
+                        .apexcharts-text {
+                            fill: var(--whiteColor);
+                        }
+                        .apexcharts-pie {
+                            circle {
+                                stroke: #0C1427;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {}

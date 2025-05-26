@@ -25,7 +25,7 @@
 				<span class="menu-title-text">MAIN</span>
 			</li>
 			<li
-				class="menu-item {% if request.path == '/dashboard/' or request.path == '/crm/' or request.path == '/project-management/' or request.path == '/lms/' or request.path == '/help-desk/' or request.path == '/analytics/' or request.path == '/crypto/' or request.path == '/sales/' or request.path == '/hospital/' %}open{% endif %}"
+				class="menu-item {% if request.path == '/dashboard/' or request.path == '/crm/' or request.path == '/project-management/' or request.path == '/lms/' or request.path == '/help-desk/' or request.path == '/analytics/' or request.path == '/crypto/' or request.path == '/sales/' or request.path == '/hospital/' or request.path == '/marketing/' or request.path == '/nft/' or request.path == '/saas/' or request.path == '/real-estate/' or request.path == '/shipment/' or request.path == '/finance/' or request.path == '/hrm/' or request.path == '/school/' or request.path == '/call-center/' or request.path == '/pos-system/' or request.path == '/podcast/' or request.path == '/social-media/' or request.path == '/doctor/' or request.path == '/beauty-salon/' or request.path == '/store-analytics/' %}open {% endif %}"
 			>
 				<a
 					href="javascript:void(0);"
@@ -35,7 +35,7 @@
 						>dashboard</span
 					>
 					<span class="title">Dashboard</span>
-					<span class="count">18</span>
+					<span class="count">20</span>
 				</a>
 
 				<ul class="menu-sub">
@@ -192,6 +192,61 @@
 							class="menu-link {% if request.path == '/call-center/' %}active{% endif %}"
 						>
 							Call Center
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+
+					<li class="menu-item mb-0">
+						<a
+							href="/pos-system"
+							class="menu-link {% if request.path == '/pos-system/' %}active{% endif %}"
+						>
+							POS System
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+					<li class="menu-item mb-0">
+						<a
+							href="/podcast"
+							class="menu-link {% if request.path == '/podcast/' %}active{% endif %}"
+						>
+							Podcast
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+					<li class="menu-item mb-0">
+						<a
+							href="/social-media"
+							class="menu-link {% if request.path == '/social-media/' %}active{% endif %}"
+						>
+							Social Media
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+					<li class="menu-item mb-0">
+						<a
+							href="/doctor"
+							class="menu-link {% if request.path == '/doctor/' %}active{% endif %}"
+						>
+							Doctor
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+					<li class="menu-item mb-0">
+						<a
+							href="/beauty-salon"
+							class="menu-link {% if request.path == '/beauty-salon/' %}active{% endif %}"
+						>
+							Beauty Salon
+							<span class="hot tag">New</span>
+						</a>
+					</li>
+					<li class="menu-item mb-0">
+						<a
+							href="/store-analytics"
+							class="menu-link {% if request.path == '/store-analytics/' %}active{% endif %}"
+						>
+							Store Analytics
 							<span class="hot tag">New</span>
 						</a>
 					</li>
@@ -1550,6 +1605,14 @@
 							class="menu-link {% if request.path == '/check-radio/' %}active{% endif %}"
 						>
 							Check & Radio
+						</a>
+					</li>
+					<li class="menu-item">
+						<a
+							href="/sweet-alarts"
+							class="menu-link {% if request.path == '/sweet-alarts/' %}active{% endif %}"
+						>
+							Sweet Alarts
 						</a>
 					</li>
 					<li class="menu-item">

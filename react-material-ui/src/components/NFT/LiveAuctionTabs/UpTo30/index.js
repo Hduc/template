@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
 const nftData = [
   {
     id: "35252",
@@ -185,7 +184,7 @@ const UpTo30 = () => {
             };
 
             return (
-              <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={nft.id}>
+              <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }} key={nft.id}>
                 <Box
                   className="nft-card bg-white"
                   sx={{

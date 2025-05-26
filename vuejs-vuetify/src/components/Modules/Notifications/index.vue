@@ -56,7 +56,7 @@ export default defineComponent({
     const items = ref([
       {
         id: "#JAN-854",
-        timestamp: "01 Dec 2024 09:30 AM",
+        timestamp: "01 Dec 2024 09:40 AM",
         type: "Information",
         content: "New software update available. Click here to download.",
         status: "Unread",
@@ -66,7 +66,7 @@ export default defineComponent({
       },
       {
         id: "#JAN-853",
-        timestamp: "30 Nov 2024 09:30 AM",
+        timestamp: "30 Nov 2024 09:50 AM",
         type: "Alert",
         content:
           "Urgent: Server maintenance scheduled for tomorrow at 10:00 PM.",

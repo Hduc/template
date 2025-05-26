@@ -15,7 +15,7 @@
     <ng-scrollbar visibility="hover" class="!h-screen">
         <div class="pt-[89px] px-[25px] pb-[20px]">
             <div class="accordion">
-                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs">
+                <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs">
                     Main
                 </span>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
@@ -32,7 +32,7 @@
                             Dashboard
                         </span>
                         <span class="rounded-full font-medium inline-block text-center w-[20px] h-[20px] text-[11px] leading-[20px] text-orange-500 bg-orange-50 dark:bg-[#ffffff14] ltr:ml-auto rtl:mr-auto rtl:ml-0">
-                            18
+                            30
                         </span>
                     </button>
                     <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(0) }">
@@ -46,9 +46,6 @@
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/crm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         CRM
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-success-500 bg-success-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            Hot
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -64,6 +61,9 @@
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/helpdesk" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         HelpDesk
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            Hot
+                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -89,73 +89,189 @@
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/hrm" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         HRM
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/school" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         School
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/call-center" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         Call Center
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-success-600 bg-success-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            Popular
                                         </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/marketing" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         Marketing
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/nft" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         NFT
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/saas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         SaaS
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
-                                        </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/real-estate" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         Real Estate
-                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
-                                            New
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-purple-500 bg-purple-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            Top
                                         </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
                                     <a routerLink="/dashboard/shipment" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                         Shipment
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Finance
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/pos-system" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        POS System
                                         <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
                                             New
                                         </span>
                                     </a>
                                 </li>
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
-                                    <a routerLink="/dashboard/finance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
-                                        Finance
+                                    <a routerLink="/dashboard/podcast" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Podcast
                                         <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
                                             New
                                         </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/social-media" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Social Media
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Doctor
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/beauty-salon" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Beauty Salon
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/store-analysis" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Store Analysis
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/restaurant" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Restaurant
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/hotel" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Hotel
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/real-estate-agent" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        RE Agent
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/credit-card" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Credit Card
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/crypto-trader" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Crypto Trader
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/crypto-performance" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Crypto Perf.
+                                        <span class="text-[10px] font-medium py-[1px] px-[8px] ltr:ml-[8px] rtl:mr-[8px] text-orange-500 bg-orange-100 dark:bg-[#ffffff14] inline-block rounded-sm">
+                                            New
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(28)"
+                        [ngClass]="{ 'open': isSectionOpen(28) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            dock_to_right
+                        </i>
+                        <span class="title leading-none">
+                            Layout
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(28) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="https://trezo-twcss-dark.envytheme.com/index.html" target="_blank" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Dark Mode
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="https://trezo-dls.envytheme.com/index.html" target="_blank" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Sidebar Dark
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="https://trezo-twcss-rtl.envytheme.com/index.html" target="_blank" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        RTL Light
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a href="https://trezo-twcss-dark-rtl.envytheme.com/index.html" target="_blank" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        RTL Dark
                                     </a>
                                 </li>
                             </ul>
@@ -208,8 +324,8 @@
                         </div>
                     </div>
                 </div>
-                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
-                    Apps
+                <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs [&:not(:first-child)]:mt-[22px]">
+                    Apps & Pages
                 </span>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
                     <a routerLink="/dashboard/apps" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
@@ -264,7 +380,7 @@
                         <span class="title leading-none">
                             Email
                         </span>
-                        <span class="rounded-full font-medium inline-block text-center w-[20px] h-[20px] text-[11px] leading-[20px] text-success-500 bg-success-50 dark:bg-[#ffffff14] ltr:ml-auto rtl:mr-auto rtl:ml-0">
+                        <span class="rounded-full font-medium inline-block text-center w-[20px] h-[20px] text-[11px] leading-[20px] text-success-600 bg-success-50 dark:bg-[#ffffff14] ltr:ml-auto rtl:mr-auto rtl:ml-0">
                             3
                         </span>
                     </button>
@@ -359,9 +475,6 @@
                         </div>
                     </div>
                 </div>
-                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
-                    PAGES
-                </span>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
@@ -823,13 +936,198 @@
                         [ngClass]="{ 'open': isSectionOpen(12) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            badge
+                        </i>
+                        <span class="title leading-none">
+                            Doctor
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(12) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Patients List
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page/add-patient" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Add Patient
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page/patient-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Patient Details
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page/appointments" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Appointments
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page/prescriptions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Prescriptions
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/doctor-page/write-prescription" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Write a Prescription
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(13)"
+                        [ngClass]="{ 'open': isSectionOpen(13) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            lunch_dining
+                        </i>
+                        <span class="title leading-none">
+                            Restaurant
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(13) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/restaurant-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Menus
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/restaurant-page/dish-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Dish Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(29)"
+                        [ngClass]="{ 'open': isSectionOpen(29) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            hotel
+                        </i>
+                        <span class="title leading-none">
+                            Hotel
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(29) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/hotel-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Rooms List
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/hotel-page/room-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Room Details
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/hotel-page/guests-list" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Guests List
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(30)"
+                        [ngClass]="{ 'open': isSectionOpen(30) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            location_away
+                        </i>
+                        <span class="title leading-none">
+                            Real Estate Agent
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(30) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/real-estate-agent-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Properties
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/real-estate-agent-page/property-details" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Property Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(31)"
+                        [ngClass]="{ 'open': isSectionOpen(31) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                            paid
+                        </i>
+                        <span class="title leading-none">
+                            Crypto Trader
+                        </span>
+                    </button>
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(31) }">
+                        <div class="pt-[4px]">
+                            <ul class="sidebar-sub-menu">
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/crypto-trader-page" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Transactions
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/crypto-trader-page/gainers-losers" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Gainers & Losers
+                                    </a>
+                                </li>
+                                <li class="sidemenu-item mb-[4px] last:mb-0">
+                                    <a routerLink="/dashboard/crypto-trader-page/wallet" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        Wallet
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                    <button
+                        class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
+                        type="button"
+                        (click)="toggleSection(14)"
+                        [ngClass]="{ 'open': isSectionOpen(14) }"
+                    >
+                        <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             local_activity
                         </i>
                         <span class="title leading-none">
                             Events
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(12) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(14) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -865,8 +1163,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(13)"
-                        [ngClass]="{ 'open': isSectionOpen(13) }"
+                        (click)="toggleSection(15)"
+                        [ngClass]="{ 'open': isSectionOpen(15) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             share
@@ -875,7 +1173,7 @@
                             Social
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(13) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(15) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -896,8 +1194,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(14)"
-                        [ngClass]="{ 'open': isSectionOpen(14) }"
+                        (click)="toggleSection(16)"
+                        [ngClass]="{ 'open': isSectionOpen(16) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             content_paste
@@ -906,7 +1204,7 @@
                             Invoices
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(14) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(16) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -937,8 +1235,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(15)"
-                        [ngClass]="{ 'open': isSectionOpen(15) }"
+                        (click)="toggleSection(17)"
+                        [ngClass]="{ 'open': isSectionOpen(17) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             person
@@ -947,7 +1245,7 @@
                             Users
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(15) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(17) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -973,8 +1271,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(16)"
-                        [ngClass]="{ 'open': isSectionOpen(16) }"
+                        (click)="toggleSection(18)"
+                        [ngClass]="{ 'open': isSectionOpen(18) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             account_box
@@ -983,7 +1281,7 @@
                             Profile
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(16) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(18) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1015,15 +1313,15 @@
                         </span>
                     </a>
                 </div>
-                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs [&:not(:first-child)]:mt-[22px]">
                     MODULES
                 </span>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(17)"
-                        [ngClass]="{ 'open': isSectionOpen(17) }"
+                        (click)="toggleSection(19)"
+                        [ngClass]="{ 'open': isSectionOpen(19) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             emoji_emotions
@@ -1032,7 +1330,7 @@
                             Icons
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(17) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(19) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1053,8 +1351,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(18)"
-                        [ngClass]="{ 'open': isSectionOpen(18) }"
+                        (click)="toggleSection(20)"
+                        [ngClass]="{ 'open': isSectionOpen(20) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             qr_code_scanner
@@ -1063,7 +1361,7 @@
                             UI Elements
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(18) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(20) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1174,8 +1472,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(19)"
-                        [ngClass]="{ 'open': isSectionOpen(19) }"
+                        (click)="toggleSection(21)"
+                        [ngClass]="{ 'open': isSectionOpen(21) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             forum
@@ -1184,7 +1482,7 @@
                             Forms
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(19) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(21) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1215,8 +1513,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(20)"
-                        [ngClass]="{ 'open': isSectionOpen(20) }"
+                        (click)="toggleSection(22)"
+                        [ngClass]="{ 'open': isSectionOpen(22) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             pie_chart
@@ -1225,7 +1523,7 @@
                             Charts
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(20) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(22) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1281,8 +1579,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(21)"
-                        [ngClass]="{ 'open': isSectionOpen(21) }"
+                        (click)="toggleSection(23)"
+                        [ngClass]="{ 'open': isSectionOpen(23) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             lock_open
@@ -1291,7 +1589,7 @@
                             Authentication
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(21) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(23) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1337,8 +1635,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(22)"
-                        [ngClass]="{ 'open': isSectionOpen(22) }"
+                        (click)="toggleSection(24)"
+                        [ngClass]="{ 'open': isSectionOpen(24) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             content_copy
@@ -1347,7 +1645,7 @@
                             Extra Pages
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(22) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(24) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1398,8 +1696,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(23)"
-                        [ngClass]="{ 'open': isSectionOpen(23) }"
+                        (click)="toggleSection(25)"
+                        [ngClass]="{ 'open': isSectionOpen(25) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             error
@@ -1408,7 +1706,7 @@
                             Errors
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(23) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(25) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1465,7 +1763,7 @@
                         </span>
                     </a>
                 </div>
-                <span class="block relative font-medium uppercase text-gray-400 mb-[8px] text-xs [&:not(:first-child)]:mt-[22px]">
+                <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs [&:not(:first-child)]:mt-[22px]">
                     Others
                 </span>
                 <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
@@ -1482,8 +1780,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(24)"
-                        [ngClass]="{ 'open': isSectionOpen(24) }"
+                        (click)="toggleSection(26)"
+                        [ngClass]="{ 'open': isSectionOpen(26) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             settings
@@ -1492,7 +1790,7 @@
                             Settings
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(24) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(26) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -1528,8 +1826,8 @@
                     <button
                         class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[30px] rtl:pr-[14px] rtl:pl-[30px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]"
                         type="button"
-                        (click)="toggleSection(25)"
-                        [ngClass]="{ 'open': isSectionOpen(25) }"
+                        (click)="toggleSection(27)"
+                        [ngClass]="{ 'open': isSectionOpen(27) }"
                     >
                         <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                             unfold_more
@@ -1538,7 +1836,7 @@
                             Multi Level Menu
                         </span>
                     </button>
-                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(25) }">
+                    <div class="accordion-collapse" [ngClass]="{ 'open': isSectionOpen(27) }">
                         <div class="pt-[4px]">
                             <ul class="sidebar-sub-menu">
                                 <li class="sidemenu-item mb-[4px] last:mb-0">

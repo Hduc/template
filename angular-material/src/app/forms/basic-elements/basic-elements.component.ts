@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { RouterLink } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 
 @Component({

@@ -1,0 +1,732 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+html {
+    @include mat.theme((
+        color: (
+            theme-type: light,
+            primary: mat.$azure-palette,
+            tertiary: mat.$blue-palette,
+        ),
+        typography: Inter,
+        density: 0,
+    ));
+}
+html {
+    --mat-sys-body-large-size: 14px;
+    --mat-sys-primary: var(--primaryColor);
+    --mat-sys-surface-tint: var(--primaryColor);
+}
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --fontFamily: "Inter", sans-serif;
+    --blackColor: #3A4252;
+    --whiteColor: #ffffff;
+    --bodyColor: #64748B;
+    --borderColor: #ECEEF2;
+    --transition: .5s;
+    --fontSize: 14px;
+    --primaryColor: #605DFF;
+    --secondaryColor: #3584FC;
+    --successColor: #25B003;
+    --dangerColor: #FF4023;
+    --warningColor: #ffc107;
+    --infoColor: #0dcaf0;
+    --lightColor: #f8f9fa;
+    --darkColor: #212529;
+    --purpleColor: #AD63F6;
+    --orangeColor: #FD5812;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--bodyColor);
+    background-color: var(--whiteColor);
+    font: {
+        size: var(--fontSize);
+        family: var(--fontFamily);
+    };
+    &.dark-theme {
+        --bodyColor: #8695aa;
+        background-color: #000000;
+
+        a {
+            color: var(--whiteColor);
+        
+            &:hover {
+                color: var(--primaryColor);
+            }
+        }
+        h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, .display-6, .display-5, .display-4, .display-3, .display-2, .display-1 {
+            color: var(--whiteColor);
+        }
+        .bg-f7f7f7 {
+            background-color: #101010;
+        }
+        .bg-fffef8 {
+            background-color: #000000;
+        }
+        .bg-f6f5f3 {
+            background-color: #101010;
+        }
+        .ecommerce-section-title {
+            .sub-title {
+                background-color: rgba(214, 203, 203, .1);
+            }
+        }
+        .lms-section-title {
+            .sub-title {
+                color: var(--whiteColor);
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+        .marketing-section-title {
+            .sub-title {
+                background-color: #1a1919;
+            }
+        }
+        .mat-mdc-form-field {
+            &.form-control {
+                --mat-sys-on-surface-variant: var(--whiteColor);
+
+                .mat-mdc-text-field-wrapper {
+                    --mat-sys-on-surface: var(--whiteColor);
+                    border-color: rgba(214, 203, 203, 0.2);
+                    --mat-sys-on-surface-variant: var(--whiteColor);
+                }
+            }
+            &.form-select {
+                --mat-sys-on-surface-variant: var(--whiteColor);
+        
+                .mat-mdc-text-field-wrapper {
+                    --mat-sys-on-surface: var(--whiteColor);
+                    border-color: rgba(214, 203, 203, 0.2);
+                    --mat-sys-on-surface-variant: var(--whiteColor);
+                }
+            }
+        }
+        div {
+            &.mat-mdc-select-panel {
+                --mat-sys-on-surface: var(--whiteColor);
+                --mat-sys-surface-container: #222222;
+                --mat-sys-secondary-container: #000000;
+                --mat-sys-on-secondary-container: var(--whiteColor);
+            }
+        }
+    }
+    &.rtl-enabled {
+        direction: rtl;
+
+        .lms-default-btn {
+            .mdc-button__label {
+                padding: {
+                    left: 0;
+                    right: 34px;
+                };
+                i {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+        .mat-mdc-option {
+            .mdc-list-item__primary-text {
+                margin: {
+                    right: 0;
+                    left: auto;
+                };
+            }
+        }
+        .cdk-visually-hidden {
+            margin: 0;
+        }
+    }
+}
+a {
+    transition: var(--transition);
+    color: var(--blackColor);
+    text-decoration: none;
+    outline: 0 !important;
+
+    &:hover {
+        text-decoration: none;
+        color: var(--primaryColor);
+    }
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, .display-6, .display-5, .display-4, .display-3, .display-2, .display-1 {
+    color: var(--blackColor);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: {
+        top: 0;
+        bottom: 10px;
+    };
+}
+p {
+    color: var(--bodyColor);
+    line-height: 1.6;
+    margin: {
+        top: 0;
+        bottom: 15px;
+    };
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+:focus {
+    outline: 0 !important;
+}
+.ptb-180 {
+    padding: {
+        top: 180px;
+        bottom: 180px;
+    };
+}
+.pt-180 {
+    padding-top: 180px;
+}
+.pb-180 {
+    padding-bottom: 180px;
+}
+.ptb-155 {
+    padding: {
+        top: 155px;
+        bottom: 155px;
+    };
+}
+.pt-155 {
+    padding-top: 155px;
+}
+.pb-155 {
+    padding-bottom: 155px;
+}
+.mat-mdc-button {
+    .mat-mdc-button-touch-target {
+        height: 100% !important;
+    }
+}
+
+// BG Color
+.bg-f7f7f7 {
+    background-color: #f7f7f7;
+}
+.bg-fffef8 {
+    background-color: #fffef8;
+}
+.bg-f6f5f3 {
+    background-color: #f6f5f3;
+}
+
+// Default Btn
+.ecommerce-default-btn {
+    &.mat-mdc-button {
+        height: auto;
+        min-width: unset;
+        text-align: center;
+        padding: 12.5px 29px;
+        border-radius: 100px;
+        display: inline-block;
+        transition: var(--transition);
+        color: var(--whiteColor) !important;
+        background-color: var(--primaryColor);
+        border: 1px solid var(--primaryColor);
+        font: {
+            weight: 500;
+            size: var(--fontSize);
+        };
+        &.with-border {
+            background-color: transparent;
+            border-color: var(--primaryColor);
+            color: var(--primaryColor) !important;
+    
+            &:hover {
+                border-color: var(--primaryColor);
+                color: var(--whiteColor) !important;
+                background-color: var(--primaryColor);
+            }
+        }
+        &:hover {
+            border-color: var(--blackColor);
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor);
+        }
+    }
+}
+.lms-default-btn {
+    &.mat-mdc-button {
+        height: auto;
+        min-width: auto;
+        padding: 13px 19px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 0.375rem;
+        transition: var(--transition);
+        color: var(--whiteColor) !important;
+        border: 1px solid var(--primaryColor);
+        background-color: var(--primaryColor);
+        font: {
+            size: 16px;
+            weight: 500;
+        };
+        .mdc-button__label {
+            padding-left: 34px;
+
+            i {
+                left: 0;
+                top: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+        }
+        &:hover {
+            border-color: var(--blackColor);
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor);
+        }
+    }
+}
+.marketing-default-btn {
+    &.mat-mdc-button {
+        height: auto;
+        min-width: auto;
+        padding: 12.5px 29px;
+        border-radius: 100px;
+        display: inline-block;
+        transition: var(--transition);
+        color: var(--whiteColor) !important;
+        border: 1px solid var(--orangeColor);
+        background-color: var(--orangeColor);
+        font: {
+            weight: 500;
+            size: var(--fontSize);
+        };
+        &:hover {
+            border-color: var(--blackColor);
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor);
+        }
+    }
+}
+
+// Section Title
+.ecommerce-section-title {
+    margin-bottom: 65px;
+
+    .sub-title {
+        padding: 6.5px 15px;
+        margin-bottom: 12px;
+        border-radius: 100px;
+        color: var(--primaryColor);
+        background-color: #ecf0ff;
+    }
+    h2 {
+        font-size: 40px;
+        max-width: 580px;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+    }
+}
+.lms-section-title {
+    margin-bottom: 65px;
+    max-width: 500px;
+
+    .sub-title {
+        font-size: 16px;
+        padding: 6px 18px;
+        border-radius: 100px;
+        color: var(--blackColor);
+        background-color: #ffef99;
+
+        .d-flex {
+            gap: 10px;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        margin-top: 15px;
+        letter-spacing: -1px;
+    }
+}
+.marketing-section-title {
+    margin-bottom: 65px;
+
+    .sub-title {
+        background-color: #ffe8d4;
+        color: var(--orangeColor);
+        border-radius: 100px;
+        padding: 6.5px 15px;
+        margin-bottom: 12px;
+    }
+    h2 {
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+        max-width: 550px;
+        font-size: 40px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+// Mat Form Field
+.mat-mdc-form-field {
+    &.form-control {
+        --mat-sys-on-surface-variant: var(--blackColor);
+        --mat-sys-body-large-size: 14px;
+        text-align: start;
+        width: 100%;
+
+        .mat-mdc-form-field-bottom-align {
+            display: none;
+        }
+        .mat-mdc-text-field-wrapper {
+            border-radius: 0.375rem;
+            border: 1px solid #d5d9e2;
+        }
+        .mdc-line-ripple {
+            &::before {
+                display: none;
+            }
+        }
+        .mdc-text-field--filled {
+            &:not(.mdc-text-field--disabled) {
+                background-color: transparent;
+            }
+        }
+    }
+    &.form-select {
+        --mat-sys-on-surface-variant: var(--blackColor);
+        --mat-sys-body-large-size: 14px;
+        text-align: start;
+        width: 100%;
+
+        .mat-mdc-form-field-bottom-align {
+            display: none;
+        }
+        .mat-mdc-text-field-wrapper {
+            border-radius: 0.375rem;
+            border: 1px solid #d5d9e2;
+        }
+        .mdc-text-field--filled {
+            &:not(.mdc-text-field--disabled) {
+                background-color: transparent;
+            }
+        }
+        .mdc-line-ripple {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+// Utilities
+@import "./utilities";
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    body {
+        font-size: 13px;
+
+        &.rtl-enabled {
+            .lms-default-btn {
+                &.mat-mdc-button {
+                    .mdc-button__label {
+                        padding: {
+                            left: 0;
+                            right: 30px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+    p {
+        font-size: 13px;
+    }
+    .ptb-180 {
+        padding: {
+            top: 70px;
+            bottom: 70px;
+        };
+    }
+    .pt-180 {
+        padding-top: 70px;
+    }
+    .pb-180 {
+        padding-bottom: 70px;
+    }
+    .ptb-155 {
+        padding: {
+            top: 45px;
+            bottom: 45px;
+        };
+    }
+    .pt-155 {
+        padding-top: 45px;
+    }
+    .pb-155 {
+        padding-bottom: 45px;
+    }
+
+    // Default Btn
+    .ecommerce-default-btn {
+        &.mat-mdc-button {
+            font-size: 13px;
+            padding: 10.5px 24px;
+        }
+    }
+    .lms-default-btn {
+        &.mat-mdc-button {
+            font-size: 13px;
+            padding: 11px 15px;
+            
+            .mdc-button__label {
+                padding-left: 30px;
+        
+                i {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    .marketing-default-btn {
+        &.mat-mdc-button {
+            font-size: 13px;
+            padding: 10.8px 25px;
+        }
+    }
+
+    // Section Title
+    .ecommerce-section-title {
+        margin-bottom: 35px;
+    
+        h2 {
+            font-size: 24px;
+            max-width: 100%;
+            margin-bottom: 10px;
+            letter-spacing: normal;
+        }
+    }
+    .lms-section-title {
+        margin-bottom: 35px;
+        max-width: 100%;
+    
+        .sub-title {
+            font-size: 13px;
+            padding: {
+                left: 15px;
+                right: 15px;
+            };
+            .d-flex {
+                gap: 8px;
+            }
+        }
+        h2 {
+            font-size: 24px;
+            letter-spacing: normal;
+        }
+    }
+    .marketing-section-title {
+        margin-bottom: 35px;
+    
+        h2 {
+            letter-spacing: normal;
+            margin-bottom: 10px;
+            max-width: 100%;
+            font-size: 24px;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+
+    // Mat Form Field
+    .mat-mdc-form-field {
+        &.form-control {
+            --mat-sys-body-large-size: 13px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .ptb-180 {
+        padding: {
+            top: 90px;
+            bottom: 90px;
+        };
+    }
+    .pt-180 {
+        padding-top: 90px;
+    }
+    .pb-180 {
+        padding-bottom: 90px;
+    }
+    .ptb-155 {
+        padding: {
+            top: 65px;
+            bottom: 65px;
+        };
+    }
+    .pt-155 {
+        padding-top: 65px;
+    }
+    .pb-155 {
+        padding-bottom: 65px;
+    }
+
+    // Default Btn
+    .lms-default-btn {
+        &.mat-mdc-button {
+            padding: 12.4px 19px;
+            font-size: 15px;
+        }
+    }
+
+    // Section Title
+    .ecommerce-section-title {
+        margin-bottom: 45px;
+    
+        h2 {
+            font-size: 30px;
+            max-width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+    .lms-section-title {
+        margin-bottom: 45px;
+    
+        h2 {
+            font-size: 32px;
+        }
+    }
+    .marketing-section-title {
+        margin-bottom: 45px;
+    
+        h2 {
+            margin-bottom: 10px;
+            max-width: 1000%;
+            font-size: 32px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .ptb-180 {
+        padding: {
+            top: 110px;
+            bottom: 110px;
+        };
+    }
+    .pt-180 {
+        padding-top: 110px;
+    }
+    .pb-180 {
+        padding-bottom: 110px;
+    }
+    .ptb-155 {
+        padding: {
+            top: 85px;
+            bottom: 85px;
+        };
+    }
+    .pt-155 {
+        padding-top: 85px;
+    }
+    .pb-155 {
+        padding-bottom: 85px;
+    }
+
+    // Section Title
+    .ecommerce-section-title {
+        margin-bottom: 55px;
+    
+        h2 {
+            font-size: 36px;
+            max-width: 520px;
+            margin-bottom: 12px;
+        }
+    }
+    .lms-section-title {
+        margin-bottom: 55px;
+    
+        h2 {
+            font-size: 38px;
+        }
+    }
+    .marketing-section-title {
+        margin-bottom: 55px;
+    
+        h2 {
+            max-width: 520px;
+            font-size: 36px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .ptb-180 {
+        padding: {
+            top: 150px;
+            bottom: 150px;
+        };
+    }
+    .pt-180 {
+        padding-top: 150px;
+    }
+    .pb-180 {
+        padding-bottom: 150px;
+    }
+    .ptb-155 {
+        padding: {
+            top: 125px;
+            bottom: 125px;
+        };
+    }
+    .pt-155 {
+        padding-top: 125px;
+    }
+    .pb-155 {
+        padding-bottom: 125px;
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

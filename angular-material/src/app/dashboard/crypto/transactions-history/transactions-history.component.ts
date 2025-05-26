@@ -46,7 +46,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Bitcoin',
             abbreviation: 'BTC'
         },
-        date: '2024-09-10',
+        date: '2025-09-10',
         amount: '0.50 BTC',
         price: '$27,500',
         type: {
@@ -61,7 +61,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ethereum',
             abbreviation: 'ETH'
         },
-        date: '2024-09-08',
+        date: '2025-09-08',
         amount: '5.00 ETH',
         price: '$1,750',
         type: {
@@ -76,7 +76,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Binance',
             abbreviation: 'BNB'
         },
-        date: '2024-09-05',
+        date: '2025-09-05',
         amount: '100 SOL',
         price: '$250',
         type: {
@@ -91,7 +91,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Tether',
             abbreviation: 'USDT'
         },
-        date: '2024-08-30',
+        date: '2025-08-30',
         amount: '10 BNB',
         price: '$1.00',
         type: {
@@ -106,7 +106,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'XRP',
             abbreviation: 'XRP'
         },
-        date: '2024-08-25',
+        date: '2025-08-25',
         amount: '1,000 ADA',
         price: '$0.50',
         type: {
@@ -121,7 +121,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Solana',
             abbreviation: 'SOL'
         },
-        date: '2024-08-20',
+        date: '2025-08-20',
         amount: '0.40 BTC',
         price: '$35',
         type: {
@@ -136,7 +136,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'USDC',
             abbreviation: 'USDC'
         },
-        date: '2024-08-15',
+        date: '2025-08-15',
         amount: '3.00 USDC',
         price: '$0.9999',
         type: {
@@ -151,7 +151,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Dogecoin',
             abbreviation: 'DOGE'
         },
-        date: '2024-08-14',
+        date: '2025-08-14',
         amount: '3.00 DOGE',
         price: '$0,1221',
         type: {
@@ -166,7 +166,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Toncoin',
             abbreviation: 'TON'
         },
-        date: '2024-08-10',
+        date: '2025-08-10',
         amount: '3.00 TON',
         price: '$5.82',
         type: {
@@ -181,7 +181,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Cardano',
             abbreviation: 'ADA'
         },
-        date: '2024-08-08',
+        date: '2025-08-08',
         amount: '3.00 ADA',
         price: '$0,3884',
         type: {
@@ -196,7 +196,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'TRON',
             abbreviation: 'TRX'
         },
-        date: '2024-08-07',
+        date: '2025-08-07',
         amount: '10.00 TRX',
         price: '$0.1554',
         type: {
@@ -211,7 +211,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Avalanche',
             abbreviation: 'AVAX'
         },
-        date: '2024-08-02',
+        date: '2025-08-02',
         amount: '43.22 AVAX',
         price: '$28.77',
         type: {
@@ -226,7 +226,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Shiba Inu',
             abbreviation: 'SHIB'
         },
-        date: '2024-07-25',
+        date: '2025-07-25',
         amount: '43.23 SHIB',
         price: '$0.1554',
         type: {
@@ -241,7 +241,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Chainlink',
             abbreviation: 'LINK'
         },
-        date: '2024-08-01',
+        date: '2025-08-01',
         amount: '54.23 LINK',
         price: '$28.77',
         type: {

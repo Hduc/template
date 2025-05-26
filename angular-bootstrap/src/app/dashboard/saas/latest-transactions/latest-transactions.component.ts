@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-latest-transactions',
-    imports: [NgIf],
+    imports: [NgIf, RouterLink],
     templateUrl: './latest-transactions.component.html',
     styleUrl: './latest-transactions.component.scss'
 })

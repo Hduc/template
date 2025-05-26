@@ -79,13 +79,12 @@
 }
 
 /* dark-theme style */
-.dark-theme .sidebarMenu li a {
+[class="dark-theme"] .sidebarMenu li a {
   color: var(--whiteColor);
 }
-.dark-theme .sidebarMenu li a.active, .dark-theme .sidebarMenu li a:hover {
+[class="dark-theme"] .sidebarMenu li a.active, [class="dark-theme"] .sidebarMenu li a:hover {
   color: var(--primaryColor);
 }
-
 
 /* RTL Style */
 [dir="rtl"] .sidebarMenu li a {

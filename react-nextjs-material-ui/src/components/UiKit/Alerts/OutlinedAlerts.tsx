@@ -31,24 +31,24 @@ const OutlinedAlerts: React.FC = () => {
           <Alert
             variant="outlined"
             severity="success"
-            sx={{ fontSize: "14px" }}
+            sx={{ fontSize: "14px", color: "success.main" }}
           >
             This is an outlined success Alert.
           </Alert>
 
-          <Alert variant="outlined" severity="info" sx={{ fontSize: "14px" }}>
+          <Alert variant="outlined" severity="info" sx={{ fontSize: "14px", color: "info.main"}}>
             This is an outlined info Alert.
           </Alert>
 
           <Alert
             variant="outlined"
             severity="warning"
-            sx={{ fontSize: "14px" }}
+            sx={{ fontSize: "14px", color: "warning.main" }}
           >
             This is an outlined warning Alert.
           </Alert>
 
-          <Alert variant="outlined" severity="error" sx={{ fontSize: "14px" }}>
+          <Alert variant="outlined" severity="error" sx={{ fontSize: "14px", color: "error.main" }}>
             This is an outlined error Alert.
           </Alert>
         </Stack>

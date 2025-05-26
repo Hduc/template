@@ -55,7 +55,7 @@ const SocialSearch: React.FC = () => {
     <>
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
-          <h5 className="mb-[5px]">Social Search</h5>
+          <h5 className="!mb-[5px]">Social Search</h5>
 
           <span className="block text-sm">Total traffic in this week</span>
 

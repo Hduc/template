@@ -16,21 +16,21 @@ const Hospital = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 5 }}>
           <Welcome />
 
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <OverallVisitors />
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 6 }}>
               <PatientsLast7Days />
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 7 }}>
           <PatientAdmissionsDischarges />
         </Grid>
       </Grid>
@@ -40,15 +40,15 @@ const Hospital = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 5 }}>
           <EmergencyRoomVisits />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={2}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 2 }}>
           <CriticalPatients />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={6} xl={5}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 5 }}>
           <BedOccupancyRate />
         </Grid>
       </Grid>
@@ -58,11 +58,11 @@ const Hospital = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <PatientAppointments />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <ScheduleAppointment />
         </Grid>
       </Grid>
@@ -72,11 +72,11 @@ const Hospital = () => {
         columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         justifyContent="center"
       >
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <PatientByAge />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <HospitalEarnings />
         </Grid>
       </Grid>

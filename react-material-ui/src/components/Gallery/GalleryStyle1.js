@@ -45,7 +45,7 @@ const GalleryStyle1 = () => {
           spacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
           {galleryData.map((item) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} xl={3} key={item.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 3 }} key={item.id}>
               <img
                 src={item.src}
                 className="border-radius"

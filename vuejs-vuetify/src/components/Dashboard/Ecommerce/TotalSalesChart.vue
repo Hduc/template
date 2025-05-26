@@ -25,6 +25,7 @@
         </v-list>
       </v-menu>
     </div>
+
     <div class="chart">
       <apexchart
         v-if="isClient"

@@ -40,7 +40,4 @@ export class ReAddPropertyComponent {
         }
     }
 
-    // File Uploader
-    public multiple: boolean = true;
-
 }

@@ -199,48 +199,26 @@ const MyTasks: React.FC = () => {
           >
             <Table sx={{ minWidth: 500 }} aria-label="Table">
               <TableHead className="bg-primary-50">
-                <TableRow>
-                  <TableCell
-                    sx={{
+                <TableRow
+                  sx={{
+                    "& th": {
                       fontWeight: "500",
-                      padding: "10px 24px",
+                      padding: "10px 13px",
                       fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    #
-                  </TableCell>
+                    },
+                  }}
+                >
+                  <TableCell className="text-black border-bottom">#</TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Project Name
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Deadline
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Status
                   </TableCell>
                 </TableRow>
@@ -254,11 +232,17 @@ const MyTasks: React.FC = () => {
                     )
                   : rows
                 ).map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell
-                      sx={{
+                  <TableRow
+                    key={row.id}
+                    sx={{
+                      "& td": {
                         padding: "8px 13px",
                         fontSize: "14px",
+                      },
+                    }}
+                  >
+                    <TableCell
+                      sx={{
                         width: "65px",
                       }}
                       className="border-bottom"
@@ -266,13 +250,7 @@ const MyTasks: React.FC = () => {
                       <Checkbox {...label} />
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "8px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       <Typography
                         sx={{
                           fontWeight: "500",
@@ -283,22 +261,11 @@ const MyTasks: React.FC = () => {
                       </Typography>
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "8px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.deadline}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "8px 20px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       <div className={`trezo-badge ${row.status}`}>
                         {row.status}
                       </div>
@@ -307,7 +274,7 @@ const MyTasks: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={4} />
+                    <TableCell className="border-bottom" colSpan={4} />
                   </TableRow>
                 )}
               </TableBody>

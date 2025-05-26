@@ -66,6 +66,9 @@ export class ConversionService {
                             }
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     legend: {
                         show: false,
                         position: 'top',

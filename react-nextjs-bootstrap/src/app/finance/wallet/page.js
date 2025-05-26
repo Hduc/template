@@ -2,6 +2,7 @@
 
 import DebitCard from "@/components/Finance/Wallet/DebitCard";
 import Static from "@/components/Finance/Wallet/Static";
+import TotalBalance from "@/components/Finance/Wallet/TotalBalance";
 import TotalExpenses from "@/components/Finance/Wallet/TotalExpenses";
 import TotalIncome from "@/components/Finance/Wallet/TotalIncome";
 import TransactionHistory from "@/components/Finance/Wallet/TransactionHistory";
@@ -35,10 +36,7 @@ export default function Page() {
         <Col lg={4}>
           <Row>
             <Col sm={12} md={4} lg={12}>
-              <div style={{ marginBottom: "60px" }}>
-                <span className="d-block mb-1">Accounts Receivable</span>
-                <h4 className="fs-20 mb-0">$15,990</h4>
-              </div>
+              <TotalBalance />
             </Col>
 
             <Col sm={6} md={4} lg={12}>

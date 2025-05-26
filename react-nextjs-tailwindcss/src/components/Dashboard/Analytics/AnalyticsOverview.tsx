@@ -167,7 +167,7 @@ const AnalyticsOverview: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Analytics Overview</h5>
+            <h5 className="!mb-0">Analytics Overview</h5>
           </div>
 
           <div className="trezo-card-subtitle mt-[13px] sm:mt-0">
@@ -219,13 +219,13 @@ const AnalyticsOverview: React.FC = () => {
                         <span className="block text-xs mb-[2px] text-black dark:text-white">
                           {item.label}
                         </span>
-                        <h5 className="text-md mb-0">{item.value}</h5>
+                        <h5 className="!text-md !mb-0">{item.value}</h5>
                       </div>
                       <div>
                         <span className="block text-xs mb-[2px] text-black dark:text-white">
                           Goal Reached
                         </span>
-                        <h5 className="text-md mb-0 text-gray-500 dark:text-gray-400 ltr:text-right rtl:text-left">
+                        <h5 className="!text-md !mb-0 !text-gray-500 dark:!text-gray-400 ltr:!text-right rtl:!text-left">
                           {item.goal}%
                         </h5>
                       </div>

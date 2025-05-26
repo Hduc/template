@@ -128,9 +128,9 @@ const Conversion: React.FC = () => {
         <div className="trezo-card-content relative">
           <span className="block mb-[5px]">Conversion</span>
 
-          <h3 className="leading-none text-lg md:text-xl mb-[8px]">32.5%</h3>
+          <h3 className="!leading-none !text-lg md:!text-xl !mb-[8px]">32.5%</h3>
 
-          <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 rounded-[100px]">
+          <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#172036] rounded-[100px]">
             +1.4%
           </span>
           

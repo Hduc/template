@@ -358,9 +358,9 @@ const MarketPriceStatistics = () => {
                   width={24}
                   height={24}
                 />
-                <span className="fs-14 fw-semibold text-secondary ms-1">
+                <div className="fs-14 fw-semibold text-secondary ms-1">
                   Bitcoin
-                </span>
+                </div>
                 <span className="material-symbols-outlined fs-20">
                   keyboard_arrow_down
                 </span>
@@ -374,7 +374,7 @@ const MarketPriceStatistics = () => {
                     width={24}
                     height={24}
                   />
-                  <span className="ms-1">Ethereum (BTC)</span>
+                  <span className="ms-1" style={{ fontSize: "13px" }}>Ethereum (BTC)</span>
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
@@ -384,7 +384,7 @@ const MarketPriceStatistics = () => {
                     width={24}
                     height={24}
                   />
-                  <span className="ms-1">Solana (SOL)</span>
+                  <span className="ms-1" style={{ fontSize: "13px" }}>Solana (SOL)</span>
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
@@ -394,7 +394,7 @@ const MarketPriceStatistics = () => {
                     width={24}
                     height={24}
                   />
-                  <span className="ms-1">Binance (BNB)</span>
+                  <span className="ms-1" style={{ fontSize: "13px" }}>Binance (BNB)</span>
                 </Dropdown.Item>
 
                 <Dropdown.Item className="text-secondary" href="#">
@@ -404,7 +404,7 @@ const MarketPriceStatistics = () => {
                     width={24}
                     height={24}
                   />
-                  <span className="ms-1">Cardano (ADA)</span>
+                  <span className="ms-1" style={{ fontSize: "13px" }}>Cardano (ADA)</span>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

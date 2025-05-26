@@ -1,8 +1,5 @@
 .creator-details-card {
     .trezo-card-content {
-        .text-xs {
-            font-size: 12px;
-        }
         .author {
             margin-bottom: 25px;
             gap: 17px;
@@ -131,7 +128,7 @@
                                 width: 30px;
                                 height: 30px;
                                 font-size: 18px;
-                                background-color: #eceef2;
+                                background-color: var(--borderColor);
 
                                 &:hover {
                                     background-color: var(--primaryColor);

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+        <!-- Title -->
+        <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+
+        <!-- Sidebar Settings -->
+        <div class="sidebar-settings fixed top-1/2 -translate-y-1/2 ltr:right-0 rtl:left-0 bg-white dark:bg-[#0a0e19] ltr:rounded-l-[10px] rtl:rounded-r-[10px] border border-gray-100 dark:border-[#202c4b] ltr:border-r-0 rtl:border-l-0 shadow-md z-[9] p-[10px] md:p-[15px]">
+            <button type="button" class="light-dark-toggle leading-none transition-all text-black dark:text-white font-medium flex items-center gap-[10px]" id="light-dark-toggle">
+                Light/Dark:
+                <i class="material-symbols-outlined !text-[20px] md:!text-[22px] text-[#fe7a36]">
+                    light_mode
+                </i>
+            </button>
+            <button type="button" class="rtl-mode-toggle flex items-center text-black dark:text-white font-medium mt-[10px] gap-[10px]" id="rtl-mode-toggle">
+                LTR/RTL:
+                <span class="inline-block relative rounded-full w-[35px] h-[20px] bg-gray-50 dark:bg-[#0a0e19]">
+                    <span class="inline-block transition-all absolute h-[12px] w-[12px] bg-black dark:bg-white rounded-full top-1/2 -translate-y-1/2"></span>
+                </span>
+            </button>
+        </div>
+        <!-- End Sidebar Settings -->
+
+        <!-- Navbar -->
+        <div class="helpdesk-navbar fixed top-0 right-0 left-0 transition-all h-auto z-[5] py-[20px] md:py-[30px] lg:py-[35px] dark:bg-[#0a0e19]" id="navbar">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="flex items-center relative flex-wrap lg:flex-nowrap justify-between lg:justify-start">
+                    <a href="helpdesk-index.html" class="inline-block w-[150px] ltr:mr-[15px] rtl:ml-[15px]">
+                        <img src="assets/images/helpdesk/logo.svg" alt="logo" class="inline-block dark:hidden">
+                        <img src="assets/images/helpdesk/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                    </a>
+                    <button type="button" class="inline-block relative leading-none lg:hidden" id="navbar-burger-menu">
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-dark dark:bg-white"></span>
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-dark dark:bg-white"></span>
+                        <span class="h-[3px] w-[30px] my-[5px] block bg-dark dark:bg-white"></span>
+                    </button>
+                    <div class="hidden lg:flex items-center grow basis-full basis-auto"><!-- For Big Devices -->
+                        <ul class="flex mx-auto flex-row gap-[30px] xl:gap-[50px]">
+                            <li>
+                                <a href="helpdesk-index.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="helpdesk-features.html" class="font-medium text-purple-600 transition-all hover:text-purple-600">
+                                    Features
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://trezo-twcss.envytheme.com/" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600" target="_blank">
+                                    Live Demo
+                                </a>
+                            </li>
+                            <li>
+                                <a href="helpdesk-integrations.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Integrations
+                                </a>
+                            </li>
+                            <li>
+                                <a href="helpdesk-pricing.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="helpdesk-blog.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="helpdesk-contact.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="https://trezo-twcss.envytheme.com/" class="inline-block font-medium rounded-[100px] border border-purple-600 text-base text-purple-600 py-[9px] md:py-[10.5px] px-[25px] md:px-[30px] transition-all hover:text-white hover:bg-purple-500 hover:border-purple-500" target="_blank">
+                            Get Started
+                        </a>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] border border-gray-200 dark:border-[#202c4b] mt-[20px] p-[20px] md:p-[30px] w-full hidden lg:!hidden" id="navbar-collapse"><!-- For Responsive -->
+                        <ul>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-index.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-features.html" class="font-medium text-purple-600 transition-all hover:text-purple-600">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="https://trezo-twcss.envytheme.com/" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600" target="_blank">
+                                    Live Demo
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-integrations.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Integrations
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-pricing.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-blog.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="my-[14px] md:my-[16px] first:mt-0 last:mb-0">
+                                <a href="helpdesk-contact.html" class="font-medium text-gray-500 dark:text-white transition-all hover:text-purple-600">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="https://trezo-twcss.envytheme.com/" class="inline-block font-medium rounded-[100px] border border-purple-600 text-base text-purple-600 py-[9px] md:py-[10.5px] px-[25px] md:px-[30px] transition-all hover:text-white hover:bg-purple-500 hover:border-purple-500 mt-[15px]" target="_blank">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 -z-[1] bg-center bg-no-repeat bg-cover dark:hidden"
+                style="background-image: url(assets/images/helpdesk/navbar-bg.jpg);"
+            ></div>
+        </div>
+        <!-- End Navbar -->
+        
+        <!-- Extra Space -->
+        <div class="h-[74px] md:h-[94px] lg:h-[114px]"></div>
+        <!-- End Extra Space -->
+        
+        <!-- Features -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px] text-center mx-auto md:max-w-[630px]">
+                    <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl !leading-[1.2] !mb-[12px] lg:!mb-[15px]">
+                        Powerful <span class="text-purple-600 italic">Features</span>. Seamless Support.
+                    </h2>
+                    <p class="md:text-[15px] lg:text-md">
+                        Everything your team needs to deliver fast, efficient, and personalized customer support — all in one unified platform.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-[25px]">
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] px-[20px] py-[30px] md:px-[25px] md:py-[50px] lg:px-[45px] relative z-[1] group">
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                        <div class="mb-[30px] md:mb-[50px] lg:mb-[60px] w-[85px] h-[85px] flex items-center justify-center rounded-full bg-white dark:bg-dark transition-all group-hover:rounded-[15px]">
+                            <img src="assets/images/helpdesk/icons/lightbulb.svg" alt="lightbulb">
+                        </div>
+                        <h3 class="!text-gray-900 dark:!text-white !font-medium !text-lg md:!text-[20px] lg:!text-xl !mb-[15px] lg:!mb-[25px]">
+                            Smart Routing
+                        </h3>
+                        <p>
+                            Automatically assign tickets based on issue type or workload.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] px-[20px] py-[30px] md:px-[25px] md:py-[50px] lg:px-[45px] relative z-[1] group">
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                        <div class="mb-[30px] md:mb-[50px] lg:mb-[60px] w-[85px] h-[85px] flex items-center justify-center rounded-full bg-white dark:bg-dark transition-all group-hover:rounded-[15px]">
+                            <img src="assets/images/helpdesk/icons/email.svg" alt="email">
+                        </div>
+                        <h3 class="!text-gray-900 dark:!text-white !font-medium !text-lg md:!text-[20px] lg:!text-xl !mb-[15px] lg:!mb-[25px]">
+                            Unified Inbox
+                        </h3>
+                        <p>
+                            Manage emails, chats, and social messages from one place.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] px-[20px] py-[30px] md:px-[25px] md:py-[50px] lg:px-[45px] relative z-[1] group">
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                        <div class="mb-[30px] md:mb-[50px] lg:mb-[60px] w-[85px] h-[85px] flex items-center justify-center rounded-full bg-white dark:bg-dark transition-all group-hover:rounded-[15px]">
+                            <img src="assets/images/helpdesk/icons/refresh.svg" alt="refresh">
+                        </div>
+                        <h3 class="!text-gray-900 dark:!text-white !font-medium !text-lg md:!text-[20px] lg:!text-xl !mb-[15px] lg:!mb-[25px]">
+                            Real-Time Collaboration
+                        </h3>
+                        <p>
+                            Internal notes and agent chat streamline teamwork.
+                        </p>
+                    </div>
+                    <div class="bg-white dark:bg-[#0a0e19] rounded-[15px] px-[20px] py-[30px] md:px-[25px] md:py-[50px] lg:px-[45px] relative z-[1] group">
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                        <div class="mb-[30px] md:mb-[50px] lg:mb-[60px] w-[85px] h-[85px] flex items-center justify-center rounded-full bg-white dark:bg-dark transition-all group-hover:rounded-[15px]">
+                            <img src="assets/images/helpdesk/icons/search.svg" alt="search">
+                        </div>
+                        <h3 class="!text-gray-900 dark:!text-white !font-medium !text-lg md:!text-[20px] lg:!text-xl !mb-[15px] lg:!mb-[25px]">
+                            Insight Reports
+                        </h3>
+                        <p>
+                            View agent performance, resolution time, and customer trends.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Features -->
+        
+        <!-- Funfacts -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px] bg-gray-900">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-[25px]">
+                    <div>
+                        <h2 class="!text-white !font-medium !text-5xl md:!text-[55px] lg:!text-[72px] !leading-none !mb-[7px]">
+                            10K+
+                        </h2>
+                        <p class="text-gray-100 lg:text-lg">
+                            Tickets Resolved Daily
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="!text-white !font-medium !text-5xl md:!text-[55px] lg:!text-[72px] !leading-none !mb-[7px]">
+                            98%
+                        </h2>
+                        <p class="text-gray-100 lg:text-lg">
+                            User Satisfaction
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="!text-white !font-medium !text-5xl md:!text-[55px] lg:!text-[72px] !leading-none !mb-[7px]">
+                            100+
+                        </h2>
+                        <p class="text-gray-100 lg:text-lg">
+                            Integration Options
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="!text-white !font-medium !text-5xl md:!text-[55px] lg:!text-[72px] !leading-none !mb-[7px]">
+                            24/7
+                        </h2>
+                        <p class="text-gray-100 lg:text-lg">
+                            Global Support
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Funfacts -->
+        
+        <!-- Trusted Partners -->
+        <div class="pb-[70px] md:pb-[90px] lg:pb-[110px] xl:pb-[130px] 2xl:pb-[150px] bg-gray-900">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="relative z-[1] mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px]">
+                    <div class="absolute top-1/2 -translate-y-1/2 -z-[1] left-0 w-full h-[1px] bg-gray-600"></div>
+                    <span class="inline-block md:text-md lg:text-lg text-white bg-gray-700 border border-gray-600 rounded-[100px] py-[4px] px-[20px]">
+                        Trusted by Teams Worldwide
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-[25px] items-center">
+                    <img src="assets/images/helpdesk/partners/partner1.svg" class="inline-block" alt="partner-image">
+                    <img src="assets/images/helpdesk/partners/partner2.svg" class="inline-block" alt="partner-image">
+                    <img src="assets/images/helpdesk/partners/partner3.svg" class="inline-block" alt="partner-image">
+                    <img src="assets/images/helpdesk/partners/partner4.svg" class="inline-block" alt="partner-image">
+                    <img src="assets/images/helpdesk/partners/partner5.svg" class="inline-block" alt="partner-image">
+                </div>
+            </div>
+        </div>
+        <!-- End Trusted Partners -->
+        
+        <!-- Testimonials -->
+        <div class="pt-[70px] md:pt-[90px] lg:pt-[110px] xl:pt-[130px] 2xl:pt-[150px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="mb-[30px] md:mb-[40px] lg:mb-[50px] xl:mb-[60px] text-center mx-auto md:max-w-[630px]">
+                    <h2 class="!text-gray-900 dark:!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl !leading-[1.2] !mb-[10px] lg:!mb-[12px]">
+                        What Users Are Saying
+                    </h2>
+                    <p class="md:text-[15px] lg:text-md">
+                        Hear how Trezo is transforming support for real businesses.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[25px]">
+                    <div class="px-[20px] py-[30px] md:px-[30px] md:py-[40px] lg:px-[40px] lg:py-[50px] xl:px-[50px] xl:py-[70px] bg-white dark:bg-[#0a0e19] rounded-[15px] relative z-[1]">
+                        <div class="flex items-center text-orange-400 leading-none text-md lg:text-lg gap-[3px] mb-[18px] md:mb-[22px] lg:mb-[30px]">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-[15px] md:text-md lg:text-[17px] xl:text-lg">
+                            Trezo HelpDesk has completely streamlined our support operations. The unified inbox and real-time dashboard help our team stay aligned and resolve issues faster. We’ve reduced our average response time by nearly 40%.
+                        </p>
+                        <div class="flex items-center gap-[12px] mt-[18px] md:mt-[25px] lg:mt-[40px] xl:mt-[50px]">
+                            <img src="assets/images/helpdesk/users/user1.jpg" class="rounded-full w-[42px]" alt="user-image">
+                            <div>
+                                <h5 class="!text-base !mb-[3px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                    Rachel Nguyen
+                                </h5>
+                                <span class="block">
+                                    Growth Marketing Lead, BrightDash
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="px-[20px] py-[30px] md:px-[30px] md:py-[40px] lg:px-[40px] lg:py-[50px] xl:px-[50px] xl:py-[70px] bg-white dark:bg-[#0a0e19] rounded-[15px] relative z-[1]">
+                        <div class="flex items-center text-orange-400 leading-none text-md lg:text-lg gap-[3px] mb-[18px] md:mb-[22px] lg:mb-[30px]">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-[15px] md:text-md lg:text-[17px] xl:text-lg">
+                            I love how easy it is to automate ticket routing and follow-ups in Trezo. It saves our agents hours every week and has improved our SLA compliance dramatically. It’s a must-have for scaling support.
+                        </p>
+                        <div class="flex items-center gap-[12px] mt-[18px] md:mt-[25px] lg:mt-[40px] xl:mt-[50px]">
+                            <img src="assets/images/helpdesk/users/user2.jpg" class="rounded-full w-[42px]" alt="user-image">
+                            <div>
+                                <h5 class="!text-base !mb-[3px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                    Michael Brooks
+                                </h5>
+                                <span class="block">
+                                    Senior Digital Strategist, Amply Media
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                    </div>
+                    <div class="px-[20px] py-[30px] md:px-[30px] md:py-[40px] lg:px-[40px] lg:py-[50px] xl:px-[50px] xl:py-[70px] bg-white dark:bg-[#0a0e19] rounded-[15px] relative z-[1]">
+                        <div class="flex items-center text-orange-400 leading-none text-md lg:text-lg gap-[3px] mb-[18px] md:mb-[22px] lg:mb-[30px]">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <p class="font-medium text-gray-900 dark:text-gray-100 text-[15px] md:text-md lg:text-[17px] xl:text-lg">
+                            Trezo’s integration with Slack and our CRM means our support team never misses a beat. Internal collaboration is smoother, and we’ve seen a noticeable uptick in customer satisfaction since switching.
+                        </p>
+                        <div class="flex items-center gap-[12px] mt-[18px] md:mt-[25px] lg:mt-[40px] xl:mt-[50px]">
+                            <img src="assets/images/helpdesk/users/user3.jpg" class="rounded-full w-[42px]" alt="user-image">
+                            <div>
+                                <h5 class="!text-base !mb-[3px] !font-semibold !text-gray-800 dark:!text-gray-100">
+                                    Lila Fernandez
+                                </h5>
+                                <span class="block">
+                                    Head of Marketing, Corelytics
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-[15px] absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                            style="background: linear-gradient(180deg, #F6F8FF 0%, #F5EBFF 100%);"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonials -->
+        
+        <!-- CTA -->
+        <div class="py-[70px] md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div
+                    class="text-center rounded-[15px] bg-cover bg-center bg-no-repeat py-[70px] md:py-[90px] lg:py-[110px] px-[20px]"
+                    style="background-image: url(assets/images/helpdesk/cta-bg.jpg);"
+                >
+                    <div class="mx-auto md:max-w-[520px]">
+                        <h2 class="!text-white md:-tracking-[1px] !font-medium !text-xl md:!text-3xl lg:!text-4xl xl:!text-5xl !leading-[1.2] !mb-[10px] lg:!mb-[12px]">
+                            Get the Latest Support Tips
+                        </h2>
+                        <p class="md:text-[15px] lg:text-md text-white">
+                            Join our community of helpdesk pros.
+                        </p>
+                        <form action="#" class="relative mt-[20px] md:mt-[35px] lg:mt-[45px] md:max-w-[496px] mx-auto">
+                            <i class="material-symbols-outlined absolute top-[14px] md:top-[21px] ltr:left-[20px] rtl:right-[20px] ltr:md:left-[30px] rtl:md:right-[30px] text-gray-400 !text-[22px] md:!text-[26px]">
+                                mail
+                            </i>
+                            <input type="text" class="block w-full bg-gray-800 rounded-[100px] fw-medium text-base text-white h-[50px] md:h-[70px] !outline-0 placeholder:text-gray-300 px-[52px] md:px-[70px]" placeholder="Enter your email address">
+                            <button type="button" class="md:absolute md:top-[13px] ltr:md:right-[13px] rtl:md:left-[13px] mt-[20px] md:mt-0 inline-block font-medium rounded-[100px] bg-purple-600 border border-purple-600 text-base text-white py-[9px] md:py-[10.5px] px-[25px] md:px-[30px] transition-all hover:bg-purple-500 hover:border-purple-500">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End CTA -->
+        
+        <!-- Footer -->
+        <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+            <div class="h-px w-full bg-purple-100 dark:bg-gray-900 dark:hidden"></div>
+        </div>
+        <div class="relative z-[1] py-[70px] md:py-[90px] lg:py-[110px] xl:py-[130px] 2xl:py-[150px] dark:bg-[#0a0e19]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
+                    <div class="ltr:xl:-mr-[35px] rtl:xl:-ml-[35px]">
+                        <a href="helpdesk-index.html" class="inline-block max-w-[132px] mb-[20px] md:mb-[25px]">
+                            <img src="assets/images/helpdesk/logo.svg" alt="logo" class="inline-block dark:hidden">
+                            <img src="assets/images/helpdesk/white-logo.svg" alt="logo" class="hidden dark:inline-block">
+                        </a>
+                        <p>
+                            Your all-in-one marketing command center — built to help you grow, scale, and win smarter.
+                        </p>
+                        <div class="mt-[20px] md:mt-[35px]">
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-purple-600 transition-all hover:text-purple-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-purple-600 transition-all hover:text-purple-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-twitter-x-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-purple-600 transition-all hover:text-purple-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" target="_blank" class="inline-block leading-none text-[20px] text-purple-600 transition-all hover:text-purple-400 ltr:mr-[5px] rtl:ml-[5px] ltr:last:mr-0 rtl:last:ml-0">
+                                <i class="ri-dribbble-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Pricing Plans
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Use Cases
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[130px] rtl:xl:pr-[130px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Resources
+                        </h3>
+                        <ul>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Help Center
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Documentation
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="mb-[10px] last:mb-0">
+                                <a href="#" class="lg:text-[15px] xl:text-[16px] inline-block text-gray-500 dark:text-gray-400 transition-all hover:text-purple-600">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ltr:xl:pl-[80px] rtl:xl:pr-[80px]">
+                        <h3 class="!leading-[1.2] !text-[16px] md:!text-lg !mb-[18px] !font-semibold !text-gray-700 dark:!text-gray-100">
+                            Get in Touch
+                        </h3>
+                        <ul>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Email:
+                                <a href="mailto:support@trezo.com" class="text-purple-500 hover:text-purple-800 transition-all">
+                                    support@trezo.com
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Phone:
+                                <a href="tell:+1(555)123-4567" class="text-purple-500 hover:text-purple-800 transition-all">
+                                    +1 (555) 123-4567
+                                </a>
+                            </li>
+                            <li class="lg:text-[15px] xl:text-[16px] text-gray-500 dark:text-gray-400 mb-[10px] last:mb-0">
+                                Location:
+                                <span class="font-semibold">
+                                    123 Learning Ave, Knowledge City, USA
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute top-0 left-0 right-0 bottom-0 -z-[1] dark:hidden"
+                style="background: linear-gradient(180deg, #FFF 0%, #F3E8FF 100%);"
+            ></div>
+        </div>
+        <div class="py-[25px] md:py-[30px]">
+            <div class="container sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1308px] mx-auto px-[12px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:gap-[25px]">
+                    <div class="text-center ltr:lg:text-left rtl:lg:text-right">
+                        <p>
+                            © <span class="text-purple-500">Trezo</span> is Proudly Owned by <a href="https://envytheme.com/" target="_blank" class="text-primary-500 transition-all hover:underline">EnvyTheme</a>
+                        </p>
+                    </div>
+                    <div class="text-center lg:flex items-center justify-end gap-[15px]">
+                        <a href="#" class="transition-all hover:text-purple-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Terms of Service
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-purple-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Privacy Policy
+                        </a>
+                        <div class="w-[1px] h-[15px] bg-gray-200 dark:bg-gray-800 hidden lg:block"></div>
+                        <a href="#" class="transition-all hover:text-purple-500 inline-block mt-[10px] lg:mt-0 mx-[7px] lg:mx-0">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer -->
+        
+        <!-- Back To Top -->
+        <button id="backToTopBtn" class="fixed bottom-[20px] right-[20px] lg:bottom-[30px] lg:right-[30px] xl:bottom-[40px] xl:right-[40px] z-[9] flex items-center justify-center w-[40px] h-[40px] bg-purple-500 hover:bg-purple-700 text-white rounded-full transition-all text-[20px]" type="button">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!-- End Back To Top -->
+         
+        <!-- Links Of JS File -->
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>

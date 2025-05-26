@@ -268,7 +268,7 @@ const StudentsList: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex sm:items-center sm:justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Students List</h5>
+            <h5 className="!mb-0 !font-semibold">Students List</h5>
           </div>
           <div className="trezo-card-subtitle flex items-center mt-[15px] sm:mt-0">
             <form className="relative w-[225px] sm:w-[265px] ltr:mr-[10px] rtl:ml-[10px] ltr:sm:mr-[15px] rtl:sm:ml-[15px]">
@@ -502,7 +502,7 @@ const StudentsList: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {paginatedStudents.length} of {filteredStudents.length}{" "}
               results
             </p>

@@ -12,7 +12,7 @@ const Stats: React.FC = () => {
             <div className="trezo-card-content flex justify-between">
               <div>
                 <span className="block">New Customers</span>
-                <h3 className="text-2xl mt-[4px] mb-[8px]">14.5k</h3>
+                <h3 className="!text-2xl !mt-[4px] !mb-[8px]">14.5k</h3>
                 <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   +7%
                 </span>
@@ -28,7 +28,7 @@ const Stats: React.FC = () => {
             <div className="trezo-card-content flex justify-between">
               <div>
                 <span className="block">Sales</span>
-                <h3 className="text-2xl mt-[4px] mb-[8px]">$64.5k</h3>
+                <h3 className="!text-2xl !mt-[4px] !mb-[8px]">$64.5k</h3>
                 <span className="inline-block text-xs px-[9px] text-danger-700 border border-danger-300 bg-danger-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   -1.4%
                 </span>
@@ -44,7 +44,7 @@ const Stats: React.FC = () => {
             <div className="trezo-card-content flex justify-between">
               <div>
                 <span className="block">Products</span>
-                <h3 className="text-2xl mt-[4px] mb-[8px]">11.9k</h3>
+                <h3 className="!text-2xl !mt-[4px] !mb-[8px]">11.9k</h3>
                 <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   +1.1%
                 </span>

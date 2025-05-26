@@ -155,7 +155,7 @@ const CoursesSales: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Courses Sales</h5>
+            <h5 className="!mb-0">Courses Sales</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -192,8 +192,8 @@ const CoursesSales: React.FC = () => {
 
         <div className="trezo-card-content h-[225px] relative pt-[20px]">
           <div className="flex items-center z-[2] relative">
-            <h5 className="mb-0 text-[20px]">$57.2k</h5>
-            <span className="inline-block text-sm text-success-700 ltr:ml-[15px] rtl:mr-[15px] px-[8.3px] py-[3px] rounded-full border border-success-300 bg-success-100">
+            <h5 className="!mb-0 !text-[20px]">$57.2k</h5>
+            <span className="inline-block text-sm text-success-700 ltr:ml-[15px] rtl:mr-[15px] px-[8.3px] py-[3px] rounded-full border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c]">
               +10%
             </span>
           </div>

@@ -558,7 +558,7 @@ const CustomersTable: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               {" "}
               Showing {indexOfFirstCustomer + 1} to {indexOfLastCustomer} of{" "}
               {filteredCustomers.length} results

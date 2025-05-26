@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Typography</h5>
+        <h5 className="!mb-0">Typography</h5>
 
         <ol className="breadcrumb mt-[12px] md:mt-0">
           <li className="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -34,7 +34,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Headings</h5>
+                <h5 className="!mb-0">Headings</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -52,7 +52,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">
+                <h5 className="!mb-0">
                   <span className="text-danger-500">.h1</span> through{" "}
                   <span className="text-danger-500">.h6</span> Classes are also
                   Available
@@ -74,7 +74,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Customizing Headings</h5>
+                <h5 className="!mb-0">Customizing Headings</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -90,7 +90,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Lead</h5>
+                <h5 className="!mb-0">Lead</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -103,7 +103,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Blockquotes</h5>
+                <h5 className="!mb-0">Blockquotes</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -116,12 +116,12 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Naming a Source</h5>
+                <h5 className="!mb-0">Naming a Source</h5>
               </div>
             </div>
             <div className="trezo-card-content">
               <blockquote className="text-[1.25rem] bg-gray-50 p-[20px] md:p-[25px] dark:bg-[#172036]">
-                <p className="mb-[10px]">
+                <p className="!mb-[10px]">
                   A well-known quote, contained in a blockquote element.
                 </p>
                 <figcaption className="text-sm italic text-black dark:text-white">
@@ -135,7 +135,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Inline Text Elements</h5>
+                <h5 className="!mb-0">Inline Text Elements</h5>
               </div>
             </div>
             <div className="trezo-card-content">
@@ -181,28 +181,28 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Display Headings</h5>
+                <h5 className="!mb-0">Display Headings</h5>
               </div>
             </div>
             <div className="trezo-card-content">
-              <h1 className="display-1">Display 1</h1>
-              <h1 className="display-2">Display 2</h1>
-              <h1 className="display-3">Display 3</h1>
-              <h1 className="display-4">Display 4</h1>
-              <h1 className="display-5">Display 5</h1>
-              <h1 className="display-6">Display 6</h1>
+              <h1 className="!display-1">Display 1</h1>
+              <h1 className="!display-2">Display 2</h1>
+              <h1 className="!display-3">Display 3</h1>
+              <h1 className="!display-4">Display 4</h1>
+              <h1 className="!display-5">Display 5</h1>
+              <h1 className="!display-6">Display 6</h1>
             </div>
           </div>
 
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Blockquotes Alignment</h5>
+                <h5 className="!mb-0">Blockquotes Alignment</h5>
               </div>
             </div>
             <div className="trezo-card-content">
               <blockquote className="text-center text-[1.25rem] bg-gray-50 p-[20px] md:p-[25px] dark:bg-[#172036]">
-                <p className="mb-[10px]">
+                <p className="!mb-[10px]">
                   A well-known quote, contained in a blockquote element.
                 </p>
                 <figcaption className="text-sm italic text-black dark:text-white">
@@ -216,7 +216,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-content">
               <blockquote className="ltr:text-right rtl:text-left text-[1.25rem] bg-gray-50 p-[20px] md:p-[25px] dark:bg-[#172036]">
-                <p className="mb-[10px]">
+                <p className="!mb-[10px]">
                   A well-known quote, contained in a blockquote element.
                 </p>
                 <figcaption className="text-sm italic text-black dark:text-white">
@@ -230,7 +230,7 @@ export default function Page() {
           <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md mb-[25px]">
             <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
               <div className="trezo-card-title">
-                <h5 className="mb-0">Abbreviations</h5>
+                <h5 className="!mb-0">Abbreviations</h5>
               </div>
             </div>
             <div className="trezo-card-content">

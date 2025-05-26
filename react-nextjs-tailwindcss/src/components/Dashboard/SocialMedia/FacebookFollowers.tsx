@@ -15,7 +15,7 @@ const FacebookFollowers: React.FC = () => {
             height={40}
           />
 
-          <h3 className="font-medium text-2xl md:text-3xl lg:text-4xl -tracking-[1px] mt-[16px] -mb-[2px]">
+          <h3 className="!font-medium !text-2xl md:!text-3xl lg:!text-4xl !-tracking-[1px] !mt-[16px] !-mb-[2px]">
             98.5k
           </h3>
 

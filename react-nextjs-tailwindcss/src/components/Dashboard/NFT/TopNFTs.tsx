@@ -89,7 +89,7 @@ const TopNFTs: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Top NFTs</h5>
+            <h5 className="!mb-0">Top NFTs</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -184,7 +184,7 @@ const TopNFTs: React.FC = () => {
 
                       <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[10px] ltr:first:pl-0 rtl:first:pr-0 border-b border-primary-50 dark:border-[#172036] ltr:last:pr-0 rtl:last:pl-0 ltr:last:text-right rtl:last:text-left">
                         <span
-                          className={`inline-block text-xs px-[9px] ${
+                          className={`inline-block text-xs px-[9px] dark:bg-[#15203c] dark:border-[#15203c] ${
                             nft.status.startsWith("+")
                               ? "text-success-700 border-success-300 bg-success-100"
                               : "text-orange-700 border-orange-300 bg-orange-100"

@@ -7,7 +7,7 @@ import PropertiesForRent from "./PropertiesForRent";
 const PropertyStatus: React.FC = () => {
   return (
     <>
-      <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[15px]">
+      <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[15px]">
         Property Status
       </h3>
 

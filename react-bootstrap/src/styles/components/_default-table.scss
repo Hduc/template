@@ -911,7 +911,7 @@
  
 }
 
-@media only screen and (max-width : 576px) {
+@media only screen and (max-width: 576px) {
 
     .default-table-area {
         &.top-selling-products {
@@ -992,7 +992,7 @@
     
 }
 
-@media only screen and (max-width : 685px) {
+@media only screen and (max-width: 685px) {
 
     .default-table-area {
         &.recent-orders {
@@ -1051,7 +1051,7 @@
 }
 
 /* Min width 768px to Max width 992px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
     .default-table-area {
         &.email-list {
@@ -1117,7 +1117,7 @@
     }
 }
 
-@media only screen and (max-width : 685px) {
+@media only screen and (max-width: 685px) {
 
     .default-table-area {
         &.recent-orders {
@@ -1159,7 +1159,7 @@
 }
 
 /* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px)  {
+@media only screen and (min-width: 992px) and (max-width: 1199px)  {
 
     .default-table-area {
         &.recent-leads {
@@ -1198,17 +1198,17 @@
 }
 
 /* Min width 1200px to Max width 1399px */
-@media only screen and (min-width : 1200px) and (max-width : 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
     .default-table-area {
         &.top-selling-products {
             .table {
-                width: 595.33px;
+                width: 620px;
             }
         }
         &.recent-orders {
             .table {
-                width: 690px;
+                width: 719px;
             }
         }
         &.recent-leads {
@@ -1216,11 +1216,11 @@
                 width: 690px;
             }
         }
-        &.to-do-list {
-            .table {
-                width: 738.66px;
-            }
-        }
+        // &.to-do-list {
+        //     .table {
+        //         width: 738.66px;
+        //     }
+        // }
         &.recent-customer-ratings {
             .table {
                 width: 551.5px;
@@ -1256,7 +1256,7 @@
 }
 
 /* Min width 1400px to Max width 1500px */
-@media only screen and (min-width : 1400px) and (max-width : 1550px) {
+@media only screen and (min-width: 1400px) and (max-width: 1550px) {
 
     .crypto-th-table {
         width: 715px;

@@ -86,7 +86,10 @@ const TopCreators: React.FC = () => {
           justifyContent="center"
         >
           {creatorsData.map((creator) => (
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={3} key={creator.id}>
+            <Grid
+              size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 3 }}
+              key={creator.id}
+            >
               <Box className="bg-white" sx={{ borderRadius: "7px", p: "10px" }}>
                 <Image
                   src={creator.backgroundImage}
@@ -108,14 +111,14 @@ const TopCreators: React.FC = () => {
                     }}
                   >
                     <Image
-                      src={creator.profileImage} 
+                      src={creator.profileImage}
                       alt="user-image"
                       width={68}
                       height={68}
                       style={{
                         borderRadius: "100%",
                         width: "68px",
-                        height: '68px'
+                        height: "68px",
                       }}
                     />
                     <Image

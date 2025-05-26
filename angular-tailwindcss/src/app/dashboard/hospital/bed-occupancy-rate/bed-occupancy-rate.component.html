@@ -1,7 +1,7 @@
-<div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+<div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
         <div class="trezo-card-title">
-            <h5 class="mb-0">
+            <h5 class="!mb-0">
                 Bed Occupancy Rate
             </h5>
             <p class="mt-px">
@@ -42,63 +42,59 @@
         </div>
     </div>
     <div class="trezo-card-content">
-        <div class="lg:grid lg:grid-cols-2 gap-[25px] items-center">
-            <div>
-                <ul>
-                    <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                        <div class="flex items-center justify-center rounded-md bg-secondary-100 text-secondary-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
-                            <i class="material-symbols-outlined">
-                                airplay
-                            </i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg mb-px">
-                                1,275
-                            </h3>
-                            <span class="block">
-                                Total Beds
-                            </span>
-                        </div>
-                    </li>
-                    <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                        <div class="flex items-center justify-center rounded-md bg-purple-100 text-purple-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
-                            <i class="material-symbols-outlined">
-                                bed
-                            </i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg mb-px">
-                                825
-                            </h3>
-                            <span class="block">
-                                Occupied Beds
-                            </span>
-                        </div>
-                    </li>
-                    <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                        <div class="flex items-center justify-center rounded-md bg-success-100 text-success-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
-                            <i class="material-symbols-outlined">
-                                featured_seasonal_and_gifts
-                            </i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg mb-px">
-                                450
-                            </h3>
-                            <span class="block">
-                                Available Beds
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div class="text-center mt-[20px] md:mt-0">
-                    <div id="bed_occupancy_rate_chart"></div>
-                    <p class="text-xs mx-auto leading-[1.6] max-w-[189px]">
-                        The donut or pie chart representing the occupancy rate.
-                    </p>
-                </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[20px] md:gap-[25px] items-center">
+            <ul>
+                <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
+                    <div class="flex items-center justify-center rounded-md bg-secondary-100 dark:bg-[#15203c] text-secondary-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                        <i class="material-symbols-outlined">
+                            airplay
+                        </i>
+                    </div>
+                    <div>
+                        <h3 class="!text-lg !mb-px">
+                            1,275
+                        </h3>
+                        <span class="block">
+                            Total Beds
+                        </span>
+                    </div>
+                </li>
+                <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
+                    <div class="flex items-center justify-center rounded-md bg-purple-100 dark:bg-[#15203c] text-purple-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                        <i class="material-symbols-outlined">
+                            bed
+                        </i>
+                    </div>
+                    <div>
+                        <h3 class="!text-lg !mb-px">
+                            825
+                        </h3>
+                        <span class="block">
+                            Occupied Beds
+                        </span>
+                    </div>
+                </li>
+                <li class="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
+                    <div class="flex items-center justify-center rounded-md bg-success-100 dark:bg-[#15203c] text-success-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                        <i class="material-symbols-outlined">
+                            featured_seasonal_and_gifts
+                        </i>
+                    </div>
+                    <div>
+                        <h3 class="!text-lg !mb-px">
+                            450
+                        </h3>
+                        <span class="block">
+                            Available Beds
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="text-center">
+                <div id="bed_occupancy_rate_chart"></div>
+                <p class="text-xs mx-auto !leading-[1.6] max-w-[189px]">
+                    The donut or pie chart representing the occupancy rate.
+                </p>
             </div>
         </div>
     </div>

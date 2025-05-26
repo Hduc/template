@@ -137,7 +137,7 @@ const TicketsStatus: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Total Sales</h5>
+            <h5 className="!mb-0">Total Sales</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -188,7 +188,7 @@ const TicketsStatus: React.FC = () => {
           </div>
 
           <div className="mt-[20px] md:mt-[25px] xl:mt-0 ltr:right-0 rtl:left-0 xl:absolute xl:top-[20px] xl:w-[175px]">
-            <h6 className="font-normal text-lg mb-[4px]">Avg. 1.5k</h6>
+            <h6 className="!font-normal !text-lg !mb-[4px]">Avg. 1.5k</h6>
 
             <span className="block">Tickets Weekly Solved</span>
 

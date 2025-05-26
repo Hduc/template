@@ -5,7 +5,6 @@ import { Card, Box, Typography } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-
 import UpcomingEvents from "./UpcomingEvents";
 
 const WorkingSchedule: React.FC = () => {

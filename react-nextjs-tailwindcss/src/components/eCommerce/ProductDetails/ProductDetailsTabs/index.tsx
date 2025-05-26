@@ -85,7 +85,7 @@ const ProductDetailsTabs: React.FC = () => {
           {activeTab === 1 && (
             <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
               <div className="trezo-card-content">
-                <h6 className="font-semibold mb-[12px] text-[15px]">General</h6>
+                <h6 className="!font-semibold !mb-[12px] !text-[15px]">General</h6>
                 <ul>
                   <li className="py-[11px] px-[20px] border-b border-l border-r border-gray-100 dark:border-[#172036] first:border-t">
                     <span className="text-black dark:text-white">Brand:</span>
@@ -128,7 +128,7 @@ const ProductDetailsTabs: React.FC = () => {
                     10
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Display
                 </h6>
                 <ul>
@@ -149,7 +149,7 @@ const ProductDetailsTabs: React.FC = () => {
                     No
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Processor
                 </h6>
                 <ul>
@@ -166,7 +166,7 @@ const ProductDetailsTabs: React.FC = () => {
                     2.3 GHz
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Memory
                 </h6>
                 <ul>
@@ -175,7 +175,7 @@ const ProductDetailsTabs: React.FC = () => {
                     12GB
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Storage
                 </h6>
                 <ul>
@@ -190,7 +190,7 @@ const ProductDetailsTabs: React.FC = () => {
                     512GB
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Connectivity
                 </h6>
                 <ul>
@@ -207,7 +207,7 @@ const ProductDetailsTabs: React.FC = () => {
                     4.2
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Inputs
                 </h6>
                 <ul>
@@ -248,7 +248,7 @@ const ProductDetailsTabs: React.FC = () => {
                     Yes
                   </li>
                 </ul>
-                <h6 className="font-semibold mb-[12px] mt-[20px] md:mt-[25px] text-[15px]">
+                <h6 className="!font-semibold !mb-[12px] !mt-[20px] md:!mt-[25px] !text-[15px]">
                   Ports and slots
                 </h6>
                 <ul>
@@ -377,7 +377,7 @@ const ProductDetailsTabs: React.FC = () => {
 
                     <div className="md:col-span-1">
                       <div className="text-center mt-[25px] md:mt-0">
-                        <h3 className="mb-[7px] leading-none text-5xl">4.28</h3>
+                        <h3 className="!mb-[7px] !leading-none !text-5xl">4.28</h3>
                         <div className="flex items-center justify-center mb-[10px] text-[#ee8336] text-[30px] gap-[4px]">
                           <i className="ri-star-fill"></i>
                           <i className="ri-star-fill"></i>

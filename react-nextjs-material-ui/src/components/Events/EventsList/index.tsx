@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Card,
@@ -21,7 +21,7 @@ import {
 import NextLink from "next/link";
 import { useTheme } from "@mui/material/styles";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight"; 
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import AddIcon from "@mui/icons-material/Add";
 
 interface TablePaginationActionsProps {
@@ -344,6 +344,15 @@ const EventsList: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter(
+    (row) =>
+      row.eventID.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      row.eventName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -366,7 +375,7 @@ const EventsList: React.FC = () => {
           >
             <Box
               component="form"
-              className='t-search-form'
+              className="t-search-form"
               sx={{
                 width: "265px",
               }}
@@ -376,8 +385,10 @@ const EventsList: React.FC = () => {
               </label>
               <input
                 type="text"
-                className='t-input'
+                className="t-input"
                 placeholder="Search event here..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </Box>
 
@@ -492,7 +503,7 @@ const EventsList: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )

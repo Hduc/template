@@ -175,7 +175,7 @@ const ProjectsAnalysis: React.FC = () => {
               options={options}
               series={series}
               type="bar"
-              height={408}
+              height={420}
               width={"100%"}
             />
           )}

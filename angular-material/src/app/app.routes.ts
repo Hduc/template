@@ -235,6 +235,39 @@ import { NmCreatorsComponent } from './pages/nft-marketplace-page/nm-creators/nm
 import { NmWalletConnectComponent } from './pages/nft-marketplace-page/nm-wallet-connect/nm-wallet-connect.component';
 import { NmCreateNftComponent } from './pages/nft-marketplace-page/nm-create-nft/nm-create-nft.component';
 import { NmCreatorDetailsComponent } from './pages/nft-marketplace-page/nm-creator-details/nm-creator-details.component';
+import { PosSystemComponent } from './dashboard/pos-system/pos-system.component';
+import { PodcastComponent } from './dashboard/podcast/podcast.component';
+import { SocialMediaComponent } from './dashboard/social-media/social-media.component';
+import { DoctorComponent } from './dashboard/doctor/doctor.component';
+import { BeautySalonComponent } from './dashboard/beauty-salon/beauty-salon.component';
+import { StoreAnalysisComponent } from './dashboard/store-analysis/store-analysis.component';
+import { RestaurantComponent } from './dashboard/restaurant/restaurant.component';
+import { DoctorPageComponent } from './pages/doctor-page/doctor-page.component';
+import { DPatientsListComponent } from './pages/doctor-page/d-patients-list/d-patients-list.component';
+import { DAddPatientComponent } from './pages/doctor-page/d-add-patient/d-add-patient.component';
+import { DPatientDetailsComponent } from './pages/doctor-page/d-patient-details/d-patient-details.component';
+import { DAppointmentsComponent } from './pages/doctor-page/d-appointments/d-appointments.component';
+import { DPrescriptionsComponent } from './pages/doctor-page/d-prescriptions/d-prescriptions.component';
+import { DWritePrescriptionComponent } from './pages/doctor-page/d-write-prescription/d-write-prescription.component';
+import { RestaurantPageComponent } from './pages/restaurant-page/restaurant-page.component';
+import { RMenusComponent } from './pages/restaurant-page/r-menus/r-menus.component';
+import { RDishDetailsComponent } from './pages/restaurant-page/r-dish-details/r-dish-details.component';
+import { HotelComponent } from './dashboard/hotel/hotel.component';
+import { RealEstateAgentComponent } from './dashboard/real-estate-agent/real-estate-agent.component';
+import { CreditCardComponent } from './dashboard/credit-card/credit-card.component';
+import { CryptoTraderComponent } from './dashboard/crypto-trader/crypto-trader.component';
+import { CryptoPerformanceComponent } from './dashboard/crypto-performance/crypto-performance.component';
+import { HotelPageComponent } from './pages/hotel-page/hotel-page.component';
+import { HpRoomsListComponent } from './pages/hotel-page/hp-rooms-list/hp-rooms-list.component';
+import { HpRoomDetailsComponent } from './pages/hotel-page/hp-room-details/hp-room-details.component';
+import { HpGuestsListComponent } from './pages/hotel-page/hp-guests-list/hp-guests-list.component';
+import { RealEstateAgentPageComponent } from './pages/real-estate-agent-page/real-estate-agent-page.component';
+import { ReapPropertiesComponent } from './pages/real-estate-agent-page/reap-properties/reap-properties.component';
+import { ReapPropertyDetailsComponent } from './pages/real-estate-agent-page/reap-property-details/reap-property-details.component';
+import { CryptoTraderPageComponent } from './pages/crypto-trader-page/crypto-trader-page.component';
+import { CtTransactionsComponent } from './pages/crypto-trader-page/ct-transactions/ct-transactions.component';
+import { CtGainersLosersComponent } from './pages/crypto-trader-page/ct-gainers-losers/ct-gainers-losers.component';
+import { CtWalletComponent } from './pages/crypto-trader-page/ct-wallet/ct-wallet.component';
 
 export const routes: Routes = [
     {
@@ -270,6 +303,18 @@ export const routes: Routes = [
             {path: 'real-estate', component: RealEstateComponent},
             {path: 'shipment', component: ShipmentComponent},
             {path: 'finance', component: FinanceComponent},
+            {path: 'pos-system', component: PosSystemComponent},
+            {path: 'podcast', component: PodcastComponent},
+            {path: 'social-media', component: SocialMediaComponent},
+            {path: 'doctor', component: DoctorComponent},
+            {path: 'beauty-salon', component: BeautySalonComponent},
+            {path: 'store-analysis', component: StoreAnalysisComponent},
+            {path: 'restaurant', component: RestaurantComponent},
+            {path: 'hotel', component: HotelComponent},
+            {path: 'real-estate-agent', component: RealEstateAgentComponent},
+            {path: 'credit-card', component: CreditCardComponent},
+            {path: 'crypto-trader', component: CryptoTraderComponent},
+            {path: 'crypto-performance', component: CryptoPerformanceComponent},
             {
                 path: 'apps',
                 component: AppsComponent,
@@ -415,6 +460,52 @@ export const routes: Routes = [
                 children: [
                     {path: '', component: FWalletComponent},
                     {path: 'transactions', component: FTransactionsComponent},
+                ]
+            },
+            {
+                path: 'doctor-page',
+                component: DoctorPageComponent,
+                children: [
+                    {path: '', component: DPatientsListComponent},
+                    {path: 'add-patient', component: DAddPatientComponent},
+                    {path: 'patient-details', component: DPatientDetailsComponent},
+                    {path: 'appointments', component: DAppointmentsComponent},
+                    {path: 'prescriptions', component: DPrescriptionsComponent},
+                    {path: 'write-prescription', component: DWritePrescriptionComponent},
+                ]
+            },
+            {
+                path: 'restaurant-page',
+                component: RestaurantPageComponent,
+                children: [
+                    {path: '', component: RMenusComponent},
+                    {path: 'dish-details', component: RDishDetailsComponent},
+                ]
+            },
+            {
+                path: 'hotel-page',
+                component: HotelPageComponent,
+                children: [
+                    {path: '', component: HpRoomsListComponent},
+                    {path: 'room-details', component: HpRoomDetailsComponent},
+                    {path: 'guests-list', component: HpGuestsListComponent}
+                ]
+            },
+            {
+                path: 'real-estate-agent-page',
+                component: RealEstateAgentPageComponent,
+                children: [
+                    {path: '', component: ReapPropertiesComponent},
+                    {path: 'property-details', component: ReapPropertyDetailsComponent}
+                ]
+            },
+            {
+                path: 'crypto-trader-page',
+                component: CryptoTraderPageComponent,
+                children: [
+                    {path: '', component: CtTransactionsComponent},
+                    {path: 'gainers-losers', component: CtGainersLosersComponent},
+                    {path: 'wallet', component: CtWalletComponent}
                 ]
             },
             {

@@ -219,7 +219,7 @@ const Teams = () => {
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {paginatedTeams.map((team) => (
-          <Grid key={team.id} item xs={12} sm={6} md={6} lg={6} xl={3}>
+          <Grid key={team.id} size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
             <Card
               sx={{
                 boxShadow: "none",
@@ -439,13 +439,13 @@ const Teams = () => {
 
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
-              className="border text-body"
+              className="border"
               key={index}
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
                 "&:hover": {

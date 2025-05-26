@@ -1,0 +1,340 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Rooms List
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 p-0">
+        <li class="breadcrumb-item d-inline-block position-relative">
+            <a routerLink="/dashboard" class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    home
+                </i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Hotel
+        </li>
+        <li class="breadcrumb-item d-inline-block position-relative">
+            Rooms List
+        </li>
+    </ol>
+</div>
+
+<!-- Rooms List -->
+<mat-card class="rooms-list-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+    <mat-card-header>
+        <mat-card-title>
+            <button class="add-btn" (click)="toggleClass()" mat-button type="button">
+                <i class="material-symbols-outlined">
+                    add
+                </i>
+                Add New Room
+            </button>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <form class="search-box position-relative">
+                <label>
+                    <i class="material-symbols-outlined">
+                        search
+                    </i>
+                </label>
+                <input type="text" class="input-search" placeholder="Search here....." (keyup)="applyFilter($event)" #input>
+            </form>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-responsive">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Checkbox Column -->
+                    <ng-container matColumnDef="code">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            <div class="d-flex align-items-center" style="gap: 10px;">
+                                <mat-checkbox
+                                    (change)="$event ? toggleAllRows() : null"
+                                    [checked]="selection.hasValue() && isAllSelected()"
+                                    [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                    [aria-label]="checkboxLabel()"
+                                >
+                                </mat-checkbox>
+                                Code
+                            </div>
+                        </th>
+                        <td mat-cell *matCellDef="let row" class="text-body fw-medium">
+                            <div class="d-flex align-items-center" style="gap: 10px;">
+                                <mat-checkbox
+                                    (click)="$event.stopPropagation()"
+                                    (change)="$event ? selection.toggle(row) : null"
+                                    [checked]="selection.isSelected(row)"
+                                    [aria-label]="checkboxLabel(row)"
+                                >
+                                </mat-checkbox>
+                                <span class="position-relative" style="top: 1.5px;">
+                                    {{row.code}}
+                                </span>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Room Name Column -->
+                    <ng-container matColumnDef="roomName">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Room Name
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="product-info d-flex align-items-center">
+                                <div class="image">
+                                    <img [src]="element.roomName.img" alt="room-image">
+                                </div>
+                                <div class="info">
+                                    <a routerLink="/dashboard/hotel-page/room-details" class="fw-semibold">
+                                        {{element.roomName.title}}
+                                    </a>
+                                    <span class="d-block text-body fw-medium">
+                                        {{element.roomName.subTitle}}
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Bed Type Column -->
+                    <ng-container matColumnDef="bedType">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Bed Type
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-medium">
+                            {{element.bedType}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Floor Column -->
+                    <ng-container matColumnDef="floor">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Floor
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-medium">
+                            {{element.floor}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Facilities Column -->
+                    <ng-container matColumnDef="facilities">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Facilities
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="fw-medium">
+                            <p style="white-space: normal; width: 300px;">
+                                {{element.facilities}}
+                            </p>
+                        </td>
+                    </ng-container>
+
+                    <!-- Rate Column -->
+                    <ng-container matColumnDef="rate">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Rate
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-body fw-medium">
+                            {{element.rate}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold">
+                            Status
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class="trezo-badge with-border up" *ngIf="element.status.available">
+                                Available
+                            </span>
+                            <span class="trezo-badge with-border down" *ngIf="element.status.notAvailable">
+                                Not Available
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef class="fw-semibold"></th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="action-buttons d-flex align-items-center">
+                                <a routerLink="/dashboard/hotel-page/room-details" mat-button>
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.view}}
+                                    </i>
+                                </a>
+                                <button type="button" mat-button>
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.edit}}
+                                    </i>
+                                </button>
+                                <button type="button" mat-button>
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.delete}}
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="8">
+                            No data matching the filter "{{input.value}}"
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+    </mat-card-content>
+</mat-card>
+
+<!-- Add New Popup -->
+<div
+    class="add-new-popup"
+    [class.active]="classApplied"
+>
+    <div class="popup-dialog">
+        <mat-card class="border-radius d-block bg-white border-0 shadow-none">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mb-0">
+                        Add New Room
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                    >
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Code
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter code
+                                </mat-label>
+                                <input matInput placeholder="TRZ-32">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Room Name
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter room name
+                                </mat-label>
+                                <input matInput placeholder="Golden Sun Room">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Level
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter level
+                                </mat-label>
+                                <input matInput placeholder="L2-24">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Rate
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter rate
+                                </mat-label>
+                                <input matInput placeholder="157/night">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Facilities
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Enter facilities
+                                </mat-label>
+                                <input matInput placeholder="High-speed Wi-Fi, Comfortable bedding and pillows, Temperature control (AC/heating)">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Status
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Select
+                                </mat-label>
+                                <mat-select>
+                                    <mat-option value="option1">
+                                        Available
+                                    </mat-option>
+                                    <mat-option value="option2">
+                                        Not Available
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="main-label d-block fw-medium text-black">
+                                Upload Room Images
+                            </label>
+                            <file-upload class="file-uploader"></file-upload>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button
+                        mat-button
+                        (click)="toggleClass()"
+                        color="warn"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        mat-button
+                        color="primary"
+                    >
+                        <i class="material-symbols-outlined">
+                            add
+                        </i>
+                        Create
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

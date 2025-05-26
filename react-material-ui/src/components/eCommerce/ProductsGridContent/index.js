@@ -220,7 +220,7 @@ const ProductsGridContent = () => {
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {currentProducts.map((product) => (
-          <Grid key={product.id} item xs={12} sm={6} md={6} lg={4} xl={4}>
+          <Grid key={product.id} size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 4 }}>
             <Box
               className="single-product-item"
               sx={{ mb: { xs: "30px", sm: "45px" } }}
@@ -373,15 +373,16 @@ const ProductsGridContent = () => {
 
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
-              className="border text-body"
+              className="border"
               key={index}
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
+                
                 "&:hover": {
                   bgcolor: "primary.main",
                   color: "white !important",

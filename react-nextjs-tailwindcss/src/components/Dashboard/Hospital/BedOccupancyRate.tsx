@@ -94,7 +94,7 @@ const BedOccupancyRate: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Bed Occupancy Rate</h5>
+            <h5 className="!mb-0">Bed Occupancy Rate</h5>
             <p className="mt-px">Currently occupied vs. available</p>
           </div>
 
@@ -135,33 +135,33 @@ const BedOccupancyRate: React.FC = () => {
             <div>
               <ul>
                 <li className="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                  <div className="flex items-center justify-center rounded-md bg-secondary-100 text-secondary-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                  <div className="flex items-center justify-center rounded-md bg-secondary-100 dark:bg-[#15203c] text-secondary-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
                     <i className="material-symbols-outlined">airplay</i>
                   </div>
                   <div>
-                    <h3 className="text-lg mb-px">1,275</h3>
+                    <h3 className="!text-lg !mb-px">1,275</h3>
                     <span className="block">Total Beds</span>
                   </div>
                 </li>
 
                 <li className="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                  <div className="flex items-center justify-center rounded-md bg-purple-100 text-purple-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                  <div className="flex items-center justify-center rounded-md bg-purple-100 dark:bg-[#15203c] text-purple-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
                     <i className="material-symbols-outlined">bed</i>
                   </div>
                   <div>
-                    <h3 className="text-lg mb-px">825</h3>
+                    <h3 className="!text-lg !mb-px">825</h3>
                     <span className="block">Occupied Beds</span>
                   </div>
                 </li>
 
                 <li className="flex items-center mb-[20px] md:mb-[25px] last:mb-0">
-                  <div className="flex items-center justify-center rounded-md bg-success-100 text-success-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
+                  <div className="flex items-center justify-center rounded-md bg-success-100 dark:bg-[#15203c] text-success-500 w-[42px] h-[42px] ltr:mr-[10px] rtl:ml-[10px]">
                     <i className="material-symbols-outlined">
                       featured_seasonal_and_gifts
                     </i>
                   </div>
                   <div>
-                    <h3 className="text-lg mb-px">450</h3>
+                    <h3 className="!text-lg !mb-px">450</h3>
                     <span className="block">Available Beds</span>
                   </div>
                 </li>

@@ -1,0 +1,38 @@
+<mat-card
+    class="daily-limit-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-content class="bg-success-50 border-radius">
+        <div class="d-flex justify-content-between">
+            <div>
+                <span class="d-block">
+                    Daily Limit
+                </span>
+                <h5 class="mb-0">
+                    $5,000<span class="fw-normal text-body">/$2250</span>
+                </h5>
+            </div>
+            <div>
+                <span class="trezo-badge with-border down">
+                    -45.9%
+                </span>
+            </div>
+        </div>
+        <mat-progress-bar mode="determinate" class="success-progressbar" value="85"></mat-progress-bar>
+    </mat-card-content>
+    <mat-card-content class="d-flex align-items-center bg-success border-radius position-relative z-1">
+        <img src="images/avatar-with-laptop.png" alt="avatar-with-laptop">
+        <div>
+            <span class="d-block text-white">
+                Get a Platinum Card
+            </span>
+            <h5 class="mb-0 text-white">
+                <span class="fw-normal">For</span> Free
+            </h5>
+        </div>
+        <div class="shape">
+            <img src="images/icons/4dots.png" alt="4dots">
+        </div>
+    </mat-card-content>
+</mat-card>

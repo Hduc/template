@@ -20,6 +20,7 @@ import {
   Radio,
 } from "@mui/material";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "@/components/Forms/FileUpload";
 
 const SettingsForm: React.FC = () => {
   const [country, setCountry] = useState<string>("");
@@ -38,10 +39,16 @@ const SettingsForm: React.FC = () => {
     setYourProfession(event.target.value as string);
   };
 
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 8 }}>
           <Box component="form">
             <Card
               sx={{
@@ -74,7 +81,7 @@ const SettingsForm: React.FC = () => {
                 spacing={3}
                 columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
               >
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -116,7 +123,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -158,7 +165,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -200,7 +207,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -242,7 +249,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -283,7 +290,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -324,7 +331,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -366,7 +373,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -411,7 +418,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -430,7 +437,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <FormControl>
                       <FormLabel
@@ -470,7 +477,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -510,7 +517,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -550,7 +557,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -593,7 +600,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -636,7 +643,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -679,7 +686,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -722,7 +729,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -765,7 +772,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Box>
                     <FormControl fullWidth>
                       <Typography
@@ -808,7 +815,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Typography
                     component="h5"
                     sx={{
@@ -821,24 +828,10 @@ const SettingsForm: React.FC = () => {
                     Profile Picture
                   </Typography>
 
-                  <TextField
-                    autoComplete="profilePicture"
-                    name="profilePicture"
-                    required
-                    fullWidth
-                    id="profilePicture"
-                    type="file"
-                    autoFocus
-                    sx={{
-                      "& fieldset": {
-                        border: "1px solid #D5D9E2",
-                        borderRadius: "7px",
-                      },
-                    }}
-                  />
+                  <FileUpload onFileSelect={handleFileSelect} />
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={6}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
                   <Typography
                     component="h5"
                     sx={{
@@ -851,24 +844,10 @@ const SettingsForm: React.FC = () => {
                     Cover Photo
                   </Typography>
 
-                  <TextField
-                    autoComplete="coverPhoto"
-                    name="coverPhoto"
-                    required
-                    fullWidth
-                    id="coverPhoto"
-                    type="file"
-                    autoFocus
-                    sx={{
-                      "& fieldset": {
-                        border: "1px solid #D5D9E2",
-                        borderRadius: "7px",
-                      },
-                    }}
-                  />
+                  <FileUpload onFileSelect={handleFileSelect} />
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -916,7 +895,7 @@ const SettingsForm: React.FC = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={6} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 6, lg: 12, xl: 4 }}>
           <Box component="form">
             <Card
               sx={{
@@ -949,7 +928,7 @@ const SettingsForm: React.FC = () => {
                 spacing={2}
                 columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
               >
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <FormControlLabel
                       control={<Checkbox />}
@@ -966,7 +945,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <FormControl>
                       <FormLabel
@@ -1001,7 +980,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box>
                     <Typography
                       component="label"
@@ -1029,7 +1008,7 @@ const SettingsForm: React.FC = () => {
                   </Box>
                 </Grid>
 
-                <Grid item xs={12} md={12} lg={12} xl={12}>
+                <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
                   <Box
                     sx={{
                       display: "flex",

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-nm-create-nft',
@@ -10,7 +11,8 @@ import { FileUploadModule } from '@iplab/ngx-file-upload';
 })
 export class NmCreateNftComponent {
 
-    // File Uploader
-    public multiple: boolean = true;
+    constructor(
+        public themeService: CustomizerSettingsService
+    ) {}
 
 }

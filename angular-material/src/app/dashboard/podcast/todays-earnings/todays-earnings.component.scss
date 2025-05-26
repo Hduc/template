@@ -1,0 +1,56 @@
+.todays-earnings-card {
+    .mat-mdc-card-header {
+        .title {
+            gap: 7px;
+            line-height: initial;
+
+            h5 {
+                font-size: 20px;
+            }
+            .trezo-badge {
+                border-radius: 4px;
+                border-width: 0;
+                font-size: 12px;
+                padding: {
+                    top: 3px;
+                    bottom: 3px;
+                };
+            }
+        }
+        span {
+            font-size: var(--fontSize);
+        }
+    }
+    .mat-mdc-card-content {
+        height: 67px;
+
+        .chart {
+            left: 0;
+            right: 0;
+            bottom: -29px;
+            position: absolute;
+            margin: {
+                left: -12px;
+                right: -10px;
+            };
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -128,6 +128,54 @@ const initialRows = [
     page_views: "320",
     bounce_rate: "28.7%",
   },
+  {
+    id: 7,
+    page_url: "/user-settings",
+    source: "Organic",
+    avg_time: "3m 10s",
+    page_views: "210",
+    bounce_rate: "35.0%",
+  },
+  {
+    id: 8,
+    page_url: "/help-center",
+    source: "Referral",
+    avg_time: "5m 20s",
+    page_views: "275",
+    bounce_rate: "22.5%",
+  },
+  {
+    id: 9,
+    page_url: "/pricing",
+    source: "Direct",
+    avg_time: "4m 05s",
+    page_views: "150",
+    bounce_rate: "45.3%",
+  },
+  {
+    id: 10,
+    page_url: "/blog/latest-updates",
+    source: "Organic",
+    avg_time: "6m 30s",
+    page_views: "500",
+    bounce_rate: "18.9%",
+  },
+  {
+    id: 11,
+    page_url: "/contact-us",
+    source: "Referral",
+    avg_time: "2m 40s",
+    page_views: "130",
+    bounce_rate: "33.8%",
+  },
+  {
+    id: 12,
+    page_url: "/terms-of-service",
+    source: "Direct",
+    avg_time: "1m 55s",
+    page_views: "90",
+    bounce_rate: "55.6%",
+  },
 ];
 
 // Main component
@@ -229,7 +277,7 @@ const TopBrowsingPagesToday = () => {
                 },
               }}
             >
-              <TableCell>
+              <TableCell className="border-bottom">
                 <Button
                   onClick={() => handleSort("page_url")}
                   sx={{
@@ -242,7 +290,7 @@ const TopBrowsingPagesToday = () => {
                 </Button>
               </TableCell>
 
-              <TableCell>
+              <TableCell className="border-bottom">
                 <Button
                   onClick={() => handleSort("source")}
                   sx={{
@@ -255,7 +303,7 @@ const TopBrowsingPagesToday = () => {
                 </Button>
               </TableCell>
 
-              <TableCell align="right">
+              <TableCell className="border-bottom" align="right">
                 <Button
                   onClick={() => handleSort("avg_time")}
                   sx={{
@@ -268,7 +316,7 @@ const TopBrowsingPagesToday = () => {
                 </Button>
               </TableCell>
 
-              <TableCell align="right">
+              <TableCell className="border-bottom" align="right">
                 <Button
                   onClick={() => handleSort("page_views")}
                   sx={{
@@ -281,7 +329,7 @@ const TopBrowsingPagesToday = () => {
                 </Button>
               </TableCell>
 
-              <TableCell align="right">
+              <TableCell className="border-bottom" align="right">
                 <Button
                   onClick={() => handleSort("bounce_rate")}
                   sx={{

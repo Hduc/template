@@ -10,7 +10,7 @@ const Earnings: React.FC = () => {
         <div className="trezo-card-content flex justify-between">
           <div>
             <span className="block">Earnings</span>
-            <h2 className="text-2xl font-black mt-[5px] mb-[8px]">$312</h2>
+            <h2 className="!text-2xl !font-black !mt-[5px] !mb-[8px]">$312</h2>
             <span className="inline-block text-xs rounded-[30px] px-[10px] border border-orange-300 text-danger-500 bg-orange-100 dark:border-[#15203c] dark:bg-[#15203c]">
               -1.4%
             </span>

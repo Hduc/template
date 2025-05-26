@@ -76,7 +76,8 @@
                     border: none;
                     box-shadow: none;
                     font-weight: 500;
-                    padding: 12.5px;
+                    padding: 9.5px 14px;
+                    white-space: nowrap;
 
                     &::after {
                         width: 15px;
@@ -132,10 +133,11 @@
 			font-size: 14px;
 			font-weight: 500;
 			color: $secondary;
-            padding: 12px;
+            padding: 9.5px 14px;
             border-radius: 5px;
             display: flex;
             align-items: center;
+            white-space: nowrap;
 
             .title {
                 transition: $transition;
@@ -205,14 +207,15 @@
         margin-bottom: 0;
 
 		.menu-item {
-			margin-bottom: 0;
+			margin-bottom: 4px;
 
 			.menu-link {
-				padding: 12px 18px;
+				padding: 9.5px 18px;
                 padding-left: 35px;
 				transition: $transition;
 				position: relative;
 				font-size: 14px;
+                color: $body-color;
 
 				&::before {
 					content: "";
@@ -221,7 +224,7 @@
 					transform: translateY(-50%);
 					width: 10px;
 					height: 10px;
-					border: 1px solid $secondary;
+					border: 1px solid $body-color;
 					left: 18px;
 					border-radius: 50px;
 					transition: $transition;
@@ -260,6 +263,7 @@
 	}
 }
 
+/* Min width 1200px */
 @media only screen and (min-width: 1200px) {
     .main-wrapper-content {
         &.active {
@@ -385,6 +389,158 @@
                         z-index: 1 !important;
                         right: 21px !important;
                     }
+                }
+            }
+        }
+        &.compact-sidebar {
+            .main-content {
+                padding-left: 92px;
+
+                .header-area {
+                    .left-header-content {
+                        ul {
+                            li.hbm {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .sidebar-area {
+                width: 80px;
+                z-index: 2;
+                transition: $transition;
+            
+                .logo {
+                    padding-left: 25px;
+                    padding-right: 25px;
+
+                    .logo-text {
+                        left: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    .sidebar-burger-menu {
+                        display: none !important;
+                    }
+                }
+                
+                .sidebar-menu {
+                    padding: 17px;
+                    padding-bottom: 60px;
+
+                    .accordion {
+                        .accordion-item {
+                            .accordion-header {
+                                .accordion-button {
+                                    padding: 10px;
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                    .material-symbols-outlined {
+                                        margin-right: 0;
+                                    }
+                                    .title {
+                                        display: none;
+                                    }
+                                    .count {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .menu-item {
+                        .menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                    .menu-header {
+                        display: none;
+                    }
+                    .sub-menu {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    width: 270px;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+                    .sidebar-menu {
+                        padding: {
+                            top: 20px;
+                            left: 25px;
+                            right: 25px;
+                            bottom: 60px;
+                        };
+                        .menu-header {
+                            display: block;
+                        }
+                        .accordion {
+                            .accordion-item {
+                                .accordion-header {
+                                    .accordion-button {
+                                        padding: 10px;
+        
+                                        &::after {
+                                            display: block;
+                                        }
+                                        .material-symbols-outlined {
+                                            margin-right: 8px;
+                                        }
+                                        .title {
+                                            display: block;
+                                        }
+                                        .count {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            display: block;
+                            
+                            .menu-item {
+                                .menu-link {
+                                    padding-left: 35px;
+                                }
+                            }
+                        }
+                        .menu-item {
+                            .menu-link {
+                                .title {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .logo {
+                        .logo-text {
+                            left: 33px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    } 
+                }
+            }
+        } 
+    }
+}
+
+// RTL
+[dir="rtl"] {
+    /* Min width 1200px */
+    @media only screen and (min-width: 1200px) {
+        .main-wrapper-content {
+            &.compact-sidebar {
+                .main-content {
+                    padding-left: 25px;
+                    padding-right: 106px;
                 }
             }
         }
@@ -556,7 +712,7 @@
 		.sub-menu {
 			.menu-item {
 				.menu-link {
-					padding-left: 35px;
+					padding-left: 38px;
                     
                     &::before {
                         left: 18px;

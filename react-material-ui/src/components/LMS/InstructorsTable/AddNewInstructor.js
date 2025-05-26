@@ -17,6 +17,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { styled } from "@mui/material/styles";
 import ClearIcon from "@mui/icons-material/Clear";
 import Select from "@mui/material/Select";
+import FileUpload from "../../Forms/FileUpload";
 
 // Modal Styles
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -45,6 +46,12 @@ const AddNewInstructor = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Form submitted");
+  };
+
+  // File Upload
+  const handleFileSelect = (files) => {
+    console.log("Selected files:", files);
+    // Process your files here
   };
 
   return (
@@ -115,7 +122,7 @@ const AddNewInstructor = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -142,7 +149,7 @@ const AddNewInstructor = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -169,7 +176,7 @@ const AddNewInstructor = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -196,7 +203,7 @@ const AddNewInstructor = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -223,7 +230,7 @@ const AddNewInstructor = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -260,7 +267,7 @@ const AddNewInstructor = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -290,7 +297,7 @@ const AddNewInstructor = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -303,21 +310,10 @@ const AddNewInstructor = () => {
                       Instructor Image
                     </Typography>
 
-                    <TextField
-                      autoComplete="image"
-                      name="image"
-                      required
-                      fullWidth
-                      id="image"
-                      type="file"
-                      autoFocus
-                      InputProps={{
-                        style: { borderRadius: 8 },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
@@ -328,7 +324,7 @@ const AddNewInstructor = () => {
                     >
                       <Button
                         onClick={handleCloseModal}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -336,6 +332,7 @@ const AddNewInstructor = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

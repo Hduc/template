@@ -183,12 +183,12 @@ const BedOccupancyRate: React.FC = () => {
           container
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           justifyContent="center"
-          alignItems='center'
+          alignItems="center"
         >
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <Box
-              sx={{ 
-                '& > div:last-child': { mb: 0 } 
+              sx={{
+                "& > div:last-child": { mb: 0 },
               }}
             >
               <Box
@@ -196,12 +196,12 @@ const BedOccupancyRate: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   gap: "12px",
-                  mb: '25px'
+                  mb: "25px",
                 }}
               >
                 <Box
                   className="bg-secondary-100 text-secondary border-radius"
-                  sx={{ 
+                  sx={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -228,7 +228,7 @@ const BedOccupancyRate: React.FC = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      display: "block", 
+                      display: "block",
                     }}
                   >
                     Total Beds
@@ -241,7 +241,7 @@ const BedOccupancyRate: React.FC = () => {
                   display: "flex",
                   alignItems: "center",
                   gap: "12px",
-                  mb: '25px'
+                  mb: "25px",
                 }}
               >
                 <Box
@@ -274,26 +274,26 @@ const BedOccupancyRate: React.FC = () => {
 
                   <Typography
                     sx={{
-                      display: "block", 
+                      display: "block",
                     }}
                   >
                     Occupied Beds
                   </Typography>
                 </Box>
               </Box>
-              
+
               <Box
                 sx={{
                   display: "flex",
                   alignItems: "center",
                   gap: "12px",
-                  mb: '25px'
+                  mb: "25px",
                 }}
               >
                 <Box
                   className="text-success border-radius"
                   sx={{
-                    bgcolor: 'success.100',
+                    bgcolor: "success.100",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -301,7 +301,9 @@ const BedOccupancyRate: React.FC = () => {
                     height: "42px",
                   }}
                 >
-                  <i className="material-symbols-outlined">featured_seasonal_and_gifts</i>
+                  <i className="material-symbols-outlined">
+                    featured_seasonal_and_gifts
+                  </i>
                 </Box>
 
                 <Box>
@@ -321,17 +323,17 @@ const BedOccupancyRate: React.FC = () => {
 
                   <Typography
                     sx={{
-                      display: "block", 
+                      display: "block",
                     }}
                   >
                     Available Beds
                   </Typography>
                 </Box>
-              </Box> 
+              </Box>
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <div>
               {isChartLoaded && (
                 <Chart
@@ -343,13 +345,13 @@ const BedOccupancyRate: React.FC = () => {
                 />
               )}
 
-              <Box 
+              <Box
                 sx={{
-                  fontSize: '12px',
-                  lineHeight: '1.6',
-                  maxWidth: '190px',
-                  marginX: 'auto',
-                  textAlign: 'center'
+                  fontSize: "12px",
+                  lineHeight: "1.6",
+                  maxWidth: "190px",
+                  marginX: "auto",
+                  textAlign: "center",
                 }}
               >
                 The donut or pie chart representing the occupancy rate.

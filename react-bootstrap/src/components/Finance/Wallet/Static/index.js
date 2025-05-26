@@ -140,7 +140,7 @@ const Static = () => {
                 options={options}
                 series={series}
                 type="bar"
-                height={360}
+                height={425}
               />
             )}
           </div>

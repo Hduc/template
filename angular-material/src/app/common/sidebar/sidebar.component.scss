@@ -22,6 +22,7 @@
                 
                 img {
                     left: 0;
+                    transition: .2s;
                 }
                 span {
                     margin-left: 8px;
@@ -191,15 +192,15 @@
                                 background-color: #FFF5ED;
                                 margin: {
                                     left: auto;
-                                    right: 4px;
+                                    right: 0;
                                 };
                                 &.style-two {
-                                    color: #00b69b;
-                                    background: rgba(0, 182, 155, 0.07);
+                                    color: var(--successColor);
+                                    background: #D8FFC8;
                                 }
                                 &.style-three {
-                                    color: #ee368c;
-                                    background: rgba(238, 54, 140, 0.1);
+                                    color: var(--purpleColor);
+                                    background: #eae0f3;
                                 }
                             }
                             &:hover {
@@ -388,6 +389,14 @@
 
                                                 &::before {
                                                     background: #D8FFC8;
+                                                }
+                                            }
+                                            &.style-three {
+                                                color: var(--purpleColor);
+                                                background-color: #eae0f3;
+
+                                                &::before {
+                                                    background: #eae0f3;
                                                 }
                                             }
                                         }
@@ -822,7 +831,7 @@
                                 }
                                 .trezo-badge {
                                     margin: {
-                                        left: 4px;
+                                        left: 0;
                                         right: auto;
                                     };
                                 }
@@ -901,6 +910,72 @@
             &.right-sidebar {
                 left: 0;
                 right: auto;
+            }
+        }
+        &.component-body-bg-color {
+            background-color: #F6F7F9 !important;
+            
+            .logo {
+                background-color: #F6F7F9 !important;
+            }
+            .sidebar-inner {
+                .sidebar-menu {
+                    .mat-accordion {
+                        .mat-expansion-panel {
+                            .mat-expansion-panel-header {
+                                &.mat-expanded {
+                                    background-color: var(--whiteColor);
+                                }
+                                &:hover {
+                                    background-color: var(--whiteColor);
+                                }
+                            }
+                            &:has(> .mat-expansion-panel-content-wrapper > .mat-expansion-panel-content > .mat-expansion-panel-body > .sidebar-sub-menu > .sidemenu-item > .sidemenu-link.active) {
+                                .mat-expansion-panel-header {
+                                    background-color: var(--whiteColor);
+                                }
+                            }
+                        }
+                        .sidebar-menu-link {
+                            &:hover, &.active {
+                                background-color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme, &.dark-sidebar {
+                background-color: #0A0E19 !important;
+                
+                .logo {
+                    background-color: #0A0E19 !important;
+                }
+                .sidebar-inner {
+                    .sidebar-menu {
+                        .mat-accordion {
+                            .mat-expansion-panel {
+                                .mat-expansion-panel-header {
+                                    &.mat-expanded {
+                                        background-color: #15203c;
+                                    }
+                                    &:hover {
+                                        background-color: #15203c;
+                                    }
+                                }
+                                &:has(> .mat-expansion-panel-content-wrapper > .mat-expansion-panel-content > .mat-expansion-panel-body > .sidebar-sub-menu > .sidemenu-item > .sidemenu-link.active) {
+                                    .mat-expansion-panel-header {
+                                        background-color: #15203c;
+                                    }
+                                }
+                            }
+                            .sidebar-menu-link {
+                                &:hover, &.active {
+                                    background-color: #15203c;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

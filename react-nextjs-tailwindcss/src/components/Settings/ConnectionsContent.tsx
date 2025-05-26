@@ -103,7 +103,7 @@ const ConnectionsContent: React.FC = () => {
 
   return (
     <>
-      <h5 className="mb-[22px]">Connected Accounts</h5>
+      <h5 className="!mb-[22px]">Connected Accounts</h5>
       <ul>
         {connectedAccounts.map((account) => (
           <li
@@ -142,7 +142,7 @@ const ConnectionsContent: React.FC = () => {
 
       <div className="border-t border-gray-100 dark:border-[#172036] my-[20px] md:my-[25px]"></div>
 
-      <h5 className="mb-[22px]">Social Accounts</h5>
+      <h5 className="!mb-[22px]">Social Accounts</h5>
       <ul>
         {socialAccounts.map((account) => (
           <li

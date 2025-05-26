@@ -199,7 +199,7 @@ const Featured: React.FC = () => {
             <SwiperSlide key={index}>
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div>
-                  <h1 className="text-[22px] md:text-2xl text-white font-medium mb-[7px]">
+                  <h1 className="!text-[22px] md:!text-2xl !text-white !font-medium !mb-[7px]">
                     {item.title}
                   </h1>
 
@@ -290,7 +290,7 @@ const Featured: React.FC = () => {
                   <span className="block font-medium text-xs text-gray-200">
                     Listens
                   </span>
-                  <h6 className="mb-0 font-medium text-white text-base">
+                  <h6 className="!mb-0 !font-medium !text-white !text-base">
                     {item.stats.listens}
                   </h6>
                 </div>
@@ -301,7 +301,7 @@ const Featured: React.FC = () => {
                   <span className="block font-medium text-xs text-gray-200">
                     Likes
                   </span>
-                  <h6 className="mb-0 font-medium text-white text-base">
+                  <h6 className="!mb-0 !font-medium !text-white !text-base">
                     {item.stats.likes}
                   </h6>
                 </div>
@@ -312,7 +312,7 @@ const Featured: React.FC = () => {
                   <span className="block font-medium text-xs text-gray-200">
                     Shares
                   </span>
-                  <h6 className="mb-0 font-medium text-white text-base">
+                  <h6 className="!mb-0 !font-medium !text-white !text-base">
                     {item.stats.shares}
                   </h6>
                 </div>
@@ -323,7 +323,7 @@ const Featured: React.FC = () => {
                   <span className="block font-medium text-xs text-gray-200">
                     Save for
                   </span>
-                  <h6 className="mb-0 font-medium text-white text-base">
+                  <h6 className="!mb-0 !font-medium !text-white !text-base">
                     Later
                   </h6>
                 </div>

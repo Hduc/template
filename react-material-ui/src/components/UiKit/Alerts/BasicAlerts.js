@@ -28,16 +28,16 @@ const BasicAlerts = () => {
         </Typography>
 
         <Stack sx={{ width: "100%" }} spacing={2}>
-          <Alert severity="success" sx={{ fontSize: "14px" }}>
+          <Alert severity="success" sx={{ fontSize: "14px", color: "success.main" }}>
             This is a success Alert.
           </Alert>
-          <Alert severity="info" sx={{ fontSize: "14px" }}>
+          <Alert severity="info" sx={{ fontSize: "14px", color: "info.main" }}>
             This is an info Alert.
           </Alert>
-          <Alert severity="warning" sx={{ fontSize: "14px" }}>
+          <Alert severity="warning" sx={{ fontSize: "14px", color: "warning.main" }}>
             This is a warning Alert.
           </Alert>
-          <Alert severity="error" sx={{ fontSize: "14px" }}>
+          <Alert severity="error" sx={{ fontSize: "14px", color: "error.main" }}>
             This is an error Alert.
           </Alert>
         </Stack>

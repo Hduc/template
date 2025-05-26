@@ -1,13 +1,13 @@
-<div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+<div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
     <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div class="trezo-card-title">
-            <h5 class="mb-0">
+            <h5 class="!mb-0">
                 Total Sales
             </h5>
         </div>
         <div class="trezo-card-subtitle">
             <div class="trezo-card-dropdown relative">
-                <button type="button" class="trezo-card-dropdown-btn inline-block rounded-md border border-gray-100 py-[5px] md:py-[6.5px] px-[12px] md:px-[19px] transition-all hover:bg-gray-50 dark:border-[#172036] dark:hover:bg-[#0a0e19]"  (click)="toggleCardHeaderMenu()">
+                <button type="button" class="trezo-card-dropdown-btn inline-block rounded-md border border-gray-100 py-[5px] md:py-[6.5px] px-[12px] md:px-[19px] transition-all hover:bg-gray-50 dark:border-[#172036] dark:hover:bg-[#0a0e19]" (click)="toggleCardHeaderMenu()">
                     <span class="inline-block relative ltr:pr-[17px] ltr:md:pr-[20px] rtl:pl-[17px] rtl:ml:pr-[20px]">
                         {{ selectedTimeframe }}
                         <i class="ri-arrow-down-s-line text-lg absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2"></i>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="trezo-card-content">
-        <div class="-mb-[15px] ltr:-ml-[10px] rtl:-mr-[10px] -mt-[5px]">
+        <div class="-mb-[15px] -mt-[5px]">
             <div id="ecommerce_total_sales_chart"></div>
         </div>
     </div>

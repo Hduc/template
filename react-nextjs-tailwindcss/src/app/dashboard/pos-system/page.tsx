@@ -30,7 +30,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[25px]">
         <div className="lg:col-span-2">
           <Categories />
         </div>

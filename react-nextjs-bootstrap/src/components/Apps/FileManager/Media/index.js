@@ -1,7 +1,7 @@
 "use client";
-
+ 
+import React, { useState } from "react";
 import { Card, Form, Table } from "react-bootstrap";
-import Pagination from "./Pagination";
 
 const mediaFilesData = [
   {
@@ -87,6 +87,27 @@ const mediaFilesData = [
 ];
 
 const Media = () => {
+  // State for pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8; // You can change this value based on how many items you want per page
+
+  // Calculate the index range for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Slice the data based on the current page
+  const paginatedData = mediaFilesData.slice(startIndex, endIndex);
+
+  // Total number of pages
+  const totalPages = Math.ceil(mediaFilesData.length / itemsPerPage);
+
+  // Handle page change
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -122,60 +143,103 @@ const Media = () => {
                 </thead>
 
                 <tbody>
-                  {mediaFilesData &&
-                    mediaFilesData.slice(0, 8).map((defaultValue, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <div className="d-flex align-items-center">
-                            <span className="material-symbols-outlined fs-28 text-warning">
-                              folder
+                  {paginatedData.map((file, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <div className="d-flex align-items-center">
+                          <span className="material-symbols-outlined fs-28 text-warning">
+                            folder
+                          </span>
+                          <div className="ms-2">
+                            <h6 className="fw-medium fs-14 position-relative top-1 m-0">
+                              {file.fileName}
+                            </h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td className="text-body">{file.owner}</td>
+
+                      <td>{file.listedDate}</td>
+
+                      <td className="text-body">{file.fileType}</td>
+
+                      <td className="text-body">{file.fileSize}</td>
+
+                      <td>{file.fileItems}</td>
+
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
                             </span>
-                            <div className="ms-2">
-                              <h6 className="fw-medium fs-14 position-relative top-1 m-0">
-                                {defaultValue.fileName}
-                              </h6>
-                            </div>
-                          </div>
-                        </td>
+                          </button>
 
-                        <td className="text-body">{defaultValue.owner}</td>
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
 
-                        <td>{defaultValue.listedDate}</td>
-
-                        <td className="text-body">{defaultValue.fileType}</td>
-
-                        <td className="text-body">{defaultValue.fileSize}</td>
-
-                        <td>{defaultValue.fileItems}</td>
-
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
-              {/* Pagination */}
-              <Pagination />
+              <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                <span className="fs-12 fw-medium">
+                  Showing {startIndex + 1} to{" "}
+                  {Math.min(endIndex, mediaFilesData.length)} of{" "}
+                  {mediaFilesData.length} Results
+                </span>
+
+                <nav aria-label="Page navigation example">
+                  <ul className="pagination mb-0 justify-content-center">
+                    <li className="page-item">
+                      <button
+                        className="page-link icon"
+                        onClick={() => handlePageChange(currentPage - 1)}
+                      >
+                        <span className="material-symbols-outlined">
+                          keyboard_arrow_left
+                        </span>
+                      </button>
+                    </li>
+
+                    {[...Array(totalPages).keys()].map((num) => (
+                      <li className="page-item" key={num + 1}>
+                        <button
+                          className={`page-link ${
+                            currentPage === num + 1 ? "active" : ""
+                          }`}
+                          onClick={() => handlePageChange(num + 1)}
+                        >
+                          {num + 1}
+                        </button>
+                      </li>
+                    ))}
+
+                    <li className="page-item">
+                      <button
+                        className="page-link icon"
+                        onClick={() => handlePageChange(currentPage + 1)}
+                      >
+                        <span className="material-symbols-outlined">
+                          keyboard_arrow_right
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </Card.Body>

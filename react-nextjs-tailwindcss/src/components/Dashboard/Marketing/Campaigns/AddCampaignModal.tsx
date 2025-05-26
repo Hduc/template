@@ -68,7 +68,7 @@ const AddCampaignModal: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] lg:p-[50px]">
                 <div className="trezo-card-header mb-[20px] md:mb-[25px] lg:mb-[56px] flex items-center justify-between">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0 lg:text-xl">Create Campaign</h5>
+                    <h5 className="!mb-0 lg:!text-xl">Create Campaign</h5>
                   </div>
                   <div className="trezo-card-subtitle">
                     <button

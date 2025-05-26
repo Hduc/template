@@ -144,7 +144,7 @@ const DishDetailsContent: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <span className="block text-xs">Code: 3479</span>
-                  <h2 className="text-lg md:text-xl my-[8.5px]">
+                  <h2 className="!text-lg md:!text-xl !my-[8.5px]">
                     Beef Cheesy Burger
                   </h2>
                   <span className="block font-semibold text-danger-600 md:text-md">
@@ -166,7 +166,7 @@ const DishDetailsContent: React.FC = () => {
 
               <div className="h-[1px] bg-gray-100 dark:bg-[#172036] my-[20px] md:my-[25px]"></div>
 
-              <h4 className="font-semibold text-lg mb-[12px]">
+              <h4 className="!font-semibold !text-lg !mb-[12px]">
                 Ingredients Details
               </h4>
               <p>
@@ -176,7 +176,7 @@ const DishDetailsContent: React.FC = () => {
 
               <div className="mb-[20px] md:mb-[25px]"></div>
 
-              <h4 className="font-semibold text-lg mb-[15px]">
+              <h4 className="!font-semibold !text-lg !mb-[12px]">
                 Nutrition Values
               </h4>
 
@@ -232,7 +232,7 @@ const DishDetailsContent: React.FC = () => {
                 </li>
               </ul>
 
-              <h4 className="font-semibold text-lg flex items-center justify-between">
+              <h4 className="!font-semibold !text-lg !flex !items-center !justify-between">
                 Orders In Queue
                 <span>17</span>
               </h4>

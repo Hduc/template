@@ -56,7 +56,8 @@ const Portfolio = () => {
           backgroundImage: `url(/images/portfolio-bg.jpg)`,
           backgroundPosition: "left bottom",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
+          backgroundColor: "#4936F5",
         }}
         className="rmui-card"
       >
@@ -142,7 +143,7 @@ const Portfolio = () => {
             boxShadow: "none",
             borderRadius: "0",
           }}
-          className="rmui-table"
+          className="rmui-table table-bg-transparent"
         >
           <Table sx={{ minWidth: 400 }} className={styles.pTable}>
             <TableHead>
@@ -264,7 +265,7 @@ const Portfolio = () => {
         </TableContainer>
 
         <div className="text-end">
-          <Link href="/dashboard/crypto">
+          <Link to="/dashboard/crypto">
             <Button
               variant="outlined"
               sx={{

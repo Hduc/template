@@ -1,0 +1,152 @@
+<div
+    class="courses-area ptb-180 bg-f6f5f3"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="lms-section-title text-center mx-auto">
+            <div class="sub-title d-inline-block">
+                <div class="d-flex align-items-center">
+                    <img src="images/lms-courses/ico.svg" alt="ico">
+                    Popular Courses
+                </div>
+            </div>
+            <h2 class="mb-0 fw-bold">
+                Top-Rated Courses to Kickstart Your Journey
+            </h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course2.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Data Science with Python
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="d-block position-relative">
+                                4.7 (980 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $69
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                38 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                6,300+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course3.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Graphic Design Masterclass
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                            <span class="d-block position-relative">
+                                4.9 (10,200 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $99
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                52 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                10,200+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="course-item">
+                    <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                        <img src="images/lms-courses/courses/course4.jpg" alt="course-image">
+                    </a>
+                    <div class="content">
+                        <h3 class="fw-semibold">
+                            <a routerLink="/lms-courses-demo/course-details">
+                                Mindfulness & Stress Management
+                            </a>
+                        </h3>
+                        <div class="ratings d-flex align-items-center lh-1">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="d-block position-relative">
+                                4.0 (750 ratings)
+                            </span>
+                        </div>
+                        <div class="price lh-1 fw-semibold">
+                            $79
+                        </div>
+                        <ul class="info p-0 mb-0 list-unstyled">
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    book_ribbon
+                                </i>
+                                20 Lessons
+                            </li>
+                            <li class="d-inline-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                4,00+ Enrolled
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="browse-all-courses-btn text-center">
+            <a routerLink="/lms-courses-demo/courses" class="lms-default-btn" mat-button>
+                <i class="material-symbols-outlined">
+                    school
+                </i>
+                Explore Courses
+            </a>
+        </div>
+    </div>
+</div>

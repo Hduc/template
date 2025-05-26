@@ -10,6 +10,10 @@
     animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     box-shadow: $box-shadow;
   }
+
+  .navbar-area {
+    display: none;
+  }
 }
 @keyframes fadeInDown {
   0% {
@@ -26,6 +30,9 @@
     li {
       margin-right: 25px;
 
+      &.logo {
+        display: none;
+      }
       .header-burger-menu {
         .material-symbols-outlined {
           transition: $transition;
@@ -38,6 +45,15 @@
           }
         }
       }
+      .logo {
+        .logo-text {
+          font-size: 24px;
+          position: absolute;
+          top: -4px;
+          left: 33px;
+          transition: all ease 0.5s;
+        }
+      }
       .src-form {
         .form-control {
           height: 46px;
@@ -45,7 +61,7 @@
           border-color: #f6f7f9;
           padding: 10px 20px;
           border-radius: 7px;
-          width: 282px;
+          max-width: 282px;
           &:focus {
             border-color: $primary;
           }
@@ -468,6 +484,72 @@
   }
 }
 
+/* Min width 992px */
+@media only screen and (min-width: 992px) {
+  body {
+    &.with-navbar {
+      .header-area {
+        padding: 13px 25px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        top: 0;
+        .header-inner-area {
+          max-width: 1295px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .navbar-area {
+          display: block !important;
+        }
+      }
+      .left-header-content {
+        ul {
+          li {
+            &.logo {
+              display: block !important;
+              .logo-white {
+                display: none;
+              }
+            }
+            &.burger-menu {
+              display: none;
+            }
+          }
+        }
+      }
+      .sidebar-area {
+        display: none;
+      }
+      .main-content {
+        max-width: 1345px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 165px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+    }
+    &.dark-theme {
+      .left-header-content {
+        ul {
+          li {
+            &.logo {
+              .logo-white {
+                display: block !important;
+              }
+              .logo-black {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Max width 1199px */
 @media only screen and (max-width: 1199px) {
   .header-area {
@@ -477,6 +559,22 @@
     ul {
       li {
         margin-right: 15px;
+      }
+    }
+  }
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+  body {
+    &.with-navbar {
+      .header-area {
+        .header-inner-area {
+          max-width: 1565px;
+        }
+      }
+      .main-content {
+        max-width: 1595px;
       }
     }
   }

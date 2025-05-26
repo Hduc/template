@@ -25,7 +25,7 @@ export class TodaysShipmentsService {
                         data: [10, 31, 25, 40, 50, 50, 100]
                     }],
                     chart: {
-                        height: 187,
+                        height: 188,
                         type: 'line',
                         zoom: {
                             enabled: false

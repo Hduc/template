@@ -131,7 +131,7 @@ const InstagramCampaigns: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title flex items-center gap-[10px]">
-            <h5 className="mb-0">Instagram Campaigns</h5>
+            <h5 className="!mb-0">Instagram Campaigns</h5>
             <span className="px-[8px] py-[3px] inline-block bg-orange-100 dark:bg-[#15203c] text-orange-600 rounded-sm font-medium text-xs">
               Live Now
             </span>
@@ -145,14 +145,14 @@ const InstagramCampaigns: React.FC = () => {
                 <span className="block w-[10px] h-[10px] rounded-full bg-purple-500"></span>
                 <span className="block text-sm">Campaign Budget</span>
               </div>
-              <h3 className="mb-0 leading-none text-[20px]">$3200</h3>
+              <h3 className="!mb-0 !leading-none !text-[20px]">$3200</h3>
             </div>
             <div>
               <div className="flex items-center gap-[5px] mb-[5px]">
                 <span className="block w-[10px] h-[10px] rounded-full bg-orange-400"></span>
                 <span className="block text-sm">Followers Goal</span>
               </div>
-              <h3 className="mb-0 leading-none text-[20px]">140,000</h3>
+              <h3 className="!mb-0 !leading-none !text-[20px]">140,000</h3>
             </div>
           </div>
 

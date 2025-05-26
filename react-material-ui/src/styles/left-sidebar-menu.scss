@@ -117,19 +117,23 @@
                     font: {
                         size: var(--fontSize);
                         weight: 500;
-                    }; 
+                    };
+                    box-sizing: unset; 
                     background-color: transparent;
                     margin: {
                         top: 0;
                         bottom: 5px;
                     };
                     padding: {
-                        bottom: 9.5px;
+                        bottom: 9px;
                         right: 10px;
-                        left: 40px;
-                        top: 9.5px;
+                        left: 10px;
+                        top: 9px;
                     };
-                    min-height: auto; 
+                    min-height: auto;
+                    position: relative;
+                    width: 91%;
+                    white-space: nowrap;
   
                     &.Mui-expanded {
                         background-color: #f6f7f9;
@@ -148,14 +152,11 @@
                             };
                         }
                         i {
-                            transition: var(--transition);
-                            transform: translateY(-50%);
-                            color: var(--bodyColor);
-                            position: absolute;
+                            transition: var(--transition); 
+                            color: var(--bodyColor); 
                             font-size: 22px;
-                            line-height: 1;
-                            left: 12px;
-                            top: 50%;
+                            line-height: 1; 
+                            margin-right: 7px;
                         }
                     }
                     .MuiAccordionSummary-expandIconWrapper {
@@ -295,37 +296,34 @@
                 }
             }
             .sidebar-menu-link {
+                white-space: nowrap;
                 transition: var(--transition);
                 color: var(--blackColor);
                 margin-bottom: 5px;
                 position: relative;
                 border-radius: 7px;
-                display: block;
+                display: flex;
+                align-items: center;
+                gap: 7px;
                 text-decoration: none;
                 padding: {
-                    bottom: 9.5px;
-                    right: 30px;
-                    top: 9.5px;
-                    left: 40px;
+                    bottom: 9px;
+                    right: 10px;
+                    top: 9px;
+                    left: 10px;
                 };
                 font: {
                     size: var(--fontSize);
                     weight: 500;
                 };
+                span {
+                    font-weight: 500;
+                }
                 i {
                     transition: var(--transition);
-                    transform: translateY(-50%);
                     color: var(--bodyColor);
-                    position: absolute;
                     font-size: 22px;
-                    line-height: 1;
-                    left: 12px;
-                    top: 50%;
-                }
-                .title {
-                    font: { 
-                        weight: 500;
-                    };
+                    line-height: 1; 
                 }
                 &:hover, &.active {
                     color: var(--primaryColor);
@@ -380,7 +378,11 @@
                                 color: var(--whiteColor);
                             }
                         }
-
+                        .MuiAccordionSummary-content {
+                            .trezo-badge {
+                                background-color: rgba(255, 255, 255, 0.08); 
+                            }
+                        }
                         &.Mui-expanded {
                             background-color: #15203c;
 
@@ -437,10 +439,12 @@
                 .sidebar-menu-link {
                     color: var(--whiteColor);
 
+                    .title {
+                        color: var(--whiteColor);
+                    }
                     i {
                         color: var(--darkBodyColor);
                     }
-
                     &.active, &:hover {
                         background-color: #15203c;
                         color: var(--primaryColor);
@@ -493,13 +497,10 @@
             .sidebar-menu {
                 .mat-accordion {
                     .mat-summary {
-                        padding-right: 40px;
-                        padding-left: 10px; 
-
                         .MuiAccordionSummary-content {
                             i {
-                                left: auto;
-                                right: 12px;
+                                margin-right: 0;
+                                margin-left: 7px;
                             }
                             .trezo-badge {
                                 right: auto;
@@ -512,7 +513,6 @@
                             margin-left: 0;
                         }
                     }
-
                     .mat-details {
                         .sidebar-sub-menu {
                             padding: 0;
@@ -536,22 +536,11 @@
                         }
                     }
                 }
-                .sidebar-menu-link {
-                    padding-right: 40px;
-                    padding-left: 30px;
-
-                    i {
-                        left: auto;
-                        right: 12px;
-                    }
-                }
             }
         }
     }
 }
 
-
- 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {}
 
@@ -586,9 +575,7 @@
 
             .sidebar-menu {
                 .mat-accordion {
-                    .mat-summary {
-                        padding-left: 36px;
-
+                    .mat-summary { 
                         .MuiAccordionSummary-content {
                             i {
                                 font-size: 18px;
@@ -610,8 +597,6 @@
                     }
                 }
                 .sidebar-menu-link {
-                    padding-left: 36px;
-
                     i {
                         font-size: 18px;
                     }
@@ -655,7 +640,6 @@
             display: none;
         }
     }
-
     .main-wrapper-content {
         &.active {
             .left-sidebar-menu {
@@ -695,6 +679,7 @@
                                 padding-right: 10px;
                                 padding-left: 10px;
                                 padding-top: 10px;
+                                width: 20px;
 
                                 .MuiAccordionSummary-content {
                                     .title, .trezo-badge {
@@ -706,8 +691,7 @@
                                 }
                                 .MuiAccordionSummary-content {
                                     i { 
-                                        transform: initial; 
-                                        position: initial;
+                                        margin-right: 0;
                                     }
                                 }
                             }
@@ -715,17 +699,7 @@
                                 display: none;
                             }
                         }
-
                         .sidebar-menu-link {
-                            padding-bottom: 10px;
-                            padding-right: 10px;
-                            padding-top: 10px;
-                            padding-left: 10px;
-
-                            i { 
-                                transform: initial; 
-                                position: initial;
-                            }
                             .title {
                                 display: none;
                             }
@@ -765,41 +739,26 @@
                             }
                             .mat-accordion {
                                 .mat-summary { 
-                                    padding-bottom: 9.5px;
-                                    padding-right: 10px;
-                                    padding-left: 40px;
-                                    padding-top: 9.5px;
-    
+                                    width: 91%;
+
                                     .MuiAccordionSummary-content {
+                                        i { 
+                                            margin-right: 7px;
+                                        }
                                         .title, .trezo-badge {
                                             display: inline-block;
                                         }
                                     }
                                     .MuiAccordionSummary-expandIconWrapper {
                                         display: inline-block;
-                                    }
-                                    .MuiAccordionSummary-content {
-                                        i { 
-                                            transform: translateY(-50%); 
-                                            position: absolute;
-                                        }
-                                    }
+                                    } 
                                 }
                                 .MuiCollapse-entered {
                                     display: block;
                                 }
                             }
-    
+
                             .sidebar-menu-link {
-                                padding-bottom: 9.5px;
-                                padding-right: 10px;
-                                padding-top: 9.5px;
-                                padding-left: 40px;
-    
-                                i { 
-                                    transform: translateY(-50%); 
-                                    position: absolute;
-                                }
                                 .title {
                                     display: inline-block;
                                 }
@@ -809,25 +768,223 @@
                 }
             }
         }
+
+        // compact-sidebar
+        &.compact-sidebar {
+            padding-left: 85px;
+
+            .top-navbar {
+                left: 90px !important;
+
+                .top-burger {
+                    display: none;
+                }
+            }
+
+            .left-sidebar-menu {
+                width: 65px;
+
+                .burger-menu {
+                    display: none !important;
+                }
+                .logo {
+                    padding-left: 12px;
+                    padding-right: 12px;
+
+                    a {
+                        justify-content: center;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+                .burger-menu {
+                    display: none;
+                }
+                .sidebar-inner {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 75px;
+
+                    .sidebar-menu {
+                        .sub-title {
+                            display: none;
+                        }
+                        .mat-accordion {
+                            .mat-summary { 
+                                padding-bottom: 10px;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                padding-top: 10px;
+                                width: 20px;
+
+                                .MuiAccordionSummary-content {
+                                    .title, .trezo-badge {
+                                        display: none;
+                                    }
+                                }
+                                .MuiAccordionSummary-expandIconWrapper {
+                                    display: none;
+                                }
+                                .MuiAccordionSummary-content {
+                                    i { 
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            .MuiCollapse-entered {
+                                display: none;
+                            }
+                        }
+                        .sidebar-menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    width: 260px;
+
+                    .burger-menu {
+                        display: none !important;
+                    }
+
+                    .logo {
+                        padding: 18px 25px 16px; 
+    
+                        a {
+                            justify-content: flex-start;
+    
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .burger-menu {
+                        display: inline-block;
+                    }
+                    .sidebar-inner {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        padding-top: 90px;
+    
+                        .sidebar-menu {
+                            .sub-title {
+                                display: inline-block;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    width: 91%;
+
+                                    .MuiAccordionSummary-content {
+                                        i { 
+                                            margin-right: 7px;
+                                        }
+                                        .title, .trezo-badge {
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .MuiAccordionSummary-expandIconWrapper {
+                                        display: inline-block;
+                                    } 
+                                }
+                                .MuiCollapse-entered {
+                                    display: block;
+                                }
+                            }
+
+                            .sidebar-menu-link {
+                                .title {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        } 
     }
- 
+
     // RTL Style
     [dir="rtl"] {
         .main-wrapper-content {
             &.active {
                 .left-sidebar-menu {
+                    .sidebar-inner {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-top: 75px;
+
+                        .sidebar-menu {
+                            .sub-title {
+                                display: none;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    .MuiAccordionSummary-content {
+                                        i {  
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     &:hover {
                         .sidebar-inner {
                             .sidebar-menu {
                                 .mat-accordion {
                                     .mat-summary { 
-                                        padding-right: 40px;
-                                        padding-left: 10px; 
-                                    } 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
                                 }
-                                .sidebar-menu-link { 
-                                    padding-right: 40px; 
-                                    padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // compact-sidebar
+            &.compact-sidebar {
+                padding-right: 85px;
+                padding-left: 25px;
+
+                .top-navbar {
+                    left: 25px !important;
+                    right: 90px !important;
+                }
+
+                .left-sidebar-menu {
+                    .sidebar-inner {
+                        .sidebar-menu {
+                            .mat-accordion {
+                                .mat-summary {
+                                    .MuiAccordionSummary-content i {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .sidebar-inner {
+                            .sidebar-menu {
+                                .mat-accordion {
+                                    .mat-summary { 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

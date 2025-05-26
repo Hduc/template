@@ -22,7 +22,7 @@ const Stats: React.FC = () => {
           columnSpacing={{ xs: 3, lg: 2, xl: 3 }}
           spacing={"25px"}
         >
-          <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 4 }}>
             <Box>
               <Box
                 sx={{
@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 4 }}>
             <Box>
               <Box
                 sx={{
@@ -162,7 +162,7 @@ const Stats: React.FC = () => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
+          <Grid size={{ xs: 12, sm: 4, md: 4, lg: 4, xl: 4 }}>
             <Box>
               <Box
                 sx={{

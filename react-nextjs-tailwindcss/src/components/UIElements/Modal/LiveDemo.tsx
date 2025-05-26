@@ -12,7 +12,7 @@ const LiveDemo: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Live Demo</h5>
+            <h5 className="!mb-0">Live Demo</h5>
           </div>
         </div>
         <div className="trezo-card-content">
@@ -41,7 +41,7 @@ const LiveDemo: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                 <div className="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0">Add New Task</h5>
+                    <h5 className="!mb-0">Add New Task</h5>
                   </div>
                   <div className="trezo-card-subtitle">
                     <button

@@ -106,7 +106,7 @@ const AddCardModal = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} lg={6}>
+                  <Grid size={{ xs: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -131,7 +131,7 @@ const AddCardModal = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} lg={6}>
+                  <Grid size={{ xs: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -156,7 +156,7 @@ const AddCardModal = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} lg={6}>
+                  <Grid size={{ xs: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -173,15 +173,16 @@ const AddCardModal = () => {
                         sx={{
                           width: "100%",
                           "& fieldset": {
-                            border: "1px solid #D5D9E2",
+                            border: "1px solid rgba(0, 0, 0, 0.23)",
                             borderRadius: "7px",
                           },
                         }}
+                        className="input-date-picker"
                       />
                     </LocalizationProvider>
                   </Grid>
 
-                  <Grid item xs={12} lg={6}>
+                  <Grid size={{ xs: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -206,7 +207,7 @@ const AddCardModal = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
@@ -216,7 +217,7 @@ const AddCardModal = () => {
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -224,6 +225,7 @@ const AddCardModal = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

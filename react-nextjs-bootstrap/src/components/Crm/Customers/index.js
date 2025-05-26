@@ -1,8 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { Card, Form, Table } from "react-bootstrap";
-import SearchForm from "./SearchForm";
-import Pagination from "./Pagination";
 import Image from "next/image";
 
 const customersData = [
@@ -116,24 +115,187 @@ const customersData = [
     due: "$55",
     status: "active",
   },
+  {
+    id: "#844",
+    customerImg: "/images/user-16.jpg",
+    customerName: "Johnathan Walker",
+    email: "johnathan@trezo.com",
+    phone: "+1 555-233-1234",
+    lastLogin: "9 Jun 2024",
+    received: "$5,500",
+    due: "$145",
+    status: "active",
+  },
+  {
+    id: "#843",
+    customerImg: "/images/user-17.jpg",
+    customerName: "Emily Foster",
+    email: "emily@trezo.com",
+    phone: "+1 555-567-2345",
+    lastLogin: "8 Jun 2024",
+    received: "$2,200",
+    due: "$320",
+    status: "active",
+  },
+  {
+    id: "#842",
+    customerImg: "/images/user-18.jpg",
+    customerName: "George Matthews",
+    email: "george@trezo.com",
+    phone: "+1 555-678-9999",
+    lastLogin: "7 Jun 2024",
+    received: "$1,500",
+    due: "$190",
+    status: "deactive",
+  },
+  {
+    id: "#841",
+    customerImg: "/images/user-19.jpg",
+    customerName: "Clara Torres",
+    email: "clara@trezo.com",
+    phone: "+1 555-234-5678",
+    lastLogin: "6 Jun 2024",
+    received: "$4,400",
+    due: "$90",
+    status: "active",
+  },
+  {
+    id: "#840",
+    customerImg: "/images/user-20.jpg",
+    customerName: "William Reed",
+    email: "william@trezo.com",
+    phone: "+1 555-876-4321",
+    lastLogin: "5 Jun 2024",
+    received: "$7,000",
+    due: "$255",
+    status: "active",
+  },
+  {
+    id: "#839",
+    customerImg: "/images/user-21.jpg",
+    customerName: "Sophia Walker",
+    email: "sophia@trezo.com",
+    phone: "+1 555-999-8765",
+    lastLogin: "4 Jun 2024",
+    received: "$3,600",
+    due: "$0",
+    status: "deactive",
+  },
+  {
+    id: "#838",
+    customerImg: "/images/user-22.jpg",
+    customerName: "Jacob Watson",
+    email: "jacob@trezo.com",
+    phone: "+1 555-334-4567",
+    lastLogin: "3 Jun 2024",
+    received: "$5,800",
+    due: "$50",
+    status: "active",
+  },
+  {
+    id: "#837",
+    customerImg: "/images/user-23.jpg",
+    customerName: "Olivia Brown",
+    email: "olivia@trezo.com",
+    phone: "+1 555-567-2345",
+    lastLogin: "2 Jun 2024",
+    received: "$3,150",
+    due: "$85",
+    status: "active",
+  },
+  {
+    id: "#836",
+    customerImg: "/images/user-24.jpg",
+    customerName: "James Harris",
+    email: "james@trezo.com",
+    phone: "+1 555-678-2345",
+    lastLogin: "1 Jun 2024",
+    received: "$9,600",
+    due: "$430",
+    status: "deactive",
+  },
+  {
+    id: "#835",
+    customerImg: "/images/user-25.jpg",
+    customerName: "Hannah Moore",
+    email: "hannah@trezo.com",
+    phone: "+1 555-453-7890",
+    lastLogin: "31 May 2024",
+    received: "$4,000",
+    due: "$35",
+    status: "active",
+  },
 ];
 
 const Customers = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [statusFilter, setStatusFilter] = useState("0");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const recordsPerPage = 10;
+
+  // Handle status filter change
+  const handleStatusChange = (event) => {
+    setStatusFilter(event.target.value);
+    setCurrentPage(1); // Reset to page 1 when filter changes
+  };
+
+  // Handle search input change
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    setCurrentPage(1); // Reset to page 1 when searching
+  };
+
+  // Filter customers based on status and search query
+  const filteredData = customersData.filter((customer) => {
+    const matchesStatus =
+      statusFilter === "0" || customer.status === statusFilter;
+    const matchesSearch =
+      searchQuery === "" ||
+      customer.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      customer.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      customer.phone.includes(searchQuery);
+
+    return matchesStatus && matchesSearch;
+  });
+
+  // Paginate filtered data
+  const indexOfLast = currentPage * recordsPerPage;
+  const indexOfFirst = indexOfLast - recordsPerPage;
+  const currentCustomers = filteredData.slice(indexOfFirst, indexOfLast);
+
+  // Handle page navigation
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
         <Card.Body className="p-0">
           <div className="p-4">
             <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
-              <SearchForm />
+              <Form className="position-relative table-src-form me-0">
+                <Form.Control
+                  type="text"
+                  placeholder="Search here"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                />
+
+                <span className="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y">
+                  search
+                </span>
+              </Form>
 
               <Form.Select
                 className="month-select form-control"
-                aria-label="Default select example"
+                value={statusFilter}
+                onChange={handleStatusChange}
               >
-                <option defaultValue="0">All</option>
-                <option defaultValue="1">Active</option>
-                <option defaultValue="2">Deactive</option>
+                <option value="0">All</option>
+                <option value="active">Active</option>
+                <option value="deactive">Deactive</option>
               </Form.Select>
             </div>
           </div>
@@ -164,84 +326,139 @@ const Customers = () => {
                 </thead>
 
                 <tbody>
-                  {customersData &&
-                    customersData.slice(0, 10).map((defaultValue, i) => (
-                      <tr key={i}>
-                        <td className="text-body">
-                          <Form>
-                            <Form.Check
-                              type="checkbox"
-                              id={defaultValue.id}
-                              label={defaultValue.id}
+                  {currentCustomers.map((customer, i) => (
+                    <tr key={i}>
+                      <td className="text-body">
+                        <Form>
+                          <Form.Check
+                            type="checkbox"
+                            id={customer.id}
+                            label={customer.id}
+                          />
+                        </Form>
+                      </td>
+
+                      <td>
+                        <div href="#" className="d-flex align-items-center">
+                          <div className="flex-shrink-0">
+                            <Image
+                              src={customer.customerImg}
+                              className="wh-34 rounded-circle"
+                              alt="user"
+                              width={34}
+                              height={34}
                             />
-                          </Form>
-                        </td>
-
-                        <td>
-                          <div href="#" className="d-flex align-items-center">
-                            <div className="flex-shrink-0">
-                              <Image
-                                src={defaultValue.customerImg}
-                                className="wh-34 rounded-circle"
-                                alt="user"
-                                width={34}
-                                height={34}
-                              />
-                            </div>
-                            <div className="flex-grow-1 ms-2 position-relative top-1">
-                              <h6 className="mb-0 fs-14 fw-medium">
-                                {defaultValue.customerName}
-                              </h6>
-                            </div>
                           </div>
-                        </td>
-
-                        <td className="text-body">{defaultValue.email}</td>
-
-                        <td>{defaultValue.phone}</td>
-
-                        <td className="text-body">{defaultValue.lastLogin}</td>
-
-                        <td className="text-body">{defaultValue.received}</td>
-
-                        <td className="text-body">{defaultValue.due}</td>
-
-                        <td>
-                          <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${defaultValue.status}`}
-                          >
-                            {defaultValue.status}
-                          </span>
-                        </td>
-
-                        <td>
-                          <div className="d-flex align-items-center gap-1">
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-primary">
-                                visibility
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-body">
-                                edit
-                              </span>
-                            </button>
-
-                            <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                              <span className="material-symbols-outlined fs-16 text-danger">
-                                delete
-                              </span>
-                            </button>
+                          <div className="flex-grow-1 ms-2 position-relative top-1">
+                            <h6 className="mb-0 fs-14 fw-medium">
+                              {customer.customerName}
+                            </h6>
                           </div>
-                        </td>
-                      </tr>
-                    ))}
+                        </div>
+                      </td>
+
+                      <td className="text-body">{customer.email}</td>
+
+                      <td>{customer.phone}</td>
+
+                      <td className="text-body">{customer.lastLogin}</td>
+
+                      <td className="text-body">{customer.received}</td>
+
+                      <td className="text-body">{customer.due}</td>
+
+                      <td>
+                        <span
+                          className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${customer.status}`}
+                        >
+                          {customer.status}
+                        </span>
+                      </td>
+
+                      <td>
+                        <div className="d-flex align-items-center gap-1">
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-primary">
+                              visibility
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-body">
+                              edit
+                            </span>
+                          </button>
+
+                          <button className="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                            <span className="material-symbols-outlined fs-16 text-danger">
+                              delete
+                            </span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
 
               {/* Pagination */}
-              <Pagination />
+              <div className="p-4">
+                <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
+                  <span className="fs-12 fw-medium">
+                    Showing {indexOfFirst + 1} to{" "}
+                    {Math.min(indexOfLast, filteredData.length)} of{" "}
+                    {filteredData.length} Results
+                  </span>
+
+                  <nav aria-label="Page navigation example">
+                    <ul className="pagination mb-0 justify-content-center">
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => handlePageChange(currentPage - 1)}
+                          disabled={currentPage === 1}
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_left
+                          </span>
+                        </button>
+                      </li>
+
+                      {[
+                        ...Array(
+                          Math.ceil(filteredData.length / recordsPerPage)
+                        ),
+                      ].map((_, index) => (
+                        <li key={index} className="page-item">
+                          <button
+                            className={`page-link ${
+                              currentPage === index + 1 ? "active" : ""
+                            }`}
+                            onClick={() => handlePageChange(index + 1)}
+                          >
+                            {index + 1}
+                          </button>
+                        </li>
+                      ))}
+
+                      <li className="page-item">
+                        <button
+                          className="page-link icon"
+                          onClick={() => handlePageChange(currentPage + 1)}
+                          disabled={
+                            currentPage ===
+                            Math.ceil(filteredData.length / recordsPerPage)
+                          }
+                        >
+                          <span className="material-symbols-outlined">
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </Card.Body>

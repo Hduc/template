@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import Link from "next/link";
-import Button from "@mui/material/Button";
 import Image from "next/image";
 import styles from "@/components/Dashboard/HelpDesk/Congratulations/Congratulations.module.css";
 

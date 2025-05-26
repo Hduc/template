@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MpOverviewService } from './mp-overview.service';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-mp-overview',

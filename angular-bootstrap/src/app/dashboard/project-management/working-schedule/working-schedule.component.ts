@@ -18,7 +18,7 @@ export class WorkingScheduleComponent {
 		loop: true,
 		margin: 25,
 		dots: true,
-		autoplay: false,
+		autoplay: true,
 		smartSpeed: 500,
 		autoplayHoverPause: true,
 		navText: [

@@ -28,22 +28,22 @@ const DescriptionAlerts = () => {
         </Typography>
 
         <Stack sx={{ width: "100%" }} spacing={2}>
-          <Alert severity="success" sx={{ fontSize: "14px" }}>
+          <Alert severity="success" sx={{ fontSize: "14px", color: "success.main" }}>
             <AlertTitle>Success</AlertTitle>
             This is a success Alert with an encouraging title.
           </Alert>
 
-          <Alert severity="info" sx={{ fontSize: "14px" }}>
+          <Alert severity="info" sx={{ fontSize: "14px", color: "info.main" }}>
             <AlertTitle>Info</AlertTitle>
             This is an info Alert with an informative title.
           </Alert>
 
-          <Alert severity="warning" sx={{ fontSize: "14px" }}>
+          <Alert severity="warning" sx={{ fontSize: "14px", color: "warning.main" }}>
             <AlertTitle>Warning</AlertTitle>
             This is a warning Alert with a cautious title.
           </Alert>
 
-          <Alert severity="error" sx={{ fontSize: "14px" }}>
+          <Alert severity="error" sx={{ fontSize: "14px", color: "error.main" }}>
             <AlertTitle>Error</AlertTitle>
             This is an error Alert with a scary title.
           </Alert>

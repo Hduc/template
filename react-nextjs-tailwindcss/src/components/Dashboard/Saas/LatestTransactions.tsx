@@ -210,7 +210,7 @@ const LatestTransactions: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Latest Transactions</h5>
+            <h5 className="!mb-0">Latest Transactions</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -320,7 +320,7 @@ const LatestTransactions: React.FC = () => {
                     </td>
                     <td className="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[9px] ltr:first:pl-0 rtl:first:pr-0 border-b border-primary-50 dark:border-[#172036] ltr:last:pr-0 rtl:last:pl-0">
                       <span
-                        className={`inline-block font-medium text-xs px-[9px] ${
+                        className={`inline-block font-medium text-xs px-[9px] dark:bg-[#15203c] dark:border-[#172036] ${
                           row.status === "Completed"
                             ? "text-success-700 border-success-300 bg-success-100"
                             : row.status === "Pending"
@@ -338,7 +338,7 @@ const LatestTransactions: React.FC = () => {
           </div>
 
           <div className="pt-[10px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {startIndex + 1} to {Math.min(endIndex, tableData.length)}{" "}
               of {tableData.length} results
             </p>

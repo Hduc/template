@@ -1,0 +1,213 @@
+<div class="trezo-card bg-orange-100 dark:bg-[#15203c] p-[20px] md:p-[25px] rounded-md">
+    <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+        <div class="trezo-card-title">
+            <h5 class="!mb-0">
+                My Featured Listings
+            </h5>
+        </div>
+    </div>
+    <div class="trezo-card-content relative" id="myFeaturedListingsSlides">
+        <owl-carousel-o [options]="myFeaturedListingsSlides">
+            <ng-template carouselSlide>
+                <div class="bg-white rounded-md dark:bg-[#0c1427]">
+                    <div
+                        class="relative h-[202.5px] bg-center bg-cover bg-no-repeat rounded-t-md"
+                        style="background-image: url(images/properties/property13.jpg);"
+                    >
+                        <span class="inline-block absolute top-[10px] ltr:left-[10px] rtl:right-[10px] bg-danger-100 text-danger-700 text-xs font-medium py-[2px] px-[8px] rounded-[4px]">
+                            For Rent
+                        </span>
+                    </div>
+                    <div class="p-[20px]">
+                        <h6 class="!text-md !mb-[5px] !font-semibold">
+                            <a routerLink="." class="transition-all hover:text-primary-500">
+                                White House Villa
+                            </a>
+                        </h6>
+                        <span class="block">
+                            New Castle, United Kingdom
+                        </span>
+                        <ul class="mt-[13px] flex items-center justify-between">
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    open_run
+                                </i>
+                                321 Sft
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bed
+                                </i>
+                                2 Bed
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bathtub
+                                </i>
+                                2 Bath
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-[13px] pt-[13px] border-t border-gray-100 dark:border-[#172036]">
+                            <div class="text-md text-black dark:text-white font-bold leading-none">
+                                $3,124/m
+                            </div>
+                            <a routerLink="." class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-100 dark:bg-[#15203c] transition-all hover:text-white hover:bg-primary-500">
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="bg-white rounded-md dark:bg-[#0c1427]">
+                    <div
+                        class="relative h-[202.5px] bg-center bg-cover bg-no-repeat rounded-t-md"
+                        style="background-image: url(images/properties/property14.jpg);"
+                    >
+                        <span class="inline-block absolute top-[10px] ltr:left-[10px] rtl:right-[10px] bg-success-100 text-success-700 text-xs font-medium py-[2px] px-[8px] rounded-[4px]">
+                            For Sale
+                        </span>
+                    </div>
+                    <div class="p-[20px]">
+                        <h6 class="!text-md !mb-[5px] !font-semibold">
+                            <a routerLink="." class="transition-all hover:text-primary-500">
+                                Luxury Comfort Villa
+                            </a>
+                        </h6>
+                        <span class="block">
+                            London, United Kingdom
+                        </span>
+                        <ul class="mt-[13px] flex items-center justify-between">
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    open_run
+                                </i>
+                                425 Sft
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bed
+                                </i>
+                                3 Bed
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bathtub
+                                </i>
+                                2 Bath
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-[13px] pt-[13px] border-t border-gray-100 dark:border-[#172036]">
+                            <div class="text-md text-black dark:text-white font-bold leading-none">
+                                $4,274/m
+                            </div>
+                            <a routerLink="." class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-100 dark:bg-[#15203c] transition-all hover:text-white hover:bg-primary-500">
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="bg-white rounded-md dark:bg-[#0c1427]">
+                    <div
+                        class="relative h-[202.5px] bg-center bg-cover bg-no-repeat rounded-t-md"
+                        style="background-image: url(images/properties/property13.jpg);"
+                    >
+                        <span class="inline-block absolute top-[10px] ltr:left-[10px] rtl:right-[10px] bg-danger-100 text-danger-700 text-xs font-medium py-[2px] px-[8px] rounded-[4px]">
+                            For Rent
+                        </span>
+                    </div>
+                    <div class="p-[20px]">
+                        <h6 class="!text-md !mb-[5px] !font-semibold">
+                            <a routerLink="." class="transition-all hover:text-primary-500">
+                                White House Villa
+                            </a>
+                        </h6>
+                        <span class="block">
+                            New Castle, United Kingdom
+                        </span>
+                        <ul class="mt-[13px] flex items-center justify-between">
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    open_run
+                                </i>
+                                321 Sft
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bed
+                                </i>
+                                2 Bed
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bathtub
+                                </i>
+                                2 Bath
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-[13px] pt-[13px] border-t border-gray-100 dark:border-[#172036]">
+                            <div class="text-md text-black dark:text-white font-bold leading-none">
+                                $3,124/m
+                            </div>
+                            <a routerLink="." class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-100 dark:bg-[#15203c] transition-all hover:text-white hover:bg-primary-500">
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="bg-white rounded-md dark:bg-[#0c1427]">
+                    <div
+                        class="relative h-[202.5px] bg-center bg-cover bg-no-repeat rounded-t-md"
+                        style="background-image: url(images/properties/property14.jpg);"
+                    >
+                        <span class="inline-block absolute top-[10px] ltr:left-[10px] rtl:right-[10px] bg-success-100 text-success-700 text-xs font-medium py-[2px] px-[8px] rounded-[4px]">
+                            For Sale
+                        </span>
+                    </div>
+                    <div class="p-[20px]">
+                        <h6 class="!text-md !mb-[5px] !font-semibold">
+                            <a routerLink="." class="transition-all hover:text-primary-500">
+                                Luxury Comfort Villa
+                            </a>
+                        </h6>
+                        <span class="block">
+                            London, United Kingdom
+                        </span>
+                        <ul class="mt-[13px] flex items-center justify-between">
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    open_run
+                                </i>
+                                425 Sft
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bed
+                                </i>
+                                3 Bed
+                            </li>
+                            <li class="text-xs text-black dark:text-white relative ltr:pl-[23px] rtl:pr-[23px]">
+                                <i class="material-symbols-outlined absolute top-1/2 -translate-y-1/2 !text-lg ltr:left-0 rtl:right-0 text-gray-400">
+                                    bathtub
+                                </i>
+                                2 Bath
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-[13px] pt-[13px] border-t border-gray-100 dark:border-[#172036]">
+                            <div class="text-md text-black dark:text-white font-bold leading-none">
+                                $4,274/m
+                            </div>
+                            <a routerLink="." class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-100 dark:bg-[#15203c] transition-all hover:text-white hover:bg-primary-500">
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NetProfitService } from './net-profit.service';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-net-profit',
@@ -10,6 +11,7 @@ import { NetProfitService } from './net-profit.service';
 export class NetProfitComponent {
 
     constructor(
+        public themeService: CustomizerSettingsService,
         private netProfitService: NetProfitService
     ) {}
 

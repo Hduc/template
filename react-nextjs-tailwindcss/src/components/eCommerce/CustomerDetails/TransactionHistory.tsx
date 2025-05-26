@@ -162,7 +162,7 @@ const TransactionHistory: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Transaction History</h5>
+            <h5 className="!mb-0">Transaction History</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -263,7 +263,7 @@ const TransactionHistory: React.FC = () => {
           </div>
 
           <div className="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {indexOfFirstTransaction + 1} to {indexOfLastTransaction}{" "}
               of {customersData.length} results
             </p>

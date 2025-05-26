@@ -18,7 +18,7 @@ const Welcome: React.FC = () => {
               <span className="block text-md md:text-lg mb-[10px] text-dark">
                 Hello Olivia!
               </span>
-              <h1 className="font-black text-xl md:text-2xl mb-[12px] text-dark">
+              <h1 className="!font-black !text-xl md:!text-2xl !mb-[12px] !text-dark">
                 Welcome To Your Beauty Lounge
               </h1>
               <p className="text-black mb-0">

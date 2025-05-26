@@ -28,7 +28,7 @@ export class NetProfitService {
                     ],
                     chart: {
                         type: "bar",
-                        height: 200,
+                        height: 205,
                         toolbar: {
                             show: false
                         }

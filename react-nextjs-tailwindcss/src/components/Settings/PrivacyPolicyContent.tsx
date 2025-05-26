@@ -5,7 +5,7 @@ import React from "react";
 const PrivacyPolicyContent: React.FC = () => {
   return (
     <div>
-      <h5 className="text-lg mb-[20px]">Security :</h5>
+      <h5 className="!text-lg !mb-[20px]">Security :</h5>
 
       <span className="block text-black dark:text-white font-semibold mb-[10px] mt-[20px]">
         Two-factor Authentication

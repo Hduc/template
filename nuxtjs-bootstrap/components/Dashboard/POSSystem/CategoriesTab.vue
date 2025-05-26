@@ -58,7 +58,7 @@
           >
             <div class="card custom-shadow rounded-3 border mb-4 bg-white p-20">
               <div class="pb-1">
-                <RouterLink
+                <NuxtLink
                   to="/ecommerce/product-details"
                   class="d-block text-decoration-none mb-2"
                 >
@@ -69,7 +69,7 @@
                   />
                   <h3 class="fs-20 fw-medium mb-1">{{ product.name }}</h3>
                   <span class="text-body">{{ product.category }}</span>
-                </RouterLink>
+                </NuxtLink>
                 <div class="d-flex justify-content-between align-items-end">
                   <span
                     class="fs-24 fw-medium text-success-60 lh-1 position-relative top-3"

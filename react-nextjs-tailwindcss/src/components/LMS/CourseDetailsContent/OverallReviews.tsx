@@ -102,7 +102,7 @@ const OverallReviews: React.FC = () => {
             </div>
             <div className="md:col-span-1">
               <div className="text-center mt-[25px] md:mt-0">
-                <h3 className="mb-[7px] leading-none text-5xl">4.28</h3>
+                <h3 className="!mb-[7px] !leading-none !text-5xl">4.28</h3>
                 <div className="flex items-center justify-center mb-[10px] text-[#ee8336] text-[30px] gap-[4px]">
                   <i className="ri-star-fill"></i>
                   <i className="ri-star-fill"></i>

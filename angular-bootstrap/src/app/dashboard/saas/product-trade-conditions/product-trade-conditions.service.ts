@@ -248,6 +248,9 @@ export class ProductTradeConditionsService {
                             color: '#DDE4FF'
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     grid: {
                         show: true,
                         borderColor: "#ECF0FF"

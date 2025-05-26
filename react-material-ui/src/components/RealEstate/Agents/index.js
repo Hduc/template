@@ -462,7 +462,7 @@ const Agents = () => {
         justifyContent="center"
       >
         {paginatedAgents.map((agent) => (
-          <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={agent.id}>
+          <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }} key={agent.id}>
             <Box
               className="bg-white"
               sx={{
@@ -621,7 +621,7 @@ const Agents = () => {
                     </Button>
                   </a>
 
-                  <Link href="/real-estate/agents/details/">
+                  <Link to="/real-estate/agents/details">
                     <Button
                       variant="outlined"
                       sx={{
@@ -698,12 +698,12 @@ const Agents = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
               key={index}
-              className="border text-body"
+              className="border"
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
                 "&:hover": {

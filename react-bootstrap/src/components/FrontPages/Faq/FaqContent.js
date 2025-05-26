@@ -1,5 +1,6 @@
 "use client";
 
+import { Container } from "react-bootstrap";
 import { Accordion } from "react-bootstrap";
 
 const FaqContent = () => {
@@ -39,7 +40,7 @@ const FaqContent = () => {
 
   return (
     <div className="faq-area position-relative z-1 pt-125">
-      <div className="container">
+      <Container>
         <div className="section-title mw-630">
           <span className="top-title">
             <span>FAQ’s</span>
@@ -68,7 +69,7 @@ const FaqContent = () => {
             </Accordion.Item>
           ))}
         </Accordion>
-      </div>
+      </Container>
     </div>
   );
 };

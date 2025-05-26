@@ -1,5 +1,7 @@
 "use client";
 
+import { Container, Row, Col } from "react-bootstrap";
+
 const features = [
   {
     icon: "stacks",
@@ -27,12 +29,11 @@ const features = [
   },
 ];
 
-
 const KeyFeatures = () => {
   return (
     <>
       <div className="key-features-area pt-150 pb-125 position-relative z-2">
-        <div className="container">
+        <Container>
           <div className="section-title">
             <span className="top-title">
               <span>Key Features</span>
@@ -42,9 +43,9 @@ const KeyFeatures = () => {
             </h2>
           </div>
 
-          <div className="row justify-content-center">
+          <Row className="justify-content-center">
             {features.map((feature, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
+              <Col md={6} lg={4} key={index}>
                 <div className="key-features-single-item">
                   <i
                     className={`material-symbols-outlined wh-87 ${feature.bgClass} d-inline-block ${feature.textClass}`}
@@ -55,10 +56,10 @@ const KeyFeatures = () => {
                   <h3>{feature.title}</h3>
                   <p>{feature.description}</p>
                 </div>
-              </div>
+              </Col>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Container>
       </div>
     </>
   );

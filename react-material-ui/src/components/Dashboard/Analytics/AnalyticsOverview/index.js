@@ -213,7 +213,7 @@ const AnalyticsOverview = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 2 }}
             justifyContent="center"
           >
-            <Grid item xs={12} md={12} lg={8}>
+            <Grid size={{ xs: 12, md: 12, lg: 8 }}>
               <div
                 style={{
                   marginBottom: "-22px",
@@ -232,7 +232,7 @@ const AnalyticsOverview = () => {
               </div>
             </Grid>
 
-            <Grid item xs={12} md={12} lg={4}>
+            <Grid size={{ xs: 12, md: 12, lg: 4 }}>
               <Box>
                 <Box sx={{ mt: "25px" }}>
                   <Box

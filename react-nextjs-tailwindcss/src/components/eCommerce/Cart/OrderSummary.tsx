@@ -8,7 +8,7 @@ const OrderSummary: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Order Summary</h5>
+            <h5 className="!mb-0">Order Summary</h5>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ const OrderSummary: React.FC = () => {
             </table>
           </div>
 
-          <h6 className="mt-[20px] md:mt-[25px] mb-[10px]">Add A Note</h6>
+          <h6 className="!mt-[20px] md:!mt-[25px] !mb-[10px]">Add A Note</h6>
 
           <form>
             <textarea

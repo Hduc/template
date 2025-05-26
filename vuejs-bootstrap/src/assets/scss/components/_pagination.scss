@@ -36,8 +36,8 @@
     }
     &.active {
       .page-link {
-        background-color: $primary;
-        color: $white;
+        background-color: $primary !important;
+        color: $white !important;
         z-index: 0 !important;
       }
     }

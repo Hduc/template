@@ -91,6 +91,9 @@ export class GrossRevenueService {
                             }
                         }
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     legend: {
                         show: true,
                         fontSize: '12px',

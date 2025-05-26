@@ -263,7 +263,7 @@ const ProductTradeConditions: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Product Trade Conditions</h5>
+            <h5 className="!mb-0">Product Trade Conditions</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -303,7 +303,7 @@ const ProductTradeConditions: React.FC = () => {
                 options={options}
                 series={series}
                 type="candlestick"
-                height={309}
+                height={298}
                 width={"100%"}
               />
             )}
@@ -313,8 +313,8 @@ const ProductTradeConditions: React.FC = () => {
             <div className="ltr:border-r rtl:border-l border-gray-100 dark:border-[#172036] ltr:last:border-r-0 rtl:last:border-l-0 ltr:pr-[30px] rtl:pl-[30px] ltr:mr-[30px] rtl:ml-[30px] ltr:last:pr-0 rtl:last:pl-0 ltr:last:mr-0 rtl:last:ml-0">
               <span className="block mb-[7px]">Forecast Hours</span>
               <div className="flex items-center gap-[10px]">
-                <h3 className="leading-none text-xl mb-0">144h</h3>
-                <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 rounded-[100px]">
+                <h3 className="!leading-none !text-xl !mb-0">144h</h3>
+                <span className="inline-block text-xs py-px px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   +5.4%
                 </span>
               </div>
@@ -323,8 +323,8 @@ const ProductTradeConditions: React.FC = () => {
             <div className="ltr:border-r rtl:border-l border-gray-100 dark:border-[#172036] ltr:last:border-r-0 rtl:last:border-l-0 ltr:pr-[30px] rtl:pl-[30px] ltr:mr-[30px] rtl:ml-[30px] ltr:last:pr-0 rtl:last:pl-0 ltr:last:mr-0 rtl:last:ml-0">
               <span className="block mb-[7px]">Workflow Hours</span>
               <div className="flex items-center gap-[10px]">
-                <h3 className="leading-none text-xl mb-0">120h</h3>
-                <span className="inline-block text-xs px-[9px] text-orange-700 border border-orange-300 bg-orange-100 rounded-[100px]">
+                <h3 className="!leading-none !text-xl !mb-0">120h</h3>
+                <span className="inline-block text-xs py-px px-[9px] text-orange-700 border border-orange-300 bg-orange-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   -3.2%
                 </span>
               </div>
@@ -333,8 +333,8 @@ const ProductTradeConditions: React.FC = () => {
             <div className="ltr:border-r rtl:border-l border-gray-100 dark:border-[#172036] ltr:last:border-r-0 rtl:last:border-l-0 ltr:pr-[30px] rtl:pl-[30px] ltr:mr-[30px] rtl:ml-[30px] ltr:last:pr-0 rtl:last:pl-0 ltr:last:mr-0 rtl:last:ml-0">
               <span className="block mb-[7px]">Forcast Income</span>
               <div className="flex items-center gap-[10px]">
-                <h3 className="leading-none text-xl mb-0">$350K</h3>
-                <span className="inline-block text-xs px-[9px] text-success-700 border border-success-300 bg-success-100 rounded-[100px]">
+                <h3 className="!leading-none !text-xl !mb-0">$350K</h3>
+                <span className="inline-block text-xs py-px px-[9px] text-success-700 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px]">
                   +3.9%
                 </span>
               </div>

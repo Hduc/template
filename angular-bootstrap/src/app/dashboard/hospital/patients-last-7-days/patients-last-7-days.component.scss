@@ -40,6 +40,20 @@
     }
     &.component-dark-theme {
         background: #16223e;
+
+        .trezo-card-content {
+            h3 {
+                .info-badge {
+                    border-color: #0C1427;
+                    background: #0C1427;
+                    
+                    &.down {
+                        border-color: #0C1427;
+                        background: #0C1427;
+                    }
+                }
+            }
+        }
     }
     &.component-rtl-enabled {
         .trezo-card-content {

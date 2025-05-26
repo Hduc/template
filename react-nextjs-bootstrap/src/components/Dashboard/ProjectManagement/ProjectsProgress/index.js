@@ -124,7 +124,7 @@ const ProjectsProgress = () => {
 
   return (
     <>
-      <Card className="bg-white border-0 rounded-3 mb-4">
+      <Card className="bg-white border-0 rounded-3 mb-4 z-0">
         <Card.Body className="p-4">
           <div className="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3 mb-lg-30">
             <h3 className="mb-0">Projects Progress</h3>

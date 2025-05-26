@@ -52,7 +52,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product1.jpg',
             title: 'Smart Band',
-            date: '08 Jun 2024'
+            date: '08 Jun 2025'
         },
         category: 'Watch',
         price: '$35.00',
@@ -78,7 +78,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product3.jpg',
             title: 'iPhone 15 Plus',
-            date: '06 Jun 2024'
+            date: '06 Jun 2025'
         },
         category: 'Apple',
         price: '$99.00',
@@ -104,7 +104,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product4.jpg',
             title: 'Bluetooth Speaker',
-            date: '05 Jun 2024'
+            date: '05 Jun 2025'
         },
         category: 'Google',
         price: '$59.00',
@@ -130,7 +130,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product1.jpg',
             title: 'Smart Band',
-            date: '08 Jun 2024'
+            date: '08 Jun 2025'
         },
         category: 'Watch',
         price: '$35.00',
@@ -156,7 +156,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product3.jpg',
             title: 'iPhone 15 Plus',
-            date: '06 Jun 2024'
+            date: '06 Jun 2025'
         },
         category: 'Apple',
         price: '$99.00',
@@ -182,7 +182,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product4.jpg',
             title: 'Bluetooth Speaker',
-            date: '05 Jun 2024'
+            date: '05 Jun 2025'
         },
         category: 'Google',
         price: '$59.00',
@@ -208,7 +208,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product1.jpg',
             title: 'Smart Band',
-            date: '08 Jun 2024'
+            date: '08 Jun 2025'
         },
         category: 'Watch',
         price: '$35.00',
@@ -234,7 +234,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product3.jpg',
             title: 'iPhone 15 Plus',
-            date: '06 Jun 2024'
+            date: '06 Jun 2025'
         },
         category: 'Apple',
         price: '$99.00',
@@ -260,7 +260,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product4.jpg',
             title: 'Bluetooth Speaker',
-            date: '05 Jun 2024'
+            date: '05 Jun 2025'
         },
         category: 'Google',
         price: '$59.00',
@@ -286,7 +286,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product1.jpg',
             title: 'Smart Band',
-            date: '08 Jun 2024'
+            date: '08 Jun 2025'
         },
         category: 'Watch',
         price: '$35.00',
@@ -312,7 +312,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product3.jpg',
             title: 'iPhone 15 Plus',
-            date: '06 Jun 2024'
+            date: '06 Jun 2025'
         },
         category: 'Apple',
         price: '$99.00',
@@ -338,7 +338,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
         product: {
             img: 'images/products/product4.jpg',
             title: 'Bluetooth Speaker',
-            date: '05 Jun 2024'
+            date: '05 Jun 2025'
         },
         category: 'Google',
         price: '$59.00',

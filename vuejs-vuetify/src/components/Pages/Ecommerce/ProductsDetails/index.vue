@@ -8,10 +8,8 @@
           <div class="product-details-image">
             <Carousel
               id="gallery"
-              :items-to-show="1"
-              :wrap-around="false"
-              :transition="300"
-              v-model:current-slide="currentSlide"
+              v-bind="galleryConfig"
+              v-model="currentSlide"
               class="product-gallery__featured"
             >
               <Slide v-for="(image, index) in productImages" :key="index">
@@ -19,28 +17,28 @@
                   :src="image.url"
                   :alt="'Product Image ' + (index + 1)"
                   class="border-radius"
+                  :aspect-ratio="4 / 3"
                 />
               </Slide>
             </Carousel>
+
             <Carousel
               id="thumbnails"
-              :items-to-show="3"
-              :wrap-around="true"
-              :transition="300"
-              :gutter="25"
-              v-model:current-slide="currentSlide"
-              ref="carousel"
-              class="product-gallery__carousel"
+              v-bind="thumbnailsConfig"
+              v-model="currentSlide"
+              class="product-gallery__carousel mt-4"
             >
               <Slide v-for="(image, index) in productImages" :key="index">
                 <div
-                  @click="slideTo(index)"
-                  class="border-radius cursor-pointer"
+                  @click="currentSlide = index"
+                  class="border-radius cursor-pointer thumbnail-wrapper"
+                  :class="{ 'active-thumbnail': currentSlide === index }"
                 >
                   <v-img
                     :src="image.url"
                     :alt="'Product Thumbnail ' + (index + 1)"
                     class="border-radius"
+                    :aspect-ratio="4 / 3"
                   />
                 </div>
               </Slide>
@@ -196,15 +194,17 @@
       </v-row>
     </div>
   </v-card>
-  <Tabs />
+
+  <ProductsDetailsTabs />
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch } from "vue";
+import { defineComponent, ref } from "vue";
 import { Carousel, Slide } from "vue3-carousel";
-import "vue3-carousel/dist/carousel.css";
-
+import "vue3-carousel/carousel.css";
 import QuantityCounter from "./QuantityCounter.vue";
+
+import ProductsDetailsTabs from "./ProductsDetailsTabs.vue";
 
 export default defineComponent({
   name: "ProductsDetails",
@@ -212,12 +212,12 @@ export default defineComponent({
     Carousel,
     Slide,
     QuantityCounter,
+    ProductsDetailsTabs,
   },
   setup() {
     const currentSlide = ref(0);
-    watch(currentSlide, (newSlide) => {
-      console.log("Current Slide:", newSlide);
-    });
+    const quantity = ref(1);
+
     const productImages = ref([
       { url: require("@/assets/images/products/product-details1.jpg") },
       { url: require("@/assets/images/products/product-details2.jpg") },
@@ -263,12 +263,9 @@ export default defineComponent({
       colorActiveButton.value = "second";
     };
 
-    const slideTo = (index: number) => {
-      currentSlide.value = index;
-    };
-
     return {
       currentSlide,
+      quantity,
       productImages,
       typeText,
       typeActiveButton,
@@ -282,7 +279,20 @@ export default defineComponent({
       colorActiveButton,
       setColorTextToFirst,
       setColorTextToSecond,
-      slideTo,
+      galleryConfig: {
+        itemsToShow: 1,
+        wrapAround: true,
+        slideEffect: "fade",
+        mouseDrag: false,
+        touchDrag: false,
+      },
+      thumbnailsConfig: {
+        itemsToShow: 3,
+        wrapAround: true,
+        touchDrag: true,
+        snapAlign: "center",
+        gap: 15,
+      },
     };
   },
 });
@@ -300,15 +310,6 @@ export default defineComponent({
       .carousel {
         &.product-gallery__featured {
           margin-bottom: 25px;
-        }
-        &.product-gallery__carousel {
-          .carousel__slide {
-            &.carousel__slide--visible {
-              &.carousel__slide--active {
-                margin: 0 15px;
-              }
-            }
-          }
         }
       }
     }

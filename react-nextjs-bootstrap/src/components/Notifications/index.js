@@ -1,9 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { Card, Table } from "react-bootstrap";
-import Pagination from "./Pagination";
 
-const notificationsData = [
+const initialNotificationsData = [
   {
     id: "#JAN-854",
     timestamp: "01 Dec 2024 09:30 AM",
@@ -74,9 +74,70 @@ const notificationsData = [
     content: "Year-end sale: Up to 20% off on selected products.",
     status: "read",
   },
+  {
+    id: "#JAN-851",
+    timestamp: "27 Nov 2024 09:30 AM",
+    type: "Information",
+    content: "Check out our latest blog post for tips on improving efficiency.",
+    status: "read",
+  },
+  {
+    id: "#JAN-850",
+    timestamp: "26 Nov 2024 09:30 AM",
+    type: "Alert",
+    content: "Attention: Upcoming webinar on cybersecurity best practices.",
+    status: "unread",
+  },
+  {
+    id: "#JAN-849",
+    timestamp: "25 Nov 2024 09:30 AM",
+    type: "Announcement",
+    content: "Happy Thanksgiving! Our office will be closed on Nov 30.",
+    status: "read",
+  },
+  {
+    id: "#JAN-848",
+    timestamp: "24 Nov 2024 09:30 AM",
+    type: "Information",
+    content: "Year-end financial reports are now available for download.",
+    status: "read",
+  },
+  {
+    id: "#JAN-847",
+    timestamp: "23 Nov 2024 09:30 AM",
+    type: "Announcement",
+    content: "Critical security update. Update your passwords immediately.",
+    status: "read",
+  },
 ];
 
 const Notifications = () => {
+  const [notifications, setNotifications] = useState(initialNotificationsData);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentNotifications = notifications.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handleMarkAsRead = (id) => {
+    setNotifications((prevNotifications) =>
+      prevNotifications.map((notification) =>
+        notification.id === id ? { ...notification, status: "read" } : notification
+      )
+    );
+  };
+
+  const handleDelete = (id) => {
+    setNotifications((prevNotifications) =>
+      prevNotifications.filter((notification) => notification.id !== id)
+    );
+  };
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <>
       <Card className="bg-white border-0 rounded-3 mb-4">
@@ -96,22 +157,21 @@ const Notifications = () => {
                 </thead>
 
                 <tbody>
-                  {notificationsData &&
-                    notificationsData.slice(0, 10).map((value, i) => (
+                  {currentNotifications.map((notification, i) => (
                       <tr key={i}>
-                        <td>{value.id}</td>
+                        <td>{notification.id}</td>
 
-                        <td>{value.timestamp}</td>
+                        <td>{notification.timestamp}</td>
 
-                        <td>{value.type}</td>
+                        <td>{notification.type}</td>
 
-                        <td>{value.content}</td>
+                        <td>{notification.content}</td>
 
                         <td>
                           <span
-                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${value.status}`}
+                            className={`badge bg-opacity-10 p-2 fs-12 fw-normal text-capitalize ${notification.status}`}
                           >
-                            {value.status}
+                            {notification.status}
                           </span>
                         </td>
 
@@ -137,7 +197,51 @@ const Notifications = () => {
             </div>
 
             {/* Pagination */}
-            <Pagination />
+             {/* Pagination */}
+             <div className="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap p-4">
+              <span className="fs-12 fw-medium">
+                Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, notifications.length)} of {notifications.length} Results
+              </span>
+
+              <nav aria-label="Page navigation example">
+                <ul className="pagination mb-0 justify-content-center">
+                  <li className="page-item">
+                    <button
+                      className="page-link icon"
+                      onClick={() => handlePageChange(currentPage - 1)}
+                      disabled={currentPage === 1}
+                    >
+                      <span className="material-symbols-outlined">
+                        keyboard_arrow_left
+                      </span>
+                    </button>
+                  </li>
+
+                  {Array.from({ length: Math.ceil(notifications.length / itemsPerPage) }, (_, i) => (
+                    <li className="page-item" key={i + 1}>
+                      <button
+                        className={`page-link ${currentPage === i + 1 ? "active" : ""}`}
+                        onClick={() => handlePageChange(i + 1)}
+                      >
+                        {i + 1}
+                      </button>
+                    </li>
+                  ))}
+
+                  <li className="page-item">
+                    <button
+                      className="page-link icon"
+                      onClick={() => handlePageChange(currentPage + 1)}
+                      disabled={currentPage === Math.ceil(notifications.length / itemsPerPage)}
+                    >
+                      <span className="material-symbols-outlined">
+                        keyboard_arrow_right
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </Card.Body>
       </Card>

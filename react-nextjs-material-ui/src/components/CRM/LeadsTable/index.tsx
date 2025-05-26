@@ -36,6 +36,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import PropTypes from "prop-types";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Image from "next/image";
+import FileUpload from "@/components/Forms/FileUpload";
 
 // Modal
 interface BootstrapDialogTitleProps {
@@ -424,6 +425,13 @@ const LeadsTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.customerName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   // Modal
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -449,6 +457,12 @@ const LeadsTable: React.FC = () => {
     setStatus(event.target.value as string);
   };
 
+  // File Upload
+  const handleFileSelect = (files: FileList) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Card
@@ -470,7 +484,7 @@ const LeadsTable: React.FC = () => {
         >
           <Box
             component="form"
-            className='t-search-form'
+            className="t-search-form"
             sx={{
               width: { sm: "265px" },
             }}
@@ -480,8 +494,10 @@ const LeadsTable: React.FC = () => {
             </label>
             <input
               type="text"
-              className='t-input'
-              placeholder="Search lead here....."
+              className="t-input"
+              placeholder="Search here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -633,7 +649,7 @@ const LeadsTable: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -819,7 +835,7 @@ const LeadsTable: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={10} />
+                    <TableCell className="border-bottom" colSpan={10} />
                   </TableRow>
                 )}
               </TableBody>
@@ -904,7 +920,7 @@ const LeadsTable: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -931,7 +947,7 @@ const LeadsTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -958,7 +974,7 @@ const LeadsTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -985,7 +1001,7 @@ const LeadsTable: React.FC = () => {
                     />
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1019,7 +1035,7 @@ const LeadsTable: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1049,7 +1065,7 @@ const LeadsTable: React.FC = () => {
                     </FormControl>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={12}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
                     <Typography
                       component="h5"
                       sx={{
@@ -1062,32 +1078,21 @@ const LeadsTable: React.FC = () => {
                       Image
                     </Typography>
 
-                    <TextField
-                      autoComplete="image"
-                      name="image"
-                      required
-                      fullWidth
-                      id="image"
-                      type="file"
-                      autoFocus
-                      InputProps={{
-                        style: { borderRadius: 8 },
-                      }}
-                    />
+                    <FileUpload onFileSelect={handleFileSelect} />
                   </Grid>
 
-                  <Grid item xs={12} mt={1}>
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -1095,6 +1100,7 @@ const LeadsTable: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

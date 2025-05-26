@@ -208,11 +208,11 @@ const HospitalEarnings: React.FC = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={12} md={12} lg={5} xl={5}>
-          <Box 
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 5, xl: 5 }}>
+          <Box
             className="text-center"
             sx={{
-              mb: {xs: '30px', lg: '0'}
+              mb: { xs: "30px", lg: "0" },
             }}
           >
             <Image
@@ -224,14 +224,14 @@ const HospitalEarnings: React.FC = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 7, xl: 7 }}>
           <Grid
             container
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{
@@ -283,7 +283,7 @@ const HospitalEarnings: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{
@@ -335,15 +335,15 @@ const HospitalEarnings: React.FC = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12}>
+            <Grid size={{ xs: 12, sm: 12 }}>
               <Box
                 className="bg-white border-radius he-card"
                 sx={{
-                  position: 'relative',
+                  position: "relative",
                   padding: { xs: "18px", sm: "20px", lg: "25px" },
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
                 }}
               >
                 <Box>
@@ -383,12 +383,12 @@ const HospitalEarnings: React.FC = () => {
                   </Typography>
                 </Box>
 
-                <Box 
+                <Box
                   sx={{
-                    maxWidth: '150px',
-                    marginTop: '-30px',
-                    marginBottom: '-30px',
-                    marginRight: '-10px',
+                    maxWidth: "150px",
+                    marginTop: "-30px",
+                    marginBottom: "-30px",
+                    marginRight: "-10px",
                   }}
                 >
                   {isChartLoaded && (
@@ -405,7 +405,7 @@ const HospitalEarnings: React.FC = () => {
             </Grid>
           </Grid>
         </Grid>
-      </Grid> 
+      </Grid>
     </Card>
   );
 };

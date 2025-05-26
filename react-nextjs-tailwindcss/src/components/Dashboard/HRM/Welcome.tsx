@@ -9,7 +9,7 @@ const Welcome: React.FC = () => {
       <div className="trezo-card mb-[25px]">
         <div className="trezo-card-content lg:flex justify-between items-center">
           <div>
-            <h5 className="mb-[6px] md:mb-[3px] font-semibold text-[20px]">
+            <h5 className="!mb-[6px] md:!mb-[3px] !font-semibold !text-[20px]">
               Welcome Back, <span className="text-primary-500">Olivia!</span>
             </h5>
             <p>
@@ -21,7 +21,7 @@ const Welcome: React.FC = () => {
           <div className="flex items-center gap-[10px] mt-[12px] lg:mt-0">
             <button
               type="button"
-              className="flex gap-[4px] items-center text-purple-700 bg-purple-100 rounded-[4px] py-[4.5px] px-[10px] md:px-[12.5px] transition-all hover:bg-purple-200"
+              className="flex gap-[4px] items-center text-purple-700 bg-purple-100 dark:bg-[#15203c] rounded-[4px] py-[4.5px] px-[10px] md:px-[12.5px] transition-all hover:bg-purple-200"
             >
               <Image
                 src="/images/icons/crown.svg"
@@ -34,7 +34,7 @@ const Welcome: React.FC = () => {
 
             <button
               type="button"
-              className="flex gap-[4px] items-center text-orange-700 bg-orange-100 rounded-[4px] py-[4.5px] px-[10px] md:px-[12.5px] transition-all hover:bg-orange-200"
+              className="flex gap-[4px] items-center text-orange-700 bg-orange-100 dark:bg-[#15203c] rounded-[4px] py-[4.5px] px-[10px] md:px-[12.5px] transition-all hover:bg-orange-200"
             >
               <Image
                 src="/images/icons/file-download.svg"

@@ -70,7 +70,8 @@ const DataTable: React.FC = () => {
               },
             }}
             pageSizeOptions={[5, 10]}
-            checkboxSelection
+            checkboxSelection 
+            className="data-grid-table bg-white"
           />
         </div>
       </Card>

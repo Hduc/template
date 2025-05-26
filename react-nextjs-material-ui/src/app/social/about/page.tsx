@@ -1,6 +1,6 @@
-import * as React from "react"; 
-import NextLink from 'next/link'; 
-import Grid from "@mui/material/Grid"; 
+import * as React from "react";
+import NextLink from "next/link";
+import Grid from "@mui/material/Grid";
 import CoverImage from "@/components/Social/Profile/CoverImage";
 import ProfileIntro from "@/components/Social/Profile/ProfileIntro";
 import Followers from "@/components/Social/Profile/Followers";
@@ -30,24 +30,24 @@ export default function Page() {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} md={12} lg={12} xl={9}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 9 }}>
           <CoverImage />
 
           {/* NavList */}
           <NavList />
 
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} md={4} lg={4} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 4, lg: 4, xl: 4 }}>
               <Friends />
             </Grid>
 
-            <Grid item xs={12} md={8} lg={8} xl={8}>
+            <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }}>
               <AboutMe />
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid item xs={12} md={12} lg={12} xl={3}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 3 }}>
           <ProfileIntro />
 
           <Followers />

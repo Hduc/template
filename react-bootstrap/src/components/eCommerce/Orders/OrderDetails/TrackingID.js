@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 const TrackingID = () => {
   return (
     <>
-      <Card className="bg-primary border-0 rounded-3 mb-4">
+      <Card className="bg-primary border-0 rounded-3 mb-4 z-0">
         <Card.Body className="p-4">
           <h3 className="text-white mb-lg-4 mb-3">Tracking ID: 000346798254</h3>
 

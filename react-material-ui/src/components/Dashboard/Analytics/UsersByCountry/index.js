@@ -123,7 +123,7 @@ const UsersByCountry = () => {
       {/* Country Statistics */}
       <Grid container columnSpacing={{ xs: 0 }} className="uc-content">
         {countries.map((country) => (
-          <Grid item xs={6} key={country.name}>
+          <Grid size={{ xs: 6 }} key={country.name} className="uc-grid">
             <Box
               sx={{
                 display: "flex",

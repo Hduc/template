@@ -1,0 +1,676 @@
+<!-- Page Banner -->
+<div
+    class="page-banner-area"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <h1 class="fw-bold">
+            Full-Stack Web Development
+        </h1>
+        <ul class="breadcrumb m-0 list-unstyled d-inline-block">
+            <li class="d-inline-block position-relative">
+                <a routerLink="/lms-courses-demo">
+                    Home
+                </a>
+            </li>
+            <li class="d-inline-block position-relative">
+                Courses
+            </li>
+            <li class="d-inline-block position-relative">
+                Course Details
+            </li>
+        </ul>
+        <ul class="info p-0 list-unstyled mb-0">
+            <li class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    menu_book
+                </i>
+                By: <a routerLink=".">John</a>
+            </li>
+            <li class="d-inline-block position-relative">
+                <i class="material-symbols-outlined">
+                    group
+                </i>
+                6,300+ Enrolled
+            </li>
+            <li class="ratings d-inline-block position-relative">
+                <div class="d-flex align-items-center lh-1">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <span class="d-inline-block">
+                        4.7 (980 ratings)
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Course Details -->
+<div
+    class="bg-f6f5f3 ptb-180"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="course-details-tabs">
+                    <mat-tab-group>
+                        <mat-tab label="Overview">
+                            <div class="course-details-overview">
+                                <h3 class="fw-semibold">
+                                    Course Overview
+                                </h3>
+                                <p>
+                                    Master the skills to become a professional full-stack web developer from scratch. This hands-on course covers both front-end and back-end development using the most in-demand tools and technologies in the industry. Whether you’re starting your career or looking to upgrade your skill set, this course will guide you step by step through real-world projects and practical applications.
+                                </p>
+                                <h3 class="fw-semibold">
+                                    Course Features
+                                </h3>
+                                <ul>
+                                    <li>
+                                        45 in-depth lessons with hands-on coding
+                                    </li>
+                                    <li>
+                                        Real-world projects: blog, e-commerce store, and portfolio site
+                                    </li>
+                                    <li>
+                                        Code-along exercises and quizzes
+                                    </li>
+                                    <li>
+                                        Lifetime access and updates
+                                    </li>
+                                    <li>
+                                        Downloadable resources and source code
+                                    </li>
+                                    <li>
+                                        Certificate of completion
+                                    </li>
+                                    <li>
+                                        Community Q&A and support
+                                    </li>
+                                </ul>
+                                <h3 class="fw-semibold">
+                                    Who Should Enroll
+                                </h3>
+                                <ul>
+                                    <li>
+                                        Beginners with no prior coding experience
+                                    </li>
+                                    <li>
+                                        Designers or marketers looking to build web apps
+                                    </li>
+                                    <li>
+                                        Students preparing for software development careers
+                                    </li>
+                                    <li>
+                                        Freelancers and entrepreneurs who want to create websites or SaaS products
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Curriculum">
+                            <div class="curriculum-item">
+                                <div class="title d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 fw-semibold">
+                                        Introduction to Web Development
+                                    </h4>
+                                    <div class="icon d-flex align-items-center justify-content-center rounded-circle">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                </div>
+                                <ul class="curriculum-lists p-0 m-0 list-unstyled">
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            How the web works
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration style-two d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-play-line"></i>
+                                                    Overview
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    visibility
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            (click)="openPopup()"
+                                            class="position-absolute start-0 end-0 top-0 bottom-0 p-0 border-0 bg-transparent z-1 opacity-0"
+                                        ></button>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Front-end vs. back-end overview
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    12:30 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Tools you'll need (Code editor, Browser, Git)
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    8:00 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="curriculum-item">
+                                <div class="title d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 fw-semibold">
+                                        HTML Fundamentals
+                                    </h4>
+                                    <div class="icon d-flex align-items-center justify-content-center rounded-circle">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                </div>
+                                <ul class="curriculum-lists p-0 m-0 list-unstyled">
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Structure of an HTML document
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    12:30 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Text formatting, links, and images
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    8:00 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Forms and semantic elements
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    11:00 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="curriculum-item">
+                                <div class="title d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 fw-semibold">
+                                        CSS & Responsive Design
+                                    </h4>
+                                    <div class="icon d-flex align-items-center justify-content-center rounded-circle">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </div>
+                                </div>
+                                <ul class="curriculum-lists p-0 m-0 list-unstyled">
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Selectors, colors, margins, and padding
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    12:30 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Flexbox and Grid layout
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    8:00 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="d-md-flex align-items-center justify-content-between position-relative">
+                                        <span class="sub-title fw-medium d-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                description
+                                            </i>
+                                            Media queries and mobile-first design
+                                        </span>
+                                        <div class="info d-flex align-items-center">
+                                            <div class="duration d-inline-block">
+                                                <span class="d-inline-block position-relative">
+                                                    <i class="ri-time-line"></i>
+                                                    11:00 Minutes
+                                                </span>
+                                            </div>
+                                            <div class="icon lh-1">
+                                                <i class="material-symbols-outlined">
+                                                    lock
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Instructor">
+                            <div class="course-details-instructor">
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <div class="image">
+                                            <img src="images/lms-courses/instructor.jpg" alt="instructor-image">
+                                        </div>
+                                        <div class="social-links d-flex align-items-center">
+                                            <span class="d-block lh-1">
+                                                Follow Me:
+                                            </span>
+                                            <a href="#" target="_blank" class="d-inline-block lh-1">
+                                                <i class="ri-facebook-box-fill"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="d-inline-block lh-1">
+                                                <i class="ri-twitter-x-fill"></i>
+                                            </a>
+                                            <a href="#" target="_blank" class="d-inline-block lh-1">
+                                                <i class="ri-linkedin-box-fill"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="content">
+                                            <h4 class="fw-semibold">
+                                                David Mercer
+                                            </h4>
+                                            <p>
+                                                Senior Full-Stack Engineer | Tech Educator | Mentor
+                                            </p>
+                                            <ul class="p-0 m-0 list-unstyled">
+                                                <li class="position-relative">
+                                                    <i class="material-symbols-outlined">
+                                                        location_on
+                                                    </i>
+                                                    San Francisco, CA
+                                                </li>
+                                                <li class="position-relative">
+                                                    <i class="material-symbols-outlined">
+                                                        cast_for_education
+                                                    </i>
+                                                    <span class="fw-semibold">12+</span> Years of Industry Experience
+                                                </li>
+                                                <li class="position-relative">
+                                                    <i class="material-symbols-outlined">
+                                                        star
+                                                    </i>
+                                                    <span class="fw-semibold">4.9</span> Instructor Rating
+                                                </li>
+                                                <li class="position-relative">
+                                                    <i class="material-symbols-outlined">
+                                                        school
+                                                    </i>
+                                                    <span class="fw-semibold">45,000+</span> Students Taught
+                                                </li>
+                                            </ul>
+                                            <h4 class="fw-semibold">
+                                                About David
+                                            </h4>
+                                            <p>
+                                                David is a passionate software engineer, educator, and startup consultant who has spent over a decade building web applications and helping developers grow. With a background in both corporate and startup environments, David brings a real-world perspective into every lesson — from front-end design to backend architecture.
+                                            </p>
+                                            <p>
+                                                He’s contributed to open-source projects, mentored junior developers, and led teams at top tech companies including CodeNest and AppForge. David believes in teaching through practical projects and simplifying complex ideas for every learner level.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Reviews">
+                            <div class="course-details-reviews">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-4">
+                                        <div class="overall-reviews text-center">
+                                            <h4 class="lh-1 fw-semibold">
+                                                4.7
+                                            </h4>
+                                            <div class="all-ratings d-flex align-items-center justify-content-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-half-line"></i>
+                                            </div>
+                                            <span class="count d-block">
+                                                10 ratings
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="rating-item d-flex align-items-center position-relative">
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                                            <span class="number d-block">
+                                                5
+                                            </span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center position-relative">
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                                            <span class="number d-block">
+                                                2
+                                            </span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center position-relative">
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                                            <span class="number d-block">
+                                                1
+                                            </span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center position-relative">
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                                            <span class="number d-block">
+                                                0
+                                            </span>
+                                        </div>
+                                        <div class="rating-item d-flex align-items-center position-relative">
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                                <i class="ri-star-line"></i>
+                                            </div>
+                                            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                                            <span class="number d-block">
+                                                0
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reviews-comments">
+                                    <div class="item d-flex align-items-center">
+                                        <img src="images/lms-courses/users/user6.jpg" alt="user-image" class="rounded-circle">
+                                        <div>
+                                            <h4 class="fw-semibold">
+                                                David Mercer
+                                            </h4>
+                                            <p>
+                                                Senior Full-Stack Engineer | Tech Educator | Mentor
+                                            </p>
+                                            <div class="ratings d-flex align-items-center">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="course-details-info">
+                    <div class="image position-relative">
+                        <img src="images/lms-courses/courses/course2.jpg" alt="course-image">
+                        <button
+                            mat-button
+                            type="button"
+                            (click)="openPopup()"
+                            class="video-btn rounded-circle mx-auto border-0 p-0"
+                        >
+                            <i class="ri-play-fill"></i>
+                        </button>
+                    </div>
+                    <ul class="info p-0 list-unstyled">
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    payments
+                                </i>
+                                Price:
+                            </span>
+                            <span class="d-block fw-bold price">
+                                $69
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    school
+                                </i>
+                                Instructor:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                John
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    calendar_month
+                                </i>
+                                Duration:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                12 weeks
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    menu_book
+                                </i>
+                                Lessons:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                22
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    group
+                                </i>
+                                Students:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                6,300
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    language
+                                </i>
+                                Language:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                English
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <span class="d-block position-relative">
+                                <i class="material-symbols-outlined">
+                                    workspace_premium
+                                </i>
+                                Certifications:
+                            </span>
+                            <span class="d-block fw-semibold">
+                                Yes
+                            </span>
+                        </li>
+                    </ul>
+                    <button class="lms-default-btn d-block w-full" mat-button type="button">
+                        <i class="material-symbols-outlined">
+                            shopping_cart
+                        </i>
+                        Buy Now
+                    </button>
+                    <div class="social-links d-flex align-items-center">
+                        <span class="d-block lh-1">
+                            Share:
+                        </span>
+                        <a href="#" target="_blank" class="d-inline-block lh-1">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="d-inline-block lh-1">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="d-inline-block lh-1">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Course Details -->
+
+<app-courses-you-may-like />
+
+<!-- Course Preview Popup -->
+<div
+    class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready"
+    *ngIf="isOpen"
+    tabindex="-1"
+>
+    <div class="mfp-container mfp-iframe-holder">
+        <div class="mfp-content">
+            <div class="mfp-iframe-scaler">
+                <button
+                    (click)="closePopup()"
+                    title="Close (Esc)"
+                    type="button"
+                    class="mfp-close"
+                >
+                    ×
+                </button>
+                <iframe src="https://www.youtube.com/embed/_ZppXdKk4c8" title="Introducing Trezo | The Next-Generation Multi-Framework Admin Dashboard Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mfp-bg mfp-fade mfp-ready" *ngIf="isOpen"></div>

@@ -299,7 +299,7 @@ const PropertyListContent: React.FC = () => {
             >
               <div className="trezo-card-header mb-[20px] flex items-center justify-between">
                 <div className="trezo-card-title">
-                  <h5 className="mb-0">{property.city}</h5>
+                  <h5 className="!mb-0">{property.city}</h5>
                 </div>
 
                 <div className="trezo-card-subtitle">
@@ -343,7 +343,7 @@ const PropertyListContent: React.FC = () => {
                 </Link>
 
                 <div className="flex items-center justify-between mb-[9px] mt-[20px]">
-                  <h3 className="text-lg mb-0 text-orange-500">
+                  <h3 className="!text-lg !mb-0 !text-orange-500">
                     {property.price}
                   </h3>
                   <span
@@ -423,7 +423,7 @@ const PropertyListContent: React.FC = () => {
         <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
           <div className="trezo-card-content">
             <div className="sm:flex sm:items-center justify-between">
-              <p className="mb-0">
+              <p className="!mb-0">
                 Showing {currentProperties.length} of{" "}
                 {filteredProperties.length} results
               </p>

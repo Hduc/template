@@ -28,7 +28,7 @@ const Overview: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Overview</h5>
+            <h5 className="!mb-0">Overview</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -76,7 +76,7 @@ const Overview: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="block">Total Calls</span>
-                      <h5 className="mb-0 text-lg md:text-xl font-semibold">
+                      <h5 className="!mb-0 !text-lg md:!text-xl !font-semibold">
                         26,435
                       </h5>
                     </div>
@@ -116,7 +116,7 @@ const Overview: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="block">Answered Calls</span>
-                      <h5 className="mb-0 text-lg md:text-xl font-semibold">
+                      <h5 className="!mb-0 !text-lg md:!text-xl !font-semibold">
                         18,520
                       </h5>
                     </div>
@@ -156,7 +156,7 @@ const Overview: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="block">Missed Calls</span>
-                      <h5 className="mb-0 text-lg md:text-xl font-semibold">
+                      <h5 className="!mb-0 !text-lg md:!text-xl !font-semibold">
                         3,735
                       </h5>
                     </div>

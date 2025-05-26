@@ -63,7 +63,7 @@ const Content: React.FC = () => {
             </div>
           </div>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Description
           </h3>
           <p>
@@ -82,7 +82,7 @@ const Content: React.FC = () => {
             for outdoor dining and a well-maintained garden area.
           </p>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Features
           </h3>
           <ul>
@@ -112,7 +112,7 @@ const Content: React.FC = () => {
             </li>
           </ul>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Neighborhood
           </h3>
           <ul>
@@ -130,7 +130,7 @@ const Content: React.FC = () => {
             </li>
           </ul>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Location
           </h3>
           <iframe
@@ -141,7 +141,7 @@ const Content: React.FC = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <h3 className="text-md md:text-lg mt-[20px] md:mt-[25px] lg:mt-[30px] mb-[12px]">
+          <h3 className="!text-md md:!text-lg !mt-[20px] md:!mt-[25px] lg:!mt-[30px] !mb-[12px]">
             Recent Renovations
           </h3>
           <ul>

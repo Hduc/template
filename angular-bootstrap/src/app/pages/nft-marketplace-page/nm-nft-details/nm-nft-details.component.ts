@@ -1,7 +1,7 @@
-import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({

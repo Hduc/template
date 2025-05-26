@@ -142,7 +142,7 @@ const AddCardModal: React.FC = () => {
                 className="bg-white"
               >
                 <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -171,7 +171,7 @@ const AddCardModal: React.FC = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -200,7 +200,7 @@ const AddCardModal: React.FC = () => {
                     </Box>
                   </Grid>
 
-                  <Grid item xs={12} md={12} lg={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -218,18 +218,18 @@ const AddCardModal: React.FC = () => {
                         <DatePicker
                           sx={{
                             width: "100%",
-
                             "& fieldset": {
-                              border: "1px solid #D5D9E2",
+                              border: "1px solid rgba(0, 0, 0, 0.23)",
                               borderRadius: "7px",
                             },
                           }}
+                          className="input-date-picker"
                         />
                       </LocalizationProvider>
                     </Box>
                   </Grid>
-                  
-                  <Grid item xs={12} md={12} lg={6}>
+
+                  <Grid size={{ xs: 12, sm: 12, md: 12, lg: 6 }}>
                     <Box>
                       <Typography
                         component="h5"
@@ -257,19 +257,19 @@ const AddCardModal: React.FC = () => {
                       />
                     </Box>
                   </Grid>
- 
-                  <Grid item xs={12} mt={1}>
+
+                  <Grid size={{ xs: 12 }} mt={1}>
                     <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "end",
-                        gap: "10px",
+                        gap: "15px",
                       }}
                     >
                       <Button
                         onClick={handleClose}
-                        variant="outlined"
+                        variant="contained"
                         color="error"
                         sx={{
                           textTransform: "capitalize",
@@ -277,6 +277,7 @@ const AddCardModal: React.FC = () => {
                           fontWeight: "500",
                           fontSize: "13px",
                           padding: "11px 30px",
+                          color: "#fff !important",
                         }}
                       >
                         Cancel

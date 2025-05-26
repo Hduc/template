@@ -11,11 +11,15 @@
       text-align: right;
     } 
   }
-
+ 
   .-mr-4 {
     margin-right: 0;
     margin-left: -4px;
   } 
+
+  .rtl-tf-scaleX-1 {
+    transform: scaleX(-1);
+  }
  
   // ApexCharts
   .apexcharts-canvas {
@@ -27,7 +31,7 @@
       .apexcharts-tooltip-marker {
         margin: {
           right: 0;
-          left: 6px;
+          left: 8px;
         };
       }
       .apexcharts-tooltip-series-group {
@@ -142,5 +146,16 @@
       text-align: right; 
     }
   }
+
+  // New
+  .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  // End New
 }
 

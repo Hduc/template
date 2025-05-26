@@ -25,9 +25,9 @@
       </div>
       <div class="mb-4 pb-2">
         <h4 class="fs-15 fw-semibold border-bottom pb-2 mb-3">
-          Container Style Fluid / Boxed
+          Horizontal Layout
         </h4>
-        <ContainerStyleBtn />
+        <HorizontalLayout />
       </div>
       <div class="mb-4 pb-2">
         <h4 class="fs-15 fw-semibold border-bottom pb-2 mb-3">
@@ -59,6 +59,12 @@
         </h4>
         <CardStyleBG />
       </div>
+      <!-- <div class="mb-4 pb-2">
+        <h4 class="fs-15 fw-semibold border-bottom pb-2 mb-3">
+          Container Style Fluid / Boxed
+        </h4>
+        <ContainerStyleBtn />
+      </div> -->
     </div>
   </div>
 </template>
@@ -67,23 +73,25 @@
 import { defineComponent } from "vue";
 
 import RTLModeSwitch from "./RTLModeSwitch.vue";
-import ContainerStyleBtn from "./ContainerStyleBtn.vue";
+import HorizontalLayout from "./HorizontalLayout.vue";
 import OnlySidebarDark from "./OnlySidebarDark.vue";
 import OnlyHeaderDark from "./OnlyHeaderDark.vue";
 import OnlyFooterDark from "./OnlyFooterDark.vue";
 import CardStyleRadius from "./CardStyleRadius.vue";
 import CardStyleBG from "./CardStyleBG.vue";
+// import ContainerStyleBtn from "./ContainerStyleBtn.vue";
 
 export default defineComponent({
   name: "SettingsSidebar",
   components: {
     RTLModeSwitch,
-    ContainerStyleBtn,
+    HorizontalLayout,
     OnlySidebarDark,
     OnlyHeaderDark,
     OnlyFooterDark,
     CardStyleRadius,
     CardStyleBG,
+    // ContainerStyleBtn,
   },
 });
 </script>

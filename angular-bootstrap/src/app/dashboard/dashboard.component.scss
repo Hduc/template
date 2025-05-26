@@ -51,6 +51,26 @@
     }
 }
 
+// With Navbar
+.with-navbar {
+    app-sidebar {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .main-content {
+        max-width: 1345px;
+        margin: {
+            left: auto;
+            right: auto;
+        };
+        padding: {
+            top: 162px;
+            left: 25px !important;
+            right: 25px !important;
+        };
+    }
+}
+
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
@@ -102,6 +122,22 @@
                     }
                 }
             }
+        }
+    }
+
+    // With Navbar
+    .with-navbar {
+        app-sidebar {
+            opacity: 1;
+            visibility: visible;
+        }
+        .main-content {
+            max-width: 100%;
+            padding: {
+                top: 143px;
+                left: 15px !important;
+                right: 15px !important;
+            };
         }
     }
     
@@ -159,6 +195,18 @@
         }
     }
 
+    // With Navbar
+    .with-navbar {
+        app-sidebar {
+            opacity: 1;
+            visibility: visible;
+        }
+        .main-content {
+            max-width: 100%;
+            padding-top: 95px;
+        }
+    }
+
 }
 
 /* Min width 992px to Max width 1199px */
@@ -210,6 +258,13 @@
         }
     }
 
+    // With Navbar
+    .with-navbar {
+        .main-content {
+            max-width: 100%;
+        }
+    }
+
 }
 
 /* Min width 1200px to Max width 1399px */
@@ -238,8 +293,10 @@
     ::ng-deep {
         .rtl-enabled {
             .main-content {
-                padding-right: 265px;
-            
+                padding: {
+                    left: 25px;
+                    right: 265px;
+                };
                 &.active, &.hide-sidebar {
                     padding: {
                         left: 25px;
@@ -262,7 +319,23 @@
         }
     }
 
+    // With Navbar
+    .with-navbar {
+        .main-content {
+            max-width: 100%;
+        }
+    }
+
 }
 
 /* Min width 1600px */
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+
+    // With Navbar
+    .with-navbar {
+        .main-content {
+            max-width: 1595px;
+        }
+    }
+
+}

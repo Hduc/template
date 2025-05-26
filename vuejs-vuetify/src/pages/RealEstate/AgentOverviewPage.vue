@@ -1,9 +1,7 @@
 <template>
-  <div class="main-content-container overflow-hidden">
-    <PageTitle pageTitle="Agent Overview" subTitle="Real Estate" />
+  <PageTitle pageTitle="Agent Overview" subTitle="Real Estate" />
 
-    <AgentOverview />
-  </div>
+  <AgentOverview />
 </template>
 
 <script lang="ts">

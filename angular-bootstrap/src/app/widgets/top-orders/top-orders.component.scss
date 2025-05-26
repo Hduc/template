@@ -87,6 +87,21 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .title {
+                .info-badge {
+                    border-color: #15203c;
+                    background-color: #15203c;
+    
+                    &.down {
+                        border-color: #15203c;
+                        background-color: #15203c;
+                    }
+                }
+            }
+        }
+    }
 }
 ::ng-deep {
     .top-orders-card {

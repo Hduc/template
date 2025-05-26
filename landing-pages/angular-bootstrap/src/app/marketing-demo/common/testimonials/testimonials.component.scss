@@ -1,0 +1,181 @@
+.testimonials-area {
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    &.component-dark {
+        background: unset !important;
+
+        .testimonial-item {
+            background: #1a1919 !important;
+        
+            p {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+.testimonial-item {
+    padding: 60px 50px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #FFF 0%, #EEF6FF 100%);
+
+    .ratings {
+        gap: 3px;
+        font-size: 18px;
+        color: #fe7a36;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 18px;
+        color: var(--blackColor);
+    }
+    .info {
+        margin-top: 50px;
+        gap: 12px;
+
+        img {
+            width: 42px;
+        }
+        h5 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        span {
+            font-size: 13px;
+        }
+    }
+    &.style-two {
+        max-width: 848px;
+        background: linear-gradient(180deg, #FFF 0%, #FFE4E4 100%);
+
+        .video-box {
+            border-radius: 15px;
+
+            img {
+                border-radius: 15px;
+            }
+            .video-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 35px;
+                color: var(--blackColor);
+                background-color: #ffaa72;
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--whiteColor);
+                    background-color: var(--orangeColor);
+                }
+            }
+        }
+    }
+}
+.col-lg-4 {
+    &:nth-child(2) {
+        .testimonial-item {
+            background: linear-gradient(180deg, #FFF 0%, #FAF5FF 100%);
+        }
+    }
+    &:nth-child(3) {
+        .testimonial-item {
+            background: linear-gradient(180deg, #FFF 0%, #EEFFE5 100%);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .testimonial-item {
+        padding: 20px;
+    
+        .ratings {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .info {
+            margin-top: 15px;
+    
+            h5 {
+                font-size: 14px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+        &.style-two {
+            max-width: 100%;
+    
+            .video-box {
+                margin-top: 15px;
+
+                .video-btn {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .testimonial-item {
+        padding: 40px 30px;
+    
+        .ratings {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .info {
+            margin-top: 22px;
+        }
+        &.style-two {
+            max-width: 100%;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .testimonial-item {
+        padding: 50px 40px;
+    
+        .ratings {
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 16px;
+        }
+        .info {
+            margin-top: 26px;
+        }
+        &.style-two {
+            max-width: 750px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

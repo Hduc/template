@@ -1,7 +1,6 @@
 "use client";
 
 import ProductsGrid from '@/components/eCommerce/ProductsGrid';
-import Filter from '@/components/eCommerce/ProductsGrid/Filter';
 import { Breadcrumb } from "react-bootstrap";
 
 export default function Page() {
@@ -27,8 +26,6 @@ export default function Page() {
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>
-
-      <Filter />
 
       <ProductsGrid />
     </>

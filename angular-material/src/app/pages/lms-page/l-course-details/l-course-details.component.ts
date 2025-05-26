@@ -44,8 +44,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 180,
-        startDate: '25 Mar 2024',
-        endDate: '25 Apr 2024',
+        startDate: '25 Mar 2025',
+        endDate: '25 Apr 2025',
         price: '$49.99',
         action: {
             // view: 'visibility',

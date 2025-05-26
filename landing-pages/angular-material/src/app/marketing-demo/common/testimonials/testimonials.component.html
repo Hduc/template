@@ -1,0 +1,159 @@
+<div
+    class="testimonials-area ptb-180"
+    style="background-image: url(images/marketing/gradient-bg2.jpg);"
+    [class.component-dark]="toggleService.isLandingDark()"
+>
+    <div class="container">
+        <div class="marketing-section-title text-center">
+            <span class="sub-title d-inline-block">
+                Testimonials
+            </span>
+            <h2 class="fw-medium mx-auto">
+                What Marketers Say About Trezo
+            </h2>
+            <p>
+                Discover how Trezo is helping marketers streamline campaigns & drive results.
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-item">
+                    <div class="ratings lh-1 d-flex align-items-center">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="fw-medium">
+                        “Trezo changed the way we manage campaigns. Everything’s faster, and way more collaborative. Our ROI improved within weeks.”
+                    </p>
+                    <div class="info d-flex align-items-center">
+                        <img src="images/marketing/users/user5.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h5>
+                                Rachel Nguyen
+                            </h5>
+                            <span class="d-block">
+                                Growth Marketing Lead, BrightDash
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-item">
+                    <div class="ratings lh-1 d-flex align-items-center">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                    </div>
+                    <p class="fw-medium">
+                        “I’ve used dozens of marketing tools — Trezo is the only one that actually simplifies my workflow instead of complicating it.”
+                    </p>
+                    <div class="info d-flex align-items-center">
+                        <img src="images/marketing/users/user6.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h5>
+                                Michael Brooks
+                            </h5>
+                            <span class="d-block">
+                                Senior Digital Strategist, Amply Media
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-item">
+                    <div class="ratings lh-1 d-flex align-items-center">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                    <p class="fw-medium">
+                        “The real-time dashboard and funnel visualization features are a game-changer. My team finally has the clarity we needed.”
+                    </p>
+                    <div class="info d-flex align-items-center">
+                        <img src="images/marketing/users/user7.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h5>
+                                Lila Fernandez
+                            </h5>
+                            <span class="d-block">
+                                Head of Marketing, Corelytics
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item style-two mb-0 mx-auto">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="ratings lh-1 d-flex align-items-center">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="fw-medium">
+                        “Trezo’s impact on our marketing operations has been incredible. It’s now at the center of everything we do.”
+                    </p>
+                    <div class="info d-flex align-items-center">
+                        <img src="images/marketing/users/user2.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h5>
+                                Olivia Smith
+                            </h5>
+                            <span class="d-block">
+                                Performance Marketing Lead, BrightDash
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-box position-relative">
+                        <img src="images/marketing/man.jpg" alt="man">
+                        <button
+                            type="button"
+                            (click)="openPopup()"
+                            class="video-btn d-flex align-items-center justify-content-center position-absolute top-50 start-50 translate-middle rounded-circle border-0 p-0"
+                        >
+                            <i class="ri-play-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vide Popup -->
+<div
+    class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready"
+    *ngIf="isOpen"
+    tabindex="-1"
+>
+    <div class="mfp-container mfp-iframe-holder">
+        <div class="mfp-content">
+            <div class="mfp-iframe-scaler">
+                <button
+                    (click)="closePopup()"
+                    title="Close (Esc)"
+                    type="button"
+                    class="mfp-close"
+                >
+                    ×
+                </button>
+                <iframe src="https://www.youtube.com/embed/_ZppXdKk4c8" title="Introducing Trezo | The Next-Generation Multi-Framework Admin Dashboard Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mfp-bg mfp-fade mfp-ready" *ngIf="isOpen"></div>

@@ -1,0 +1,116 @@
+<div
+    class="faq-area ptb-180"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container">
+        <div class="marketing-section-title text-center">
+            <span class="sub-title d-inline-block">
+                Frequently Asked Questions
+            </span>
+            <h2 class="fw-medium mx-auto">
+                Everything You Need to Know About Trezo
+            </h2>
+            <p>
+                Here are some of the most common things people ask us.
+            </p>
+        </div>
+        <div class="faq-accordion mx-auto">
+            <div class="accordion-item">
+                <button
+                    type="button"
+                    (click)="toggleSection(0)"
+                    [ngClass]="{ 'open': isSectionOpen(0) }"
+                    class="accordion-button fw-semibold position-relative d-block w-100 shadow-none bg-transparent"
+                >
+                    Is there a free trial available?
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div
+                    class="accordion-collapse"
+                    [ngClass]="{ 'open': isSectionOpen(0) }"
+                >
+                    <p>
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button
+                    type="button"
+                    (click)="toggleSection(1)"
+                    [ngClass]="{ 'open': isSectionOpen(1) }"
+                    class="accordion-button fw-semibold position-relative d-block w-100 shadow-none bg-transparent"
+                >
+                    Can I upgrade or downgrade my plan anytime?
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div
+                    class="accordion-collapse"
+                    [ngClass]="{ 'open': isSectionOpen(1) }"
+                >
+                    <p>
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button
+                    type="button"
+                    (click)="toggleSection(2)"
+                    [ngClass]="{ 'open': isSectionOpen(2) }"
+                    class="accordion-button fw-semibold position-relative d-block w-100 shadow-none bg-transparent"
+                >
+                    Is Trezo suitable for large teams or enterprises?
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div
+                    class="accordion-collapse"
+                    [ngClass]="{ 'open': isSectionOpen(2) }"
+                >
+                    <p>
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button
+                    type="button"
+                    (click)="toggleSection(4)"
+                    [ngClass]="{ 'open': isSectionOpen(4) }"
+                    class="accordion-button fw-semibold position-relative d-block w-100 shadow-none bg-transparent"
+                >
+                    Do you offer onboarding or training?
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div
+                    class="accordion-collapse"
+                    [ngClass]="{ 'open': isSectionOpen(4) }"
+                >
+                    <p>
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button
+                    type="button"
+                    (click)="toggleSection(5)"
+                    [ngClass]="{ 'open': isSectionOpen(5) }"
+                    class="accordion-button fw-semibold position-relative d-block w-100 shadow-none bg-transparent"
+                >
+                    What channels does Trezo support?
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+                <div
+                    class="accordion-collapse"
+                    [ngClass]="{ 'open': isSectionOpen(5) }"
+                >
+                    <p>
+                        Yes! You can start with our Free Trial plan — no credit card required. It includes access to core features so you can explore Trezo without risk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

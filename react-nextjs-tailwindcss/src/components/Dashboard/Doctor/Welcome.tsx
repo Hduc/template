@@ -19,7 +19,7 @@ const Welcome: React.FC = () => {
                 Good Morning
               </span>
 
-              <h1 className="mb-[10px] text-xl md:text-2xl font-black text-white">
+              <h1 className="!mb-[10px] !text-xl md:!text-2xl !font-black !text-white">
                 Dr. Olivia John
               </h1>
 

@@ -41,11 +41,11 @@ const PricingStyle1 = () => {
   return (
     <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
       {pricingPlans.map((plan) => (
-        <Grid key={plan.id} item xs={12} md={12} lg={12} xl={6}>
+        <Grid key={plan.id} size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 6 }}>
           <div className={`border-radius bg-white ${styles.pricingStyle1Card}`}>
             <div className={styles.cardContent}>
               <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <div className={styles.info}>
                     <div className={styles.title}>
                       <span>{plan.title}</span>
@@ -93,7 +93,7 @@ const PricingStyle1 = () => {
                   </div>
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <ul className={styles.featuresList}>
                     {plan.features.map((feature, index) => (
                       <li key={index}>

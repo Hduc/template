@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   Box,
@@ -378,6 +378,14 @@ const CustomersTable: React.FC = () => {
     setPage(0);
   };
 
+  // Search
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRows = rows.filter((row) =>
+    row.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    row.customerName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Card
@@ -399,7 +407,7 @@ const CustomersTable: React.FC = () => {
         >
           <Box
             component="form"
-            className='t-search-form'
+            className="t-search-form"
             sx={{
               width: { sm: "265px" },
             }}
@@ -409,8 +417,10 @@ const CustomersTable: React.FC = () => {
             </label>
             <input
               type="text"
-              className='t-input'
+              className="t-input"
               placeholder="Search here..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </Box>
 
@@ -588,7 +598,7 @@ const CustomersTable: React.FC = () => {
 
               <TableBody>
                 {(rowsPerPage > 0
-                  ? rows.slice(
+                  ? filteredRows.slice(
                       page * rowsPerPage,
                       page * rowsPerPage + rowsPerPage
                     )
@@ -774,7 +784,7 @@ const CustomersTable: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={10} />
+                    <TableCell className="border-bottom" colSpan={10} />
                   </TableRow>
                 )}
               </TableBody>

@@ -88,7 +88,7 @@ const ChooseLanguage: React.FC = () => {
 
         <ul className={styles.langList}>
           <li>
-            <Button variant="text">
+            <Button variant="text" className="text-black">
               <Image
                 src="/images/flags/usa.svg"
                 alt="usa"
@@ -100,7 +100,7 @@ const ChooseLanguage: React.FC = () => {
           </li>
 
           <li>
-            <Button variant="text">
+            <Button variant="text" className="text-black">
               <Image
                 src="/images/flags/canada.svg"
                 alt="canada"
@@ -112,7 +112,7 @@ const ChooseLanguage: React.FC = () => {
           </li>
 
           <li>
-            <Button variant="text">
+            <Button variant="text" className="text-black">
               <Image
                 src="/images/flags/germany.svg"
                 alt="germany"
@@ -124,7 +124,7 @@ const ChooseLanguage: React.FC = () => {
           </li>
 
           <li>
-            <Button variant="text">
+            <Button variant="text" className="text-black">
               <Image
                 src="/images/flags/portugal.svg"
                 alt="portugal"
@@ -136,7 +136,7 @@ const ChooseLanguage: React.FC = () => {
           </li>
 
           <li>
-            <Button variant="text">
+            <Button variant="text" className="text-black">
               <Image
                 src="/images/flags/spain.svg"
                 alt="spain"

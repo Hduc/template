@@ -9,7 +9,7 @@ const TotalShipment: React.FC = () => {
         <div className="trezo-card-content">
           <div className="flex justify-between">
             <div>
-              <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 rounded-[100px] text-xs">
+              <span className="inline-block px-[8.5px] text-success-600 border border-success-300 bg-success-100 dark:bg-[#15203c] dark:border-[#15203c] rounded-[100px] text-xs">
                 +45%
               </span>
             </div>
@@ -24,7 +24,7 @@ const TotalShipment: React.FC = () => {
           <div className="mt-[20px] md:mt-[25px] flex items-end justify-between">
             <div>
               <span className="block mb-[4px]">Total Shipment</span>
-              <h3 className="mb-0 text-[20px] text-black dark:text-white">
+              <h3 className="!mb-0 !text-[20px] !text-black dark:!text-white">
                 175,950
               </h3>
             </div>

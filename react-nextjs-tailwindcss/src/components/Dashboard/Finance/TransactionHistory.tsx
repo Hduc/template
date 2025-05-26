@@ -152,7 +152,7 @@ const TransactionHistory: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Transaction History</h5>
+            <h5 className="!mb-0">Transaction History</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -308,7 +308,7 @@ const TransactionHistory: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {startIndex + 1} to{" "}
               {Math.min(endIndex, transactions.length)} of {transactions.length}{" "}
               results

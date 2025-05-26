@@ -150,7 +150,7 @@ const TodaysEarnings: React.FC = () => {
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
             <div className="flex items-center gap-[10px] mb-[2px]">
-              <h5 className="mb-0 font-semibold text-md lg:text-[20px]">
+              <h5 className="!mb-0 !font-semibold !text-md lg:!text-[20px]">
                 $3,425.78
               </h5>
               <span className="inline-block text-xs rounded-sm px-[7px] text-success-700 bg-success-100 dark:bg-[#15203c]">

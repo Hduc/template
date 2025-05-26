@@ -22,6 +22,9 @@
 .text-reset {
     text-decoration: underline;
 }
+.text-xs {
+    font-size: 12px !important;
+}
 
 // Card
 .trezo-card {
@@ -74,6 +77,7 @@
 
                 &.style-two {
                     font-size: 22px;
+                    margin-right: -7px;
                 }
                 &:hover {
                     color: var(--primaryColor);
@@ -392,6 +396,28 @@
             }
         }
     }
+    &.style-two {
+        background-color: #F6F7F9;
+        border: 1px solid var(--borderColor);
+        padding: {
+            left: 0;
+            right: 0;
+            top: 15px;
+            bottom: 0;
+        };
+        .trezo-card-header {
+            margin-bottom: 15px;
+            padding: {
+                left: 25px;
+                right: 25px;
+            };
+        }
+        .trezo-card-content {
+            padding: 25px;
+            border-radius: 5px;
+            border-top: 1px solid var(--borderColor);
+        }
+    }
 }
 .card {
     --bs-body-color: var(--bodyColor);
@@ -418,10 +444,30 @@
         }
     }
 }
+.body-bg-color {
+    .trezo-card {
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05) !important;
+        border: 1px solid var(--borderColor) !important;
+    }
+    &.dark-theme {
+        .trezo-card {
+            box-shadow: 0px 3px 4px 0px rgba(255, 255, 255, 0.05) !important;
+        }
+    }
+}
+.card-without-border-radius {
+    .trezo-card {
+        &.style-two {
+            .trezo-card-content {
+                border-radius: 0;
+            }
+        }
+    }
+}
 
 // ApexCharts
 .apexcharts-canvas {
-    .apexcharts-legend-text, .apexcharts-title-text {
+    .apexcharts-legend-text, .apexcharts-title-text, .apexcharts-xaxis-label {
         font-family: var(--fontFamily) !important;
     }
     .apexcharts-tooltip-series-group {
@@ -471,9 +517,10 @@
         margin-left: 0;
     }
     .apexcharts-tooltip-marker {
+        top: -4px;
         width: 10px;
         height: 10px;
-        margin-right: 6px;
+        margin-right: 8px;
     }
     .apexcharts-text {
         font-family: var(--fontFamily) !important;
@@ -709,6 +756,11 @@
                                 margin-right: 0;
                             }
                         }
+                        span {
+                            &.text-xs {
+                                margin-left: 2px;
+                            }
+                        }
                     }
                     .group-lesson {
                         .users {
@@ -843,6 +895,7 @@
                         div {
                             span {
                                 &:nth-child(2) {
+                                    margin-top: 1px;
                                     font-size: 12px;
                                 }
                             }
@@ -1335,9 +1388,9 @@
         padding: 0.375rem;
     }
     &.style-two {
-        background-color: #eceef2;
+        background-color: var(--borderColor) !important;
+        border-color: var(--borderColor) !important;
         color: var(--blackColor);
-        border-color: #eceef2;
         border-radius: 4px;
         font: {
             size: 16px;
@@ -1397,9 +1450,9 @@ textarea {
         height: 45px;
     }
     &.style-two {
-        background-color: #eceef2;
+        background-color: var(--borderColor) !important;
+        border-color: var(--borderColor) !important;
         color: var(--blackColor);
-        border-color: #eceef2;
         border-radius: 4px;
         font: {
             size: 16px;
@@ -1748,7 +1801,7 @@ textarea {
     }
     &.style-two {
         min-height: 150px !important;
-        background-color: #eceef2 !important;
+        background-color: var(--borderColor) !important;
         border: 2px dashed var(--primaryColor) !important;
     }
 }
@@ -1940,7 +1993,7 @@ textarea {
                                     bottom: 15px;
                                 };
                                 .icon-inner {
-                                    background-color: #eceef2;
+                                    background-color: var(--borderColor);
                                     border-radius: 4px;
                                     height: 134px;
                                     width: 134px;
@@ -2038,7 +2091,7 @@ textarea {
                                     border-radius: 4px;
                                     display: inline-block;
                                     color: var(--bodyColor);
-                                    background-color: #eceef2;
+                                    background-color: var(--borderColor);
 
                                     span {
                                         gap: 5px;
@@ -2187,7 +2240,7 @@ textarea {
                                         border-width: 0;
                                         cursor: pointer;
                                         box-shadow: unset;
-                                        background-color: #eceef2;
+                                        background-color: var(--borderColor);
                                     }
                                     &::-webkit-slider-thumb {
                                         z-index: 2;
@@ -2207,7 +2260,7 @@ textarea {
                                         cursor: pointer;
                                         border-width: 0;
                                         box-shadow: unset;
-                                        background-color: #eceef2;
+                                        background-color: var(--borderColor);
                                     }
                                     &::-moz-range-thumb {
                                         z-index: 2;
@@ -2336,7 +2389,7 @@ textarea {
                                 .item {
                                     border-radius: 3px;
                                     padding: 4px 20px 4px 7px;
-                                    background-color: #eceef2;
+                                    background-color: var(--borderColor);
                                     margin: {
                                         right: 8px;
                                         bottom: 10px;
@@ -2698,6 +2751,19 @@ textarea {
         weight: 500;
         size: 12px;
     };
+    &.with-border {
+        padding: {
+            top: 0;
+            bottom: 0;
+        };
+        border: {
+            width: 1px;
+            style: solid;
+        };
+        &.border-radius {
+            border-radius: 30px !important;
+        }
+    }
     &.pending {
         background-color: rgba(255, 193, 7, .15);
         color: var(--warningColor);
@@ -3112,6 +3178,22 @@ textarea {
         transform: scale(4);
     }
 }
+@keyframes wave-animation {
+    0%, 100% {
+        height: 30px;
+    }
+    50% {
+        height: 20px;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
@@ -3293,6 +3375,17 @@ textarea {
                         }
                     }
                 }
+            }
+        }
+        &.style-two {
+            .trezo-card-header {
+                padding: {
+                    left: 17px;
+                    right: 17px;
+                };
+            }
+            .trezo-card-content {
+                padding: 17px;
             }
         }
     }
@@ -3832,6 +3925,17 @@ textarea {
         .trezo-card-content {
             .form-group {
                 margin-bottom: 20px;
+            }
+        }
+        &.style-two {
+            .trezo-card-header {
+                padding: {
+                    left: 20px;
+                    right: 20px;
+                };
+            }
+            .trezo-card-content {
+                padding: 20px;
             }
         }
     }

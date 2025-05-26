@@ -52,7 +52,7 @@ const EditProductForm: React.FC = () => {
             <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
               <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
                 <div className="trezo-card-title">
-                  <h5 className="mb-0">Add A Product</h5>
+                  <h5 className="!mb-0">Add A Product</h5>
                 </div>
               </div>
 
@@ -234,7 +234,7 @@ const EditProductForm: React.FC = () => {
                           <div className="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
                             <i className="ri-upload-2-line"></i>
                           </div>
-                          <p className="leading-[1.5]">
+                          <p className="!leading-[1.5]">
                             <strong className="text-black dark:text-white">
                               Click to upload
                             </strong>
@@ -287,7 +287,7 @@ const EditProductForm: React.FC = () => {
             <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
               <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
                 <div className="trezo-card-title">
-                  <h5 className="mb-0">Product Category & Tags</h5>
+                  <h5 className="!mb-0">Product Category & Tags</h5>
                 </div>
               </div>
 
@@ -352,7 +352,7 @@ const EditProductForm: React.FC = () => {
             <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
               <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
                 <div className="trezo-card-title">
-                  <h5 className="mb-0">Other Options</h5>
+                  <h5 className="!mb-0">Other Options</h5>
                 </div>
               </div>
 

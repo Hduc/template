@@ -474,103 +474,46 @@ const AllProjects: React.FC = () => {
           >
             <Table sx={{ minWidth: 1200 }} aria-label="All Projects Table">
               <TableHead className="bg-primary-50">
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 24px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
-                    ID
-                  </TableCell>
-
-                  <TableCell
-                    sx={{
+                <TableRow
+                  sx={{
+                    "& th": {
                       fontWeight: "500",
                       padding: "10px 20px",
                       fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                    },
+                  }}
+                >
+                  <TableCell className="text-black border-bottom">ID</TableCell>
+
+                  <TableCell className="text-black border-bottom">
                     Project Name
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Client
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Assignees
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Budget
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Start Date
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     End Date
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Status
                   </TableCell>
 
-                  <TableCell
-                    sx={{
-                      fontWeight: "500",
-                      padding: "10px 20px",
-                      fontSize: "14px",
-                    }}
-                    className="text-black border-bottom"
-                  >
+                  <TableCell className="text-black border-bottom">
                     Action
                   </TableCell>
                 </TableRow>
@@ -584,46 +527,26 @@ const AllProjects: React.FC = () => {
                     )
                   : rows
                 ).map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell
-                      sx={{
+                  <TableRow
+                    key={row.id}
+                    sx={{
+                      "& td": {
                         padding: "15px 20px",
                         fontSize: "14px",
-                      }}
-                      className="border-bottom"
-                    >
-                      {row.id}
-                    </TableCell>
+                      },
+                    }}
+                  >
+                    <TableCell className="border-bottom">{row.id}</TableCell>
 
-                    <TableCell
-                      component="th"
-                      scope="row"
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.projectName}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.client}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       <AvatarGroup
                         max={4}
                         sx={{
@@ -653,54 +576,25 @@ const AllProjects: React.FC = () => {
                       </AvatarGroup>
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.budget}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.startDate}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       {row.endDate}
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                        fontSize: "14px",
-                      }}
-                      className="text-black border-bottom"
-                    >
+                    <TableCell className="text-black border-bottom">
                       <div className={`trezo-badge ${row.status}`}>
                         {row.status}
                       </div>
                     </TableCell>
 
-                    <TableCell
-                      sx={{
-                        padding: "15px 20px",
-                      }}
-                      className="border-bottom"
-                    >
+                    <TableCell className="border-bottom">
                       <Box
                         sx={{
                           display: "flex",
@@ -751,7 +645,7 @@ const AllProjects: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={9} />
+                    <TableCell className="border-bottom" colSpan={9} />
                   </TableRow>
                 )}
               </TableBody>

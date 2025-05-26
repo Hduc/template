@@ -56,7 +56,7 @@ const ConnectWallet = () => {
       justifyContent="center"
     >
       {wallets.map((wallet) => (
-        <Grid item xs={12} sm={6} lg={6} xl={4} key={wallet.id}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }} key={wallet.id}>
           <Box
             className="bg-white"
             sx={{

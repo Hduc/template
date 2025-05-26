@@ -1,0 +1,2 @@
+module NftHelper
+end

@@ -551,7 +551,7 @@ const Contacts: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {currentContacts.length} of {contacts.length} results
             </p>
 
@@ -576,7 +576,7 @@ const Contacts: React.FC = () => {
                     className={`w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border dark:border-[#172036] ${
                       currentPage === index + 1
                         ? "border-primary-500 bg-primary-500 text-white"
-                        : ""
+                        : "border-gray-100"
                     }`}
                     onClick={() => handlePageChange(index + 1)}
                   >

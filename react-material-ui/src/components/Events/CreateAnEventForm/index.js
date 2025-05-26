@@ -17,6 +17,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import CustomEditor from "./CustomEditor";
+import FileUpload from "../../Forms/FileUpload";
 
 const CreateAnEvent = () => {
   const [ticketType, setTicketType] = useState("");
@@ -55,6 +56,12 @@ const CreateAnEvent = () => {
     setEventTime(event.target.value);
   };
 
+  // File Upload
+  const handleFileSelect = (files) => {
+    console.log("Selected files:", files);
+    // Process your files here
+  };
+
   return (
     <>
       <Box component="form">
@@ -72,7 +79,7 @@ const CreateAnEvent = () => {
             spacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           >
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -106,13 +113,17 @@ const CreateAnEvent = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -149,7 +160,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -183,13 +194,17 @@ const CreateAnEvent = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -227,7 +242,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -267,7 +282,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -301,13 +316,17 @@ const CreateAnEvent = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -352,7 +371,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -392,7 +411,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -432,7 +451,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -449,17 +468,17 @@ const CreateAnEvent = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -476,17 +495,17 @@ const CreateAnEvent = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <Typography
                   component="label"
@@ -524,7 +543,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -541,17 +560,17 @@ const CreateAnEvent = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -586,13 +605,17 @@ const CreateAnEvent = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={4}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -627,13 +650,17 @@ const CreateAnEvent = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box>
                 <Typography
                   component="label"
@@ -652,7 +679,7 @@ const CreateAnEvent = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -665,27 +692,10 @@ const CreateAnEvent = () => {
                 Event Image
               </Typography>
 
-              <TextField
-                autoComplete="uploadFile"
-                name="uploadFile"
-                required
-                fullWidth
-                id="uploadFile"
-                type="file"
-                autoFocus
-                inputProps={{
-                  multiple: true,
-                }}
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #D5D9E2",
-                    borderRadius: "7px",
-                  },
-                }}
-              />
+              <FileUpload onFileSelect={handleFileSelect} />
             </Grid>
 
-            <Grid item xs={12} sm={12} lg={12} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 12 }}>
               <Box
                 sx={{
                   display: "flex",

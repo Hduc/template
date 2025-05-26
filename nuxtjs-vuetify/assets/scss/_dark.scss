@@ -30,6 +30,7 @@
   // Color
   .bg-white {
     background-color: #0c1427 !important;
+    color: var(--whiteColor) !important;
   }
   .text-black {
     color: var(--whiteColor) !important;
@@ -38,6 +39,9 @@
     background-color: var(--whiteColor) !important;
   }
   .bg-gray {
+    background-color: #15203c !important;
+  }
+  .bg-body-bg {
     background-color: #15203c !important;
   }
 
@@ -206,15 +210,15 @@
         tr {
           td {
             color: var(--whiteColor);
-            border-top: 1px solid var(--borderColor) !important;
-            border-bottom: 1px solid var(--borderColor) !important;
+            // border-top: 1px solid var(--borderColor) !important;
+            // border-bottom: 1px solid var(--borderColor) !important;
 
-            &:first-child {
-              border-left: 1px solid var(--borderColor) !important;
-            }
-            &:last-child {
-              border-right: 1px solid var(--borderColor) !important;
-            }
+            // &:first-child {
+            //   border-left: 1px solid var(--borderColor) !important;
+            // }
+            // &:last-child {
+            //   border-right: 1px solid var(--borderColor) !important;
+            // }
 
             .assignees {
               div {
@@ -251,7 +255,84 @@
       }
     }
   }
-
+  .default-table-area {
+    table {
+      thead {
+        tr {
+          th {
+            color: var(--whiteColor) !important;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            color: var(--whiteColor) !important;
+          }
+        }
+      }
+    }
+    .table-responsive {
+      .table {
+        tbody {
+          tr {
+            td {
+              color: #3a4252;
+            }
+          }
+        }
+      }
+    }
+    &.style-two {
+      .table-responsive {
+        .table {
+          thead {
+            tr {
+              th {
+                background-color: var(--borderColor) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.campaigns-table,
+    &.top-nfts-table {
+      &.style-two {
+        .table-responsive {
+          .table {
+            thead {
+              tr {
+                th {
+                  &.border-bottom {
+                    border-bottom: 1px solid #172036 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.employee-list {
+      .table-responsive {
+        .table {
+          thead {
+            tr {
+              th {
+                border-top: 1px solid #172036 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .chat-card {
+    .form-control {
+      background-color: var(--blackColor) !important;
+    }
+  }
   // Card
   .v-card {
     &.trezo-card {
@@ -443,6 +524,11 @@
     .v-label.v-field-label {
       color: var(--bodyColor) !important;
     }
+    .v-field__input {
+      &::placeholder {
+        color: var(--bodyColor) !important;
+      }
+    }
   }
 
   .ql-toolbar,
@@ -459,6 +545,9 @@
   }
   .file-upload {
     border: 1px solid var(--borderColor) !important;
+  }
+  .ql-snow .ql-stroke {
+    color: var(--whiteColor);
   }
 
   // Badge
@@ -487,8 +576,7 @@
   }
 
   // Sidebar
-  .sidebar-area,
-  &.dark-theme {
+  .sidebar-area {
     &.bg-white {
       background-color: #0c1427 !important;
     }
@@ -512,12 +600,7 @@
     }
     .accordion {
       .sidebar-menu-link {
-        color: var(--whiteColor) !important;
-
-        .material-symbols-outlined,
-        i.arrow-right {
-          color: var(--whiteColor) !important;
-        }
+        color: var(--whiteColor);
         &.router-link-active,
         &:hover {
           background-color: #15203c;
@@ -533,14 +616,14 @@
           .title-header {
             .material-symbols-outlined,
             i.arrow-right {
-              color: var(--whiteColor) !important;
+              color: var(--whiteColor);
             }
           }
         }
         .title-header {
           color: var(--whiteColor);
           i.arrow-right {
-            color: var(--whiteColor) !important;
+            color: var(--whiteColor);
           }
           &:hover {
             background-color: #15203c;
@@ -555,6 +638,8 @@
           .sidebar-sub-menu {
             .sidemenu-item {
               .sidemenu-link {
+                color: #c5c5c5;
+
                 &.router-link-active,
                 &:hover {
                   background-color: #15203c;
@@ -595,8 +680,7 @@
   }
 
   // header
-  .header-area,
-  &.dark-theme {
+  .header-area {
     &.bg-white {
       background-color: #0c1427 !important;
     }
@@ -613,60 +697,99 @@
       }
     }
 
-    .menu-dropdown {
-      &.v-list {
-        background: #0a0e19 !important;
-        .menu-body {
-          ul {
-            li {
-              a {
-                color: var(--whiteColor) !important;
+    .navbar-area {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      .accordion {
+        .accordion-item {
+          color: var(--whiteColor);
+
+          .accordion-button {
+            color: var(--whiteColor);
+
+            .trezo-badge {
+              background-color: rgba(255, 255, 255, 0.08);
+
+              &.style-two {
+                background-color: rgba(255, 255, 255, 0.08);
+              }
+              &.style-three {
+                background-color: rgba(255, 255, 255, 0.08);
+              }
+            }
+            &:hover {
+              color: var(--whiteColor);
+              background-color: #15203c;
+
+              i {
+                color: var(--whiteColor);
+              }
+              &::before {
+                color: var(--whiteColor);
               }
             }
           }
-        }
-      }
-    }
-    .language-menu-dropdown {
-      &.v-list {
-        background: #0a0e19 !important;
-        ul {
-          li {
-            border-top: 1px dashed var(--borderColor);
-            button {
+          &:has(.router-link-active) .accordion-button {
+            color: var(--whiteColor);
+            background-color: #15203c;
+
+            i {
+              color: var(--whiteColor);
+            }
+            &::before {
               color: var(--whiteColor);
             }
           }
-        }
-      }
-    }
-    .notification-list {
-      &.v-list {
-        background: #0a0e19 !important;
-        ul {
-          li {
-            border-top: 1px dashed var(--borderColor);
-            border-bottom: 1px dashed var(--borderColor);
-            .time {
-              color: var(--whiteColor);
+          .accordion-body {
+            background-color: #0c1427;
+
+            .accordion-button {
+              &:hover,
+              &.router-link-active {
+                background-color: #15203c;
+              }
+              .trezo-badge {
+                background-color: rgba(255, 255, 255, 0.08);
+
+                &.style-two {
+                  background-color: rgba(255, 255, 255, 0.08);
+                }
+                &.style-three {
+                  background-color: rgba(255, 255, 255, 0.08);
+                }
+              }
+            }
+            .sidebar-sub-menu {
+              .sidemenu-item {
+                .sidemenu-link {
+                  &:hover,
+                  &.router-link-active {
+                    background-color: #15203c;
+                  }
+                  .trezo-badge {
+                    background: rgba(255, 255, 255, 0.08);
+
+                    &::before {
+                      background: rgba(255, 255, 255, 0.08);
+                    }
+                    &.style-two {
+                      background: rgba(255, 255, 255, 0.08);
+
+                      &::before {
+                        background: rgba(255, 255, 255, 0.08);
+                      }
+                    }
+                    &.style-three {
+                      background: rgba(255, 255, 255, 0.08);
+
+                      &::before {
+                        background: rgba(255, 255, 255, 0.08);
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
-        }
-      }
-    }
-    .profile-menu-dropdown {
-      &.v-list {
-        background: #0a0e19 !important;
-        .admin {
-          border-bottom: 1px solid var(--borderColor);
-          span {
-            &:last-child {
-              color: var(--bodyColor) !important;
-            }
-          }
-        }
-        .border-top {
-          border-top: 1px solid var(--borderColor) !important;
         }
       }
     }
@@ -693,6 +816,9 @@
           border-top: 1px dashed var(--borderColor);
           button {
             color: var(--whiteColor);
+            &:hover {
+              background-color: #172036;
+            }
           }
         }
       }
@@ -1962,8 +2088,7 @@
         }
       }
     }
-    &.top-nfts-table,
-    &.campaigns-table {
+    &.top-nfts-table {
       &.style-two {
         .table-responsive {
           .table {
@@ -1988,5 +2113,742 @@
     .card {
       background-color: #0a0e19 !important;
     }
+  }
+  .for-dark-rounded-bg {
+    .card-body {
+      background-color: #172036 !important;
+    }
+    &.bg-white {
+      background-color: #0c1427 !important;
+    }
+  }
+  .categories-tabs {
+    .nav-item {
+      .nav-link {
+        border-color: #172036 !important;
+        border: double;
+        &.active {
+          border-color: var(--primaryColor) !important;
+        }
+      }
+    }
+  }
+  .payment-method {
+    .btn {
+      background-color: var(--bodyColor) !important;
+      border-color: #172036 !important;
+    }
+    .btn-check:checked + .btn,
+    .payment-method :not(.btn-check) + .btn:active,
+    .payment-method .btn:first-child:active,
+    .payment-method .btn.active,
+    .payment-method .btn.show {
+      background-color: #172036 !important;
+    }
+  }
+  .doctor-cover-bg {
+    &::before {
+      background-color: var(--blackColor);
+    }
+    .avatar-preview.rounded-circle {
+      border-color: #172036 !important;
+    }
+  }
+  .doctor-filter-img {
+    filter: brightness(100);
+  }
+  &.bg-white {
+    .sidebar-area {
+      border-color: #172036 !important;
+    }
+    .footer-area {
+      border-color: #172036 !important;
+    }
+  }
+  .text-black {
+    color: var(--whiteColor) !important;
+  }
+  .instagram-followers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .linkedin-followers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .tiktok-followers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .facebook-followers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .x-followers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .youtube-subscribers-card {
+    .trezo-card-content {
+      .info {
+        .info-badge {
+          background-color: #15203c !important;
+
+          &.down {
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .suggestions-card {
+    .trezo-card-content {
+      ul {
+        li {
+          border-bottom-color: var(--borderColor) !important;
+
+          .action {
+            button {
+              border-color: var(--borderColor) !important;
+
+              &:hover {
+                border-color: var(--orangeColor) !important;
+              }
+              &:nth-child(2) {
+                border-color: var(--borderColor) !important;
+
+                &:hover {
+                  border-color: var(--primaryColor) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-instagram-followers-card {
+    .trezo-card-content {
+      ul {
+        li {
+          border-bottom-color: var(--borderColor) !important;
+
+          .action {
+            .follow-btn {
+              background-color: #15203c !important;
+
+              &:hover {
+                background-color: var(--primaryColor) !important;
+              }
+            }
+            .message-btn {
+              background-color: #15203c !important;
+
+              &:hover {
+                background-color: var(--purpleColor) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .appointments-card {
+    .trezo-card-content {
+      .title {
+        .info-badge {
+          border-color: #15203c !important;
+          background-color: #15203c !important;
+
+          &.down {
+            border-color: #15203c !important;
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .patients-card {
+    .trezo-card-content {
+      .title {
+        .info-badge {
+          border-color: #15203c !important;
+          background-color: #15203c !important;
+
+          &.down {
+            border-color: #15203c !important;
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .operations-card {
+    .trezo-card-content {
+      .title {
+        .info-badge {
+          border-color: #15203c !important;
+          background-color: #15203c !important;
+
+          &.down {
+            border-color: #15203c !important;
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .earnings-card {
+    .trezo-card-content {
+      .title {
+        .info-badge {
+          border-color: #15203c !important;
+          background-color: #15203c !important;
+
+          &.down {
+            border-color: #15203c !important;
+            background-color: #15203c !important;
+          }
+        }
+      }
+    }
+  }
+  .new-customers-card {
+    .trezo-card-content {
+      .customers-list {
+        img {
+          border-color: var(--borderColor);
+        }
+        div {
+          border-color: var(--borderColor);
+
+          &.bg-black {
+            background-color: var(--blackColor) !important;
+          }
+        }
+      }
+    }
+  }
+  .top-selling-products-card {
+    .trezo-card-content {
+      .product-item {
+        .content {
+          .sold {
+            div {
+              border-color: #15203c;
+              background-color: #15203c;
+            }
+          }
+        }
+      }
+    }
+  }
+  .featured-services-card {
+    .trezo-card-content {
+      ul {
+        li {
+          .number {
+            background-color: var(--borderColor);
+          }
+        }
+      }
+    }
+  }
+  .recent-appointments-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            background-color: var(--borderColor);
+            color: var(--whiteColor);
+
+            &:hover {
+              background-color: var(--primaryColor);
+              color: var(--whiteColor);
+            }
+          }
+        }
+        .days {
+          div {
+            background-color: var(--borderColor);
+
+            &:has(.blank-day) {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      .appointments-list {
+        .appointment-item {
+          background-color: var(--borderColor) !important;
+
+          .status {
+            div {
+              border-color: #0c1427;
+              background-color: #0c1427;
+
+              &.upcoming {
+                border-color: #0c1427;
+                background-color: #0c1427;
+              }
+            }
+          }
+          .user-info {
+            .user {
+              img {
+                border-color: var(--blackColor);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bg-primary-100,
+  .bg-orange-100,
+  .bg-success-100,
+  .bg-purple-100 {
+    background-color: #15203c !important;
+  }
+  .customer-visits-card {
+    .trezo-card-content {
+      .content {
+        .icon {
+          background-color: #15203c;
+        }
+        .light {
+          background-color: #15203c;
+        }
+      }
+    }
+  }
+  .sa-gross-revenue-card {
+    .trezo-card-header {
+      .trezo-card-title {
+        .info-badge {
+          border-color: #15203c;
+          background-color: #15203c;
+
+          &.down {
+            border-color: #15203c;
+            background-color: #15203c;
+          }
+        }
+      }
+    }
+  }
+  .todays-schedule-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            color: var(--whiteColor);
+          }
+        }
+      }
+    }
+  }
+  .add-new-popup {
+    .popup-dialog {
+      .trezo-card {
+        .trezo-card-header {
+          background-color: #15203c;
+          .trezo-card-subtitle {
+            button {
+              color: var(--whiteColor);
+            }
+          }
+        }
+      }
+    }
+  }
+  .todays-appointments-card {
+    .trezo-card-content {
+      .appointments-list {
+        .appointment-item {
+          background-color: var(--borderColor) !important;
+
+          .user {
+            img {
+              border-color: var(--blackColor);
+            }
+          }
+          .btn {
+            &.btn-primary {
+              background-color: #0c1427;
+              border-color: #0c1427;
+
+              &:hover {
+                border-color: var(--primaryColor);
+                background-color: var(--primaryColor);
+              }
+            }
+          }
+          .shape {
+            opacity: 0.2;
+          }
+        }
+      }
+    }
+  }
+  .prescriptions-card {
+    .trezo-card-content {
+      .doctor-info {
+        .logo {
+          display: none;
+
+          &.d-none {
+            display: inline-block !important;
+          }
+        }
+      }
+      .prescriptions-info {
+        img {
+          filter: invert(1);
+        }
+      }
+      .basic-table {
+        .table {
+          thead {
+            tr {
+              th {
+                &::before {
+                  background-color: #0a0e19;
+                }
+              }
+            }
+          }
+        }
+      }
+      .signature {
+        .image {
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+  }
+  .write-prescription-card {
+    .trezo-card-content {
+      .doctor-info {
+        .logo {
+          display: none;
+
+          &.d-none {
+            display: inline-block !important;
+          }
+        }
+      }
+      .basic-table {
+        .table {
+          thead {
+            tr {
+              th {
+                &::before {
+                  background-color: #0a0e19 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bs-welcome-card {
+    .trezo-card-content {
+      .content {
+        p {
+          color: var(--blackColor) !important;
+        }
+      }
+    }
+  }
+  .todays-schedule-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            background-color: var(--borderColor) !important;
+            color: var(--whiteColor) !important;
+
+            &:hover {
+              background-color: var(--primaryColor) !important;
+              color: var(--whiteColor) !important;
+            }
+          }
+        }
+        .days {
+          div {
+            background-color: var(--borderColor) !important;
+
+            &:has(.blank-day) {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+      .events-list {
+        .event-item {
+          background-color: var(--borderColor) !important;
+
+          .user {
+            img {
+              border-color: var(--blackColor);
+            }
+          }
+          .info {
+            .btn {
+              &.btn-primary {
+                background-color: #0c1427 !important;
+                border-color: #0c1427 !important;
+
+                &:hover {
+                  border-color: var(--primaryColor) !important;
+                  background-color: var(--primaryColor) !important;
+                }
+              }
+            }
+            .notification-btn {
+              background-color: #0c1427 !important;
+
+              &:hover {
+                background-color: var(--primaryColor) !important;
+              }
+            }
+          }
+          .shape {
+            opacity: 0.2;
+          }
+          &:nth-child(2),
+          &:nth-child(5) {
+            .info {
+              .btn {
+                &.btn-primary {
+                  &:hover {
+                    border-color: var(--secondaryColor) !important;
+                    background-color: var(--secondaryColor) !important;
+                  }
+                }
+              }
+              .notification-btn {
+                &:hover {
+                  background-color: var(--secondaryColor) !important;
+                }
+              }
+            }
+          }
+          &:nth-child(3),
+          &:nth-child(6) {
+            .info {
+              .btn {
+                &.btn-primary {
+                  &:hover {
+                    border-color: var(--successColor) !important;
+                    background-color: var(--successColor) !important;
+                  }
+                }
+              }
+              .notification-btn {
+                &:hover {
+                  background-color: var(--successColor) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .new-bookings-card {
+    &.v-card {
+      &.trezo-card {
+        background-color: #0a0e19 !important;
+      }
+    }
+  }
+  .check-in-card {
+    &.v-card {
+      &.trezo-card {
+        background-color: #0a0e19 !important;
+      }
+    }
+  }
+  .check-out-card {
+    &.v-card {
+      &.trezo-card {
+        background-color: #0a0e19 !important;
+      }
+    }
+  }
+  .guest-activity-card {
+    &.component-dark-theme {
+      .chart {
+        --borderColor: #ffffff1a;
+      }
+      .apexcharts-canvas {
+        .apexcharts-text {
+          --bodyColor: #b1bbc8;
+        }
+      }
+    }
+  }
+  .recent-bookings-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            background-color: var(--borderColor);
+            color: var(--whiteColor);
+
+            &:hover {
+              background-color: var(--primaryColor);
+              color: var(--whiteColor);
+            }
+          }
+        }
+        .days {
+          div {
+            background-color: var(--borderColor);
+
+            &:has(.blank-day) {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+      .bookings-list {
+        .room-item {
+          .link-btn {
+            background-color: var(--borderColor);
+
+            &:hover {
+              background-color: var(--primaryColor);
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-clients-card {
+    .trezo-card-content {
+      ul {
+        li {
+          .image {
+            .active-status {
+              border-color: var(--blackColor);
+            }
+          }
+        }
+      }
+    }
+  }
+  .my-featured-listings-card {
+    &.v-card {
+      &.trezo-card {
+        background-color: #15203c !important;
+      }
+    }
+  }
+  .mobile-app-card {
+    &.v-card {
+      &.trezo-card {
+        background-color: #15203c !important;
+      }
+    }
+  }
+  .client-ratings-card {
+    .trezo-card-content {
+      .item {
+        background-color: #0a0e19 !important;
+      }
+    }
+  }
+  .my-cards-card {
+    background-image: unset !important;
+  }
+  .total-balance-card {
+    &.v-card {
+      &.trezo-card {
+        background: #0c1427 !important;
+      }
+    }
+
+    .trezo-card-content {
+      .icon {
+        background-color: #15203c;
+      }
+    }
+  }
+  .total-expense-card {
+    &.v-card {
+      &.trezo-card {
+        background: #0c1427 !important;
+
+        .trezo-card-content {
+          .icon {
+            background-color: #15203c;
+          }
+        }
+      }
+    }
+  }
+  .daily-limit-card {
+    .trezo-card-content {
+      &.bg-success-50 {
+        background-color: #0a0e19 !important;
+      }
+    }
+  }
+  .portfolio-value-card {
+    background-color: #162243;
+  }
+  .crypto-market-cap-card {
+    background-color: #162243;
   }
 }

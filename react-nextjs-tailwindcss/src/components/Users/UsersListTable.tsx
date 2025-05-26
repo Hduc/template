@@ -379,7 +379,7 @@ const UsersListTable: React.FC = () => {
           </div>
 
           <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               Showing {startIndex + 1} to{" "}
               {Math.min(startIndex + itemsPerPage, users.length)} of{" "}
               {users.length} results

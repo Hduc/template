@@ -21,7 +21,7 @@ const AccountSettingsForm: React.FC = () => {
   return (
     <>
       <form>
-        <h5 className="text-lg mb-[6px]">Profile</h5>
+        <h5 className="!text-lg !mb-[6px]">Profile</h5>
         <p className="mb-[20px] md:mb-[25px]">
           Update your photo and personal details here.
         </p>
@@ -185,7 +185,7 @@ const AccountSettingsForm: React.FC = () => {
           </div>
         </div>
 
-        <h5 className="text-lg mb-[6px] mt-[20px] md:mt-[25px]">Profile</h5>
+        <h5 className="!text-lg !mb-[6px] !mt-[20px] md:!mt-[25px]">Profile</h5>
         <p className="mb-[20px] md:mb-[25px]">
           This will be displayed on your profile.
         </p>
@@ -235,7 +235,7 @@ const AccountSettingsForm: React.FC = () => {
           </div>
         </div>
 
-        <h5 className="text-lg mb-[20px] mt-[20px] md:mt-[25px]">
+        <h5 className="!text-lg !mb-[20px] !mt-[20px] md:!mt-[25px]">
           Socials Profile
         </h5>
         <div className="sm:grid sm:grid-cols-2 sm:gap-[25px]">

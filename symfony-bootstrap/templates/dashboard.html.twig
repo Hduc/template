@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Trezo - Symfony & Bootstrap 5 Admin Dashboard Template{% endblock %}</title>
+
+        {# CSS Files #}
+        {# <link rel="stylesheet" href="{{ asset('build/app.css') }}"> #}
+        
+        {% include 'partials/_styles.html.twig' %}
+        {% block stylesheets %}{% endblock %}
+            {{ encore_entry_link_tags('app') }}
+    </head>
+
+    <body class="boxed-size">
+
+        {% include 'partials/_preloader.html.twig' %}
+        {% include 'partials/dashboard/_sidebar.html.twig' %}
+        
+        <div class="container-fluid">
+            <div class="main-content d-flex flex-column">
+                {% include 'partials/dashboard/_header.html.twig' %}
+
+                {% block body %}{% endblock %}
+
+                <div class="flex-grow-1"></div>
+                {% include 'partials/dashboard/_footer.html.twig' %}
+            </div>
+        </div>
+
+        {% include 'partials/dashboard/_settings.html.twig' %}
+
+
+        {# JavaScript Files #}
+        {# <script src="{{ asset('build/app.js') }}"></script> #}
+        {% include 'partials/_scripts.html.twig' %}
+        
+        {% block javascripts %}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
+    </body>
+</html>

@@ -27,7 +27,10 @@ const Footer: React.FC = () => {
           }}
         >
           <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-            <Grid item xs={12} sm={6} md={6} lg={3} className="fp-grid-item">
+            <Grid
+              size={{ xs: 12, sm: 6, md: 6, lg: 3 }}
+              className="fp-grid-item"
+            >
               <div className="single-footer-widget">
                 <Link href="/" className="logo">
                   <Image
@@ -52,23 +55,26 @@ const Footer: React.FC = () => {
                 </p>
 
                 <div className="socials">
-                  <a href="#" target="_blank">
+                  <a href="https://www.facebook.com/" target="_blank">
                     <i className="ri-facebook-fill"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://www.twitter.com/" target="_blank">
                     <i className="ri-twitter-x-fill"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://www.linkedin.com/" target="_blank">
                     <i className="ri-linkedin-fill"></i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href="https://www.dribbble.com/" target="_blank">
                     <i className="ri-dribbble-fill"></i>
                   </a>
                 </div>
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={3} className="fp-grid-item">
+            <Grid
+              size={{ xs: 12, sm: 6, md: 6, lg: 3 }}
+              className="fp-grid-item"
+            >
               <div className="single-footer-widget">
                 <h3>Our Products</h3>
                 <ul className="custom-links">
@@ -88,7 +94,10 @@ const Footer: React.FC = () => {
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={3} className="fp-grid-item">
+            <Grid
+              size={{ xs: 12, sm: 6, md: 6, lg: 3 }}
+              className="fp-grid-item"
+            >
               <div className="single-footer-widget">
                 <h3>Quick Links</h3>
 
@@ -109,7 +118,10 @@ const Footer: React.FC = () => {
               </div>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={6} lg={3} className="fp-grid-item">
+            <Grid
+              size={{ xs: 12, sm: 6, md: 6, lg: 3 }}
+              className="fp-grid-item"
+            >
               <div className="single-footer-widget">
                 <h3>Privacy Policy</h3>
                 <ul className="custom-links">

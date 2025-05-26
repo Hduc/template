@@ -172,6 +172,7 @@
                     background-color: #FFE8D4;
                     border-radius: 1px;
                     transform: rotate(45deg);
+                    z-index: -1;
                 }
                 &.new {
                     background-color: #D8FFC8;
@@ -435,6 +436,172 @@
                 }
             }
         }
+        &.compact-sidebar {
+            .main-content {
+                padding-left: 92px;
+
+                .header-area {
+                    .left-header-content {
+                        ul {
+                            li.hbm {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .sidebar-area {
+                width: 80px;
+                z-index: 2;
+                transition: $transition;
+
+                .sidebar-burger-menu {
+                    display: none !important;
+                }
+            
+                .logo {
+                    padding-left: 25px;
+                    padding-right: 25px;
+
+                    .logo-text {
+                        left: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+                
+                .sidebar-menu {
+                    padding: 17px;
+                    padding-bottom: 60px;
+
+                    .accordion {
+                        .accordion-item {
+                            .accordion-header {
+                                .accordion-button {
+                                    padding: 10px;
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                    .material-symbols-outlined {
+                                        margin-right: 0;
+                                    }
+                                    .title {
+                                        display: none;
+                                    }
+                                    .count {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .menu-item {
+                        .menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                    .menu-header {
+                        display: none;
+                    }
+                    .sub-menu {
+                        display: none;
+                    }
+                    .menu-title {
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+
+                        .menu-title-text {
+                            margin-bottom: 0;
+                            font-size: 0;
+                            position: relative;
+                            transition: $transition;
+                    
+                            &::before {
+                                top: 50%;
+                                width: 50px;
+                                content: "";
+                                height: 1px;
+                                position: absolute;
+                                transform: translateY(-50%);
+                                background: $border-color;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    width: 270px;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+                    .sidebar-menu {
+                        .menu-header {
+                            display: block;
+                        }
+                        .accordion {
+                            .accordion-item {
+                                .accordion-header {
+                                    .accordion-button {
+                                        padding: 10px;
+        
+                                        &::after {
+                                            display: block;
+                                        }
+                                        .material-symbols-outlined {
+                                            margin-right: 8px;
+                                        }
+                                        .title {
+                                            display: block;
+                                        }
+                                        .count {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .sub-menu {
+                            display: block;
+                            
+                            .menu-item {
+                                .menu-link {
+                                    padding-left: 35px;
+                                }
+                            }
+                        }
+                        .menu-item {
+                            .menu-link {
+                                .title {
+                                    display: block;
+                                }
+                            }
+                        }
+                        .menu-title {
+                            margin-top: 12px;
+                            margin-bottom: 0;
+    
+                            .menu-title-text {
+                                margin-bottom: 7px;
+                                font-size: 12px; 
+                        
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    .logo {
+                        .logo-text {
+                            left: 33px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .dark {
@@ -450,6 +617,21 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+// RTL
+[dir="rtl"] {
+    /* Min width 1200px */
+    @media only screen and (min-width: 1200px) {
+        .main-wrapper-content {
+            &.compact-sidebar {
+                .main-content {
+                    padding-left: 25px;
+                    padding-right: 106px;
                 }
             }
         }

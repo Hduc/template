@@ -131,9 +131,10 @@ const EmployeeAttendanceTrends: React.FC = () => {
       >
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "block", sm: "flex" },
             alignItems: "center",
             justifyContent: "space-between",
+            gap: "15px",
             mb: "25px",
           }}
         >
@@ -148,7 +149,9 @@ const EmployeeAttendanceTrends: React.FC = () => {
             Employee Attendance Trends
           </Typography>
 
-          <DateTimePickerDemo />
+          <Box sx={{ mt: { xs: "10px", sm: "0px" } }}>
+            <DateTimePickerDemo />
+          </Box>
         </Box>
 
         <Box

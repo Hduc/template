@@ -62,6 +62,11 @@
     }
 }
 
+.main-content:has(div.fp-wrapper) { 
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
 
 // Section Title
 .section-title {
@@ -293,6 +298,17 @@
 
                     &.d-none {
                         display: inline !important;
+                    }
+                }
+            }
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        color: var(--darkBodyColor);
+
+                        &.active {
+                            color: var(--primaryColor)
+                        }
                     }
                 }
             }

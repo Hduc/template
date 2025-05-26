@@ -53,8 +53,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 180,
-        startDate: '25 Mar 2024',
-        endDate: '25 Apr 2024',
+        startDate: '25 Mar 2025',
+        endDate: '25 Apr 2025',
         price: '$49.99',
         action: {
             view: 'visibility',
@@ -71,8 +71,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ava Cooper'
         },
         enrolled: 250,
-        startDate: '20 Mar 2024',
-        endDate: '20 Apr 2024',
+        startDate: '20 Mar 2025',
+        endDate: '20 Apr 2025',
         price: '$45.32',
         action: {
             view: 'visibility',
@@ -89,8 +89,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Isabella Evans'
         },
         enrolled: 320,
-        startDate: '15 Mar 2024',
-        endDate: '15 Apr 2024',
+        startDate: '15 Mar 2025',
+        endDate: '15 Apr 2025',
         price: '$99.00',
         action: {
             view: 'visibility',
@@ -107,8 +107,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Mia Hughes'
         },
         enrolled: 135,
-        startDate: '10 Mar 2024',
-        endDate: '10 Apr 2024',
+        startDate: '10 Mar 2025',
+        endDate: '10 Apr 2025',
         price: '$29.75',
         action: {
             view: 'visibility',
@@ -125,8 +125,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Noah Mitchell'
         },
         enrolled: 460,
-        startDate: '05 Mar 2024',
-        endDate: '05 Apr 2024',
+        startDate: '05 Mar 2025',
+        endDate: '05 Apr 2025',
         price: '$56.99',
         action: {
             view: 'visibility',
@@ -143,8 +143,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 515,
-        startDate: '10 Feb 2024',
-        endDate: '10 Mar 2024',
+        startDate: '10 Feb 2025',
+        endDate: '10 Mar 2025',
         price: '$78.75',
         action: {
             view: 'visibility',
@@ -161,8 +161,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 180,
-        startDate: '25 Mar 2024',
-        endDate: '25 Apr 2024',
+        startDate: '25 Mar 2025',
+        endDate: '25 Apr 2025',
         price: '$49.99',
         action: {
             view: 'visibility',
@@ -179,8 +179,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ava Cooper'
         },
         enrolled: 250,
-        startDate: '20 Mar 2024',
-        endDate: '20 Apr 2024',
+        startDate: '20 Mar 2025',
+        endDate: '20 Apr 2025',
         price: '$45.32',
         action: {
             view: 'visibility',
@@ -197,8 +197,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Isabella Evans'
         },
         enrolled: 320,
-        startDate: '15 Mar 2024',
-        endDate: '15 Apr 2024',
+        startDate: '15 Mar 2025',
+        endDate: '15 Apr 2025',
         price: '$99.00',
         action: {
             view: 'visibility',
@@ -215,8 +215,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Mia Hughes'
         },
         enrolled: 135,
-        startDate: '10 Mar 2024',
-        endDate: '10 Apr 2024',
+        startDate: '10 Mar 2025',
+        endDate: '10 Apr 2025',
         price: '$29.75',
         action: {
             view: 'visibility',
@@ -233,8 +233,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Mia Hughes'
         },
         enrolled: 135,
-        startDate: '10 Mar 2024',
-        endDate: '10 Apr 2024',
+        startDate: '10 Mar 2025',
+        endDate: '10 Apr 2025',
         price: '$29.75',
         action: {
             view: 'visibility',
@@ -251,8 +251,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Isabella Evans'
         },
         enrolled: 320,
-        startDate: '15 Mar 2024',
-        endDate: '15 Apr 2024',
+        startDate: '15 Mar 2025',
+        endDate: '15 Apr 2025',
         price: '$99.00',
         action: {
             view: 'visibility',
@@ -269,8 +269,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ava Cooper'
         },
         enrolled: 250,
-        startDate: '20 Mar 2024',
-        endDate: '20 Apr 2024',
+        startDate: '20 Mar 2025',
+        endDate: '20 Apr 2025',
         price: '$45.32',
         action: {
             view: 'visibility',
@@ -287,8 +287,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 180,
-        startDate: '25 Mar 2024',
-        endDate: '25 Apr 2024',
+        startDate: '25 Mar 2025',
+        endDate: '25 Apr 2025',
         price: '$49.99',
         action: {
             view: 'visibility',
@@ -305,8 +305,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 515,
-        startDate: '10 Feb 2024',
-        endDate: '10 Mar 2024',
+        startDate: '10 Feb 2025',
+        endDate: '10 Mar 2025',
         price: '$78.75',
         action: {
             view: 'visibility',
@@ -323,8 +323,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Noah Mitchell'
         },
         enrolled: 460,
-        startDate: '05 Mar 2024',
-        endDate: '05 Apr 2024',
+        startDate: '05 Mar 2025',
+        endDate: '05 Apr 2025',
         price: '$56.99',
         action: {
             view: 'visibility',
@@ -341,8 +341,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Mia Hughes'
         },
         enrolled: 135,
-        startDate: '10 Mar 2024',
-        endDate: '10 Apr 2024',
+        startDate: '10 Mar 2025',
+        endDate: '10 Apr 2025',
         price: '$29.75',
         action: {
             view: 'visibility',
@@ -359,8 +359,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Isabella Evans'
         },
         enrolled: 320,
-        startDate: '15 Mar 2024',
-        endDate: '15 Apr 2024',
+        startDate: '15 Mar 2025',
+        endDate: '15 Apr 2025',
         price: '$99.00',
         action: {
             view: 'visibility',
@@ -377,8 +377,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Ava Cooper'
         },
         enrolled: 250,
-        startDate: '20 Mar 2024',
-        endDate: '20 Apr 2024',
+        startDate: '20 Mar 2025',
+        endDate: '20 Apr 2025',
         price: '$45.32',
         action: {
             view: 'visibility',
@@ -395,8 +395,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
             name: 'Oliver Khan'
         },
         enrolled: 180,
-        startDate: '25 Mar 2024',
-        endDate: '25 Apr 2024',
+        startDate: '25 Mar 2025',
+        endDate: '25 Apr 2025',
         price: '$49.99',
         action: {
             view: 'visibility',

@@ -9,7 +9,7 @@ const Cta: React.FC = () => {
       <div className="py-[60px] md:py-[80px] lg:py-[100px] xl:py-[150px]">
         <div className="container md:max-w-[960px] 2xl:max-w-[1320px] mx-auto px-[12px] relative z-[1]">
           <div className="text-center mx-auto md:max-w-[680px] lg:max-w-[830px]">
-            <h2 className="text-[28px] md:text-[36px] lg:text-[45px] xl:text-[48px] mb-[13px] md:mb-[20px] lg:mb-[25px] xl:mb-[35px] -tracking-[.5px] md:-tracking-[.8px] lg:-tracking-[1.2px] xl:-tracking-[1.5px] leading-[1.2]">
+            <h2 className="!text-[28px] md:!text-[36px] lg:!text-[45px] xl:!text-[48px] !mb-[13px] md:!mb-[20px] lg:!mb-[25px] xl:!mb-[35px] -tracking-[.5px] md:-tracking-[.8px] lg:-tracking-[1.2px] xl:-tracking-[1.5px] !leading-[1.2]">
               Unlock a world of possibilities with Trezo Dashboard.
             </h2>
 

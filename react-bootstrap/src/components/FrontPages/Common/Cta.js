@@ -1,14 +1,15 @@
 "use client";
 
+import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
     <>
       <div className="unlock-area ptb-150 position-relative z-1" id="admin">
-        <div className="container">
+        <Container>
           <div className="border-bottom pb-150">
-            <div className="row">
+            <Row>
               <div className="unlock-content">
                 <h2>Unlock a world of possibilities with Trezo Dashboard.</h2>
                 <p>
@@ -27,9 +28,9 @@ const Cta = () => {
                   </div>
                 </Link>
               </div>
-            </div>
+            </Row>
           </div>
-        </div>
+        </Container>
 
         <img
           src="/images/landing/shape-1.png"

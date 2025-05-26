@@ -405,7 +405,7 @@ const RecentOrders: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={10} />
+                    <TableCell className="border-bottom" colSpan={10} />
                   </TableRow>
                 )}
               </TableBody>

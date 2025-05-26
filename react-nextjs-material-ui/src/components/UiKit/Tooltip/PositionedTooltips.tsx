@@ -29,7 +29,7 @@ const PositionedTooltips: React.FC = () => {
 
         <Box sx={{ width: 500 }}>
           <Grid container justifyContent="center">
-            <Grid item>
+            <Grid>
               <Tooltip title="Add" placement="top-start">
                 <Button>top-start</Button>
               </Tooltip>
@@ -42,7 +42,7 @@ const PositionedTooltips: React.FC = () => {
             </Grid>
           </Grid>
           <Grid container justifyContent="center">
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               <Tooltip title="Add" placement="left-start">
                 <Button>left-start</Button>
               </Tooltip>
@@ -56,23 +56,22 @@ const PositionedTooltips: React.FC = () => {
               </Tooltip>
             </Grid>
             <Grid
-              item
               container
-              xs={6}
+              size={{ xs: 6 }}
               alignItems="flex-end"
               direction="column"
             >
-              <Grid item>
+              <Grid>
                 <Tooltip title="Add" placement="right-start">
                   <Button>right-start</Button>
                 </Tooltip>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Tooltip title="Add" placement="right">
                   <Button>right</Button>
                 </Tooltip>
               </Grid>
-              <Grid item>
+              <Grid>
                 <Tooltip title="Add" placement="right-end">
                   <Button>right-end</Button>
                 </Tooltip>
@@ -80,7 +79,7 @@ const PositionedTooltips: React.FC = () => {
             </Grid>
           </Grid>
           <Grid container justifyContent="center">
-            <Grid item>
+            <Grid>
               <Tooltip title="Add" placement="bottom-start">
                 <Button>bottom-start</Button>
               </Tooltip>

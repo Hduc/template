@@ -25,6 +25,12 @@
       </div>
       <div class="mb-4 pb-2">
         <h4 class="fs-15 fw-semibold border-bottom pb-2 mb-3">
+          Horizontal Layout
+        </h4>
+        <LayoutSettingsSidebarHorizontalLayout />
+      </div>
+      <div class="mb-4 pb-2">
+        <h4 class="fs-15 fw-semibold border-bottom pb-2 mb-3">
           Only Sidebar Light / Dark
         </h4>
         <LayoutSettingsSidebarOnlySidebarDark />

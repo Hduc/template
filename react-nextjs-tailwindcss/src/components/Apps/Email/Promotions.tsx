@@ -461,7 +461,7 @@ const Promotions: React.FC = () => {
           </div>
 
           <div className="flex items-center md:absolute -top-[48px] ltr:right-0 rtl:left-0 mt-[15px] md:mt-0">
-            <p className="mb-0 text-sm">
+            <p className="!mb-0 !text-sm">
               {indexOfFirstItem + 1} –{" "}
               {Math.min(indexOfLastItem, messages.length)} of {messages.length}
             </p>

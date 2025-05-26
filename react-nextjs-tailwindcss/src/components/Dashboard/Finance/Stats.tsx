@@ -46,7 +46,7 @@ const Stats: React.FC = () => {
               <div className="flex justify-between">
                 <div>
                   <span className="block">{stat.title}</span>
-                  <h5 className="mb-0 mt-[3px] text-[20px]">{stat.value}</h5>
+                  <h5 className="!mb-0 !mt-[3px] !text-[20px]">{stat.value}</h5>
                 </div>
                 <div
                   className={`w-[55px] lg:w-[60px] h-[55px] lg:h-[60px] flex items-center justify-center rounded-full ${
@@ -60,7 +60,7 @@ const Stats: React.FC = () => {
               </div>
               <div className="mt-[15px] md:mt-[20px] flex items-center gap-[10px]">
                 <span
-                  className={`inline-block px-[8.5px] ${
+                  className={`inline-block px-[8.5px] dark:bg-[#15203c] dark:border-[#15203c] ${
                     stat.trend === "increase"
                       ? "text-success-700 border border-success-300 bg-success-100"
                       : "text-danger-700 border border-danger-300 bg-danger-100"

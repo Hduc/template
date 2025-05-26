@@ -30,7 +30,7 @@
           >
             <span class="material-symbols-outlined menu-icon">dashboard</span>
             <span class="title">Dashboard</span>
-            <span class="count">20</span>
+            <span class="count">30</span>
           </a>
 
           <ul class="menu-sub" v-show="isOpen('dashboard')">
@@ -48,86 +48,138 @@
                 Project Management
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/lms" class="menu-link">
                 LMS
                 <span class="new tag">Top</span>
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/help-desk" class="menu-link">
                 HelpDesk
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/analytics" class="menu-link">
                 Analytics
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/crypto" class="menu-link">
                 Crypto
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/sales" class="menu-link">
                 Sales
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/hospital" class="menu-link">
                 Hospital
               </NuxtLink>
             </li>
-
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/marketing" class="menu-link">
                 Marketing
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/nft" class="menu-link"> NFT </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/saas" class="menu-link"> SaaS </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/real-estate" class="menu-link">
                 Real Estate
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/shipment" class="menu-link">
                 Shipment
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/finance" class="menu-link">
                 Finance
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/hrm" class="menu-link"> HRM </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/school" class="menu-link">
                 School
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/call-center" class="menu-link">
                 Call Center
               </NuxtLink>
             </li>
-            <li class="menu-item mb-0">
+            <li class="menu-item">
               <NuxtLink to="/dashboard/pos-system" class="menu-link">
                 POS System
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/podcast" class="menu-link">
+                Podcast
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/social-media" class="menu-link">
+                Social Media
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/doctor" class="menu-link">
+                Doctor
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/beauty-salon" class="menu-link">
+                Beauty Salon
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/store-analysis" class="menu-link">
+                Store Analysis
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/restaurant" class="menu-link">
+                Restaurant
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/hotel" class="menu-link">
+                Hotel
+                <span class="hot tag">New</span>
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/real-estate-agent" class="menu-link">
+                Real Estate Agent
+                <span class="hot tag">New</span>
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/credit-card" class="menu-link">
+                Credit Card
+                <span class="hot tag">New</span>
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/dashboard/crypto-trader" class="menu-link">
+                Crypto Trader
                 <span class="hot tag">New</span>
               </NuxtLink>
             </li>
             <li class="menu-item mb-0">
-              <NuxtLink to="/dashboard/podcast" class="menu-link">
-                Podcast
+              <NuxtLink to="/dashboard/crypto-performance" class="menu-link">
+                Crypto Perf
                 <span class="hot tag">New</span>
               </NuxtLink>
             </li>
@@ -721,6 +773,163 @@
             <li class="menu-item">
               <NuxtLink to="/finance/transaction" class="menu-link">
                 Transaction
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('doctor') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('doctor')"
+          >
+            <span class="material-symbols-outlined menu-icon">badge</span>
+            <span class="title">Doctor</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('doctor')">
+            <li class="menu-item">
+              <NuxtLink to="/doctor/patients-list" class="menu-link">
+                Patients List
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/doctor/add-patient" class="menu-link">
+                Add Patient
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/doctor/patient-details" class="menu-link">
+                Patient Details
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/doctor/appointments" class="menu-link">
+                Appointments
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/doctor/prescriptions" class="menu-link">
+                Prescriptions
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/doctor/write-prescription" class="menu-link">
+                Write a Prescription
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('restaurant') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('restaurant')"
+          >
+            <span class="material-symbols-outlined menu-icon">
+              lunch_dining
+            </span>
+            <span class="title">Restaurant</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('restaurant')">
+            <li class="menu-item">
+              <NuxtLink to="/restaurant/menus" class="menu-link">
+                Menus
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/restaurant/dish-details" class="menu-link">
+                Dish Details
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('hotel') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('hotel')"
+          >
+            <span class="material-symbols-outlined menu-icon"> hotel </span>
+            <span class="title">Hotel</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('hotel')">
+            <li class="menu-item">
+              <NuxtLink to="/hotel/rooms-list" class="menu-link">
+                Rooms List
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/hotel/room-details" class="menu-link">
+                Room Details
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/hotel/guests-list" class="menu-link">
+                Guests List
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('realEstateAgent') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('realEstateAgent')"
+          >
+            <span class="material-symbols-outlined menu-icon">
+              location_away
+            </span>
+            <span class="title">Real Estate Agent</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('realEstateAgent')">
+            <li class="menu-item">
+              <NuxtLink to="/real-estate-agent/properties" class="menu-link">
+                Properties
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink
+                to="/real-estate-agent/property-details"
+                class="menu-link"
+              >
+                Property Details
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-item" :class="{ open: isOpen('cryptoTrader') }">
+          <a
+            href="javascript:void(0);"
+            class="menu-link menu-toggle active"
+            @click="toggleMenu('cryptoTrader')"
+          >
+            <span class="material-symbols-outlined menu-icon"> paid </span>
+            <span class="title">Crypto Trader</span>
+          </a>
+
+          <ul class="menu-sub" v-show="isOpen('cryptoTrader')">
+            <li class="menu-item">
+              <NuxtLink to="/crypto-trader/transactions" class="menu-link">
+                Transactions
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/crypto-trader/gainers-losers" class="menu-link">
+                Gainers & Losers
+              </NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink to="/crypto-trader/wallet-crypto" class="menu-link">
+                Wallet
               </NuxtLink>
             </li>
           </ul>

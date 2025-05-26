@@ -25,7 +25,8 @@
 
 body {
     margin: 0;
-    padding: 0; 
+    padding: 0 !important; 
+    overflow-y: auto !important; 
 }
 img {
     max-width: 100%;
@@ -59,7 +60,6 @@ a {
 .-mr-4 {
     margin-right: -4px;
 }
-
 .main-wrapper-content {
     overflow: hidden;
     min-height: 100vh;
@@ -72,7 +72,6 @@ a {
         padding-left: 85px;
     }
 }
-
 textarea {
     font-family: var(--fontFamily);
 
@@ -529,6 +528,10 @@ table {
     padding: 0 !important;
 }
 
+.main-wrapper-content.with-horizontal-navbar .main-content:has(div.auth-main-wrapper) { 
+    padding: 0 !important;
+}
+
 // full-calendar-box
 .full-calendar-box {
     .fc {
@@ -560,7 +563,7 @@ table {
 }
 
 .uc-content {
-    .MuiGrid-item:nth-last-child(1), .MuiGrid-item:nth-last-child(2) {
+    .uc-grid:nth-last-child(1), .uc-grid:nth-last-child(2) {
         .border-bottom {
             border-bottom: none !important;
             margin-bottom: 0 !important;
@@ -577,14 +580,11 @@ table {
         .MuiFormControl-root {
             min-width: 200px;
             
-            .MuiInputBase-input {
-                padding: 5px 14px;
+            .MuiPickersSectionList-root {
+                padding: 10px 0;
                 height: auto;
                 font-size: 12px;
-            }
-            .MuiButtonBase-root {
-                padding: 4px;
-            }
+            } 
         }
     }
 }
@@ -889,3 +889,247 @@ table {
         margin-bottom: 15px;
     }
 } 
+
+// rmui-card
+.rmui-card {
+    &.border-card {
+        border: 1px solid var(--borderColor) !important;
+    }
+    &.card-radius-0 {
+        border-radius: 0 !important;
+    }
+}
+
+// Podcast Dashboard
+.most-popular-tabs {
+    .tab-btn {
+        background-color: #eceef2;
+        color: var(--bodyColor);
+
+        &.active {
+            background-color: var(--primaryColor);
+            color: #fff;
+        }
+    }
+}
+
+.dark-theme {
+    .tab-btn {
+        background-color: #000;
+        color: var(--whiteColor);
+    }
+}
+.mastering-digital-marketing-slide {
+    .swiper-pagination {
+        text-align: right;
+        top: 0; 
+        right: 0;
+        height: 30px;
+    
+        .swiper-pagination-bullet {
+            background-color: #8695AA;
+            width: 10px;
+            height: 3px;
+            border-radius: 4px;
+            transition: var(--transition);
+            opacity: 1;
+    
+            &.swiper-pagination-bullet-active {
+                background-color: var(--borderColor); 
+                width: 30px;
+            }
+        }
+    }
+}
+
+/* RTL Style */
+[dir="rtl"] {
+    .mastering-digital-marketing-slide {
+        .swiper-pagination {
+            text-align: left;
+            right: auto;
+            left: 0;
+        }
+    }
+}
+// End Podcast Dashboard
+
+// Beauty salon dashboard
+.text-000 {
+    color: #000 !important;
+}
+.bsts-products-slide {
+    .swiper-button-prev, .swiper-button-next {
+        background-color: var(--primaryColor);
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+
+        &::after {
+            font-size: 18px;
+        }
+        &.swiper-button-disabled {
+            cursor: auto;
+            pointer-events: auto;
+        }
+    }
+}
+.ra-calendar {
+    width: 100%;
+    border: none;
+
+    .react-calendar__navigation {
+        display: none;
+    }
+    .react-calendar__month-view__weekdays {
+        text-transform: capitalize;
+        font-size: 12px;
+        
+        abbr {
+            text-decoration: initial;
+        }
+    }
+    .react-calendar__month-view__days {
+        .react-calendar__tile {
+            background-color: #E6EFF2;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            height: 50px;
+            font-size: 16px;
+
+            &.react-calendar__tile--active {
+                background-color: var(--primaryColor);
+            }
+        }
+    }
+}
+.dark-theme { 
+    .ra-calendar {
+        background-color: #000; 
+
+        .react-calendar__month-view__days {
+            .react-calendar__tile {
+                background-color: #000; 
+                border: 2px solid #333; 
+
+                &.react-calendar__tile--active {
+                    background-color: var(--primaryColor);
+                    color: #fff !important;
+
+                    abbr {
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.bs-rs-appointments {
+    padding-left: 11px;
+    padding-right: 5px;
+
+    .bs-rs-appointments-list {
+        border-left: 1px dashed #D5D9E2;
+        padding-left: 37px;
+
+        .verifyIcon {
+            left: -37px !important;
+        }
+    }
+}
+[dir="rtl"] {
+    .bs-rs-appointments {
+        padding-left: 5px;
+        padding-right: 11px;
+    
+        .bs-rs-appointments-list { 
+            padding-left: 0;
+            padding-right: 37px;
+            border-left: none;
+            border-right: 1px dashed #D5D9E2;
+    
+            .verifyIcon {
+                left: auto !important;
+                right: -60px !important;
+            }
+        }
+    }
+}
+// End Beauty salon dashboard
+ 
+.prescriptions-white-logo {
+    display: none;
+}
+.dark-theme {
+    .prescriptions-logo {
+        display: none;
+    }
+    .prescriptions-white-logo {
+        display: block;
+    }
+    .bar-code {
+        filter: invert(1);
+    }
+}
+
+
+// upload-file-paper
+.upload-file-paper {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+}
+ 
+// Hotel Dashboard
+.hotel-popular-rooms {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 15px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+
+            &.swiper-pagination-bullet-active {
+                background-color: var(--primaryColor);
+                width: 20px;
+            }
+        }
+    }
+}
+// End Hotel Dashboard
+
+// Real Estate Agent Dashboard
+.rea-my-featured-listings {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+
+            &.swiper-pagination-bullet-active {
+                background-color: var(--dangerColor);
+                width: 20px;
+            }
+        }
+    }
+}
+.rea-client-ratings {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 15px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+
+            &.swiper-pagination-bullet-active {
+                background-color: var(--dangerColor);
+                width: 20px;
+            }
+        }
+    }
+}
+// End Estate Agent Dashboard
+
+// Credit Card Dashboard
+
+// End Credit Card Dashboard

@@ -137,7 +137,7 @@ const StudentsOverview: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Students Overview</h5>
+            <h5 className="!mb-0 !font-semibold">Students Overview</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -196,7 +196,7 @@ const StudentsOverview: React.FC = () => {
               </div>
               <div>
                 <span className="block">Boys</span>
-                <h5 className="mb-0 mt-px text-[20px] font-semibold">980</h5>
+                <h5 className="!mb-0 !mt-px !text-[20px] !font-semibold">980</h5>
               </div>
             </div>
             <div className="flex items-center gap-[12px]">
@@ -210,7 +210,7 @@ const StudentsOverview: React.FC = () => {
               </div>
               <div>
                 <span className="block">Girls</span>
-                <h5 className="mb-0 mt-px text-[20px] font-semibold">675</h5>
+                <h5 className="!mb-0 !mt-px !text-[20px] !font-semibold">675</h5>
               </div>
             </div>
           </div>

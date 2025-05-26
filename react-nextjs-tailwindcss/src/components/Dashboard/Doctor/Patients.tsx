@@ -10,7 +10,7 @@ const Patients: React.FC = () => {
         <div className="trezo-card-content flex justify-between">
           <div>
             <span className="block">Patients</span>
-            <h2 className="text-2xl font-black mt-[5px] mb-[8px]">334</h2>
+            <h2 className="!text-2xl !font-black !mt-[5px] !mb-[8px]">334</h2>
             <span className="inline-block text-xs rounded-[30px] px-[10px] border border-success-300 text-success-700 bg-success-100 dark:border-[#15203c] dark:bg-[#15203c]">
               +7%
             </span>

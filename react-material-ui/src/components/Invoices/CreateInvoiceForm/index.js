@@ -51,7 +51,7 @@ const CreateInvoiceForm = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
             mb="25px"
           >
-            <Grid item xs={12} sm={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
               <Box>
                 <FormControl fullWidth>
                   <Typography
@@ -85,13 +85,17 @@ const CreateInvoiceForm = () => {
                       "& .MuiInputBase-root:hover::before": {
                         border: "none",
                       },
+                      "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                        {
+                          border: "none",
+                        },
                     }}
                   />
                 </FormControl>
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
               <Box>
                 <Typography
                   component="label"
@@ -129,7 +133,7 @@ const CreateInvoiceForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -146,17 +150,17 @@ const CreateInvoiceForm = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={6} lg={6} xl={3}>
+            <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 3 }}>
               <Typography
                 component="h5"
                 sx={{
@@ -173,17 +177,17 @@ const CreateInvoiceForm = () => {
                 <DatePicker
                   sx={{
                     width: "100%",
-
                     "& fieldset": {
-                      border: "1px solid #D5D9E2",
+                      border: "1px solid rgba(0, 0, 0, 0.23)",
                       borderRadius: "7px",
                     },
                   }}
+                  className="input-date-picker"
                 />
               </LocalizationProvider>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <Box
                 className="border border-radius"
                 sx={{
@@ -241,7 +245,7 @@ const CreateInvoiceForm = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <Box
                 className="border border-radius"
                 sx={{
@@ -401,6 +405,10 @@ const CreateInvoiceForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -433,6 +441,10 @@ const CreateInvoiceForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -464,6 +476,10 @@ const CreateInvoiceForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -635,6 +651,10 @@ const CreateInvoiceForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>
@@ -680,6 +700,10 @@ const CreateInvoiceForm = () => {
                           "& .MuiInputBase-root:hover::before": {
                             border: "none",
                           },
+                          "& .MuiInputBase-root:hover:hover:not(.Mui-disabled, .Mui-error)::before":
+                            {
+                              border: "none",
+                            },
                         }}
                       />
                     </FormControl>

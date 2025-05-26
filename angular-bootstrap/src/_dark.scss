@@ -16,6 +16,9 @@
     }
 
     // Color
+    &.body-bg-color {
+        background-color: #0C1427;
+    }
     .bg-white {
         background-color: #0C1427 !important;
     }
@@ -86,6 +89,9 @@
                     }
                 }
             }
+        }
+        &.style-two {
+            background-color: #0A0E19;
         }
     }
     .card {
@@ -197,6 +203,9 @@
             line, circle {
                 stroke: var(--borderColor);
             }
+        }
+        .apexcharts-radialbar-hollow {
+            fill: #000000;
         }
     }
 
@@ -316,29 +325,10 @@
                 .trezo-card {
                     .trezo-card-content {
                         .tab-pane {
-                            .form-group {
-                                .icon {
-                                    .icon-inner {
-                                        background-color: #15203c;
-                                    }
-                                }
-                            }
-                            .items-list {
-                                .item {
-                                    button {
-                                        background-color: #15203c;
-                                    }
-                                }
-                            }
                             .range-slider {
-                                .range-group {
+                                .number-group {
                                     input {
-                                        &::-webkit-slider-runnable-track {
-                                            background-color: #15203c;
-                                        }
-                                        &::-moz-range-track {
-                                            background-color: #15203c;
-                                        }
+                                        color: var(--whiteColor);
                                     }
                                 }
                             }
@@ -362,11 +352,6 @@
                             background-color: #0a0e19;
     
                             .trezo-card-content {
-                                .team-members-list {
-                                    .item {
-                                        background-color: #0c1427;
-                                    }
-                                }
                                 .uploaded-files-list {
                                     .item {
                                         button {
@@ -462,6 +447,10 @@
                 .NgxEditor__Dropdown--DropdownMenu {
                     .NgxEditor__Dropdown--Item {
                         color: var(--whiteColor);
+
+                        &:hover {
+                            background-color: #000000;
+                        }
                     }
                 }
             }
@@ -522,7 +511,6 @@
         }
         &.style-two {
             border-color: var(--primaryColor) !important;
-            background-color: #0a0e19 !important;
         }
     }
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import * as XLSX from 'xlsx';
+import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-downloadable-table',
@@ -10,6 +11,10 @@ import * as XLSX from 'xlsx';
     styleUrl: './downloadable-table.component.scss'
 })
 export class DownloadableTableComponent {
+
+    constructor(
+        public themeService: CustomizerSettingsService
+    ) {}
 
     // Download Table as PDF
     downloadPDF() {

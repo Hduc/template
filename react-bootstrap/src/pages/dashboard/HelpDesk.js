@@ -68,11 +68,11 @@ const HelpDesk = () => {
       </Row>
 
       <Row className="justify-content-center">
-        <Col xs={12} md={12} lg={12} xl={8} xxl={8}>
+        <Col xs={12} md={12} lg={12} xl={12} xxl={8}>
           <ToDoList />
         </Col>
 
-        <Col xs={12} md={12} lg={12} xl={4} xxl={4}>
+        <Col xs={12} md={12} lg={12} xl={12} xxl={4}>
           <SupportOverview />
         </Col>
       </Row>

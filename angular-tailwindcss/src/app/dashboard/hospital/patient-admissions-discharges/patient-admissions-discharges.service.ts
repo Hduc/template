@@ -24,7 +24,7 @@ export class PatientAdmissionsDischargesService {
                     series: series,
                     chart: {
                         type: "area",
-                        height: 338,
+                        height: 339,
                         zoom: {
                             enabled: false
                         },

@@ -477,7 +477,7 @@ const OrdersTable = () => {
                             alt="Product"
                             width={40}
                             height={40}
-                            style={{ borderRadius: "7px" }}
+                            style={{ borderRadius: "50%" }}
                           />
                         </Box>
 

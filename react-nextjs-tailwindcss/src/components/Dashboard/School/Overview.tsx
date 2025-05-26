@@ -19,7 +19,7 @@ const Overview: React.FC = () => {
       <div className="trezo-card mb-[25px]">
         <div className="trezo-card-content lg:flex justify-between items-center">
           <div>
-            <h5 className="mb-[6px] md:mb-[3px] font-semibold text-[20px]">
+            <h5 className="!mb-[6px] md:!mb-[3px] !font-semibold !text-[20px]">
               School Overview Dashboard
             </h5>
             <p>Manage Students, Teachers, and School Data Seamlessly!</p>

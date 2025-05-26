@@ -1,0 +1,57 @@
+<mat-card
+    class="customer-visits-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Customer Visits
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="content position-relative z-1 d-flex justify-content-between">
+            <div>
+                <div class="icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="ri-user-fill"></i>
+                </div>
+                <span class="sub-title d-block">
+                    Walk-In Customers
+                </span>
+                <h3>
+                    1.5K
+                </h3>
+                <span class="trezo-badge shipped">
+                    +7%
+                </span>
+            </div>
+            <div class="text-end">
+                <div class="icon ms-auto rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="ri-user-add-fill"></i>
+                </div>
+                <span class="sub-title d-block">
+                    Repeat Customers
+                </span>
+                <h3>
+                    2.1K
+                </h3>
+                <span class="trezo-badge cancelled">
+                    -1.4%
+                </span>
+            </div>
+            <div class="light text-primary rounded-circle d-flex align-items-center justify-content-center">
+                <i class="ri-flashlight-line"></i>
+            </div>
+        </div>
+        <mat-progress-bar mode="determinate" value="32"></mat-progress-bar>
+        <div class="d-flex align-items-center justify-content-between">
+            <span class="d-block text-xs">
+                32%
+            </span>
+            <span class="d-block text-xs">
+                64%
+            </span>
+        </div>
+    </mat-card-content>
+</mat-card>

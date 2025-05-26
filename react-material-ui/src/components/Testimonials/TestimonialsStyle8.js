@@ -61,7 +61,7 @@ const TestimonialsStyle8 = () => {
           spacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
         >
           {testimonials.map((testimonial) => (
-            <Grid item xs={12} sm={12} md={6} lg={4} xl={4} key={testimonial.id}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 4, xl: 4 }} key={testimonial.id}>
               <Box
                 className="testimonial-item"
                 sx={{

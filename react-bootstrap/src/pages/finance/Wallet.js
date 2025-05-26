@@ -1,10 +1,11 @@
 import React from "react";
 import { Row, Col, Breadcrumb } from "react-bootstrap"; 
 import TotalIncome from "../../components/Finance/Wallet/TotalIncome";
-import TotalExpenses from "../../components/Finance/Wallet/TotalExpenses";
-import Static from "../../components/Dashboard/Finance/Static";
-import TransactionHistory from "../../components/Dashboard/Finance/TransactionHistory";
+import TotalExpenses from "../../components/Finance/Wallet/TotalExpenses"; 
+import TransactionHistory from "../../components/Finance/Wallet/TransactionHistory";
 import DebitCard from "../../components/Finance/Wallet/DebitCard";
+import TotalBalance from "../../components/Finance/Wallet/TotalBalance";
+import Static from "../../components/Finance/Wallet/Static";
 
 const Wallet = () => {
   return (
@@ -34,10 +35,7 @@ const Wallet = () => {
         <Col lg={4}>
           <Row>
             <Col sm={12} md={4} lg={12}>
-              <div style={{ marginBottom: "60px" }}>
-                <span className="d-block mb-1">Accounts Receivable</span>
-                <h4 className="fs-20 mb-0">$15,990</h4>
-              </div>
+              <TotalBalance />
             </Col>
 
             <Col sm={6} md={4} lg={12}>

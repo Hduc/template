@@ -124,14 +124,14 @@ const TotalEmployees: React.FC = () => {
             </div>
             <div>
               <span className="block">Total Employees</span>
-              <h5 className="mb-0 mt-[2px] text-[20px] font-semibold">
+              <h5 className="!mb-0 !mt-[2px] !text-[20px] !font-semibold">
                 15,720
               </h5>
             </div>
           </div>
 
           <div className="mt-[32px] flex items-center gap-[7px]">
-            <div className="bg-success-100 text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-[18px]">
+            <div className="bg-success-100 dark:bg-[#15203c] text-success-700 rounded-[4px] w-[26px] h-[26px] flex items-center justify-center text-lg">
               <i className="ri-arrow-right-up-line"></i>
             </div>
             <div className="text-gray-600 dark:text-gray-400">

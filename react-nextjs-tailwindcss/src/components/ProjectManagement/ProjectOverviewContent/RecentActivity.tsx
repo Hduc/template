@@ -54,7 +54,7 @@ const RecentActivity: React.FC = () => {
   return (
     <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
-        <h5 className="mb-0">Recent Activity</h5>
+        <h5 className="!mb-0">Recent Activity</h5>
       </div>
 
       <div className="trezo-card-content pt-[10px] pb-[25px]">

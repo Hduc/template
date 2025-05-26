@@ -107,7 +107,7 @@ const AllNft: React.FC = () => {
       >
         <div className="lg:flex justify-between mb-[20px] md:mb-[30px] lg:mb-[50px] lg:px-[7px]">
           <div>
-            <h3 className="text-white text-xl md:text-2xl mb-[5px]">
+            <h3 className="!text-white !text-xl md:!text-2xl !mb-[5px]">
               Manage Your NFT From One Place
             </h3>
             <p className="text-gray-300">

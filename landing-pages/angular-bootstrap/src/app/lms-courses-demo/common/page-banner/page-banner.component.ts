@@ -1,0 +1,19 @@
+import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { ToggleService } from '../../../settings/toggle.service';
+
+@Component({
+    selector: 'app-page-banner',
+    imports: [RouterLink],
+    templateUrl: './page-banner.component.html',
+    styleUrl: './page-banner.component.scss'
+})
+export class PageBannerComponent {
+
+    constructor(
+        public toggleService: ToggleService
+    ) {}
+
+    @Input() pageTitle: string = '';
+
+}

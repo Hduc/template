@@ -40,7 +40,12 @@ const StandaloneRadioButtons: React.FC = () => {
             value="a"
             name="radio-buttons"
             inputProps={{ "aria-label": "A" }}
-            className="dark-radio"
+            sx={{
+              color: "primary.500",
+              "&.Mui-checked": {
+                color: "primary.main",
+              },
+            }}
           />
           <Radio
             checked={selectedValue === "b"}
@@ -48,7 +53,12 @@ const StandaloneRadioButtons: React.FC = () => {
             value="b"
             name="radio-buttons"
             inputProps={{ "aria-label": "B" }}
-            className="dark-radio"
+            sx={{
+              color: "primary.500",
+              "&.Mui-checked": {
+                color: "primary.main",
+              },
+            }}
           />
         </Box>
       </Card>

@@ -16,35 +16,35 @@ export default function Page() {
       <Welcome />
 
       <Grid container columnSpacing={{ xs: 3 }} justifyContent={"center"}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <TotalEmployees />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <ResignedEmployees />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <NewEmployees />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 8, xl: 8 }}>
           <EmployeeAttendanceTrends />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 4, xl: 4 }}>
           <EmployeeWorkFormat />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <EmployeeSalary />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <EmployeeLeaveRequest />
         </Grid>
       </Grid>

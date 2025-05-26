@@ -148,7 +148,7 @@ const AgentAvgEarnings: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0 font-semibold">Agent Avg. Earnings</h5>
+            <h5 className="!mb-0 !font-semibold">Agent Avg. Earnings</h5>
           </div>
 
           <div className="trezo-card-subtitle">
@@ -240,7 +240,7 @@ const AgentAvgEarnings: React.FC = () => {
                 />
               </div>
               <div>
-                <h5 className="mb-px text-2xl leading-none font-semibold">
+                <h5 className="!mb-px !text-2xl !leading-none !font-semibold">
                   $2,534
                 </h5>
                 <span className="block">Last month earning</span>

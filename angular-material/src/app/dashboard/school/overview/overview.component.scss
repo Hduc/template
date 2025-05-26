@@ -26,11 +26,19 @@
             }
         }
     }
-    &.component-card-borderd {
+    &.component-card-borderd, &.component-body-bg-color {
         border-width: 0 !important;
     }
-    &.component-card-with-box-shadow {
+    &.component-card-with-box-shadow, &.component-body-bg-color {
         box-shadow: unset !important;
+    }
+    &.component-dark-theme {
+        .mat-mdc-card-content {
+            .date-btn {
+                border-color: #15203c;
+                background-color: #15203c;
+            }
+        }
     }
 }
 

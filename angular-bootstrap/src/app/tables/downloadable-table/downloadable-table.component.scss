@@ -15,3 +15,12 @@
         }
     }
 }
+.component-dark-theme {
+    .buttons-list {
+        .btn {
+            &.btn-outline-dark {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}

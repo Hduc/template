@@ -108,6 +108,9 @@ textarea {
         padding-left: 5px;
     }
 }
+.bg-f6f7f9 {
+    background-color: #f6f7f9;
+}
 .month-select {
     width: 114px;
     height: 36px;
@@ -128,6 +131,53 @@ textarea {
     }
     &.w-99 {
         width: 105px;
+    }
+}
+.select-dropdown {
+    .dropdown-toggle {
+        padding: 6.5px 14px;
+        padding-right: 28px;
+        position: relative;
+
+        &::after {
+            border: 0;
+            background-image: url(/images/down2.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &.bg-gray-100 {
+            border-color: $gray-100 !important;
+            padding: 6.5px 21px;
+            padding-right: 35px;
+            &::after {
+                right: 15px;
+            }
+            &.after-opacity {
+                &::after {
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+    .dropdown-item {
+        &:active {
+            color: $white !important;
+        }
+    }
+    &.without-border {
+        .dropdown-toggle {
+            padding: 0;
+            border: 0 !important;
+            &::after {
+                right: 0;
+            }
+        }
     }
 }
 .lcbmp-none {
@@ -173,7 +223,12 @@ textarea {
         color: #fff !important;
     }
 }
-
+.border-color-primary {
+    border-color: $primary !important;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
 .py-38 {
     padding-top: 38px !important;
     padding-bottom: 38px !important;
@@ -304,7 +359,7 @@ textarea {
     }
 }
 /* Max width 767px */
-@media only screen and (max-width : 767px) {
+@media only screen and (max-width: 767px) {
 
     #preloader {
         .preloader {
@@ -543,8 +598,6 @@ Custom Width Area Style
 .mw-740 {
     max-width: 740px;
 }
-
-/** New **/
 .max-h-198 {
     max-height: 198px;
     overflow-y: auto;
@@ -718,6 +771,9 @@ Custom Font Size Area Style
 /*
 Custom Padding & Margin Area Style
 ======================================================*/
+.mb-20 {
+    margin-bottom: 20px;
+}
 .mb-29 {
     margin-bottom: 29px;
 }
@@ -747,6 +803,9 @@ Custom Padding & Margin Area Style
 .ms-m-10 {
     margin-left: -10px;
 }
+.ms-10 {
+    margin-left: 10px;
+}
 .ms-e-10 {
     margin-right: -10px;
 }
@@ -766,10 +825,11 @@ Custom Padding & Margin Area Style
         margin-left: 0;
     }
 }
-
 .box-shadow {
     box-shadow: $box-shadow;
 }
+
+// new
 
 /*
 Line Height Area Style
@@ -1532,6 +1592,7 @@ Swiper Slider Style
             background-color: #f6f7f9;
             padding: 10px 30px; 
             color: $secondary; 
+            text-transform: capitalize;
 
             &.active {
                 background-color: $primary; 
@@ -1546,43 +1607,10 @@ Swiper Slider Style
 }
 
 .main-content:has(div.auth-main-content) { 
-    padding: 0;
+    padding: 0 !important;
 }
 .main-content:has(div.fp-wrapper) { 
     padding: 0;
-}
-
-// control-panel-modal
-.control-panel-modal {
-    position: fixed;
-    right: -100%; 
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 9999;
-    transition: .5s ease-in-out;
- 
-    &.show {
-        right: 0; 
-    }
-
-    .cpm-content {
-        width: 320px;
-        background-color: #fff;
-        height: 100%;
-        margin-left: auto; 
-        position: relative;
-        z-index: 20;
-    }
-    .btn-full-close {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-    }
 }
 
 .cryptocurrency-slider {
@@ -1634,23 +1662,6 @@ Swiper Slider Style
     .react-calendar {
         border: 1px solid $border-color;
         padding: 10px;
-    }
-}
-
-
-[dir="rtl"] {
-    .control-panel-modal {
-        right: auto; 
-        left: -100%; 
-    
-        &.show {
-            right: auto; 
-            left: 0; 
-        }
-        .cpm-content {
-            margin-left: 0; 
-            margin-right: auto; 
-        }
     }
 }
 
@@ -1897,6 +1908,327 @@ Swiper Slider Style
     }
 }
 
+.customer-join {
+    li {
+        &.item {
+            border: 2px solid $white;
+            border-radius: 50px;
+            box-shadow: 0px 4px 4px 0px rgba(101, 96, 240, 0.10);
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            margin-left: -15px;
+            background-color: $white;
+            &:first-child {
+                margin-left: 0;
+            }
+            &.p {
+                background-color: #59CBB7;
+            }
+            &.s {
+                background-color: $primary;
+            }
+        }
+        .name {
+            line-height: 37px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.16px;
+            color: $white;
+        }
+        &.count {
+            background-color: #F2F1F9;
+            .name {
+                color: #7A799B;
+            }
+        }
+    }
+}
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+.categories-tabs {
+    .nav-item {
+        .nav-link {
+            border-color: #ECEEF2;
+            &.active {
+                border-color: $primary;
+                span {
+                    .d-none {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.payment-method {
+    .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+        border-color:  $primary !important;
+        background-color: #ECF0FF !important;
+    }
+}
+
+/* Follow Button Style
+============================================*/
+.follow-button {
+    .followed {
+        transition: $transition;
+    }
+    &.followed {
+        background-color: $primary !important;
+        color: $white !important;
+    }
+}
+
+/* Audio player Style
+============================================*/
+.player-container {
+    .play-pause {
+        cursor: pointer;
+        text-indent: -999999px;
+        padding: 8px;
+        z-index: 2;
+        background-image: url(/images/play.png);
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    .pause {
+        background-image: url(/images/pause.png);
+    }
+    &.style-two {
+        .play-pause {
+            background-image: url(/images/play-white.png);
+            position: relative;
+            left: 2px;
+        }
+        .pause {
+            background-image: url(/images/pause-white.png);
+            position: relative;
+            left: 1px;
+            bottom: 1px;
+        }
+    }
+}
+
+.favorite-button {
+    .ri-heart-fill {
+        opacity: 0;
+    }
+    &.favorite-d {
+        .ri-heart-fill {
+            opacity: 1;
+        }
+    }
+    
+}
+
+.most-popular-tabs {
+    .nav-item {
+        .nav-link {
+            padding: 3.5px 12px;
+            
+            &.active {
+                background-color: $primary !important;
+                color: $white !important;
+            }
+        }
+    }
+}
+
+.doctor-cover-bg {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background-color: $white;
+        z-index: -1;
+    }
+    .avatar-upload .avatar-edit input + label:after {
+        display: none;
+    }
+}
+#play-pause {
+    i.ri-pause-fill.fs-18 {
+        font-size: 30px;
+    }
+    i.ri-play-fill.fs-18 {
+        font-size: 30px;
+        position: relative;
+        left: 2px;
+    }
+}
+.wave-container {
+    .wave-bar {
+        width: 2px;
+        height: 25px;
+        background-color: #C2CDFF;
+        margin-left: 2px;
+        animation: wave-animation 1s infinite ease-in-out;
+        animation-play-state: paused;
+    }
+    
+    .wave-bar:nth-child(odd) {
+        animation-delay: 0.2s;
+    }
+    
+    .wave-bar:nth-child(even) {
+        animation-delay: 0.4s;
+    }
+    
+    @keyframes wave-animation {
+        0%, 100% {
+            transform: scaleY(1);
+        }
+        50% {
+            transform: scaleY(2);
+        }
+    }
+
+}
+.audio-player-for-wave {
+    .ri-pause-fill {
+        left: 0 !important;
+    }
+}
+.mastering-digital-marketing-slide {
+    .swiper-pagination {
+        text-align: right;
+        position: absolute;
+        top: 0 !important; 
+        right: 0 !important;
+        display: block;
+        padding: 20px 30px;
+        z-index: 0;
+        height: 30px;
+        z-index: 9;
+    
+        .swiper-pagination-bullet {
+            background-color: #8695AA;
+            width: 10px;
+            height: 3px;
+            border-radius: 4px;
+            transition: $transition;
+            opacity: 1;
+    
+            &.swiper-pagination-bullet-active {
+                background-color: $border-color;
+                width: 30px;
+            }
+        }
+    }
+}
+
+[dir="rtl"] {
+    .mastering-digital-marketing-slide {
+        .swiper-pagination {
+            text-align: left;
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+.call-overview-tabs {
+    .calls-card {
+        &.bg-primary {
+            &.active {
+                background-color: $primary !important; 
+                .text-body.d-block {
+                    color: $border-color !important;
+                }
+                h3.text-secondary {
+                    color: $white !important;
+                }
+                span.d-flex.align-items-center.align-items-center.text-body {
+                    color: $white !important;
+                    span {
+                        color: $white !important;
+                    }
+                    .material-symbols-outlined {
+                        color: $white !important;
+                    }
+                }
+                img {
+                    filter: brightness(100);
+                }
+            }
+        }
+        &.bg-primary-divs {
+            &.active {
+                background-color: $primary-div-50 !important;
+                .text-body.d-block {
+                    color: $border-color !important;
+                }
+                h3.text-secondary {
+                    color: $white !important;
+                }
+                span.d-flex.align-items-center.align-items-center.text-body {
+                    color: $white !important;
+                    span {
+                        color: $white !important;
+                    }
+                    .material-symbols-outlined {
+                        color: $white !important;
+                    }
+                }
+                img {
+                    filter: brightness(100);
+                }
+            }
+        }
+        &.bg-dangers {
+            &.active {
+                background-color: $danger-50 !important;
+                .text-body.d-block {
+                    color: $border-color !important;
+                }
+                h3.text-secondary {
+                    color: $white !important;
+                }
+                span.d-flex.align-items-center.align-items-center.text-body {
+                    color: $white !important;
+                    span {
+                        color: $white !important;
+                    }
+                    .material-symbols-outlined {
+                        color: $white !important;
+                    }
+                }
+                img {
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+    
+}
+
+.search-overlay {
+    display: none;
+    .form-control {
+        font-size: 12px;
+        height: 40px;
+        &::placeholder {
+            font-size: 12px;
+        }
+    }
+}
+.close-btn {
+    display: none !important;
+    &.active {
+        display: block !important;
+        background-color: $danger !important;
+        color: $white !important;
+    }
+}
+
 // call-center
 .bg-ecf0ff {
     background-color: #ecf0ff;
@@ -1932,7 +2264,7 @@ Swiper Slider Style
 
 
 /* Max width 767px */
-@media only screen and (max-width : 767px) {
+@media only screen and (max-width: 767px) {
 
     .p-4 {
         padding: 15px !important;
@@ -1984,7 +2316,7 @@ Swiper Slider Style
 }
 
 /* Min width 768px to Max width 992px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
     .p-4 {
         padding: 20px !important;
@@ -1995,7 +2327,7 @@ Swiper Slider Style
 }
 
 /* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
 
     .mw-123 {
         max-width: 98px;
@@ -2017,7 +2349,7 @@ Swiper Slider Style
 }
 
 /* Min width 1200px to Max width 1399px */
-@media only screen and (min-width : 1200px) and (max-width : 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
     
     .p-4 {
         padding: 20px !important;
@@ -2049,7 +2381,7 @@ Swiper Slider Style
 }
 
 /* Min width 1400px to Max width 1799px */
-@media only screen and (min-width : 1400px) and (max-width : 1799px) {
+@media only screen and (min-width: 1400px) and (max-width: 1799px) {
     .py-38 {
         padding-top: 30px !important;
         padding-bottom: 30px !important;
@@ -2101,7 +2433,7 @@ Swiper Slider Style
     }
 }
 
-@media only screen and (min-width : 1920px) {
+@media only screen and (min-width: 1920px) {
     .custom-xxxl-10 {
         flex: 0 0 auto;
         width: 77%;
@@ -2116,3 +2448,589 @@ Swiper Slider Style
         display: none;
     }
 }
+
+// Social media dashboard
+.-right-10 {
+    right: -10px;
+}
+
+[dir="rtl"] {
+    .-right-10 {
+        right: auto;
+        left: -10px;
+    }
+}
+// End Social media dashboard
+
+// Beauty salon dashboard
+.text-000 {
+    color: #000 !important;
+}
+.bsts-products-slide {
+    .swiper-button-prev, .swiper-button-next {
+        background-color: $primary;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+
+        &::after {
+            font-size: 18px;
+        }
+        &.swiper-button-disabled {
+            cursor: auto;
+            pointer-events: auto;
+        }
+    }
+}
+.ra-calendar {
+    .react-calendar__month-view__days {
+        .react-calendar__tile {
+            background-color: #E6EFF2;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            height: 50px;
+        }
+    }
+}
+
+.dark { 
+    .ra-calendar {
+        .react-calendar__month-view__days {
+            .react-calendar__tile {
+                background-color: #000; 
+                border: 2px solid #333; 
+            }
+        }
+    }
+}
+
+.bs-rs-appointments {
+    padding-left: 11px;
+    padding-right: 5px;
+
+    .bs-rs-appointments-list {
+        border-left: 1px dashed #D5D9E2;
+        padding-left: 37px;
+
+        .verifyIcon {
+            left: -37px !important;
+        }
+    }
+}
+
+[dir="rtl"] {
+    .bs-rs-appointments {
+        padding-left: 5px;
+        padding-right: 11px;
+    
+        .bs-rs-appointments-list { 
+            padding-left: 0;
+            padding-right: 37px;
+            border-left: none;
+            border-right: 1px dashed #D5D9E2;
+    
+            .verifyIcon {
+                left: auto !important;
+                right: -60px !important;
+            }
+        }
+    }
+}
+
+
+
+// Resoinsive
+@media only screen and (max-width: 767px) {
+    .default-table-area {
+        &.campaigns-table {
+            &.style-two {
+                &.bs-top-customers {
+                    .table-responsive {
+                        .table {
+                            width: 940px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+    .default-table-area {
+        &.campaigns-table {
+            &.style-two {
+                &.bs-top-customers {
+                    .table-responsive {
+                        .table {
+                            width: 940px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Beauty salon dashboard
+
+// Dctor dashboard
+.pr-5 {
+    padding-right: 5px;
+}
+.doctor-welcome-card {
+    padding-left: 105px;
+    padding-right: 80px;
+}
+.doctor-main-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.pd-text-content {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 19px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+    ul, ol {
+        margin-bottom: 0;
+        margin-top: 15px;
+        padding-left: 17px;
+
+        li {
+            line-height: 1.8;
+            margin-bottom: 5px;
+
+            &::marker {
+                color: $primary;
+                font-size: 18px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.-po-left-26 {
+    left: -26px !important;
+}
+.recent-appointment-notify {
+    border-left: 1px dashed #D5D9E2;
+    padding-left: 26px,
+}
+
+.dark {
+    .doctor-cover-bg {
+        &::before {
+            background-color: #000;
+        }
+    }
+}
+ 
+[dir="rtl"] {
+    .pr-5 {
+        padding-right: 0;
+        padding-left: 5px;
+    }
+    .pd-text-content {
+        ul, ol {
+            padding-left: 0;
+            padding-right: 17px;
+        }
+    }
+    .-po-left-26 {
+        left: 0 !important;
+        right: -50px !important;
+    }
+    .recent-appointment-notify {
+        border-left: none;
+        border-right: 1px dashed #D5D9E2;
+        padding-left: 0;
+        padding-right: 26px;
+    }
+}
+
+// Resoinsive
+@media only screen and (min-width: 992px) { 
+    .default-table-area {
+        &.campaigns-table {
+            &.latest-transaction-table {
+                &.doctor-patients-table {
+                    .table-responsive {
+                        .table {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   
+
+@media only screen and (max-width: 1199px) {
+    .doctor-welcome-card {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .doctor-main-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 25px !important;
+    }
+}
+
+ 
+@media only screen and (min-width: 1200px) and (max-width: 1399px)  {
+    .doctor-welcome-card { 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .doctor-main-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 25px !important;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px)  {
+    .doctor-welcome-card { 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .doctor-main-wrapper {
+        padding-left: 30px;
+        padding-right: 30px; 
+    }
+}
+// End Dctor dashboard
+
+// Restaurant dashboard
+  
+// End Restaurant dashboard
+
+
+// Hotel dashboard
+.p-25 {
+    padding: 25px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.default-table-area {
+    &.upcoming-vip-reservations-table {
+        &.style-two {
+            .table-responsive {
+                .table {
+                    thead {
+                        tr {
+                            th {
+                                padding-bottom: 9px;
+                                padding-left: 21px;
+                                padding-right: 21px;
+                                &:first-child {
+                                    padding-left: 0 !important;
+                                }
+                                &:last-child {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                                padding-left: 21px;
+                                padding-right: 21px;
+                                &:first-child {
+                                    padding-left: 0 !important;
+                                }
+                                &:last-child {
+                                    padding-right: 0 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.popular-rooms-slide {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+            height: 5px;
+
+            &.swiper-pagination-bullet-active {
+                width: 20px;
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+// Resoinsive
+@media only screen and (max-width: 767px) { 
+    .default-table-area {
+        &.upcoming-vip-reservations-table {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 693px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)  {
+    .default-table-area {
+        &.upcoming-vip-reservations-table {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        tbody {
+                            tr {
+                                td {
+                                    padding-left: 13px;
+                                    padding-right: 13px;
+
+                                    .fs-14 {
+                                        font-size: 12px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End hotel dashboard
+
+// Real Estate Agent dashboard
+.welcome-real-estate-agent {
+    padding: 10px 25px 70px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.welcome-card-wrap {
+    margin-top: -90px;
+}
+.my-featured-listings-slide {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+            height: 5px;
+
+            &.swiper-pagination-bullet-active {
+                width: 20px;
+                background-color: $primary;
+            }
+        }
+    }
+}
+.rea-app-btn {
+    padding: 7px 17.5px;
+    margin-bottom: 31px;
+    display: inline-block;
+    border-radius: .375rem;
+    color: $white !important;
+    background-color: #1a5710;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #25b003;
+        color: $white;
+    }
+}
+.rea-client-ratings-slide {
+    .swiper-pagination {
+        position: initial;
+        margin-top: 10px;
+
+        .swiper-pagination-bullet {
+            border-radius: 30px;
+            height: 5px;
+
+            &.swiper-pagination-bullet-active {
+                width: 20px;
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+// Resoinsive
+@media only screen and (max-width: 767px) { 
+    .welcome-real-estate-agent {
+        padding: 0 0 70px;
+        text-align: center;
+
+        .fs-32 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+    .welcome-real-estate-agent {
+        text-align: center;
+    }
+}
+// End Estate Agent dashboard
+
+// Credit card dashboard
+
+// Resoinsive
+@media only screen and (max-width: 767px) { 
+    .cc-recent-transactions {
+        .table {
+            width: 767px;
+        }
+    }
+} 
+
+// End Credit card dashboard
+
+// Crypto Trader dashboard
+.default-table-area {
+    &.ct-gainers-losers {
+        &.style-two {
+            .table-responsive {
+                .table {
+                    tbody {
+                        tr {
+                            td {
+                                padding-top: 11px;
+                                padding-bottom: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Resoinsive
+@media only screen and (max-width: 767px) { 
+    .default-table-area {
+        &.ct-recent-transactions2 {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 767px;
+                    }
+                }
+            }
+        }
+    }
+}
+// End Crypto Trader dashboard
+
+// Crypto Trader dashboard
+.default-table-area {
+    &.cp-transactions-history {
+        &.style-two {
+            .table-responsive {
+                .table {
+                    tbody {
+                        tr {
+                            td {
+                                padding-top: 12.5px;
+                                padding-bottom: 12.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Resoinsive
+@media only screen and (max-width: 767px) { 
+    .default-table-area {
+        &.cp-individual-asset-performance {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        width: 800px;
+
+                        thead {
+                            tr {
+                                th {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)  {
+    .default-table-area {
+        &.cp-individual-asset-performance {
+            &.style-two {
+                .table-responsive {
+                    .table {
+                        // width: 800px;
+
+                        thead {
+                            tr {
+                                th {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Crypto Trader dashboard

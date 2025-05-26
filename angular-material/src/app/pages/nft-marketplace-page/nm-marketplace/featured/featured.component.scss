@@ -1,9 +1,21 @@
 .featured-card {
     &.component-card-borderd {
         border-width: 0 !important;
+
+        .mat-mdc-card-content {
+            .nft-item {
+                border: 1px solid var(--borderColor) !important;
+            }
+        }
     }
     &.component-card-with-box-shadow {
         box-shadow: unset !important;
+
+        .mat-mdc-card-content {
+            .nft-item {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+            }
+        }
     }
     .nft-item {
         padding: 10px;
@@ -109,6 +121,31 @@
                             right: 0;
                         }
                     }
+                }
+            }
+        }
+    }
+    &.card-without-border-radius {
+        .mat-mdc-card-content {
+            .nft-item {
+                border-radius: 0 !important;
+            }
+        }
+    }
+    &.component-body-bg-color {
+        border-width: 0 !important;
+        box-shadow: unset !important;
+
+        .mat-mdc-card-content {
+            .nft-item {
+                box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05) !important;
+                border: 1px solid var(--borderColor) !important;
+            }
+        }
+        &.component-card-with-box-shadow {
+            .mat-mdc-card-content {
+                .nft-item {
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
                 }
             }
         }

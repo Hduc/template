@@ -82,6 +82,7 @@
                             .mat-mdc-form-field-infix {
                                 width: 194px;
                                 padding-left: 23px;
+                                margin-left: 10px;
                             }
                         }
                         .mat-date-range-input-wrapper {
@@ -156,8 +157,11 @@
                 box-shadow: unset !important;
             }
         }
-        &.component-card-borderd {
+        &.component-card-borderd, &.component-body-bg-color {
             border-width: 0 !important;
+        }
+        &.component-body-bg-color {
+            box-shadow: unset !important;
         }
     }
 }

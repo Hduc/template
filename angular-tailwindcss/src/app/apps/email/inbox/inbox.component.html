@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Inbox
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -25,7 +25,7 @@
 </div>
 
 <!-- Inbox -->
-<div class="lg:grid lg:grid-cols-3 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
     <div class="lg:col-span-1">
 
         <!-- Sidebar -->
@@ -33,7 +33,7 @@
 
     </div>
     <div class="lg:col-span-2">
-        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+        <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div class="trezo-card-header mb-[15px] md:mb-[20px] flex items-center justify-between">
                 <div class="trezo-card-subtitle flex items-center">
                     <div class="form-check relative top-[1px]">
@@ -148,7 +148,7 @@
 
                 <!-- Nav Links -->
                 <ul class="inbox-nav-links">
-                    <li class="inline-block ltr:mr-[35px] rtl:ml-[35px] ltr:last:mr-0 rtl:last:ml-0">
+                    <li class="inline-block ltr:mr-[38px] rtl:ml-[38px] ltr:last:mr-0 rtl:last:ml-0">
                         <a routerLink="/dashboard/apps/email" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="relative inline-block font-medium pb-[9px] md:pb-[14px] transition-all hover:text-primary-500">
                             <span class="inline-block relative ltr:pl-[27px] rtl:pr-[27px]">
                                 <i class="material-symbols-outlined !text-lg absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 -mt-px md:mt-0">
@@ -159,7 +159,7 @@
                             <span class="custom-border absolute left-0 right-0 bottom-0 h-[2px] bg-primary-500 transition-all"></span>
                         </a>
                     </li>
-                    <li class="inline-block ltr:mr-[35px] rtl:ml-[35px] ltr:last:mr-0 rtl:last:ml-0">
+                    <li class="inline-block ltr:mr-[38px] rtl:ml-[38px] ltr:last:mr-0 rtl:last:ml-0">
                         <a routerLink="/dashboard/apps/email/promotions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="relative inline-block font-medium pb-[9px] md:pb-[14px] transition-all hover:text-primary-500">
                             <span class="inline-block relative ltr:pl-[27px] rtl:pr-[27px]">
                                 <i class="material-symbols-outlined !text-lg absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 -mt-px md:mt-0">

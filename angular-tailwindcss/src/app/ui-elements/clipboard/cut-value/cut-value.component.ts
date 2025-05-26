@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CutValueComponent {
 
-    copyText: string = '#annual90conference2024'; // This is the value you want to bind to the input field
+    copyText: string = '#annual90conference2025'; // This is the value you want to bind to the input field
     copied: boolean = false; // Tracks if the text is cut
     buttonText: string = 'Cut'; // Button text
 

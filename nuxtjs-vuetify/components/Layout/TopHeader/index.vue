@@ -7,8 +7,24 @@
       { active: stateStoreInstance.open },
     ]"
   >
-    <div class="d-md-flex align-content-center flex-wrap justify-space-between">
+    <div
+      class="header-inner-area d-md-flex align-content-center flex-wrap justify-space-between"
+    >
       <div class="header-left-side d-flex align-items-center">
+        <div class="logo">
+          <RouterLink to="/dashboard" class="d-block text-decoration-none">
+            <v-img
+              class="logo-black"
+              src="@/assets/images/logo.svg"
+              alt="logo-icon"
+            />
+            <v-img
+              class="logo-white"
+              src="@/assets/images/logo-white.svg"
+              alt="logo-icon"
+            />
+          </RouterLink>
+        </div>
         <div
           :class="['burger-menu', { active: stateStoreInstance.open }]"
           @click="stateStoreInstance.onChange"
@@ -43,6 +59,7 @@
         </li>
       </ul>
     </div>
+    <LayoutTopHeaderNavbar />
   </header>
 </template>
 
@@ -499,7 +516,6 @@ export default defineComponent({
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-area {
-    position: inherit !important;
     margin-bottom: 25px;
     .header-left-side {
       .burger-menu {

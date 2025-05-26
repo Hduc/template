@@ -24,7 +24,7 @@ export class GrossRevenueService {
                     series: seriesData,
                     chart: {
                         type: "line",
-                        height: 348,
+                        height: 350,
                         toolbar: {
                             show: false
                         }

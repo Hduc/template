@@ -88,7 +88,7 @@ const OrderDetails: React.FC = () => {
     <div className="trezo-card bg-gray-50 dark:bg-[#0c1427] rounded-md border border-gray-100 dark:border-[#172036]">
       <div className="trezo-card-header py-[15px] px-[20px] md:px-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0 text-md md:text-[20px] font-medium">
+          <h5 className="!mb-0 !text-md md:!text-[20px] !font-medium">
             Order Details
           </h5>
         </div>
@@ -202,7 +202,7 @@ const OrderDetails: React.FC = () => {
         </div>
 
         {/* Payment method */}
-        <h4 className="font-medium mb-[15px] text-[20px] mt-[25px]">
+        <h4 className="!font-medium !mb-[15px] !text-[20px] !mt-[25px]">
           Payment Method
         </h4>
         <div className="payment-method flex items-center gap-[20px] md:gap-[25px]">

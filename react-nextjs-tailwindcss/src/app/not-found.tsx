@@ -17,7 +17,7 @@ export default function NotFound() {
                 width={400}
                 height={400}
               />
-              <h4 className="text-[19px] md:text-[21px] mt-[25px] md:mt-[33px] mb-[13px]">
+              <h4 className="!text-[19px] md:!text-[21px] !mt-[25px] md:!mt-[33px] !mb-[13px]">
                 Looks like we did not find this page, please try again later.
               </h4>
               <p>

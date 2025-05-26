@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
-import { EthereumRateService } from './ethereum-rate.service';
 import { NgClass } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { EthereumRateService } from './ethereum-rate.service';
 
 @Component({
     selector: 'app-ethereum-rate',
@@ -14,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 export class EthereumRateComponent {
 
     constructor(
-        public themeService: CustomizerSettingsService,
         private ethereumRateService: EthereumRateService
     ) {}
 

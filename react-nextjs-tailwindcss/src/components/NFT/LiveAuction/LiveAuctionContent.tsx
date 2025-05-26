@@ -315,7 +315,7 @@ const LiveAuctionContent: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header md:flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Live Auction</h5>
+            <h5 className="!mb-0">Live Auction</h5>
           </div>
 
           <div className="trezo-card-subtitle sm:flex items-center sm:gap-[25px] lg:gap-[35px] sm:mt-[15px] md:mt-0">
@@ -376,7 +376,7 @@ const LiveAuctionContent: React.FC = () => {
                   <div className="absolute left-[10px] right-[10px] bottom-[10px] text-center z-[1] p-[10px]">
                     <CountdownTimer initialTime={nft.duration} />
 
-                    <div className="absolute left-0 right-0 top-0 bottom-0 -z-[1] bg-white opacity-[.80] backdrop-blur-[12px]"></div>
+                    <div className="absolute left-0 right-0 top-0 bottom-0 -z-[1] bg-white opacity-[.80] backdrop-blur-[12px] dark:bg-dark"></div>
                   </div>
                 </div>
 
@@ -453,7 +453,7 @@ const LiveAuctionContent: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content">
           <div className="sm:flex sm:items-center justify-between">
-            <p className="mb-0">
+            <p className="!mb-0">
               Showing {indexOfFirstItem + 1} to{" "}
               {Math.min(indexOfLastItem, nfts.length)} of {nfts.length} results
             </p>

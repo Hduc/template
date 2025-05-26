@@ -44,7 +44,7 @@ const MyDrive: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">My Drive</h5>
+            <h5 className="!mb-0">My Drive</h5>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ const MyDrive: React.FC = () => {
                       {folder.icon}
                     </i>
                   </div>
-                  <h6 className="mb-0 text-[15px]">{folder.name}</h6>
+                  <h6 className="!mb-0 !text-[15px]">{folder.name}</h6>
                 </div>
                 <div className="mt-[20px] md:mt-[30px] lg:mt-[40px] flex items-center justify-between">
                   <div className="block text-black dark:text-white">

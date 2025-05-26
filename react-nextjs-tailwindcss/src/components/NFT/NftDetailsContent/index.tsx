@@ -112,7 +112,7 @@ const NftDetailsContent: React.FC = () => {
             <div className="trezo-card-content">
               <span className="block text-xs mb-[2px]">NFT ID: 35246</span>
 
-              <h2 className="text-lg md:text-xl mb-0">Christmas Eve</h2>
+              <h2 className="!text-lg md:!text-xl !mb-0">Christmas Eve</h2>
 
               <div className="h-[1px] bg-primary-50 dark:bg-[#172036] mt-[12px] mb-[15px]"></div>
 
@@ -198,7 +198,7 @@ const NftDetailsContent: React.FC = () => {
                 </div>
               </div>
 
-              <h3 className="text-lg mt-[20px] md:mt-[45px] mb-[12px]">
+              <h3 className="!text-lg !mt-[20px] md:!mt-[45px] !mb-[12px]">
                 Description
               </h3>
 
@@ -210,7 +210,7 @@ const NftDetailsContent: React.FC = () => {
                 can take in life.
               </p>
 
-              <h3 className="text-lg mt-[20px] md:mt-[45px] mb-[20px]">
+              <h3 className="!text-lg !mt-[20px] md:!mt-[45px] !mb-[20px]">
                 Product Description
               </h3>
               <div className="trezo-tabs" id="trezo-tabs">

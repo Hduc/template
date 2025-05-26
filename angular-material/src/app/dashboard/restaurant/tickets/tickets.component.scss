@@ -1,0 +1,72 @@
+::ng-deep {
+    .tickets-card {
+        .mat-mdc-card-content {
+            margin-bottom: -11px;
+
+            .mat-mdc-table {
+                &.mdc-data-table__table {
+                    .mat-mdc-header-row {
+                        .mat-mdc-header-cell {
+                            padding-bottom: 11px;
+                        }
+                    }
+                    .mdc-data-table__content {
+                        .mat-mdc-row {
+                            .mat-mdc-cell {
+                                vertical-align: top;
+                                padding: {
+                                    top: 11px;
+                                    bottom: 11px;
+                                };
+                                .title {
+                                    font-size: var(--fontSize);
+                                    margin: {
+                                        bottom: 4px;
+                                        top: -1px;
+                                    };
+                                }
+                                .trezo-badge {
+                                    border-radius: 30px;
+                                    padding: 1px 10px;
+                                }
+                                .dot-menu {
+                                    font-size: 18px;
+                                    color: var(--bodyColor);
+                                }
+                            }
+                            &:first-child {
+                                .mat-mdc-cell {
+                                    border-top-width: 0;
+                                    padding-top: 0;
+                                }
+                            }
+                            &:last-child {
+                                .mat-mdc-cell {
+                                    border-bottom-width: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

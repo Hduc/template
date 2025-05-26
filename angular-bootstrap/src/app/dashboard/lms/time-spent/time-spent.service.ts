@@ -48,6 +48,9 @@ export class TimeSpentService {
                         show: true,
                         colors: ["transparent"]
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         categories: categories,
                         axisTicks: {

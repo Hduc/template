@@ -73,13 +73,13 @@ const RecentProperty: React.FC = () => {
   return (
     <>
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
-        <div className="trezo-card-header mb-[20px] flex items-center justify-between">
+        <div className="trezo-card-header mb-[15px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Recent Property</h5>
+            <h5 className="!mb-0">Recent Property</h5>
           </div>
         </div>
 
-        <div className="trezo-card-content" id="recentPropertySlides">
+        <div className="trezo-card-content" id="recentPropertiesSlides">
           <Swiper
             slidesPerView={1}
             pagination={{
@@ -101,7 +101,7 @@ const RecentProperty: React.FC = () => {
                 ></div>
 
                 <div className="flex items-center justify-between mb-[8px] mt-[15px]">
-                  <h3 className="text-lg mb-0 text-orange-500">
+                  <h3 className="!text-lg !mb-0 !text-orange-500">
                     {property.price}
                   </h3>
 

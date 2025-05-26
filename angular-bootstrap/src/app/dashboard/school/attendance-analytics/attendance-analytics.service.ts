@@ -49,6 +49,9 @@ export class AttendanceAnalyticsService {
                         strokeDashArray: 7,
                         borderColor: '#ECEEF2'
                     },
+                    fill: {
+                        opacity: 1
+                    },
                     xaxis: {
                         categories: categories,
                         axisTicks: {

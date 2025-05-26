@@ -112,7 +112,6 @@ export class OutboundCallsService {
                         }
                     }
                 };
-
                 this.chartInstance = new ApexCharts(document.querySelector('#outbound_calls_chart'), options);
                 this.chartInstance.render();
             } catch (error) {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EthereumRateService } from './ethereum-rate.service';
 import { NgClass } from '@angular/common';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-ethereum-rate',
@@ -11,7 +12,8 @@ import { NgClass } from '@angular/common';
 export class EthereumRateComponent {
 
     constructor(
-        private ethereumRateService: EthereumRateService
+        private ethereumRateService: EthereumRateService,
+        public themeService: CustomizerSettingsService
     ) {}
 
     activeTimeframe: string = '1y'; // Default active timeframe

@@ -30,7 +30,7 @@
                 <div class="title-header d-flex align-items-center ga-2">
                   <span class="material-symbols-outlined">dashboard</span>
                   <span class="title">Dashboard</span>
-                  <span class="badge rounded-circle">20</span>
+                  <span class="badge rounded-circle">30</span>
                   <i class="arrow-right ri-arrow-right-s-line"></i>
                 </div>
               </template>
@@ -152,6 +152,53 @@
                       class="sidemenu-link"
                     >
                       POS System
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/dashboard/podcast" class="sidemenu-link">
+                      Podcast
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/social-media"
+                      class="sidemenu-link"
+                    >
+                      Social Media
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/dashboard/doctor" class="sidemenu-link">
+                      Doctor
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/beauty-salon"
+                      class="sidemenu-link"
+                    >
+                      Beauty Salon
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/store-analysis"
+                      class="sidemenu-link"
+                    >
+                      Store Analysis
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/restaurant"
+                      class="sidemenu-link"
+                    >
+                      Restaurant
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/dashboard/hotel" class="sidemenu-link">
+                      Hotel
                       <span
                         class="trezo-badge d-inline-block position-relative"
                       >
@@ -160,8 +207,51 @@
                     </RouterLink>
                   </li>
                   <li class="sidemenu-item">
-                    <RouterLink to="/dashboard/podcast" class="sidemenu-link">
-                      Podcast
+                    <RouterLink
+                      to="/dashboard/real-estate-agent"
+                      class="sidemenu-link"
+                    >
+                      Real Estate Agent
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/credit-card"
+                      class="sidemenu-link"
+                    >
+                      Credit Card
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/crypto-trader"
+                      class="sidemenu-link"
+                    >
+                      Crypto Trader
+
+                      <span
+                        class="trezo-badge d-inline-block position-relative"
+                      >
+                        New
+                      </span>
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/dashboard/crypto-performance"
+                      class="sidemenu-link"
+                    >
+                      Crypto Perf
                       <span
                         class="trezo-badge d-inline-block position-relative"
                       >
@@ -825,6 +915,186 @@
                   <li class="sidemenu-item">
                     <RouterLink to="/finance/transaction" class="sidemenu-link">
                       Transaction
+                    </RouterLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">badge</span>
+                  <span class="title">Doctor</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/doctor/patients-list"
+                      class="sidemenu-link"
+                    >
+                      Patients List
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/doctor/add-patient" class="sidemenu-link">
+                      Add Patient
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/doctor/patient-details"
+                      class="sidemenu-link"
+                    >
+                      Patient Details
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/doctor/appointments" class="sidemenu-link">
+                      Appointments
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/doctor/prescriptions"
+                      class="sidemenu-link"
+                    >
+                      Prescriptions
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/doctor/write-prescription"
+                      class="sidemenu-link"
+                    >
+                      Write a Prescription
+                    </RouterLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">lunch_dining</span>
+                  <span class="title">Restaurant</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <RouterLink to="/restaurant/menus" class="sidemenu-link">
+                      Menus
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/restaurant/dish-details"
+                      class="sidemenu-link"
+                    >
+                      Dish Details
+                    </RouterLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">hotel</span>
+                  <span class="title">Hotel</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <RouterLink to="/hotel/rooms-list" class="sidemenu-link">
+                      Rooms List
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/hotel/room-details" class="sidemenu-link">
+                      Room Details
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink to="/hotel/guests-list" class="sidemenu-link">
+                      Guests List
+                    </RouterLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">location_away</span>
+                  <span class="title">Real Estate Agent</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/real-estate-agent/properties"
+                      class="sidemenu-link"
+                    >
+                      Properties
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/real-estate-agent/property-details"
+                      class="sidemenu-link"
+                    >
+                      Property Details
+                    </RouterLink>
+                  </li>
+                </ul>
+              </template>
+            </AccordionItem>
+            <AccordionItem>
+              <template v-slot:accordion-trigger>
+                <div class="title-header d-flex align-items-center ga-2">
+                  <span class="material-symbols-outlined">paid</span>
+                  <span class="title">Crypto Trader</span>
+                  <i class="arrow-right ri-arrow-right-s-line"></i>
+                </div>
+              </template>
+
+              <template v-slot:accordion-content>
+                <ul class="sidebar-sub-menu">
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/crypto-trader/transactions"
+                      class="sidemenu-link"
+                    >
+                      Transactions
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/crypto-trader/gainers-losers"
+                      class="sidemenu-link"
+                    >
+                      Gainers & Losers
+                    </RouterLink>
+                  </li>
+                  <li class="sidemenu-item">
+                    <RouterLink
+                      to="/crypto-trader/wallet-crypto"
+                      class="sidemenu-link"
+                    >
+                      Wallet
                     </RouterLink>
                   </li>
                 </ul>

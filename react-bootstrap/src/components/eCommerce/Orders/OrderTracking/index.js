@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 const OrderTracking = () => {
   return (
     <>
-      <Card className="bg-white border-0 rounded-3 mb-4">
+      <Card className="bg-white border-0 rounded-3 mb-4 z-0">
         <Card.Body className="p-4">
           <div className="d-flex justify-content-between flex-wrap gap-2">
             <div>

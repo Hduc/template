@@ -3,16 +3,14 @@
 "use client";
 
 import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import CloseIcon from "@mui/icons-material/Close";
-import { Box, Tooltip, Button } from "@mui/material";
+import { Tooltip, Button } from "@mui/material";
 import RTLMode from "./RTLMode";
 import DarkMode from "./DarkMode";
 import OnlySidebarDarkMode from "./OnlySidebarDarkMode";
 import OnlyHeaderDarkMode from "./OnlyHeaderDarkMode";
+import CompactSidebar from "./CompactSidebar";
+import HorizontalLayout from "./HorizontalLayout";
 
 const ControlPanel: React.FC = () => {
   const [isControlPanel, setControlPanel] = useState<boolean>(false);
@@ -32,64 +30,66 @@ const ControlPanel: React.FC = () => {
             height: "30px",
             p: 0,
           }}
+          className="t-settings-btn"
         >
           <i className="material-symbols-outlined text-body">settings</i>
         </IconButton>
       </Tooltip>
 
-      <div className={`control-panel-modal ${isControlPanel ? "show" : ""}`}>
-        <div className="control-panel-dialog">
-          <AppBar sx={{ position: "relative" }}>
-            <Toolbar
-              sx={{
-                gap: "10px",
-              }}
-            >
-              <IconButton
-                edge="start"
-                color="inherit"
-                onClick={handleToggleControlPanel}
-                aria-label="close"
-              >
-                <CloseIcon sx={{ color: "#fff !important" }} />
-              </IconButton>
+      <div
+        className={`settings-sidebar bg-white transition ${
+          isControlPanel ? "active" : ""
+        }`}
+      >
+        <div className="settings-header bg-primary">
+          <h4 className="text-white">Theme Settings</h4>
+          <button
+            className="close-btn text-white"
+            type="button"
+            onClick={handleToggleControlPanel}
+          >
+            <i className="material-symbols-outlined">close</i>
+          </button>
+        </div>
 
-              <Typography
-                sx={{ flex: 1, color: "#fff !important" }}
-                variant="h6"
-                component="div"
-              >
-                Control Panel
-              </Typography>
-            </Toolbar>
-          </AppBar>
+        <div className="settings-body">
+          <RTLMode />
 
-          <Box p={3} className="control-panel-content">
-            <RTLMode />
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
 
-            <DarkMode />
+          <DarkMode />
 
-            <OnlySidebarDarkMode />
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
 
-            <OnlyHeaderDarkMode />
-          </Box>
+          <HorizontalLayout />
+          
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
 
-          <div className="control-panel-footer">
+          <CompactSidebar />
+
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
+
+          <OnlySidebarDarkMode />
+
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
+
+          <OnlyHeaderDarkMode />
+
+          <div className="border-bottom" style={{ margin: "15px 0" }}></div>
+
+          <a href="https://1.envato.market/QyqV6P" target="_blank">
             <Button
-              onClick={handleToggleControlPanel}
               variant="contained"
-              color="error"
+              color="primary"
               sx={{
                 textTransform: "capitalize",
                 color: "#fff !important",
               }}
             >
-              Cancel
+              Buy Trezo
             </Button>
-          </div>
+          </a>
         </div>
-
-        <div className="close-modal" onClick={handleToggleControlPanel}></div>
       </div>
     </>
   );

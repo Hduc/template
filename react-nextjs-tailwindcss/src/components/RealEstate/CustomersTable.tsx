@@ -471,7 +471,7 @@ const CustomersTable: React.FC = () => {
 
           {totalPages > 1 && (
             <div className="px-[20px] md:px-[25px] pt-[12px] md:pt-[14px] sm:flex sm:items-center justify-between">
-              <p className="mb-0 text-sm">Showing 8 of 36 results</p>
+              <p className="!mb-0 !text-sm">Showing 8 of 36 results</p>
 
               <ol className="mt-[10px] sm:mt-0">
                 <li className="inline-block mx-[2px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
@@ -539,7 +539,7 @@ const CustomersTable: React.FC = () => {
               <div className="trezo-card w-full bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
                 <div className="trezo-card-header bg-gray-50 dark:bg-[#15203c] mb-[20px] md:mb-[25px] flex items-center justify-between -mx-[20px] md:-mx-[25px] -mt-[20px] md:-mt-[25px] p-[20px] md:p-[25px] rounded-t-md">
                   <div className="trezo-card-title">
-                    <h5 className="mb-0">Add New Customer</h5>
+                    <h5 className="!mb-0">Add New Customer</h5>
                   </div>
 
                   <div className="trezo-card-subtitle">

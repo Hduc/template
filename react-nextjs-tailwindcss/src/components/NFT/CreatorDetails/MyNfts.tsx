@@ -251,7 +251,7 @@ const MyNfts: React.FC = () => {
       <div className="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Angela’s NFTs</h5>
+            <h5 className="!mb-0">Angela’s NFTs</h5>
           </div>
         </div>
 
@@ -347,7 +347,7 @@ const MyNfts: React.FC = () => {
               </div>
 
               <div className="pt-[10px] sm:flex sm:items-center justify-between">
-                <p className="mb-0 text-sm">
+                <p className="!mb-0 !text-sm">
                   Showing {indexOfFirstItem + 1}-
                   {Math.min(indexOfLastItem, filteredNfts.length)} of{" "}
                   {filteredNfts.length} results

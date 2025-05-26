@@ -91,7 +91,7 @@ const TablesOfContent: React.FC = () => {
           columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
           spacing={{ xs: 3, sm: 3, md: 3, lg: 3 }}
         >
-          <Grid item xs={12} md={7} lg={7} xl={7}>
+          <Grid size={{ xs: 12, sm: 12, md: 7, lg: 7, xl: 7 }}>
             <Accordion
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}
@@ -1026,7 +1026,7 @@ const TablesOfContent: React.FC = () => {
             </Accordion>
           </Grid>
 
-          <Grid item xs={12} md={5} lg={5} xl={5}>
+          <Grid size={{ xs: 12, sm: 12, md: 5, lg: 5, xl: 5 }}>
             <Box
               className="bg-primary"
               sx={{

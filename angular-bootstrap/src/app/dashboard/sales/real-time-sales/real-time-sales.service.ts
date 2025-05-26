@@ -74,6 +74,9 @@ export class RealTimeSalesService {
                     colors: [
                         "#3584FC"
                     ],
+                    fill: {
+                        opacity: 1
+                    },
                     yaxis: {
                         // tickAmount: 5,
                         show: false,

@@ -361,7 +361,7 @@ const Categories: React.FC = () => {
     <div className="trezo-card mb-[25px]">
       <div className="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
         <div className="trezo-card-title">
-          <h5 className="mb-0 text-md md:text-[20px] font-medium">
+          <h5 className="!mb-0 !text-md md:!text-[20px] !font-medium">
             Categories
           </h5>
         </div>
@@ -423,7 +423,7 @@ const Categories: React.FC = () => {
                   />
                 </Link>
                 <div className="mt-[18px]">
-                  <h4 className="font-medium text-lg md:text-[20px] mb-[4px]">
+                  <h4 className="!font-medium !text-lg md:!text-[20px] !mb-[4px]">
                     <Link
                       href={product.viewLink}
                       className="transition-all hover:text-primary-500"
@@ -455,7 +455,7 @@ const Categories: React.FC = () => {
             <div className="trezo-card bg-white dark:bg-[#0c1427] border border-gray-100 dark:border-[#172036] p-[20px] md:p-[25px] mt-[25px] rounded-md">
               <div className="trezo-card-content">
                 <div className="sm:flex sm:items-center justify-between">
-                  <p className="mb-0">
+                  <p className="!mb-0">
                     Showing {indexOfFirstItem + 1} to{" "}
                     {Math.min(indexOfLastItem, currentCategory.products.length)}{" "}
                     of {currentCategory.products.length} results

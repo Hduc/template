@@ -123,7 +123,7 @@ const FeaturedNFTArtworks: React.FC = () => {
       <div className="trezo-card mb-[25px]">
         <div className="trezo-card-header mb-[20px] flex items-center justify-between">
           <div className="trezo-card-title">
-            <h5 className="mb-0">Featured NFT Artworks</h5>
+            <h5 className="!mb-0">Featured NFT Artworks</h5>
           </div>
           <div className="trezo-card-subtitle">
             <Link

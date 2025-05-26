@@ -10,6 +10,7 @@ import { NgxEditorModule, Editor, Toolbar } from 'ngx-editor';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FileUploadModule } from '@iplab/ngx-file-upload';
+import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
     selector: 'app-e-create-product',
@@ -32,7 +33,10 @@ export class ECreateProductComponent {
         ['align_left', 'align_center', 'align_right', 'align_justify'],
     ];
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+    constructor(
+        public themeService: CustomizerSettingsService,
+        @Inject(PLATFORM_ID) private platformId: Object
+    ) {}
 
     ngOnInit(): void {
         if (isPlatformBrowser(this.platformId)) {

@@ -1,0 +1,248 @@
+<mat-card
+    class="client-ratings-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mb-0">
+                Client Ratings
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button mat-button [matMenuTriggerFor]="cardHeaderMenu" class="card-header-menu bg-gray border-none d-inline-block border-radius">
+                Top Rated
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <ul class="p-0 mt-0 mb-0 list-unstyled">
+                    <li>
+                        <button mat-menu-item>
+                            Top
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            Latest
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            Oldest
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            2 star
+                        </button>
+                    </li>
+                    <li>
+                        <button mat-menu-item>
+                            1 star
+                        </button>
+                    </li>
+                </ul>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <owl-carousel-o [options]="clientRatingsSlides">
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-primary-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user72.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                David Carlen
+                            </h6>
+                            <span class="d-block text-xs">
+                                New Castle, United Kingdom
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “Working with William was an absolute pleasure. His market knowledge and attention to detail helped us sell our home quickly and at a great price.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="number text-body position-relative">
+                                5.0
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-orange-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user76.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                Zinia Anderson
+                            </h6>
+                            <span class="d-block text-xs">
+                                New Brunchwick, Canada
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “William’s professionalism and responsiveness set him apart from other agents. He listened, and delivered outstanding results.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                            <span class="number text-body position-relative">
+                                4.5
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-success-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user75.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                Walter White
+                            </h6>
+                            <span class="d-block text-xs">
+                                New York, USA
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “Thanks to William, I felt confident every step of the way during my first home purchase. His friendly demeanor and expert advice helped us.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="number text-body position-relative">
+                                4.0
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-primary-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user72.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                David Carlen
+                            </h6>
+                            <span class="d-block text-xs">
+                                New Castle, United Kingdom
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “Working with William was an absolute pleasure. His market knowledge and attention to detail helped us sell our home quickly and at a great price.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span class="number text-body position-relative">
+                                5.0
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-orange-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user76.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                Zinia Anderson
+                            </h6>
+                            <span class="d-block text-xs">
+                                New Brunchwick, Canada
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “William’s professionalism and responsiveness set him apart from other agents. He listened, and delivered outstanding results.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                            <span class="number text-body position-relative">
+                                4.5
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="item border-radius bg-success-50">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="images/users/user75.jpg" class="rounded-circle" alt="user-image">
+                        <div>
+                            <h6 class="fw-semibold">
+                                Walter White
+                            </h6>
+                            <span class="d-block text-xs">
+                                New York, USA
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-black">
+                        “Thanks to William, I felt confident every step of the way during my first home purchase. His friendly demeanor and expert advice helped us.”
+                    </p>
+                    <div class="info d-flex align-items-center justify-content-between">
+                        <div class="ratings lh-1 d-flex align-items-center">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                            <span class="number text-body position-relative">
+                                4.0
+                            </span>
+                        </div>
+                        <div class="icon text-white lh-1">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </mat-card-content>
+</mat-card>

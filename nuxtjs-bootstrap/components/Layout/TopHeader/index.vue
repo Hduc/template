@@ -5,12 +5,26 @@
       { sticky: isSticky },
     ]"
   >
-    <div class="row align-items-center">
+    <div class="row align-items-center header-inner-area">
       <div class="col-lg-4 col-sm-6">
         <div class="left-header-content">
           <ul
             class="d-flex align-items-center ps-0 mb-0 list-unstyled justify-content-center justify-content-sm-start"
           >
+            <li class="logo">
+              <NuxtLink to="/dashboard" class="d-block text-decoration-none">
+                <img
+                  class="logo-black"
+                  src="@/assets/images/logo.svg"
+                  alt="logo-icon"
+                />
+                <img
+                  class="logo-white"
+                  src="@/assets/images/logo-white.svg"
+                  alt="logo-icon"
+                />
+              </NuxtLink>
+            </li>
             <li>
               <button
                 class="header-burger-menu bg-transparent p-0 border-0"
@@ -60,6 +74,8 @@
         </div>
       </div>
     </div>
+
+    <LayoutTopHeaderNavbar />
   </header>
 </template>
 

@@ -1,8 +1,8 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
-import { NgxEditorModule, Editor, Toolbar } from 'ngx-editor';
+import { MatCardModule } from '@angular/material/card';
 import { isPlatformBrowser, NgIf } from '@angular/common';
+import { NgxEditorModule, Editor, Toolbar } from 'ngx-editor';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
     selector: 'app-editors',

@@ -21,7 +21,7 @@ export class TotalSalesService {
                     series,
                     chart: {
                         type: "area",
-                        height: 365,
+                        height: 364,
                         zoom: {
                             enabled: false
                         }

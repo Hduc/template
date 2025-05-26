@@ -1,4 +1,4 @@
-.sales-welcome-card {
+.hospital-welcome-card {
     --primaryColor: #4936F5;
 
     .mat-mdc-card-content {
@@ -12,7 +12,7 @@
                 }
             }
             .info {
-                margin-top: 68px;
+                margin-top: 80px;
 
                 .item {
                     margin-right: 30px;
@@ -106,7 +106,7 @@
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
-    .sales-welcome-card {
+    .hospital-welcome-card {
         .mat-mdc-card-content {
             .content {
                 h3 {
@@ -149,7 +149,7 @@
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width : 576px) and (max-width : 767px) {
 
-    .sales-welcome-card {
+    .hospital-welcome-card {
         .mat-mdc-card-content {
             .content {
                 .info {

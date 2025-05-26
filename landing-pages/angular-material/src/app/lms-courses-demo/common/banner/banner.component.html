@@ -1,0 +1,97 @@
+<div
+    class="banner-area position-relative z-1"
+    [class.component-dark]="toggleService.isLandingDark()"
+    [class.component-rtl]="toggleService.isLandingRtlEnabled()"
+>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-xl-5">
+                <div class="banner-content position-relative">
+                    <div class="sub-title d-inline-block">
+                        <span class="d-inline-block position-relative">
+                            <i class="material-symbols-outlined">
+                                book_ribbon
+                            </i>
+                            Learn anytime, Anywhere
+                        </span>
+                    </div>
+                    <h1 class="fw-bold">
+                        Unlock Your <span>Potential</span> with Online Learning
+                    </h1>
+                    <p>
+                        Discover expertly designed courses, flexible learning paths, and a community that supports your goals — all in one powerful platform.
+                    </p>
+                    <div class="btn-box">
+                        <a routerLink="/lms-courses-demo/courses" class="lms-default-btn" mat-button>
+                            <i class="material-symbols-outlined">
+                                school
+                            </i>
+                            Explore Courses
+                        </a>
+                        <a routerLink="/lms-courses-demo/why-choose-us" class="link-btn d-inline-block position-relative fw-medium rounded-0 p-0" mat-button>
+                            Learn More <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-7">
+                <div class="banner-image">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="course-item position-relative">
+                                <a routerLink="/lms-courses-demo/course-details" class="image d-block">
+                                    <img src="images/lms-courses/courses/course1.jpg" alt="course-image">
+                                </a>
+                                <div class="content">
+                                    <h3 class="fw-semibold">
+                                        <a routerLink="/lms-courses-demo/course-details">
+                                            Full-Stack Web Development
+                                        </a>
+                                    </h3>
+                                    <div class="ratings d-flex align-items-center lh-1">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                        <span class="d-block position-relative">
+                                            4.8 (1,240 ratings)
+                                        </span>
+                                    </div>
+                                    <div class="price lh-1 fw-semibold">
+                                        $79
+                                    </div>
+                                    <ul class="info p-0 mb-0 list-unstyled">
+                                        <li class="d-inline-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                book_ribbon
+                                            </i>
+                                            45 Lessons
+                                        </li>
+                                        <li class="d-inline-block position-relative">
+                                            <i class="material-symbols-outlined">
+                                                group
+                                            </i>
+                                            8,500+ Enrolled
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="ribbon">
+                                    Featured
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="main-image text-center">
+                                <img src="images/lms-courses/woman.png" alt="banner-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape">
+        <img src="images/lms-courses/shapes/shape1.png" alt="shape">
+    </div>
+</div>

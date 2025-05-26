@@ -201,7 +201,7 @@ const UpTo50: React.FC = () => {
             };
 
             return (
-              <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={nft.id}>
+              <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }} key={nft.id}>
                 <Box
                   className="nft-card bg-white"
                   sx={{

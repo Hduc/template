@@ -20,108 +20,108 @@ export class CalendarComponent {
         weekends: true,
         events: [
             {
-                title: 'Annual Conference 2024',
-                date: '2024-09-01'
+                title: 'Annual Conference 2025',
+                date: '2025-04-01'
             },
             {
-                title: 'Product Lunch Webinar 2024 & Meet With Trezo Angular',
-                start: '2024-09-09',
-                end: '2024-09-10'
+                title: 'Product Lunch Webinar 2025 & Meet With Trezo Angular',
+                start: '2025-04-09',
+                end: '2025-04-10'
             },
             {
-                title: 'Tech Summit 2024',
-                date: '2024-09-14'
+                title: 'Tech Summit 2025',
+                date: '2025-04-14'
             },
             {
                 title: 'Web Development Seminar',
-                date: '2024-09-17'
+                date: '2025-04-17'
             },
             {
                 title: 'Meeting with UI/UX Designers',
-                date: '2024-09-26'
+                date: '2025-04-26'
             },
             {
                 title: 'Meeting with Developers',
-                date: '2024-09-30'
+                date: '2025-04-30'
             },
             {
-                title: 'Annual Conference 2024',
-                date: '2024-10-10'
+                title: 'Annual Conference 2025',
+                date: '2025-05-10'
             },
             {
-                title: 'Product Lunch Webinar 2024 & Meet With Trezo Angular',
-                start: '2024-10-14',
-                end: '2024-10-16'
+                title: 'Product Lunch Webinar 2025 & Meet With Trezo Angular',
+                start: '2025-05-14',
+                end: '2025-05-16'
             },
             {
-                title: 'Tech Summit 2024',
-                date: '2024-10-24'
-            },
-            {
-                title: 'Meeting with UI/UX Designers',
-                date: '2024-10-26'
-            },
-            {
-                title: 'Web Development Seminar',
-                date: '2024-10-28'
-            },
-            {
-                title: 'Annual Conference 2024',
-                date: '2024-11-21'
-            },
-            {
-                title: 'Product Lunch Webinar 2024 & Meet With Trezo Angular',
-                start: '2024-11-05',
-                end: '2024-11-08'
-            },
-            {
-                title: 'Tech Summit 2024',
-                date: '2024-11-14'
-            },
-            {
-                title: 'Web Development Seminar',
-                date: '2024-11-17'
+                title: 'Tech Summit 2025',
+                date: '2025-05-24'
             },
             {
                 title: 'Meeting with UI/UX Designers',
-                date: '2024-11-26'
+                date: '2025-05-26'
+            },
+            {
+                title: 'Web Development Seminar',
+                date: '2025-05-28'
+            },
+            {
+                title: 'Annual Conference 2025',
+                date: '2025-06-21'
+            },
+            {
+                title: 'Product Lunch Webinar 2025 & Meet With Trezo Angular',
+                start: '2025-06-05',
+                end: '2025-06-08'
+            },
+            {
+                title: 'Tech Summit 2025',
+                date: '2025-06-14'
+            },
+            {
+                title: 'Web Development Seminar',
+                date: '2025-06-17'
+            },
+            {
+                title: 'Meeting with UI/UX Designers',
+                date: '2025-06-26'
             },
             {
                 title: 'Meeting with Developers',
-                date: '2024-11-30'
+                date: '2025-06-30'
             },
             {
-                title: 'Annual Conference 2024',
-                date: '2024-12-05'
+                title: 'Annual Conference 2025',
+                date: '2025-07-05'
             },
             {
-                title: 'Product Lunch Webinar 2024 & Meet With Trezo Angular',
-                start: '2024-12-09',
-                end: '2024-12-11'
+                title: 'Product Lunch Webinar 2025 & Meet With Trezo Angular',
+                start: '2025-07-09',
+                end: '2025-07-11'
             },
             {
-                title: 'Tech Summit 2024',
-                date: '2024-12-20'
+                title: 'Tech Summit 2025',
+                date: '2025-07-20'
             },
             {
                 title: 'Meeting with UI/UX Designers',
-                date: '2024-12-26'
+                date: '2025-07-26'
             },
             {
                 title: 'Web Development Seminar',
-                date: '2024-12-29'
+                date: '2025-07-29'
             },
             {
                 title: 'Web Development Seminar',
-                date: '2025-02-10'
+                date: '2025-08-10'
             },
             {
                 title: 'Web Development Seminar',
-                date: '2025-02-15'
+                date: '2025-08-15'
             },
             {
                 title: 'Web Development Seminar',
-                date: '2025-02-20'
+                date: '2025-09-20'
             }
         ],
         plugins: [dayGridPlugin]

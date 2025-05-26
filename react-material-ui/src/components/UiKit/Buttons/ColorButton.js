@@ -35,7 +35,7 @@ const ColorButton = () => {
           }}
         >
           <Button color="secondary">Secondary</Button>
-          <Button variant="contained" color="success" sx={{ color: "#fff" }}>
+          <Button variant="contained" color="success" sx={{ color: "#fff !important" }}>
             Success
           </Button>
           <Button variant="outlined" color="error">

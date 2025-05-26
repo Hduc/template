@@ -245,7 +245,7 @@ const EventsGrid = () => {
     <>
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
         {currentData.map((event) => (
-          <Grid item xs={12} sm={6} lg={4} xl={3} key={event.id}>
+          <Grid size={{ xs: 12, sm: 6, md: 6, lg: 4, xl: 3 }} key={event.id}>
             <Card
               sx={{
                 boxShadow: "none",
@@ -417,12 +417,12 @@ const EventsGrid = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <Button
               key={index}
-              className="border text-body"
+              className="border"
               onClick={() => setCurrentPage(index + 1)}
               sx={{
                 bgcolor: currentPage === index + 1 ? "primary.main" : "inherit",
                 color:
-                  currentPage === index + 1 ? "white !important" : "inherit",
+                  currentPage === index + 1 ? "white !important" : "text-body",
                 minWidth: "30px",
                 height: "30px",
                 "&:hover": {

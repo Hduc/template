@@ -1,13 +1,13 @@
-import { Component, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { NgIf } from '@angular/common';
-import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { RouterLink } from '@angular/router';
+import { Component, ViewChild } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { SelectionModel } from '@angular/cdk/collections';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CustomizerSettingsService } from '../../../customizer-settings/customizer-settings.service';
 
 @Component({
@@ -67,7 +67,7 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
     {
         projectName: 'Web Development',
-        deadline: '10 Jan 2024',
+        deadline: '10 Jan 2025',
         status: {
             completed: true,
             inProgress: false,
@@ -77,7 +77,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'UX/UI Design',
-        deadline: '05 Feb 2024',
+        deadline: '05 Feb 2025',
         status: {
             completed: false,
             inProgress: true,
@@ -87,7 +87,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'React Development',
-        deadline: '28 Mar 2024',
+        deadline: '28 Mar 2025',
         status: {
             completed: false,
             inProgress: false,
@@ -97,7 +97,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'Python Research',
-        deadline: '09 Mar 2024',
+        deadline: '09 Mar 2025',
         status: {
             completed: false,
             inProgress: false,
@@ -107,7 +107,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'Python Research',
-        deadline: '09 Mar 2024',
+        deadline: '09 Mar 2025',
         status: {
             completed: false,
             inProgress: false,
@@ -117,7 +117,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'React Development',
-        deadline: '28 Mar 2024',
+        deadline: '28 Mar 2025',
         status: {
             completed: false,
             inProgress: false,
@@ -127,7 +127,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'UX/UI Design',
-        deadline: '05 Feb 2024',
+        deadline: '05 Feb 2025',
         status: {
             completed: false,
             inProgress: true,
@@ -137,7 +137,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     },
     {
         projectName: 'Web Development',
-        deadline: '10 Jan 2024',
+        deadline: '10 Jan 2025',
         status: {
             completed: true,
             inProgress: false,

@@ -8,7 +8,7 @@ const ScheduleAppointment: React.FC = () => {
     <>
       <div className="trezo-card bg-purple-700 mb-[25px] p-[20px] md:p-[25px] rounded-md">
         <div className="trezo-card-content text-center">
-          <h3 className="text-[20px] md:text-xl mb-[9px] text-white font-semibold">
+          <h3 className="!text-[20px] md:!text-xl !mb-[9px] !text-white !font-semibold">
             Schedule Appointment
           </h3>
 

@@ -3,12 +3,7 @@
     <div class="v-card-header mb-4">
       <h5 class="mb-0">Responsive Breakpoints</h5>
     </div>
-    <CCarousel
-      v-bind="settings"
-      :autoplay="5000"
-      :wrap-around="true"
-      :breakpoints="breakpoints"
-    >
+    <CCarousel v-bind="config">
       <CSlide v-for="slide in items" :key="slide.id">
         <v-img :src="slide.image" class="border-radius" alt="course-image" />
       </CSlide>
@@ -33,12 +28,33 @@ import image6 from "~/assets/images/gallery/gallery3.jpg";
 
 export default defineComponent({
   name: "ResponsiveBreakpointsControl",
-  data: () => ({
-    settings: {
+  setup() {
+    const config = {
       itemsToShow: 1,
-      snapAlign: "center",
-    },
-    items: [
+      autoplay: 3000,
+      wrapAround: true,
+      pauseAutoplayOnHover: true,
+      breakpoints: {
+        0: {
+          itemsToShow: 1,
+          snapAlign: "start",
+        },
+        576: {
+          itemsToShow: 2,
+          snapAlign: "center",
+        },
+        768: {
+          itemsToShow: 3,
+          snapAlign: "center",
+        },
+        1200: {
+          itemsToShow: 4,
+          snapAlign: "start",
+        },
+      },
+    };
+
+    const items = [
       {
         id: 1,
         image: image1,
@@ -63,25 +79,12 @@ export default defineComponent({
         id: 6,
         image: image6,
       },
-    ],
-    breakpoints: {
-      0: {
-        itemsToShow: 1,
-        snapAlign: "start",
-      },
-      576: {
-        itemsToShow: 2,
-        snapAlign: "center",
-      },
-      768: {
-        itemsToShow: 3,
-        snapAlign: "center",
-      },
-      1200: {
-        itemsToShow: 4,
-        snapAlign: "start",
-      },
-    },
-  }),
+    ];
+
+    return {
+      config,
+      items,
+    };
+  },
 });
 </script>

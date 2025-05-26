@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <>
       <div className="mb-[25px] md:flex items-center justify-between">
-        <h5 className="mb-0">Starter</h5>
+        <h5 className="!mb-0">Starter</h5>
 
         <ol className="breadcrumb mt-[12px] md:mt-0">
           <li className="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -40,7 +40,7 @@ export default function Page() {
             height={538}
           />
 
-          <h4 className="md:max-w-[550px] mx-auto leading-[1.5] mt-[25px] md:mt-[38px] mb-[20px] md:mb-[30px] text-[19px] md:text-[21px]">
+          <h4 className="md:!max-w-[550px] !mx-auto !leading-[1.5] !mt-[25px] md:!mt-[38px] !mb-[20px] md:!mb-[30px] !text-[19px] md:!text-[21px]">
             Create something beautiful, like a masterpiece or a really good
             sandwich.
           </h4>

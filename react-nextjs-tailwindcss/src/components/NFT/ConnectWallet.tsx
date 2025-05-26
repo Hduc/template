@@ -73,7 +73,7 @@ const ConnectWallet: React.FC = () => {
                 height={54}
               />
 
-              <h3 className="text-lg mb-[12px] mt-[18px]">{wallet.name}</h3>
+              <h3 className="!text-lg !mb-[12px] !mt-[18px]">{wallet.name}</h3>
 
               <p className="text-gray-400 mx-auto md:max-w-[285px] leading-[1.6] mb-[20px]">
                 {wallet.description}

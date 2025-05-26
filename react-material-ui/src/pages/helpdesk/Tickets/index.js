@@ -27,19 +27,19 @@ const Tickets = () => {
       </div>
 
       <Grid container columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}>
-        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }}>
           <TicketsResolved />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }}>
           <TicketsInProgress />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }}>
           <TicketsDue />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3, lg: 3, xl: 3 }}>
           <TicketsNewOpen />
         </Grid>
       </Grid>

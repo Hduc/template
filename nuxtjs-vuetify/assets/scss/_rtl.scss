@@ -4070,6 +4070,1409 @@
       }
     }
   }
+  .doctor-welcome-card {
+    .shape {
+      transform: scaleX(-1);
+      right: auto;
+      left: 0;
+    }
+    .star {
+      transform: scaleX(-1);
+      right: auto;
+      left: 85px;
+    }
+  }
+  .my-recent-patients-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                .action-dropdown-menu {
+                  .dropdown-menu {
+                    right: auto;
+                    left: 0;
+                  }
+                }
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-lab-reports-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bs-welcome-card {
+    .trezo-card-content {
+      .content {
+        margin: {
+          right: 0;
+          left: -15px;
+        }
+        &::before {
+          right: -15px;
+          left: auto;
+        }
+      }
+    }
+  }
+  .new-customers-card {
+    .trezo-card-content {
+      .customers-list {
+        img {
+          margin: {
+            right: 0;
+            left: -20px;
+          }
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+        div {
+          margin: {
+            right: 0;
+            left: -20px;
+          }
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .top-selling-products-card {
+    .trezo-card-content {
+      .product-item {
+        direction: rtl;
+      }
+    }
+  }
+  .recent-appointments-card {
+    .trezo-card-content {
+      margin: {
+        right: 0;
+        left: -28px !important;
+      }
+      .calendar {
+        margin: {
+          right: 0;
+          left: 25px;
+        }
+      }
+      .appointments-list {
+        margin: {
+          left: 0;
+          right: -25px;
+        }
+        .appointment-item {
+          direction: rtl;
+          margin: {
+            right: 25px;
+            left: 0;
+          }
+          .icon {
+            left: auto;
+            right: -39px;
+          }
+          &::before {
+            left: auto;
+            right: -28px;
+          }
+        }
+      }
+    }
+  }
+  .top-stylist-performance-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .top-customers-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .customer-visits-card {
+    .trezo-card-content {
+      .content {
+        .text-end {
+          text-align: end !important;
+
+          .ms-auto {
+            margin: {
+              left: 0 !important;
+              right: auto !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sa-top-selling-products-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-sales-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .stock-alerts-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .restaurant-welcome-card {
+    .trezo-card-content {
+      .content {
+        margin: {
+          right: 0;
+          left: -55px;
+        }
+        .stats {
+          .item {
+            padding: {
+              left: 0;
+              right: 33px;
+            }
+            i {
+              right: 0;
+              left: auto;
+            }
+          }
+        }
+      }
+      .image {
+        margin: {
+          right: auto;
+          left: 0;
+        }
+        padding: {
+          right: 0;
+          left: 22px;
+        }
+        .shape1 {
+          transform: scaleX(-1);
+          right: auto;
+          left: 0;
+        }
+        .shape2 {
+          transform: scaleX(-1);
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  .total-orders-card {
+    .trezo-card-content {
+      .chart {
+        right: auto;
+        left: -8px;
+      }
+    }
+  }
+  .pending-orders-card {
+    .trezo-card-content {
+      .chart {
+        right: auto;
+        left: -8px;
+      }
+    }
+  }
+  .revenue-card {
+    .trezo-card-content {
+      .chart {
+        right: auto;
+        left: -15px;
+      }
+    }
+  }
+  .expense-card {
+    .trezo-card-content {
+      .chart {
+        right: auto;
+        left: -8px;
+      }
+    }
+  }
+  .top-selling-items-card {
+    .trezo-card-content {
+      .item {
+        .rating {
+          right: auto;
+          left: 3px;
+        }
+      }
+    }
+  }
+  .staff-performance-scores-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .tickets-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .customer-ratings-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-orders-list-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .patients-list-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                .action-dropdown-menu {
+                  .dropdown-menu {
+                    right: auto;
+                    left: 0;
+                  }
+                }
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .patient-details-card {
+    .trezo-card-content {
+      ul {
+        li {
+          padding: {
+            left: 0;
+            right: 20px;
+          }
+          &::before {
+            left: auto;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  .todays-schedule-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            i {
+              transform: scaleX(-1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .todays-appointments-card {
+    .trezo-card-content {
+      .appointments-list {
+        padding: {
+          left: 0;
+          right: 40px;
+        }
+        .appointment-item {
+          .icon {
+            left: auto;
+            right: -40px;
+          }
+        }
+        &::before {
+          right: 12px;
+          left: auto;
+        }
+      }
+    }
+  }
+  .prescriptions-card {
+    .trezo-card-content {
+      .basic-table {
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 25px;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 25px;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 25px;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 25px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .note {
+        ul {
+          padding: {
+            left: 0;
+            right: 17px;
+          }
+        }
+      }
+      .signature {
+        padding: {
+          right: 0;
+          left: 25px;
+        }
+        margin: {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  .write-prescription-card {
+    .trezo-card-content {
+      .basic-table {
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 25px;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 25px;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 25px;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 25px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .menus-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .reviews-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .todays-schedule-card {
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            i {
+              transform: scaleX(-1);
+            }
+          }
+        }
+      }
+      .events-list {
+        .event-item {
+          direction: rtl;
+
+          .shape {
+            right: auto !important;
+            transform: scaleX(-1);
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .new-bookings-card {
+    .trezo-card-content {
+      .icon {
+        margin: {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  .check-in-card {
+    .trezo-card-content {
+      .icon {
+        margin: {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  .check-out-card {
+    .trezo-card-content {
+      .icon {
+        margin: {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+  .recent-bookings-card {
+    .v-card-header {
+      .menu-btn {
+        span {
+          padding: {
+            right: 0;
+            left: 23px;
+          }
+        }
+      }
+    }
+    .trezo-card-content {
+      .calendar {
+        .header {
+          button {
+            i {
+              transform: scaleX(-1);
+            }
+          }
+        }
+      }
+      .bookings-list {
+        .room-item {
+          direction: rtl;
+
+          .link-btn {
+            right: auto;
+            left: 0;
+
+            i {
+              transform: scaleX(-1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .upcoming-vip-reservations-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px !important;
+                    right: 0 !important;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px !important;
+                    left: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px !important;
+                    right: 0 !important;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px !important;
+                    left: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .popular-rooms-card {
+    .trezo-card-content {
+      .image {
+        .trezo-badge {
+          right: auto;
+          left: 10px;
+        }
+      }
+    }
+  }
+  .customer-reviews-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px;
+                    right: 0;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px;
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .re-agent-welcome-card {
+    .trezo-card-content {
+      .text-lg-end {
+        text-align: left !important;
+      }
+    }
+  }
+  .top-channels-card {
+    .trezo-card-content {
+      ul {
+        li {
+          .circle-progress-bar {
+            .percentage {
+              transform: translateY(-50%) translateX(-90%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-clients-card {
+    .trezo-card-content {
+      ul {
+        li {
+          .image {
+            padding: {
+              right: 0;
+              left: 2px;
+            }
+            .active-status {
+              right: auto;
+              left: 0;
+            }
+          }
+          .link-btn {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .my-featured-listings-card {
+    .trezo-card-content {
+      .image {
+        .trezo-badge {
+          right: 10px;
+          left: auto;
+        }
+      }
+      .content {
+        direction: rtl;
+
+        ul {
+          li {
+            padding: {
+              left: 0;
+              right: 23px;
+            }
+            i {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .latest-transactions-card {
+    .trezo-card-content {
+      .basic-table {
+        table,
+        .table {
+          thead {
+            tr {
+              th {
+                &:first-child {
+                  padding: {
+                    left: 20px !important;
+                    right: 0 !important;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px !important;
+                    left: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                &:first-child {
+                  padding: {
+                    left: 20px !important;
+                    right: 0 !important;
+                  }
+                }
+                &:last-child {
+                  padding: {
+                    right: 20px !important;
+                    left: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cards-with-amount-card {
+    .trezo-card-content {
+      .chart {
+        margin: {
+          left: 0;
+          right: -10px;
+        }
+      }
+    }
+  }
+  .daily-limit-card {
+    .trezo-card-content {
+      &:nth-child(2) {
+        .shape {
+          transform: scaleX(-1);
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  .quick-transfer-card {
+    .trezo-card-content {
+      form {
+        .form-group {
+          .send-btn {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .room-details-card {
+    .trezo-card-content {
+      .author-info {
+        ul {
+          li {
+            margin: {
+              right: 0;
+              left: 20px;
+            }
+            padding: {
+              left: 0;
+              right: 25px;
+            }
+            i {
+              left: auto;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .property-details-images-card {
+    .trezo-card-content {
+      .trezo-badge {
+        left: 15px;
+        right: auto;
+      }
+    }
+  }
+  .property-details-card {
+    .trezo-card-content {
+      .location {
+        padding: {
+          left: 0;
+          right: 23px;
+        }
+        i {
+          left: auto;
+          right: 0;
+        }
+      }
+      .info {
+        ul {
+          li {
+            margin: {
+              right: 0;
+              left: 20px;
+            }
+            padding: {
+              left: 0;
+              right: 24px;
+            }
+            i {
+              left: auto;
+              right: 0;
+            }
+            &:last-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .amenities-list {
+        .item {
+          padding: {
+            left: 0;
+            right: 22px;
+          }
+          i {
+            left: auto;
+            right: -3px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Max width 767px */
@@ -4872,6 +6275,956 @@
         }
       }
     }
+    .linkedin-net-followers-card {
+      .trezo-card-content {
+        .funfacts-list {
+          li {
+            margin: {
+              left: 15px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+    .facebook-campaign-card {
+      .trezo-card-content {
+        .title {
+          padding: {
+            left: 0;
+            right: 20px;
+          }
+        }
+        .chart {
+          padding-left: 0;
+
+          .items {
+            padding: {
+              left: 0;
+              right: 17px;
+            }
+          }
+        }
+      }
+    }
+    .my-recent-patients-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-lab-reports-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bs-welcome-card {
+      .trezo-card-content {
+        .content {
+          margin-left: 0;
+        }
+      }
+    }
+    .recent-appointments-card {
+      .trezo-card-content {
+        .calendar {
+          margin-left: 0;
+        }
+        .appointments-list {
+          margin: {
+            right: 0;
+            left: -17px !important;
+          }
+
+          .appointment-item {
+            margin: {
+              right: 17px;
+              left: 0;
+            }
+            .icon {
+              left: auto;
+              right: -28px;
+            }
+            &::before {
+              left: auto;
+              right: -17px;
+            }
+          }
+        }
+      }
+    }
+    .top-stylist-performance-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .top-customers-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sa-top-selling-products-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-sales-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .stock-alerts-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .restaurant-welcome-card {
+      .trezo-card-content {
+        .content {
+          margin-left: 0;
+        }
+        .image {
+          margin-left: auto;
+        }
+      }
+    }
+    .staff-performance-scores-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tickets-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .customer-ratings-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-orders-list-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .patients-list-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .prescriptions-card {
+      .trezo-card-content {
+        .basic-table {
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .signature {
+          padding: {
+            left: 0;
+          }
+          margin: {
+            right: 0;
+          }
+        }
+      }
+    }
+    .write-prescription-card {
+      .trezo-card-content {
+        .basic-table {
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      left: 17px;
+                      right: 17px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .menus-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .todays-schedule-card {
+      .trezo-card-content {
+        .events-list {
+          &::before {
+            margin: {
+              right: 0;
+              left: 17px;
+            }
+          }
+        }
+      }
+    }
+    .upcoming-vip-reservations-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .customer-reviews-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .latest-transactions-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 17px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 17px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 17px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -4979,6 +7332,919 @@
             .chart {
               left: 15px;
               right: auto !important;
+            }
+          }
+        }
+      }
+    }
+    .linkedin-net-followers-card {
+      .trezo-card-content {
+        .funfacts-list {
+          li {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .facebook-campaign-card {
+      .trezo-card-content {
+        .chart {
+          padding: {
+            right: 0;
+            left: 150px;
+          }
+          .items {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    .my-recent-patients-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-lab-reports-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-appointments-card {
+      .trezo-card-content {
+        .appointments-list {
+          margin: {
+            right: 0;
+            left: -20px !important;
+          }
+          .appointment-item {
+            margin: {
+              right: 20px;
+              left: 0;
+            }
+            .icon {
+              left: auto;
+              right: -31px;
+            }
+            &::before {
+              left: auto;
+              right: -20px;
+            }
+          }
+        }
+      }
+    }
+    .top-stylist-performance-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .top-customers-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sa-top-selling-products-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-sales-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .stock-alerts-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .staff-performance-scores-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .tickets-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .customer-ratings-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .recent-orders-list-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .patients-list-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .prescriptions-card {
+      .trezo-card-content {
+        .basic-table {
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 20px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 20px;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 20px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .write-prescription-card {
+      .trezo-card-content {
+        .basic-table {
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 20px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 20px;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 20px;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .menus-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .reviews-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .todays-schedule-card {
+      .trezo-card-content {
+        .events-list {
+          &::before {
+            margin: {
+              right: 0;
+              left: 20px;
+            }
+          }
+        }
+      }
+    }
+    .upcoming-vip-reservations-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px !important;
+                      right: 0 !important;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px !important;
+                      left: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .customer-reviews-card {
+      .trezo-card-content {
+        .basic-table {
+          table,
+          .table {
+            thead {
+              tr {
+                th {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-child {
+                    padding: {
+                      left: 20px;
+                      right: 0;
+                    }
+                  }
+                  &:last-child {
+                    padding: {
+                      right: 20px;
+                      left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .latest-transactions-card {
+      &.component-rtl-enabled {
+        .trezo-card-content {
+          .basic-table {
+            table,
+            .table {
+              thead {
+                tr {
+                  th {
+                    &:first-child {
+                      padding: {
+                        left: 20px !important;
+                        right: 0 !important;
+                      }
+                    }
+                    &:last-child {
+                      padding: {
+                        right: 20px !important;
+                        left: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+              tbody {
+                tr {
+                  td {
+                    &:first-child {
+                      padding: {
+                        left: 20px !important;
+                        right: 0 !important;
+                      }
+                    }
+                    &:last-child {
+                      padding: {
+                        right: 20px !important;
+                        left: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -5189,6 +8455,13 @@
               right: 0 !important;
             }
           }
+        }
+      }
+    }
+    .restaurant-welcome-card {
+      .trezo-card-content {
+        .content {
+          margin-left: 0;
         }
       }
     }
@@ -5633,6 +8906,26 @@
             left: 0 !important;
             right: 120px;
           }
+        }
+      }
+    }
+    .doctor-welcome-card {
+      padding: {
+        left: 80px;
+        right: 105px;
+      }
+    }
+    .bs-welcome-card {
+      .trezo-card-content {
+        .content {
+          margin-left: 0;
+        }
+      }
+    }
+    .restaurant-welcome-card {
+      .trezo-card-content {
+        .content {
+          margin-left: 0;
         }
       }
     }

@@ -15,7 +15,7 @@ export default function Page() {
             width={400}
             height={434}
           />
-          <h4 className="text-[19px] md:text-[21px] mt-[25px] md:mt-[33px] mb-[11px]">
+          <h4 className="!text-[19px] md:!text-[21px] !mt-[25px] md:!mt-[33px] !mb-[11px]">
             Looks like we have an internal error, please try again later.
           </h4>
           <p>

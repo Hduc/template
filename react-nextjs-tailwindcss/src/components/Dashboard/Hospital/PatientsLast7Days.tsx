@@ -114,9 +114,9 @@ const PatientsLast7Days: React.FC = () => {
         <div className="trezo-card-content pb-[81px]">
           <span className="block">Patients Last 7 Days</span>
           
-          <h3 className="mb-0 flex items-center font-medium text-xl mt-[11px]">
+          <h3 className="!mb-0 !flex !items-center !font-medium !text-xl !mt-[11px]">
             768
-            <span className="relative font-medium text-xs inline-block text-danger-700 bg-danger-200 border border-danger-300 py-[1.5px] ltr:pl-[22px] rtl:pr-[22px] ltr:pr-[10px] rtl:pl-[10px] rounded-full ltr:ml-[10px] rtl:mr-[10px]">
+            <span className="relative font-medium text-xs inline-block text-danger-700 bg-danger-200 dark:bg-[#15203c] border border-danger-300 dark:border-[#15203c] py-[1.5px] ltr:pl-[22px] rtl:pr-[22px] ltr:pr-[10px] rtl:pl-[10px] rounded-full ltr:ml-[10px] rtl:mr-[10px]">
               <i className="ri-arrow-down-fill absolute ltr:left-[6px] rtl:right-[6px] text-base top-1/2 -translate-y-1/2 mt-px"></i>
               3%
             </span>

@@ -370,7 +370,7 @@ const Courses: React.FC = () => {
                 ))}
                 {emptyRows > 0 && (
                   <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={9} />
+                    <TableCell className="border-bottom" colSpan={9} />
                   </TableRow>
                 )}
               </TableBody>

@@ -1,6 +1,6 @@
 <!-- Breadcrumb -->
 <div class="mb-[25px] md:flex items-center justify-between">
-    <h5 class="mb-0">
+    <h5 class="!mb-0">
         Compose
     </h5>
     <ol class="breadcrumb mt-[12px] md:mt-0">
@@ -25,25 +25,26 @@
 </div>
 
 <!-- Compose -->
-<div class="lg:grid lg:grid-cols-3 gap-[25px]">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
     <div class="lg:col-span-1">
 
         <!-- Sidebar -->
         <app-sidebar />
+
     </div>
     <div class="lg:col-span-2">
-        <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+        <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
             <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between border-b border-gray-100 dark:border-[#172036] pb-[15px] md:pb-[20px]">
                 <div class="trezo-card-title">
-                    <h5 class="mb-0 text-md font-semibold">
+                    <h5 class="!mb-0 !text-md !font-semibold">
                         New Message
                     </h5>
                 </div>
             </div>
             <div class="trezo-card-content">
                 <form>
-                    <div class="sm:grid sm:grid-cols-2 sm:gap-[25px]">
-                        <div class="mb-[20px] sm:mb-0">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[25px]">
+                        <div>
                             <label class="mb-[10px] text-black dark:text-white font-medium block">
                                 To
                             </label>
@@ -68,7 +69,7 @@
                                 </option>
                             </select>
                         </div>
-                        <div class="mb-[20px] sm:mb-0">
+                        <div>
                             <label class="mb-[10px] text-black dark:text-white font-medium block">
                                 Cc
                             </label>
@@ -93,7 +94,7 @@
                                 </option>
                             </select>
                         </div>
-                        <div class="mb-[20px] sm:mb-0">
+                        <div>
                             <label class="mb-[10px] text-black dark:text-white font-medium block">
                                 Bcc
                             </label>
@@ -118,13 +119,13 @@
                                 </option>
                             </select>
                         </div>
-                        <div class="mb-[20px] sm:mb-0">
+                        <div>
                             <label class="mb-[10px] text-black dark:text-white font-medium block">
                                 Subject
                             </label>
                             <input type="text" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="Write your subject...">
                         </div>
-                        <div class="sm:col-span-2 mb-[20px] sm:mb-0">
+                        <div class="sm:col-span-2">
                             <label class="mb-[10px] text-black dark:text-white font-medium block">
                                 Your Email
                             </label>

@@ -1,4 +1,7 @@
-<div class="total-expenses-card trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none">
+<div
+    class="total-expenses-card trezo-card mb-25 border-radius d-block bg-white border-0 shadow-none"
+    [class.component-dark-theme]="themeService.isDark()"
+>
     <div class="trezo-card-content">
         <div class="info d-flex justify-content-between">
             <div>

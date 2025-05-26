@@ -139,6 +139,19 @@
             }
         }
     }
+    &.component-dark-theme {
+        .trezo-card-content {
+            .list {
+                li {
+                    .members {
+                        div {
+                            border-color: #000000;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Max width 767px */

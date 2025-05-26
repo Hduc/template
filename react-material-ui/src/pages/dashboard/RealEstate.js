@@ -18,51 +18,51 @@ const RealEstate = () => {
   return (
     <>
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <Grid container columnSpacing={{ xs: 3 }}>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 12 }}>
               <ActiveTotalProperty />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={12}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 12 }}>
               <Revenue />
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <NewListingsVSSoldProperties />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }} justifyContent={"center"}>
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <PropertiesForSale />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <PropertiesForRent />
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 6, md: 6, lg: 6, xl: 4 }}>
           <NewCustomersThisMonth />
         </Grid>
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 4 }}>
           <MostSalesLocation />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 12, lg: 12, xl: 8 }}>
           <RentalIncome />
 
           <Grid container columnSpacing={{ xs: 3 }}>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <SocialSearch />
             </Grid>
 
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}>
               <RecentProperty />
             </Grid>
           </Grid>
@@ -70,11 +70,11 @@ const RealEstate = () => {
       </Grid>
 
       <Grid container columnSpacing={{ xs: 3 }}>
-        <Grid item xs={12} sm={12} md={7} lg={6} xl={8}>
+        <Grid size={{ xs: 12, sm: 12, md: 7, lg: 6, xl: 8 }}>
           <CustomerReviews />
         </Grid>
 
-        <Grid item xs={12} sm={12} md={5} lg={6} xl={4}>
+        <Grid size={{ xs: 12, sm: 12, md: 5, lg: 6, xl: 4 }}>
           <TopProperty />
         </Grid>
       </Grid>

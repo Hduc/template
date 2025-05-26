@@ -68,7 +68,7 @@ const TopRefers = () => {
           }}
           className="text-black"
         >
-          Channels
+          Top Refers
         </Typography>
 
         <Link
@@ -132,7 +132,7 @@ const TopRefers = () => {
               </Box>
             </Box>
 
-            <Box sx={{ width: "150px" }}>
+            <Box sx={{ width: { xs: "120px", sm: "150px" } }}>
               <Box
                 sx={{
                   display: "flex",

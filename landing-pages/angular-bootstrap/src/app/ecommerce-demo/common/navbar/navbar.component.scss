@@ -1,0 +1,189 @@
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    position: relative;
+    transition: var(--transition);
+    background-color: var(--primaryColor);
+    padding: {
+        top: 40px;
+        bottom: 40px;
+    };
+    &.is-sticky {
+        position: sticky;
+        background-color: var(--primaryColor) !important;
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        };
+    }
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-nav {
+        gap: 50px;
+
+        .nav-item {
+            .nav-link {
+                padding: 0;
+                color: #f6f7f9;
+                font-weight: 500;
+                transition: var(--transition);
+
+                &:hover, &.active {
+                    color: #BDDCFF;
+                }
+            }
+        }
+    }
+    .ecommerce-default-btn {
+        color: var(--primaryColor);
+        border-color: var(--whiteColor);
+        background-color: var(--whiteColor);
+
+        &:hover {
+            border-color: var(--blackColor);
+            color: var(--whiteColor) !important;
+            background-color: var(--blackColor);
+        }
+    }
+    .navbar-toggler {
+        span {
+            background-color: var(--whiteColor);
+            display: block;
+            height: 3px;
+            width: 30px;
+            margin: {
+                top: 5px;
+                bottom: 5px;
+            };
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &.active {
+            span {
+                &:first-child {
+                    transform-origin: 10% 10%;
+                    rotate: 45deg;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform-origin: 10% 90%;
+                    rotate: -45deg;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .navbar {
+        padding: {
+            top: 20px;
+            bottom: 20px;
+        };
+        &.is-sticky {
+            padding: {
+                top: 15px;
+                bottom: 15px;
+            };
+        }
+        .navbar-nav {
+            gap: 15px;
+        }
+        .ecommerce-default-btn {
+            margin-top: 18px;
+        }
+        .navbar-collapse {
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 15px;
+            border: 1px solid #64748b;
+            background-color: var(--darkColor);
+        }
+        .collapse {
+            &:not(.show) {
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .navbar {
+        padding: {
+            top: 30px;
+            bottom: 30px;
+        };
+        &.is-sticky {
+            padding: {
+                top: 20px;
+                bottom: 20px;
+            };
+        }
+        .navbar-nav {
+            gap: 15px;
+        }
+        .ecommerce-default-btn {
+            margin-top: 20px;
+        }
+        .navbar-collapse {
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 15px;
+            border: 1px solid #64748b;
+            background-color: var(--darkColor);
+        }
+        .collapse {
+            &:not(.show) {
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .navbar {
+        .navbar-nav {
+            gap: 30px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .navbar {
+        .navbar-nav {
+            gap: 40px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}
